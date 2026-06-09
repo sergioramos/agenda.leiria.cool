@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pregoeiro — esta semana em Lisboa</title>
+  <meta name="description" content="O pregão semanal de Lisboa: tudo o que abre, toca e acontece esta semana, por tema." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📣</text></svg>" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-row">
+      <span id="topbar-left">Pregoeiro · O pregão semanal de Lisboa</span>
+      <span id="topbar-right" class="accent"></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="masthead">
+        <span class="brand">
+          <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="logo-text">Pregoeiro</span>
+        </span>
+        <span class="filetag" id="filetag">Semana № — · V1</span>
+      </div>
+      <hr class="rule-dashed" />
+      <section class="hero">
+        <span class="kicker">Pregoeiro · Grande Lisboa · Esta semana</span>
+        <h1 class="hero-title">Esta <em>semana</em> em Lisboa.</h1>
+        <p class="hero-sub">Tudo o que abre, toca e acontece nos próximos sete dias — organizado por tema, com filtros por bairro, dia e preço.</p>
+        <div class="hero-meta">
+          <span class="mono" id="week-range">A carregar…</span>
+          <label class="week-picker">
+            <span class="sr-only">Escolher semana</span>
+            <select id="week-select" aria-label="Escolher semana"></select>
+          </label>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Filtros">
+      <div class="searchbar">
+        <input id="search" type="search" placeholder="Pesquisar eventos, locais, bairros…" autocomplete="off" />
+        <button id="filters-toggle" class="btn" aria-expanded="false">Filtros</button>
+      </div>
+
+      <div class="chips" id="topic-chips" role="group" aria-label="Temas"></div>
+
+      <div class="filter-panel" id="filter-panel" hidden>
+        <div class="filter-group">
+          <h3>Dia</h3>
+          <div class="chips small" id="day-chips" role="group" aria-label="Dia"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Preço</h3>
+          <div class="segmented" id="price-seg" role="group" aria-label="Preço">
+            <button data-price="all" class="active">Todos</button>
+            <button data-price="free">Só grátis</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>Zona</h3>
+          <div class="segmented" id="zone-seg" role="group" aria-label="Zona">
+            <button data-zone="all" class="active">Toda a região</button>
+            <button data-zone="city">Cidade de Lisboa</button>
+            <button data-zone="greater">Grande Lisboa</button>
+          </div>
+          <div class="chips small" id="neighbourhood-chips" role="group" aria-label="Bairro"></div>
+        </div>
+        <div class="filter-actions">
+          <button id="clear-filters" class="btn ghost">Limpar filtros</button>
+        </div>
+      </div>
+
+      <div class="result-meta">
+        <span id="result-count">—</span>
+        <span id="active-filters" class="muted"></span>
+      </div>
+    </section>
+
+    <section id="results" aria-live="polite"></section>
+
+    <div id="empty" class="empty" hidden>
+      <p>Nenhum evento corresponde aos filtros.</p>
+      <button class="btn" id="empty-clear">Limpar filtros</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p id="footer-stats"></p>
+      <p class="muted">
+        Recolhido semanalmente de listagens públicas. Os espaços independentes mudam depressa — os detalhes podem mudar; confirme sempre com o local.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

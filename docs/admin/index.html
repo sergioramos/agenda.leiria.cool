@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin — Pregoeiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-row">
+      <span>Pregoeiro · Painel de administração</span>
+      <span id="topbar-right" class="accent"></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap admin-shell">
+      <div class="masthead">
+        <span class="brand">
+          <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="logo-text">Pregoeiro · Admin</span>
+        </span>
+        <span id="session-actions" hidden style="display:inline-flex;gap:10px;align-items:center">
+          <a class="btn ghost" href="../index.html">Ver site</a>
+          <button class="btn ghost" id="logout" type="button">Sair</button>
+        </span>
+      </div>
+      <hr class="rule-dashed" />
+    </div>
+  </header>
+
+  <main class="wrap admin-shell">
+    <!-- login / create-account gate -->
+    <section id="gate" class="gate">
+      <div class="gate-card">
+        <span class="kicker">Acesso restrito</span>
+        <h2 id="gate-title">Entrar</h2>
+        <p class="note" id="gate-sub"></p>
+        <form id="gate-form" autocomplete="on">
+          <div class="field">
+            <label for="g-user">Utilizador</label>
+            <input id="g-user" autocomplete="username" autocapitalize="off" spellcheck="false" />
+          </div>
+          <div class="field">
+            <label for="g-pass">Palavra-passe</label>
+            <input id="g-pass" type="password" autocomplete="current-password" />
+          </div>
+          <div class="field" id="g-confirm-wrap" hidden>
+            <label for="g-confirm">Confirmar palavra-passe</label>
+            <input id="g-confirm" type="password" autocomplete="new-password" />
+          </div>
+          <p class="gate-msg" id="gate-msg"></p>
+          <button class="btn primary" id="gate-submit" type="submit">Entrar</button>
+        </form>
+        <p class="note" id="gate-reset-wrap" hidden style="margin-top:14px">
+          <a href="#" id="gate-reset">Esqueceu-se? Repor conta deste navegador</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- dashboard -->
+    <div id="dash" hidden>
+      <section class="panel">
+        <span class="kicker">Definições</span>
+        <h2>Ligação ao GitHub</h2>
+        <div class="field">
+          <label for="cfg-repo">Repositório (utilizador/repo)</label>
+          <input id="cfg-repo" placeholder="ex.: manuel/lisbon-events" autocapitalize="off" spellcheck="false" />
+        </div>
+        <div class="field">
+          <label for="cfg-token">Token de acesso (fine-grained PAT)</label>
+          <input id="cfg-token" type="password" placeholder="cola aqui — fica só neste navegador" autocomplete="off" />
+        </div>
+        <div class="row-actions">
+          <button class="btn" id="cfg-save" type="button">Guardar</button>
+          <span class="status-line" id="cfg-status"></span>
+        </div>
+        <p class="note">O token precisa das permissões <strong>Actions: write</strong> e <strong>Contents: write</strong> neste repositório.
+          Fica guardado apenas neste navegador (localStorage) e nunca é enviado para mais lado nenhum.</p>
+      </section>
+
+      <section class="panel">
+        <span class="kicker">Forçar recolha</span>
+        <h2>Correr agora (fora do horário)</h2>
+        <div class="run-row">
+          <button class="btn accent" id="run-events" type="button">▶ Recolher eventos agora</button>
+          <button class="btn" id="run-sources" type="button">▶ Verificar locais agora</button>
+        </div>
+        <p class="status-line" id="run-status"></p>
+        <p class="note">"Recolher eventos" gera a lista da semana (normalmente ao domingo). "Verificar locais" procura fechos
+          e novos locais (normalmente à segunda) e preenche a secção em baixo. O progresso aparece no separador <em>Actions</em> do repositório.</p>
+      </section>
+
+      <section class="panel" id="changes-panel">
+        <span class="kicker">Manutenção</span>
+        <h2>Alterações propostas</h2>
+        <p class="note" id="changes-gen"></p>
+
+        <h3 class="mono" style="margin-top:18px">Possivelmente fechados · <span id="closures-count">0</span></h3>
+        <div class="cards" id="closures" style="margin-top:10px"></div>
+
+        <h3 class="mono" style="margin-top:20px">Novos locais encontrados · <span id="new-count">0</span></h3>
+        <div class="cards" id="new-venues" style="margin-top:10px"></div>
+
+        <div class="row-actions" style="margin-top:18px">
+          <button class="btn ghost" id="select-all" type="button">Aceitar tudo</button>
+          <button class="btn primary" id="apply" type="button">Aplicar alterações aceites</button>
+        </div>
+        <p class="status-line" id="apply-status"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="./admin.js"></script>
+</body>
+</html>

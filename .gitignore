@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Node (site has no build, but just in case)
+node_modules/
+
+# Local secrets — NEVER commit. Keys live in GitHub Actions secrets / your browser.
+.env
+*.local
+secrets.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Crawl working files
+crawler/.cache/
+*.log

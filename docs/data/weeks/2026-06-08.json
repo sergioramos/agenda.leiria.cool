@@ -1,0 +1,1881 @@
+{
+  "week_start": "2026-06-08",
+  "week_end": "2026-06-14",
+  "generated_at": "2026-06-07T06:00:00Z",
+  "is_sample": true,
+  "source_count": 563,
+  "event_count": 57,
+  "events": [
+    {
+      "id": "8db72072c951",
+      "title": "Abertura noturna da galeria",
+      "topic": "art",
+      "categories": [
+        23
+      ],
+      "venue": "Galeria Filomena Soares",
+      "source_id": "galeria-filomena-soares",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "start": "2026-06-08",
+      "end": null,
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 25,
+        "currency": "EUR",
+        "text": "€25"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://gfilomenasoares.com",
+      "source": "sample",
+      "description": "Abertura noturna da galeria — Galeria Filomena Soares.",
+      "image": null
+    },
+    {
+      "id": "58a01797b0ae",
+      "title": "Repair café",
+      "topic": "community",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Fábrica Braço de Prata",
+      "source_id": "fabrica-braco-de-prata",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "start": "2026-06-08T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://fabricabracodeprata.com",
+      "source": "sample",
+      "description": "Repair café — Fábrica Braço de Prata.",
+      "image": null
+    },
+    {
+      "id": "115db5678368",
+      "title": "Mercado de bairro",
+      "topic": "community",
+      "categories": [
+        9,
+        23
+      ],
+      "venue": "Galeria Zé dos Bois (ZDB)",
+      "source_id": "galeria-ze-dos-bois-zdb",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-08T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://zedosbois.org",
+      "source": "sample",
+      "description": "Mercado de bairro — Galeria Zé dos Bois (ZDB).",
+      "image": null
+    },
+    {
+      "id": "4d5964e8acbb",
+      "title": "Espetáculo de marionetas para crianças",
+      "topic": "family",
+      "categories": [
+        28
+      ],
+      "venue": "Teatro Politeama (Filipe La Féria)",
+      "source_id": "teatro-politeama-filipe-la-feria",
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
+      "start": "2026-06-08T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://filipelaferia.pt",
+      "source": "sample",
+      "description": "Espetáculo de marionetas para crianças — Teatro Politeama (Filipe La Féria).",
+      "image": null
+    },
+    {
+      "id": "d352c20b8a50",
+      "title": "Corrida ao pôr do sol e convívio",
+      "topic": "outdoors",
+      "categories": [
+        36
+      ],
+      "venue": "Walking Tours Portugal",
+      "source_id": "walking-tours-portugal",
+      "neighbourhood": "Sintra",
+      "zone": "greater",
+      "start": "2026-06-08T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://walkingtoursportugal.com",
+      "source": "sample",
+      "description": "Corrida ao pôr do sol e convívio — Walking Tours Portugal.",
+      "image": null
+    },
+    {
+      "id": "50ffc1bea884",
+      "title": "Mercado de produtores",
+      "topic": "food",
+      "categories": [
+        13
+      ],
+      "venue": "FIL – Feira Internacional de Lisboa",
+      "source_id": "fil-feira-internacional-de-lisboa",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "start": "2026-06-08T19:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fil.pt",
+      "source": "sample",
+      "description": "Mercado de produtores — FIL – Feira Internacional de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "cb59fb725aa6",
+      "title": "Espetáculo de teatro físico",
+      "topic": "performance",
+      "categories": [
+        11
+      ],
+      "venue": "Teatro Nacional de São Carlos",
+      "source_id": "teatro-nacional-de-sao-carlos",
+      "neighbourhood": "Chiado",
+      "zone": "city",
+      "start": "2026-06-08T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12,
+        "currency": "EUR",
+        "text": "€12"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://saocarlos.pt",
+      "source": "sample",
+      "description": "Espetáculo de teatro físico — Teatro Nacional de São Carlos.",
+      "image": null
+    },
+    {
+      "id": "b4e5e3899a5b",
+      "title": "Estreia de documentário",
+      "topic": "film",
+      "categories": [
+        6
+      ],
+      "venue": "Cinema no Verão (Jardim do Torel)",
+      "source_id": "cinema-no-verao-jardim-do-torel",
+      "neighbourhood": "Anjos",
+      "zone": "city",
+      "start": "2026-06-08T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://agendalx.pt",
+      "source": "sample",
+      "description": "Estreia de documentário — Cinema no Verão (Jardim do Torel).",
+      "image": null
+    },
+    {
+      "id": "49396b7dc9fe",
+      "title": "Exposição coletiva de pintura",
+      "topic": "art",
+      "categories": [
+        23,
+        44
+      ],
+      "venue": "Galeria Foco",
+      "source_id": "galeria-foco",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://galeriafoco.com",
+      "source": "sample",
+      "description": "Exposição coletiva de pintura — Galeria Foco.",
+      "image": null
+    },
+    {
+      "id": "faa0610a34b1",
+      "title": "Inauguração / vernissage",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Museu da Carris",
+      "source_id": "museu-da-carris",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12,
+        "currency": "EUR",
+        "text": "€12"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://museu.carris.pt",
+      "source": "sample",
+      "description": "Inauguração / vernissage — Museu da Carris.",
+      "image": null
+    },
+    {
+      "id": "e77952fb8512",
+      "title": "Festa de angariação",
+      "topic": "community",
+      "categories": [
+        8,
+        22
+      ],
+      "venue": "Second Home Lisboa",
+      "source_id": "second-home-lisboa",
+      "neighbourhood": "Cais do Sodré",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://secondhome.io",
+      "source": "sample",
+      "description": "Festa de angariação — Second Home Lisboa.",
+      "image": null
+    },
+    {
+      "id": "512c9f0d6e7e",
+      "title": "Workshop de ciência em família",
+      "topic": "family",
+      "categories": [
+        28
+      ],
+      "venue": "TIL – Teatro Infantil de Lisboa (Teatro Armando Cortez)",
+      "source_id": "til-teatro-infantil-de-lisboa-teatro-armando-cortez",
+      "neighbourhood": "Lumiar",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casadoartista.net",
+      "source": "sample",
+      "description": "Workshop de ciência em família — TIL – Teatro Infantil de Lisboa (Teatro Armando Cortez).",
+      "image": null
+    },
+    {
+      "id": "7966cc3f57de",
+      "title": "Noite da comunidade de design",
+      "topic": "learning",
+      "categories": [
+        20
+      ],
+      "venue": "Instituto Confúcio da Universidade de Lisboa",
+      "source_id": "instituto-confucio-da-universidade-de-lisboa",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://confucio.ulisboa.pt",
+      "source": "sample",
+      "description": "Noite da comunidade de design — Instituto Confúcio da Universidade de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "0345b188c5e1",
+      "title": "Passeio de fado e comida",
+      "topic": "tours",
+      "categories": [
+        31
+      ],
+      "venue": "Another World – VR Arena",
+      "source_id": "another-world-vr-arena",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://vr-arena.pt",
+      "source": "sample",
+      "description": "Passeio de fado e comida — Another World – VR Arena.",
+      "image": null
+    },
+    {
+      "id": "afc4030272b2",
+      "title": "Workshop de serigrafia",
+      "topic": "workshops",
+      "categories": [
+        4,
+        23
+      ],
+      "venue": "Ar.Co",
+      "source_id": "ar-co",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "start": "2026-06-09T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://arco.pt",
+      "source": "sample",
+      "description": "Workshop de serigrafia — Ar.Co.",
+      "image": null
+    },
+    {
+      "id": "7749d3e59f04",
+      "title": "Noite de jogos de tabuleiro",
+      "topic": "social",
+      "categories": [
+        15
+      ],
+      "venue": "Versus Gamecenter",
+      "source_id": "versus-gamecenter",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "start": "2026-06-09T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://versusgamecenter.pt",
+      "source": "sample",
+      "description": "Noite de jogos de tabuleiro — Versus Gamecenter.",
+      "image": null
+    },
+    {
+      "id": "a6b5c90697be",
+      "title": "Open-mic de comédia",
+      "topic": "comedy",
+      "categories": [
+        26
+      ],
+      "venue": "Selva Comedy Café",
+      "source_id": "selva-comedy-cafe",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "start": "2026-06-09T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://selvacomedycafe.com",
+      "source": "sample",
+      "description": "Open-mic de comédia — Selva Comedy Café.",
+      "image": null
+    },
+    {
+      "id": "2ab6768ad8a1",
+      "title": "Noite de storytelling",
+      "topic": "comedy",
+      "categories": [
+        26
+      ],
+      "venue": "Espaço Evoé",
+      "source_id": "espaco-evoe",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "start": "2026-06-09T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://evoe.pt",
+      "source": "sample",
+      "description": "Noite de storytelling — Espaço Evoé.",
+      "image": null
+    },
+    {
+      "id": "a77259c16ae7",
+      "title": "Cinema ao ar livre: um clássico",
+      "topic": "film",
+      "categories": [
+        6
+      ],
+      "venue": "Cinecapitólio Rooftop",
+      "source_id": "cinecapitolio-rooftop",
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
+      "start": "2026-06-09T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://capitolio.pt",
+      "source": "sample",
+      "description": "Cinema ao ar livre: um clássico — Cinecapitólio Rooftop.",
+      "image": null
+    },
+    {
+      "id": "1829b7494cf7",
+      "title": "Conferência aberta",
+      "topic": "learning",
+      "categories": [
+        21
+      ],
+      "venue": "Pavilhão do Conhecimento – Centro Ciência Viva",
+      "source_id": "pavilhao-do-conhecimento-centro-ciencia-viva",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "start": "2026-06-10T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://pavconhecimento.pt",
+      "source": "sample",
+      "description": "Conferência aberta — Pavilhão do Conhecimento – Centro Ciência Viva.",
+      "image": null
+    },
+    {
+      "id": "c49c3d4a0bea",
+      "title": "Caminhada guiada",
+      "topic": "outdoors",
+      "categories": [
+        36
+      ],
+      "venue": "Carcavelos Surf School",
+      "source_id": "carcavelos-surf-school",
+      "neighbourhood": "Oeiras / Algés",
+      "zone": "greater",
+      "start": "2026-06-10T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed",
+        "sat"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://carcavelossurfschool.com",
+      "source": "sample",
+      "description": "Caminhada guiada — Carcavelos Surf School.",
+      "image": null
+    },
+    {
+      "id": "ee89ccd5a59b",
+      "title": "Prova de ginjinha a pé",
+      "topic": "tours",
+      "categories": [
+        37
+      ],
+      "venue": "Taste of Lisboa",
+      "source_id": "taste-of-lisboa",
+      "neighbourhood": "Mouraria",
+      "zone": "city",
+      "start": "2026-06-10T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed",
+        "sat"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://tasteoflisboa.com",
+      "source": "sample",
+      "description": "Prova de ginjinha a pé — Taste of Lisboa.",
+      "image": null
+    },
+    {
+      "id": "19b987b9d579",
+      "title": "Visita à arte urbana",
+      "topic": "tours",
+      "categories": [
+        28,
+        31
+      ],
+      "venue": "Pavilhão do Conhecimento – Ciência Viva",
+      "source_id": "pavilhao-do-conhecimento-ciencia-viva",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "start": "2026-06-10T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10,
+        "currency": "EUR",
+        "text": "€10"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://pavconhecimento.pt",
+      "source": "sample",
+      "description": "Visita à arte urbana — Pavilhão do Conhecimento – Ciência Viva.",
+      "image": null
+    },
+    {
+      "id": "b2bf4489f3e3",
+      "title": "Prova de vinhos naturais",
+      "topic": "workshops",
+      "categories": [
+        5
+      ],
+      "venue": "Josefa Searle Art Studio",
+      "source_id": "josefa-searle-art-studio",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "start": "2026-06-10T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://josefasearle.com",
+      "source": "sample",
+      "description": "Prova de vinhos naturais — Josefa Searle Art Studio.",
+      "image": null
+    },
+    {
+      "id": "227f3dd6fb23",
+      "title": "Sessão de desenho de modelo",
+      "topic": "workshops",
+      "categories": [
+        5
+      ],
+      "venue": "Jazzy Dance Studios",
+      "source_id": "jazzy-dance-studios",
+      "neighbourhood": "Santos",
+      "zone": "city",
+      "start": "2026-06-10T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://jazzydancestudios.pt",
+      "source": "sample",
+      "description": "Sessão de desenho de modelo — Jazzy Dance Studios.",
+      "image": null
+    },
+    {
+      "id": "1603d816bef1",
+      "title": "Mercado de produtores",
+      "topic": "food",
+      "categories": [
+        13
+      ],
+      "venue": "Mercado de Culturas (Arroios)",
+      "source_id": "mercado-de-culturas-arroios",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "start": "2026-06-10T19:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10,
+        "currency": "EUR",
+        "text": "€10"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://jfarroios.pt",
+      "source": "sample",
+      "description": "Mercado de produtores — Mercado de Culturas (Arroios).",
+      "image": null
+    },
+    {
+      "id": "edfbc6db07e6",
+      "title": "Espetáculo de teatro físico",
+      "topic": "performance",
+      "categories": [
+        11
+      ],
+      "venue": "Teatro Nacional D. Maria II",
+      "source_id": "teatro-nacional-d-maria-ii",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "start": "2026-06-10T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed",
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 25,
+        "currency": "EUR",
+        "text": "€25"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://tndm.pt",
+      "source": "sample",
+      "description": "Espetáculo de teatro físico — Teatro Nacional D. Maria II.",
+      "image": null
+    },
+    {
+      "id": "2e823f90c9fb",
+      "title": "Jantar com desconhecidos",
+      "topic": "social",
+      "categories": [
+        39
+      ],
+      "venue": "Game Over Escape Rooms Lisboa",
+      "source_id": "game-over-escape-rooms-lisboa",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-10T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed",
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://lisbon.escapegameover.pt",
+      "source": "sample",
+      "description": "Jantar com desconhecidos — Game Over Escape Rooms Lisboa.",
+      "image": null
+    },
+    {
+      "id": "82e056e932dc",
+      "title": "Jantar com desconhecidos",
+      "topic": "social",
+      "categories": [
+        42
+      ],
+      "venue": "Blues & Swing Lisboa",
+      "source_id": "blues-and-swing-lisboa",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "start": "2026-06-10T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 25,
+        "currency": "EUR",
+        "text": "€25"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://bluesswinglisboa.com",
+      "source": "sample",
+      "description": "Jantar com desconhecidos — Blues & Swing Lisboa.",
+      "image": null
+    },
+    {
+      "id": "9cf0f5442437",
+      "title": "Showcase indie",
+      "topic": "music",
+      "categories": [
+        10
+      ],
+      "venue": "Adega Machado",
+      "source_id": "adega-machado",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-10T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed",
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://adegamachado.pt",
+      "source": "sample",
+      "description": "Showcase indie — Adega Machado.",
+      "image": null
+    },
+    {
+      "id": "95e0cabbd554",
+      "title": "Noite de techno até de manhã",
+      "topic": "nightlife",
+      "categories": [
+        34
+      ],
+      "venue": "CARMO Rooftop",
+      "source_id": "carmo-rooftop",
+      "neighbourhood": "Chiado",
+      "zone": "city",
+      "start": "2026-06-10T23:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://carmorooftop.pt",
+      "source": "sample",
+      "description": "Noite de techno até de manhã — CARMO Rooftop.",
+      "image": null
+    },
+    {
+      "id": "053cea139b8f",
+      "title": "Workshop de ciência em família",
+      "topic": "family",
+      "categories": [
+        28
+      ],
+      "venue": "Oceanário de Lisboa",
+      "source_id": "oceanario-de-lisboa",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "start": "2026-06-11T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://oceanario.pt",
+      "source": "sample",
+      "description": "Workshop de ciência em família — Oceanário de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "4c162ad65a86",
+      "title": "Conversa com autor e lançamento de livro",
+      "topic": "learning",
+      "categories": [
+        22
+      ],
+      "venue": "Sítio (Alto de São João Cowork)",
+      "source_id": "sitio-alto-de-sao-joao-cowork",
+      "neighbourhood": "Penha de França",
+      "zone": "city",
+      "start": "2026-06-11T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://friends.figma.com/lisbon",
+      "source": "sample",
+      "description": "Conversa com autor e lançamento de livro — Sítio (Alto de São João Cowork).",
+      "image": null
+    },
+    {
+      "id": "0125530d54a6",
+      "title": "Caminhada guiada",
+      "topic": "outdoors",
+      "categories": [
+        32
+      ],
+      "venue": "Lisbon Sports Club",
+      "source_id": "lisbon-sports-club",
+      "neighbourhood": "Oeiras / Algés",
+      "zone": "greater",
+      "start": "2026-06-11T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://lisbonclub.com",
+      "source": "sample",
+      "description": "Caminhada guiada — Lisbon Sports Club.",
+      "image": null
+    },
+    {
+      "id": "d6c4d9c09eba",
+      "title": "Sessão no quiosque junto ao rio",
+      "topic": "outdoors",
+      "categories": [
+        36
+      ],
+      "venue": "Lisbon Surf Center",
+      "source_id": "lisbon-surf-center",
+      "neighbourhood": "Almada / Margem Sul",
+      "zone": "greater",
+      "start": "2026-06-11T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://lisbonsurfcenter.com",
+      "source": "sample",
+      "description": "Sessão no quiosque junto ao rio — Lisbon Surf Center.",
+      "image": null
+    },
+    {
+      "id": "8937b4b00ed7",
+      "title": "Experiência imersiva",
+      "topic": "tours",
+      "categories": [
+        35
+      ],
+      "venue": "Goodnight Lisbon Hostel",
+      "source_id": "goodnight-lisbon-hostel",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "start": "2026-06-11T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://goodnighthostellisbon.com",
+      "source": "sample",
+      "description": "Experiência imersiva — Goodnight Lisbon Hostel.",
+      "image": null
+    },
+    {
+      "id": "08da4a601bfd",
+      "title": "Prova de vinhos naturais",
+      "topic": "workshops",
+      "categories": [
+        4
+      ],
+      "venue": "PURACERÂMICA",
+      "source_id": "puraceramica",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "start": "2026-06-11T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://puraceramica.pt",
+      "source": "sample",
+      "description": "Prova de vinhos naturais — PURACERÂMICA.",
+      "image": null
+    },
+    {
+      "id": "bb23a83f6fef",
+      "title": "Mercado de produtores",
+      "topic": "food",
+      "categories": [
+        30
+      ],
+      "venue": "Garrafeira Nacional",
+      "source_id": "garrafeira-nacional",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "start": "2026-06-11T19:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://garrafeiranacional.com",
+      "source": "sample",
+      "description": "Mercado de produtores — Garrafeira Nacional.",
+      "image": null
+    },
+    {
+      "id": "326ce6545cf0",
+      "title": "Open-mic de comédia",
+      "topic": "comedy",
+      "categories": [
+        45
+      ],
+      "venue": "Lisbon Revisited – Dias de Poesia",
+      "source_id": "lisbon-revisited-dias-de-poesia",
+      "neighbourhood": "Campo de Ourique",
+      "zone": "city",
+      "start": "2026-06-11T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casafernandopessoa.pt",
+      "source": "sample",
+      "description": "Open-mic de comédia — Lisbon Revisited – Dias de Poesia.",
+      "image": null
+    },
+    {
+      "id": "6e27b5c90a43",
+      "title": "Cinema ao ar livre: um clássico",
+      "topic": "film",
+      "categories": [
+        6
+      ],
+      "venue": "Cinema no Largo do Intendente",
+      "source_id": "cinema-no-largo-do-intendente",
+      "neighbourhood": "Intendente",
+      "zone": "city",
+      "start": "2026-06-11T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://festasdelisboa.com",
+      "source": "sample",
+      "description": "Cinema ao ar livre: um clássico — Cinema no Largo do Intendente.",
+      "image": null
+    },
+    {
+      "id": "55e7aad7cbf5",
+      "title": "Concerto sinfónico",
+      "topic": "music",
+      "categories": [
+        10
+      ],
+      "venue": "Campo Pequeno",
+      "source_id": "campo-pequeno",
+      "neighbourhood": "Avenidas Novas",
+      "zone": "city",
+      "start": "2026-06-11T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://campopequeno.com",
+      "source": "sample",
+      "description": "Concerto sinfónico — Campo Pequeno.",
+      "image": null
+    },
+    {
+      "id": "26196c1c1800",
+      "title": "DJs residentes: house e disco",
+      "topic": "nightlife",
+      "categories": [
+        34
+      ],
+      "venue": "Mona Verde",
+      "source_id": "mona-verde",
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
+      "start": "2026-06-11T23:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://monaexperience.com",
+      "source": "sample",
+      "description": "DJs residentes: house e disco — Mona Verde.",
+      "image": null
+    },
+    {
+      "id": "b2576427c922",
+      "title": "Abertura noturna da galeria",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Fundação Arpad Szenes – Vieira da Silva",
+      "source_id": "fundacao-arpad-szenes-vieira-da-silva",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
+      "start": "2026-06-12T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12,
+        "currency": "EUR",
+        "text": "€12"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fasvs.pt",
+      "source": "sample",
+      "description": "Abertura noturna da galeria — Fundação Arpad Szenes – Vieira da Silva.",
+      "image": null
+    },
+    {
+      "id": "b047548ac19d",
+      "title": "Workshop de ciência em família",
+      "topic": "family",
+      "categories": [
+        28
+      ],
+      "venue": "Jardim Zoológico de Lisboa",
+      "source_id": "jardim-zoologico-de-lisboa",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "start": "2026-06-12T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://zoo.pt",
+      "source": "sample",
+      "description": "Workshop de ciência em família — Jardim Zoológico de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "5c14d1495dbf",
+      "title": "Dança contemporânea",
+      "topic": "performance",
+      "categories": [
+        11,
+        12
+      ],
+      "venue": "MAC/CCB – Museu de Arte Contemporânea",
+      "source_id": "mac-ccb-museu-de-arte-contemporanea",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "start": "2026-06-12T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ccb.pt/en/macccb",
+      "source": "sample",
+      "description": "Dança contemporânea — MAC/CCB – Museu de Arte Contemporânea.",
+      "image": null
+    },
+    {
+      "id": "1831c038c56b",
+      "title": "Milonga de tango",
+      "topic": "social",
+      "categories": [
+        15
+      ],
+      "venue": "POW WOW",
+      "source_id": "pow-wow",
+      "neighbourhood": "Lumiar",
+      "zone": "city",
+      "start": "2026-06-12T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://pow-wow.pt",
+      "source": "sample",
+      "description": "Milonga de tango — POW WOW.",
+      "image": null
+    },
+    {
+      "id": "b0550f0d6081",
+      "title": "Showcase indie",
+      "topic": "music",
+      "categories": [
+        25
+      ],
+      "venue": "Igreja de São Roque – Temporada Música em São Roque",
+      "source_id": "igreja-de-sao-roque-temporada-musica-em-sao-roque",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-12T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://tmsr.scml.pt",
+      "source": "sample",
+      "description": "Showcase indie — Igreja de São Roque – Temporada Música em São Roque.",
+      "image": null
+    },
+    {
+      "id": "74827fc228fb",
+      "title": "Concerto sinfónico",
+      "topic": "music",
+      "categories": [
+        25
+      ],
+      "venue": "Basílica da Estrela",
+      "source_id": "basilica-da-estrela",
+      "neighbourhood": "Campo de Ourique",
+      "zone": "city",
+      "start": "2026-06-12T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://patriarcado-lisboa.pt",
+      "source": "sample",
+      "description": "Concerto sinfónico — Basílica da Estrela.",
+      "image": null
+    },
+    {
+      "id": "2a57dff85b1c",
+      "title": "Rave queer",
+      "topic": "nightlife",
+      "categories": [
+        3,
+        10
+      ],
+      "venue": "Lux Frágil",
+      "source_id": "lux-fragil",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "start": "2026-06-12T23:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://luxfragil.com",
+      "source": "sample",
+      "description": "Rave queer — Lux Frágil.",
+      "image": null
+    },
+    {
+      "id": "b6c81fe0a191",
+      "title": "Noite da comunidade de design",
+      "topic": "learning",
+      "categories": [
+        19
+      ],
+      "venue": "Palavra de Viajante",
+      "source_id": "palavra-de-viajante",
+      "neighbourhood": "Santos",
+      "zone": "city",
+      "start": "2026-06-13T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "en",
+        "pt"
+      ],
+      "url": "https://palavra-de-viajante.pt",
+      "source": "sample",
+      "description": "Noite da comunidade de design — Palavra de Viajante.",
+      "image": null
+    },
+    {
+      "id": "c525409d7d16",
+      "title": "Noite de queijos e enchidos",
+      "topic": "food",
+      "categories": [
+        13
+      ],
+      "venue": "Feira da Ladra",
+      "source_id": "feira-da-ladra",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "start": "2026-06-13T19:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://informacao.lisboa.pt",
+      "source": "sample",
+      "description": "Noite de queijos e enchidos — Feira da Ladra.",
+      "image": null
+    },
+    {
+      "id": "e81c77d7d803",
+      "title": "Cerimónia de cacau",
+      "topic": "wellness",
+      "categories": [
+        29
+      ],
+      "venue": "Breathlife Portugal",
+      "source_id": "breathlife-portugal",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "start": "2026-06-13T19:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://breathlife.space",
+      "source": "sample",
+      "description": "Cerimónia de cacau — Breathlife Portugal.",
+      "image": null
+    },
+    {
+      "id": "24f3da2c657f",
+      "title": "Stand-up em inglês",
+      "topic": "comedy",
+      "categories": [
+        26
+      ],
+      "venue": "Lisbon Comedy",
+      "source_id": "lisbon-comedy",
+      "neighbourhood": "Santos",
+      "zone": "city",
+      "start": "2026-06-13T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://lisboncomedy.com",
+      "source": "sample",
+      "description": "Stand-up em inglês — Lisbon Comedy.",
+      "image": null
+    },
+    {
+      "id": "2ad6f3108744",
+      "title": "Estreia de documentário",
+      "topic": "film",
+      "categories": [
+        6
+      ],
+      "venue": "Cine Society",
+      "source_id": "cine-society",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
+      "start": "2026-06-13T21:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cinesociety.pt",
+      "source": "sample",
+      "description": "Estreia de documentário — Cine Society.",
+      "image": null
+    },
+    {
+      "id": "47743388adbb",
+      "title": "Noite de techno até de manhã",
+      "topic": "nightlife",
+      "categories": [
+        3,
+        9
+      ],
+      "venue": "RDA 69",
+      "source_id": "rda-69",
+      "neighbourhood": "Anjos",
+      "zone": "city",
+      "start": "2026-06-13T23:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://rda69.net",
+      "source": "sample",
+      "description": "Noite de techno até de manhã — RDA 69.",
+      "image": null
+    },
+    {
+      "id": "768df6a1e749",
+      "title": "Festa de angariação",
+      "topic": "community",
+      "categories": [
+        3,
+        9
+      ],
+      "venue": "Disgraça",
+      "source_id": "disgraca",
+      "neighbourhood": "Penha de França",
+      "zone": "city",
+      "start": "2026-06-14T18:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10,
+        "currency": "EUR",
+        "text": "€10"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://disgraca.com",
+      "source": "sample",
+      "description": "Festa de angariação — Disgraça.",
+      "image": null
+    },
+    {
+      "id": "b49a0b66a983",
+      "title": "Estreia de teatro",
+      "topic": "performance",
+      "categories": [
+        11
+      ],
+      "venue": "Cordoaria Nacional",
+      "source_id": "cordoaria-nacional",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "start": "2026-06-14T20:00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Free"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/en/lisbon/venue/cordoaria-nacional",
+      "source": "sample",
+      "description": "Estreia de teatro — Cordoaria Nacional.",
+      "image": null
+    }
+  ]
+}

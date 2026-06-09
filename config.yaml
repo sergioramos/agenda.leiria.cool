@@ -1,0 +1,48 @@
+# Lisbon Events — central configuration
+# Plain-English knobs. Most people only ever touch the cost cap and the model.
+
+scope: greater_lisbon            # greater_lisbon | city_only
+
+week:
+  # Which 7-day window each Sunday crawl covers.
+  starts_on: monday              # the displayed week runs Monday..Sunday
+  include_ongoing: true          # also show exhibitions/runs already open and still on
+  lookahead_days: 7              # widen later (e.g. 14, 28) for more advance planning
+
+schedule:
+  # Times are UTC in the GitHub Actions cron. Lisbon is UTC+1 (summer) / UTC+0 (winter).
+  events_crawl: "0 6 * * 0"      # Sunday 06:00 UTC  -> this-week list
+  maintenance_crawl: "0 6 * * 1" # Monday 06:00 UTC  -> closures / new openings -> proposed changes
+
+ai:
+  # You provide ANTHROPIC_API_KEY as a GitHub Actions secret. It is never stored in the repo.
+  enabled: true
+  model_cheap: "claude-haiku-4-5-20251001"   # default extractor — fast & cheap
+  model_strong: "claude-sonnet-4-6"          # escalation only for pages the cheap model can't parse
+  escalate_on_low_confidence: true
+  max_run_cost_usd: 2.0          # hard ceiling per crawl run; stops calling the AI once hit
+  request_timeout_s: 40
+  max_chars_per_page: 18000      # trim fetched HTML text before sending to the model
+
+crawl:
+  breadth: max                   # max | broad | lean  (which sources to attempt)
+  shards: 8                      # parallel GitHub Actions jobs the source list is split across
+  per_source_timeout_s: 25
+  user_agent: "LisbonEventsBot/1.0 (+https://github.com/) personal weekly events digest"
+  polite_delay_ms: 800           # delay between requests to the same host
+  retries: 2
+  # Hosts we never scrape (anti-bot / ToS). Their @handles are kept in the directory for humans.
+  skip_hosts: ["instagram.com", "facebook.com", "t.me", "telegram.me", "whatsapp.com", "tiktok.com"]
+  # Prefer structured feeds when present (checked automatically per source).
+  prefer_feeds: true
+
+maintenance:
+  mode: propose                  # propose | auto | flag_only
+  # How many consecutive "looks dead" signals before we propose removing a venue.
+  closure_signals_to_flag: 2
+  discover_new: true             # mine aggregators for venues not yet in the seed list
+
+output:
+  weeks_dir: "data/weeks"
+  proposed_dir: "data/proposed-changes"
+  keep_weeks: 104                # ~2 years of history before old snapshots are pruned

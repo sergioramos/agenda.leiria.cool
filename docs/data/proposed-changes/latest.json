@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-06-08T06:00:00Z",
+  "is_sample": true,
+  "closures": [
+    {
+      "id": "musicbox",
+      "name": "Musicbox",
+      "neighbourhood": "Cais do Sodré",
+      "reason": "CLOSED 15 Sep 2025",
+      "current_status": "closed"
+    },
+    {
+      "id": "arroz-estudios",
+      "name": "Arroz Estúdios",
+      "neighbourhood": "Marvila",
+      "reason": "AT RISK — redevelopment",
+      "current_status": "at_risk"
+    },
+    {
+      "id": "casa-independente",
+      "name": "Casa Independente",
+      "neighbourhood": "Intendente",
+      "reason": "CLOSING END 2026",
+      "current_status": "closing"
+    },
+    {
+      "id": "sirigaita",
+      "name": "Sirigaita",
+      "neighbourhood": "Arroios",
+      "reason": "AT RISK — eviction",
+      "current_status": "at_risk"
+    },
+    {
+      "id": "cine-bela-vista",
+      "name": "Cine Bela Vista",
+      "neighbourhood": "Alfama",
+      "reason": "MAY HAVE CLOSED — verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "musicbox-lisboa",
+      "name": "Musicbox Lisboa",
+      "neighbourhood": "Cais do Sodré",
+      "reason": "CLOSED 15 Sep 2025",
+      "current_status": "closed"
+    }
+  ],
+  "new_venues": [
+    {
+      "name": "Sample New Venue",
+      "neighbourhood": "Marvila",
+      "topic": "nightlife",
+      "url": "https://example.com",
+      "found_via": "Resident Advisor",
+      "note": "appeared in listings this week"
+    }
+  ]
+}
