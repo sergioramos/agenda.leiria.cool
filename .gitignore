@@ -9,6 +9,9 @@ env/
 # Node (site has no build, but just in case)
 node_modules/
 
+# Vercel CLI link metadata (created by `vercel link`)
+.vercel
+
 # Local secrets — NEVER commit. Keys live in GitHub Actions secrets / your browser.
 .env
 *.local
