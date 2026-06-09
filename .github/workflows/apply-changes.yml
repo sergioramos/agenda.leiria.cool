@@ -1,0 +1,42 @@
+name: apply-changes
+
+# Triggered by the /admin "Aplicar alterações aceites" button, which sends a
+# GitHub repository_dispatch with the accepted closures / new venues as payload.
+on:
+  repository_dispatch:
+    types: [apply-changes]
+
+concurrency:
+  group: apply-changes
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r crawler/requirements.txt
+      - name: Write accepted changes
+        env:
+          CLIENT_PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+        run: |
+          printf '%s' "$CLIENT_PAYLOAD" > accepted-changes.json
+          python crawler/apply_changes.py --payload accepted-changes.json
+      - name: Commit updated seed list
+        run: |
+          git config user.name "pregoeiro-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          rm -f accepted-changes.json
+          git add sources/sources.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "sources: applied reviewed changes"
+            git push
+          fi

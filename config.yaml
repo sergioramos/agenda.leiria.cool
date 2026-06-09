@@ -17,8 +17,8 @@ schedule:
 ai:
   # You provide ANTHROPIC_API_KEY as a GitHub Actions secret. It is never stored in the repo.
   enabled: true
-  model_cheap: "claude-haiku-4-5-20251001"   # default extractor — fast & cheap
-  model_strong: "claude-sonnet-4-6"          # escalation only for pages the cheap model can't parse
+  model_cheap: "claude-haiku-4-5"            # default extractor — fast & cheap ($1/$5 per MTok)
+  model_strong: "claude-sonnet-4-6"          # escalation only for pages the cheap model can't parse ($3/$15)
   escalate_on_low_confidence: true
   max_run_cost_usd: 2.0          # hard ceiling per crawl run; stops calling the AI once hit
   request_timeout_s: 40
