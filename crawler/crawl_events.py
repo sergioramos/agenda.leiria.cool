@@ -80,11 +80,10 @@ def main():
     cap = (args.max_cost if args.max_cost is not None
            else cfg["ai"].get("max_run_cost_usd", 2.0) / max(args.of, 1))
     tracker = extract.CostTracker(cap)
-    client = None
+    prov = client = None
     if ai_enabled:
         try:
-            import anthropic
-            client = anthropic.Anthropic()
+            prov, client = extract.get_client(cfg)
         except Exception as e:
             print(f"[warn] AI disabled ({e}); running feeds-only.")
             ai_enabled = False
@@ -105,7 +104,7 @@ def main():
         evs = feed_events(session, cfg, s, html, mon, window_end)
         if not evs and ai_enabled and not tracker.exhausted():
             text = core.html_to_text(html, cfg["ai"].get("max_chars_per_page", 18000))
-            evs = extract.extract(client, s, text, mon, window_end, cfg, tax, tracker)
+            evs = extract.extract(prov, client, s, text, mon, window_end, cfg, tax, tracker)
             ai_calls += 1
         events.extend(evs)
         time.sleep(delay)

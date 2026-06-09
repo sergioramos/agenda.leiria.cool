@@ -27,6 +27,7 @@ jobs:
       - run: pip install -r crawler/requirements.txt
       - name: Crawl shard ${{ matrix.shard }}
         env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python crawler/crawl_events.py --shard ${{ matrix.shard }} --of 8 --out _partials/shard-${{ matrix.shard }}.json
       - uses: actions/upload-artifact@v4

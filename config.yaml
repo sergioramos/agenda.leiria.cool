@@ -15,11 +15,20 @@ schedule:
   maintenance_crawl: "0 6 * * 1" # Monday 06:00 UTC  -> closures / new openings -> proposed changes
 
 ai:
-  # You provide ANTHROPIC_API_KEY as a GitHub Actions secret. It is never stored in the repo.
+  # The crawler reads the key from the env var named in `api_key_env` (a GitHub Actions
+  # secret). It is never stored in the repo. Switch provider with one line below.
   enabled: true
-  model_cheap: "claude-haiku-4-5"            # default extractor — fast & cheap ($1/$5 per MTok)
-  model_strong: "claude-sonnet-4-6"          # escalation only for pages the cheap model can't parse ($3/$15)
-  escalate_on_low_confidence: true
+  provider: deepseek                  # deepseek | anthropic
+  api_key_env: DEEPSEEK_API_KEY        # env/secret holding the key (ANTHROPIC_API_KEY for anthropic)
+  base_url: "https://api.deepseek.com" # OpenAI-compatible endpoint (deepseek); set "" for anthropic
+  model_cheap: "deepseek-v4-pro"       # extractor — ~$0.435 / $0.87 per MTok (chosen; very cheap, better than Flash)
+  model_strong: "deepseek-v4-pro"      # no stronger DeepSeek tier — escalation reuses the same model
+  # To use Claude instead, set:
+  #   provider: anthropic
+  #   api_key_env: ANTHROPIC_API_KEY
+  #   base_url: ""
+  #   model_cheap: "claude-haiku-4-5"   model_strong: "claude-sonnet-4-6"
+  escalate_on_low_confidence: false    # v4-pro is already the top tier; no escalation needed
   max_run_cost_usd: 2.0          # hard ceiling per crawl run; stops calling the AI once hit
   request_timeout_s: 40
   max_chars_per_page: 18000      # trim fetched HTML text before sending to the model

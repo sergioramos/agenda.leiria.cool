@@ -44,13 +44,16 @@ def host_of(url: str) -> str:
     return h[4:] if h.startswith("www.") else h
 
 
-def discover(client, cfg, tax, sources, session, tracker, cap_new):
+def discover(prov, client, cfg, tax, sources, session, tracker, cap_new):
     known_names = {re.sub(r"[^a-z0-9]+", "", s["name"].lower()) for s in sources}
     known_hosts = {host_of(s.get("website") or "") for s in sources if s.get("website")}
     aggregators = [s for s in sources if s.get("topic") == "guides" and s.get("crawlable")][:6]
     found = []
-    import anthropic
     tids = [t["id"] for t in tax["topics"]]
+    sys_text = ("Extrai nomes de locais/organizadores de eventos em Lisboa mencionados nesta "
+                "página de agenda, com o respetivo URL próprio (não o da agenda) quando existir. "
+                f"topic deve ser um de: {', '.join(tids)}.")
+    hint = '{"venues":[{"name":"...","url":"","topic":"music","note":""}]}'
     for agg in aggregators:
         if tracker.exhausted() or len(found) >= cap_new:
             break
@@ -58,21 +61,9 @@ def discover(client, cfg, tax, sources, session, tracker, cap_new):
         if not got or got[0] >= 400:
             continue
         text = core.html_to_text(got[2], cfg["ai"].get("max_chars_per_page", 18000))
-        try:
-            resp = client.messages.create(
-                model=cfg["ai"]["model_cheap"], max_tokens=2000,
-                system=[{"type": "text", "text":
-                         "Extrai nomes de locais/organizadores de eventos em Lisboa mencionados nesta "
-                         "página de agenda, com o respetivo URL próprio (não o da agenda) quando existir. "
-                         f"topic deve ser um de: {', '.join(tids)}."}],
-                messages=[{"role": "user", "content": text}],
-                output_config={"format": {"type": "json_schema", "schema": DISCOVER_SCHEMA}},
-            )
-            tracker.add(cfg["ai"]["model_cheap"], resp.usage)
-            raw = next((b.text for b in resp.content if b.type == "text"), "")
-            venues = json.loads(raw).get("venues", [])
-        except (anthropic.APIError, json.JSONDecodeError, Exception):
-            continue
+        data = extract.json_call(prov, client, cfg["ai"]["model_cheap"], sys_text, text,
+                                 DISCOVER_SCHEMA, hint, 2000, tracker)
+        venues = (data or {}).get("venues", [])
         for v in venues:
             nk = re.sub(r"[^a-z0-9]+", "", (v.get("name") or "").lower())
             hk = host_of(v.get("url") or "")
@@ -131,13 +122,11 @@ def main():
                              "reason": reason, "current_status": s.get("status")})
 
     new_venues = []
-    cap = args.__dict__.get("max_cost")
     tracker = extract.CostTracker(cfg["ai"].get("max_run_cost_usd", 2.0))
     if not args.no_ai and cfg["maintenance"].get("discover_new", True) and cfg["ai"].get("enabled", True):
         try:
-            import anthropic
-            client = anthropic.Anthropic()
-            new_venues = discover(client, cfg, tax, sources, session, tracker, cap_new=20)
+            prov, client = extract.get_client(cfg)
+            new_venues = discover(prov, client, cfg, tax, sources, session, tracker, cap_new=20)
         except Exception as e:
             print(f"[warn] discovery skipped ({e})")
 

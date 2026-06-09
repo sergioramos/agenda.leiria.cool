@@ -1,4 +1,5 @@
 anthropic>=0.69
+openai>=1.40
 requests>=2.32
 feedparser>=6.0.11
 icalendar>=6.1
