@@ -43,6 +43,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -64,5 +66,5 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "events: weekly crawl $(date -u +%Y-%m-%d)"
-            git push
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" && git push
           fi

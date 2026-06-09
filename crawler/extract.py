@@ -39,7 +39,8 @@ class CostTracker:
         self.calls = 0
 
     def add(self, model: str, in_tok: int, out_tok: int, cr_tok: int = 0, cw_tok: int = 0) -> None:
-        p = PRICES.get(model) or PRICES["deepseek-v4-pro"]
+        # unpriced model → charge at the worst-case rate so the cap triggers conservatively
+        p = PRICES.get(model) or max(PRICES.values(), key=lambda r: r["out"])
         self.spent += (in_tok * p["in"] + out_tok * p["out"]
                        + cr_tok * p["cr"] + cw_tok * p["cw"]) / 1_000_000
         self.calls += 1
@@ -63,6 +64,8 @@ def get_client(cfg: dict):
 def json_call(prov, client, model, system_text, user_text, schema, schema_hint,
               max_tokens, tracker: CostTracker):
     """One model call that returns parsed JSON (dict) or None on any failure."""
+    if tracker.exhausted():
+        return None
     try:
         if prov == "anthropic":
             resp = client.messages.create(

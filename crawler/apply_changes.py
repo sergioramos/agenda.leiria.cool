@@ -51,6 +51,8 @@ def main():
         data = json.loads(os.environ["CLIENT_PAYLOAD"])
     else:
         print("no payload provided"); return
+    if not isinstance(data, dict):
+        print("empty/invalid payload — nothing to apply"); return
 
     tax = core.load_taxonomy()
     valid_topics = core.topic_ids(tax)

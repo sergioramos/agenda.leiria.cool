@@ -99,8 +99,8 @@ def main():
             errors += 1
             continue
         _, ct, html = got
-        if "html" not in ct and "xml" not in ct and not html.strip().startswith("<"):
-            html = html or ""
+        if "html" not in ct and "xml" not in ct and not (html or "").strip().startswith("<"):
+            continue  # skip non-HTML/non-feed bodies (PDF/JSON/image): no events, no AI spend
         evs = feed_events(session, cfg, s, html, mon, window_end)
         if not evs and ai_enabled and not tracker.exhausted():
             text = core.html_to_text(html, cfg["ai"].get("max_chars_per_page", 18000))
