@@ -59,17 +59,6 @@ function eventDate(ev) {
   return new Date((ev.start || '').slice(0, 10) + 'T00:00:00');
 }
 
-function isoWeek(dateStr) {
-  const d = new Date(dateStr + 'T00:00:00');
-  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-  const day = (t.getUTCDay() + 6) % 7;            // Monday = 0
-  t.setUTCDate(t.getUTCDate() - day + 3);          // move to the week's Thursday
-  const firstThu = new Date(Date.UTC(t.getUTCFullYear(), 0, 4));
-  const fday = (firstThu.getUTCDay() + 6) % 7;
-  firstThu.setUTCDate(firstThu.getUTCDate() - fday + 3);
-  return 1 + Math.round((t - firstThu) / (7 * 864e5));
-}
-
 /* ---------- filtering ---------- */
 function matches(ev) {
   const f = state.filters;
@@ -262,8 +251,8 @@ async function loadWeek(fileEntry) {
   state.week = await getJSON('./data/weeks/' + fileEntry.file);
   const gen = new Date(state.week.generated_at);
   $('#week-range').textContent = fmtRange(state.week.week_start, state.week.week_end);
-  const ft = $('#filetag');
-  if (ft) ft.innerHTML = `Semana <span class="no">№ ${String(isoWeek(state.week.week_start)).padStart(2, '0')}</span> · V1`;
+  const wv = $('#week-value');
+  if (wv) wv.textContent = fmtRange(state.week.week_start, state.week.week_end);
   state.ticker = state.week.is_sample
     ? { text: '⚠ Dados de exemplo', accent: true }
     : { text: 'Atualizado ' + gen.toLocaleDateString('pt-PT'), accent: false };

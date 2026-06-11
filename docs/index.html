@@ -20,11 +20,15 @@
   <header class="site-header">
     <div class="wrap">
       <div class="masthead">
-        <span class="brand">
-          <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="logo-text">Pregoeiro</span>
-        </span>
-        <span class="filetag" id="filetag">Semana № — · V1</span>
+        <img class="brand-logo" src="./assets/logo.svg" alt="Pregoeiro" width="153" height="40" />
+        <div class="week-control">
+          <span class="week-control-label">Semana</span>
+          <span class="week-control-value">
+            <span id="week-value">—</span>
+            <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z" /></svg>
+            <select id="week-select" aria-label="Escolher semana"></select>
+          </span>
+        </div>
       </div>
       <hr class="rule-dashed" />
       <section class="hero">
@@ -33,10 +37,6 @@
         <p class="hero-sub">Tudo o que abre, toca e acontece nos próximos sete dias — organizado por tema, com filtros por bairro, dia e preço.</p>
         <div class="hero-meta">
           <span class="mono" id="week-range">A carregar…</span>
-          <label class="week-picker">
-            <span class="sr-only">Escolher semana</span>
-            <select id="week-select" aria-label="Escolher semana"></select>
-          </label>
         </div>
       </section>
     </div>

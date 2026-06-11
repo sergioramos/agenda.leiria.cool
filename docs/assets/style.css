@@ -15,7 +15,7 @@
   --accent-deep: #c23a1f;
   --accent-ink: #ffffff;
   --r: 0; --r-sm: 0;        /* squared corners everywhere */
-  --maxw: 1140px;
+  --maxw: 1000px;           /* content cap (Figma Main Container) */
   --display: "Fraunces", Georgia, "Times New Roman", serif;
   --body: "Newsreader", Georgia, "Times New Roman", serif;
   --mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
@@ -38,7 +38,7 @@ body::after {
   content: ""; position: fixed; inset: 0; z-index: 9000; pointer-events: none; opacity: .05; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+.wrap { max-width: calc(var(--maxw) + 64px); margin: 0 auto; padding: 0 32px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .muted { color: var(--ink-soft); }
 em, i { font-style: italic; }
@@ -51,7 +51,11 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 }
 .kicker { color: var(--accent); font-weight: 700; }
 .mono { color: var(--ink-soft); }
-.rule-dashed { border: 0; border-top: 1.5px dashed var(--line-strong); margin: 0; }
+/* divider (Figma stroke: 1px dashed #CCC7BB, dash 4 / gap 4) */
+.rule-dashed {
+  border: 0; margin: 0; height: 1px;
+  background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
+}
 .rule-solid { border: 0; border-top: 2px solid var(--ink); margin: 0; }
 
 /* ---------- top announcement bar (Figma 19:2073/19:2604/19:2606 — 1:1) ----------
@@ -74,18 +78,34 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 
-/* ---------- masthead ---------- */
+/* ---------- header (Figma 4:33 — 1:1) ----------
+   72px tall: 16px vertical padding · logo 153×40 left · week control right.
+   Week control: "SEMANA" chip on #1d1813 with #f4e9da text + value box with
+   1px #1d1813 border; both Space Mono Bold 12px/12px, ls 1px, 12px padding;
+   4px radius on the outer corners only (per design). */
 .site-header { background: var(--bg); }
-.masthead { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0 16px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; }
-.logo-mark { display: inline-flex; gap: 4px; align-items: center; background: var(--ink); padding: 6px 9px; }
-.logo-mark i { width: 5px; height: 5px; background: var(--bg); display: block; }
-.logo-text { font-family: var(--display); font-weight: 600; font-size: 1.15rem; letter-spacing: -.01em; }
-.filetag {
-  font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
-  background: var(--ink); color: var(--bg); padding: 7px 11px; white-space: nowrap;
+.masthead { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 16px 0; }
+.brand-logo { display: block; width: 153px; height: 40px; }
+
+.week-control { display: flex; align-items: stretch; }
+.week-control-label, .week-control-value {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; padding: 12px; white-space: nowrap;
 }
-.filetag .no { color: var(--accent); }
+.week-control-label {
+  display: flex; align-items: center; justify-content: center;
+  background: #1d1813; color: #f4e9da; border-radius: 4px 0 0 4px;
+}
+.week-control-value {
+  position: relative; display: flex; align-items: center; justify-content: center; gap: 12px;
+  color: #1d1813; border: 1px solid #1d1813; border-radius: 0 4px 4px 0; cursor: pointer;
+  padding: 11px; /* 11px + 1px border = the design's 12px inset; total height 36px like the label */
+}
+.week-control-value .caret { width: 12px; height: 12px; display: block; fill: #1d1813; flex: none; }
+.week-control-value select {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  opacity: 0; cursor: pointer; appearance: none; border: 0; font: inherit;
+}
 
 /* ---------- hero ---------- */
 .hero { padding: 26px 0 30px; }
@@ -98,13 +118,6 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .hero-sub { font-size: 1.12rem; max-width: 60ch; color: var(--ink); margin: 18px 0 0; }
 .hero-sub strong { font-weight: 600; }
 .hero-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 22px; }
-.week-picker { position: relative; }
-.week-picker select {
-  appearance: none; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
-  border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
-  border-radius: var(--r-sm); padding: 9px 30px 9px 12px; cursor: pointer; max-width: 70vw;
-}
-.week-picker::after { content: "▾"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: .7rem; }
 
 /* ---------- buttons ---------- */
 .btn {
