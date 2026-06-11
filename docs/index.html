@@ -7,7 +7,7 @@
   <meta name="description" content="O pregão semanal de Lisboa: tudo o que abre, toca e acontece esta semana, por tema." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0,0..1;1,9..144,300..700,0,0..1&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" />
   <link rel="stylesheet" href="./assets/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📣</text></svg>" />
 </head>
@@ -31,26 +31,33 @@
         </div>
       </div>
       <hr class="rule-dashed" />
-      <section class="hero">
-        <span class="kicker">Pregoeiro · Grande Lisboa · Esta semana</span>
-        <h1 class="hero-title">Esta <em>semana</em> em Lisboa.</h1>
-        <p class="hero-sub">Tudo o que abre, toca e acontece nos próximos sete dias — organizado por tema, com filtros por bairro, dia e preço.</p>
-        <div class="hero-meta">
-          <span class="mono" id="week-range">A carregar…</span>
-        </div>
-      </section>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="controls" aria-label="Filtros">
-      <div class="searchbar">
-        <input id="search" type="search" placeholder="Pesquisar eventos, locais, bairros…" autocomplete="off" />
-        <button id="filters-toggle" class="btn" aria-expanded="false">Filtros</button>
+    <section class="hero" aria-label="Esta semana">
+      <div class="hero-text">
+        <p class="hero-eyebrow">eventos · festas · atividades</p>
+        <h1 class="hero-title">Esta <em>semana</em> em Lisboa.</h1>
+        <p class="hero-sub">Tudo o que acontece nos próximos sete dias. Organizado por tema, com filtros por bairro, dia &amp; preço.</p>
       </div>
+      <div class="hero-controls">
+        <div class="searchbar">
+          <label class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="#1d1813" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /></svg>
+            <span class="sr-only">Pesquisar</span>
+            <input id="search" type="search" placeholder="Pesquisar eventos, locais, bairros…" autocomplete="off" />
+          </label>
+          <button id="filters-toggle" class="filters-btn" aria-expanded="false">
+            Filtros
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1d1813" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+          </button>
+        </div>
+        <div class="chips" id="topic-chips" role="group" aria-label="Temas"></div>
+      </div>
+    </section>
 
-      <div class="chips" id="topic-chips" role="group" aria-label="Temas"></div>
-
+    <section class="controls" aria-label="Filtros avançados">
       <div class="filter-panel" id="filter-panel" hidden>
         <div class="filter-group">
           <h3>Dia</h3>

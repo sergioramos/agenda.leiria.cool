@@ -250,7 +250,6 @@ function loadHash() {
 async function loadWeek(fileEntry) {
   state.week = await getJSON('./data/weeks/' + fileEntry.file);
   const gen = new Date(state.week.generated_at);
-  $('#week-range').textContent = fmtRange(state.week.week_start, state.week.week_end);
   const wv = $('#week-value');
   if (wv) wv.textContent = fmtRange(state.week.week_start, state.week.week_end);
   state.ticker = state.week.is_sample
