@@ -1,7 +1,7 @@
 {
   "_comment": "Single source of truth for topics, the 49 brief categories, and neighbourhoods. Consumed by the Python crawler AND the static site JS. Edit here to retune grouping/filters everywhere.",
   "topics": [
-    { "id": "music",       "label": "Música & concertos",        "emoji": "🎵", "categories": [10, 17, 25] },
+    { "id": "music",       "label": "Música & concertos",        "emoji": "🎷", "categories": [10, 17, 25] },
     { "id": "nightlife",   "label": "Noite & festas",            "emoji": "🌃", "categories": [3, 27, 34] },
     { "id": "film",        "label": "Cinema",                    "emoji": "🎬", "categories": [6, 7] },
     { "id": "art",         "label": "Arte & exposições",         "emoji": "🎨", "categories": [12, 23, 24, 44] },
