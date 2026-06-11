@@ -57,7 +57,8 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   border: 0; margin: 0; height: 1px;
   background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
 }
-.rule-solid { border: 0; border-top: 2px solid var(--ink); margin: 0; }
+/* solid divider (hero→events, above footer): 1px #ccc7bb */
+.rule-solid { border: 0; margin: 0; height: 1px; background: #ccc7bb; }
 
 /* ---------- top announcement bar (Figma 19:2073/19:2604/19:2606 — 1:1) ----------
    Bar #1d1813 · Space Mono Bold 12px/16px · letter-spacing 1px · uppercase ·
@@ -259,7 +260,8 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   border: 1px solid #6f6f6f; border-radius: 0; background: transparent;
   padding: 3px 7px; /* +1px border = the design's 4/8 insets; tag height 24px, card 124px */
 }
-.badge.topic, .badge.free { color: #6f6f6f; }
+.badge.topic { color: #6f6f6f; }
+.badge.free { color: #ff3d1f; border-color: #ff3d1f; } /* user call: keep Grátis highlighted */
 
 /* stamp box (READ ME / NOTE style) */
 .stamp { display: inline-block; font-family: var(--mono); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border: 1.5px dashed var(--accent); padding: 6px 9px; }
@@ -267,10 +269,16 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .empty { text-align: center; padding: 70px 16px; color: var(--ink-soft); font-style: italic; font-size: 1.1rem; }
 .empty .btn { margin-top: 16px; }
 
-.site-footer { border-top: 2px solid var(--ink); margin-top: 60px; padding: 24px 0 64px; }
-.site-footer p { margin: 7px 0; }
-#footer-stats { font-family: var(--mono); letter-spacing: .08em; text-transform: uppercase; font-size: .7rem; color: var(--ink-soft); }
-.site-footer .muted { font-size: .95rem; font-style: italic; }
+/* ---------- footer (Figma 19:253 — 1:1) ----------
+   Solid divider above; 24px vertical padding; Space Mono Bold 12/16,
+   ls .896px, uppercase, #6f6f6f; "Nucabé" in ink. */
+.site-footer { margin: 0; padding: 0; border: 0; }
+.footer-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 24px 0; }
+.footer-credit, #footer-stats {
+  margin: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: .896px; text-transform: uppercase; color: #6f6f6f; white-space: nowrap;
+}
+.footer-credit span { color: #1d1813; }
 
 @media (max-width: 540px) {
   .card { padding: 12px 16px; gap: 16px; }
