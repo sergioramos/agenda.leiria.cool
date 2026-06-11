@@ -99,8 +99,8 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 }
 .week-control-value {
   position: relative; display: flex; align-items: center; justify-content: center; gap: 12px;
-  color: #1d1813; border: 1px solid #1d1813; border-radius: 0 4px 4px 0; cursor: pointer;
-  padding: 11px; /* 11px + 1px border = the design's 12px inset; total height 36px like the label */
+  color: #1d1813; border: 1.5px solid #1d1813; border-radius: 0 4px 4px 0; cursor: pointer;
+  padding: 10.5px; /* 10.5px + 1.5px border = the design's 12px inset; total height 36px like the label */
 }
 .week-control-value .caret { width: 12px; height: 12px; display: block; fill: #1d1813; flex: none; }
 .week-control-value select {
