@@ -10,8 +10,28 @@ const state = {
   taxonomy: null,
   topicById: {},
   week: null,
+  ticker: { text: '', accent: false },
   filters: { q: '', topics: new Set(), days: new Set(), neighbourhoods: new Set(), free: false, zone: 'all' },
 };
+
+/* ---------- announcement-bar ticker (Figma 19:2073 — 1:1) ---------- */
+const TICKER_BASE = 'Pregoeiro · O pregão semanal de Lisboa';
+
+function tickerSegment() {
+  const seg = el('span', { className: 'ticker-item' });
+  seg.append(document.createTextNode(TICKER_BASE + (state.ticker.text ? ' · ' : '')));
+  if (state.ticker.text) {
+    seg.append(el('span', {
+      className: 'ticker-status' + (state.ticker.accent ? ' accent' : ''),
+      textContent: state.ticker.text,
+    }));
+  }
+  return seg;
+}
+
+function buildTopbar() {
+  if (typeof buildTicker === 'function') buildTicker(document.querySelector('.ticker-track'), tickerSegment);
+}
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -244,11 +264,10 @@ async function loadWeek(fileEntry) {
   $('#week-range').textContent = fmtRange(state.week.week_start, state.week.week_end);
   const ft = $('#filetag');
   if (ft) ft.innerHTML = `Semana <span class="no">№ ${String(isoWeek(state.week.week_start)).padStart(2, '0')}</span> · V1`;
-  const tr = $('#topbar-right');
-  if (tr) {
-    tr.textContent = state.week.is_sample ? '⚠ Dados de exemplo' : 'Atualizado ' + gen.toLocaleDateString('pt-PT');
-    tr.classList.toggle('accent', !!state.week.is_sample);
-  }
+  state.ticker = state.week.is_sample
+    ? { text: '⚠ Dados de exemplo', accent: true }
+    : { text: 'Atualizado ' + gen.toLocaleDateString('pt-PT'), accent: false };
+  buildTopbar();
   $('#footer-stats').textContent =
     `${state.week.event_count} eventos · ${state.week.source_count} fontes · atualizado a ${gen.toLocaleDateString('pt-PT')}`;
   // chips depend on the loaded week (dates, present topics/neighbourhoods)
@@ -294,6 +313,11 @@ async function init() {
   };
 
   await loadWeek(weeks[0]);
+
+  // rebuild the marquee once the real fonts arrive (widths change) and on resize
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(buildTopbar);
+  let tickerTimer;
+  window.addEventListener('resize', () => { clearTimeout(tickerTimer); tickerTimer = setTimeout(buildTopbar, 200); });
 }
 
 init().catch(err => {

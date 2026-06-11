@@ -205,3 +205,16 @@ $('#select-all').addEventListener('click', () => {
 
 if (sessionStorage.getItem(SESSION_KEY) === '1' && getAccount()) enterDash();
 else showGate();
+
+/* ---------- announcement-bar ticker (same component as the public site) ---------- */
+(function initTicker() {
+  const track = document.querySelector('.ticker-track');
+  if (!track || typeof buildTicker !== 'function') return;
+  const seg = () => el('span', { className: 'ticker-item',
+    textContent: 'Pregoeiro · Painel de administração · Acesso restrito' });
+  const rebuild = () => buildTicker(track, seg);
+  rebuild();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(rebuild);
+  let t;
+  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(rebuild, 200); });
+})();

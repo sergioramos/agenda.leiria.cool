@@ -54,11 +54,25 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .rule-dashed { border: 0; border-top: 1.5px dashed var(--line-strong); margin: 0; }
 .rule-solid { border: 0; border-top: 2px solid var(--ink); margin: 0; }
 
-/* ---------- top announcement bar ---------- */
-.topbar { background: #16110b; border-top: 3px solid var(--accent); color: #efe7da; }
-.topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 0; }
-.topbar span { font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
-.topbar .accent { color: var(--accent); }
+/* ---------- top announcement bar (Figma 19:2073/19:2604/19:2606 — 1:1) ----------
+   Bar #1d1813 · Space Mono Bold 12px/16px · letter-spacing 1px · uppercase ·
+   white · padding 16px vertical · continuous marquee · 4px #ff3d1f rule below. */
+.topbar { background: #1d1813; overflow: hidden; padding: 16px 0; }
+.ticker-track {
+  display: flex; width: max-content; will-change: transform;
+  animation: ticker-scroll var(--ticker-duration, 40s) linear infinite;
+}
+.ticker-half { display: flex; flex: none; }
+.ticker-item {
+  flex: none; white-space: nowrap;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #ffffff;
+  padding-right: 48px; /* gap between repeats */
+}
+.ticker-item .ticker-status.accent { color: #ff3d1f; }
+.topbar-rule { height: 4px; background: #ff3d1f; }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 
 /* ---------- masthead ---------- */
 .site-header { background: var(--bg); }
