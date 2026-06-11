@@ -26,3 +26,5 @@ Thumbs.db
 # Crawl working files
 crawler/.cache/
 *.log
+
+.vercel
