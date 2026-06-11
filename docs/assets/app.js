@@ -128,14 +128,18 @@ function card(ev) {
   const d = eventDate(ev);
   const when = el('div', { className: 'when' });
   if (ev.ongoing) {
-    when.append(el('div', { className: 'day', textContent: 'Toda a semana' }),
-                el('div', { className: 'ongoing', textContent: 'em curso' }));
+    // a run/exhibition: point at its closing day when known ("até 14 · em curso")
+    const endD = ev.end ? new Date(ev.end.slice(0, 10) + 'T00:00:00') : null;
+    when.append(
+      el('span', { className: 'day', textContent: endD ? 'até' : (DAY_LABEL[ev.days?.[0]] || 'sem') }),
+      el('span', { className: 'date', textContent: (endD || d).getDate() || '' }),
+      el('span', { className: 'ongoing', textContent: 'em curso' }));
   } else {
     const time = (ev.start || '').slice(11, 16);
     when.append(
-      el('div', { className: 'day', textContent: DAY_LABEL[ev.days?.[0]] || '' }),
-      el('div', { className: 'date', textContent: d.getDate() || '' }),
-      time ? el('div', { className: 'time', textContent: time }) : '');
+      el('span', { className: 'day', textContent: DAY_LABEL[ev.days?.[0]] || '' }),
+      el('span', { className: 'date', textContent: d.getDate() || '' }));
+    if (time) when.append(el('span', { className: 'time', textContent: time }));
   }
   const titleEl = ev.url
     ? el('a', { href: ev.url, target: '_blank', rel: 'noopener', textContent: ev.title })
@@ -147,10 +151,13 @@ function card(ev) {
   else if (ev.price?.text) badges.append(el('span', { className: 'badge', textContent: ev.price.text }));
   if ((ev.language || []).includes('en')) badges.append(el('span', { className: 'badge', textContent: 'EN' }));
 
-  return el('article', { className: 'card' }, when,
+  return el('article', { className: 'card' },
+    when,
+    el('span', { className: 'card-divider', ariaHidden: 'true' }),
     el('div', { className: 'body' },
-      el('h3', {}, titleEl),
-      el('p', { className: 'meta-line', textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · ') }),
+      el('div', { className: 'card-text' },
+        el('h3', {}, titleEl),
+        el('p', { className: 'meta-line', textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · ') })),
       badges));
 }
 
@@ -165,22 +172,23 @@ function render() {
   const groups = {};
   for (const ev of visible) (groups[ev.topic] ||= []).push(ev);
 
-  let secNo = 0;
   for (const tid of order) {
     const list = groups[tid];
     if (!list || !list.length) continue;
     const t = state.topicById[tid];
-    secNo++;
     list.sort((a, b) => (a.start || '').localeCompare(b.start || ''));
     const sec = el('section', { className: 'topic-section' });
     sec.append(el('div', { className: 'topic-head' },
-      el('span', { className: 'tnum', textContent: String(secNo).padStart(2, '0') }),
+      el('span', { className: 'topic-icon', textContent: t.emoji }),
       el('div', { className: 'topic-head-text' },
-        el('span', { className: 'kicker', textContent: `Tema ${String(secNo).padStart(2, '0')} · ${list.length} ${list.length === 1 ? 'evento' : 'eventos'}` }),
+        el('span', { className: 'topic-kicker', textContent: `${list.length} ${list.length === 1 ? 'evento' : 'eventos'}` }),
         el('h2', { textContent: t.label }))));
+    const body = el('div', { className: 'topic-body' });
+    body.append(el('hr', { className: 'rule-dashed' }));
     const cards = el('div', { className: 'cards' });
     list.forEach(ev => cards.append(card(ev)));
-    sec.append(cards);
+    body.append(cards);
+    sec.append(body);
     results.append(sec);
   }
   renderActiveFilterNote();

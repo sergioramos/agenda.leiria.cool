@@ -144,7 +144,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ---------- controls ---------- */
-.controls { padding: 8px 0 4px; }
+.controls { padding: 0; }
 /* search row (Figma 1:1810): 8px gap; bar #fefefe r4 with layered drop shadow,
    18px left / 24px right / 16px vertical padding, 12px gap, 20px tabler icon;
    Filtros button 56px tall, 1.5px #1d1813 border, Space Mono Bold 12/16 ls 2px. */
@@ -201,42 +201,65 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .segmented button.active { background: var(--accent); color: var(--accent-ink); }
 .filter-actions { display: flex; justify-content: flex-end; gap: 10px; }
 
-.result-meta { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 26px 0 8px; padding-top: 16px; border-top: 2px solid var(--ink); }
-#result-count { font-family: var(--display); font-weight: 600; font-size: 1.4rem; }
-#active-filters { font-family: var(--mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+/* count line (Figma 19:264): Space Mono Bold 12/12 ls 1px uppercase #6f6f6f,
+   16px below the divider, 64px before the first section. */
+.result-meta { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 16px 0 64px; }
+#result-count, #active-filters {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+}
+#active-filters { font-weight: 400; }
 
-/* ---------- results ---------- */
-.topic-section { margin: 34px 0; }
-.topic-head { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 18px; padding-bottom: 14px; margin-bottom: 16px; border-bottom: 1.5px dashed var(--line-strong); }
-.topic-head .tnum { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 3rem; line-height: .9; color: var(--accent); }
-.topic-head-text { align-self: center; }
-.topic-head-text .kicker { display: block; margin-bottom: 3px; }
-.topic-head h2 { font-family: var(--display); font-weight: 600; font-size: 1.55rem; letter-spacing: -.01em; margin: 0; line-height: 1.05; }
+/* ---------- topic sections (Figma 19:292 — 1:1) ----------
+   Header: 42px emoji · 16px gap · red count kicker SM Bold 12/12 ls 1px ·
+   title Fraunces SemiBold 24/32 (WONK 1). 16px gap to body; body = dashed
+   divider + 24px gap + 2-col grid (24px gaps). 64px between sections. */
+.topic-section { display: flex; flex-direction: column; gap: 16px; margin: 0 0 64px; }
+.topic-head { display: flex; align-items: center; gap: 16px; }
+.topic-icon { width: 42px; height: 42px; flex: none; display: flex; align-items: center; justify-content: center; font-size: 40px; line-height: 48px; }
+.topic-head-text { display: flex; flex-direction: column; gap: 8px; }
+.topic-kicker {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f;
+}
+.topic-head h2 {
+  margin: 0; font-family: var(--display); font-weight: 600; font-size: 24px; line-height: 32px;
+  color: #1d1813; font-variation-settings: "SOFT" 0, "WONK" 1; text-transform: capitalize;
+}
+.topic-body { display: flex; flex-direction: column; gap: 24px; }
 
-.cards { display: grid; gap: 12px; grid-template-columns: 1fr; }
-@media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; } }
+/* event card (Figma 19:2074 "Frame 61" — 1:1): #fefefe r4, 24px/16px padding,
+   24px gaps, shadow 0 22px 25px -8px rgba(22,22,22,.04). Date column 41px:
+   day SM Bold 12/12 red · date Fraunces SemiBold 32/40 WONK · time SM 12/16
+   grey. Vertical dashed divider. Title Familjen SemiBold 18/24 ls 1px; venue
+   SM Bold Italic 12/16 grey; tag row at 80%: 1px #6f6f6f boxes, 4/8 padding. */
+.cards { display: grid; gap: 24px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
 
 .card {
-  background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--r);
-  padding: 16px 18px; display: grid; grid-template-columns: 56px 1fr; gap: 16px; transition: border-color .12s;
+  background: #fefefe; border: 0; border-radius: 4px; padding: 16px 24px;
+  display: flex; align-items: center; gap: 24px;
+  box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
 }
-.card:hover { border-color: var(--line-strong); }
-.when { border-right: 1.5px dashed var(--line-strong); padding-right: 14px; }
-.when .day { font-family: var(--mono); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
-.when .date { font-family: var(--display); font-weight: 600; font-size: 2rem; line-height: 1; }
-.when .time { font-family: var(--mono); font-size: .68rem; color: var(--ink-soft); margin-top: 3px; }
-.when .ongoing { font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
-.card .body h3 { font-family: var(--body); font-weight: 500; font-size: 1.12rem; line-height: 1.25; margin: 0 0 5px; }
-.card .body h3 a { text-decoration: none; }
-.meta-line { font-size: .95rem; color: var(--ink-soft); margin: 0 0 11px; font-style: italic; }
-.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.card .when { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 41px; flex: none; }
+.when .day { font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f; }
+.when .date { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 1px; color: #1d1813; font-variation-settings: "SOFT" 0, "WONK" 1; }
+.when .time, .when .ongoing { font-family: var(--mono); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
+.card-divider { width: 1px; align-self: stretch; flex: none; background-image: repeating-linear-gradient(to bottom, #ccc7bb 0 4px, transparent 4px 8px); }
+.card .body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.card .card-text { display: flex; flex-direction: column; gap: 4px; }
+.card .body h3 { margin: 0; font-family: var(--grotesk); font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 1px; color: #1d1813; }
+.card .body h3 a { color: inherit; text-decoration: none; }
+.card .body h3 a:hover { color: var(--accent); text-decoration: underline; }
+.meta-line { margin: 0; font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; opacity: .8; }
 .badge {
-  font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase;
-  border: 1px solid var(--line-strong); padding: 3px 7px; color: var(--ink-soft); background: transparent;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+  border: 1px solid #6f6f6f; border-radius: 0; background: transparent;
+  padding: 3px 7px; /* +1px border = the design's 4/8 insets; tag height 24px, card 124px */
 }
-.badge.topic { color: var(--ink); }
-/* rubber-stamp look for "free" */
-.badge.free { color: var(--accent); border: 1.5px dashed var(--accent); font-weight: 700; }
+.badge.topic, .badge.free { color: #6f6f6f; }
 
 /* stamp box (READ ME / NOTE style) */
 .stamp { display: inline-block; font-family: var(--mono); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border: 1.5px dashed var(--accent); padding: 6px 9px; }
@@ -250,12 +273,8 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .site-footer .muted { font-size: .95rem; font-style: italic; }
 
 @media (max-width: 540px) {
-  .wrap { padding: 0 18px; }
-  .card { grid-template-columns: 46px 1fr; gap: 12px; padding: 13px 14px; }
-  .when { padding-right: 10px; }
-  .when .date { font-size: 1.6rem; }
-  .topic-head .tnum { font-size: 2.3rem; }
-  .masthead { flex-wrap: wrap; }
+  .card { padding: 12px 16px; gap: 16px; }
+  .masthead { flex-wrap: wrap; gap: 12px; }
 }
 
 /* ---------- admin ---------- */
