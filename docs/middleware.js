@@ -1,37 +1,36 @@
 // Vercel Edge Middleware — server-side protection for /admin.
-// Credentials come from the project's Environment Variables (ADMIN_USER /
-// ADMIN_PASSWORD), set only in the Vercel dashboard — never in this repo.
-// Fail-closed: while the variables are missing, /admin answers 503.
+//
+// The middleware itself does NOT read the credentials: on this static
+// project the edge runtime returned empty env vars no matter how they were
+// accessed (verified with deployed probes). Instead it delegates the check
+// to /api/auth — a Node serverless function, where process.env is reliable.
+// Credentials live only in the Vercel env vars (ADMIN_USER/ADMIN_PASSWORD).
+// Fail-closed: missing vars → 503; wrong/missing credentials → 401.
 
 export const config = { matcher: ['/admin', '/admin/:path*'] };
 
-function decodeBasic(header) {
-  if (!header || !header.startsWith('Basic ')) return null;
+export default async function middleware(request) {
+  let verdict = 0;
   try {
-    const bytes = Uint8Array.from(atob(header.slice(6)), (c) => c.charCodeAt(0));
-    const text = new TextDecoder().decode(bytes); // UTF-8-safe
-    const i = text.indexOf(':');
-    return i < 0 ? null : [text.slice(0, i), text.slice(i + 1)];
+    const res = await fetch(new URL('/api/auth', request.url), {
+      headers: { authorization: request.headers.get('authorization') || '' },
+      cache: 'no-store',
+    });
+    verdict = res.status;
   } catch {
-    return null;
+    verdict = 0; // network failure → treat as locked
   }
-}
 
-export default function middleware(request) {
-  const user = process.env.ADMIN_USER;
-  const pass = process.env.ADMIN_PASSWORD;
+  if (verdict === 204) {
+    return; // authenticated — continue to the static page
+  }
 
-  if (!user || !pass) {
+  if (verdict === 503) {
     return new Response(
       'Área de administração bloqueada: defina ADMIN_USER e ADMIN_PASSWORD em ' +
       'Settings → Environment Variables do projeto na Vercel e faça redeploy.',
-      { status: 503, headers: { 'content-type': 'text/plain; charset=utf-8' } },
+      { status: 503, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store' } },
     );
-  }
-
-  const creds = decodeBasic(request.headers.get('authorization'));
-  if (creds && creds[0] === user && creds[1] === pass) {
-    return; // authenticated — continue to the static page
   }
 
   return new Response('Autenticação necessária.', {
@@ -39,6 +38,7 @@ export default function middleware(request) {
     headers: {
       'www-authenticate': 'Basic realm="Pregoeiro Admin", charset="UTF-8"',
       'content-type': 'text/plain; charset=utf-8',
+      'cache-control': 'no-store',
     },
   });
 }
