@@ -38,10 +38,10 @@ def main():
         cost += m.get("ai_cost_usd", 0)
         tried += m.get("sources_tried", 0)
         ai_calls += m.get("ai_calls", 0)
-    events = core.dedupe(events)
 
     cfg = core.load_config()
     src = core.load_sources()["sources"]
+    events = core.dedupe(events, src)
     crawlable = sum(1 for s in src if s.get("crawlable") and s.get("status") in ("active", "renovation"))
     gen = args.generated_at or datetime.now(timezone.utc).isoformat(timespec="seconds")
 

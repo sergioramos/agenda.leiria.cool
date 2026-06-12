@@ -4,7 +4,7 @@
   "generated_at": "2026-06-12T14:08:27Z",
   "is_sample": false,
   "source_count": 556,
-  "event_count": 305,
+  "event_count": 251,
   "meta": {
     "sources_tried": 556,
     "ai_calls": 441,
@@ -56,8 +56,8 @@
       "categories": [
         24
       ],
-      "venue": "CAM Gulbenkian (fashion/design programming)",
-      "source_id": "cam-gulbenkian-fashion-design-programming",
+      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
+      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
       "neighbourhood": null,
       "zone": null,
       "start": "2025-09-20",
@@ -85,44 +85,6 @@
       "url": "https://gulbenkian.pt/cam",
       "source": "generic",
       "description": "Exposição permanente que revela a coleção do Centro de Arte Moderna.",
-      "image": null
-    },
-    {
-      "id": "041d2c3717d5",
-      "title": "Xerazade, a Coleção Interminável do CAM",
-      "topic": "art",
-      "categories": [
-        11
-      ],
-      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
-      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2025-09-20",
-      "end": "2027-09-20",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/cam",
-      "source": "generic",
-      "description": "Xerazade, a Coleção Interminável do CAM",
       "image": null
     },
     {
@@ -202,46 +164,8 @@
       "image": null
     },
     {
-      "id": "ab5dee66ec3a",
-      "title": "Oficina Wikipédia Teatro Variedades: 100 Anos, 100 Entradas na Wikipédia",
-      "topic": "workshops",
-      "categories": [
-        6
-      ],
-      "venue": "Cinecapitólio Rooftop",
-      "source_id": "cinecapitolio-rooftop",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "start": "2025-10-18",
-      "end": "2026-06-20",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://capitolio.pt",
-      "source": "generic",
-      "description": "Oficina de edição da Wikipédia sobre os 100 anos do Teatro Variedades",
-      "image": null
-    },
-    {
       "id": "8cfd9a45bb37",
-      "title": "DINO EXPERIENCE",
+      "title": "Dino Experience",
       "topic": "family",
       "categories": [
         28
@@ -318,7 +242,7 @@
     },
     {
       "id": "cbcfadc746f2",
-      "title": "Plié Ballet Community – Baby + Mom Classes (ages 1–3) 2026",
+      "title": "Plié Ballet Community – Baby + Mom Classes (ages 1 – 3) 2026",
       "topic": "workshops",
       "categories": [
         28
@@ -399,8 +323,8 @@
       "categories": [
         42
       ],
-      "venue": "24–28 Sep 2026",
-      "source_id": "24-28-sep-2026",
+      "venue": "Little Big Apple – Swing Dance",
+      "source_id": "little-big-apple-swing-dance",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-01-06",
@@ -437,8 +361,8 @@
       "categories": [
         42
       ],
-      "venue": "24–28 Sep 2026",
-      "source_id": "24-28-sep-2026",
+      "venue": "Little Big Apple – Swing Dance",
+      "source_id": "little-big-apple-swing-dance",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-01-06",
@@ -475,8 +399,8 @@
       "categories": [
         42
       ],
-      "venue": "24–28 Sep 2026",
-      "source_id": "24-28-sep-2026",
+      "venue": "Little Big Apple – Swing Dance",
+      "source_id": "little-big-apple-swing-dance",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-01-08",
@@ -508,7 +432,7 @@
     },
     {
       "id": "bf543cda4982",
-      "title": "ECOlógicas | Visita ao jardim e oficina",
+      "title": "ECOlógicas – Visita ao jardim e oficina",
       "topic": "workshops",
       "categories": [
         12
@@ -583,44 +507,6 @@
       "image": null
     },
     {
-      "id": "ecc633e4c2ae",
-      "title": "Clube de Leitura do Teatro Variedades",
-      "topic": "learning",
-      "categories": [
-        6
-      ],
-      "venue": "Cinecapitólio Rooftop",
-      "source_id": "cinecapitolio-rooftop",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "start": "2026-01-19",
-      "end": "2026-12-14",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://capitolio.pt",
-      "source": "generic",
-      "description": "Clube de leitura do Teatro Variedades",
-      "image": null
-    },
-    {
       "id": "3bf5a1e70f73",
       "title": "Atenção, há obras no teatro!",
       "topic": "tours",
@@ -666,8 +552,8 @@
       "categories": [
         24
       ],
-      "venue": "CAM Gulbenkian (fashion/design programming)",
-      "source_id": "cam-gulbenkian-fashion-design-programming",
+      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
+      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-02-28",
@@ -695,44 +581,6 @@
       "url": "https://gulbenkian.pt/cam",
       "source": "generic",
       "description": "Exposição individual de Bruno Zhu no CAM.",
-      "image": null
-    },
-    {
-      "id": "a7cd82c44fce",
-      "title": "Bruno Zhu. Belas Artes",
-      "topic": "art",
-      "categories": [
-        11
-      ],
-      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
-      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2026-02-28",
-      "end": "2026-07-27",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/cam",
-      "source": "generic",
-      "description": "Exposição de Bruno Zhu: Belas Artes",
       "image": null
     },
     {
@@ -852,7 +700,7 @@
     },
     {
       "id": "0716a1f04844",
-      "title": "ARTISTAS SOBRE ARTISTAS",
+      "title": "Artistas sobre Artistas",
       "topic": "learning",
       "categories": [
         12
@@ -1003,44 +851,6 @@
       "image": null
     },
     {
-      "id": "63171d6b3d07",
-      "title": "Evita",
-      "topic": "performance",
-      "categories": [
-        6
-      ],
-      "venue": "Cinecapitólio Rooftop",
-      "source_id": "cinecapitolio-rooftop",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "start": "2026-03-27",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://capitolio.pt",
-      "source": "generic",
-      "description": "Musical Evita em cena no Capitólio",
-      "image": null
-    },
-    {
       "id": "8a4560379113",
       "title": "A Luz que Ficou",
       "topic": "art",
@@ -1086,8 +896,8 @@
       "categories": [
         24
       ],
-      "venue": "CAM Gulbenkian (fashion/design programming)",
-      "source_id": "cam-gulbenkian-fashion-design-programming",
+      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
+      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-03-28",
@@ -1115,44 +925,6 @@
       "url": "https://gulbenkian.pt/cam",
       "source": "generic",
       "description": "Mostra de Diogo Pimentão que investiga a materialidade e movimento.",
-      "image": null
-    },
-    {
-      "id": "059dcc8d6d34",
-      "title": "Diogo Pimentão. Força Transitória das Coisas",
-      "topic": "art",
-      "categories": [
-        11
-      ],
-      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
-      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2026-03-28",
-      "end": "2026-10-05",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/cam",
-      "source": "generic",
-      "description": "Exposição de Diogo Pimentão: Força Transitória das Coisas",
       "image": null
     },
     {
@@ -1229,44 +1001,6 @@
       "url": "https://scml.pt",
       "source": "generic",
       "description": "Exposição sobre a devoção ao Menino Jesus dos Atribulados na Lisboa de D. João VI.",
-      "image": null
-    },
-    {
-      "id": "1e199cdc6bd9",
-      "title": "Da Matriz à Impressão",
-      "topic": "art",
-      "categories": [
-        5
-      ],
-      "venue": "Fundação Oriente",
-      "source_id": "fundacao-oriente",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-04-10",
-      "end": "2026-08-09",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://foriente.pt",
-      "source": "generic",
-      "description": "Exposição temporária de gravura.",
       "image": null
     },
     {
@@ -1386,44 +1120,6 @@
       "image": null
     },
     {
-      "id": "d229be585829",
-      "title": "Songkran. Tailândia a São e Salvo",
-      "topic": "art",
-      "categories": [
-        5
-      ],
-      "venue": "Fundação Oriente",
-      "source_id": "fundacao-oriente",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-04-15",
-      "end": "2026-06-21",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://foriente.pt",
-      "source": "generic",
-      "description": "Exposição sobre o festival tailandês Songkran.",
-      "image": null
-    },
-    {
       "id": "9a5a7066fbec",
       "title": "Songkran. Tailândia a São e Salvo",
       "topic": "art",
@@ -1459,45 +1155,6 @@
       "url": "https://foriente.pt",
       "source": "generic",
       "description": "Exposição temporária sobre o festival tailandês Songkran.",
-      "image": null
-    },
-    {
-      "id": "1f8f8020bc2d",
-      "title": "João Penalva: Personagens e Intérpretes",
-      "topic": "art",
-      "categories": [
-        7,
-        11
-      ],
-      "venue": "Culturgest (auditoriums)",
-      "source_id": "culturgest-auditoriums",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2026-04-18",
-      "end": "2026-07-12",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://culturgest.pt",
-      "source": "generic",
-      "description": "Exposição de João Penalva, Personagens e Intérpretes.",
       "image": null
     },
     {
@@ -1537,6 +1194,45 @@
       "url": "https://culturgest.pt",
       "source": "generic",
       "description": "Visitas e oficinas para escolas sobre Um Silabário por Reconstruir IV.",
+      "image": null
+    },
+    {
+      "id": "1f8f8020bc2d",
+      "title": "João Penalva: Personagens e Intérpretes",
+      "topic": "art",
+      "categories": [
+        7,
+        11
+      ],
+      "venue": "Culturgest (auditoriums)",
+      "source_id": "culturgest-auditoriums",
+      "neighbourhood": "Avenidas Novas",
+      "zone": "city",
+      "start": "2026-04-18",
+      "end": "2026-07-12",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://culturgest.pt",
+      "source": "generic",
+      "description": "Exposição de João Penalva, Personagens e Intérpretes.",
       "image": null
     },
     {
@@ -1580,7 +1276,7 @@
     },
     {
       "id": "8b100b83de98",
-      "title": "Exposição | A Coleção Camoniana de Carvalho Monteiro no 5º Centenário de Camões",
+      "title": "Exposição – A Coleção Camoniana de Carvalho Monteiro no 5º Centenário de Camões",
       "topic": "art",
       "categories": [
         33
@@ -1618,7 +1314,7 @@
     },
     {
       "id": "8f7f88ae92ee",
-      "title": "As armas de papel – Imprensa e publicações clandestinas (1926-1974) | O acervo do Arquivo Ephemera",
+      "title": "As armas de papel – Imprensa e publicações clandestinas (1926-1974) – O acervo do Arquivo Ephemera",
       "topic": "art",
       "categories": [
         48
@@ -1694,7 +1390,7 @@
     },
     {
       "id": "628792b1102b",
-      "title": "CLUBE DOS POETAS MORTOS",
+      "title": "Clube dos Poetas Mortos",
       "topic": "performance",
       "categories": [
         11
@@ -1770,7 +1466,7 @@
     },
     {
       "id": "2f2e7786f1d8",
-      "title": "Casa Ásia – Coleção Francisco Capelo | Visitas Guiadas",
+      "title": "Casa Ásia – Coleção Francisco Capelo – Visitas Guiadas",
       "topic": "tours",
       "categories": [
         48
@@ -1882,7 +1578,7 @@
     },
     {
       "id": "772c3f36ff32",
-      "title": "Bichos da Sede | Oficina",
+      "title": "Bichos da Sede – Oficina",
       "topic": "workshops",
       "categories": [
         12
@@ -1920,7 +1616,7 @@
     },
     {
       "id": "2b383a02a7b4",
-      "title": "A(R)RISCAR | Oficina",
+      "title": "A(R)RISCAR – Oficina",
       "topic": "workshops",
       "categories": [
         12
@@ -2154,8 +1850,8 @@
       "categories": [
         24
       ],
-      "venue": "CAM Gulbenkian (fashion/design programming)",
-      "source_id": "cam-gulbenkian-fashion-design-programming",
+      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
+      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-05-16",
@@ -2183,44 +1879,6 @@
       "url": "https://gulbenkian.pt/cam",
       "source": "generic",
       "description": "Exposição de Rosa Barba que explora o desenho como linguagem e vocabulário.",
-      "image": null
-    },
-    {
-      "id": "ffc64b1ffbc7",
-      "title": "Rosa Barba. Desenhar Vocabulários",
-      "topic": "art",
-      "categories": [
-        11
-      ],
-      "venue": "CAM – Centro de Arte Moderna Gulbenkian",
-      "source_id": "cam-centro-de-arte-moderna-gulbenkian",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2026-05-16",
-      "end": "2026-09-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/cam",
-      "source": "generic",
-      "description": "Exposição de Rosa Barba: Desenhar Vocabulários",
       "image": null
     },
     {
@@ -2262,7 +1920,7 @@
     },
     {
       "id": "eda530fe1017",
-      "title": "Resilient Transitions — Franka Struys & Vania R. Gonçalves",
+      "title": "Resilient Transitions – Franka Struys & Vania R. Gonçalves",
       "topic": "art",
       "categories": [
         5
@@ -2300,7 +1958,7 @@
     },
     {
       "id": "561f79ae8191",
-      "title": "Um piano — Manuel Falcão",
+      "title": "Um piano – Manuel Falcão",
       "topic": "art",
       "categories": [
         5
@@ -2413,392 +2071,8 @@
       "image": null
     },
     {
-      "id": "eea1aa805191",
-      "title": "Bruscky em Brusque — de Paulo Bruscky",
-      "topic": "art",
-      "categories": [
-        9,
-        23
-      ],
-      "venue": "Galeria Zé dos Bois (ZDB)",
-      "source_id": "galeria-ze-dos-bois-zdb",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Paulo Bruscky na Galeria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "17c0647fa42a",
-      "title": "EMPORIO — de Musa paradisiaca",
-      "topic": "art",
-      "categories": [
-        9,
-        23
-      ],
-      "venue": "Galeria Zé dos Bois (ZDB)",
-      "source_id": "galeria-ze-dos-bois-zdb",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Musa paradisiaca na Galeria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "42d9daccbb9a",
-      "title": "Mike Tyson’s Worst Nightmare — de Francisco Corrêa",
-      "topic": "art",
-      "categories": [
-        9,
-        23
-      ],
-      "venue": "Galeria Zé dos Bois (ZDB)",
-      "source_id": "galeria-ze-dos-bois-zdb",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Francisco Corrêa na Livraria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "7d5013976941",
-      "title": "RedSkyFalls (Réplica) – Uma rede de transmissão sísmica — de Alexandre Estrela",
-      "topic": "art",
-      "categories": [
-        9,
-        23
-      ],
-      "venue": "Galeria Zé dos Bois (ZDB)",
-      "source_id": "galeria-ze-dos-bois-zdb",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-11-22",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Alexandre Estrela na Galeria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "37d74cd1f585",
-      "title": "Bruscky em Brusque — de Paulo Bruscky",
-      "topic": "art",
-      "categories": [
-        9
-      ],
-      "venue": "NEGÓCIO (ZDB-linked)",
-      "source_id": "negocio-zdb-linked",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Paulo Bruscky na Galeria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "fc608a418a00",
-      "title": "EMPORIO — de Musa paradisiaca",
-      "topic": "art",
-      "categories": [
-        9
-      ],
-      "venue": "NEGÓCIO (ZDB-linked)",
-      "source_id": "negocio-zdb-linked",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Musa paradisiaca na Galeria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "c576255d5bb4",
-      "title": "RedSkyFalls (Réplica) – Uma rede de transmissão sísmica — de Alexandre Estrela",
-      "topic": "art",
-      "categories": [
-        9
-      ],
-      "venue": "NEGÓCIO (ZDB-linked)",
-      "source_id": "negocio-zdb-linked",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-11-22",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Alexandre Estrela na Galeria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "54431ef387dc",
-      "title": "Livraria Mike Tyson’s Worst Nightmare — de Francisco Corrêa",
-      "topic": "art",
-      "categories": [
-        9
-      ],
-      "venue": "NEGÓCIO (ZDB-linked)",
-      "source_id": "negocio-zdb-linked",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição de Francisco Corrêa na Livraria Zé dos Bois.",
-      "image": null
-    },
-    {
-      "id": "5fefd452df97",
-      "title": "Bruscky em Brusque — de Paulo Bruscky",
-      "topic": "art",
-      "categories": [
-        10
-      ],
-      "venue": "ZDB – Galeria Zé dos Bois",
-      "source_id": "zdb-galeria-ze-dos-bois",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição 'Bruscky em Brusque' de Paulo Bruscky.",
-      "image": null
-    },
-    {
-      "id": "66ac3d8a1e42",
-      "title": "EMPORIO — de Musa paradisiaca",
-      "topic": "art",
-      "categories": [
-        10
-      ],
-      "venue": "ZDB – Galeria Zé dos Bois",
-      "source_id": "zdb-galeria-ze-dos-bois",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-05-23",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Exposição 'EMPORIO' de Musa paradisiaca.",
-      "image": null
-    },
-    {
       "id": "df22ff70d71f",
-      "title": "Livraria Mike Tyson’s Worst Nightmare — de Francisco Corrêa",
+      "title": "Livraria Mike Tyson’s Worst Nightmare – de Francisco Corrêa",
       "topic": "art",
       "categories": [
         10
@@ -2836,7 +2110,7 @@
     },
     {
       "id": "adef0b6c9652",
-      "title": "RedSkyFalls (Réplica) – Uma rede de transmissão sísmica — de Alexandre Estrela",
+      "title": "RedSkyFalls (Réplica) – Uma rede de transmissão sísmica – de Alexandre Estrela",
       "topic": "art",
       "categories": [
         10
@@ -2873,8 +2147,86 @@
       "image": null
     },
     {
+      "id": "17c0647fa42a",
+      "title": "EMPORIO – de Musa paradisiaca",
+      "topic": "art",
+      "categories": [
+        9,
+        23
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-05-23",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org",
+      "source": "generic",
+      "description": "Exposição de Musa paradisiaca na Galeria Zé dos Bois.",
+      "image": null
+    },
+    {
+      "id": "eea1aa805191",
+      "title": "Bruscky em Brusque – de Paulo Bruscky",
+      "topic": "art",
+      "categories": [
+        9,
+        23
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-05-23",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org",
+      "source": "generic",
+      "description": "Exposição de Paulo Bruscky na Galeria Zé dos Bois.",
+      "image": null
+    },
+    {
       "id": "4e5e5e3db61c",
-      "title": "96ª Feira do Livro de Lisboa | 2026 - Bibliotecas de Lisboa e Livraria Lisboa Cultura",
+      "title": "96ª Feira do Livro de Lisboa – 2026 - Bibliotecas de Lisboa e Livraria Lisboa Cultura",
       "topic": "outdoors",
       "categories": [
         19
@@ -2946,44 +2298,6 @@
       "url": "https://capitolio.pt",
       "source": "generic",
       "description": "Sessões de cinema ao ar livre no rooftop do Capitólio.",
-      "image": null
-    },
-    {
-      "id": "c73294daa7c7",
-      "title": "Cinecapitólio Rooftop",
-      "topic": "film",
-      "categories": [
-        6
-      ],
-      "venue": "Cinecapitólio Rooftop",
-      "source_id": "cinecapitolio-rooftop",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "start": "2026-05-27",
-      "end": "2026-09-26",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://capitolio.pt",
-      "source": "generic",
-      "description": "Sessões de cinema ao ar livre no rooftop do Capitólio",
       "image": null
     },
     {
@@ -3102,44 +2416,6 @@
       "image": null
     },
     {
-      "id": "a72710e5134d",
-      "title": "Lisbon Festivities",
-      "topic": "outdoors",
-      "categories": [
-        39
-      ],
-      "venue": "19–22 Nov 2026",
-      "source_id": "19-22-nov-2026",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-05-29",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Festividades de Lisboa com diversos eventos culturais e de entretenimento.",
-      "image": null
-    },
-    {
       "id": "8b9dc5517f8a",
       "title": "Main Events Lisbon Festivities",
       "topic": "outdoors",
@@ -3175,44 +2451,6 @@
       "url": "https://visitlisboa.com",
       "source": "generic",
       "description": "Festividades principais de Lisboa, com eventos variados.",
-      "image": null
-    },
-    {
-      "id": "5bfeac293c44",
-      "title": "Lisbon Festivities",
-      "topic": "outdoors",
-      "categories": [
-        13
-      ],
-      "venue": "Feira do Relógio",
-      "source_id": "feira-do-relogio",
-      "neighbourhood": "Marvila",
-      "zone": "city",
-      "start": "2026-05-29",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Festas de Lisboa com animação cultural e música.",
       "image": null
     },
     {
@@ -3290,120 +2528,6 @@
       "url": "https://lisboasecreta.co",
       "source": "generic",
       "description": "Arraiais autênticos com sardinhas, música e tradição popular em vários bairros.",
-      "image": null
-    },
-    {
-      "id": "29840417afe4",
-      "title": "Lisbon Festivities",
-      "topic": "outdoors",
-      "categories": [
-        13
-      ],
-      "venue": "Mercado Biológico AgroBio (Campo Pequeno)",
-      "source_id": "mercado-biologico-agrobio-campo-pequeno",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2026-05-29",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Festividades de Lisboa, com eventos culturais e música.",
-      "image": null
-    },
-    {
-      "id": "9507c303046d",
-      "title": "Lisbon Festivities",
-      "topic": "outdoors",
-      "categories": [
-        13
-      ],
-      "venue": "Mercado Biológico do Príncipe Real (AgroBio)",
-      "source_id": "mercado-biologico-do-principe-real-agrobio",
-      "neighbourhood": "Príncipe Real",
-      "zone": "city",
-      "start": "2026-05-29",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Festas de Lisboa com eventos culturais e musicais pela cidade.",
-      "image": null
-    },
-    {
-      "id": "c5adce81d21d",
-      "title": "Lisbon Festivities",
-      "topic": "outdoors",
-      "categories": [
-        33
-      ],
-      "venue": "New Year's Eve at Praça do Comércio",
-      "source_id": "new-year-s-eve-at-praca-do-comercio",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "start": "2026-05-29",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Festividades de Lisboa com eventos culturais e música pela cidade.",
       "image": null
     },
     {
@@ -3524,7 +2648,7 @@
     },
     {
       "id": "71b423dbad77",
-      "title": "Biblioteca Itinerante – junho | 2026 - itinerário e atividades",
+      "title": "Biblioteca Itinerante – junho – 2026 - itinerário e atividades",
       "topic": "tours",
       "categories": [
         19
@@ -3600,44 +2724,6 @@
       "image": null
     },
     {
-      "id": "ce76816134e3",
-      "title": "Iniciados Charleston a Pares",
-      "topic": "workshops",
-      "categories": [
-        42
-      ],
-      "venue": "24–28 Sep 2026",
-      "source_id": "24-28-sep-2026",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-02",
-      "end": "2026-06-23",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://littlebigapple.pt",
-      "source": "generic",
-      "description": "Curso de 4 semanas de Charleston a pares, às terças-feiras.",
-      "image": null
-    },
-    {
       "id": "a2c8ea54f859",
       "title": "João Penalva: Uma Obra em Seis Partes",
       "topic": "art",
@@ -3674,6 +2760,44 @@
       "url": "https://culturgest.pt",
       "source": "generic",
       "description": "Exposição de João Penalva, Uma Obra em Seis Partes.",
+      "image": null
+    },
+    {
+      "id": "ce76816134e3",
+      "title": "Iniciados Charleston a Pares",
+      "topic": "workshops",
+      "categories": [
+        42
+      ],
+      "venue": "Little Big Apple – Swing Dance",
+      "source_id": "little-big-apple-swing-dance",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-02",
+      "end": "2026-06-23",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://littlebigapple.pt",
+      "source": "generic",
+      "description": "Curso de 4 semanas de Charleston a pares, às terças-feiras.",
       "image": null
     },
     {
@@ -3754,46 +2878,8 @@
       "image": null
     },
     {
-      "id": "7fb5101d146a",
-      "title": "Radojka",
-      "topic": "performance",
-      "categories": [
-        6
-      ],
-      "venue": "Cinecapitólio Rooftop",
-      "source_id": "cinecapitolio-rooftop",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "start": "2026-06-04",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://capitolio.pt",
-      "source": "generic",
-      "description": "Peça de teatro Radojka em cartaz",
-      "image": null
-    },
-    {
       "id": "437bde827332",
-      "title": "AS GUERREIRAS DO K-POP | TRIBUTO",
+      "title": "As Guerreiras do K-Pop – Tributo",
       "topic": "music",
       "categories": [
         10
@@ -3869,7 +2955,7 @@
     },
     {
       "id": "ee45c49480fc",
-      "title": "VEMOS AS MESMAS ESTRELAS",
+      "title": "Vemos as Mesmas Estrelas",
       "topic": "performance",
       "categories": [
         28
@@ -3903,44 +2989,6 @@
       "url": "https://happykids.pt/agenda",
       "source": "generic",
       "description": "Espetáculo de teatro em Lisboa.",
-      "image": null
-    },
-    {
-      "id": "79516d1a7b49",
-      "title": "As Guerreiras do K-Pop – Tributo 2026",
-      "topic": "music",
-      "categories": [
-        28
-      ],
-      "venue": "Lisboa Events",
-      "source_id": "lisboa-events",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-06",
-      "end": "2026-07-12",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://lisboa.events",
-      "source": "generic",
-      "description": "Espetáculo tributo de K-Pop com música e dança.",
       "image": null
     },
     {
@@ -4090,38 +3138,6 @@
       "image": null
     },
     {
-      "id": "2d145039febc",
-      "title": "Oficina de dança Afro-Jazz",
-      "topic": "workshops",
-      "categories": [
-        1
-      ],
-      "venue": "Community radio",
-      "source_id": "community-radio",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-08",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://radioquantica.com",
-      "source": "generic",
-      "description": "Oficina de dança gratuita",
-      "image": null
-    },
-    {
       "id": "b5037dac8fd1",
       "title": "Alfama Walking Tour",
       "topic": "tours",
@@ -4257,39 +3273,6 @@
       "image": null
     },
     {
-      "id": "a39be4e6a080",
-      "title": "ZDB apresenta: Lucrecia Dalt ‘A Danger to Ourselves’ ⟡ Alex Lazaro",
-      "topic": "music",
-      "categories": [
-        9,
-        23
-      ],
-      "venue": "Galeria Zé dos Bois (ZDB)",
-      "source_id": "galeria-ze-dos-bois-zdb",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-08",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Concerto duplo com Lucrecia Dalt e Alex Lazaro no B.Leza.",
-      "image": null
-    },
-    {
       "id": "af2daec6809a",
       "title": "Arte & Moda",
       "topic": "art",
@@ -4422,70 +3405,6 @@
       "url": "https://jfarroios.pt",
       "source": "generic",
       "description": "Inauguração da sala Hind Rajab na Biblioteca de São Lázaro.",
-      "image": null
-    },
-    {
-      "id": "19a72af1dddd",
-      "title": "Inauguração da sala Hind Rajab na Biblioteca de São Lázaro",
-      "topic": "community",
-      "categories": [
-        13
-      ],
-      "venue": "Mercado de Culturas (Arroios)",
-      "source_id": "mercado-de-culturas-arroios",
-      "neighbourhood": "Arroios",
-      "zone": "city",
-      "start": "2026-06-08",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://jfarroios.pt",
-      "source": "generic",
-      "description": "Inauguração da nova sala na Biblioteca de São Lázaro.",
-      "image": null
-    },
-    {
-      "id": "34a136ea0cb9",
-      "title": "ZDB apresenta: Lucrecia Dalt ‘A Danger to Ourselves’ ⟡ Alex Lazaro",
-      "topic": "music",
-      "categories": [
-        9
-      ],
-      "venue": "NEGÓCIO (ZDB-linked)",
-      "source_id": "negocio-zdb-linked",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-08",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Concerto de Lucrecia Dalt e Alex Lazaro no B.Leza, Lisboa.",
       "image": null
     },
     {
@@ -4625,11 +3544,11 @@
       "image": null
     },
     {
-      "id": "2f89f4bb932e",
+      "id": "34a136ea0cb9",
       "title": "ZDB apresenta: Lucrecia Dalt ‘A Danger to Ourselves’ ⟡ Alex Lazaro",
       "topic": "music",
       "categories": [
-        10
+        9
       ],
       "venue": "ZDB – Galeria Zé dos Bois",
       "source_id": "zdb-galeria-ze-dos-bois",
@@ -4653,7 +3572,7 @@
       ],
       "url": "https://zedosbois.org",
       "source": "generic",
-      "description": "Concerto de Lucrecia Dalt com Alex Lazaro no B.Leza.",
+      "description": "Concerto de Lucrecia Dalt e Alex Lazaro no B.Leza, Lisboa.",
       "image": null
     },
     {
@@ -4722,40 +3641,6 @@
       "image": null
     },
     {
-      "id": "276a8a570240",
-      "title": "AVNL 2026",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Community radio",
-      "source_id": "community-radio",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-09",
-      "end": "2026-06-11",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "tue",
-        "wed",
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://radioquantica.com",
-      "source": "generic",
-      "description": "Festival de música AVNL 2026",
-      "image": null
-    },
-    {
       "id": "9fda73a99c97",
       "title": "Alfama Walking Tour",
       "topic": "tours",
@@ -4785,38 +3670,6 @@
       "url": "https://discoverlisbon.org",
       "source": "generic",
       "description": "Visita guiada gratuita pelo bairro histórico de Alfama.",
-      "image": null
-    },
-    {
-      "id": "18ddecc27d75",
-      "title": "Lisbon Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        37
-      ],
-      "venue": "Discover Lisbon — Street Art Tour",
-      "source_id": "discover-lisbon-street-art-tour",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-09",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://discoverlisbon.org",
-      "source": "generic",
-      "description": "Roteiro de bares pela animada vida noturna de Lisboa.",
       "image": null
     },
     {
@@ -4852,6 +3705,38 @@
       "image": null
     },
     {
+      "id": "18ddecc27d75",
+      "title": "Lisbon Pub Crawl",
+      "topic": "nightlife",
+      "categories": [
+        37
+      ],
+      "venue": "Discover Lisbon — Street Art Tour",
+      "source_id": "discover-lisbon-street-art-tour",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-09",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://discoverlisbon.org",
+      "source": "generic",
+      "description": "Roteiro de bares pela animada vida noturna de Lisboa.",
+      "image": null
+    },
+    {
       "id": "b16e85b582a7",
       "title": "Fado in Chiado",
       "topic": "music",
@@ -4882,39 +3767,6 @@
       "url": "https://fadoinchiado.com",
       "source": "generic",
       "description": "Espectáculo de fado ao vivo às 17:30.",
-      "image": null
-    },
-    {
-      "id": "3aeb80ba2ad7",
-      "title": "ZDB apresenta: Beverly Glenn-Copeland ‘Laughter in Summer’",
-      "topic": "music",
-      "categories": [
-        9,
-        23
-      ],
-      "venue": "Galeria Zé dos Bois (ZDB)",
-      "source_id": "galeria-ze-dos-bois-zdb",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-09",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://zedosbois.org",
-      "source": "generic",
-      "description": "Concerto de Beverly Glenn-Copeland no Auditório da Reitoria da Universidade NOVA.",
       "image": null
     },
     {
@@ -5093,43 +3945,6 @@
       "image": null
     },
     {
-      "id": "547d05550cdb",
-      "title": "Port Wine Tasting",
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "venue": "Lisbon Winery",
-      "source_id": "lisbon-winery",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-09",
-      "end": "2026-06-14",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 89.0,
-        "currency": "EUR",
-        "text": "€89"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://lisbonwinery.com",
-      "source": "generic",
-      "description": "Prova de 5 vinhos do Porto de pequenas casas, com queijos e charcutaria premium, azeite e comentários em inglês.",
-      "image": null
-    },
-    {
       "id": "80ed2430cb07",
       "title": "Deluxe Wine Tasting",
       "topic": "food",
@@ -5167,35 +3982,40 @@
       "image": null
     },
     {
-      "id": "5da7a19e2ce3",
-      "title": "ZDB apresenta: Beverly Glenn-Copeland ‘Laughter in Summer’",
-      "topic": "music",
+      "id": "547d05550cdb",
+      "title": "Port Wine Tasting",
+      "topic": "food",
       "categories": [
-        9
+        30
       ],
-      "venue": "NEGÓCIO (ZDB-linked)",
-      "source_id": "negocio-zdb-linked",
+      "venue": "Lisbon Winery",
+      "source_id": "lisbon-winery",
       "neighbourhood": "Bairro Alto",
       "zone": "city",
       "start": "2026-06-09",
-      "end": null,
+      "end": "2026-06-14",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "tue"
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
       ],
       "price": {
         "is_free": false,
-        "min": null,
+        "min": 89.0,
         "currency": "EUR",
-        "text": ""
+        "text": "€89"
       },
       "language": [
         "pt"
       ],
-      "url": "https://zedosbois.org",
+      "url": "https://lisbonwinery.com",
       "source": "generic",
-      "description": "Concerto de Beverly Glenn-Copeland no Auditório da Reitoria da Universidade NOVA de Lisboa.",
+      "description": "Prova de 5 vinhos do Porto de pequenas casas, com queijos e charcutaria premium, azeite e comentários em inglês.",
       "image": null
     },
     {
@@ -5259,15 +4079,15 @@
       ],
       "url": "https://radioquantica.com",
       "source": "generic",
-      "description": "Evento musical AVNL.",
+      "description": "Festival de música AVNL 2026",
       "image": null
     },
     {
-      "id": "f47e68ec3ef3",
-      "title": "ZDB apresenta: Beverly Glenn-Copeland ‘Laughter in Summer’",
+      "id": "5da7a19e2ce3",
+      "title": "ZDB apresenta: Beverly Glenn-Copeland ‘Laughter in Summer",
       "topic": "music",
       "categories": [
-        10
+        9
       ],
       "venue": "ZDB – Galeria Zé dos Bois",
       "source_id": "zdb-galeria-ze-dos-bois",
@@ -5291,7 +4111,7 @@
       ],
       "url": "https://zedosbois.org",
       "source": "generic",
-      "description": "Concerto de Beverly Glenn-Copeland no Auditório da Reitoria da Universidade NOVA.",
+      "description": "Concerto de Beverly Glenn-Copeland no Auditório da Reitoria da Universidade NOVA de Lisboa.",
       "image": null
     },
     {
@@ -5556,41 +4376,6 @@
       "image": null
     },
     {
-      "id": "3dd51f5d297b",
-      "title": "Lisboa Football Arena | FIFA World Cup",
-      "topic": "outdoors",
-      "categories": [
-        39
-      ],
-      "venue": "19–22 Nov 2026",
-      "source_id": "19-22-nov-2026",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-11",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Espaço arena dedicado ao FIFA World Cup com transmissões e atividades.",
-      "image": null
-    },
-    {
       "id": "2955d47f3dc4",
       "title": "Fado ao Vivo",
       "topic": "music",
@@ -5785,7 +4570,7 @@
     },
     {
       "id": "52d931b2d122",
-      "title": "Lisboa Football Arena | FIFA World Cup",
+      "title": "Lisboa Football Arena – FIFA World Cup",
       "topic": "outdoors",
       "categories": [
         13
@@ -5819,43 +4604,8 @@
       "image": null
     },
     {
-      "id": "c1457e9719b5",
-      "title": "Lisboa Football Arena | FIFA World Cup",
-      "topic": "outdoors",
-      "categories": [
-        13
-      ],
-      "venue": "Feira do Relógio",
-      "source_id": "feira-do-relogio",
-      "neighbourhood": "Marvila",
-      "zone": "city",
-      "start": "2026-06-11",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Arena para assistir aos jogos do Campeonato do Mundo de Futebol 2026.",
-      "image": null
-    },
-    {
       "id": "810505ed889c",
-      "title": "PRIMAVERA SOUND 2026",
+      "title": "Primavera Sound 2026",
       "topic": "music",
       "categories": [
         28
@@ -5957,38 +4707,6 @@
       "image": null
     },
     {
-      "id": "871fbad14ae1",
-      "title": "Bad Tongue Comedy",
-      "topic": "comedy",
-      "categories": [
-        26
-      ],
-      "venue": "Lisbon Comedy",
-      "source_id": "lisbon-comedy",
-      "neighbourhood": "Santos",
-      "zone": "city",
-      "start": "2026-06-11",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "en"
-      ],
-      "url": "https://lisboncomedy.com",
-      "source": "generic",
-      "description": "Noite de comédia em inglês no Má Língua, Graça.",
-      "image": null
-    },
-    {
       "id": "e4cdcf7e7e08",
       "title": "Bad Advice",
       "topic": "comedy",
@@ -6021,25 +4739,22 @@
       "image": null
     },
     {
-      "id": "25388074af76",
-      "title": "Lisboa Football Arena | FIFA World Cup",
-      "topic": "social",
+      "id": "871fbad14ae1",
+      "title": "Bad Tongue Comedy",
+      "topic": "comedy",
       "categories": [
-        13
+        26
       ],
-      "venue": "Mercado Biológico AgroBio (Campo Pequeno)",
-      "source_id": "mercado-biologico-agrobio-campo-pequeno",
-      "neighbourhood": "Avenidas Novas",
+      "venue": "Lisbon Comedy",
+      "source_id": "lisbon-comedy",
+      "neighbourhood": "Santos",
       "zone": "city",
       "start": "2026-06-11",
-      "end": "2026-07-19",
+      "end": null,
       "all_day": true,
-      "ongoing": true,
+      "ongoing": false,
       "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
+        "thu"
       ],
       "price": {
         "is_free": false,
@@ -6048,81 +4763,11 @@
         "text": ""
       },
       "language": [
-        "pt"
+        "en"
       ],
-      "url": "https://visitlisboa.com",
+      "url": "https://lisboncomedy.com",
       "source": "generic",
-      "description": "Evento de visualização do Campeonato do Mundo FIFA.",
-      "image": null
-    },
-    {
-      "id": "fdc18e187dfd",
-      "title": "Lisboa Football Arena | FIFA World Cup",
-      "topic": "outdoors",
-      "categories": [
-        13
-      ],
-      "venue": "Mercado Biológico do Príncipe Real (AgroBio)",
-      "source_id": "mercado-biologico-do-principe-real-agrobio",
-      "neighbourhood": "Príncipe Real",
-      "zone": "city",
-      "start": "2026-06-11",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Espaço dedicado ao Mundial de Futebol com transmissão de jogos e animação.",
-      "image": null
-    },
-    {
-      "id": "24585135b47e",
-      "title": "Lisboa Football Arena | FIFA World Cup",
-      "topic": "social",
-      "categories": [
-        33
-      ],
-      "venue": "New Year's Eve at Praça do Comércio",
-      "source_id": "new-year-s-eve-at-praca-do-comercio",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "start": "2026-06-11",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Fan zone com ecrã gigante para assistir aos jogos do Mundial 2026.",
+      "description": "Noite de comédia em inglês no Má Língua, Graça.",
       "image": null
     },
     {
@@ -6193,76 +4838,6 @@
       "image": null
     },
     {
-      "id": "0bcc53221cb5",
-      "title": "Lisboa Football Arena | FIFA World Cup",
-      "topic": "tours",
-      "categories": [
-        13,
-        33
-      ],
-      "venue": "Wonderland Lisboa",
-      "source_id": "wonderland-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-11",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com",
-      "source": "generic",
-      "description": "Arena de futebol do Mundial FIFA, patente de 11 de junho a 19 de julho.",
-      "image": null
-    },
-    {
-      "id": "b998270a9f54",
-      "title": "ETHGlobal New York 2026",
-      "topic": "workshops",
-      "categories": [
-        22
-      ],
-      "venue": "24–26 Jul 2026",
-      "source_id": "24-26-jul-2026",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": "2026-06-14",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://ethglobal.com",
-      "source": "generic",
-      "description": "Hackathon presencial da ETHGlobal em Nova Iorque, de 12 a 14 de junho de 2026.",
-      "image": null
-    },
-    {
       "id": "5c4ccd5cada7",
       "title": "Fado ao Vivo",
       "topic": "music",
@@ -6327,590 +4902,14 @@
       "image": null
     },
     {
-      "id": "e9c696b057c0",
-      "title": "Na Onda do Oceano – Aventura Educativa em Família no Oceanário de Lisboa",
-      "topic": "family",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Aventura educativa em família no Oceanário de Lisboa.",
-      "image": null
-    },
-    {
-      "id": "62d775c10b78",
-      "title": "Casamentos de Santo António 2026",
-      "topic": "community",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Celebração dos tradicionais casamentos de Santo António.",
-      "image": null
-    },
-    {
-      "id": "37104996afe0",
-      "title": "Saints and Sounds junta Anthea e Woody no Carmo Rooftop",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Sessão musical com Anthea e Woody no Carmo Rooftop.",
-      "image": null
-    },
-    {
-      "id": "bc1f088de130",
-      "title": "Golfos estreia-se em Lisboa com Dennis Cruz b2b Pawsa",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Estreia do Golfos com Dennis Cruz b2b Pawsa no Terreiro das Missas.",
-      "image": null
-    },
-    {
-      "id": "60f62cccdacf",
-      "title": "Arraial do Miradouro celebra Santo António com Chalo Correia e DJ sets",
-      "topic": "outdoors",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Arraial com Chalo Correia e DJ sets no Miradouro de Baixo.",
-      "image": null
-    },
-    {
-      "id": "b8225cd09832",
-      "title": "Reflect 2.0 INTROSPECTIVE: exposição de Rita Andrade na Galeria Belas-Artes",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Exposição de Rita Andrade na Galeria da Faculdade de Belas-Artes.",
-      "image": null
-    },
-    {
-      "id": "9acf255d1c51",
-      "title": "Grupo Dramático e Escolar Os Combatentes – Santos Populares 2026 – Lisboa",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Espetáculo do Grupo Dramático e Escolar Os Combatentes para os Santos Populares.",
-      "image": null
-    },
-    {
-      "id": "a68df5e6bc1f",
-      "title": "Quinze arraiais populares distribuídos por Lisboa",
-      "topic": "outdoors",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Quinze arraiais populares espalhados pela cidade.",
-      "image": null
-    },
-    {
-      "id": "28293683b189",
-      "title": "Conversa no âmbito da exposição “dran”, de Orlando Franco",
-      "topic": "learning",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Conversa sobre a exposição “dran” de Orlando Franco.",
-      "image": null
-    },
-    {
-      "id": "17eb3abe0b86",
-      "title": "Apresentação do livro Forgetful Secretary, de Austin Gross",
-      "topic": "learning",
-      "categories": [
-        1
-      ],
-      "venue": "Cartaz Cultural Lisboa",
-      "source_id": "cartaz-cultural-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Apresentação do livro Forgetful Secretary de Austin Gross.",
-      "image": null
-    },
-    {
-      "id": "499cf0fae5d9",
-      "title": "Na Onda do Oceano – Aventura Educativa em Família no Oceanário de Lisboa",
-      "topic": "family",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Aventura educativa em família no Oceanário de Lisboa.",
-      "image": null
-    },
-    {
-      "id": "bdc28336889b",
-      "title": "Casamentos de Santo António 2026",
-      "topic": "community",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Tradicionais casamentos comunitários de Santo António em vários locais.",
-      "image": null
-    },
-    {
-      "id": "e5e1c265fca0",
-      "title": "Saints and Sounds junta Anthea e Woody no Carmo Rooftop",
-      "topic": "music",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Atuação de Anthea e Woody no Carmo Rooftop.",
-      "image": null
-    },
-    {
-      "id": "0d39a3aeed95",
-      "title": "Golfos estreia-se em Lisboa com Dennis Cruz b2b Pawsa",
-      "topic": "nightlife",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Música eletrónica com Dennis Cruz b2b Pawsa no Terreiro das Missas.",
-      "image": null
-    },
-    {
-      "id": "1d4f302c9b8c",
-      "title": "Arraial do Miradouro celebra Santo António com Chalo Correia e DJ sets",
-      "topic": "outdoors",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Arraial de Santo António com Chalo Correia e DJ sets no Miradouro de Baixo.",
-      "image": null
-    },
-    {
-      "id": "ffd9d2004d22",
-      "title": "Reflect 2.0 INTROSPECTIVE: exposição de Rita Andrade na Galeria Belas-Artes",
-      "topic": "art",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Exposição 'Reflect 2.0 INTROSPECTIVE' de Rita Andrade na Galeria Belas-Artes.",
-      "image": null
-    },
-    {
-      "id": "cd8e0d073c04",
-      "title": "Grupo Dramático e Escolar Os Combatentes – Santos Populares 2026 – Lisboa",
-      "topic": "community",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Santos Populares 2026 pelo Grupo Dramático e Escolar Os Combatentes na Estrela.",
-      "image": null
-    },
-    {
-      "id": "e5de8c612afd",
-      "title": "Quinze arraiais populares distribuídos por Lisboa",
-      "topic": "community",
-      "categories": [
-        49
-      ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://cartazculturallisboa.pt",
-      "source": "generic",
-      "description": "Quinze arraiais populares em vários locais de Lisboa.",
-      "image": null
-    },
-    {
       "id": "24b2c554aeb8",
       "title": "Conversa no âmbito da exposição “dran”, de Orlando Franco",
       "topic": "learning",
       "categories": [
         49
       ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-06-12",
@@ -6941,8 +4940,8 @@
       "categories": [
         49
       ],
-      "venue": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "source_id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
       "neighbourhood": null,
       "zone": null,
       "start": "2026-06-12",
@@ -6964,6 +4963,328 @@
       "url": "https://cartazculturallisboa.pt",
       "source": "generic",
       "description": "Apresentação do livro 'Forgetful Secretary' de Austin Gross na Livraria Tigre de Papel.",
+      "image": null
+    },
+    {
+      "id": "cd8e0d073c04",
+      "title": "Grupo Dramático e Escolar Os Combatentes – Santos Populares 2026 – Lisboa",
+      "topic": "community",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Espetáculo do Grupo Dramático e Escolar Os Combatentes para os Santos Populares.",
+      "image": null
+    },
+    {
+      "id": "ffd9d2004d22",
+      "title": "Reflect 2.0 INTROSPECTIVE: exposição de Rita Andrade na Galeria Belas-Artes",
+      "topic": "art",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Exposição 'Reflect 2.0 INTROSPECTIVE' de Rita Andrade na Galeria Belas-Artes.",
+      "image": null
+    },
+    {
+      "id": "1d4f302c9b8c",
+      "title": "Arraial do Miradouro celebra Santo António com Chalo Correia e DJ sets",
+      "topic": "outdoors",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Arraial de Santo António com Chalo Correia e DJ sets no Miradouro de Baixo.",
+      "image": null
+    },
+    {
+      "id": "bdc28336889b",
+      "title": "Casamentos de Santo António 2026",
+      "topic": "community",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Tradicionais casamentos comunitários de Santo António em vários locais.",
+      "image": null
+    },
+    {
+      "id": "0d39a3aeed95",
+      "title": "Golfos estreia-se em Lisboa com Dennis Cruz b2b Pawsa",
+      "topic": "nightlife",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Música eletrónica com Dennis Cruz b2b Pawsa no Terreiro das Missas.",
+      "image": null
+    },
+    {
+      "id": "499cf0fae5d9",
+      "title": "Na Onda do Oceano – Aventura Educativa em Família no Oceanário de Lisboa",
+      "topic": "family",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Aventura educativa em família no Oceanário de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "e5de8c612afd",
+      "title": "Quinze arraiais populares distribuídos por Lisboa",
+      "topic": "community",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Quinze arraiais populares em vários locais de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "e5e1c265fca0",
+      "title": "Saints and Sounds junta Anthea e Woody no Carmo Rooftop",
+      "topic": "music",
+      "categories": [
+        49
+      ],
+      "venue": "Cartaz Cultural Lisboa",
+      "source_id": "cartaz-cultural-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt",
+      "source": "generic",
+      "description": "Sessão musical com Anthea e Woody no Carmo Rooftop.",
+      "image": null
+    },
+    {
+      "id": "4df9642414c0",
+      "title": "BAILE: APUPU, FAZER CONCHINHA, Bailarico do Gay",
+      "topic": "nightlife",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "casa-capitao",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casa-capitao.com",
+      "source": "generic",
+      "description": "Festa com múltiplos DJs: Baco DJ, 2AD, Naomy Vissolela, Guima, Mei Glez, The Rolê, King Kami.",
+      "image": null
+    },
+    {
+      "id": "edaf947514fa",
+      "title": "Zanibar Aliens – 10 anos ‘Bela Vista",
+      "topic": "music",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "casa-capitao",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casa-capitao.com",
+      "source": "generic",
+      "description": "Zanibar Aliens celebram 10 anos do álbum 'Bela Vista'.",
       "image": null
     },
     {
@@ -7033,74 +5354,8 @@
       "image": null
     },
     {
-      "id": "edaf947514fa",
-      "title": "Zanibar Aliens – 10 anos ‘Bela Vista’",
-      "topic": "music",
-      "categories": [
-        3,
-        8
-      ],
-      "venue": "Casa Capitão",
-      "source_id": "casa-capitao",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casa-capitao.com",
-      "source": "generic",
-      "description": "Zanibar Aliens celebram 10 anos do álbum 'Bela Vista'.",
-      "image": null
-    },
-    {
-      "id": "4df9642414c0",
-      "title": "BAILE: APUPU, FAZER CONCHINHA, Bailarico do Gay",
-      "topic": "nightlife",
-      "categories": [
-        3,
-        8
-      ],
-      "venue": "Casa Capitão",
-      "source_id": "casa-capitao",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casa-capitao.com",
-      "source": "generic",
-      "description": "Festa com múltiplos DJs: Baco DJ, 2AD, Naomy Vissolela, Guima, Mei Glez, The Rolê, King Kami.",
-      "image": null
-    },
-    {
       "id": "977097c616f4",
-      "title": "CINEMA QUEER – CURTAS #1 _ NOVO CINEMA QUEER PORTUGUÊS",
+      "title": "Cinema Queer – Curtas #1 – Novo Cinema Queer Português",
       "topic": "film",
       "categories": [
         9
@@ -7132,7 +5387,7 @@
     },
     {
       "id": "075097a1d4fd",
-      "title": "FAISCA DJ",
+      "title": "Faisca DJ",
       "topic": "music",
       "categories": [
         9
@@ -7160,40 +5415,6 @@
       "url": "https://casadocomum.org",
       "source": "generic",
       "description": "DJ set de música eletrónica com FAISCA.",
-      "image": null
-    },
-    {
-      "id": "825373532532",
-      "title": "Gin O’Clock at Hyatt Regency Lisbon",
-      "topic": "food",
-      "categories": [
-        11
-      ],
-      "venue": "Cordoaria Nacional",
-      "source_id": "cordoaria-nacional",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "start": "2026-06-12",
-      "end": "2026-11-17",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 45.0,
-        "currency": "EUR",
-        "text": "€45.00"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/en/lisbon/venue/cordoaria-nacional",
-      "source": "fever",
-      "description": "Experiência de gin no Hyatt Regency Lisbon.",
       "image": null
     },
     {
@@ -7231,6 +5452,40 @@
       "image": null
     },
     {
+      "id": "825373532532",
+      "title": "Gin O’Clock at Hyatt Regency Lisbon",
+      "topic": "food",
+      "categories": [
+        11
+      ],
+      "venue": "Cordoaria Nacional",
+      "source_id": "cordoaria-nacional",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "start": "2026-06-12",
+      "end": "2026-11-17",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 45.0,
+        "currency": "EUR",
+        "text": "€45.00"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/en/lisbon/venue/cordoaria-nacional",
+      "source": "fever",
+      "description": "Experiência de gin no Hyatt Regency Lisbon.",
+      "image": null
+    },
+    {
       "id": "45cc249d644b",
       "title": "Alfama Walking Tour",
       "topic": "tours",
@@ -7260,6 +5515,38 @@
       "url": "https://discoverlisbon.org",
       "source": "generic",
       "description": "Visita guiada gratuita pelo bairro histórico de Alfama.",
+      "image": null
+    },
+    {
+      "id": "00f1c70115cc",
+      "title": "Authentic VIP Fado Concert",
+      "topic": "music",
+      "categories": [
+        37
+      ],
+      "venue": "Discover Lisbon — Street Art Tour",
+      "source_id": "discover-lisbon-street-art-tour",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://discoverlisbon.org",
+      "source": "generic",
+      "description": "Concerto autêntico de fado, música tradicional portuguesa.",
       "image": null
     },
     {
@@ -7324,38 +5611,6 @@
       "url": "https://discoverlisbon.org",
       "source": "generic",
       "description": "Festa em barco ao pôr do sol com DJ ao vivo.",
-      "image": null
-    },
-    {
-      "id": "00f1c70115cc",
-      "title": "Authentic VIP Fado Concert",
-      "topic": "music",
-      "categories": [
-        37
-      ],
-      "venue": "Discover Lisbon — Street Art Tour",
-      "source_id": "discover-lisbon-street-art-tour",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://discoverlisbon.org",
-      "source": "generic",
-      "description": "Concerto autêntico de fado, música tradicional portuguesa.",
       "image": null
     },
     {
@@ -7458,40 +5713,6 @@
       "image": null
     },
     {
-      "id": "96f72aeaad93",
-      "title": "Free Tour Lisbon: Essential History, Fun Facts and Free Tastings",
-      "topic": "tours",
-      "categories": [
-        37
-      ],
-      "venue": "GuruWalk / Take Free Tours / Living Tours",
-      "source_id": "guruwalk-take-free-tours-living-tours",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": "2026-06-14",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "en"
-      ],
-      "url": "https://guruwalk.com/lisbon",
-      "source": "generic",
-      "description": "Passeio essencial de 3h pela história de Lisboa com curiosidades e degustações gratuitas.",
-      "image": null
-    },
-    {
       "id": "a0d7e862e347",
       "title": "Unmissable Lisbon Free Tour",
       "topic": "tours",
@@ -7523,40 +5744,6 @@
       "url": "https://guruwalk.com/lisbon",
       "source": "generic",
       "description": "Visita guiada gratuita pelos pontos imperdíveis do centro de Lisboa, com múltiplos horários.",
-      "image": null
-    },
-    {
-      "id": "3c1b5683fb31",
-      "title": "The Unmissable Alfama: Secrets of Lisbon’s Oldest District",
-      "topic": "tours",
-      "categories": [
-        37
-      ],
-      "venue": "GuruWalk / Take Free Tours / Living Tours",
-      "source_id": "guruwalk-take-free-tours-living-tours",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-12",
-      "end": "2026-06-14",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "en"
-      ],
-      "url": "https://guruwalk.com/lisbon",
-      "source": "generic",
-      "description": "Exploração de Alfama, o bairro mais antigo, revelando os seus segredos e história.",
       "image": null
     },
     {
@@ -7594,6 +5781,74 @@
       "image": null
     },
     {
+      "id": "96f72aeaad93",
+      "title": "Free Tour Lisbon: Essential History, Fun Facts and Free Tastings",
+      "topic": "tours",
+      "categories": [
+        37
+      ],
+      "venue": "GuruWalk / Take Free Tours / Living Tours",
+      "source_id": "guruwalk-take-free-tours-living-tours",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": "2026-06-14",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "en"
+      ],
+      "url": "https://guruwalk.com/lisbon",
+      "source": "generic",
+      "description": "Passeio essencial de 3h pela história de Lisboa com curiosidades e degustações gratuitas.",
+      "image": null
+    },
+    {
+      "id": "3c1b5683fb31",
+      "title": "The Unmissable Alfama: Secrets of Lisbon’s Oldest District",
+      "topic": "tours",
+      "categories": [
+        37
+      ],
+      "venue": "GuruWalk / Take Free Tours / Living Tours",
+      "source_id": "guruwalk-take-free-tours-living-tours",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-12",
+      "end": "2026-06-14",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "en"
+      ],
+      "url": "https://guruwalk.com/lisbon",
+      "source": "generic",
+      "description": "Exploração de Alfama, o bairro mais antigo, revelando os seus segredos e história.",
+      "image": null
+    },
+    {
       "id": "19cddf5f16c9",
       "title": "Essential Free Walking Tour: Discover the Famous Alfama with the Exterior View of São Jorge Castle",
       "topic": "tours",
@@ -7628,8 +5883,8 @@
       "image": null
     },
     {
-      "id": "54d363e8f002",
-      "title": "Belém Free Walking Tour: History versus Modern Facts",
+      "id": "d98d78f0fb89",
+      "title": "Alfama and Mouraria Free Tour: History vs Modern Facts (Lisbon)",
       "topic": "tours",
       "categories": [
         37
@@ -7658,7 +5913,7 @@
       ],
       "url": "https://guruwalk.com/lisbon",
       "source": "generic",
-      "description": "Tour gratuito por Belém, contrastando história e factos modernos.",
+      "description": "Free tour por Alfama e Mouraria, cruzando história e factos modernos.",
       "image": null
     },
     {
@@ -7730,8 +5985,8 @@
       "image": null
     },
     {
-      "id": "d98d78f0fb89",
-      "title": "Alfama and Mouraria Free Tour: History vs Modern Facts (Lisbon)",
+      "id": "54d363e8f002",
+      "title": "Belém Free Walking Tour: History versus Modern Facts",
       "topic": "tours",
       "categories": [
         37
@@ -7760,7 +6015,7 @@
       ],
       "url": "https://guruwalk.com/lisbon",
       "source": "generic",
-      "description": "Free tour por Alfama e Mouraria, cruzando história e factos modernos.",
+      "description": "Tour gratuito por Belém, contrastando história e factos modernos.",
       "image": null
     },
     {
@@ -7989,38 +6244,6 @@
       "url": "https://jfarroios.pt",
       "source": "generic",
       "description": "Inscrições abertas para o programa de verão para maiores de 55 anos.",
-      "image": null
-    },
-    {
-      "id": "da877390f265",
-      "title": "Severa – A Mãe do Fado",
-      "topic": "performance",
-      "categories": [
-        13
-      ],
-      "venue": "Mercado de Culturas (Arroios)",
-      "source_id": "mercado-de-culturas-arroios",
-      "neighbourhood": "Arroios",
-      "zone": "city",
-      "start": "2026-06-12",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://jfarroios.pt",
-      "source": "generic",
-      "description": "Espetáculo 'Severa – A Mãe do Fado' pela ASA no Auditório do Liceu Camões.",
       "image": null
     },
     {
@@ -8387,9 +6610,9 @@
       "image": null
     },
     {
-      "id": "7f3bd80e9921",
-      "title": "+1VERANNNN – Listening Party Rafitshas",
-      "topic": "music",
+      "id": "d83b141143f3",
+      "title": "BAILE: Elebonde + Xavbeatz – ARRAIAL GADDAM",
+      "topic": "nightlife",
       "categories": [
         3,
         8
@@ -8416,106 +6639,7 @@
       ],
       "url": "https://casa-capitao.com",
       "source": "generic",
-      "description": "Sessão de escuta com Rafitshas no Sótão.",
-      "image": null
-    },
-    {
-      "id": "d7dffb54f8d5",
-      "title": "Casa Popular: Brasil Brasil e mais Brasil com Beltrão!",
-      "topic": "music",
-      "categories": [
-        3,
-        8
-      ],
-      "venue": "Casa Capitão",
-      "source_id": "casa-capitao",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casa-capitao.com",
-      "source": "generic",
-      "description": "DJ set de Beltrão no Terraço.",
-      "image": null
-    },
-    {
-      "id": "5111aa9431e4",
-      "title": "Casa Popular: DJ Set de Forró do Coreto com Chu Selecta",
-      "topic": "music",
-      "categories": [
-        3,
-        8
-      ],
-      "venue": "Casa Capitão",
-      "source_id": "casa-capitao",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casa-capitao.com",
-      "source": "generic",
-      "description": "DJ set de forró por Chu Selecta.",
-      "image": null
-    },
-    {
-      "id": "6fe0d8c96e1f",
-      "title": "Casa Popular: Forró do Coreto convida Timba",
-      "topic": "music",
-      "categories": [
-        3,
-        8
-      ],
-      "venue": "Casa Capitão",
-      "source_id": "casa-capitao",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casa-capitao.com",
-      "source": "generic",
-      "description": "Apresentação de Forró do Coreto com convidado Timba.",
+      "description": "Festa no Sótão com Elebonde, Xavbeatz, Sina, Gaddam e Zauooo.",
       "image": null
     },
     {
@@ -8552,9 +6676,9 @@
       "image": null
     },
     {
-      "id": "d83b141143f3",
-      "title": "BAILE: Elebonde + Xavbeatz | ARRAIAL GADDAM",
-      "topic": "nightlife",
+      "id": "6fe0d8c96e1f",
+      "title": "Casa Popular: Forró do Coreto convida Timba",
+      "topic": "music",
       "categories": [
         3,
         8
@@ -8581,7 +6705,106 @@
       ],
       "url": "https://casa-capitao.com",
       "source": "generic",
-      "description": "Festa no Sótão com Elebonde, Xavbeatz, Sina, Gaddam e Zauooo.",
+      "description": "Apresentação de Forró do Coreto com convidado Timba.",
+      "image": null
+    },
+    {
+      "id": "7f3bd80e9921",
+      "title": "+1VERANNNN – Listening Party Rafitshas",
+      "topic": "music",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "casa-capitao",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casa-capitao.com",
+      "source": "generic",
+      "description": "Sessão de escuta com Rafitshas no Sótão.",
+      "image": null
+    },
+    {
+      "id": "5111aa9431e4",
+      "title": "Casa Popular: DJ Set de Forró do Coreto com Chu Selecta",
+      "topic": "music",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "casa-capitao",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casa-capitao.com",
+      "source": "generic",
+      "description": "DJ set de forró por Chu Selecta.",
+      "image": null
+    },
+    {
+      "id": "d7dffb54f8d5",
+      "title": "Casa Popular: Brasil Brasil e mais Brasil com Beltrão!",
+      "topic": "music",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "casa-capitao",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casa-capitao.com",
+      "source": "generic",
+      "description": "DJ set de Beltrão no Terraço.",
       "image": null
     },
     {
@@ -8649,6 +6872,70 @@
       "image": null
     },
     {
+      "id": "8a2cdf0f4712",
+      "title": "Cinema Queer – as Melhores Amigas",
+      "topic": "film",
+      "categories": [
+        9
+      ],
+      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
+      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casadocomum.org",
+      "source": "generic",
+      "description": "Exibição do filme 'AS MELHORES AMIGAS' no ciclo de cinema queer.",
+      "image": null
+    },
+    {
+      "id": "bfba9d00982e",
+      "title": "Cinema Queer – Limiar",
+      "topic": "film",
+      "categories": [
+        9
+      ],
+      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
+      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casadocomum.org",
+      "source": "generic",
+      "description": "Exibição do filme 'LIMIAR' no ciclo de cinema queer.",
+      "image": null
+    },
+    {
       "id": "f9852c242f00",
       "title": "Filminhos Infantis à Solta pelo País",
       "topic": "family",
@@ -8681,72 +6968,8 @@
       "image": null
     },
     {
-      "id": "bfba9d00982e",
-      "title": "CINEMA QUEER – LIMIAR",
-      "topic": "film",
-      "categories": [
-        9
-      ],
-      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
-      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casadocomum.org",
-      "source": "generic",
-      "description": "Exibição do filme 'LIMIAR' no ciclo de cinema queer.",
-      "image": null
-    },
-    {
-      "id": "8a2cdf0f4712",
-      "title": "CINEMA QUEER – AS MELHORES AMIGAS",
-      "topic": "film",
-      "categories": [
-        9
-      ],
-      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
-      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casadocomum.org",
-      "source": "generic",
-      "description": "Exibição do filme 'AS MELHORES AMIGAS' no ciclo de cinema queer.",
-      "image": null
-    },
-    {
       "id": "789b4277e69b",
-      "title": "AURORA DJ",
+      "title": "Aurora DJ",
       "topic": "music",
       "categories": [
         9
@@ -8875,70 +7098,6 @@
       "image": null
     },
     {
-      "id": "96fb1ad8661e",
-      "title": "Lisbon Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        37
-      ],
-      "venue": "Discover Lisbon — Street Art Tour",
-      "source_id": "discover-lisbon-street-art-tour",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://discoverlisbon.org",
-      "source": "generic",
-      "description": "Roteiro de bares pela animada vida noturna de Lisboa.",
-      "image": null
-    },
-    {
-      "id": "5ce8b36e453b",
-      "title": "Sunset Lisbon Boat Party",
-      "topic": "nightlife",
-      "categories": [
-        37
-      ],
-      "venue": "Discover Lisbon — Street Art Tour",
-      "source_id": "discover-lisbon-street-art-tour",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://discoverlisbon.org",
-      "source": "generic",
-      "description": "Festa em barco ao pôr do sol com DJ ao vivo.",
-      "image": null
-    },
-    {
       "id": "dc93576aeaa1",
       "title": "Authentic VIP Fado Concert",
       "topic": "music",
@@ -8971,6 +7130,38 @@
       "image": null
     },
     {
+      "id": "96fb1ad8661e",
+      "title": "Lisbon Pub Crawl",
+      "topic": "nightlife",
+      "categories": [
+        37
+      ],
+      "venue": "Discover Lisbon — Street Art Tour",
+      "source_id": "discover-lisbon-street-art-tour",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://discoverlisbon.org",
+      "source": "generic",
+      "description": "Roteiro de bares pela animada vida noturna de Lisboa.",
+      "image": null
+    },
+    {
       "id": "42276d34a144",
       "title": "Taste of Lisbon – Tapas & Wine Tour",
       "topic": "food",
@@ -9000,6 +7191,38 @@
       "url": "https://discoverlisbon.org",
       "source": "generic",
       "description": "Tour gastronómico para provar tapas e vinhos locais.",
+      "image": null
+    },
+    {
+      "id": "5ce8b36e453b",
+      "title": "Sunset Lisbon Boat Party",
+      "topic": "nightlife",
+      "categories": [
+        37
+      ],
+      "venue": "Discover Lisbon — Street Art Tour",
+      "source_id": "discover-lisbon-street-art-tour",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-13",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://discoverlisbon.org",
+      "source": "generic",
+      "description": "Festa em barco ao pôr do sol com DJ ao vivo.",
       "image": null
     },
     {
@@ -9068,40 +7291,8 @@
       "image": null
     },
     {
-      "id": "055eff27cc6c",
-      "title": "Visita ao Convento Novo",
-      "topic": "tours",
-      "categories": [
-        5
-      ],
-      "venue": "Fundação Oriente",
-      "source_id": "fundacao-oriente",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://foriente.pt",
-      "source": "generic",
-      "description": "Visita guiada ao Convento da Arrábida.",
-      "image": null
-    },
-    {
       "id": "a1dfdf20d309",
-      "title": "ESPANTO - FESTIVAL INTERNACIONAL DE FILOSOFIA",
+      "title": "Espanto - Festival Internacional de Filosofia",
       "topic": "learning",
       "categories": [
         28
@@ -9134,7 +7325,7 @@
     },
     {
       "id": "c58584de9345",
-      "title": "OFICINA DE TEATRO",
+      "title": "Oficina de Teatro",
       "topic": "workshops",
       "categories": [
         28
@@ -9166,7 +7357,7 @@
     },
     {
       "id": "cad545c30bbc",
-      "title": "Orquestra de Jazz do Hot Clube - \"Impermanência(s)\"",
+      "title": "Orquestra de Jazz do Hot Clube - \"Impermanência(s)",
       "topic": "music",
       "categories": [
         10
@@ -9293,38 +7484,6 @@
       "image": null
     },
     {
-      "id": "4cfff6a9111c",
-      "title": "Programa Especial Aniversário Fernando Pessoa",
-      "topic": "learning",
-      "categories": [
-        45
-      ],
-      "venue": "Lisbon Revisited – Dias de Poesia",
-      "source_id": "lisbon-revisited-dias-de-poesia",
-      "neighbourhood": "Campo de Ourique",
-      "zone": "city",
-      "start": "2026-06-13",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casafernandopessoa.pt",
-      "source": "generic",
-      "description": "Programa especial de aniversário com atividades ao longo do dia.",
-      "image": null
-    },
-    {
       "id": "096116a01cdd",
       "title": "Visita o Aljube! Com LGP",
       "topic": "tours",
@@ -9422,39 +7581,6 @@
       "image": null
     },
     {
-      "id": "8af9fe1c9835",
-      "title": "Pub Crawl Lisboa",
-      "topic": "nightlife",
-      "categories": [
-        5
-      ],
-      "venue": "Neon Brush Lisbon",
-      "source_id": "neon-brush-lisbon",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-13",
-      "end": "2026-12-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com",
-      "source": "fever",
-      "description": "Rota de bares e discotecas em Lisboa.",
-      "image": null
-    },
-    {
       "id": "7cc7f09a0858",
       "title": "Alcohol-free pubcrawl in Lisbon",
       "topic": "nightlife",
@@ -9485,6 +7611,39 @@
       "url": "https://feverup.com",
       "source": "fever",
       "description": "Pub crawl sem álcool por bares e discotecas de Lisboa.",
+      "image": null
+    },
+    {
+      "id": "8af9fe1c9835",
+      "title": "Pub Crawl Lisboa",
+      "topic": "nightlife",
+      "categories": [
+        5
+      ],
+      "venue": "Neon Brush Lisbon",
+      "source_id": "neon-brush-lisbon",
+      "neighbourhood": null,
+      "zone": null,
+      "start": "2026-06-13",
+      "end": "2026-12-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com",
+      "source": "fever",
+      "description": "Rota de bares e discotecas em Lisboa.",
       "image": null
     },
     {
@@ -9812,7 +7971,7 @@
     },
     {
       "id": "64f44f610591",
-      "title": "11.º Prémio “Residência Literária em Berlim”",
+      "title": "11.º Prémio “Residência Literária em Berlim",
       "topic": "art",
       "categories": [
         20
@@ -9876,15 +8035,15 @@
       "image": null
     },
     {
-      "id": "a146d766351e",
-      "title": "Visita Guided tour in English By Bartholomew Ryan",
-      "topic": "tours",
+      "id": "89c40bfd846a",
+      "title": "Cinema Queer – as Lições da Peaches",
+      "topic": "film",
       "categories": [
-        12
+        9
       ],
-      "venue": "Casa Fernando Pessoa",
-      "source_id": "casa-fernando-pessoa",
-      "neighbourhood": "Campo de Ourique",
+      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
+      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
+      "neighbourhood": "Bairro Alto",
       "zone": "city",
       "start": "2026-06-14",
       "end": null,
@@ -9900,11 +8059,43 @@
         "text": ""
       },
       "language": [
-        "en"
+        "pt"
       ],
-      "url": "https://casafernandopessoa.pt",
+      "url": "https://casadocomum.org",
       "source": "generic",
-      "description": "Visita guiada em inglês por Bartholomew Ryan.",
+      "description": "Exibição do filme 'AS LIÇÕES DA PEACHES' no ciclo de cinema queer.",
+      "image": null
+    },
+    {
+      "id": "6e8d79d1b3ef",
+      "title": "Cinema Queer – Curtas #2 – Novíssimo Cinema Queer Português",
+      "topic": "film",
+      "categories": [
+        9
+      ],
+      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
+      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "start": "2026-06-14",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://casadocomum.org",
+      "source": "generic",
+      "description": "Exibição de curtas-metragens do novíssimo cinema queer português.",
       "image": null
     },
     {
@@ -9937,70 +8128,6 @@
       "url": "https://casadocomum.org",
       "source": "generic",
       "description": "Sessão de cinema infantil com curtas-metragens.",
-      "image": null
-    },
-    {
-      "id": "6e8d79d1b3ef",
-      "title": "CINEMA QUEER – CURTAS #2 _ NOVÍSSIMO CINEMA QUEER PORTUGUÊS",
-      "topic": "film",
-      "categories": [
-        9
-      ],
-      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
-      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-14",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casadocomum.org",
-      "source": "generic",
-      "description": "Exibição de curtas-metragens do novíssimo cinema queer português.",
-      "image": null
-    },
-    {
-      "id": "89c40bfd846a",
-      "title": "CINEMA QUEER – AS LIÇÕES DA PEACHES",
-      "topic": "film",
-      "categories": [
-        9
-      ],
-      "venue": "Casa do Comum — Centro Cultural do Bairro Alto",
-      "source_id": "casa-do-comum-centro-cultural-do-bairro-alto",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "start": "2026-06-14",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://casadocomum.org",
-      "source": "generic",
-      "description": "Exibição do filme 'AS LIÇÕES DA PEACHES' no ciclo de cinema queer.",
       "image": null
     },
     {
@@ -10097,38 +8224,6 @@
       "url": "https://aondevamos.pt",
       "source": "generic",
       "description": "Concerto ao ar livre em Lisboa.",
-      "image": null
-    },
-    {
-      "id": "2f44953074d7",
-      "title": "Visita ao Convento Novo",
-      "topic": "tours",
-      "categories": [
-        5
-      ],
-      "venue": "Fundação Oriente",
-      "source_id": "fundacao-oriente",
-      "neighbourhood": null,
-      "zone": null,
-      "start": "2026-06-14",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://foriente.pt",
-      "source": "generic",
-      "description": "Visita guiada ao Convento da Arrábida.",
       "image": null
     },
     {
@@ -10520,7 +8615,7 @@
     },
     {
       "id": "d9cc03a1c000",
-      "title": "Música na Quinta 2026 | JUN",
+      "title": "Música na Quinta 2026 – JUN",
       "topic": "music",
       "categories": [
         33

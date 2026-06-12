@@ -69,6 +69,8 @@ def discover(prov, client, cfg, tax, sources, session, tracker, cap_new):
             hk = host_of(v.get("url") or "")
             if not nk or nk in known_names or (hk and hk in known_hosts):
                 continue
+            if core.looks_like_date(v.get("name") or ""):
+                continue
             known_names.add(nk)
             if hk:
                 known_hosts.add(hk)

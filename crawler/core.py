@@ -7,12 +7,15 @@ Pure-stdlib where possible; third-party deps are imported lazily so the
 no-AI / feeds dry-run still works if some optional libs are missing.
 """
 from __future__ import annotations
+import difflib
 import hashlib
 import json
 import re
 import time
+import unicodedata
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from urllib.parse import urljoin, urlparse
 
 import yaml
 import requests
@@ -149,12 +152,37 @@ def fetch(session: requests.Session, url: str, cfg: dict):
             time.sleep(0.6 * (attempt + 1))
     return None
 
-def html_to_text(html: str, max_chars: int) -> str:
+def html_to_text(html: str, max_chars: int, base_url: str | None = None,
+                 keep_links: bool = False, link_sink: set | None = None) -> str:
+    """Page text for the AI. With keep_links, anchor URLs are appended inline as
+    "label [https://…]" so the model can return each event's own page URL —
+    plain text extraction would otherwise destroy every href. Kept URLs are
+    added to link_sink so the extractor can verify what the model returns."""
     try:
         from bs4 import BeautifulSoup
         soup = BeautifulSoup(html, "lxml")
         for tag in soup(["script", "style", "noscript", "svg", "header", "footer", "nav", "form"]):
             tag.decompose()
+        if keep_links and base_url:
+            page = site_key(base_url)
+            seen, kept = set(), 0
+            for a in soup.find_all("a", href=True):
+                if kept >= 90:  # bound the token cost on link-farm pages
+                    break
+                try:  # one malformed href must not cost the page its links
+                    label = a.get_text(" ", strip=True)
+                    href = urljoin(base_url, a["href"].strip()).split("#", 1)[0]
+                    if len(label) < 4 or len(href) > 160 or not href.lower().startswith(("http://", "https://")):
+                        continue
+                    if href in seen or site_key(href) == page:
+                        continue
+                    seen.add(href)
+                    kept += 1
+                    a.append(soup.new_string(f" [{href}]"))
+                except ValueError:
+                    continue
+            if link_sink is not None:
+                link_sink.update(seen)
         text = soup.get_text(" ", strip=True)
     except Exception:
         text = re.sub(r"<[^>]+>", " ", html)
@@ -235,12 +263,136 @@ def detect_price(text: str) -> dict:
     return {"is_free": False, "min": None, "currency": "EUR", "text": ""}
 
 # ---------- normalisation ----------
-def norm_key(title: str, day: str, venue: str) -> str:
-    base = re.sub(r"[^a-z0-9]+", "", (title or "").lower())[:40] + "|" + (day or "") + "|" + re.sub(r"[^a-z0-9]+", "", (venue or "").lower())[:20]
-    return base
+def _nt(s: str) -> str:
+    """letters+digits only, accent-folded and lowercased — the comparison form
+    of a title/name (models and agenda pages often drop PT accents)."""
+    folded = unicodedata.normalize("NFKD", str(s or ""))
+    folded = "".join(c for c in folded if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", "", folded.lower())
+
+
+def site_key(url: str) -> str:
+    """host+path of a URL (www/trailing-slash stripped) — identifies 'the same
+    page' across source entries that list it under different names."""
+    if not url:
+        return ""
+    raw = str(url).strip().lower()
+    try:
+        p = urlparse(raw)
+    except ValueError:  # e.g. unbalanced [ in the authority — keep it distinct, never crash
+        return raw
+    host = p.netloc[4:] if p.netloc.startswith("www.") else p.netloc
+    return host + p.path.rstrip("/")
+
+
+# words kept lowercase when re-casing an ALL-CAPS title (unless first)
+_STOP = {"a", "o", "as", "os", "de", "da", "do", "das", "dos", "e", "em", "no", "na",
+         "nos", "nas", "com", "para", "por", "ao", "à", "aos", "às", "um", "uma",
+         "que", "se", "sob", "sobre", "entre", "até", "the", "of", "and", "at", "in", "on", "to"}
+# acronyms that must stay upper-case (vowel-less words are detected automatically)
+_ACRO = {"DJ", "VJ", "ZDB", "CCB", "CAM", "MAAT", "FIL", "LX", "AVNL", "VR", "EDP",
+         "NOS", "RTP", "TBA", "TBC", "UV", "3D", "B2B", "EP", "LP", "UK", "USA",
+         "NYC", "EUA", "IST", "FCSH", "ISCTE", "MNAA", "MNAC", "TNDM", "TNSC", "FMM", "MIL"}
+# strict roman-numeral grammar: matches IV/XIV/III, rejects words like CIVIL/VIL
+_ROMAN_RE = re.compile(r"^(?=[IVXLC])(C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")
+_VOWEL_RE = re.compile(r"[aeiouáéíóúâêôãõà]", re.I)
+
+
+def _decap_word(word: str, first: bool) -> str:
+    out = []
+    for part in re.split(r"(-)", word):  # K-POP -> K, -, POP
+        if part == "-" or not part:
+            out.append(part)
+            continue
+        if part.upper() in _ACRO or _ROMAN_RE.match(part) or \
+                (not _VOWEL_RE.search(part) and any(c.isalpha() for c in part)):
+            out.append(part.upper())
+        else:
+            low = part.lower()
+            out.append(low if (low in _STOP and not first) else low.capitalize())
+    return "".join(out)
+
+
+def clean_title(title: str, venue: str = "") -> str:
+    """Readable, consistent event titles: collapse whitespace, turn stray |/_
+    separators into dashes, drop a trailing repeat of the venue name, and
+    re-case ALL-CAPS titles (PT stopwords lowered, acronyms preserved)."""
+    t = re.sub(r"\s+", " ", str(title or "")).strip().strip("«»\"“”'’").strip()
+    t = re.sub(r"\s*[|_]+\s*", " – ", t)
+    t = re.sub(r"\s*[–—]\s*", " – ", t)
+    t = t.strip("–- ")
+    if venue:
+        m = re.match(r"^(.{4,}?)\s+[–—-]\s+([^–—-]+)$", t)
+        if m and _nt(m.group(2)) == _nt(venue):
+            t = m.group(1)
+    letters = [c for c in t if c.isalpha()]
+    if len(letters) >= 8 and sum(c.isupper() for c in letters) / len(letters) > 0.85:
+        t = " ".join(_decap_word(w, i == 0) for i, w in enumerate(t.split(" ")))
+    return t[:160].strip()
+
+
+def venues_index(sources: list[dict]) -> dict:
+    """normalized-name -> source, for mapping AI-extracted venue names back to
+    the seed list (canonical name + neighbourhood/zone)."""
+    return {_nt(s["name"]): s for s in sources if s.get("name")}
+
+
+def resolve_venue(name: str, idx: dict) -> dict | None:
+    """Match an extracted venue name to a known source: exact, then containment
+    scored by similarity — generic words ('Teatro', 'Museu Nacional') that would
+    match many seeds, or weak partial matches, resolve to None rather than to
+    whatever happens to come first in the file."""
+    key = _nt(name)
+    if len(key) < 4:
+        return None
+    hit = idx.get(key)
+    if hit is not None or len(key) < 6:
+        return hit
+    cands = [(difflib.SequenceMatcher(None, key, k).ratio(), k, s)
+             for k, s in idx.items() if len(k) >= 6 and (key in k or k in key)]
+    if len(cands) == 1:
+        return cands[0][2]
+    if not cands:
+        return None
+    cands.sort(key=lambda c: c[0], reverse=True)
+    return cands[0][2] if cands[0][0] >= 0.75 else None
+
+
+def looks_like_date(name: str) -> bool:
+    """True for 'venue' names that are really dates or scheduling notes a model
+    misread from an agenda page (e.g. '19–22 Nov 2026', '31 Jul–9 Aug 2026',
+    '2026 dates TBC') — these polluted the seed list before."""
+    n = (name or "").strip()
+    mon = r"[\wçÇ]{3,9}\.?"
+    return bool(
+        re.fullmatch(r"[\d\s.–—-]+", n)
+        or re.search(rf"\b\d{{1,2}}\s*[–—-]\s*\d{{1,2}}\s+{mon}(\s+20\d\d)?\b", n)
+        or re.search(rf"(?i)\b\d{{1,2}}\s+{mon}\s*[–—-]\s*\d{{1,2}}\s+{mon}(\s+20\d\d)?\b", n)
+        or re.search(r"(?i)^\d{1,2}\s+[\wçÇ]{3,9}\.?\s+20\d\d$", n)
+        or re.search(r"^20\d\d\b", n)
+        or re.search(r"(?i)\bdates?\s+tbc\b|\bdatas?\s+por\s+confirmar\b", n)
+    )
+
+
+def resolve_url(url: str | None, base: str | None) -> str | None:
+    """Validate/absolutise an event URL coming from a model or a feed. Junk
+    ('ver bilhetes', bracket-wrapped copies, unparseable strings) -> None so the
+    caller can fall back to the venue homepage."""
+    u = str(url or "").strip().strip("[]<>")
+    if not u or re.search(r"\s", u):
+        return None
+    try:
+        if not re.match(r"^https?://", u, re.I):
+            u = urljoin(base or "", u)
+        if not re.match(r"^https?://", u, re.I) or "[" in u or "]" in u:
+            return None
+        return u if urlparse(u).netloc else None
+    except ValueError:
+        return None
 
 def make_event(*, title, source, topic, mon, window_end, start_d, end_d, has_time, start_iso,
-               price, url, description, language, categories) -> dict | None:
+               price, url, description, language, categories,
+               venue_name=None, neighbourhood=None, zone=None) -> dict | None:
     if not title or not start_d:
         return None
     if not overlaps_window(start_d, end_d, mon, window_end):
@@ -248,24 +400,132 @@ def make_event(*, title, source, topic, mon, window_end, start_d, end_d, has_tim
     days, ongoing = days_in_window(start_d, end_d, mon, window_end)
     if not days:
         return None
+    venue = re.sub(r"\s+", " ", str(venue_name or source["name"])).strip()[:120]
+    title = clean_title(title, venue)
+    if not title:
+        return None
     eid = hashlib.sha1(f"{source['id']}|{title}|{start_iso}".encode()).hexdigest()[:12]
     return {
-        "id": eid, "title": title.strip()[:160], "topic": topic,
-        "categories": categories, "venue": source["name"], "source_id": source["id"],
-        "neighbourhood": source.get("neighbourhood"), "zone": source.get("zone"),
+        "id": eid, "title": title, "topic": topic,
+        "categories": categories, "venue": venue, "source_id": source["id"],
+        "neighbourhood": neighbourhood or source.get("neighbourhood"),
+        "zone": zone or source.get("zone"),
         "start": start_iso, "end": (end_d.isoformat() if end_d else None),
         "all_day": not has_time, "ongoing": ongoing, "days": days,
         "price": price, "language": language or ["pt"],
-        "url": url or source.get("website"), "source": source.get("provider") or "site",
+        "url": resolve_url(url, source.get("website")) or source.get("website"),
+        "source": source.get("provider") or "site",
         "description": (description or "").strip()[:280], "image": None,
     }
 
-def dedupe(events: list[dict]) -> list[dict]:
-    seen, out = set(), []
-    for e in sorted(events, key=lambda x: (x["start"], x["venue"])):
-        k = norm_key(e["title"], e["days"][0] if e["days"] else "", e["venue"])
-        if k in seen:
-            continue
-        seen.add(k)
-        out.append(e)
+
+def _has_path(url: str | None) -> bool:
+    try:
+        return bool(urlparse(url or "").path.strip("/"))
+    except ValueError:
+        return False
+
+
+def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
+    """Collapse the same real-world event found more than once.
+
+    Two copies only ever merge when they are at the same place: same extracted
+    venue name, or same crawled page where at least one copy carries a generic
+    venue label (the seed entry's own name, i.e. nothing was extracted — this is
+    how duplicate seed entries and aggregator relists look). Same-titled events
+    at genuinely different venues (two jam sessions on one night, one agenda
+    page listing a concert at the Sé and another at São Roque) never merge.
+
+    Pass 1 — exact title+date per page; pass 2 — exact title+date per venue;
+    pass 3 — near-identical titles on the same date, same-place rule above.
+    The most informative copy survives; its missing url/price/description/time
+    and any wider date range are filled in from the duplicates it absorbs."""
+    site_of, name_of, agg = {}, {}, set()
+    for s in sources or []:
+        site_of[s["id"]] = site_key(s.get("website") or "")
+        name_of[s["id"]] = _nt(s.get("name") or "")
+        if s.get("topic") == "guides":
+            agg.add(s["id"])
+
+    def date_of(e):
+        return (e.get("start") or "")[:10]
+
+    def generic(e):
+        # venue label is just the seed entry's name — not extracted from the page
+        src_name = name_of.get(e["source_id"])
+        return src_name is None or _nt(e["venue"]) == src_name
+
+    def score(e):
+        return (2 * _has_path(e.get("url")) + 2 * (e["source_id"] not in agg)
+                + (not e.get("all_day")) + bool((e.get("price") or {}).get("text"))
+                + min(len(e.get("description") or ""), 200) / 200
+                - 5 * looks_like_date(e.get("venue") or ""))
+
+    def absorb(keep, other):
+        if not _has_path(keep.get("url")) and _has_path(other.get("url")):
+            keep["url"] = other["url"]
+        if len(other.get("description") or "") > len(keep.get("description") or ""):
+            keep["description"] = other["description"]
+        if not (keep.get("price") or {}).get("text") and (other.get("price") or {}).get("text"):
+            keep["price"] = other["price"]
+        if keep.get("all_day") and not other.get("all_day") and date_of(keep) == date_of(other):
+            keep["start"], keep["all_day"] = other["start"], False
+        if len(other.get("days") or []) > len(keep.get("days") or []):  # keep the full run
+            keep["days"] = other["days"]
+        if (other.get("end") or "") > (keep.get("end") or ""):
+            keep["end"] = other["end"]
+        keep["ongoing"] = bool(keep.get("ongoing") or other.get("ongoing"))
+
+    def collapse(evs, keyfn):
+        groups: dict = {}
+        for e in evs:
+            groups.setdefault(keyfn(e), []).append(e)
+        out = []
+        for grp in groups.values():
+            grp.sort(key=score, reverse=True)
+            for loser in grp[1:]:
+                absorb(grp[0], loser)
+            out.append(grp[0])
+        return out
+
+    # pass 1: same page — but extracted venues must agree (one agenda page can
+    # hold same-titled events at different venues)
+    events = collapse(events, lambda e: (_nt(e["title"]), date_of(e),
+                                         site_of.get(e["source_id"]) or e["source_id"],
+                                         "" if generic(e) else _nt(e["venue"])))
+    events = collapse(events, lambda e: (_nt(e["title"]), date_of(e), _nt(e["venue"])))
+
+    # fuzzy pass, bucketed by date so the O(n²) compare stays tiny
+    by_date: dict = {}
+    for e in events:
+        by_date.setdefault(date_of(e), []).append(e)
+    out = []
+    for evs in by_date.values():
+        evs.sort(key=score, reverse=True)
+        kept: list[dict] = []
+        for e in evs:
+            nt = _nt(e["title"])
+            dup = None
+            for k in kept:
+                knt = _nt(k["title"])
+                near = (difflib.SequenceMatcher(None, nt, knt).ratio() >= 0.9
+                        or (min(len(nt), len(knt)) >= 12 and (nt.startswith(knt) or knt.startswith(nt))))
+                if not near:
+                    continue
+                venue_same = _nt(e["venue"]) == _nt(k["venue"])
+                same_site = bool(site_of.get(e["source_id"])) and \
+                    site_of.get(e["source_id"]) == site_of.get(k["source_id"])
+                same_place = venue_same or (same_site and (generic(e) or generic(k)))
+                # an aggregator copy with no extracted venue is a relist of the near event
+                agg_relist = (e["source_id"] in agg and generic(e)) or \
+                             (k["source_id"] in agg and generic(k))
+                if same_place or agg_relist:
+                    dup = k
+                    break
+            if dup is None:
+                kept.append(e)
+            else:
+                absorb(dup, e)
+        out.extend(kept)
+    out.sort(key=lambda x: (x["start"], x["venue"]))
     return out

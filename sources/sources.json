@@ -1,6 +1,6 @@
 {
   "generated_from": "LISBON-EVENTS.md",
-  "count": 1153,
+  "count": 1123,
   "sources": [
     {
       "id": "time-out-lisboa",
@@ -124,7 +124,8 @@
       "crawlable": true,
       "topic": "guides",
       "categories": [
-        1
+        1,
+        49
       ],
       "primary_category": 1,
       "status": "active",
@@ -760,7 +761,8 @@
       "crawlable": true,
       "topic": "guides",
       "categories": [
-        1
+        1,
+        49
       ],
       "primary_category": 1,
       "status": "active",
@@ -784,7 +786,8 @@
       "crawlable": true,
       "topic": "guides",
       "categories": [
-        1
+        1,
+        49
       ],
       "primary_category": 1,
       "status": "active",
@@ -1948,7 +1951,7 @@
     },
     {
       "id": "lisbondesignweek",
-      "name": "@lisbondesignweek",
+      "name": "Lisbon Design Week",
       "area": "~80 spaces citywide",
       "neighbourhood": null,
       "zone": null,
@@ -3669,7 +3672,8 @@
       "categories": [
         3,
         9,
-        10
+        10,
+        13
       ],
       "primary_category": 9,
       "status": "active",
@@ -8163,33 +8167,6 @@
       "last_seen": "2026-06-12"
     },
     {
-      "id": "galeria-ze-dos-bois-zdb",
-      "name": "Galeria Zé dos Bois (ZDB)",
-      "area": "Bairro Alto",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "description": "Non-profit art centre since 1994, 150+ events/yr: exhibitions, residencies, theatre, dance, \"ZDBmüzique\" *(also §10, §23)*. zedosbois.org · IG @galeriazedosbois",
-      "website": "https://zedosbois.org",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "galeriazedosbois"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "community",
-      "categories": [
-        9,
-        23
-      ],
-      "primary_category": 9,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "negocio-zdb-linked",
       "name": "NEGÓCIO (ZDB-linked)",
       "area": "Bairro Alto/Bica",
@@ -8546,12 +8523,16 @@
       "other_urls": [],
       "instagram": null,
       "facebook": null,
-      "handles": [],
+      "handles": [
+        "galeriazedosbois"
+      ],
       "provider": "generic",
       "crawlable": true,
       "topic": "music",
       "categories": [
-        10
+        10,
+        9,
+        23
       ],
       "primary_category": 10,
       "status": "active",
@@ -9410,7 +9391,8 @@
       "crawlable": true,
       "topic": "performance",
       "categories": [
-        11
+        11,
+        24
       ],
       "primary_category": 11,
       "status": "active",
@@ -10540,30 +10522,6 @@
       "last_seen": "2026-06-12"
     },
     {
-      "id": "mercado-de-culturas-arroios",
-      "name": "Mercado de Culturas (Arroios)",
-      "area": "Arroios",
-      "neighbourhood": "Arroios",
-      "zone": "city",
-      "description": "Parish cultural market; concerts, fairs, community events. jfarroios.pt",
-      "website": "https://jfarroios.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "food",
-      "categories": [
-        13
-      ],
-      "primary_category": 13,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "feira-do-relogio",
       "name": "Feira do Relógio",
       "area": "Chelas/Marvila",
@@ -10776,30 +10734,6 @@
       "primary_category": 13,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "anjos70-art-and-fleamarket",
-      "name": "Anjos70 Art & Fleamarket",
-      "area": "Anjos/Marvila/Beato",
-      "neighbourhood": "Anjos",
-      "zone": "city",
-      "description": "Monthly art/flea/vintage market; live music; Sat & Sun ~11:00–19:00 *(primary §9)*. anjos70.org",
-      "website": "https://anjos70.org",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "food",
-      "categories": [
-        13
-      ],
-      "primary_category": 13,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "feira-do-mundo-vintage",
@@ -12655,30 +12589,6 @@
       "last_seen": "2026-06-12"
     },
     {
-      "id": "millennium-festival-ao-largo",
-      "name": "Millennium Festival ao Largo",
-      "area": "Chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "description": "Free open-air classical, opera, dance (OPART); ~4–28 Jul 2026 *(also §17, §25, §49)*. [Seasonal",
-      "website": "https://festivalaolargo.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "outdoors",
-      "categories": [
-        16,
-        49
-      ],
-      "primary_category": 16,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 1
-    },
-    {
       "id": "jardins-abertos",
       "name": "Jardins Abertos",
       "area": "citywide gardens",
@@ -13023,36 +12933,12 @@
       "neighbourhood": "Alfama",
       "zone": "city",
       "description": "Major July rock/indie/pop; 18th ed.",
-      "website": null,
+      "website": "https://nosalive.com",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
       "provider": null,
-      "crawlable": false,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "9-11-jul-2026",
-      "name": "9–11 Jul 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://nosalive.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "nosalive"
-      ],
-      "provider": "generic",
       "crawlable": true,
       "topic": "music",
       "categories": [
@@ -13060,9 +12946,7 @@
       ],
       "primary_category": 17,
       "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
+      "flags": []
     },
     {
       "id": "rock-in-rio-lisboa",
@@ -13071,36 +12955,12 @@
       "neighbourhood": null,
       "zone": null,
       "description": "Biennial mega-festival;",
-      "website": null,
+      "website": "https://rockinriolisboa.pt",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
       "provider": null,
-      "crawlable": false,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "2026-across-two-june-weekends-20-21-27-28",
-      "name": "2026 across two June weekends (20, 21, 27, 28)",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://rockinriolisboa.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "rockinriolisboa"
-      ],
-      "provider": "generic",
       "crawlable": true,
       "topic": "music",
       "categories": [
@@ -13108,9 +12968,7 @@
       ],
       "primary_category": 17,
       "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
+      "flags": []
     },
     {
       "id": "meo-kalorama",
@@ -13119,36 +12977,12 @@
       "neighbourhood": null,
       "zone": null,
       "description": "5th ed.",
-      "website": null,
+      "website": "https://meokalorama.pt",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
       "provider": null,
-      "crawlable": false,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "28-30-aug-2026",
-      "name": "28–30 Aug 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://meokalorama.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "meokalorama"
-      ],
-      "provider": "generic",
       "crawlable": true,
       "topic": "music",
       "categories": [
@@ -13156,9 +12990,7 @@
       ],
       "primary_category": 17,
       "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
+      "flags": []
     },
     {
       "id": "super-bock-super-rock",
@@ -13239,32 +13071,6 @@
       "flags": []
     },
     {
-      "id": "1-4-oct-2026",
-      "name": "1–4 Oct 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://outfest.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "out.fest"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "iminente",
       "name": "Iminente",
       "area": "Marvila",
@@ -13285,32 +13091,6 @@
       "primary_category": 17,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "17-20-sep-2026",
-      "name": "17–20 Sep 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://iminente.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "iminente"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "vodafone-mexefest",
@@ -13335,32 +13115,6 @@
       "flags": []
     },
     {
-      "id": "2026-dates-tbc",
-      "name": "2026 dates TBC",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://musicanocoracao.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "vodafonemexefest"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "jazz-em-agosto",
       "name": "Jazz em Agosto",
       "area": "Gulbenkian gardens/amphitheatre",
@@ -13383,30 +13137,6 @@
       "flags": []
     },
     {
-      "id": "31-jul-9-aug-2026",
-      "name": "31 Jul–9 Aug 2026",
-      "area": "14 concerts",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://gulbenkian.pt/jazzemagosto",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "festival-ao-largo",
       "name": "Festival ao Largo",
       "area": "Largo de São Carlos, Chiado",
@@ -13422,7 +13152,9 @@
       "crawlable": true,
       "topic": "music",
       "categories": [
-        17
+        17,
+        16,
+        49
       ],
       "primary_category": 17,
       "status": "active",
@@ -13463,36 +13195,12 @@
       "neighbourhood": "Alfama",
       "zone": "city",
       "description": "Large fado festival;",
-      "website": null,
+      "website": "https://santacasaalfama.com",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
       "provider": null,
-      "crawlable": false,
-      "topic": "music",
-      "categories": [
-        17
-      ],
-      "primary_category": 17,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "28-29-sep-2026",
-      "name": "28–29 Sep 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://santacasaalfama.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "santacasaalfama"
-      ],
-      "provider": "generic",
       "crawlable": true,
       "topic": "music",
       "categories": [
@@ -13500,8 +13208,7 @@
       ],
       "primary_category": 17,
       "status": "active",
-      "flags": [],
-      "dead_signals": 1
+      "flags": []
     },
     {
       "id": "santa-casa-jazz-fest",
@@ -15343,31 +15050,6 @@
       "last_seen": "2026-06-12"
     },
     {
-      "id": "pavilhao-do-conhecimento-centro-ciencia-viva",
-      "name": "Pavilhão do Conhecimento – Centro Ciência Viva",
-      "area": "Parque das Nações",
-      "neighbourhood": "Parque das Nações",
-      "zone": "city",
-      "description": "Flagship interactive science centre; exhibitions, \"Férias com Ciência\", teacher conferences, free anniversary day (late July) *(also §28, §31)*. pavconhecimento.pt · IG @pavconhecimento",
-      "website": "https://pavconhecimento.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "pavconhecimento"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "learning",
-      "categories": [
-        21
-      ],
-      "primary_category": 21,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 1
-    },
-    {
       "id": "ciencia-viva-national-network",
       "name": "Ciência Viva (national network)",
       "area": "Lisbon HQ + ~22 centres",
@@ -15529,32 +15211,6 @@
       "primary_category": 22,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "9-12-nov-2026",
-      "name": "9–12 Nov 2026",
-      "area": "; spawns hundreds of fringe/side events and parties. [Seasonal",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "Nov] websummit.com · IG @websummit",
-      "website": "https://websummit.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "websummit"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "learning",
-      "categories": [
-        22
-      ],
-      "primary_category": 22,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "road-2-web-summit-startup-portugal",
@@ -15841,32 +15497,6 @@
       "primary_category": 22,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "12-15-may-2026",
-      "name": "12–15 May 2026",
-      "area": "). [Seasonal",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "May] ux-lx.com · IG @uxlx",
-      "website": "https://ux-lx.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "uxlx"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "learning",
-      "categories": [
-        22
-      ],
-      "primary_category": 22,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "producttank-lisbon",
@@ -16291,30 +15921,6 @@
       "flags": []
     },
     {
-      "id": "24-26-jul-2026",
-      "name": "24–26 Jul 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://ethglobal.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "learning",
-      "categories": [
-        22
-      ],
-      "primary_category": 22,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "mcp-connect-lisbon",
       "name": "MCP Connect Lisbon",
       "area": "",
@@ -16473,58 +16079,6 @@
       "primary_category": 23,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "28-31-may-2026",
-      "name": "28–31 May 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "late May] ifema.es/en/arco/lisboa · IG @arco_lisboa",
-      "website": "https://ifema.es/en/arco/lisboa",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "arco_lisboa"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        23
-      ],
-      "primary_category": 23,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
-      "id": "5-8-nov-2026",
-      "name": "5–8 Nov 2026",
-      "area": "), 200+ artists, performances, gallery openings. [Seasonal",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "early Nov] lisbonartweekend.com · IG @lisbonartweekend",
-      "website": "https://lisbonartweekend.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "lisbonartweekend"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        23
-      ],
-      "primary_category": 23,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "just-justlx-lisboa-contemporary-art-fair",
@@ -16953,32 +16507,6 @@
       "flags": []
     },
     {
-      "id": "12-15-mar-2026",
-      "name": "12–15 Mar 2026",
-      "area": "MUDE programming 11–15); runways, free talks, satellites. [Seasonal",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "Mar + Oct] modalisboa.pt · IG @modalisboa",
-      "website": "https://modalisboa.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "modalisboa"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        24
-      ],
-      "primary_category": 24,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "modalisboa-base",
       "name": "ModaLisboa BASE",
       "area": "",
@@ -17071,32 +16599,6 @@
       "last_seen": "2026-06-12"
     },
     {
-      "id": "27-31-may-2026",
-      "name": "27–31 May 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "late May] lisbondesignweek.com · IG @lisbondesignweek",
-      "website": "https://lisbondesignweek.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "lisbondesignweek"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        24
-      ],
-      "primary_category": 24,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "young-designers-global-ydg-26",
       "name": "Young Designers Global (YDG '26)",
       "area": "at MUDE",
@@ -17117,30 +16619,6 @@
       "primary_category": 24,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "cam-gulbenkian-fashion-design-programming",
-      "name": "CAM Gulbenkian (fashion/design programming)",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://gulbenkian.pt/cam",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        24
-      ],
-      "primary_category": 24,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "experimenta-design-exd",
@@ -18648,30 +18126,6 @@
       "flags": []
     },
     {
-      "id": "6-jun-2026",
-      "name": "6 Jun 2026",
-      "area": "from Príncipe Real/Bairro Alto. IG @lgbtilisboa",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "description": "",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "lgbtilisboa"
-      ],
-      "provider": null,
-      "crawlable": false,
-      "topic": "nightlife",
-      "categories": [
-        27
-      ],
-      "primary_category": 27,
-      "status": "active",
-      "flags": []
-    },
-    {
       "id": "clube-safo",
       "name": "Clube Safo",
       "area": "",
@@ -18779,7 +18233,7 @@
       "handles": [],
       "provider": "generic",
       "crawlable": true,
-      "topic": "family",
+      "topic": "guides",
       "categories": [
         28
       ],
@@ -18827,7 +18281,7 @@
       "handles": [],
       "provider": "generic",
       "crawlable": true,
-      "topic": "family",
+      "topic": "guides",
       "categories": [
         28
       ],
@@ -18875,7 +18329,7 @@
       "handles": [],
       "provider": null,
       "crawlable": false,
-      "topic": "family",
+      "topic": "guides",
       "categories": [
         28
       ],
@@ -18897,7 +18351,7 @@
       "handles": [],
       "provider": null,
       "crawlable": false,
-      "topic": "family",
+      "topic": "guides",
       "categories": [
         28
       ],
@@ -19010,13 +18464,16 @@
       "other_urls": [],
       "instagram": null,
       "facebook": null,
-      "handles": [],
+      "handles": [
+        "pavconhecimento"
+      ],
       "provider": "generic",
       "crawlable": true,
       "topic": "tours",
       "categories": [
         28,
-        31
+        31,
+        21
       ],
       "primary_category": 31,
       "status": "active",
@@ -19631,42 +19088,19 @@
       "flags": []
     },
     {
-      "id": "9-19-apr-2026",
-      "name": "9–19 Apr 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://peixemlisboa.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 1
-    },
-    {
       "id": "lisbon-food-affair",
       "name": "Lisbon Food Affair",
       "area": "Parque das Nações/FIL",
       "neighbourhood": "Parque das Nações",
       "zone": "city",
       "description": "B2B + consumer food fair,",
-      "website": null,
+      "website": "https://lisbonfoodaffair.fil.pt",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
       "provider": null,
-      "crawlable": false,
+      "crawlable": true,
       "topic": "food",
       "categories": [
         30
@@ -19674,30 +19108,6 @@
       "primary_category": 30,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "9-11-feb-2026",
-      "name": "9–11 Feb 2026",
-      "area": "; 300+ companies, conferences, showcookings. [Seasonal] lisbonfoodaffair.fil.pt",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "",
-      "website": "https://lisbonfoodaffair.fil.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "simplesmente-vinho-lisboa",
@@ -19722,58 +19132,12 @@
       "flags": []
     },
     {
-      "id": "22-23-nov-2026",
-      "name": "22–23 Nov 2026",
-      "area": "; ~48 vignerons, petiscos, music. [Seasonal] simplesmentevinho.com",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "",
-      "website": "https://simplesmentevinho.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "festa-do-leitao-e-espumante-bairrada",
       "name": "Festa do Leitão e Espumante (Bairrada)",
       "area": "Beato",
       "neighbourhood": "Beato",
       "zone": "city",
       "description": "Roast-suckling-pig + sparkling wine,",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": null,
-      "crawlable": false,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "7-mar-2026",
-      "name": "7 Mar 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
       "website": null,
       "other_urls": [],
       "instagram": null,
@@ -19834,28 +19198,6 @@
       "flags": []
     },
     {
-      "id": "18-apr-2026",
-      "name": "18 Apr 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": null,
-      "crawlable": false,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": []
-    },
-    {
       "id": "vinhos-a-descobrir",
       "name": "Vinhos a Descobrir",
       "area": "Parque das Nações",
@@ -19878,56 +19220,12 @@
       "flags": []
     },
     {
-      "id": "16-17-may",
-      "name": "16–17 May",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": null,
-      "crawlable": false,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": []
-    },
-    {
       "id": "festa-do-vinho-independente",
       "name": "Festa do Vinho Independente",
       "area": "Belém",
       "neighbourhood": "Belém",
       "zone": "city",
       "description": "~",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": null,
-      "crawlable": false,
-      "topic": "food",
-      "categories": [
-        30
-      ],
-      "primary_category": 30,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "17-18-may-2026",
-      "name": "17–18 May 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
       "website": null,
       "other_urls": [],
       "instagram": null,
@@ -20814,32 +20112,6 @@
       "flags": []
     },
     {
-      "id": "escape-game-over",
-      "name": "Escape Game Over",
-      "area": "Bairro Alto + Alfama",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "description": "Cinematic rooms (Saw, GoT, Harry Potter), 60 min, 2–6 players *(also §39)*. lisbon.escapegameover.pt ·",
-      "website": "https://lisbon.escapegameover.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "tours",
-      "categories": [
-        31
-      ],
-      "primary_category": 31,
-      "status": "possibly_closed",
-      "flags": [
-        "MAY HAVE CLOSED — verify"
-      ],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "mission-to-escape",
       "name": "Mission To Escape",
       "area": "Lisbon/Loures",
@@ -21388,28 +20660,6 @@
       "neighbourhood": null,
       "zone": null,
       "description": "Parties (Bairro Alto, Cais do Sodré, Terreiro do Paço)",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": null,
-      "crawlable": false,
-      "topic": "outdoors",
-      "categories": [
-        33
-      ],
-      "primary_category": 33,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "13-17-feb-2026",
-      "name": "13–17 Feb 2026",
-      "area": "; regional parades in Torres Vedras, Sesimbra, Loures, Sintra. [Seasonal",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "February]",
       "website": null,
       "other_urls": [],
       "instagram": null,
@@ -23623,30 +22873,6 @@
       "flags": []
     },
     {
-      "id": "19-22-nov-2026",
-      "name": "19–22 Nov 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "Nov] visitlisboa.com",
-      "website": "https://visitlisboa.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        39
-      ],
-      "primary_category": 39,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "galateria-davvero",
       "name": "Galateria Davvero",
       "area": "Santos",
@@ -23776,11 +23002,14 @@
       "crawlable": true,
       "topic": "social",
       "categories": [
-        39
+        39,
+        31
       ],
       "primary_category": 39,
       "status": "active",
-      "flags": [],
+      "flags": [
+        "MAY HAVE CLOSED — verify"
+      ],
       "dead_signals": 0,
       "last_seen": "2026-06-12"
     },
@@ -23834,32 +23063,6 @@
       ]
     },
     {
-      "id": "2026-main-edition-moved-to-santarem-cnema-16-17-may",
-      "name": "2026 main edition moved to Santarém (CNEMA, 16–17 May)",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "confirm any Lisbon edition] iberanime.com · IG @iberanime",
-      "website": "https://iberanime.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "iberanime"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        40
-      ],
-      "primary_category": 40,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "comic-con-portugal",
       "name": "Comic Con Portugal",
       "area": "",
@@ -23884,32 +23087,6 @@
       ]
     },
     {
-      "id": "2026-moved-to-europarque-santa-maria-da-feira-23-26-apr",
-      "name": "2026 moved to Europarque, Santa Maria da Feira (23–26 Apr)",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "Portugal's biggest pop-culture festival: cinema, gaming, comics, cosplay, anime, K-pop, Geek Market, \"Asian World\". [Relocated] evento.comic-con-portugal.com · IG @comicconportugal",
-      "website": "https://evento.comic-con-portugal.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "comicconportugal"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        40
-      ],
-      "primary_category": 40,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "uchu-matsuri",
       "name": "Uchu Matsuri",
       "area": "Lisbon",
@@ -23930,30 +23107,6 @@
       "primary_category": 40,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "21-22-may-2026",
-      "name": "21–22 May 2026",
-      "area": "uchu.universo42.pt",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://uchu.universo42.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        40
-      ],
-      "primary_category": 40,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "marvila-comics",
@@ -24036,36 +23189,12 @@
       "neighbourhood": null,
       "zone": null,
       "description": "Long-running annual tattoo + rock-music convention (since ~2005), usually October (",
-      "website": null,
+      "website": "https://lisbontattoorockfest.com",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
       "provider": null,
-      "crawlable": false,
-      "topic": "social",
-      "categories": [
-        41
-      ],
-      "primary_category": 41,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "2026-dates-tbc-expect-october",
-      "name": "2026 dates TBC — expect October",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://lisbontattoorockfest.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "lisbontattoorockfest"
-      ],
-      "provider": "generic",
       "crawlable": true,
       "topic": "social",
       "categories": [
@@ -24073,9 +23202,7 @@
       ],
       "primary_category": 41,
       "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
+      "flags": []
     },
     {
       "id": "vinokilo-lisbon",
@@ -24308,30 +23435,6 @@
       "flags": []
     },
     {
-      "id": "3-7-jun-2026",
-      "name": "3–7 Jun 2026",
-      "area": "; marathon/milongas, workshops. [Seasonal",
-      "neighbourhood": "Alfama",
-      "zone": "city",
-      "description": "early June] lusitango.com",
-      "website": "https://lusitango.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        42
-      ],
-      "primary_category": 42,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "little-big-apple",
       "name": "Little Big Apple",
       "area": "Areeiro",
@@ -24352,32 +23455,6 @@
       "primary_category": 42,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "24-28-sep-2026",
-      "name": "24–28 Sep 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://littlebigapple.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "little_big_apple_lisboa"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        42
-      ],
-      "primary_category": 42,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "swing-n-smile",
@@ -24563,30 +23640,6 @@
       "primary_category": 42,
       "status": "active",
       "flags": []
-    },
-    {
-      "id": "26-31-may-2026",
-      "name": "26–31 May 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://contact-time.dance",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "social",
-      "categories": [
-        42
-      ],
-      "primary_category": 42,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
     },
     {
       "id": "danca-mais-camila-delphim",
@@ -25075,31 +24128,6 @@
       "flags": []
     },
     {
-      "id": "25-27-sep-2026",
-      "name": "25–27 Sep 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://lisbonstreet.photo",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [
-        "lisbonstreet.photo"
-      ],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        44
-      ],
-      "primary_category": 44,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 1
-    },
-    {
       "id": "lisbon-photobook-fair",
       "name": "Lisbon Photobook Fair",
       "area": "Arquivo Municipal Fotográfico",
@@ -25321,30 +24349,6 @@
       "zone": null,
       "description": "",
       "website": "https://fasciniodafotografia.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "art",
-      "categories": [
-        44
-      ],
-      "primary_category": 44,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
-      "id": "22-25-oct",
-      "name": "22–25 Oct",
-      "area": "*",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://drawingroom.pt",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
@@ -25607,34 +24611,12 @@
       "neighbourhood": null,
       "zone": null,
       "description": "Annual international writing program (~",
-      "website": null,
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": null,
-      "crawlable": false,
-      "topic": "comedy",
-      "categories": [
-        45
-      ],
-      "primary_category": 45,
-      "status": "active",
-      "flags": []
-    },
-    {
-      "id": "28-jun-10-jul-2026",
-      "name": "28 Jun–10 Jul 2026",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
       "website": "https://disquietinternational.org",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
       "handles": [],
-      "provider": "generic",
+      "provider": null,
       "crawlable": true,
       "topic": "comedy",
       "categories": [
@@ -25642,8 +24624,7 @@
       ],
       "primary_category": 45,
       "status": "active",
-      "flags": [],
-      "dead_signals": 1
+      "flags": []
     },
     {
       "id": "lisbon-revisited-dias-de-poesia",
@@ -26934,30 +25915,6 @@
       "last_seen": "2026-06-12"
     },
     {
-      "id": "cartaz-cultural-eventos-gratuitos-em-lisboa",
-      "name": "Cartaz Cultural – \"Eventos gratuitos em Lisboa\"",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://cartazculturallisboa.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "guides",
-      "categories": [
-        49
-      ],
-      "primary_category": 49,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "eventbrite-free-events-lisboa",
       "name": "Eventbrite – Free events Lisboa",
       "area": "",
@@ -26980,30 +25937,6 @@
       "flags": []
     },
     {
-      "id": "lisbonlux-what-s-free-in-lisbon",
-      "name": "LisbonLux – \"What's free in Lisbon\"",
-      "area": "",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://lisbonlux.com",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "guides",
-      "categories": [
-        49
-      ],
-      "primary_category": 49,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
       "id": "pumpkin-museus-gratuitos-aos-domingos",
       "name": "Pumpkin – \"Museus gratuitos aos domingos\"",
       "area": "",
@@ -27011,30 +25944,6 @@
       "zone": null,
       "description": "",
       "website": "https://pumpkin.pt",
-      "other_urls": [],
-      "instagram": null,
-      "facebook": null,
-      "handles": [],
-      "provider": "generic",
-      "crawlable": true,
-      "topic": "guides",
-      "categories": [
-        49
-      ],
-      "primary_category": 49,
-      "status": "active",
-      "flags": [],
-      "dead_signals": 0,
-      "last_seen": "2026-06-12"
-    },
-    {
-      "id": "lisboa-cool-10-free-museums",
-      "name": "Lisboa Cool – \"10 Free Museums\"",
-      "area": "lisboacool.com",
-      "neighbourhood": null,
-      "zone": null,
-      "description": "",
-      "website": "https://lisboacool.com",
       "other_urls": [],
       "instagram": null,
       "facebook": null,
@@ -27212,6 +26121,384 @@
       ],
       "dead_signals": 0,
       "added_on": "2026-06-12"
+    },
+    {
+      "id": "out-fest-festival-de-musica-exploratoria",
+      "name": "OUT.FEST – Festival de Música Exploratória",
+      "area": "",
+      "neighbourhood": "Barreiro",
+      "zone": "greater",
+      "description": "",
+      "website": "https://outfest.pt",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "out.fest"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "music",
+      "categories": [
+        17
+      ],
+      "primary_category": 17,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "festival-iminente",
+      "name": "Festival Iminente",
+      "area": "",
+      "neighbourhood": null,
+      "zone": "city",
+      "description": "",
+      "website": "https://iminente.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "iminente"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "music",
+      "categories": [
+        17
+      ],
+      "primary_category": 17,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "musica-no-coracao",
+      "name": "Música no Coração",
+      "area": "",
+      "neighbourhood": null,
+      "zone": null,
+      "description": "",
+      "website": "https://musicanocoracao.pt",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "vodafonemexefest"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "music",
+      "categories": [
+        17
+      ],
+      "primary_category": 17,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "jazz-em-agosto-gulbenkian",
+      "name": "Jazz em Agosto (Gulbenkian)",
+      "area": "14 concerts",
+      "neighbourhood": "Avenidas Novas",
+      "zone": "city",
+      "description": "",
+      "website": "https://gulbenkian.pt/jazzemagosto",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "music",
+      "categories": [
+        17
+      ],
+      "primary_category": 17,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "web-summit",
+      "name": "Web Summit",
+      "area": "; spawns hundreds of fringe/side events and parties. [Seasonal",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "description": "Nov] websummit.com · IG @websummit",
+      "website": "https://websummit.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "websummit"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "learning",
+      "categories": [
+        22
+      ],
+      "primary_category": 22,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "ux-lisbon-uxlx",
+      "name": "UX Lisbon (UXLx)",
+      "area": "). [Seasonal",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "description": "May] ux-lx.com · IG @uxlx",
+      "website": "https://ux-lx.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "uxlx"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "learning",
+      "categories": [
+        22
+      ],
+      "primary_category": 22,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "arco-lisboa",
+      "name": "ARCO Lisboa",
+      "area": "",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "description": "late May] ifema.es/en/arco/lisboa · IG @arco_lisboa",
+      "website": "https://ifema.es/en/arco/lisboa",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "arco_lisboa"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "art",
+      "categories": [
+        23
+      ],
+      "primary_category": 23,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "lisbon-art-weekend",
+      "name": "Lisbon Art Weekend",
+      "area": "), 200+ artists, performances, gallery openings. [Seasonal",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "description": "early Nov] lisbonartweekend.com · IG @lisbonartweekend",
+      "website": "https://lisbonartweekend.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "lisbonartweekend"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "art",
+      "categories": [
+        23
+      ],
+      "primary_category": 23,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "modalisboa",
+      "name": "ModaLisboa",
+      "area": "MUDE programming 11–15); runways, free talks, satellites. [Seasonal",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "description": "Mar + Oct] modalisboa.pt · IG @modalisboa",
+      "website": "https://modalisboa.pt",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "modalisboa"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "art",
+      "categories": [
+        24
+      ],
+      "primary_category": 24,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "peixe-em-lisboa",
+      "name": "Peixe em Lisboa",
+      "area": "",
+      "neighbourhood": null,
+      "zone": "city",
+      "description": "",
+      "website": "https://peixemlisboa.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "food",
+      "categories": [
+        30
+      ],
+      "primary_category": 30,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 1
+    },
+    {
+      "id": "simplesmente-vinho",
+      "name": "Simplesmente... Vinho",
+      "area": "; ~48 vignerons, petiscos, music. [Seasonal] simplesmentevinho.com",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "description": "",
+      "website": "https://simplesmentevinho.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "food",
+      "categories": [
+        30
+      ],
+      "primary_category": 30,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "lusitango-festival-de-tango",
+      "name": "Lusitango – Festival de Tango",
+      "area": "; marathon/milongas, workshops. [Seasonal",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "description": "early June] lusitango.com",
+      "website": "https://lusitango.com",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "social",
+      "categories": [
+        42
+      ],
+      "primary_category": 42,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "little-big-apple-swing-dance",
+      "name": "Little Big Apple – Swing Dance",
+      "area": "",
+      "neighbourhood": null,
+      "zone": "city",
+      "description": "",
+      "website": "https://littlebigapple.pt",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "little_big_apple_lisboa"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "social",
+      "categories": [
+        42
+      ],
+      "primary_category": 42,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "contact-time-contact-improvisation",
+      "name": "Contact Time – Contact Improvisation",
+      "area": "",
+      "neighbourhood": null,
+      "zone": "city",
+      "description": "",
+      "website": "https://contact-time.dance",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "social",
+      "categories": [
+        42
+      ],
+      "primary_category": 42,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 0,
+      "last_seen": "2026-06-12"
+    },
+    {
+      "id": "lisbon-street-photography-festival",
+      "name": "Lisbon Street Photography Festival",
+      "area": "",
+      "neighbourhood": null,
+      "zone": "city",
+      "description": "",
+      "website": "https://lisbonstreet.photo",
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [
+        "lisbonstreet.photo"
+      ],
+      "provider": "generic",
+      "crawlable": true,
+      "topic": "art",
+      "categories": [
+        44
+      ],
+      "primary_category": 44,
+      "status": "active",
+      "flags": [],
+      "dead_signals": 1
     }
   ]
 }

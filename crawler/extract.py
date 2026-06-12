@@ -16,6 +16,7 @@ still run. Any API/parse error degrades to [] — never crashes the shard.
 from __future__ import annotations
 import json
 import os
+import re
 
 import core
 
@@ -29,7 +30,7 @@ PRICES = {
 
 EVENT_HINT = ('{"events":[{"title":"...","date":"YYYY-MM-DD","end_date":"",'
               '"is_free":true,"price_text":"","topic":"music","language":"pt",'
-              '"url":"","description":"..."}]}')
+              '"venue":"","url":"","description":"..."}]}')
 
 
 class CostTracker:
@@ -108,7 +109,8 @@ def _schema(topic_ids: list[str]) -> dict:
                 "price_text": {"type": "string"},
                 "topic": {"type": "string", "enum": topic_ids},
                 "language": {"type": "string", "enum": ["pt", "en", "pt/en"]},
-                "url": {"type": "string"},
+                "venue": {"type": "string", "description": "Nome do local onde o evento decorre, se a página o indicar"},
+                "url": {"type": "string", "description": "URL da página própria do evento, copiado do texto (aparece entre parênteses retos); vazio se não existir"},
                 "description": {"type": "string", "description": "one short line, in Portuguese"},
             },
             "required": ["title", "date", "topic", "is_free"],
@@ -125,12 +127,34 @@ def _system_prompt(mon, window_end, tax) -> str:
         "exposições/temporadas já a decorrer que ainda estejam abertas nesse período. "
         "Ignora itens sem data concreta, menus, publicidade e navegação. Datas em ISO. "
         "Se o preço não for claro, is_free=false e price_text vazio. Descrição: uma linha curta em português. "
+        "Os links da página aparecem no texto entre parênteses retos, ex.: [https://…]. Quando um evento "
+        "tiver página própria, copia esse URL exatamente para o campo url (sem os parênteses retos); NUNCA "
+        "inventes URLs — se não houver link no texto, deixa url vazio. Preenche o campo venue com o nome do "
+        "local onde o evento decorre quando a página o indicar (essencial em páginas de agenda que listam "
+        "vários locais). Mantém as descrições muito curtas. Se a página tiver mais de 60 eventos no período, "
+        "devolve apenas os 60 primeiros. "
         f"Escolhe o tema (campo topic) mais adequado de: {topics}. Se não houver eventos, devolve events: []."
     )
 
 
+def _checked_url(raw, source: dict, page_links: set | None) -> str | None:
+    """Accept a model-returned URL only if it is a link that was actually on the
+    page, or at least lives on the source's own site — a fabricated external
+    URL is worse than falling back to the venue homepage."""
+    u = core.resolve_url(raw, source.get("website"))
+    if not u:
+        return None
+    if page_links and u in page_links:
+        return u
+    src_host = core.site_key(source.get("website") or "").split("/")[0]
+    if src_host and core.site_key(u).split("/")[0] == src_host:
+        return u
+    return None
+
+
 def extract(prov, client, source: dict, page_text: str, mon, window_end, cfg: dict, tax: dict,
-            tracker: CostTracker) -> list[dict]:
+            tracker: CostTracker, venues_idx: dict | None = None,
+            page_links: set | None = None) -> list[dict]:
     if tracker.exhausted() or not page_text:
         return []
     tids = [t["id"] for t in tax["topics"] if not t.get("is_aggregator")]
@@ -138,11 +162,13 @@ def extract(prov, client, source: dict, page_text: str, mon, window_end, cfg: di
     user = f"Local/fonte: {source['name']} ({source.get('website')})\n\nTexto da página:\n{page_text}"
     schema = _schema(tids)
 
-    data = json_call(prov, client, cfg["ai"]["model_cheap"], system, user, schema, EVENT_HINT, 6000, tracker)
+    # 8000 output tokens ≈ 60+ events; dense agenda pages truncated JSON-mode
+    # responses parse as nothing, so capacity matters more than cost here
+    data = json_call(prov, client, cfg["ai"]["model_cheap"], system, user, schema, EVENT_HINT, 8000, tracker)
     items = (data or {}).get("events")
     if not items and cfg["ai"].get("escalate_on_low_confidence") and not tracker.exhausted() \
             and cfg["ai"]["model_strong"] != cfg["ai"]["model_cheap"]:
-        data = json_call(prov, client, cfg["ai"]["model_strong"], system, user, schema, EVENT_HINT, 6000, tracker)
+        data = json_call(prov, client, cfg["ai"]["model_strong"], system, user, schema, EVENT_HINT, 8000, tracker)
         items = (data or {}).get("events")
     if not items:
         return []
@@ -160,12 +186,25 @@ def extract(prov, client, source: dict, page_text: str, mon, window_end, cfg: di
         price = ({"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
                  if it.get("is_free") else core.detect_price(it.get("price_text") or "x"))
         lang = it.get("language") or "pt"
+        # map the extracted venue name back to the seed list (canonical name +
+        # neighbourhood); a name we don't know is only trusted on agenda pages
+        venue_name = neigh = zone = None
+        vraw = re.sub(r"\s+", " ", str(it.get("venue") or "")).strip()[:120]
+        if vraw and core._nt(vraw) != core._nt(source["name"]):
+            known = core.resolve_venue(vraw, venues_idx or {})
+            if known is not None:
+                venue_name = known["name"]
+                neigh, zone = known.get("neighbourhood"), known.get("zone")
+            elif source.get("topic") == "guides":
+                venue_name = vraw
         ev = core.make_event(
             title=it.get("title"), source=source, topic=topic, mon=mon, window_end=window_end,
             start_d=start_d, end_d=(end_parsed[0] if end_parsed else None), has_time=has_time,
-            start_iso=start_iso, price=price, url=it.get("url"), description=it.get("description"),
+            start_iso=start_iso, price=price, url=_checked_url(it.get("url"), source, page_links),
+            description=it.get("description"),
             language=(["pt", "en"] if lang == "pt/en" else [lang]),
             categories=source.get("categories", [])[:2],
+            venue_name=venue_name, neighbourhood=neigh, zone=zone,
         )
         if ev:
             out.append(ev)

@@ -14,6 +14,8 @@ run in parallel. Each writes a partial JSON; merge_week.py combines them.
 """
 from __future__ import annotations
 import argparse
+import difflib
+import hashlib
 import json
 import sys
 import time
@@ -23,6 +25,22 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
+
+
+def pick_representative(group: list[dict]) -> dict:
+    """Several seed entries can point at the same web page (e.g. a venue listed
+    under two names, or venues whose 'website' is an agenda page). Crawl the
+    page once, attributed to the entry that best matches the domain — agenda
+    sources win so events get venue names extracted from the page instead."""
+    if len(group) == 1:
+        return group[0]
+    host = core.site_key(group[0]["website"]).split("/")[0].replace(".", "")
+
+    def fit(s):
+        filled = sum(1 for k in ("neighbourhood", "description", "instagram") if s.get(k))
+        return (s.get("topic") == "guides",
+                difflib.SequenceMatcher(None, core._nt(s["name"]), host).ratio(), filled)
+    return max(group, key=fit)
 
 
 def feed_events(session, cfg, source, html, mon, window_end):
@@ -71,9 +89,20 @@ def main():
 
     crawlable = [s for s in sources if s.get("crawlable") and s.get("website")
                  and s.get("status") in ("active", "renovation")]
-    shard = [s for i, s in enumerate(crawlable) if i % args.of == args.shard]
+    # one crawl per distinct page, sharded by a stable hash of the page so
+    # same-site entries can never land in different shards and duplicate work
+    by_site: dict[str, list[dict]] = {}
+    for s in crawlable:
+        by_site.setdefault(core.site_key(s["website"]), []).append(s)
+    targets = [pick_representative(g) for g in by_site.values()]
+    skipped = len(crawlable) - len(targets)
+    if skipped:
+        print(f"[dedup] {skipped} seed entries share a page with another entry — each page is crawled once")
+    shard = [s for s in targets
+             if int(hashlib.sha1(core.site_key(s["website"]).encode()).hexdigest(), 16) % args.of == args.shard]
     if args.limit:
         shard = shard[:args.limit]
+    venues_idx = core.venues_index(sources)
 
     ai_enabled = cfg["ai"].get("enabled", True) and not args.no_ai
     # run cap respects the monthly ceiling, then splits across parallel shards
@@ -109,13 +138,16 @@ def main():
             continue  # skip non-HTML/non-feed bodies (PDF/JSON/image): no events, no AI spend
         evs = feed_events(session, cfg, s, html, mon, window_end)
         if not evs and ai_enabled and not tracker.exhausted():
-            text = core.html_to_text(html, cfg["ai"].get("max_chars_per_page", 18000))
-            evs = extract.extract(prov, client, s, text, mon, window_end, cfg, tax, tracker)
+            page_links: set = set()
+            text = core.html_to_text(html, cfg["ai"].get("max_chars_per_page", 18000),
+                                     base_url=s["website"], keep_links=True, link_sink=page_links)
+            evs = extract.extract(prov, client, s, text, mon, window_end, cfg, tax, tracker,
+                                  venues_idx, page_links)
             ai_calls += 1
         events.extend(evs)
         time.sleep(delay)
 
-    events = core.dedupe(events)
+    events = core.dedupe(events, sources)
     payload = {
         "week_start": mon.isoformat(), "week_end": display_sun.isoformat(),
         "shard": args.shard, "of": args.of, "event_count": len(events),
