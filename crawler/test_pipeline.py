@@ -25,6 +25,15 @@ t('kpop', core.clean_title('AS GUERREIRAS DO K-POP | TRIBUTO'), 'As Guerreiras d
 t('nt accents', core._nt('Mosteiro dos Jerónimos'), core._nt('Mosteiro dos Jeronimos'))
 t('nt cedilha', core._nt('Exposição'), 'exposicao')
 
+# descriptions
+t('desc title prefix dropped', core.clean_description('Fado ao Vivo — noite de fado com jantar', 'Fado ao Vivo', 'A Severa'),
+  'Noite de fado com jantar.')
+t('desc venue suffix dropped', core.clean_description('Noite de fado com jantar — A Severa.', 'Fado ao Vivo', 'A Severa'),
+  'Noite de fado com jantar.')
+t('desc equal to title -> empty', core.clean_description('Fado ao Vivo', 'Fado ao Vivo', 'A Severa'), '')
+t('desc html stripped', core.clean_description('<p>Concerto  de\nverão</p>', 'X', 'Y'), 'Concerto de verão.')
+t('desc keeps period', core.clean_description('Já termina com ponto.', 'X', 'Y'), 'Já termina com ponto.')
+
 # site_key robustness
 t('site_key bad ipv6', core.site_key('https://[lisboa'), 'https://[lisboa')
 t('site_key normal', core.site_key('https://www.zedosbois.org/'), 'zedosbois.org')

@@ -331,6 +331,30 @@ def clean_title(title: str, venue: str = "") -> str:
     return t[:160].strip()
 
 
+def clean_description(desc: str, title: str = "", venue: str = "") -> str:
+    """Readable one-to-two-sentence descriptions: strip html/whitespace, drop a
+    leading repeat of the title and a trailing '— venue', sentence-case the
+    first letter, end with a period."""
+    d = re.sub(r"<[^>]+>", " ", str(desc or ""))
+    d = re.sub(r"\s+", " ", d).strip().strip("«»\"“”")
+    if title:
+        m = re.match(r"^(.{0,160}?)\s*[–—:|-]\s+(.{12,})$", d)
+        if m and _nt(m.group(1)) == _nt(title):
+            d = m.group(2)
+    if venue:
+        m = re.match(r"^(.{12,}?)\s*[–—|-]\s*([^–—|-]{0,80})\.?$", d)
+        if m and _nt(m.group(2)) == _nt(venue):
+            d = m.group(1)
+    if _nt(d) == _nt(title) or _nt(d) == _nt(venue):
+        return ""
+    d = d.strip()[:280].strip()
+    if d:
+        d = d[0].upper() + d[1:]
+        if d[-1].isalnum():
+            d += "."
+    return d
+
+
 def venues_index(sources: list[dict]) -> dict:
     """normalized-name -> source, for mapping AI-extracted venue names back to
     the seed list (canonical name + neighbourhood/zone)."""
@@ -415,7 +439,7 @@ def make_event(*, title, source, topic, mon, window_end, start_d, end_d, has_tim
         "price": price, "language": language or ["pt"],
         "url": resolve_url(url, source.get("website")) or source.get("website"),
         "source": source.get("provider") or "site",
-        "description": (description or "").strip()[:280], "image": None,
+        "description": clean_description(description, title, venue), "image": None,
     }
 
 

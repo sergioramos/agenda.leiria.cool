@@ -17,6 +17,7 @@ import argparse
 import difflib
 import hashlib
 import json
+import re
 import sys
 import time
 from datetime import date
@@ -25,6 +26,37 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
+
+OG_IMAGE_RE = re.compile(
+    r'<meta[^>]+(?:property|name)=["\']og:image(?::secure_url)?["\'][^>]*content=["\']([^"\']+)|'
+    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\']og:image', re.I)
+
+
+def enrich_images(session, cfg, source, evs, delay, cap=10):
+    """Fetch each event's own page (HTTP only, no AI) and pick up its og:image
+    so the cards have real artwork. Bounded per source; failures are silent."""
+    page = core.site_key(source.get("website") or "")
+    cache, fetched = {}, 0
+    for e in evs:
+        u = e.get("url")
+        if not u or core.site_key(u) == page:
+            continue  # homepage fallback — no event page to read
+        if u in cache:
+            e["image"] = cache[u]
+            continue
+        if fetched >= cap:
+            continue
+        fetched += 1
+        got = core.fetch(session, u, cfg)
+        img = None
+        if got and got[0] < 400 and "html" in (got[1] or ""):
+            m = OG_IMAGE_RE.search(got[2] or "")
+            if m:
+                img = core.resolve_url(m.group(1) or m.group(2), u)
+        cache[u] = img
+        if img:
+            e["image"] = img
+        time.sleep(delay / 2)
 
 
 def pick_representative(group: list[dict]) -> dict:
@@ -144,6 +176,8 @@ def main():
             evs = extract.extract(prov, client, s, text, mon, window_end, cfg, tax, tracker,
                                   venues_idx, page_links)
             ai_calls += 1
+        if evs:
+            enrich_images(session, cfg, s, evs, delay)
         events.extend(evs)
         time.sleep(delay)
 

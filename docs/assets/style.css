@@ -224,52 +224,86 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
    Header: 42px emoji · 16px gap · red count kicker SM Bold 12/12 ls 1px ·
    title Fraunces SemiBold 24/32 (WONK 1). 16px gap to body; body = dashed
    divider + 24px gap + 2-col grid (24px gaps). 64px between sections. */
-.topic-section { display: flex; flex-direction: column; gap: 16px; margin: 0 0 64px; }
-.topic-head { display: flex; align-items: center; gap: 16px; }
-.topic-icon { width: 42px; height: 42px; flex: none; display: flex; align-items: center; justify-content: center; font-size: 40px; line-height: 48px; }
-.topic-head-text { display: flex; flex-direction: column; gap: 8px; }
+.topic-section { display: flex; flex-direction: column; gap: 24px; margin: 0 0 64px; }
+.topic-head { display: flex; align-items: center; }
+.topic-head-text { display: flex; flex-direction: column; gap: 4px; }
 .topic-kicker {
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
   letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f;
 }
 .topic-head h2 {
-  margin: 0; font-family: var(--display); font-weight: 600; font-size: 24px; line-height: 32px;
-  color: #1d1813; font-variation-settings: "SOFT" 0, "WONK" 1; text-transform: capitalize;
+  margin: 0; font-family: var(--mono); font-weight: 700; font-size: 18px; line-height: 24px;
+  letter-spacing: 1px; text-transform: uppercase; color: #1d1813;
 }
-.topic-body { display: flex; flex-direction: column; gap: 24px; }
+.topic-head h2 .amp { font-size: 15px; }
 
-/* event card (Figma 19:2074 "Frame 61" — 1:1): #fefefe r4, 24px/16px padding,
-   24px gaps, shadow 0 22px 25px -8px rgba(22,22,22,.04). Date column 41px:
-   day SM Bold 12/12 red · date Fraunces SemiBold 32/40 WONK · time SM 12/16
-   grey. Vertical dashed divider. Title Familjen SemiBold 18/24 ls 1px; venue
-   SM Bold Italic 12/16 grey; tag row at 80%: 1px #6f6f6f boxes, 4/8 padding. */
-.cards { display: grid; gap: 24px; grid-template-columns: 1fr 1fr; }
-@media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+/* event card (Figma 19:2074 v2 — 1:1): one column, 16px between cards.
+   #fefefe r4, 24px padding, 24px gaps, shadow 0 22px 25px -8px rgba(22,22,22,.04).
+   Square artwork (r2) · body (title row + desc + badges) · dashed divider ·
+   date column on the RIGHT. Title Familjen SemiBold 18/24 underlined; venue
+   pin + SM Bold Italic 12/16 underlined; desc Familjen 16/24 one-line; topic
+   badge filled #6f6f6f, others outlined, all r4. */
+.cards { display: flex; flex-direction: column; gap: 16px; }
 
 .card {
-  background: #fefefe; border: 0; border-radius: 4px; padding: 16px 24px;
+  background: #fefefe; border: 0; border-radius: 4px; padding: 24px;
   display: flex; align-items: center; gap: 24px;
   box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
 }
+.card-img {
+  align-self: stretch; aspect-ratio: 1 / 1; flex: none; min-height: 112px;
+  border-radius: 2px; overflow: hidden; background: #f0e8dc;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-img.ph { font-size: 40px; line-height: 1; }
 .card .when { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 41px; flex: none; }
 .when .day { font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f; }
 .when .date { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 1px; color: #1d1813; font-variation-settings: "SOFT" 0, "WONK" 1; }
 .when .time, .when .ongoing { font-family: var(--mono); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
 .card-divider { width: 1px; align-self: stretch; flex: none; background-image: repeating-linear-gradient(to bottom, #ccc7bb 0 4px, transparent 4px 8px); }
 .card .body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
-.card .card-text { display: flex; flex-direction: column; gap: 4px; }
-.card .body h3 { margin: 0; font-family: var(--grotesk); font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 1px; color: #1d1813; }
-.card .body h3 a { color: inherit; text-decoration: none; }
-.card .body h3 a:hover { color: var(--accent); text-decoration: underline; }
+.card-toprow { display: flex; gap: 8px; align-items: flex-start; width: 100%; }
+.card .card-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.card .body h3 {
+  margin: 0; font-family: var(--grotesk); font-weight: 600; font-size: 18px; line-height: 24px;
+  letter-spacing: 1px; color: #1d1813; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card .body h3 a, .card .body h3 span { color: inherit; text-decoration: underline; text-underline-position: from-font; }
+.card .body h3 a:hover { color: var(--accent); }
+.venue-line {
+  margin: 0; display: flex; gap: 4px; align-items: center; min-width: 0;
+  color: #6f6f6f;
+}
+.venue-line svg { flex: none; }
+.venue-line a {
+  font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+  text-decoration: underline; text-underline-position: from-font;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.venue-line a:hover { color: var(--accent); }
+.save-date {
+  flex: none; display: inline-flex; gap: 8px; align-items: center;
+  padding: 8px 12px 8px 8px; border: 1px solid #6f6f6f; border-radius: 4px;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; text-decoration: none;
+}
+.save-date:hover { color: #1d1813; border-color: #1d1813; }
 .meta-line { margin: 0; font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
-.badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; opacity: .8; }
+.card-desc {
+  margin: 0; width: 100%; font-family: var(--grotesk); font-weight: 400; font-size: 16px;
+  line-height: 24px; letter-spacing: 1px; color: #6f6f6f;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .badge {
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
   letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
-  border: 1px solid #6f6f6f; border-radius: 0; background: transparent;
-  padding: 3px 7px; /* +1px border = the design's 4/8 insets; tag height 24px, card 124px */
+  border: 1px solid #6f6f6f; border-radius: 4px; background: transparent;
+  padding: 3px 7px; /* +1px border = the design's 4/8 insets; tag height 24px */
 }
-.badge.topic { color: #6f6f6f; }
+.badge.topic { background: #6f6f6f; color: #fefefe; }
 .badge.free { color: #ff3d1f; border-color: #ff3d1f; } /* user call: keep Grátis highlighted */
 
 /* stamp box (READ ME / NOTE style) */
@@ -289,6 +323,11 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 }
 .footer-credit span { color: #1d1813; }
 
+@media (max-width: 700px) {
+  .card-img { display: none; }
+  .save-date span { display: none; } /* icon-only on small screens */
+  .save-date { padding: 8px; }
+}
 @media (max-width: 540px) {
   .card { padding: 12px 16px; gap: 16px; }
   .masthead { flex-wrap: wrap; gap: 12px; }

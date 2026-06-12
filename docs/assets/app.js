@@ -124,8 +124,42 @@ function renderNeighbourhoodChips() {
   }
 }
 
+/* lucide icons (inline so they tint via currentColor) */
+const PIN_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>';
+const CAL_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 19h6"/><path d="M16 2v4"/><path d="M19 16v6"/><path d="M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>';
+
+function mapsUrl(ev) {
+  const q = [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', ');
+  return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+}
+
+function gcalUrl(ev) {
+  const pad = n => String(n).padStart(2, '0');
+  let dates;
+  if (!ev.all_day && (ev.start || '').length > 10) {
+    const fmt = d => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+    const s = new Date(ev.start);
+    const e = new Date(s.getTime() + 2 * 3600e3); // no published end time — assume 2h
+    dates = `${fmt(s)}/${fmt(e)}`;
+  } else {
+    // all-day (Google wants an EXCLUSIVE end date)
+    const end = new Date((ev.end || ev.start).slice(0, 10) + 'T00:00:00');
+    end.setDate(end.getDate() + 1);
+    dates = `${ev.start.slice(0, 10).replace(/-/g, '')}/` +
+      `${end.getFullYear()}${pad(end.getMonth() + 1)}${pad(end.getDate())}`;
+  }
+  const p = new URLSearchParams({
+    action: 'TEMPLATE', text: ev.title, dates,
+    details: ev.url || '', location: [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', '),
+    ctz: 'Europe/Lisbon',
+  });
+  return 'https://calendar.google.com/calendar/render?' + p.toString();
+}
+
 function card(ev) {
   const d = eventDate(ev);
+  const topic = state.topicById[ev.topic];
+
   const when = el('div', { className: 'when' });
   if (ev.ongoing) {
     // a run/exhibition: point at its closing day when known ("até 14 · em curso")
@@ -141,24 +175,51 @@ function card(ev) {
       el('span', { className: 'date', textContent: d.getDate() || '' }));
     if (time) when.append(el('span', { className: 'time', textContent: time }));
   }
-  const titleEl = ev.url
+
+  // square artwork; topic emoji stands in until the crawl finds an og:image
+  const media = el('div', { className: 'card-img', ariaHidden: 'true' });
+  const placeholder = () => { media.classList.add('ph'); media.textContent = topic?.emoji || '📌'; };
+  if (ev.image) {
+    const img = el('img', { src: ev.image, alt: '', loading: 'lazy' });
+    img.onerror = () => { img.remove(); placeholder(); };
+    media.append(img);
+  } else placeholder();
+
+  const h = el('h3', {}, ev.url
     ? el('a', { href: ev.url, target: '_blank', rel: 'noopener', textContent: ev.title })
-    : document.createTextNode(ev.title);
+    : el('span', { textContent: ev.title }));
+  const venueLine = el('p', { className: 'venue-line' });
+  venueLine.insertAdjacentHTML('afterbegin', PIN_SVG);
+  venueLine.append(el('a', {
+    href: mapsUrl(ev), target: '_blank', rel: 'noopener',
+    textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · '),
+    title: 'Abrir no Google Maps',
+  }));
+
+  const save = el('a', {
+    className: 'save-date', href: gcalUrl(ev), target: '_blank', rel: 'noopener',
+    title: 'Adicionar ao Google Calendar',
+  });
+  save.insertAdjacentHTML('afterbegin', CAL_SVG);
+  save.append(el('span', { textContent: 'Guardar data' }));
+
   const badges = el('div', { className: 'badges' });
-  const topic = state.topicById[ev.topic];
   if (topic) badges.append(el('span', { className: 'badge topic', textContent: topic.label }));
   if (ev.price?.is_free) badges.append(el('span', { className: 'badge free', textContent: 'Grátis' }));
   else if (ev.price?.text) badges.append(el('span', { className: 'badge', textContent: ev.price.text }));
   if ((ev.language || []).includes('en')) badges.append(el('span', { className: 'badge', textContent: 'EN' }));
 
+  const body = el('div', { className: 'body' },
+    el('div', { className: 'card-toprow' },
+      el('div', { className: 'card-text' }, h, venueLine),
+      save));
+  if (ev.description) body.append(el('p', { className: 'card-desc', textContent: ev.description }));
+  body.append(badges);
+
   return el('article', { className: 'card' },
-    when,
+    media, body,
     el('span', { className: 'card-divider', ariaHidden: 'true' }),
-    el('div', { className: 'body' },
-      el('div', { className: 'card-text' },
-        el('h3', {}, titleEl),
-        el('p', { className: 'meta-line', textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · ') })),
-      badges));
+    when);
 }
 
 function render() {
@@ -178,17 +239,18 @@ function render() {
     const t = state.topicById[tid];
     list.sort((a, b) => (a.start || '').localeCompare(b.start || ''));
     const sec = el('section', { className: 'topic-section' });
+    const h2 = el('h2', {});
+    t.label.split(' & ').forEach((part, i) => {
+      if (i) h2.append(el('span', { className: 'amp', textContent: ' & ' }));
+      h2.append(document.createTextNode(part));
+    });
     sec.append(el('div', { className: 'topic-head' },
-      el('span', { className: 'topic-icon', textContent: t.emoji }),
       el('div', { className: 'topic-head-text' },
         el('span', { className: 'topic-kicker', textContent: `${list.length} ${list.length === 1 ? 'evento' : 'eventos'}` }),
-        el('h2', { textContent: t.label }))));
-    const body = el('div', { className: 'topic-body' });
-    body.append(el('hr', { className: 'rule-dashed' }));
+        h2)));
     const cards = el('div', { className: 'cards' });
     list.forEach(ev => cards.append(card(ev)));
-    body.append(cards);
-    sec.append(body);
+    sec.append(cards);
     results.append(sec);
   }
   renderActiveFilterNote();

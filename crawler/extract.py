@@ -126,13 +126,13 @@ def _system_prompt(mon, window_end, tax) -> str:
         f"eventos com data entre {mon.isoformat()} e {window_end.isoformat()} (inclusive), mais "
         "exposições/temporadas já a decorrer que ainda estejam abertas nesse período. "
         "Ignora itens sem data concreta, menus, publicidade e navegação. Datas em ISO. "
-        "Se o preço não for claro, is_free=false e price_text vazio. Descrição: uma linha curta em português. "
+        "Se o preço não for claro, is_free=false e price_text vazio. Descrição: 1–2 frases informativas "
+        "em português (até ~200 caracteres) que digam o que é o evento, sem repetir o título nem o nome do local. "
         "Os links da página aparecem no texto entre parênteses retos, ex.: [https://…]. Quando um evento "
         "tiver página própria, copia esse URL exatamente para o campo url (sem os parênteses retos); NUNCA "
         "inventes URLs — se não houver link no texto, deixa url vazio. Preenche o campo venue com o nome do "
         "local onde o evento decorre quando a página o indicar (essencial em páginas de agenda que listam "
-        "vários locais). Mantém as descrições muito curtas. Se a página tiver mais de 60 eventos no período, "
-        "devolve apenas os 60 primeiros. "
+        "vários locais). Se a página tiver mais de 60 eventos no período, devolve apenas os 60 primeiros. "
         f"Escolhe o tema (campo topic) mais adequado de: {topics}. Se não houver eventos, devolve events: []."
     )
 
