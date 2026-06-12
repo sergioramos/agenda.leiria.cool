@@ -49,11 +49,19 @@ Na Vercel: **Project → Settings → Domains → Add**, e siga as instruções 
 
 ---
 
-## 3 · Ligar o painel de administração (`/admin`)
+## 3 · Proteger e ligar o painel de administração (`/admin`)
 
-1. Abra **`o-seu-site.vercel.app/admin`**.
-2. **Criar conta:** defina o utilizador (`manuel`) e uma palavra-passe **nova** (não reutilize a que partilhou).
-3. Em **Definições**, preencha:
+O `/admin` está protegido a sério, no servidor (Vercel Edge Middleware): sem as
+credenciais certas, a página nem chega a carregar. Para definir as credenciais:
+
+1. Na Vercel: projeto **pregoeiro** → **Settings → Environment Variables**.
+2. Crie duas variáveis (ambiente **Production**):
+   - **`ADMIN_USER`** — o utilizador que quer (ex.: `manuel`)
+   - **`ADMIN_PASSWORD`** — uma palavra-passe forte (prefira letras/números; evite acentos)
+3. **Redeploy** (obrigatório — as variáveis só entram em vigor num deploy novo):
+   **Deployments → ⋯ no deployment mais recente → Redeploy**.
+4. Abra `o-seu-site.vercel.app/admin` → o navegador pede utilizador e palavra-passe.
+5. Já dentro do painel, em **Definições**, preencha:
    - **Repositório:** `O-SEU-UTILIZADOR/pregoeiro`
    - **Token de acesso:** um *fine-grained token* do GitHub (passo 4).
 

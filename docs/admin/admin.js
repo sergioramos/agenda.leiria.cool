@@ -1,13 +1,13 @@
-/* Admin panel: soft login gate (account set by the user, stored hashed in this
-   browser only), GitHub connection settings, on-demand crawl triggers, and the
-   proposed-changes review. No password is ever hard-coded or sent anywhere. */
+/* Admin panel. Access is enforced server-side by Vercel Edge Middleware
+   (docs/middleware.js) with HTTP Basic auth — credentials live only in the
+   Vercel project's environment variables. This script handles the dashboard:
+   GitHub connection settings, on-demand crawl triggers, and the
+   proposed-changes review. The GitHub token stays in this browser only. */
 'use strict';
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (t, p = {}, ...k) => { const n = Object.assign(document.createElement(t), p); k.forEach(c => n.append(c)); return n; };
 
-const ACCOUNT_KEY = 'le_admin_account';
-const SESSION_KEY = 'le_admin_session';
 const CFG_KEY = 'le_apply_cfg';
 const WF_EVENTS = 'crawl-events.yml';
 const WF_SOURCES = 'check-sources.yml';
@@ -21,72 +21,16 @@ const STATUS_PT = {
 const decisions = { closures: {}, new_venues: {} };
 let proposed = null;
 
-/* ---------- crypto + account ---------- */
-async function sha256hex(str) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
-}
-function randSalt() {
-  return [...crypto.getRandomValues(new Uint8Array(16))].map(b => b.toString(16).padStart(2, '0')).join('');
-}
-const getAccount = () => JSON.parse(localStorage.getItem(ACCOUNT_KEY) || 'null');
-const setAccount = (a) => localStorage.setItem(ACCOUNT_KEY, JSON.stringify(a));
-
-/* ---------- gate ---------- */
-function showGate() {
-  $('#dash').hidden = true;
-  $('#gate').hidden = false;
-  $('#session-actions').hidden = true;
-  const setup = !getAccount();
-  $('#gate-title').textContent = setup ? 'Criar conta' : 'Entrar';
-  $('#gate-sub').textContent = setup
-    ? 'Primeira utilização: defina o utilizador e a palavra-passe deste painel. Ficam guardados (cifrados) só neste navegador.'
-    : 'Introduza as suas credenciais.';
-  $('#g-confirm-wrap').hidden = !setup;
-  $('#gate-submit').textContent = setup ? 'Criar conta e entrar' : 'Entrar';
-  $('#gate-reset-wrap').hidden = setup;
-  $('#gate-msg').textContent = '';
-}
-
-async function handleGate(e) {
-  e.preventDefault();
-  const setup = !getAccount();
-  const user = $('#g-user').value.trim();
-  const pass = $('#g-pass').value;
-  const msg = $('#gate-msg');
-  if (!user || !pass) { msg.textContent = 'Preencha utilizador e palavra-passe.'; return; }
-
-  if (setup) {
-    if (pass.length < 6) { msg.textContent = 'Use uma palavra-passe com pelo menos 6 caracteres.'; return; }
-    if (pass !== $('#g-confirm').value) { msg.textContent = 'As palavras-passe não coincidem.'; return; }
-    const salt = randSalt();
-    setAccount({ user, salt, hash: await sha256hex(salt + pass) });
-    enterDash();
-  } else {
-    const acc = getAccount();
-    const ok = user === acc.user && (await sha256hex(acc.salt + pass)) === acc.hash;
-    if (!ok) { msg.textContent = 'Credenciais inválidas.'; return; }
-    enterDash();
-  }
-}
-
-function enterDash() {
-  sessionStorage.setItem(SESSION_KEY, '1');
-  $('#gate').hidden = true;
-  $('#dash').hidden = false;
-  $('#session-actions').hidden = false;
-  loadConfig();
-  loadProposed();
-}
-
 /* ---------- settings ---------- */
 const getCfg = () => JSON.parse(localStorage.getItem(CFG_KEY) || 'null') || {};
+
 function loadConfig() {
   const c = getCfg();
   $('#cfg-repo').value = c.repo || '';
   $('#cfg-token').value = c.token || '';
   $('#cfg-status').textContent = c.repo ? 'ligado a ' + c.repo : 'por configurar';
 }
+
 function saveConfig() {
   const repo = $('#cfg-repo').value.trim().replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, '');
   const token = $('#cfg-token').value.trim();
@@ -126,7 +70,7 @@ async function runWorkflow(file, label) {
 
 /* ---------- proposed changes ---------- */
 async function loadProposed() {
-  try { proposed = await (await fetch('../data/proposed-changes/latest.json', { cache: 'no-cache' })).json(); }
+  try { proposed = await (await fetch('/data/proposed-changes/latest.json', { cache: 'no-cache' })).json(); }
   catch { proposed = { closures: [], new_venues: [] }; }
   renderProposed();
 }
@@ -186,14 +130,6 @@ async function applyChanges() {
 }
 
 /* ---------- wire-up ---------- */
-$('#gate-form').addEventListener('submit', handleGate);
-$('#gate-reset').addEventListener('click', (e) => {
-  e.preventDefault();
-  if (confirm('Repor a conta de administrador deste navegador? Terá de criar uma nova.')) {
-    localStorage.removeItem(ACCOUNT_KEY); sessionStorage.removeItem(SESSION_KEY); showGate();
-  }
-});
-$('#logout').addEventListener('click', () => { sessionStorage.removeItem(SESSION_KEY); location.reload(); });
 $('#cfg-save').addEventListener('click', saveConfig);
 $('#run-events').addEventListener('click', () => runWorkflow(WF_EVENTS, 'Recolher eventos'));
 $('#run-sources').addEventListener('click', () => runWorkflow(WF_SOURCES, 'Verificar locais'));
@@ -203,8 +139,8 @@ $('#select-all').addEventListener('click', () => {
   (proposed.new_venues || []).forEach((v, i) => { decisions.new_venues[String(i)] = true; const b = $(`#new_venues-${i}`); if (b) b.checked = true; });
 });
 
-if (sessionStorage.getItem(SESSION_KEY) === '1' && getAccount()) enterDash();
-else showGate();
+loadConfig();
+loadProposed();
 
 /* ---------- announcement-bar ticker (same component as the public site) ---------- */
 (function initTicker() {
