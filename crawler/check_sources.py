@@ -122,7 +122,8 @@ def main():
                              "reason": reason, "current_status": s.get("status")})
 
     new_venues = []
-    tracker = extract.CostTracker(cfg["ai"].get("max_run_cost_usd", 2.0))
+    run_cap, _ = core.effective_run_cap(cfg, datetime.now(timezone.utc).date())
+    tracker = extract.CostTracker(run_cap)
     if not args.no_ai and cfg["maintenance"].get("discover_new", True) and cfg["ai"].get("enabled", True):
         try:
             prov, client = extract.get_client(cfg)

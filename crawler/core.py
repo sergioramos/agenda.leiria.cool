@@ -37,6 +37,40 @@ def save_sources(payload: dict) -> None:
 def topic_ids(tax: dict) -> set[str]:
     return {t["id"] for t in tax["topics"]}
 
+# ---------- spend tracking ----------
+def month_ai_spend(today: date) -> float:
+    """Sum of ai_cost_usd across committed week files generated this calendar
+    month (samples excluded). Used to enforce ai.max_month_cost_usd."""
+    spent = 0.0
+    weeks_dir = ROOT / "docs" / "data" / "weeks"
+    if not weeks_dir.exists():
+        return 0.0
+    prefix = today.strftime("%Y-%m")
+    for p in weeks_dir.glob("*.json"):
+        if p.name == "index.json":
+            continue
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if d.get("is_sample"):
+            continue
+        if str(d.get("generated_at", ""))[:7] == prefix:
+            spent += float((d.get("meta") or {}).get("ai_cost_usd", 0) or 0)
+    return spent
+
+
+def effective_run_cap(cfg: dict, today: date) -> tuple[float, float]:
+    """(cap_for_this_run, month_spent). Run cap shrinks to whatever is left of
+    the monthly ceiling; 0 means the month's budget is exhausted."""
+    run_cap = float(cfg["ai"].get("max_run_cost_usd", 2.0))
+    month_cap = cfg["ai"].get("max_month_cost_usd")
+    spent = month_ai_spend(today)
+    if month_cap is None:
+        return run_cap, spent
+    return max(0.0, min(run_cap, float(month_cap) - spent)), spent
+
+
 # ---------- week window ----------
 def target_monday(today: date) -> date:
     """Monday of the relevant week. Sunday rolls forward to next week (the

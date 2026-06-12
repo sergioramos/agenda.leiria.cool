@@ -67,23 +67,28 @@ credenciais certas, a página nem chega a carregar. Para definir as credenciais:
 
 ---
 
-## 4 · Token do GitHub (para os botões "correr agora" e "aplicar")
+## 4 · Token do GitHub (dá poder aos botões do painel)
 
 1. GitHub → **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
 2. **Repository access:** Only select repositories → `pregoeiro`.
 3. **Permissions → Repository permissions:**
-   - **Actions:** Read and write
-   - **Contents:** Read and write
-4. **Generate token**, copie-o e cole-o **só** no painel `/admin` (Definições). Fica apenas no seu navegador.
+   - **Actions:** Read and write (botões «correr agora»)
+   - **Contents:** Read and write (aplicar alterações e guardar limites de custo)
+   - **Secrets:** Read and write (guardar a chave DeepSeek a partir do painel)
+4. **Generate token**, copie-o e cole-o **só** no painel `/admin` (passo 1 · GitHub). Fica apenas no seu navegador.
 
 ---
 
 ## 5 · Chave da IA (para a recolha de eventos)
 
-A recolha semanal usa a sua própria chave da Anthropic, guardada como *secret* no GitHub
-(nunca no código):
+A recolha usa a DeepSeek. A forma mais fácil é **pelo painel** `/admin` →
+secção «Chave DeepSeek»: cole a chave e clique **Guardar no GitHub** (é cifrada
+no navegador e guardada como segredo do repositório). No mesmo painel pode ver
+o saldo, o gasto do mês e ajustar os limites de custo.
 
-1. GitHub → repositório `pregoeiro` → **Settings → Secrets and variables → Actions → New repository secret**.
-2. **Name:** `ANTHROPIC_API_KEY` · **Secret:** a sua chave.
+Alternativa manual: GitHub → repositório `pregoeiro` → **Settings → Secrets and
+variables → Actions → New repository secret** → Name `DEEPSEEK_API_KEY`.
 
-> Os mecanismos de recolha (workflows do GitHub Actions) ainda vão ser criados — é o próximo passo do desenvolvimento. Até lá, o site mostra a semana de **exemplo**.
+> Lembrete único do GitHub: em **Settings → Actions → General → Workflow
+> permissions**, escolha **Read and write permissions** (deixa a recolha
+> publicar os eventos no repositório).

@@ -76,9 +76,15 @@ def main():
         shard = shard[:args.limit]
 
     ai_enabled = cfg["ai"].get("enabled", True) and not args.no_ai
-    # split the per-run cost ceiling across parallel shards so the aggregate stays within the cap
-    cap = (args.max_cost if args.max_cost is not None
-           else cfg["ai"].get("max_run_cost_usd", 2.0) / max(args.of, 1))
+    # run cap respects the monthly ceiling, then splits across parallel shards
+    if args.max_cost is not None:
+        cap = args.max_cost
+    else:
+        run_cap, month_spent = core.effective_run_cap(cfg, today)
+        cap = run_cap / max(args.of, 1)
+        if run_cap <= 0:
+            print(f"[info] monthly AI budget exhausted (${month_spent:.2f} spent) — feeds-only run.")
+            ai_enabled = False
     tracker = extract.CostTracker(cap)
     prov = client = None
     if ai_enabled:
