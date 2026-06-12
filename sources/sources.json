@@ -1,6 +1,6 @@
 {
   "generated_from": "LISBON-EVENTS.md",
-  "count": 1152,
+  "count": 1153,
   "sources": [
     {
       "id": "time-out-lisboa",
@@ -27186,6 +27186,32 @@
       "primary_category": 49,
       "status": "active",
       "flags": []
+    },
+    {
+      "id": "bairro-do-avillez",
+      "name": "Bairro do Avillez",
+      "area": "",
+      "neighbourhood": null,
+      "zone": null,
+      "description": "",
+      "website": null,
+      "other_urls": [],
+      "instagram": null,
+      "facebook": null,
+      "handles": [],
+      "provider": "social",
+      "crawlable": false,
+      "topic": "food",
+      "categories": [
+        13
+      ],
+      "primary_category": 13,
+      "status": "active",
+      "flags": [
+        "added via review 2026-06-12"
+      ],
+      "dead_signals": 0,
+      "added_on": "2026-06-12"
     }
   ]
 }
