@@ -137,7 +137,8 @@ async function refreshSecretState() {
     } else if (res.status === 404) {
       stateEl.textContent = 'Ainda não há chave configurada — cole-a acima e clique «Guardar no GitHub».';
     } else if (res.status === 403) {
-      stateEl.textContent = 'O token não tem a permissão Secrets (Read and write).';
+      stateEl.textContent = 'O token do GitHub (Setup, passo 1) não tem a permissão «Secrets». Edite-o em ' +
+        'github.com → Settings → Developer settings → Fine-grained tokens e adicione Secrets: Read and write.';
     } else stateEl.textContent = `Não foi possível verificar (GitHub ${res.status}).`;
   } catch (e) { stateEl.textContent = 'Erro de rede: ' + e.message; }
 }
@@ -152,7 +153,9 @@ async function saveDeepseekKey() {
   try {
     const pkRes = await gh(`/repos/${c.repo}/actions/secrets/public-key`);
     if (!pkRes.ok) {
-      status.textContent = pkRes.status === 403 ? 'O token não tem a permissão Secrets (Read and write).'
+      status.textContent = pkRes.status === 403
+        ? 'O token do GitHub (Setup, passo 1) não tem a permissão «Secrets». Edite-o em github.com → ' +
+          'Settings → Developer settings → Fine-grained tokens e adicione Secrets: Read and write.'
         : `GitHub respondeu ${pkRes.status} ao pedir a chave pública.`;
       return;
     }
