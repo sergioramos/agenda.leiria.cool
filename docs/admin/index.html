@@ -28,120 +28,159 @@
   </header>
 
   <main class="wrap">
-    <!-- access is enforced server-side by Vercel Edge Middleware (middleware.js) -->
+    <!-- access is enforced server-side: middleware.js -> /api/auth -->
     <section class="hero admin-hero">
       <div class="hero-text">
         <p class="hero-eyebrow">painel de administração</p>
-        <h1 class="hero-title hero-title-sm">Definições <em>&amp;</em> manutenção.</h1>
+        <h1 class="hero-title hero-title-sm">Sala das <em>máquinas</em>.</h1>
       </div>
-    </section>
 
-    <hr class="rule-solid" />
-
-    <!-- 0 · estado -->
-    <section class="panel" id="status-panel">
-      <p class="topic-kicker">Estado</p>
-      <h2>Como está o Pregoeiro</h2>
       <div class="stat-grid" id="stat-grid">
         <div class="stat"><span class="stat-label">Última recolha</span><span class="stat-value" id="st-last">—</span></div>
         <div class="stat"><span class="stat-label">Eventos publicados</span><span class="stat-value" id="st-events">—</span></div>
         <div class="stat"><span class="stat-label">Custo da última recolha</span><span class="stat-value" id="st-last-cost">—</span></div>
         <div class="stat"><span class="stat-label">Gasto este mês</span><span class="stat-value" id="st-month-cost">—</span></div>
       </div>
-      <p class="note" id="st-note"></p>
+      <p class="note" id="st-note" style="margin:0"></p>
+
+      <nav class="tabs" role="tablist" aria-label="Secções do painel">
+        <button class="tab" role="tab" data-tab="setup" id="tab-btn-setup"><span class="tnum">01</span> Setup</button>
+        <button class="tab" role="tab" data-tab="acoes" id="tab-btn-acoes"><span class="tnum">02</span> Ações</button>
+        <button class="tab" role="tab" data-tab="dados" id="tab-btn-dados"><span class="tnum">03</span> Base de dados</button>
+      </nav>
     </section>
 
-    <!-- 1 · github -->
-    <section class="panel">
-      <p class="topic-kicker">Passo 1 · GitHub</p>
-      <h2>Ligação ao GitHub</h2>
-      <p class="note" style="margin:0 0 16px">É isto que dá poder aos botões deste painel. O token fica guardado <strong>apenas neste navegador</strong>.</p>
-      <div class="field">
-        <label for="cfg-repo">Repositório (utilizador/repo)</label>
-        <input id="cfg-repo" placeholder="ex.: nubblyn/pregoeiro" autocapitalize="off" spellcheck="false" />
-      </div>
-      <div class="field">
-        <label for="cfg-token">Token de acesso (fine-grained PAT)</label>
-        <input id="cfg-token" type="password" placeholder="precisa de: Actions, Contents e Secrets — Read and write" autocomplete="off" />
-      </div>
-      <div class="row-actions">
-        <button class="btn" id="cfg-save" type="button">Guardar</button>
-        <span class="status-line" id="cfg-status"></span>
-      </div>
-    </section>
+    <hr class="rule-solid" />
 
-    <!-- 2 · deepseek -->
-    <section class="panel">
-      <p class="topic-kicker">Passo 2 · Inteligência artificial</p>
-      <h2>Chave DeepSeek</h2>
-      <p class="note" style="margin:0 0 16px">A recolha usa a DeepSeek para ler as páginas dos locais. Cole aqui a sua chave
-        (criada em <a href="https://platform.deepseek.com" target="_blank" rel="noopener">platform.deepseek.com</a>) — é cifrada
-        neste navegador e guardada como segredo do repositório. Nunca fica visível.</p>
-      <div class="field">
-        <label for="ds-key">Chave da API DeepSeek</label>
-        <input id="ds-key" type="password" placeholder="sk-…" autocomplete="off" />
-      </div>
-      <div class="row-actions">
-        <button class="btn accent" id="ds-save" type="button">Guardar no GitHub</button>
-        <button class="btn ghost" id="ds-balance" type="button">Ver saldo</button>
-        <span class="status-line" id="ds-status"></span>
-      </div>
-      <p class="note" id="ds-secret-state"></p>
-    </section>
-
-    <!-- 3 · custos -->
-    <section class="panel">
-      <p class="topic-kicker">Passo 3 · Custos</p>
-      <h2>Limites de gasto</h2>
-      <p class="note" style="margin:0 0 16px">Tetos de segurança: a recolha pára de usar a IA quando atinge o limite.
-        O limite mensal soma todas as recolhas do mês.</p>
-      <div class="limit-row">
+    <!-- ============ 01 · SETUP ============ -->
+    <div class="tab-panel" id="panel-setup" role="tabpanel" hidden>
+      <section class="panel">
+        <p class="topic-kicker">Passo 1 · GitHub</p>
+        <h2>Ligação ao GitHub</h2>
+        <p class="note" style="margin:0 0 16px">É isto que dá poder aos botões deste painel. O token fica guardado <strong>apenas neste navegador</strong>.
+          Permissões necessárias: <strong>Actions</strong>, <strong>Contents</strong> e <strong>Secrets</strong> (Read and write).</p>
         <div class="field">
-          <label for="lim-run">Por recolha (USD)</label>
-          <input id="lim-run" type="number" min="0" step="0.5" placeholder="2.0" />
+          <label for="cfg-repo">Repositório (utilizador/repo)</label>
+          <input id="cfg-repo" placeholder="ex.: nubblyn/pregoeiro" autocapitalize="off" spellcheck="false" />
         </div>
         <div class="field">
-          <label for="lim-month">Por mês (USD)</label>
-          <input id="lim-month" type="number" min="0" step="1" placeholder="8.0" />
+          <label for="cfg-token">Token de acesso (fine-grained PAT)</label>
+          <input id="cfg-token" type="password" placeholder="cola aqui — fica só neste navegador" autocomplete="off" />
         </div>
-      </div>
-      <div class="row-actions">
-        <button class="btn" id="lim-save" type="button">Guardar limites</button>
-        <span class="status-line" id="lim-status"></span>
-      </div>
-    </section>
+        <div class="row-actions">
+          <button class="btn primary" id="cfg-save" type="button">Guardar</button>
+          <span class="status-line" id="cfg-status"></span>
+        </div>
+      </section>
 
-    <!-- 4 · forçar recolha -->
-    <section class="panel">
-      <p class="topic-kicker">Recolha</p>
-      <h2>Correr agora (fora do horário)</h2>
-      <div class="run-row">
-        <button class="btn accent" id="run-events" type="button">▶ Recolher eventos agora</button>
-        <button class="btn" id="run-sources" type="button">▶ Verificar locais agora</button>
-      </div>
-      <p class="status-line" id="run-status"></p>
-      <p class="note">«Recolher eventos» gera a lista da semana (normalmente ao domingo). «Verificar locais» procura fechos
-        e novos locais (normalmente à segunda) e preenche a secção em baixo. O progresso aparece no separador <em>Actions</em> do repositório.</p>
-    </section>
+      <section class="panel">
+        <p class="topic-kicker">Passo 2 · Inteligência artificial</p>
+        <h2>Chave DeepSeek</h2>
+        <p class="note" style="margin:0 0 16px">A recolha usa a DeepSeek para ler as páginas dos locais. Cole aqui a sua chave
+          (criada em <a href="https://platform.deepseek.com" target="_blank" rel="noopener">platform.deepseek.com</a>) — é cifrada
+          neste navegador e guardada como segredo do repositório. Nunca fica visível.</p>
+        <div class="field">
+          <label for="ds-key">Chave da API DeepSeek</label>
+          <input id="ds-key" type="password" placeholder="sk-…" autocomplete="off" />
+        </div>
+        <div class="row-actions">
+          <button class="btn accent" id="ds-save" type="button">Guardar no GitHub</button>
+          <button class="btn ghost" id="ds-balance" type="button">Ver saldo</button>
+          <span class="status-line" id="ds-status"></span>
+        </div>
+        <p class="note" id="ds-secret-state"></p>
+      </section>
 
-    <!-- 5 · alterações -->
-    <section class="panel" id="changes-panel">
-      <p class="topic-kicker">Manutenção</p>
-      <h2>Alterações propostas</h2>
-      <p class="note" id="changes-gen"></p>
+      <section class="panel">
+        <p class="topic-kicker">Passo 3 · Custos</p>
+        <h2>Limites de gasto</h2>
+        <p class="note" style="margin:0 0 16px">Tetos de segurança: a recolha pára de usar a IA quando atinge o limite.
+          O limite mensal soma todas as recolhas do mês.</p>
+        <div class="limit-row">
+          <div class="field">
+            <label for="lim-run">Por recolha (USD)</label>
+            <input id="lim-run" type="number" min="0" step="0.5" placeholder="2.0" />
+          </div>
+          <div class="field">
+            <label for="lim-month">Por mês (USD)</label>
+            <input id="lim-month" type="number" min="0" step="1" placeholder="8.0" />
+          </div>
+        </div>
+        <div class="row-actions">
+          <button class="btn primary" id="lim-save" type="button">Guardar limites</button>
+          <span class="status-line" id="lim-status"></span>
+        </div>
+      </section>
+    </div>
 
-      <h3 class="panel-sub">Possivelmente fechados · <span id="closures-count">0</span></h3>
-      <div class="cards" id="closures"></div>
+    <!-- ============ 02 · AÇÕES ============ -->
+    <div class="tab-panel" id="panel-acoes" role="tabpanel" hidden>
+      <section class="panel">
+        <p class="topic-kicker">Recolha</p>
+        <h2>Correr agora (fora do horário)</h2>
+        <div class="run-row">
+          <button class="btn accent" id="run-events" type="button">▶ Recolher eventos agora</button>
+          <button class="btn" id="run-sources" type="button">▶ Verificar locais agora</button>
+        </div>
+        <p class="status-line" id="run-status"></p>
+        <p class="note">«Recolher eventos» gera a lista da semana (normalmente ao domingo). «Verificar locais» procura fechos
+          e novos locais (normalmente à segunda) e preenche a secção em baixo. O progresso aparece no separador <em>Actions</em> do repositório.</p>
+      </section>
 
-      <h3 class="panel-sub">Novos locais encontrados · <span id="new-count">0</span></h3>
-      <div class="cards" id="new-venues"></div>
+      <section class="panel" id="changes-panel">
+        <p class="topic-kicker">Manutenção</p>
+        <h2>Alterações propostas</h2>
+        <p class="note" id="changes-gen"></p>
 
-      <div class="row-actions" style="margin-top:18px">
-        <button class="btn ghost" id="select-all" type="button">Aceitar tudo</button>
-        <button class="btn primary" id="apply" type="button">Aplicar alterações aceites</button>
-      </div>
-      <p class="status-line" id="apply-status"></p>
-    </section>
+        <h3 class="panel-sub">Possivelmente fechados · <span id="closures-count">0</span></h3>
+        <div class="cards" id="closures"></div>
+
+        <h3 class="panel-sub">Novos locais encontrados · <span id="new-count">0</span></h3>
+        <div class="cards" id="new-venues"></div>
+
+        <div class="row-actions" style="margin-top:18px">
+          <button class="btn ghost" id="select-all" type="button">Aceitar tudo</button>
+          <button class="btn primary" id="apply" type="button">Aplicar alterações aceites</button>
+        </div>
+        <p class="status-line" id="apply-status"></p>
+      </section>
+    </div>
+
+    <!-- ============ 03 · BASE DE DADOS ============ -->
+    <div class="tab-panel" id="panel-dados" role="tabpanel" hidden>
+      <section class="panel">
+        <p class="topic-kicker">Locais</p>
+        <h2>Locais &amp; fontes <span class="db-count" id="src-total"></span></h2>
+        <p class="note" style="margin:0 0 16px">A lista-semente que a recolha visita. Alterações ficam gravadas no repositório
+          e entram em vigor na próxima recolha.</p>
+        <div class="db-toolbar">
+          <input type="search" id="src-search" placeholder="Pesquisar por nome, bairro, site…" />
+          <select id="src-topic"><option value="">Todos os temas</option></select>
+          <select id="src-status"><option value="">Todos os estados</option></select>
+          <button class="btn primary" id="src-add" type="button">+ Adicionar local</button>
+        </div>
+        <div id="src-editor"></div>
+        <div class="db-list" id="src-list"></div>
+        <div class="db-more"><button class="btn ghost" id="src-more" type="button" hidden>Mostrar mais</button></div>
+        <p class="status-line" id="src-status-line"></p>
+      </section>
+
+      <section class="panel">
+        <p class="topic-kicker">Eventos</p>
+        <h2>Eventos da semana <span class="db-count" id="ev-total"></span></h2>
+        <p class="note" style="margin:0 0 16px">Os eventos publicados no site esta semana. Pode corrigir, apagar maus resultados
+          da recolha, ou adicionar eventos à mão. <strong>Nota:</strong> a recolha de domingo gera a semana seguinte de fresco.</p>
+        <div class="db-toolbar">
+          <input type="search" id="ev-search" placeholder="Pesquisar por título, local…" />
+          <select id="ev-topic"><option value="">Todos os temas</option></select>
+          <button class="btn primary" id="ev-add" type="button">+ Adicionar evento</button>
+        </div>
+        <div id="ev-editor"></div>
+        <div class="db-list" id="ev-list"></div>
+        <div class="db-more"><button class="btn ghost" id="ev-more" type="button" hidden>Mostrar mais</button></div>
+        <p class="status-line" id="ev-status-line"></p>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
