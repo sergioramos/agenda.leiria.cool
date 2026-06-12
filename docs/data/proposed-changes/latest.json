@@ -1,14 +1,7 @@
 {
-  "generated_at": "2026-06-08T06:00:00Z",
-  "is_sample": true,
+  "generated_at": "2026-06-12T11:48:09Z",
+  "is_sample": false,
   "closures": [
-    {
-      "id": "musicbox",
-      "name": "Musicbox",
-      "neighbourhood": "Cais do Sodré",
-      "reason": "CLOSED 15 Sep 2025",
-      "current_status": "closed"
-    },
     {
       "id": "arroz-estudios",
       "name": "Arroz Estúdios",
@@ -38,21 +31,70 @@
       "current_status": "possibly_closed"
     },
     {
-      "id": "musicbox-lisboa",
-      "name": "Musicbox Lisboa",
-      "neighbourhood": "Cais do Sodré",
-      "reason": "CLOSED 15 Sep 2025",
-      "current_status": "closed"
+      "id": "mercado-amour",
+      "name": "Mercado Amour",
+      "neighbourhood": null,
+      "reason": "MAY HAVE CLOSED — pop-up, verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "flamingos-vintage-kilo",
+      "name": "Flamingos Vintage Kilo",
+      "neighbourhood": "Baixa",
+      "reason": "MAY HAVE CLOSED — verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "just-justlx-lisboa-contemporary-art-fair",
+      "name": "JUST / JustLX — Lisboa Contemporary Art Fair",
+      "neighbourhood": null,
+      "reason": "MAY HAVE CLOSED — no confirmed 2026 edition; verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "experimenta-design-exd",
+      "name": "Experimenta Design (EXD)",
+      "neighbourhood": null,
+      "reason": "MAY HAVE CLOSED — verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "escape-game-over",
+      "name": "Escape Game Over",
+      "neighbourhood": "Bairro Alto",
+      "reason": "MAY HAVE CLOSED — verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "selina-secret-garden",
+      "name": "Selina Secret Garden",
+      "neighbourhood": "Bairro Alto",
+      "reason": "MAY HAVE CLOSED — Selina brand contracted globally; verify",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "galateria-davvero",
+      "name": "Galateria Davvero",
+      "neighbourhood": "Santos",
+      "reason": "Re-verify — very old independent venue",
+      "current_status": "possibly_closed"
+    },
+    {
+      "id": "feira-laica",
+      "name": "FEIRA LAICA",
+      "neighbourhood": null,
+      "reason": "MAY HAVE CLOSED / intermittent — verify",
+      "current_status": "possibly_closed"
     }
   ],
   "new_venues": [
     {
-      "name": "Sample New Venue",
-      "neighbourhood": "Marvila",
-      "topic": "nightlife",
-      "url": "https://example.com",
-      "found_via": "Resident Advisor",
-      "note": "appeared in listings this week"
+      "name": "Bairro do Avillez",
+      "neighbourhood": null,
+      "topic": "food",
+      "url": null,
+      "found_via": "NiT (New in Town)",
+      "note": ""
     }
   ]
 }
