@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
 
-def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=24,
+def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
                   prov=None, client=None, tracker=None):
     """Read each event's OWN page (HTTP, no AI) and fill what the listing didn't
     have: real poster image (JSON-LD/og:image, skipping logos), ticket price
