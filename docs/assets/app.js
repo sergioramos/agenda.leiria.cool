@@ -265,10 +265,12 @@ function card(ev) {
    the list builds card-by-card instead of appearing all at once */
 function revealCards() {
   const cards = [...document.querySelectorAll('.card-rv')];
-  cards.forEach((c, i) => setTimeout(() => c.classList.add('in'), Math.min(i, 14) * 55));
+  const STEP = 110, CAP = 10; // first ~10 (the visible ones) clearly one-by-one; rest follow
+  cards.forEach((c, i) => setTimeout(() => c.classList.add('in'), Math.min(i, CAP) * STEP));
   // safety: pin everything visible after the cascade, even if a transition was
   // paused (e.g. background tab) — content is never left hidden
-  setTimeout(() => cards.forEach(c => { c.style.transition = 'none'; c.style.opacity = '1'; }), 1700);
+  setTimeout(() => cards.forEach(c => { c.style.transition = 'none'; c.style.opacity = '1'; c.style.transform = 'none'; }),
+    CAP * STEP + 700);
 }
 
 function render(animate = false) {

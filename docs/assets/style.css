@@ -342,9 +342,10 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 html.js .rv { opacity: 0; transition: opacity .7s ease; transition-delay: var(--d, 0ms); }
 html.js body.revealed .rv { opacity: 1; }
 
-/* event cards fade in one by one (JS staggers them as they enter the viewport) */
-html.js .card-rv { opacity: 0; transition: opacity .5s ease; }
-html.js .card-rv.in { opacity: 1; }
+/* event cards enter one by one (JS staggers them) — fade + a small rise so each
+   card's arrival is clearly visible, not a subtle crossfade */
+html.js .card-rv { opacity: 0; transform: translateY(12px); transition: opacity .45s ease, transform .45s cubic-bezier(.2, .7, .3, 1); }
+html.js .card-rv.in { opacity: 1; transform: none; }
 
 /* skeleton — built from the REAL .card structure (see skeletonCard in app.js),
    so the placeholder matches the layout exactly. Fades in, then fades into the
