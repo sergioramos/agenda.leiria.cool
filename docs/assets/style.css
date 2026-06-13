@@ -178,8 +178,11 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   background: transparent; border: 1.5px solid #1d1813; border-radius: 4px; cursor: pointer;
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
   letter-spacing: 1px; text-transform: uppercase; color: #1d1813;
+  transition: background .14s ease, color .14s ease, transform .1s ease;
 }
-.filters-btn .filt-sign { font-size: 12px; line-height: 12px; }
+.filters-btn:hover { background: rgba(29, 24, 19, .05); }
+.filters-btn:active { transform: scale(.98); }
+.filters-btn .filt-sign { font-size: 12px; line-height: 12px; display: inline-block; }
 
 /* category chips (Figma 2:1848): #fdfdfd, r4, 8px padding + 8px gaps,
    Space Mono Bold 12px/12px ls 1px uppercase #1d1813, count at 60%. */
@@ -189,9 +192,10 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
   display: inline-flex; align-items: center; gap: 8px; user-select: none;
   background: #fdfdfd; color: #1d1813; border: 0; border-radius: 4px; padding: 8px;
-  transition: background .12s, color .12s;
+  transition: background .14s ease, color .14s ease, transform .1s ease;
 }
 .chip:hover { background: #ffffff; }
+.chip:active { transform: scale(.96); }
 .chip .emoji { font-size: 12px; line-height: 12px; }
 .chip .count { opacity: .6; }
 .chip[aria-pressed="true"] { background: #1d1813; color: #f4e9da; }
@@ -250,7 +254,9 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   background: #fefefe; border: 0; border-radius: 4px; padding: 24px;
   display: flex; align-items: center; gap: 24px;
   box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
+  transition: transform .22s cubic-bezier(.2, .7, .3, 1), box-shadow .22s ease;
 }
+.card:hover { transform: translateY(-3px); box-shadow: 0 28px 34px -10px rgba(22, 22, 22, .10); }
 /* Square artwork. The side is anchored to the body's natural height (96px:
    title 24 + 8 + venue 16 = 48, +24 gap, +24 tags) rather than to a stretched
    parent — aspect-ratio off a stretched flex height resolves the WIDTH too late,
@@ -277,7 +283,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   margin: 0; font-family: var(--grotesk); font-weight: 600; font-size: 18px; line-height: 24px;
   letter-spacing: 1px; color: #1d1813; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.card .body h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.card .body h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color .14s ease; }
 .card .body h3 .no-link { color: inherit; text-decoration: none; }
 .card .body h3 a:hover { color: var(--accent); }
 /* venue is one link (pin + text); both tint together on hover via currentColor */
@@ -285,7 +291,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   display: inline-flex; gap: 4px; align-items: center; min-width: 0; max-width: 100%;
   color: #6f6f6f; text-decoration: none;
   font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px;
-  letter-spacing: 1px; text-transform: uppercase;
+  letter-spacing: 1px; text-transform: uppercase; transition: color .14s ease;
 }
 .venue-line svg { flex: none; }
 .venue-line span {
@@ -298,8 +304,10 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   padding: 8px 12px 8px 8px; border: 1px solid #6f6f6f; border-radius: 4px;
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
   letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; text-decoration: none;
+  transition: color .14s ease, border-color .14s ease, transform .1s ease;
 }
 .save-date:hover { color: #1d1813; border-color: #1d1813; }
+.save-date:active { transform: scale(.98); }
 .meta-line { margin: 0; font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 /* tags (Figma v2): neutral = faint grey fill + faint border; GRÁTIS stays orange outline */
@@ -316,6 +324,32 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
 .empty { text-align: center; padding: 70px 16px; color: var(--ink-soft); font-style: italic; font-size: 1.1rem; }
 .empty .btn { margin-top: 16px; }
+
+/* ---------- motion: subtle, premium ----------
+   Hero fades up in sequence on first paint; topic sections rise in (staggered)
+   when a week loads; the filter panel slides open. All disabled under
+   prefers-reduced-motion. */
+@keyframes riseIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes panelOpen { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@keyframes panelClose { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-6px); } }
+
+.hero-eyebrow, .hero-title, .hero-sub, .hero-controls { animation: riseIn .6s cubic-bezier(.2, .7, .3, 1) both; }
+.hero-eyebrow { animation-delay: .04s; }
+.hero-title { animation-delay: .1s; }
+.hero-sub { animation-delay: .18s; }
+.hero-controls { animation-delay: .26s; }
+
+.topic-section.reveal { animation: riseIn .5s cubic-bezier(.2, .7, .3, 1) both; animation-delay: var(--reveal-delay, 0ms); }
+
+.filter-panel.opening { animation: panelOpen .26s cubic-bezier(.2, .7, .3, 1) both; }
+.filter-panel.closing { animation: panelClose .18s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-delay: 0ms !important;
+    transition-duration: .001ms !important;
+  }
+}
 
 /* ---------- footer (Figma 19:253 — 1:1) ----------
    Solid divider above; 24px vertical padding; Space Mono Bold 12/16,

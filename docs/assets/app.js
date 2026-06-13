@@ -217,7 +217,7 @@ function card(ev) {
     when);
 }
 
-function render() {
+function render(animate = false) {
   const results = $('#results');
   results.innerHTML = '';
   const visible = state.week.events.filter(matches);
@@ -228,12 +228,18 @@ function render() {
   const groups = {};
   for (const ev of visible) (groups[ev.topic] ||= []).push(ev);
 
+  let revealIdx = 0;
   for (const tid of order) {
     const list = groups[tid];
     if (!list || !list.length) continue;
     const t = state.topicById[tid];
     list.sort((a, b) => (a.start || '').localeCompare(b.start || ''));
     const sec = el('section', { className: 'topic-section' });
+    if (animate) {
+      sec.classList.add('reveal');
+      // stagger the first few, then no extra wait so the page never feels slow
+      sec.style.setProperty('--reveal-delay', Math.min(revealIdx++, 6) * 60 + 'ms');
+    }
     const h2 = el('h2', {});
     t.label.split(' & ').forEach((part, i) => {
       if (i) h2.append(el('span', { className: 'amp', textContent: ' & ' }));
@@ -315,7 +321,7 @@ async function loadWeek(fileEntry) {
   // chips depend on the loaded week (dates, present topics)
   renderTopicChips();
   renderDayChips();
-  render();
+  render(true); // week load → sections rise in (filter changes re-render without it)
 }
 
 async function init() {
@@ -335,10 +341,20 @@ async function init() {
   $('#search').addEventListener('input', e => { state.filters.q = e.target.value.trim().toLowerCase(); render(); });
   const filtToggle = $('#filters-toggle');
   filtToggle.onclick = () => {
-    const panel = $('#filter-panel'); const open = panel.hidden;
-    panel.hidden = !open;
-    filtToggle.setAttribute('aria-expanded', open);
-    const sign = $('#filt-sign'); if (sign) sign.textContent = open ? '−' : '+';
+    const panel = $('#filter-panel'); const opening = panel.hidden;
+    filtToggle.setAttribute('aria-expanded', opening);
+    const sign = $('#filt-sign'); if (sign) sign.textContent = opening ? '−' : '+';
+    clearTimeout(panel._closeT);
+    if (opening) {
+      panel.hidden = false;
+      panel.classList.remove('closing');
+      panel.classList.add('opening');
+    } else {
+      // play the close animation, then drop it from layout (timer ≈ anim length)
+      panel.classList.remove('opening');
+      panel.classList.add('closing');
+      panel._closeT = setTimeout(() => { panel.classList.remove('closing'); panel.hidden = true; }, 200);
+    }
   };
   $$('#price-chips .chip').forEach(b => b.onclick = () => { state.filters.free = b.dataset.price === 'free'; render(); });
   $('#empty-clear').onclick = () => {
