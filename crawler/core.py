@@ -330,10 +330,36 @@ def scan_price(text: str, allow_free: bool = True) -> dict | None:
 
 
 # ---------- event-page enrichment (read the event's OWN page, no AI) ----------
-_LOGO_RE = re.compile(r"logo|favicon|sprite|placeholder|default[-_.]|/icons?/", re.I)
+_LOGO_RE = re.compile(r"logo|favicon|sprite|placeholder|default[-_.]|/icons?/|banner|header", re.I)
 _OG_IMG_RE = re.compile(
     r'<meta[^>]+(?:property|name)=["\']og:image(?::secure_url)?["\'][^>]*content=["\']([^"\']+)'
     r'|<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\']og:image', re.I)
+
+
+def og_image(html: str) -> str:
+    """The page's og:image URL (raw), or '' — used to learn a site's default
+    image so per-event scraping can reject it as a logo."""
+    m = _OG_IMG_RE.search(html or "")
+    return (m.group(1) or m.group(2)) if m else ""
+
+
+def _good_img(src: str) -> bool:
+    """A plausible event poster: not a logo/banner, not an SVG/data-URI/gif."""
+    s = (src or "").strip()
+    return bool(s) and not s.startswith("data:") and not _LOGO_RE.search(s) \
+        and not re.search(r"\.(svg|gif)(\?|$)", s, re.I)
+
+
+def drop_shared_images(events: list[dict]) -> None:
+    """An image reused by events with different titles is a venue logo / default
+    banner, not a poster — clear it so the site shows the topic emoji instead."""
+    titles: dict = {}
+    for e in events:
+        if e.get("image"):
+            titles.setdefault(e["image"], set()).add(_nt(e.get("title"))[:30])
+    for e in events:
+        if e.get("image") and len(titles[e["image"]]) >= 2:
+            e["image"] = None
 
 
 def _iter_jsonld(node):
@@ -401,19 +427,18 @@ def parse_jsonld_event(html: str) -> dict:
     return out
 
 
-def scrape_event_page(html: str, url: str) -> dict:
+def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
     """Read an event's own page (no AI): JSON-LD first, then og:image + a text
-    price scan. Returns any of {image, price, start_time, description}."""
+    price scan. Returns any of {image, price, start_time, description}.
+    default_img = the source's homepage/listing og:image, rejected here because
+    it's the venue's logo/default, not this event's poster."""
     out: dict = {}
+    df = (default_img or "").strip()
     ld = parse_jsonld_event(html or "")
-    img = ld.get("image")
-    if img and not _LOGO_RE.search(img):
-        out["image"] = resolve_url(img, url)
-    if not out.get("image"):
-        m = _OG_IMG_RE.search(html or "")
-        cand = (m.group(1) or m.group(2)) if m else None
-        if cand and not _LOGO_RE.search(cand):
+    for cand in (ld.get("image"), og_image(html)):
+        if _good_img(cand) and cand.strip() != df:
             out["image"] = resolve_url(cand, url)
+            break
     if ld.get("price"):
         out["price"] = ld["price"]
     else:

@@ -42,6 +42,7 @@ def main():
     cfg = core.load_config()
     src = core.load_sources()["sources"]
     events = core.dedupe(events, src)
+    core.drop_shared_images(events)  # logos/defaults shared across shards
     crawlable = sum(1 for s in src if s.get("crawlable") and s.get("status") in ("active", "renovation"))
     gen = args.generated_at or datetime.now(timezone.utc).isoformat(timespec="seconds")
 

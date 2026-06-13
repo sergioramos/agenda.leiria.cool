@@ -211,13 +211,14 @@ function card(ev) {
       el('span', { className: 'time', textContent: time || '—' }));
   }
 
-  // square artwork; topic emoji stands in until the crawl finds an og:image.
-  // wrapper stretches to the card's height so the inner box can be a true square.
+  // square artwork; topic emoji stands in until a real poster is found.
   const media = el('div', { className: 'card-img', ariaHidden: 'true' });
-  const placeholder = () => { media.classList.add('ph'); media.textContent = topic?.emoji || '📌'; };
+  const placeholder = () => { media.textContent = ''; media.classList.add('ph'); media.textContent = topic?.emoji || '📌'; };
   if (ev.image) {
     const img = el('img', { src: ev.image, alt: '', loading: 'lazy' });
     img.onerror = () => { img.remove(); placeholder(); };
+    // a broken/blank/tiny image (logo pixel, icon) → fall back to the emoji
+    img.onload = () => { if (img.naturalWidth < 64 || img.naturalHeight < 64) { img.remove(); placeholder(); } };
     media.append(img);
   } else placeholder();
   const mediaWrap = el('div', { className: 'card-media' }, media);
@@ -363,9 +364,21 @@ function loadHash() {
   if (f.q) $('#search').value = f.q;
 }
 
+/* An image reused by events with different titles is a venue logo / default
+   banner, not a poster — drop it so the topic emoji shows instead. */
+function dropSharedImages(events) {
+  const titlesByImg = {};
+  for (const e of events) {
+    if (!e.image) continue;
+    (titlesByImg[e.image] ||= new Set()).add((e.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '').slice(0, 30));
+  }
+  for (const e of events) if (e.image && titlesByImg[e.image].size >= 2) e.image = null;
+}
+
 /* ---------- week loading ---------- */
 async function loadWeek(fileEntry) {
   state.week = await getJSON('./data/weeks/' + fileEntry.file);
+  dropSharedImages(state.week.events);
   const gen = new Date(state.week.generated_at);
   const wv = $('#week-value');
   if (wv) wv.textContent = fmtRange(state.week.week_start, state.week.week_end);

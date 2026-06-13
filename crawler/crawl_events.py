@@ -26,13 +26,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
 
-def enrich_events(session, cfg, source, evs, delay, cap=24):
+def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=24):
     """Read each event's OWN page (HTTP only, no AI) and fill what the listing
     didn't have: real poster image (JSON-LD/og:image, skipping logos), the
     ticket price (JSON-LD offers or a €-scan of the page), the start time and a
     better description. This is where prices like '28€–40€' that only live on
     the event page get picked up. Bounded per source; failures are silent."""
     page = core.site_key(source.get("website") or "")
+    default_img = core.og_image(listing_html)  # the venue's default/logo — reject it
     cache, fetched = {}, 0
     for e in evs:
         u = e.get("url")
@@ -44,7 +45,7 @@ def enrich_events(session, cfg, source, evs, delay, cap=24):
             fetched += 1
             got = core.fetch(session, u, cfg)
             ok = got and got[0] < 400 and "html" in (got[1] or "")
-            cache[u] = core.scrape_event_page(got[2], u) if ok else {}
+            cache[u] = core.scrape_event_page(got[2], u, default_img) if ok else {}
             time.sleep(delay / 2)
         info = cache[u]
         if not e.get("image") and info.get("image"):
@@ -176,11 +177,12 @@ def main():
                                   venues_idx, page_links)
             ai_calls += 1
         if evs:
-            enrich_events(session, cfg, s, evs, delay)
+            enrich_events(session, cfg, s, evs, delay, listing_html=html)
         events.extend(evs)
         time.sleep(delay)
 
     events = core.dedupe(events, sources)
+    core.drop_shared_images(events)
     payload = {
         "week_start": mon.isoformat(), "week_end": display_sun.isoformat(),
         "shard": args.shard, "of": args.of, "event_count": len(events),

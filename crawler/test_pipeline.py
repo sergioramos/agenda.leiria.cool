@@ -60,6 +60,17 @@ t('scrape ld image', _si.get('image'), 'https://x.pt/poster.jpg')
 t('scrape ld time', _si.get('start_time'), '21:00')
 t('scrape logo skipped', core.scrape_event_page('<meta property="og:image" content="https://x.pt/logo.svg">', 'https://x.pt/e').get('image'), None)
 
+# image quality: reject logos/banners/svg/data; reject the venue default; drop shared
+t('good poster', core._good_img('https://x.pt/wp/poster.jpg'), True)
+t('banner rejected', core._good_img('https://x.pt/img/banner-top.jpg'), False)
+t('svg rejected', core._good_img('https://x.pt/brand.svg'), False)
+t('default(listing) img rejected',
+  core.scrape_event_page('<meta property="og:image" content="https://x.pt/cover.jpg">', 'https://x.pt/e', 'https://x.pt/cover.jpg').get('image'), None)
+_share = [{'title': 'A', 'image': 'https://x/lg.png'}, {'title': 'B', 'image': 'https://x/lg.png'}, {'title': 'C', 'image': 'https://x/p.jpg'}]
+core.drop_shared_images(_share)
+t('shared image dropped', _share[0]['image'], None)
+t('unique image kept', _share[2]['image'], 'https://x/p.jpg')
+
 # descriptions
 t('desc title prefix dropped', core.clean_description('Fado ao Vivo — noite de fado com jantar', 'Fado ao Vivo', 'A Severa'),
   'Noite de fado com jantar.')
