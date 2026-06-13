@@ -147,7 +147,7 @@ function revealPage() {
   // safety: once the wave should be done, pin the end state so content is never
   // left hidden if the browser paused the transition (e.g. a background tab)
   setTimeout(() => blocks.forEach(e => {
-    e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none';
+    e.style.transition = 'none'; e.style.opacity = '1';
   }), 1600);
 }
 
@@ -263,7 +263,6 @@ function card(ev) {
 
 function render(animate = false) {
   const results = $('#results');
-  results.innerHTML = '';
   const visible = state.week.events.filter(matches);
   $('#result-count').textContent = `${visible.length} evento${visible.length === 1 ? '' : 's'}`;
   $('#empty').hidden = visible.length !== 0;
@@ -272,6 +271,7 @@ function render(animate = false) {
   const groups = {};
   for (const ev of visible) (groups[ev.topic] ||= []).push(ev);
 
+  const inner = el('div', { className: 'results-inner' });
   for (const tid of order) {
     const list = groups[tid];
     if (!list || !list.length) continue;
@@ -290,7 +290,14 @@ function render(animate = false) {
     const cards = el('div', { className: 'cards' });
     list.forEach(ev => cards.append(card(ev)));
     sec.append(cards);
-    results.append(sec);
+    inner.append(sec);
+  }
+  results.innerHTML = '';
+  results.append(inner);
+  if (animate) {  // fade the real content in (setTimeout, not rAF, so it fires even in a bg tab)
+    inner.style.opacity = '0';
+    setTimeout(() => { inner.style.opacity = '1'; }, 30);
+    setTimeout(() => { inner.style.transition = 'none'; inner.style.opacity = '1'; }, 1200); // safety
   }
   renderActiveFilterNote();
   refreshChipStates();
