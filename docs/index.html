@@ -39,7 +39,7 @@
       <div class="hero-text">
         <p class="hero-eyebrow">eventos · festas · atividades</p>
         <h1 class="hero-title">Esta <em>semana</em> em Lisboa.</h1>
-        <p class="hero-sub">Tudo o que acontece nos próximos sete dias. Organizado por tema, com filtros por bairro, dia &amp; preço.</p>
+        <p class="hero-sub">Tudo o que acontece nos próximos sete dias. Organizado por tema, com filtros por dia &amp; preço.</p>
       </div>
       <div class="hero-controls">
         <div class="searchbar">
@@ -49,8 +49,7 @@
             <input id="search" type="search" placeholder="Pesquisar eventos, locais, bairros…" autocomplete="off" />
           </label>
           <button id="filters-toggle" class="filters-btn" aria-expanded="false">
-            Filtros
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1d1813" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+            <span class="filt-sign" id="filt-sign" aria-hidden="true">+</span> Filtros
           </button>
         </div>
         <div class="chips" id="topic-chips" role="group" aria-label="Temas"></div>
@@ -61,28 +60,16 @@
 
     <section class="controls" aria-label="Filtros avançados">
       <div class="filter-panel" id="filter-panel" hidden>
-        <div class="filter-group">
+        <div class="filter-group filter-day">
           <h3>Dia</h3>
           <div class="chips small" id="day-chips" role="group" aria-label="Dia"></div>
         </div>
-        <div class="filter-group">
+        <div class="filter-group filter-price">
           <h3>Preço</h3>
-          <div class="segmented" id="price-seg" role="group" aria-label="Preço">
-            <button data-price="all" class="active">Todos</button>
-            <button data-price="free">Só grátis</button>
+          <div class="chips small" id="price-chips" role="group" aria-label="Preço">
+            <button class="chip" type="button" data-price="all" aria-pressed="true"><span>Todos</span></button>
+            <button class="chip" type="button" data-price="free" aria-pressed="false"><span>Só grátis</span></button>
           </div>
-        </div>
-        <div class="filter-group">
-          <h3>Zona</h3>
-          <div class="segmented" id="zone-seg" role="group" aria-label="Zona">
-            <button data-zone="all" class="active">Toda a região</button>
-            <button data-zone="city">Cidade de Lisboa</button>
-            <button data-zone="greater">Grande Lisboa</button>
-          </div>
-          <div class="chips small" id="neighbourhood-chips" role="group" aria-label="Bairro"></div>
-        </div>
-        <div class="filter-actions">
-          <button id="clear-filters" class="btn ghost">Limpar filtros</button>
         </div>
       </div>
 

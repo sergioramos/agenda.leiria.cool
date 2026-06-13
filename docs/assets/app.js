@@ -11,7 +11,7 @@ const state = {
   topicById: {},
   week: null,
   ticker: { text: '', accent: false },
-  filters: { q: '', topics: new Set(), days: new Set(), neighbourhoods: new Set(), free: false, zone: 'all' },
+  filters: { q: '', topics: new Set(), days: new Set(), free: false },
 };
 
 /* ---------- announcement-bar ticker (Figma 19:2073 — 1:1) ---------- */
@@ -64,8 +64,6 @@ function matches(ev) {
   const f = state.filters;
   if (f.topics.size && !f.topics.has(ev.topic)) return false;
   if (f.free && !(ev.price && ev.price.is_free)) return false;
-  if (f.zone !== 'all' && ev.zone !== f.zone) return false;
-  if (f.neighbourhoods.size && !f.neighbourhoods.has(ev.neighbourhood)) return false;
   if (f.days.size && !(ev.days || []).some(d => f.days.has(d))) return false;
   if (f.q) {
     const cats = (ev.categories || []).map(c => state.taxonomy.categories[c] || '').join(' ');
@@ -107,21 +105,6 @@ function renderDayChips() {
     chip.onclick = () => { toggleSet(state.filters.days, d); apply(); };
     wrap.append(chip);
   });
-}
-
-function renderNeighbourhoodChips() {
-  const wrap = $('#neighbourhood-chips');
-  wrap.innerHTML = '';
-  const present = new Set(state.week.events.map(e => e.neighbourhood).filter(Boolean));
-  const f = state.filters;
-  for (const nb of state.taxonomy.neighbourhoods) {
-    if (!present.has(nb.name)) continue;
-    if (f.zone !== 'all' && nb.zone !== f.zone) continue;
-    const chip = el('button', { className: 'chip', type: 'button' }, el('span', { textContent: nb.name }));
-    chip.setAttribute('aria-pressed', f.neighbourhoods.has(nb.name));
-    chip.onclick = () => { toggleSet(f.neighbourhoods, nb.name); apply(); };
-    wrap.append(chip);
-  }
 }
 
 /* lucide icons (inline so they tint via currentColor) */
@@ -275,9 +258,7 @@ function renderActiveFilterNote() {
   const bits = [];
   if (f.topics.size) bits.push(`${f.topics.size} tema${f.topics.size > 1 ? 's' : ''}`);
   if (f.days.size) bits.push(`${f.days.size} dia${f.days.size > 1 ? 's' : ''}`);
-  if (f.neighbourhoods.size) bits.push(`${f.neighbourhoods.size} zona${f.neighbourhoods.size > 1 ? 's' : ''}`);
   if (f.free) bits.push('só grátis');
-  if (f.zone !== 'all') bits.push(f.zone === 'city' ? 'cidade de Lisboa' : 'Grande Lisboa');
   if (f.q) bits.push(`“${f.q}”`);
   $('#active-filters').textContent = bits.length ? `· filtrado por ${bits.join(', ')}` : '';
 }
@@ -291,12 +272,7 @@ function refreshChipStates() {
     if (t) c.setAttribute('aria-pressed', state.filters.topics.has(t.id));
   });
   $$('#day-chips .chip').forEach((c, i) => c.setAttribute('aria-pressed', state.filters.days.has(DAYS[i])));
-  $$('#neighbourhood-chips .chip').forEach(c => {
-    const name = c.textContent;
-    c.setAttribute('aria-pressed', state.filters.neighbourhoods.has(name));
-  });
-  $$('#price-seg button').forEach(b => b.classList.toggle('active', (b.dataset.price === 'free') === state.filters.free));
-  $$('#zone-seg button').forEach(b => b.classList.toggle('active', b.dataset.zone === state.filters.zone));
+  $$('#price-chips .chip').forEach(b => b.setAttribute('aria-pressed', (b.dataset.price === 'free') === state.filters.free));
 }
 
 function toggleSet(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
@@ -310,9 +286,7 @@ function syncHash() {
   if (f.q) p.set('q', f.q);
   if (f.topics.size) p.set('t', [...f.topics].join(','));
   if (f.days.size) p.set('d', [...f.days].join(','));
-  if (f.neighbourhoods.size) p.set('n', [...f.neighbourhoods].join(','));
   if (f.free) p.set('free', '1');
-  if (f.zone !== 'all') p.set('z', f.zone);
   const s = p.toString();
   history.replaceState(null, '', s ? '#' + s : location.pathname);
 }
@@ -322,9 +296,7 @@ function loadHash() {
   f.q = (p.get('q') || '').toLowerCase();
   f.topics = new Set((p.get('t') || '').split(',').filter(Boolean));
   f.days = new Set((p.get('d') || '').split(',').filter(Boolean));
-  f.neighbourhoods = new Set((p.get('n') || '').split(',').filter(Boolean));
   f.free = p.get('free') === '1';
-  f.zone = p.get('z') || 'all';
   if (f.q) $('#search').value = f.q;
 }
 
@@ -340,10 +312,9 @@ async function loadWeek(fileEntry) {
   buildTopbar();
   $('#footer-stats').textContent =
     `${state.week.event_count} eventos · ${state.week.source_count} fontes · atualizado a ${gen.toLocaleDateString('pt-PT')}`;
-  // chips depend on the loaded week (dates, present topics/neighbourhoods)
+  // chips depend on the loaded week (dates, present topics)
   renderTopicChips();
   renderDayChips();
-  renderNeighbourhoodChips();
   render();
 }
 
@@ -362,24 +333,18 @@ async function init() {
 
   // wire controls
   $('#search').addEventListener('input', e => { state.filters.q = e.target.value.trim().toLowerCase(); render(); });
-  $('#filters-toggle').onclick = e => {
+  const filtToggle = $('#filters-toggle');
+  filtToggle.onclick = () => {
     const panel = $('#filter-panel'); const open = panel.hidden;
-    panel.hidden = !open; e.target.setAttribute('aria-expanded', open);
+    panel.hidden = !open;
+    filtToggle.setAttribute('aria-expanded', open);
+    const sign = $('#filt-sign'); if (sign) sign.textContent = open ? '−' : '+';
   };
-  $$('#price-seg button').forEach(b => b.onclick = () => { state.filters.free = b.dataset.price === 'free'; render(); });
-  $$('#zone-seg button').forEach(b => b.onclick = () => {
-    state.filters.zone = b.dataset.zone;
-    // drop neighbourhood selections outside the chosen zone
-    if (state.filters.zone !== 'all') {
-      const allowed = new Set(state.taxonomy.neighbourhoods.filter(n => n.zone === state.filters.zone).map(n => n.name));
-      state.filters.neighbourhoods = new Set([...state.filters.neighbourhoods].filter(n => allowed.has(n)));
-    }
-    renderNeighbourhoodChips(); render();
-  });
-  $('#clear-filters').onclick = $('#empty-clear').onclick = () => {
-    state.filters = { q: '', topics: new Set(), days: new Set(), neighbourhoods: new Set(), free: false, zone: 'all' };
+  $$('#price-chips .chip').forEach(b => b.onclick = () => { state.filters.free = b.dataset.price === 'free'; render(); });
+  $('#empty-clear').onclick = () => {
+    state.filters = { q: '', topics: new Set(), days: new Set(), free: false };
     $('#search').value = '';
-    renderTopicChips(); renderNeighbourhoodChips(); render();
+    renderTopicChips(); render();
   };
 
   await loadWeek(weeks[0]);
