@@ -50,14 +50,17 @@ def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
             got = core.fetch(session, u, cfg)
             ok = got and got[0] < 400 and "html" in (got[1] or "")
             info = core.scrape_event_page(got[2], u, default_img) if ok else {}
-            # AI fallback: only when structured data gave no price and budget remains
-            if ok and use_ai and not (info.get("price") or {}).get("text") and not tracker.exhausted():
+            # AI reads EVERY event page (budget-gated). Structured data stays the
+            # source of truth for price; the AI fills what's missing + improves
+            # the description from the actual event text.
+            if ok and use_ai and not tracker.exhausted():
                 text = core.html_to_text(got[2], 9000)
                 d = extract.extract_details(prov, client, source, text, cfg, tracker)
-                if d.get("is_free"):
-                    info["price"] = {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
-                elif d.get("price_text"):
-                    info["price"] = core.parse_price(d["price_text"])
+                if not (info.get("price") or {}).get("text"):  # JSON-LD price wins when present
+                    if d.get("is_free"):
+                        info["price"] = {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+                    elif d.get("price_text"):
+                        info["price"] = core.parse_price(d["price_text"])
                 if not info.get("start_time") and re.match(r"^\d{1,2}:\d{2}", str(d.get("time") or "")):
                     info["start_time"] = d["time"][:5]
                 if d.get("description") and len(d["description"]) > len(info.get("description") or ""):
