@@ -29,6 +29,7 @@ ai:
   #   base_url: ""
   #   model_cheap: "claude-haiku-4-5"   model_strong: "claude-sonnet-4-6"
   escalate_on_low_confidence: false    # v4-pro is already the top tier; no escalation needed
+  enrich_pages: true                   # let the AI read an event's own page to fill a missing price (budget-gated)
   max_run_cost_usd: 2          # ceiling per crawl run; stops calling the AI once hit
   max_month_cost_usd: 4        # ceiling per calendar month (sums committed runs); crawler refuses to exceed it
   request_timeout_s: 40

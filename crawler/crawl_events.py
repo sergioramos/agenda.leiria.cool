@@ -17,6 +17,7 @@ import argparse
 import difflib
 import hashlib
 import json
+import re
 import sys
 import time
 from datetime import date
@@ -26,14 +27,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
 
-def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=24):
-    """Read each event's OWN page (HTTP only, no AI) and fill what the listing
-    didn't have: real poster image (JSON-LD/og:image, skipping logos), the
-    ticket price (JSON-LD offers or a €-scan of the page), the start time and a
-    better description. This is where prices like '28€–40€' that only live on
-    the event page get picked up. Bounded per source; failures are silent."""
+def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=24,
+                  prov=None, client=None, tracker=None):
+    """Read each event's OWN page (HTTP, no AI) and fill what the listing didn't
+    have: real poster image (JSON-LD/og:image, skipping logos), ticket price
+    (JSON-LD offers or a €-scan), start time and a better description.
+    When structured data leaves the PRICE missing and there's AI budget left,
+    one small DeepSeek read of the page fills it (the page is already fetched).
+    Bounded per source; failures are silent."""
     page = core.site_key(source.get("website") or "")
     default_img = core.og_image(listing_html)  # the venue's default/logo — reject it
+    use_ai = prov and client and tracker is not None and cfg["ai"].get("enrich_pages", True)
     cache, fetched = {}, 0
     for e in evs:
         u = e.get("url")
@@ -45,7 +49,20 @@ def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=24):
             fetched += 1
             got = core.fetch(session, u, cfg)
             ok = got and got[0] < 400 and "html" in (got[1] or "")
-            cache[u] = core.scrape_event_page(got[2], u, default_img) if ok else {}
+            info = core.scrape_event_page(got[2], u, default_img) if ok else {}
+            # AI fallback: only when structured data gave no price and budget remains
+            if ok and use_ai and not (info.get("price") or {}).get("text") and not tracker.exhausted():
+                text = core.html_to_text(got[2], 9000)
+                d = extract.extract_details(prov, client, source, text, cfg, tracker)
+                if d.get("is_free"):
+                    info["price"] = {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+                elif d.get("price_text"):
+                    info["price"] = core.parse_price(d["price_text"])
+                if not info.get("start_time") and re.match(r"^\d{1,2}:\d{2}", str(d.get("time") or "")):
+                    info["start_time"] = d["time"][:5]
+                if d.get("description") and len(d["description"]) > len(info.get("description") or ""):
+                    info["description"] = core.clean_description(d["description"], "", "")
+            cache[u] = info
             time.sleep(delay / 2)
         info = cache[u]
         if not e.get("image") and info.get("image"):
@@ -177,7 +194,8 @@ def main():
                                   venues_idx, page_links)
             ai_calls += 1
         if evs:
-            enrich_events(session, cfg, s, evs, delay, listing_html=html)
+            enrich_events(session, cfg, s, evs, delay, listing_html=html,
+                          prov=prov, client=client, tracker=tracker)
         events.extend(evs)
         time.sleep(delay)
 

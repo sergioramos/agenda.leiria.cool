@@ -141,6 +141,38 @@ def _system_prompt(mon, window_end, tax) -> str:
     )
 
 
+DETAILS_HINT = '{"is_free":false,"price_text":"12","time":"21:00","description":"..."}'
+
+
+def _details_schema() -> dict:
+    return {
+        "type": "object", "additionalProperties": False,
+        "properties": {
+            "is_free": {"type": "boolean"},
+            "price_text": {"type": "string", "description": "Preço do bilhete tal como aparece (ex.: '12', '12-20', '€15'); vazio se não indicado"},
+            "time": {"type": "string", "description": "Hora de início HH:MM (24h); vazio se a página não indicar"},
+            "description": {"type": "string", "description": "1–2 frases em português sobre o evento"},
+        },
+        "required": ["is_free"],
+    }
+
+
+def extract_details(prov, client, source: dict, page_text: str, cfg: dict, tracker: CostTracker) -> dict:
+    """One small AI read of a SINGLE event's own page, to fill what the free
+    structured-data pass couldn't (mostly the price on prose pages). Cheap
+    (tiny output) and budget-gated by the tracker. Returns {} on any failure."""
+    if tracker.exhausted() or not page_text:
+        return {}
+    system = ("Lês a página de UM evento em Lisboa e extrais detalhes. price_text = preço do bilhete tal "
+              "como aparece (ex.: '12', '12-20', '€15'); is_free=true só se for explicitamente gratuito. "
+              "time = hora de início HH:MM (24h) ou vazio. description = 1–2 frases em português sobre o "
+              "evento. Deixa vazio o que não souberes; nunca inventes.")
+    user = f"Evento de: {source['name']}\n\nTexto da página:\n{page_text}"
+    data = json_call(prov, client, cfg["ai"]["model_cheap"], system, user,
+                     _details_schema(), DETAILS_HINT, 700, tracker)
+    return data or {}
+
+
 def _join_dt(date_str, time_str) -> str:
     """date 'YYYY-MM-DD' + time 'HH:MM' -> 'YYYY-MM-DDTHH:MM'. Returns the date
     alone when there's no valid time, so all-day events stay all-day."""
