@@ -78,6 +78,10 @@ function matches(ev) {
 /* ---------- rendering ---------- */
 function renderTopicChips() {
   const wrap = $('#topic-chips');
+  // hide instantly (kills the skeleton with no transition), swap in the real
+  // chips at the same height, then fade them in — so events never get pushed down
+  wrap.style.transition = 'none';
+  wrap.style.opacity = '0';
   wrap.innerHTML = '';
   const counts = {};
   for (const ev of state.week.events) counts[ev.topic] = (counts[ev.topic] || 0) + 1;
@@ -93,7 +97,7 @@ function renderTopicChips() {
     chip.onclick = () => { toggleSet(state.filters.topics, t.id); apply(); };
     wrap.append(chip);
   }
-  requestAnimationFrame(() => wrap.classList.add('ready'));
+  requestAnimationFrame(() => { wrap.style.transition = 'opacity .7s ease'; wrap.style.opacity = '1'; });
 }
 
 function renderDayChips() {
