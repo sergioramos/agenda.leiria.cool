@@ -201,7 +201,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
    (natural width) + Preço (fills the rest) side by side, 24px gap; each group
    = red label + chip row. Wraps to stacked groups on narrow screens. */
 .filter-panel {
-  margin-top: 16px; padding: 24px; background: transparent;
+  padding: 24px; background: transparent;
   border: 1px solid #ccc7bb; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 24px;
 }
 .filter-day { flex: none; }

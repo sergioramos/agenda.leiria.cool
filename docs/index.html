@@ -52,6 +52,20 @@
             <span class="filt-sign" id="filt-sign" aria-hidden="true">+</span> Filtros
           </button>
         </div>
+        <!-- expanded filters open right below the search row (Figma 17:154) -->
+        <div class="filter-panel" id="filter-panel" hidden>
+          <div class="filter-group filter-day">
+            <h3>Dia</h3>
+            <div class="chips small" id="day-chips" role="group" aria-label="Dia"></div>
+          </div>
+          <div class="filter-group filter-price">
+            <h3>Preço</h3>
+            <div class="chips small" id="price-chips" role="group" aria-label="Preço">
+              <button class="chip" type="button" data-price="all" aria-pressed="true"><span>Todos</span></button>
+              <button class="chip" type="button" data-price="free" aria-pressed="false"><span>Só grátis</span></button>
+            </div>
+          </div>
+        </div>
         <div class="chips" id="topic-chips" role="group" aria-label="Temas"></div>
       </div>
     </section>
@@ -59,20 +73,6 @@
     <hr class="rule-solid" />
 
     <section class="controls" aria-label="Filtros avançados">
-      <div class="filter-panel" id="filter-panel" hidden>
-        <div class="filter-group filter-day">
-          <h3>Dia</h3>
-          <div class="chips small" id="day-chips" role="group" aria-label="Dia"></div>
-        </div>
-        <div class="filter-group filter-price">
-          <h3>Preço</h3>
-          <div class="chips small" id="price-chips" role="group" aria-label="Preço">
-            <button class="chip" type="button" data-price="all" aria-pressed="true"><span>Todos</span></button>
-            <button class="chip" type="button" data-price="free" aria-pressed="false"><span>Só grátis</span></button>
-          </div>
-        </div>
-      </div>
-
       <div class="result-meta">
         <span id="result-count">—</span>
         <span id="active-filters" class="muted"></span>
