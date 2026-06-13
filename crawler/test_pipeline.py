@@ -44,6 +44,22 @@ t('price free word', core.parse_price('entrada livre')['is_free'], True)
 t('price empty', core.parse_price('')['text'], '')
 t('price min set', core.parse_price('8,50')['min'], 8.5)
 
+# scan_price: € on either side + ranges, from a whole event page
+t('scan after-sign', core.scan_price('Bilhetes a 28€')['text'], '€28')
+t('scan range a', core.scan_price('dos 28€ aos 40€')['text'], '€28–40')
+t('scan ignores year', core.scan_price('edição de 2026'), None)
+t('scan no free keyword', core.scan_price('newsletter grátis', allow_free=False), None)
+
+# event-page scrape: JSON-LD price/image/time wins; og:image fallback; skip logo
+_LD = ('<script type="application/ld+json">{"@type":"Event",'
+       '"startDate":"2026-06-12T21:00:00","image":["https://x.pt/poster.jpg"],'
+       '"offers":{"@type":"AggregateOffer","lowPrice":"28","highPrice":"40"}}</script>')
+_si = core.scrape_event_page(_LD, 'https://x.pt/e')
+t('scrape ld price', _si.get('price', {}).get('text'), '€28–40')
+t('scrape ld image', _si.get('image'), 'https://x.pt/poster.jpg')
+t('scrape ld time', _si.get('start_time'), '21:00')
+t('scrape logo skipped', core.scrape_event_page('<meta property="og:image" content="https://x.pt/logo.svg">', 'https://x.pt/e').get('image'), None)
+
 # descriptions
 t('desc title prefix dropped', core.clean_description('Fado ao Vivo — noite de fado com jantar', 'Fado ao Vivo', 'A Severa'),
   'Noite de fado com jantar.')

@@ -285,6 +285,152 @@ def parse_price(text: str) -> dict:
         out["text"] = f"€{nums[0]}"
     return out
 
+
+# euro amount with the sign on EITHER side ("€28", "28€", "28 eur", "28 euros")
+_MONEY_RE = re.compile(
+    r"(?:€\s?(\d{1,4}(?:[.\s]\d{3})*(?:,\d{1,2})?|\d{1,4}(?:[.,]\d{1,2})?))"
+    r"|(?:(\d{1,4}(?:[.\s]\d{3})*(?:,\d{1,2})?|\d{1,4}(?:[.,]\d{1,2})?)\s?(?:€|eur(?:os?)?\b))", re.I)
+
+
+def _money_to_float(raw: str):
+    s = raw.strip().replace(" ", "")
+    if "," in s:               # PT decimal comma; dots are thousands
+        s = s.replace(".", "").replace(",", ".")
+    elif s.count(".") == 1 and len(s.split(".")[1]) == 3:
+        s = s.replace(".", "")  # "1.250" = thousands, not 1.25
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def _fmt_amount(v: float) -> str:
+    return str(int(v)) if v == int(v) else f"{v:.2f}".replace(".", ",")
+
+
+def scan_price(text: str, allow_free: bool = True) -> dict | None:
+    """Find a ticket price anywhere in free text (e.g. a whole event page),
+    with the € on either side and ranges ('28€ a 40€' → €28–40). Conservative:
+    needs the € / 'eur' token, ignores implausible amounts. None if nothing.
+    allow_free=False ignores 'grátis'/'free' keywords — on a full page they are
+    too often unrelated (newsletter, shipping), so only numbers/JSON-LD count."""
+    t = text or ""
+    if allow_free and FREE_RE.search(t):
+        return {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+    vals = []
+    for m in _MONEY_RE.finditer(t):
+        v = _money_to_float(m.group(1) or m.group(2) or "")
+        if v is not None and 0 < v <= 500:
+            vals.append(round(v, 2))
+    if not vals:
+        return None
+    lo, hi = min(vals), max(vals)
+    text_out = f"€{_fmt_amount(lo)}" if lo == hi else f"€{_fmt_amount(lo)}–{_fmt_amount(hi)}"
+    return {"is_free": lo == 0, "min": lo, "currency": "EUR", "text": "Grátis" if lo == 0 else text_out}
+
+
+# ---------- event-page enrichment (read the event's OWN page, no AI) ----------
+_LOGO_RE = re.compile(r"logo|favicon|sprite|placeholder|default[-_.]|/icons?/", re.I)
+_OG_IMG_RE = re.compile(
+    r'<meta[^>]+(?:property|name)=["\']og:image(?::secure_url)?["\'][^>]*content=["\']([^"\']+)'
+    r'|<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\']og:image', re.I)
+
+
+def _iter_jsonld(node):
+    if isinstance(node, list):
+        for n in node:
+            yield from _iter_jsonld(n)
+    elif isinstance(node, dict):
+        if "@graph" in node:
+            yield from _iter_jsonld(node["@graph"])
+        yield node
+
+
+def _jsonld_price(offers) -> dict | None:
+    for o in (offers if isinstance(offers, list) else [offers]):
+        if not isinstance(o, dict):
+            continue
+        lo = o.get("lowPrice") or o.get("price")
+        hi = o.get("highPrice") or o.get("price")
+        try:
+            lo, hi = float(str(lo).replace(",", ".")), float(str(hi).replace(",", "."))
+        except (TypeError, ValueError):
+            continue
+        if hi < lo:
+            lo, hi = hi, lo
+        if lo == 0 and hi == 0:
+            return {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+        txt = f"€{_fmt_amount(lo)}" if lo == hi else f"€{_fmt_amount(lo)}–{_fmt_amount(hi)}"
+        return {"is_free": False, "min": lo, "currency": "EUR", "text": txt}
+    return None
+
+
+def parse_jsonld_event(html: str) -> dict:
+    """Pull image / price / startDate / description from a schema.org Event in
+    the page's JSON-LD. Best-effort; never raises."""
+    out: dict = {}
+    for m in re.finditer(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+                         html or "", re.I | re.S):
+        try:
+            data = json.loads(m.group(1).strip())
+        except Exception:
+            continue
+        for node in _iter_jsonld(data):
+            if not isinstance(node, dict):
+                continue
+            types = node.get("@type")
+            types = types if isinstance(types, list) else [types]
+            if not any(isinstance(x, str) and x.lower().endswith("event") for x in types):
+                continue
+            if "image" not in out:
+                img = node.get("image")
+                if isinstance(img, list):
+                    img = img[0] if img else None
+                if isinstance(img, dict):
+                    img = img.get("url")
+                if isinstance(img, str):
+                    out["image"] = img
+            if "price" not in out:
+                p = _jsonld_price(node.get("offers"))
+                if p:
+                    out["price"] = p
+            if "start" not in out and isinstance(node.get("startDate"), str):
+                out["start"] = node["startDate"]
+            if "description" not in out and isinstance(node.get("description"), str):
+                out["description"] = node["description"]
+    return out
+
+
+def scrape_event_page(html: str, url: str) -> dict:
+    """Read an event's own page (no AI): JSON-LD first, then og:image + a text
+    price scan. Returns any of {image, price, start_time, description}."""
+    out: dict = {}
+    ld = parse_jsonld_event(html or "")
+    img = ld.get("image")
+    if img and not _LOGO_RE.search(img):
+        out["image"] = resolve_url(img, url)
+    if not out.get("image"):
+        m = _OG_IMG_RE.search(html or "")
+        cand = (m.group(1) or m.group(2)) if m else None
+        if cand and not _LOGO_RE.search(cand):
+            out["image"] = resolve_url(cand, url)
+    if ld.get("price"):
+        out["price"] = ld["price"]
+    else:
+        # numbers only — a bare "grátis"/"free" anywhere on the page is unreliable
+        p = scan_price(html_to_text(html or "", 14000), allow_free=False)
+        if p:
+            out["price"] = p
+    sd = ld.get("start")
+    if sd:
+        mt = re.search(r"T(\d{2}:\d{2})", sd)
+        if mt:
+            out["start_time"] = mt.group(1)
+    if ld.get("description"):
+        out["description"] = clean_description(ld["description"], "", "")
+    return {k: v for k, v in out.items() if v}
+
+
 # ---------- normalisation ----------
 def _nt(s: str) -> str:
     """letters+digits only, accent-folded and lowercased — the comparison form

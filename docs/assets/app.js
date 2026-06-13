@@ -114,6 +114,34 @@ function renderDayChips() {
   });
 }
 
+/* ---------- skeleton (same DOM as a real card, shimmer in each slot) ---------- */
+function skBar(css) { return el('span', { className: 'sk-bar', style: css }); }
+
+function skeletonCard() {
+  const media = el('div', { className: 'card-media' }, el('div', { className: 'card-img sk-bar' }));
+  const text = el('div', { className: 'card-text' },
+    skBar('width:62%;height:18px'), skBar('width:42%;height:14px'));
+  const save = skBar('width:118px;height:34px;flex:none');
+  const badges = el('div', { className: 'badges' }, skBar('width:96px;height:24px'), skBar('width:48px;height:24px'));
+  const body = el('div', { className: 'body' },
+    el('div', { className: 'card-toprow' }, text, save), badges);
+  const when = el('div', { className: 'when' },
+    skBar('width:26px;height:12px'), skBar('width:30px;height:30px'), skBar('width:24px;height:12px'));
+  return el('article', { className: 'card is-skeleton', ariaHidden: 'true' },
+    media, body, el('span', { className: 'card-divider', ariaHidden: 'true' }), when);
+}
+
+function showSkeleton(n = 5) {
+  const results = $('#results');
+  const head = el('div', { className: 'sk-head' }, skBar('width:84px;height:12px'), skBar('width:220px;height:24px'));
+  const cards = el('div', { className: 'cards' });
+  for (let i = 0; i < n; i++) cards.append(skeletonCard());
+  const wrap = el('div', { className: 'skeleton' }, head, cards);
+  results.innerHTML = '';
+  results.append(wrap);
+  requestAnimationFrame(() => wrap.classList.add('ready')); // fade in
+}
+
 /* lucide icons (inline so they tint via currentColor) */
 const PIN_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>';
 const CAL_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 19h6"/><path d="M16 2v4"/><path d="M19 16v6"/><path d="M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>';
@@ -330,10 +358,14 @@ async function loadWeek(fileEntry) {
   // chips depend on the loaded week (dates, present topics)
   renderTopicChips();
   renderDayChips();
-  render(true); // week load → sections rise in (filter changes re-render without it)
+  // fade the skeleton out, then the real sections rise in ("fade into" the cards)
+  const sk = $('#results .skeleton');
+  if (sk) { sk.style.opacity = '0'; setTimeout(() => render(true), 380); }
+  else render(true);
 }
 
 async function init() {
+  showSkeleton(); // visible structure while the data loads
   state.taxonomy = await getJSON('./taxonomy.json');
   state.topicById = Object.fromEntries(state.taxonomy.topics.map(t => [t.id, t]));
   loadHash();

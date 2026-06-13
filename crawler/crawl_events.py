@@ -17,7 +17,6 @@ import argparse
 import difflib
 import hashlib
 import json
-import re
 import sys
 import time
 from datetime import date
@@ -27,36 +26,36 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
 
-OG_IMAGE_RE = re.compile(
-    r'<meta[^>]+(?:property|name)=["\']og:image(?::secure_url)?["\'][^>]*content=["\']([^"\']+)|'
-    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\']og:image', re.I)
-
-
-def enrich_images(session, cfg, source, evs, delay, cap=10):
-    """Fetch each event's own page (HTTP only, no AI) and pick up its og:image
-    so the cards have real artwork. Bounded per source; failures are silent."""
+def enrich_events(session, cfg, source, evs, delay, cap=24):
+    """Read each event's OWN page (HTTP only, no AI) and fill what the listing
+    didn't have: real poster image (JSON-LD/og:image, skipping logos), the
+    ticket price (JSON-LD offers or a €-scan of the page), the start time and a
+    better description. This is where prices like '28€–40€' that only live on
+    the event page get picked up. Bounded per source; failures are silent."""
     page = core.site_key(source.get("website") or "")
     cache, fetched = {}, 0
     for e in evs:
         u = e.get("url")
         if not u or core.site_key(u) == page:
-            continue  # homepage fallback — no event page to read
-        if u in cache:
-            e["image"] = cache[u]
-            continue
-        if fetched >= cap:
-            continue
-        fetched += 1
-        got = core.fetch(session, u, cfg)
-        img = None
-        if got and got[0] < 400 and "html" in (got[1] or ""):
-            m = OG_IMAGE_RE.search(got[2] or "")
-            if m:
-                img = core.resolve_url(m.group(1) or m.group(2), u)
-        cache[u] = img
-        if img:
-            e["image"] = img
-        time.sleep(delay / 2)
+            continue  # homepage fallback — no dedicated event page to read
+        if u not in cache:
+            if fetched >= cap:
+                continue
+            fetched += 1
+            got = core.fetch(session, u, cfg)
+            ok = got and got[0] < 400 and "html" in (got[1] or "")
+            cache[u] = core.scrape_event_page(got[2], u) if ok else {}
+            time.sleep(delay / 2)
+        info = cache[u]
+        if not e.get("image") and info.get("image"):
+            e["image"] = info["image"]
+        if not (e.get("price") or {}).get("text") and info.get("price"):
+            e["price"] = info["price"]
+        if e.get("all_day") and info.get("start_time"):
+            e["start"] = e["start"][:10] + "T" + info["start_time"]
+            e["all_day"] = False
+        if len(info.get("description") or "") > len(e.get("description") or ""):
+            e["description"] = info["description"]
 
 
 def pick_representative(group: list[dict]) -> dict:
@@ -177,7 +176,7 @@ def main():
                                   venues_idx, page_links)
             ai_calls += 1
         if evs:
-            enrich_images(session, cfg, s, evs, delay)
+            enrich_events(session, cfg, s, evs, delay)
         events.extend(evs)
         time.sleep(delay)
 

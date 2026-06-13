@@ -346,20 +346,17 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .ticker-track, .fade-in { opacity: 0; transition: opacity .7s ease; }
 .ticker-track.ready, .fade-in.ready { opacity: 1; }
 
-/* skeleton placeholders — hold the layout (no jump) while events load */
+/* skeleton — built from the REAL .card structure (see skeletonCard in app.js),
+   so the placeholder matches the layout exactly. Fades in, then fades into the
+   real cards. */
 @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
-.skeleton { display: flex; flex-direction: column; gap: 16px; }
-.sk-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
-.sk-bar { border-radius: 4px; background: linear-gradient(90deg, #eae3d6 25%, #f4efe6 50%, #eae3d6 75%); background-size: 200% 100%; animation: shimmer 1.6s ease-in-out infinite; }
-.sk-card {
-  background: #fefefe; border-radius: 4px; padding: 24px; display: flex; align-items: center; gap: 24px;
-  box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
-}
-.sk-card .sk-img { width: 96px; height: 96px; flex: none; border-radius: 2px; }
-.sk-card .sk-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
-.sk-card .sk-date { width: 40px; height: 56px; flex: none; border-radius: 4px; }
-.sk-line { height: 12px; }
+.skeleton { display: flex; flex-direction: column; gap: 24px; opacity: 0; transition: opacity .4s ease; }
+.skeleton.ready { opacity: 1; }
+.sk-head { display: flex; flex-direction: column; gap: 8px; }
+.sk-bar { display: block; border-radius: 4px; background: linear-gradient(90deg, #eae3d6 25%, #f4efe6 50%, #eae3d6 75%); background-size: 200% 100%; animation: shimmer 1.6s ease-in-out infinite; }
 .sk-chip { display: inline-block; height: 28px; flex: none; border-radius: 4px; }
+.card.is-skeleton .card-img { background: none; } /* the sk-bar gradient shows through */
+.card.is-skeleton .card-text { gap: 12px; }
 
 /* filter panel: collapse animates HEIGHT (0fr↔1fr) so the chips + page below
    slide instead of jumping. The 24px gap above the panel sits inside the
