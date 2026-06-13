@@ -32,7 +32,6 @@ function tickerSegment() {
 function buildTopbar() {
   const track = document.querySelector('.ticker-track');
   if (typeof buildTicker === 'function') buildTicker(track, tickerSegment);
-  if (track) requestAnimationFrame(() => track.classList.add('ready')); // fade the marquee in
 }
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -78,10 +77,8 @@ function matches(ev) {
 /* ---------- rendering ---------- */
 function renderTopicChips() {
   const wrap = $('#topic-chips');
-  // hide instantly (kills the skeleton with no transition), swap in the real
-  // chips at the same height, then fade them in — so events never get pushed down
-  wrap.style.transition = 'none';
-  wrap.style.opacity = '0';
+  // swap skeleton pills → real chips in place (same height, container already
+  // revealed by the page wave — no separate fade, so the reveal isn't fought)
   wrap.innerHTML = '';
   const counts = {};
   for (const ev of state.week.events) counts[ev.topic] = (counts[ev.topic] || 0) + 1;
@@ -97,7 +94,6 @@ function renderTopicChips() {
     chip.onclick = () => { toggleSet(state.filters.topics, t.id); apply(); };
     wrap.append(chip);
   }
-  requestAnimationFrame(() => { wrap.style.transition = 'opacity .7s ease'; wrap.style.opacity = '1'; });
 }
 
 function renderDayChips() {
@@ -138,8 +134,21 @@ function showSkeleton(n = 5) {
   for (let i = 0; i < n; i++) cards.append(skeletonCard());
   const wrap = el('div', { className: 'skeleton' }, head, cards);
   results.innerHTML = '';
-  results.append(wrap);
-  requestAnimationFrame(() => wrap.classList.add('ready')); // fade in
+  results.append(wrap);  // shown inside #results, which the page wave reveals
+}
+
+/* one coordinated reveal: walk every .rv block in document order (top → bottom),
+   give each a growing delay, then flip body.revealed so they rise in as one wave */
+function revealPage() {
+  if (document.body.classList.contains('revealed')) return;
+  const blocks = [...document.querySelectorAll('.rv')];
+  blocks.forEach((elm, i) => elm.style.setProperty('--d', Math.min(i, 13) * 55 + 'ms'));
+  document.body.classList.add('revealed');
+  // safety: once the wave should be done, pin the end state so content is never
+  // left hidden if the browser paused the transition (e.g. a background tab)
+  setTimeout(() => blocks.forEach(e => {
+    e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none';
+  }), 1600);
 }
 
 /* lucide icons (inline so they tint via currentColor) */
@@ -263,18 +272,12 @@ function render(animate = false) {
   const groups = {};
   for (const ev of visible) (groups[ev.topic] ||= []).push(ev);
 
-  let revealIdx = 0;
   for (const tid of order) {
     const list = groups[tid];
     if (!list || !list.length) continue;
     const t = state.topicById[tid];
     list.sort((a, b) => (a.start || '').localeCompare(b.start || ''));
     const sec = el('section', { className: 'topic-section' });
-    if (animate) {
-      sec.classList.add('reveal');
-      // stagger the first few, then no extra wait so the page never feels slow
-      sec.style.setProperty('--reveal-delay', Math.min(revealIdx++, 6) * 60 + 'ms');
-    }
     const h2 = el('h2', {});
     t.label.split(' & ').forEach((part, i) => {
       if (i) h2.append(el('span', { className: 'amp', textContent: ' & ' }));
@@ -354,7 +357,6 @@ async function loadWeek(fileEntry) {
   const stats = $('#footer-stats');
   stats.textContent =
     `${state.week.event_count} eventos · ${state.week.source_count} fontes · atualizado a ${gen.toLocaleDateString('pt-PT')}`;
-  requestAnimationFrame(() => stats.classList.add('ready'));
   // chips depend on the loaded week (dates, present topics)
   renderTopicChips();
   renderDayChips();
@@ -365,7 +367,10 @@ async function loadWeek(fileEntry) {
 }
 
 async function init() {
-  showSkeleton(); // visible structure while the data loads
+  setTimeout(() => document.body.classList.add('revealed'), 2500); // safety: never stay hidden
+  showSkeleton();  // visible structure while the data loads
+  buildTopbar();   // base ticker text present BEFORE the reveal, so it fades in with the bar
+  revealPage();    // reveal the whole page (with skeleton) top-to-bottom, at once
   state.taxonomy = await getJSON('./taxonomy.json');
   state.topicById = Object.fromEntries(state.taxonomy.topics.map(t => [t.id, t]));
   loadHash();

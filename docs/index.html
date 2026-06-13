@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pregoeiro — esta semana em Lisboa</title>
@@ -12,14 +13,14 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📣</text></svg>" />
 </head>
 <body>
-  <div class="topbar">
+  <div class="topbar rv">
     <div class="ticker-track" id="ticker-track"></div>
   </div>
   <div class="topbar-rule" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="wrap">
-      <div class="masthead">
+      <div class="masthead rv">
         <img class="brand-logo" src="./assets/logo.svg" alt="Pregoeiro" width="153" height="40" />
         <div class="week-control">
           <span class="week-control-label">Semana</span>
@@ -37,12 +38,12 @@
   <main class="wrap">
     <section class="hero" aria-label="Esta semana">
       <div class="hero-text">
-        <p class="hero-eyebrow">eventos · festas · atividades</p>
-        <h1 class="hero-title">Esta <em>semana</em> em Lisboa.</h1>
-        <p class="hero-sub">Tudo o que acontece nos próximos sete dias. Organizado por tema, com filtros por dia &amp; preço.</p>
+        <p class="hero-eyebrow rv">eventos · festas · atividades</p>
+        <h1 class="hero-title rv">Esta <em>semana</em> em Lisboa.</h1>
+        <p class="hero-sub rv">Tudo o que acontece nos próximos sete dias. Organizado por tema, com filtros por dia &amp; preço.</p>
       </div>
       <div class="hero-controls">
-        <div class="searchbar">
+        <div class="searchbar rv">
           <label class="search-box">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="#1d1813" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /></svg>
             <span class="sr-only">Pesquisar</span>
@@ -71,20 +72,20 @@
             </div>
           </div>
         </div>
-        <div class="chips" id="topic-chips" role="group" aria-label="Temas"><span class="sk-bar sk-chip" style="width:217px"></span><span class="sk-bar sk-chip" style="width:175px"></span><span class="sk-bar sk-chip" style="width:117px"></span><span class="sk-bar sk-chip" style="width:209px"></span><span class="sk-bar sk-chip" style="width:234px"></span><span class="sk-bar sk-chip" style="width:200px"></span><span class="sk-bar sk-chip" style="width:209px"></span><span class="sk-bar sk-chip" style="width:267px"></span><span class="sk-bar sk-chip" style="width:225px"></span><span class="sk-bar sk-chip" style="width:192px"></span><span class="sk-bar sk-chip" style="width:259px"></span><span class="sk-bar sk-chip" style="width:209px"></span><span class="sk-bar sk-chip" style="width:234px"></span><span class="sk-bar sk-chip" style="width:250px"></span></div>
+        <div class="chips rv" id="topic-chips" role="group" aria-label="Temas"><span class="sk-bar sk-chip" style="width:217px"></span><span class="sk-bar sk-chip" style="width:175px"></span><span class="sk-bar sk-chip" style="width:117px"></span><span class="sk-bar sk-chip" style="width:209px"></span><span class="sk-bar sk-chip" style="width:234px"></span><span class="sk-bar sk-chip" style="width:200px"></span><span class="sk-bar sk-chip" style="width:209px"></span><span class="sk-bar sk-chip" style="width:267px"></span><span class="sk-bar sk-chip" style="width:225px"></span><span class="sk-bar sk-chip" style="width:192px"></span><span class="sk-bar sk-chip" style="width:259px"></span><span class="sk-bar sk-chip" style="width:209px"></span><span class="sk-bar sk-chip" style="width:234px"></span><span class="sk-bar sk-chip" style="width:250px"></span></div>
       </div>
     </section>
 
-    <hr class="rule-solid" />
+    <hr class="rule-solid rv" />
 
     <section class="controls" aria-label="Filtros avançados">
-      <div class="result-meta">
+      <div class="result-meta rv">
         <span id="result-count">—</span>
         <span id="active-filters" class="muted"></span>
       </div>
     </section>
 
-    <section id="results" aria-live="polite"></section>
+    <section id="results" class="rv" aria-live="polite"></section>
 
     <div id="empty" class="empty" hidden>
       <p>Nenhum evento corresponde aos filtros.</p>
@@ -94,10 +95,10 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <hr class="rule-solid" />
-      <div class="footer-row">
+      <hr class="rule-solid rv" />
+      <div class="footer-row rv">
         <p class="footer-credit">Criado com ❤️ por <span>Nucabé</span></p>
-        <p id="footer-stats" class="fade-in"></p>
+        <p id="footer-stats"></p>
       </div>
     </div>
   </footer>
