@@ -342,7 +342,17 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
     width: 100%; height: 1px; align-self: stretch;
     background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
   }
-  .card .when { flex-direction: row; gap: 16px; align-items: baseline; justify-content: center; width: 100%; }
+  /* small card date (Figma 42:1198): big number left (40px), day over time
+     stacked to its right */
+  .card .when {
+    display: grid; width: 100%;
+    grid-template-columns: auto auto; grid-template-areas: "date day" "date time";
+    column-gap: 12px; row-gap: 4px; align-items: center; justify-content: center;
+  }
+  .card .when .date { grid-area: date; font-size: 40px; line-height: 48px; align-self: center; }
+  .card .when .date-mon { font-size: 12px; }
+  .card .when .day { grid-area: day; align-self: end; text-align: left; }
+  .card .when .time, .card .when .ongoing { grid-area: time; align-self: start; text-align: left; }
 }
 @media (max-width: 540px) {
   .masthead { flex-wrap: wrap; gap: 12px; }

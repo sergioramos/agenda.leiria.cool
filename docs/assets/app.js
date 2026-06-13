@@ -176,11 +176,12 @@ function card(ev) {
       dateSpan,
       el('span', { className: 'ongoing', textContent: 'em curso' }));
   } else {
+    // always show the time line; an em-dash marks "no time captured"
     const time = (ev.start || '').slice(11, 16);
     when.append(
       el('span', { className: 'day', textContent: DAY_LABEL[ev.days?.[0]] || '' }),
-      el('span', { className: 'date', textContent: d.getDate() || '' }));
-    if (time) when.append(el('span', { className: 'time', textContent: time }));
+      el('span', { className: 'date', textContent: d.getDate() || '' }),
+      el('span', { className: 'time', textContent: time || '—' }));
   }
 
   // square artwork; topic emoji stands in until the crawl finds an og:image.
