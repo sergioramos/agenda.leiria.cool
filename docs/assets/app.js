@@ -162,11 +162,18 @@ function card(ev) {
 
   const when = el('div', { className: 'when' });
   if (ev.ongoing) {
-    // a run/exhibition: point at its closing day when known ("até 14 · em curso")
+    // a run/exhibition: point at its closing day ("até 12 · em curso"). Show the
+    // month when the end falls outside the week being viewed, so "até 12" can't
+    // be misread as this month when it's really 12 Jul.
     const endD = ev.end ? new Date(ev.end.slice(0, 10) + 'T00:00:00') : null;
+    const ref = new Date(state.week.week_start + 'T00:00:00');
+    const dateSpan = el('span', { className: 'date', textContent: (endD || d).getDate() || '' });
+    if (endD && (endD.getMonth() !== ref.getMonth() || endD.getFullYear() !== ref.getFullYear())) {
+      dateSpan.append(el('span', { className: 'date-mon', textContent: ' ' + MONTHS[endD.getMonth()] }));
+    }
     when.append(
       el('span', { className: 'day', textContent: endD ? 'até' : (DAY_LABEL[ev.days?.[0]] || 'sem') }),
-      el('span', { className: 'date', textContent: (endD || d).getDate() || '' }),
+      dateSpan,
       el('span', { className: 'ongoing', textContent: 'em curso' }));
   } else {
     const time = (ev.start || '').slice(11, 16);
