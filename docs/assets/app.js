@@ -176,7 +176,8 @@ function card(ev) {
     if (time) when.append(el('span', { className: 'time', textContent: time }));
   }
 
-  // square artwork; topic emoji stands in until the crawl finds an og:image
+  // square artwork; topic emoji stands in until the crawl finds an og:image.
+  // wrapper stretches to the card's height so the inner box can be a true square.
   const media = el('div', { className: 'card-img', ariaHidden: 'true' });
   const placeholder = () => { media.classList.add('ph'); media.textContent = topic?.emoji || '📌'; };
   if (ev.image) {
@@ -184,16 +185,20 @@ function card(ev) {
     img.onerror = () => { img.remove(); placeholder(); };
     media.append(img);
   } else placeholder();
+  const mediaWrap = el('div', { className: 'card-media' }, media);
 
+  // title is underlined only when it links somewhere — an honest link affordance
   const h = el('h3', {}, ev.url
     ? el('a', { href: ev.url, target: '_blank', rel: 'noopener', textContent: ev.title })
-    : el('span', { textContent: ev.title }));
-  const venueLine = el('p', { className: 'venue-line' });
-  venueLine.insertAdjacentHTML('afterbegin', PIN_SVG);
-  venueLine.append(el('a', {
-    href: mapsUrl(ev), target: '_blank', rel: 'noopener',
-    textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · '),
+    : el('span', { className: 'no-link', textContent: ev.title }));
+  // the pin lives inside the link so it highlights (and clicks) with the text
+  const venueLine = el('a', {
+    className: 'venue-line', href: mapsUrl(ev), target: '_blank', rel: 'noopener',
     title: 'Abrir no Google Maps',
+  });
+  venueLine.insertAdjacentHTML('afterbegin', PIN_SVG);
+  venueLine.append(el('span', {
+    textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · '),
   }));
 
   const save = el('a', {
@@ -204,7 +209,7 @@ function card(ev) {
   save.append(el('span', { textContent: 'Guardar data' }));
 
   const badges = el('div', { className: 'badges' });
-  if (topic) badges.append(el('span', { className: 'badge topic', textContent: topic.label }));
+  if (topic) badges.append(el('span', { className: 'badge', textContent: topic.label }));
   if (ev.price?.is_free) badges.append(el('span', { className: 'badge free', textContent: 'Grátis' }));
   else if (ev.price?.text) badges.append(el('span', { className: 'badge', textContent: ev.price.text }));
   if ((ev.language || []).includes('en')) badges.append(el('span', { className: 'badge', textContent: 'EN' }));
@@ -212,12 +217,11 @@ function card(ev) {
   const body = el('div', { className: 'body' },
     el('div', { className: 'card-toprow' },
       el('div', { className: 'card-text' }, h, venueLine),
-      save));
-  if (ev.description) body.append(el('p', { className: 'card-desc', textContent: ev.description }));
-  body.append(badges);
+      save),
+    badges);
 
   return el('article', { className: 'card' },
-    media, body,
+    mediaWrap, body,
     el('span', { className: 'card-divider', ariaHidden: 'true' }),
     when);
 }
