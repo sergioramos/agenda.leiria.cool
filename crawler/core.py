@@ -253,6 +253,8 @@ FREE_RE = re.compile(r"\b(gr[áa]tis|gratuito|entrada\s+livre|free\s+entry|free\
 PRICE_RE = re.compile(r"(?:€|eur\s?)\s?(\d{1,3}(?:[.,]\d{2})?)", re.I)
 
 def detect_price(text: str) -> dict:
+    """Scan free-text (feed descriptions) for a price. Conservative: only a
+    €/eur-prefixed number counts, so stray years/counts aren't read as prices."""
     t = text or ""
     if FREE_RE.search(t):
         return {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
@@ -261,6 +263,27 @@ def detect_price(text: str) -> dict:
         amt = float(m.group(1).replace(",", "."))
         return {"is_free": False, "min": amt, "currency": "EUR", "text": f"€{m.group(1)}"}
     return {"is_free": False, "min": None, "currency": "EUR", "text": ""}
+
+
+def parse_price(text: str) -> dict:
+    """Normalise the model's price_text field, which is KNOWN to be a price, so
+    a bare '12' or a '12-20' range is accepted (detect_price needs a € prefix).
+    Renders '€12' or '€12–20'."""
+    t = (text or "").strip()
+    out = {"is_free": False, "min": None, "currency": "EUR", "text": ""}
+    if not t:
+        return out
+    if FREE_RE.search(t):
+        return {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+    nums = re.findall(r"\d{1,4}(?:[.,]\d{1,2})?", t)
+    if not nums:
+        return out
+    out["min"] = float(nums[0].replace(",", "."))
+    if len(nums) >= 2 and re.search(r"[-–—/]|\ba\b|\bàs?\b|\bate?\b|\baté\b", t, re.I):
+        out["text"] = f"€{nums[0]}–{nums[1]}"
+    else:
+        out["text"] = f"€{nums[0]}"
+    return out
 
 # ---------- normalisation ----------
 def _nt(s: str) -> str:

@@ -28,8 +28,8 @@ PRICES = {
     "claude-sonnet-4-6": {"in": 3.0,   "out": 15.0, "cr": 0.30,     "cw": 3.75},
 }
 
-EVENT_HINT = ('{"events":[{"title":"...","date":"YYYY-MM-DD","end_date":"",'
-              '"is_free":true,"price_text":"","topic":"music","language":"pt",'
+EVENT_HINT = ('{"events":[{"title":"...","date":"YYYY-MM-DD","time":"21:00","end_date":"",'
+              '"is_free":false,"price_text":"12","topic":"music","language":"pt",'
               '"venue":"","url":"","description":"..."}]}')
 
 
@@ -103,10 +103,11 @@ def _schema(topic_ids: list[str]) -> dict:
             "type": "object", "additionalProperties": False,
             "properties": {
                 "title": {"type": "string"},
-                "date": {"type": "string", "description": "Event date/start, ISO YYYY-MM-DD (add THH:MM if a time is given)"},
+                "date": {"type": "string", "description": "Data de início em ISO YYYY-MM-DD"},
+                "time": {"type": "string", "description": "Hora de início HH:MM em 24h (ex.: 21:00); vazio se a página não indicar hora"},
                 "end_date": {"type": "string", "description": "ISO end date for runs/multi-day, else empty"},
                 "is_free": {"type": "boolean"},
-                "price_text": {"type": "string"},
+                "price_text": {"type": "string", "description": "Preço do bilhete tal como aparece (ex.: '12', '12-20', '€15'); vazio se não indicado"},
                 "topic": {"type": "string", "enum": topic_ids},
                 "language": {"type": "string", "enum": ["pt", "en", "pt/en"]},
                 "venue": {"type": "string", "description": "Nome do local onde o evento decorre, se a página o indicar"},
@@ -126,7 +127,10 @@ def _system_prompt(mon, window_end, tax) -> str:
         f"eventos com data entre {mon.isoformat()} e {window_end.isoformat()} (inclusive), mais "
         "exposições/temporadas já a decorrer que ainda estejam abertas nesse período. "
         "Ignora itens sem data concreta, menus, publicidade e navegação. Datas em ISO. "
-        "Se o preço não for claro, is_free=false e price_text vazio. Descrição: 1–2 frases informativas "
+        "Preenche SEMPRE o campo time (HH:MM, 24h) quando a página indicar a hora de início do evento "
+        "(ex.: «21h», «21:00», «às 9 da noite» → 21:00); só o deixas vazio se não houver mesmo hora. "
+        "No price_text põe o preço do bilhete tal como aparece (ex.: «12», «12-20», «€15»); is_free=true "
+        "apenas se for explicitamente gratuito/entrada livre. Descrição: 1–2 frases informativas "
         "em português (até ~200 caracteres) que digam o que é o evento, sem repetir o título nem o nome do local. "
         "Os links da página aparecem no texto entre parênteses retos, ex.: [https://…]. Quando um evento "
         "tiver página própria, copia esse URL exatamente para o campo url (sem os parênteses retos); NUNCA "
@@ -135,6 +139,19 @@ def _system_prompt(mon, window_end, tax) -> str:
         "vários locais). Se a página tiver mais de 60 eventos no período, devolve apenas os 60 primeiros. "
         f"Escolhe o tema (campo topic) mais adequado de: {topics}. Se não houver eventos, devolve events: []."
     )
+
+
+def _join_dt(date_str, time_str) -> str:
+    """date 'YYYY-MM-DD' + time 'HH:MM' -> 'YYYY-MM-DDTHH:MM'. Returns the date
+    alone when there's no valid time, so all-day events stay all-day."""
+    d = str(date_str or "").strip()
+    m = re.match(r"^(\d{1,2}):(\d{2})", str(time_str or "").strip())
+    dm = re.match(r"^(\d{4}-\d{2}-\d{2})", d)
+    if m and dm:
+        hh, mm = int(m.group(1)), int(m.group(2))
+        if 0 <= hh < 24 and 0 <= mm < 60:
+            return f"{dm.group(1)}T{hh:02d}:{mm:02d}"
+    return d
 
 
 def _checked_url(raw, source: dict, page_links: set | None) -> str | None:
@@ -177,14 +194,16 @@ def extract(prov, client, source: dict, page_text: str, mon, window_end, cfg: di
     for it in items:
         if not isinstance(it, dict):
             continue
-        parsed = core.parse_dt(it.get("date"))
+        # the model fills date + a separate time field; join them so parse_dt
+        # keeps the start time (asking for one ISO string loses the time often)
+        parsed = core.parse_dt(_join_dt(it.get("date"), it.get("time")))
         if not parsed:
             continue
         start_d, has_time, start_iso = parsed
         end_parsed = core.parse_dt(it.get("end_date"))
         topic = it.get("topic") if it.get("topic") in valid else (source.get("topic") or "guides")
         price = ({"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
-                 if it.get("is_free") else core.detect_price(it.get("price_text") or "x"))
+                 if it.get("is_free") else core.parse_price(it.get("price_text")))
         lang = it.get("language") or "pt"
         # map the extracted venue name back to the seed list (canonical name +
         # neighbourhood); a name we don't know is only trusted on agenda pages

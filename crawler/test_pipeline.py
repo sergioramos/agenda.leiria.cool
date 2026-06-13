@@ -8,6 +8,7 @@ from datetime import date
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
+import extract
 
 ok = fail = 0
 def t(label, got, want):
@@ -24,6 +25,24 @@ t('kpop', core.clean_title('AS GUERREIRAS DO K-POP | TRIBUTO'), 'As Guerreiras d
 # _nt accent folding
 t('nt accents', core._nt('Mosteiro dos Jerónimos'), core._nt('Mosteiro dos Jeronimos'))
 t('nt cedilha', core._nt('Exposição'), 'exposicao')
+
+# date + time join (events were coming out all-day because time was lost)
+t('join date+time', extract._join_dt('2026-06-12', '21:00'), '2026-06-12T21:00')
+t('join pads hour', extract._join_dt('2026-06-12', '9:30'), '2026-06-12T09:30')
+t('join no time', extract._join_dt('2026-06-12', ''), '2026-06-12')
+t('join bad time', extract._join_dt('2026-06-12', '25:00'), '2026-06-12')
+t('join time overrides date-time', extract._join_dt('2026-06-12T20:00', '21:00'), '2026-06-12T21:00')
+t('parse keeps time', core.parse_dt('2026-06-12T21:00')[1:], (True, '2026-06-12T21:00'))
+t('parse no time', core.parse_dt('2026-06-12')[1], False)
+
+# price_text from the model (bare number must parse — detect_price needed a €)
+t('price bare number', core.parse_price('12')['text'], '€12')
+t('price euro sign', core.parse_price('€15')['text'], '€15')
+t('price range', core.parse_price('12-20')['text'], '€12–20')
+t('price range "a"', core.parse_price('de 10 a 25 euros')['text'], '€10–25')
+t('price free word', core.parse_price('entrada livre')['is_free'], True)
+t('price empty', core.parse_price('')['text'], '')
+t('price min set', core.parse_price('8,50')['min'], 8.5)
 
 # descriptions
 t('desc title prefix dropped', core.clean_description('Fado ao Vivo — noite de fado com jantar', 'Fado ao Vivo', 'A Severa'),
