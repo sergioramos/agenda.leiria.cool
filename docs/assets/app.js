@@ -30,7 +30,9 @@ function tickerSegment() {
 }
 
 function buildTopbar() {
-  if (typeof buildTicker === 'function') buildTicker(document.querySelector('.ticker-track'), tickerSegment);
+  const track = document.querySelector('.ticker-track');
+  if (typeof buildTicker === 'function') buildTicker(track, tickerSegment);
+  if (track) requestAnimationFrame(() => track.classList.add('ready')); // fade the marquee in
 }
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -91,6 +93,7 @@ function renderTopicChips() {
     chip.onclick = () => { toggleSet(state.filters.topics, t.id); apply(); };
     wrap.append(chip);
   }
+  requestAnimationFrame(() => wrap.classList.add('ready'));
 }
 
 function renderDayChips() {
@@ -316,8 +319,10 @@ async function loadWeek(fileEntry) {
     ? { text: '⚠ Dados de exemplo', accent: true }
     : { text: 'Atualizado ' + gen.toLocaleDateString('pt-PT'), accent: false };
   buildTopbar();
-  $('#footer-stats').textContent =
+  const stats = $('#footer-stats');
+  stats.textContent =
     `${state.week.event_count} eventos · ${state.week.source_count} fontes · atualizado a ${gen.toLocaleDateString('pt-PT')}`;
+  requestAnimationFrame(() => stats.classList.add('ready'));
   // chips depend on the loaded week (dates, present topics)
   renderTopicChips();
   renderDayChips();
