@@ -258,9 +258,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   background: #fefefe; border: 0; border-radius: 4px; padding: 24px;
   display: flex; align-items: center; gap: 24px;
   box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
-  transition: transform .22s cubic-bezier(.2, .7, .3, 1), box-shadow .22s ease;
 }
-.card:hover { transform: translateY(-3px); box-shadow: 0 28px 34px -10px rgba(22, 22, 22, .10); }
 /* Square artwork. The side is anchored to the body's natural height (96px:
    title 24 + 8 + venue 16 = 48, +24 gap, +24 tags) rather than to a stretched
    parent — aspect-ratio off a stretched flex height resolves the WIDTH too late,
