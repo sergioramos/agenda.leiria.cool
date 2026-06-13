@@ -261,6 +261,16 @@ function card(ev) {
     when);
 }
 
+/* event cards fade in one by one on load (a gentle top-to-bottom cascade), so
+   the list builds card-by-card instead of appearing all at once */
+function revealCards() {
+  const cards = [...document.querySelectorAll('.card-rv')];
+  cards.forEach((c, i) => setTimeout(() => c.classList.add('in'), Math.min(i, 14) * 55));
+  // safety: pin everything visible after the cascade, even if a transition was
+  // paused (e.g. background tab) — content is never left hidden
+  setTimeout(() => cards.forEach(c => { c.style.transition = 'none'; c.style.opacity = '1'; }), 1700);
+}
+
 function render(animate = false) {
   const results = $('#results');
   const visible = state.week.events.filter(matches);
@@ -288,17 +298,17 @@ function render(animate = false) {
         el('span', { className: 'topic-kicker', textContent: `${list.length} ${list.length === 1 ? 'evento' : 'eventos'}` }),
         h2)));
     const cards = el('div', { className: 'cards' });
-    list.forEach(ev => cards.append(card(ev)));
+    list.forEach(ev => {
+      const c = card(ev);
+      if (animate) c.classList.add('card-rv'); // hidden until revealed one by one
+      cards.append(c);
+    });
     sec.append(cards);
     inner.append(sec);
   }
   results.innerHTML = '';
   results.append(inner);
-  if (animate) {  // fade the real content in (setTimeout, not rAF, so it fires even in a bg tab)
-    inner.style.opacity = '0';
-    setTimeout(() => { inner.style.opacity = '1'; }, 30);
-    setTimeout(() => { inner.style.transition = 'none'; inner.style.opacity = '1'; }, 1200); // safety
-  }
+  if (animate) revealCards(); // cards fade in one by one as they enter view
   renderActiveFilterNote();
   refreshChipStates();
   syncHash();

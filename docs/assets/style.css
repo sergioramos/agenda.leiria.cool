@@ -341,7 +341,10 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
    the page edge). Staggered top-to-bottom via --d. */
 html.js .rv { opacity: 0; transition: opacity .7s ease; transition-delay: var(--d, 0ms); }
 html.js body.revealed .rv { opacity: 1; }
-.results-inner { transition: opacity .55s ease; }
+
+/* event cards fade in one by one (JS staggers them as they enter the viewport) */
+html.js .card-rv { opacity: 0; transition: opacity .5s ease; }
+html.js .card-rv.in { opacity: 1; }
 
 /* skeleton — built from the REAL .card structure (see skeletonCard in app.js),
    so the placeholder matches the layout exactly. Fades in, then fades into the
