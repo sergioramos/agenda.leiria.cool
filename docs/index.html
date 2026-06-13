@@ -52,17 +52,22 @@
             <span class="filt-sign" id="filt-sign" aria-hidden="true">+</span> Filtros
           </button>
         </div>
-        <!-- expanded filters open right below the search row (Figma 17:154) -->
-        <div class="filter-panel" id="filter-panel" hidden>
-          <div class="filter-group filter-day">
-            <h3>Dia</h3>
-            <div class="chips small" id="day-chips" role="group" aria-label="Dia"></div>
-          </div>
-          <div class="filter-group filter-price">
-            <h3>Preço</h3>
-            <div class="chips small" id="price-chips" role="group" aria-label="Preço">
-              <button class="chip" type="button" data-price="all" aria-pressed="true"><span>Todos</span></button>
-              <button class="chip" type="button" data-price="free" aria-pressed="false"><span>Só grátis</span></button>
+        <!-- expanded filters open right below the search row (Figma 17:154);
+             the collapse animates its height so the content below slides -->
+        <div class="filter-collapse" id="filter-collapse">
+          <div class="filter-collapse-inner">
+            <div class="filter-panel" id="filter-panel">
+              <div class="filter-group filter-day">
+                <h3>Dia</h3>
+                <div class="chips small" id="day-chips" role="group" aria-label="Dia"></div>
+              </div>
+              <div class="filter-group filter-price">
+                <h3>Preço</h3>
+                <div class="chips small" id="price-chips" role="group" aria-label="Preço">
+                  <button class="chip" type="button" data-price="all" aria-pressed="true"><span>Todos</span></button>
+                  <button class="chip" type="button" data-price="free" aria-pressed="false"><span>Só grátis</span></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

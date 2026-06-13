@@ -341,20 +341,11 @@ async function init() {
   $('#search').addEventListener('input', e => { state.filters.q = e.target.value.trim().toLowerCase(); render(); });
   const filtToggle = $('#filters-toggle');
   filtToggle.onclick = () => {
-    const panel = $('#filter-panel'); const opening = panel.hidden;
-    filtToggle.setAttribute('aria-expanded', opening);
-    const sign = $('#filt-sign'); if (sign) sign.textContent = opening ? '−' : '+';
-    clearTimeout(panel._closeT);
-    if (opening) {
-      panel.hidden = false;
-      panel.classList.remove('closing');
-      panel.classList.add('opening');
-    } else {
-      // play the close animation, then drop it from layout (timer ≈ anim length)
-      panel.classList.remove('opening');
-      panel.classList.add('closing');
-      panel._closeT = setTimeout(() => { panel.classList.remove('closing'); panel.hidden = true; }, 200);
-    }
+    const collapse = $('#filter-collapse');
+    const open = !collapse.classList.contains('open');
+    collapse.classList.toggle('open', open);
+    filtToggle.setAttribute('aria-expanded', open);
+    const sign = $('#filt-sign'); if (sign) sign.textContent = open ? '−' : '+';
   };
   $$('#price-chips .chip').forEach(b => b.onclick = () => { state.filters.free = b.dataset.price === 'free'; render(); });
   $('#empty-clear').onclick = () => {

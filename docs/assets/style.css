@@ -65,7 +65,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
    white · padding 16px vertical · continuous marquee · 4px #ff3d1f rule below. */
 .topbar { background: #1d1813; overflow: hidden; padding: 16px 0; }
 .ticker-track {
-  display: flex; width: max-content; will-change: transform;
+  display: flex; width: max-content; min-height: 16px; will-change: transform;
   animation: ticker-scroll var(--ticker-duration, 40s) linear infinite;
 }
 .ticker-half { display: flex; flex: none; }
@@ -126,7 +126,11 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 }
 .hero-title em { font-style: italic; font-weight: 400; color: #ff3d1f; }
 .hero-sub { margin: 0; font-family: var(--grotesk); font-weight: 400; font-size: 18px; line-height: 24px; color: #3a3a3a; }
-.hero-controls { display: flex; flex-direction: column; gap: 24px; }
+/* no flex gap here — spacing lives on the chips + the panel (inside the
+   collapsible track) so the filter panel can animate its height without a
+   stray gap lingering when it's closed */
+.hero-controls { display: flex; flex-direction: column; }
+.hero-controls #topic-chips { margin-top: 24px; }
 @media (max-width: 640px) {
   .hero-title { font-size: 48px; line-height: 54px; letter-spacing: -2px; }
 }
@@ -330,8 +334,6 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
    when a week loads; the filter panel slides open. All disabled under
    prefers-reduced-motion. */
 @keyframes riseIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@keyframes panelOpen { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
-@keyframes panelClose { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-6px); } }
 
 .hero-eyebrow, .hero-title, .hero-sub, .hero-controls { animation: riseIn .6s cubic-bezier(.2, .7, .3, 1) both; }
 .hero-eyebrow { animation-delay: .04s; }
@@ -341,8 +343,17 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
 .topic-section.reveal { animation: riseIn .5s cubic-bezier(.2, .7, .3, 1) both; animation-delay: var(--reveal-delay, 0ms); }
 
-.filter-panel.opening { animation: panelOpen .26s cubic-bezier(.2, .7, .3, 1) both; }
-.filter-panel.closing { animation: panelClose .18s ease both; }
+/* filter panel: collapse animates HEIGHT (0fr↔1fr) so the chips + page below
+   slide instead of jumping. The 24px gap above the panel sits inside the
+   clipped track, so nothing lingers when closed. */
+.filter-collapse {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .32s cubic-bezier(.2, .7, .3, 1), opacity .28s ease;
+  opacity: 0;
+}
+.filter-collapse.open { grid-template-rows: 1fr; opacity: 1; }
+.filter-collapse-inner { overflow: hidden; min-height: 0; }
+.filter-collapse .filter-panel { margin-top: 24px; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
