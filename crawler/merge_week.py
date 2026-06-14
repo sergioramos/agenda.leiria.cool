@@ -43,6 +43,13 @@ def main():
     src = core.load_sources()["sources"]
     events = core.dedupe(events, src)
     core.drop_shared_images(events)  # logos/defaults shared across shards
+
+    # NEVER publish an empty week — a failed crawl (e.g. the AI API down) must not
+    # wipe the live site. Keep whatever is already published.
+    if not events:
+        print(f"[abort] 0 events for {week_start} (AI calls {ai_calls}, ${cost:.2f}) — "
+              "likely an API failure; keeping the previously published week.")
+        return
     crawlable = sum(1 for s in src if s.get("crawlable") and s.get("status") in ("active", "renovation"))
     gen = args.generated_at or datetime.now(timezone.utc).isoformat(timespec="seconds")
 
