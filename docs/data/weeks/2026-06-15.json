@@ -1,0 +1,14 @@
+{
+  "week_start": "2026-06-15",
+  "week_end": "2026-06-21",
+  "generated_at": "2026-06-14T09:11:16Z",
+  "is_sample": false,
+  "source_count": 540,
+  "event_count": 0,
+  "meta": {
+    "sources_tried": 513,
+    "ai_calls": 394,
+    "ai_cost_usd": 0.0
+  },
+  "events": []
+}
