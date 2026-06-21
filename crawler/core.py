@@ -779,6 +779,42 @@ def parish_neighbourhood(lat, lng, geojson: dict, name_prop: str) -> tuple:
     return None, None
 
 
+FREGUESIAS_PATH = ROOT / "sources" / "lisboa-freguesias.geojson"
+
+
+def load_freguesias() -> tuple:
+    """(geojson, name_prop) for the Lisbon parish polygons, or (None, None)."""
+    if not FREGUESIAS_PATH.exists():
+        return None, None
+    try:
+        g = json.loads(FREGUESIAS_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return None, None
+    feats = g.get("features", [])
+    prop = "NOME"
+    if feats and "NOME" not in (feats[0].get("properties") or {}):
+        prop = next((k for k, v in (feats[0].get("properties") or {}).items()
+                     if isinstance(v, str)), "NOME")
+    return g, prop
+
+
+def fill_neighbourhoods(events: list[dict], geojson: dict, name_prop: str) -> int:
+    """Backfill the neighbourhood from each event's own coordinates (parish
+    point-in-polygon) when the venue name didn't resolve to one. Returns the
+    count filled. This catches coord-bearing connector events (Fever/BOL/Xceed/
+    Ticketline) whose venue isn't in the directory."""
+    if not geojson:
+        return 0
+    filled = 0
+    for e in events:
+        if e.get("neighbourhood") or not e.get("lat"):
+            continue
+        n, z = parish_neighbourhood(e.get("lat"), e.get("lng"), geojson, name_prop)
+        if n:
+            e["neighbourhood"], e["zone"], filled = n, z, filled + 1
+    return filled
+
+
 def load_venues() -> dict:
     """Venue directory (sources/venues.json): _nt(name) -> {name,lat,lng,
     neighbourhood,zone,address}. Empty dict if not built yet."""
@@ -889,7 +925,7 @@ def event_coord_key(e: dict) -> str | None:
 
 
 # sources whose price is the most authoritative (exact ticket price)
-_TICKETING = {"bol", "dice", "xceed", "shotgun", "ticketline"}
+_TICKETING = {"bol", "dice", "xceed", "shotgun", "ticketline", "fever"}
 
 
 def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:

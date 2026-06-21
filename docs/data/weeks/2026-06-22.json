@@ -1,10 +1,10 @@
 {
   "week_start": "2026-06-22",
   "week_end": "2026-06-28",
-  "generated_at": "2026-06-21T22:04:23Z",
+  "generated_at": "2026-06-21T22:21:36Z",
   "is_sample": false,
   "source_count": 540,
-  "event_count": 893,
+  "event_count": 922,
   "meta": {
     "sources_tried": 513,
     "ai_calls": 427,
@@ -17,6 +17,7 @@
       "bol": "ok",
       "xceed": "ok",
       "mato": "ok",
+      "fever": "ok",
       "dice": "ok",
       "ticketline": "ok"
     },
@@ -28,10 +29,11 @@
       "bol": 138,
       "xceed": 22,
       "mato": 11,
+      "fever": 42,
       "dice": 5,
       "ticketline": 46
     },
-    "pool_size": 1667
+    "pool_size": 1700
   },
   "events": [
     {
@@ -657,7 +659,7 @@
     {
       "id": "cf7f6fdb401a",
       "title": "Bilhete C.I.C. Judaica",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -2000,7 +2002,7 @@
     {
       "id": "45482dc19b27",
       "title": "MAATuridades",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -13932,6 +13934,49 @@
       "prov": null
     },
     {
+      "id": "6c563a21f4b7",
+      "title": "Historical tour of Lisbon: 48 hours unlimited travel",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Walking Tours Lisbon",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.71667,
+      "lng": -9.13333,
+      "start": "2026-06-21",
+      "end": "2026-08-14",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 38.0,
+        "currency": "EUR",
+        "text": "€38"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/156661/en",
+      "source": "fever",
+      "description": "📱 Tickets from your cell phone Instant access to your tickets Understands. Explore this incredible experience now and enjoy it to the full. Discover everything this event has to offer and take advantage of the unique opportunity that awaits you. Don't waste any more time, book yo.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/d67f0dbe-cf00-11ee-afb6-a27bc4472cca",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "34005eceba79",
       "title": "Nicole Joye",
       "topic": "art",
@@ -14100,7 +14145,7 @@
     {
       "id": "9f53f91cf769",
       "title": "Albuquerque Foundation",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14272,7 +14317,7 @@
     {
       "id": "2711f435c9d8",
       "title": "Casa das Histórias Paula Rego",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14358,7 +14403,7 @@
     {
       "id": "78cab7fffb82",
       "title": "Passe 1 Dia – FDLI",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14444,14 +14489,14 @@
     {
       "id": "2c2b8589dd7d",
       "title": "Palácio Pimenta - Museu de Lisboa",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-21T10:00",
@@ -14487,14 +14532,14 @@
     {
       "id": "795614c43e7d",
       "title": "Palácio Pimenta - por Amor à Cidade - 90 Anos do Gal",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-21T10:00",
@@ -14530,7 +14575,7 @@
     {
       "id": "770d84cce95d",
       "title": "Meu Querido Santo António.imagens Coleções Particulares-Exp Temporária",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14577,14 +14622,14 @@
     {
       "id": "5b3a6d7fc574",
       "title": "Museu de Lisboa - Santo António",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "ML - Santo António",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.710078,
       "lng": -9.13388513,
       "start": "2026-06-21T10:00",
@@ -14620,7 +14665,7 @@
     {
       "id": "41afc7b0ba04",
       "title": "Museu Bordalo Pinheiro - Visita Livre",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14706,7 +14751,7 @@
     {
       "id": "1039fde497d2",
       "title": "Bilhete CILT Torres Vedras",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14792,7 +14837,7 @@
     {
       "id": "3007f4a665b5",
       "title": "Museu do Aljube Resistência e Liberdade",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -14920,14 +14965,14 @@
     {
       "id": "5950f1ca8f5f",
       "title": "Palácio Pimenta - a Chave Perdida: um Enigma no Coração de Lisboa",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-21T10:30",
@@ -15006,7 +15051,7 @@
     {
       "id": "f8759abdc9b6",
       "title": "Visita Orientada En Espanõl",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -15301,8 +15346,8 @@
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-21T15:00",
@@ -15507,7 +15552,7 @@
     {
       "id": "27c1eede7a98",
       "title": "Visita Orientada em Português",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -15587,7 +15632,7 @@
     {
       "id": "a9ce57261c84",
       "title": "Crooked & Grinded",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -17043,8 +17088,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-21T22:00",
@@ -17331,7 +17376,7 @@
     {
       "id": "7150a69f3256",
       "title": "MUSEU",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -17473,6 +17518,221 @@
       "image": "https://www.portaldadanca.pt/boffice/imagens/img/121014190969efe53e437434.77524662.2026-04-27223750.webp"
     },
     {
+      "id": "225422091d75",
+      "title": "National Palace and Queluz Gardens: Skip-the-Line Ticket",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Queluz National Palace",
+      "source_id": "fever",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": 38.7507229,
+      "lng": -9.259082399999999,
+      "start": "2026-06-22T09:00",
+      "end": "2026-09-09",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 13.0,
+        "currency": "EUR",
+        "text": "€13"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/156665/en",
+      "source": "fever",
+      "description": "⭐ National Palace and Queluz Gardens: Skip-the-Line Ticket. Discover the royal elegance of Queluz. Tickets 🎫 Child (0-5) - Infant 🎫 Adult (6+) Highlights 💥 Discover the best flavors in town! 🎉 Have fun with friends and incredible food! 🍔 Live an unforgettable gastronomic experien.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/809bb21a-cf0c-11ee-80a4-4e0e9ae47c33",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "2974d28c7412",
+      "title": "Tukxi Madeira - Lisbon",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Fever",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7081,
+      "lng": -9.1385,
+      "start": "2026-06-22T10:00",
+      "end": "2026-09-26",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 140.0,
+        "currency": "EUR",
+        "text": "€140"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/255653/en",
+      "source": "fever",
+      "description": "Highlights 🌆 Discover the charm of Alfama, Graça and Mouraria, and let yourself be surprised by the breathtaking views from the belvederes 🎨 Stroll through lively neighborhoods with works by Bordalo II, Vhils, Add Fuel and other iconic Performers 🛺 Explore Lisbon effortlessly, wi.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/baf87b2a-865c-11ef-8114-46e9adc8e198.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "44e745b7885f",
+      "title": "Belém Guided Walking Tour",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Fonte Monumental de Belém",
+      "source_id": "fever",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.6960708,
+      "lng": -9.206023499999999,
+      "start": "2026-06-22T10:00",
+      "end": "2026-09-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 120.0,
+        "currency": "EUR",
+        "text": "€120"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/326547/en",
+      "source": "fever",
+      "description": "What you'll find explore the Jerónimos Monastery and immerse yourself in the golden age of the Discoveries. 🎨 Discover the fusion between the past and modernity through museums, architecture and urban art. 🥐 Enjoy authentic Pastéis de Belém, a real explosion of flavor! Informatio.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/bf2ec480-ff68-11ef-a3c0-060663e3a0ff",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "ee9c78449211",
+      "title": "Lisbon: Unlimited bus, boat and streetcar travel for 72 or 96 hours",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Hop-on Hop-off Bus Lisbon",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.714083,
+      "lng": -9.137631,
+      "start": "2026-06-22T10:00",
+      "end": "2026-08-16",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 23.5,
+        "currency": "EUR",
+        "text": "€23,50"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/151225/en",
+      "source": "fever",
+      "description": "⭐ Lisbon: Unlimited bus, boat and streetcar travel for 72 or 96 hours. Discover Lisbon in 72 or 96 hours with unlimited access to hop-on hop-off buses and boats! Tickets 🎫 Children (4-10) - 72 hours 🎫 Young people (11-17) - 72 hours adults (18+) - 72 hours youth (11-17) 96 hours.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/d466a3e4-ba05-11ee-b22b-4efdda979540",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "5503db878d37",
+      "title": "Entrance to the Marine Museum",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Marinha",
+      "source_id": "fever",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.697681,
+      "lng": -9.206949,
+      "start": "2026-06-22T10:00",
+      "end": "2026-09-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8.0,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/125945/en",
+      "source": "fever",
+      "description": "Tickets for the Marine Museum, Lisbon 🎫 Adult 🎫 Child (4-12) 🎫 Senior (+65) Highlights ⛵ Discover the impressive Cockatoo Pavilion 🤏 United examples of boat models 🧭 The world's largest collection of astrolabes on display General Info ⚠️ This experience takes place in Portuguese.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5430f104-ae3d-11ed-bb49-4e3304662ce3.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "8c91df4e7039",
       "title": "Museu Ciclismo Joaaquim Agostinho (visita guiada p/escolas fora Conc.)",
       "topic": "tours",
@@ -17559,9 +17819,95 @@
       "prov": null
     },
     {
+      "id": "a2e21cc99c91",
+      "title": "Museum of Illusions - Lisbon",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Museum of Illusions",
+      "source_id": "fever",
+      "neighbourhood": "Chiado",
+      "zone": "city",
+      "lat": 38.710515,
+      "lng": -9.140484599999999,
+      "start": "2026-06-22T10:00",
+      "end": "2026-09-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.0,
+        "currency": "EUR",
+        "text": "€12"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/552623/en",
+      "source": "fever",
+      "description": "⭐ Enter the fascinating world of illusions where nothing is as it seems. At the Museum of Illusions Lisbon , perception tricks you and the mind is challenged. Between immersive rooms, interactive illusions and visual challenges, this is an experience that awakens curiosity, provo.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/d8e6c432-22c0-11f1-b4b8-b67a86d904d0.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "304de9c2425e",
+      "title": "Lisbon Oceanarium",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Oceanário de Lisboa",
+      "source_id": "fever",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "lat": 38.7635435,
+      "lng": -9.0937415,
+      "start": "2026-06-22T10:00",
+      "end": "2026-08-16",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 29.0,
+        "currency": "EUR",
+        "text": "€29"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/133656/en",
+      "source": "fever",
+      "description": "📱 Tickets from your phone ⚡ Instant access to your tickets Dive into a stunning underwater journey at the Lisbon Oceanarium! Get face-to-face with over 8,000 marine creatures and discover curious facts about the ocean in a gigantic 5,000 m³ aquarium. Learn the importance of ocean.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/91bf2830-11af-11ee-9421-4ae750f1ed7d",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "8e008c2b69f4",
       "title": "Real Fábrica do Gelo",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -17602,9 +17948,52 @@
       "prov": null
     },
     {
+      "id": "614eb9138b09",
+      "title": "Visit to the Vasco da Gama Aquarium",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Vasco da Gama Aquarium",
+      "source_id": "fever",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": 38.6991811,
+      "lng": -9.2381588,
+      "start": "2026-06-22T10:00",
+      "end": "2026-12-24",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 7.0,
+        "currency": "EUR",
+        "text": "€7"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/125946/en",
+      "source": "fever",
+      "description": "Tickets for the Visit to the Vasco da Gama Aquarium, Lisbon 🎫 Adult 🎫 Child (4-12) 🎫 S enior (+65) Highlights 🗺️ Unique specimens from King Carlos I's oceanographic collection 🐟 Discover beautiful living specimens 🌊 See a virtual window to the ocean General Info 📅 Date: every day.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/2b7529aa-ac45-11ed-9786-6acaa4076ed5.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "1dea0ea6f922",
       "title": "AH AMÁLIA – Living Experience",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -17677,6 +18066,49 @@
       "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/6517909a-0bff-11f1-a287-c2021968684a.png"
     },
     {
+      "id": "ac9cb7bb7641",
+      "title": "Visit to the Pharmacy Museum",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Pharmacy Museum",
+      "source_id": "fever",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.710151,
+      "lng": -9.147139,
+      "start": "2026-06-22T11:00",
+      "end": "2026-12-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/114041/en",
+      "source": "fever",
+      "description": "Tickets 🎫 Adult ticket (+18) 🎫 Senior ticket (+65) 🎫 Student ticket 🎫 Family ticket (2 adults + 2 children) Free entry for children under 5 Highlights 🥼 An engaging and unique journey through 5000 years of health history 🔬 A vast collection of objects of rare artistic, anthropolo.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/ddb0ff66-c6e2-11ec-80b1-92e43911f87c.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "76169e750ec9",
       "title": "Blue Cruises - Tágides Brunch – Passeio de Barco 2026",
       "topic": "tours",
@@ -17685,8 +18117,8 @@
       ],
       "venue": "Blue Cruises",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.706847384873,
       "lng": -9.134091900174,
       "start": "2026-06-22T11:10",
@@ -17722,14 +18154,14 @@
     {
       "id": "485c2f7332a1",
       "title": "Blue Cruises - Tágides Promenade 2026",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "Blue Cruises",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.706847384873,
       "lng": -9.134091900174,
       "start": "2026-06-22T11:10",
@@ -17801,6 +18233,49 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz110551.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "27c932f34251",
+      "title": "Michelin-starred lunch menu at Eleven",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Eleven",
+      "source_id": "fever",
+      "neighbourhood": "Avenidas Novas",
+      "zone": "city",
+      "lat": 38.730762,
+      "lng": -9.155804,
+      "start": "2026-06-22T12:30",
+      "end": "2026-12-19",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 49.0,
+        "currency": "EUR",
+        "text": "€49"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/110297/en",
+      "source": "fever",
+      "description": "Tickets 🎫 Lunch menu for 1 person, consisting of: artisanal breads and butters, olive oil, amuse bouche, starter, main course and dessert Highlights ⭐ Michelin-starred restaurant 😍 Stunning views over Lisbon and the Tagus River 🆕 A menu renewed every two weeks 🍽️ Includes dishes.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/c892e8ce-8f24-11ec-9e56-de86ab14545a",
       "lineup": null,
       "links": null,
       "prov": null
@@ -17918,9 +18393,52 @@
       "prov": null
     },
     {
+      "id": "75aef18c42bd",
+      "title": "Park and National Palace of Pena: Admission Ticket",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Palácio Nacional da Pena",
+      "source_id": "fever",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": 38.7875851,
+      "lng": -9.3906089,
+      "start": "2026-06-22T14:00",
+      "end": "2026-09-12",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 18.0,
+        "currency": "EUR",
+        "text": "€18"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/117180/en",
+      "source": "fever",
+      "description": "📱 Smartphone tickets ⚡ Show your digital ticket at the entrance to the Park and National Palace of Pena The Pena National Palace, popularly known as Pena Castle, was a monastery before being transformed into a private palace by King Fernando II. The park that surrounds it is as i.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/137e0152-0e4b-11ed-8caf-727d2d56e939",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "3c0cc150e133",
       "title": "Realizadoras Britânicas – Out of Chaos + Three Cases of Murder",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -18172,16 +18690,102 @@
       "prov": null
     },
     {
+      "id": "cde2e582eb72",
+      "title": "Two-hour cruise: a different way to see Lisbon",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Doca de Santo Amaro",
+      "source_id": "fever",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.6994781,
+      "lng": -9.1774925,
+      "start": "2026-06-22T19:00",
+      "end": "2026-09-04",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 44.95,
+        "currency": "EUR",
+        "text": "€44,95"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/92156/en",
+      "source": "fever",
+      "description": "📱 Tickets on your phone ⚡ Instant access to your tickets 🌐 Experience available in Portuguese, English, Spanish, French and German ⌛ Boat trip duration: 2h Visit Lisbon in a different way and be surprised by its colors and the way they spread across the mountain and touch the riv.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/fb60be44-03e9-11eb-bf03-06551cb39bc6.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "248c8822a60a",
+      "title": "Walking tour of Alfama with fado and dinner included",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Lisbon Destination Hostel",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7143845,
+      "lng": -9.1407397,
+      "start": "2026-06-22T19:00",
+      "end": "2026-09-04",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 57.95,
+        "currency": "EUR",
+        "text": "€57,95"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/113624/en",
+      "source": "fever",
+      "description": "📱 Tickets from your cell phone Instant access to your tickets Are you one of those people who thinks you need to know Portuguese to understand Fado? Then you're very wrong! Fado is life, it's feeling and it's passion, it crosses any language barrier and conquers anyone! Venture o.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/6726edce-c4ad-11ec-9c60-8640a1c4a3f8.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "5c5b9da569a0",
       "title": "Blue Cruises - Tágides Sunset 2026",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "Blue Cruises",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.706847384873,
       "lng": -9.134091900174,
       "start": "2026-06-22T19:10",
@@ -18215,9 +18819,52 @@
       "prov": null
     },
     {
+      "id": "ee35191e65a6",
+      "title": "Boat trip along the Tagus at sunset with Lisboat",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Cais da Ribeira das Naus",
+      "source_id": "fever",
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
+      "lat": 38.705288,
+      "lng": -9.142489,
+      "start": "2026-06-22T19:30",
+      "end": "2026-08-17",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 13.6,
+        "currency": "EUR",
+        "text": "€13,60"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/151224/en",
+      "source": "fever",
+      "description": "📱 Tickets on your smartphone instant access to your tickets Discover the magic of Lisbon at sunset! Put your worries aside, relax and enjoy a two-hour stroll along the Tagus while you see the city's iconic monuments. To the sound of a talented DJ, sit back and toast with a delici.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/79362bf2-ba05-11ee-90eb-fec021096890",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "87e2483a1df2",
       "title": "Realizadoras Britânicas – Quiet Morning + The Teckman Mystery",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -18254,7 +18901,7 @@
     {
       "id": "dd61f2e2a2a7",
       "title": "Hamlet?",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -18294,7 +18941,7 @@
     {
       "id": "e014233722a9",
       "title": "Ante-Estreias – Poder à Moda Antiga",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -18445,8 +19092,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-22T22:00",
@@ -18902,7 +19549,7 @@
     {
       "id": "98d42796ef6b",
       "title": "A cola não faz a colagem",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -18950,8 +19597,8 @@
       ],
       "venue": "CCB",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Belém",
+      "zone": "city",
       "lat": 38.695638371041,
       "lng": -9.209316372871,
       "start": "2026-06-23T10:00",
@@ -19171,7 +19818,7 @@
     {
       "id": "0c31a134245d",
       "title": "Atendimento Geral 2026",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -19213,7 +19860,7 @@
     {
       "id": "f0a2a1754f60",
       "title": "Candidaturas Externas 2026",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -19261,8 +19908,8 @@
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-23T10:00",
@@ -19299,14 +19946,14 @@
     {
       "id": "a78b3b72503c",
       "title": "Iconografia da Liberdade",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "MUDE",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.709173047805,
       "lng": -9.136494398117,
       "start": "2026-06-23T10:00",
@@ -19347,8 +19994,8 @@
       ],
       "venue": "MUDE",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.709173047805,
       "lng": -9.136494398117,
       "start": "2026-06-23T10:00",
@@ -19383,14 +20030,14 @@
     {
       "id": "817910928a91",
       "title": "Para que Servem as Coisas?",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "MUDE",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.709173047805,
       "lng": -9.136494398117,
       "start": "2026-06-23T10:00",
@@ -19425,14 +20072,14 @@
     {
       "id": "db69f4260ba3",
       "title": "Ver e Ler Paulo de Cantos",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "MUDE",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.709173047805,
       "lng": -9.136494398117,
       "start": "2026-06-23T10:00",
@@ -19473,8 +20120,8 @@
       ],
       "venue": "MUDE",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.709173047805,
       "lng": -9.136494398117,
       "start": "2026-06-23T10:00",
@@ -19541,7 +20188,7 @@
     {
       "id": "ebbd17f5a81f",
       "title": "Museu da Marioneta",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -19665,6 +20312,174 @@
       "prov": null
     },
     {
+      "id": "5a8bb7e8c801",
+      "title": "Tastes of Portugal - Wine, Beer & Port at the Hyatt Regency Lisboa",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Hyatt Regency Lisbon",
+      "source_id": "fever",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.6985453,
+      "lng": -9.1867144,
+      "start": "2026-06-23T11:00",
+      "end": "2027-03-31",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 40.0,
+        "currency": "EUR",
+        "text": "€40"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/578744/en",
+      "source": "fever",
+      "description": "What you'll find 🍷 A wine tasting of White, Red, Rosé and Porto 🍺 Local beers such as Super Bock, Sagres and Craft options 🍴 Traditional and irresistible Portuguese miniatures General Info 📅 Dates and times: Sunday to Thursday, between 11 am and 7 pm ⏳ Duration: between 1 and 3 h.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/6517909a-0bff-11f1-a287-c2021968684a.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "61b92d375d57",
+      "title": "Riverside Beer Tasting at the Hyatt Regency Lisboa",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Hyatt Regency Lisbon",
+      "source_id": "fever",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.6985453,
+      "lng": -9.1867144,
+      "start": "2026-06-23T11:00",
+      "end": "2026-11-01",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 35.0,
+        "currency": "EUR",
+        "text": "€35"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/578839/en",
+      "source": "fever",
+      "description": "Highlights 🍺 A relaxed tasting of Portuguese beers 🇵🇹 Portuguese Imperials (Sagres and Local Craft Beer \"Yellow Tram\" by Musa) 🍴Delicious miniatures to accompany General Info 📅 Dates and times: Sunday to Thursday, between 11 a.m. and 7 p.m. ⏳ Duration: between 1 and 3 hours 📍 Loc.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/74301dd2-0c26-11f1-8c6e-42b91da8b213.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "9cc8a753bc44",
+      "title": "Visit to the Jerónimos Monastery",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Jerónimos Monastery",
+      "source_id": "fever",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.697891,
+      "lng": -9.206704,
+      "start": "2026-06-23T11:30",
+      "end": "2026-09-17",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 18.0,
+        "currency": "EUR",
+        "text": "€18"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/113633/en",
+      "source": "fever",
+      "description": "📱 Tickets on your phone ⚡ Instant access to your tickets Classified as a UNESCO World Heritage Site in 1983, the Jerónimos Monastery is a must-see for both Lisbon residents and visitors to the Portuguese capital! An unprecedented tribute to Portuguese identity and culture that wi.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/671f6fee-c4a9-11ec-8b83-3e5312b0f4d0",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "7bb03ba29c11",
+      "title": "Guided tour of the Amália Rodrigues House-Museum",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Foundation Amália Rodrigues",
+      "source_id": "fever",
+      "neighbourhood": "Campo de Ourique",
+      "zone": "city",
+      "lat": 38.715474,
+      "lng": -9.1546,
+      "start": "2026-06-23T13:00",
+      "end": "2026-10-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 9.0,
+        "currency": "EUR",
+        "text": "€9"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/101650/en",
+      "source": "fever",
+      "description": "Tickets 🎫 Guided tour of the House-Museum for students* (up to 25 years old) 🎫 Guided tour of the House-Museum for adults (aged 13 and over) 🎫 Guided tour of the House-Museum for seniors (over 65) 🎫 Guided tour of the House-Museum for families (2 adults + 1 to 3 children) Free en.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5d78e410-fe99-11eb-a534-c6618a4ef84f.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "bf33847af809",
       "title": "Dança Oriental – Aulas Regulares Presenciais e Online",
       "topic": "performance",
@@ -19771,6 +20586,48 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153802.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "00779af9bf22",
+      "title": "Lisbon: Guided tour of Belém + Entrance to the Jerónimos Monastery",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Jerónimos Monastery",
+      "source_id": "fever",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.697891,
+      "lng": -9.206704,
+      "start": "2026-06-23T15:30",
+      "end": "2026-09-13",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 56.0,
+        "currency": "EUR",
+        "text": "€56"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/494797/en",
+      "source": "fever",
+      "description": "📱 Smartphone tickets ⚡ Instant access to your tickets Embark on an epic walking tour through Lisbon and dive into the wonders of Portugal's Age of Exploration! Wander through Belém, soaking in iconic sights like the Belém Tower, the irresistible Pasteis de Belém, and the breathta.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/367b1af8-b002-11f0-90e5-d216288d991e",
       "lineup": null,
       "links": null,
       "prov": null
@@ -19919,7 +20776,7 @@
     {
       "id": "099847720cf4",
       "title": "Basta",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -20100,7 +20957,7 @@
     {
       "id": "6cd5af34d0d2",
       "title": "Realizadoras Britânicas – One is One + Together",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -20275,7 +21132,7 @@
     {
       "id": "86676de3f55b",
       "title": "A LOVE SUPREME de Xavier Durringer",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -20310,6 +21167,90 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153618.jpg?v=2",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "9bf774f9422c",
+      "title": "A Taste of Lisbon: Wine Tasting Experience",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Praça Luís de Camões",
+      "source_id": "fever",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.7105849,
+      "lng": -9.143476399999999,
+      "start": "2026-06-23T20:00",
+      "end": "2026-12-31",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 35.0,
+        "currency": "EUR",
+        "text": "€35"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/93064/en",
+      "source": "fever",
+      "description": "An evening to slow down, taste, and connect. Join us for a relaxed and intimate wine tasting experience, where four different wines will be explored, savored, and enjoyed. As each glass is served, you'll be guided through the stories, aromas, and sensations that make every wine u.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/baa0bdbc-3adf-11f0-88e7-9e9c9dec298b",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "31788667c0c8",
+      "title": "Association: Dinner in Lisbon - Portuguese Live Music -Fado Show",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Rua de São Mamede",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7115119,
+      "lng": -9.1354384,
+      "start": "2026-06-23T20:00",
+      "end": "2026-08-27",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 25.0,
+        "currency": "EUR",
+        "text": "€25"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/456040/en",
+      "source": "fever",
+      "description": "⭐ At Associação do Fado Casto, your night begins in a historic space, with walls built from the stones of the neighboring Roman Theatre, bearing witness to centuries of tradition. More than just a restaurant for your dinner, it is a journey through the cultural soul of Portugal.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/b9cc709c-8cbb-11f0-9e62-3ace87f43c21",
       "lineup": null,
       "links": null,
       "prov": null
@@ -20433,7 +21374,7 @@
     {
       "id": "4fe0ffbbc91c",
       "title": "Realizadoras Britânicas – District Nurse + Street Corner",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -20514,8 +21455,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-23T22:00",
@@ -21102,6 +22043,47 @@
       "prov": null
     },
     {
+      "id": "8919a0be50ea",
+      "title": "The slave trade in Lisbon: historical walking tour",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Slave Trade Walking Tour",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7112968,
+      "lng": -9.1279434,
+      "start": "2026-06-24T10:00",
+      "end": "2026-09-04",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 32.83,
+        "currency": "EUR",
+        "text": "€32,83"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/92004/en",
+      "source": "fever",
+      "description": "Tickets 🎫 3-hour guided walking tour of the city about the slave trade for 1 person Highlights 👣 Enjoy the main attractions of Lisbon's city center and learn about its connection to the slave trade 🧐 Discover how this trade shaped Portugal's development 🗣️ Tour led by a certified.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/b19f84d8-ff1f-11ea-bf03-06551cb39bc6.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "e23fad21c9f9",
       "title": "Ministério do Sensível",
       "topic": "art",
@@ -21325,7 +22307,7 @@
     {
       "id": "97d6c97ff989",
       "title": "Realizadoras Britânicas – They Also Serve + We Joined The Navy + Corte",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -21745,7 +22727,7 @@
     {
       "id": "2770fd5e2a59",
       "title": "Caravana",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -21855,7 +22837,7 @@
     {
       "id": "d818412afaf2",
       "title": "Realizadoras Britânicas – What\"s for Dinner + Once We Were Four + Vict",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -21938,7 +22920,7 @@
     {
       "id": "b05e6b1d100f",
       "title": "EVITA",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -22435,8 +23417,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-24T22:00",
@@ -23447,6 +24429,126 @@
       "image": null
     },
     {
+      "id": "8662644391c3",
+      "title": "Khufu’s Horizon: Journey to Ancient Egypt",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Estação de Metro Terreiro do Paço",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.707181,
+      "lng": -9.133253999999999,
+      "start": "2026-06-25T12:40",
+      "end": "2026-08-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 21.0,
+        "currency": "EUR",
+        "text": "€21"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/471066/en",
+      "source": "fever",
+      "description": "⭐ The Pyramids of Egypt have arrived in Lisbon for the first time! This immersive and revolutionary expedition takes you back to the golden age of ancient Egypt, allowing you to explore the depths of the iconic pyramids, meet the goddess Bastet, observe the embalming process, and.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/65bf4474-bafc-11f0-9105-f693655c8ee9.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "46497cd4eae5",
+      "title": "Machu Picchu: Journey to the Lost City",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Estação de Metro Terreiro do Paço",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.707181,
+      "lng": -9.133253999999999,
+      "start": "2026-06-25T12:40",
+      "end": "2026-08-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15.0,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/642982/en",
+      "source": "fever",
+      "description": "⭐ Machu Picchu: Journey to the Lost City , with Terry Crews, takes you 450 years back in time to the heart of the ancient Inca Empire in an immersive virtual reality experience. Climb the breathtaking peaks of the Andes, explore the Temple of the Sun, walk along iconic terraces,",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5f0b8ca0-1646-11f1-ac12-ba20cbfb23f9.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "98ab5a2acffb",
+      "title": "Wine tasting with cheeses, charcuterie and snacks",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Wine Tasting Bar",
+      "source_id": "fever",
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
+      "lat": 38.7161936,
+      "lng": -9.1442676,
+      "start": "2026-06-25T13:00",
+      "end": "2026-09-04",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 59.95,
+        "currency": "EUR",
+        "text": "€59,95"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/92001/en",
+      "source": "fever",
+      "description": "Tickets 🎫 Tasting of Portuguese wines with an expert and lunch consisting of cheeses, cold meats and snacks for 1 person The ticket includes: Tasting of 6 wines from 6 different Portuguese regions, accompanied by a tasting menu of cheeses, charcuterie and savory snacks from local.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/ee0cd116-ff1d-11ea-bf03-06551cb39bc6.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "2a43b762d1f8",
       "title": "Ciclo 6 – O que é o amarelo para o azul?",
       "topic": "performance",
@@ -23489,7 +24591,7 @@
     {
       "id": "13894d04bc6b",
       "title": "SER",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -23590,7 +24692,7 @@
     {
       "id": "21ebaab3de5e",
       "title": "Kusudama",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -23659,7 +24761,7 @@
     {
       "id": "17d2ad6a199b",
       "title": "Realizadoras Britânicas – Fair Rent + The Happy Family",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -23820,7 +24922,7 @@
     {
       "id": "8d623f3d95f5",
       "title": "No Tempo da Outra Senhora",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24041,8 +25143,8 @@
       ],
       "venue": "Cais Rocha Conde de Óbidos",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Estrela",
+      "zone": "city",
       "lat": 38.7031518,
       "lng": -9.1623508,
       "start": "2026-06-25T19:00",
@@ -24281,16 +25383,18 @@
       "image": "https://secure-content.meetupstatic.com/images/classic-events/532266945/676x676.jpg"
     },
     {
-      "id": "96c059b3063f",
+      "id": "b72ad1b267a4",
       "title": "The Lisbon Boat Party: Tagus tour with DJ",
       "topic": "nightlife",
       "categories": [
         1
       ],
       "venue": "Rocha do Conde de Óbidos",
-      "source_id": "fever-feverup-com-lisbon",
-      "neighbourhood": null,
-      "zone": null,
+      "source_id": "fever",
+      "neighbourhood": "Estrela",
+      "zone": "city",
+      "lat": 38.7029004,
+      "lng": -9.1619316,
       "start": "2026-06-25T19:00",
       "end": "2026-10-31",
       "all_day": false,
@@ -24312,13 +25416,16 @@
       ],
       "url": "https://feverup.com/m/157936/en",
       "source": "fever",
-      "description": "The Lisbon Boat Party: Tagus Tour with DJ ð« General admission Highlights âµ Incredible views of both banks from the river ðµ The best music with a live DJ âï¸ A magical sunset followed by a great night out Includes: welcome drink, long drink, entry to one of Lisbon's bes.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/3968e700-d1a0-11ee-ad3a-82d0b7802909"
+      "description": "The Lisbon Boat Party: Tagus Tour with DJ 🎫 General admission Highlights ⛵ Incredible views of both banks from the river 🎵 The best music with a live DJ ☀️ A magical sunset followed by a great night out Includes: welcome drink, long drink, entry to one of Lisbon's best nightclubs.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/3968e700-d1a0-11ee-ad3a-82d0b7802909",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "7eb248bce1c5",
       "title": "Continuamos, que Mais Havemos de Fazer! - Act (TM Acolhimento)",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24426,7 +25533,7 @@
     {
       "id": "d038bf374cca",
       "title": "Anim, 30 anos – Kuxa Kanema",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24506,8 +25613,8 @@
       ],
       "venue": "CCB",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Belém",
+      "zone": "city",
       "lat": 38.695638371041,
       "lng": -9.209316372871,
       "start": "2026-06-25T20:00",
@@ -24641,7 +25748,7 @@
     {
       "id": "f4a22393db43",
       "title": "António e Cleópatra",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24681,7 +25788,7 @@
     {
       "id": "27eb461c4f7a",
       "title": "Titus Andronicus",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24873,7 +25980,7 @@
     {
       "id": "c4d23558a946",
       "title": "Freakshow Labs – Lisboa",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24910,7 +26017,7 @@
     {
       "id": "9696f023a142",
       "title": "Oppenheimer - CICLO CHRISTOPHER NOLAN",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -24988,7 +26095,7 @@
     {
       "id": "72ae8c7bc54e",
       "title": "Realizadoras Britânicas – Understanding Aggression + Eyewitness",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -25089,7 +26196,7 @@
     {
       "id": "21bc1624720b",
       "title": "Radojka - Marina Mota",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -25129,7 +26236,7 @@
     {
       "id": "b63c720dc7d8",
       "title": "GATO DE BIBLIOTECA – Stand Book Comedy",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -25282,8 +26389,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-25T22:00",
@@ -26395,6 +27502,45 @@
       "prov": null
     },
     {
+      "id": "fbb6ad747210",
+      "title": "Explore Lisbon Like a Local: Experience Bairro Alto and Baixa",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Fado Museum",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7111258,
+      "lng": -9.127616000000002,
+      "start": "2026-06-26T16:00",
+      "end": "2026-10-31",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 1.0,
+        "currency": "EUR",
+        "text": "€1"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/329381/en",
+      "source": "fever",
+      "description": "Highlights ✨ Explore historic streets full of charm, culture, and tradition 🍽️ Enjoy fresh seafood, traditional sweets, and the city's authentic cuisine 🎶 Discover iconic bars, live music, and the unique energy of Bairro Alto What Is Included? ✔️ Walking tour of Bairro Alto ✔️ Gu.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/9b6cadda-1ad1-11f0-b700-1add1a6d774b",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "fb3ebd01f655",
       "title": "Superb: Rene Wise, Function, LADYMONIX, Varela, Mâhfoud, HNRQ",
       "topic": "nightlife",
@@ -26974,8 +28120,8 @@
       ],
       "venue": "Cais Rocha Conde de Óbidos",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Estrela",
+      "zone": "city",
       "lat": 38.7031518,
       "lng": -9.1623508,
       "start": "2026-06-26T19:00",
@@ -27037,7 +28183,7 @@
     {
       "id": "0370aeaa7cde",
       "title": "Viagem ao Fim do Mudo – A Woman of Paris",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -27265,8 +28411,8 @@
       ],
       "venue": "Blue Cruises",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.706847384873,
       "lng": -9.134091900174,
       "start": "2026-06-26T19:30",
@@ -27298,7 +28444,7 @@
     {
       "id": "ee01faf8ab53",
       "title": "Realizadoras Britânicas – District Nurse + Street Corner",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -27400,14 +28546,14 @@
     {
       "id": "c8e3f1317e11",
       "title": "Alvise Sinivia / Mellina Boubetra EN MON FOR INTÉRIEUR #1 MELLINA",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "TBA - Teatro Bairro Alto",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
       "lat": 38.71803,
       "lng": -9.15402,
       "start": "2026-06-26T19:30",
@@ -27524,7 +28670,7 @@
     {
       "id": "35bf8f892e77",
       "title": "Morcegos no Castelo",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -27640,7 +28786,7 @@
     {
       "id": "b1f2a4e65817",
       "title": "Miguel Neves & Friends",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -27730,7 +28876,7 @@
         "is_free": false,
         "min": 15.0,
         "currency": "EUR",
-        "text": "€15–16"
+        "text": "€15–16,11"
       },
       "language": [
         "pt"
@@ -27857,7 +29003,7 @@
     {
       "id": "d7144fbbbe0c",
       "title": "Moulin Rouge!",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -28047,7 +29193,7 @@
     {
       "id": "b0313d2d4e7c",
       "title": "Montanhas Efémeras de Mário Melo Costa",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -28213,7 +29359,7 @@
         "is_free": false,
         "min": 30.0,
         "currency": "EUR",
-        "text": "€30–43"
+        "text": "€30–42,95"
       },
       "language": [
         "pt"
@@ -28273,8 +29419,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-26T22:00",
@@ -28501,7 +29647,7 @@
     {
       "id": "bc1bb0de823a",
       "title": "Shakra – Covers Rock/Pop",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -29655,7 +30801,7 @@
     {
       "id": "11bf73b0905b",
       "title": "Fernando Pessoa at São Jorge Castle",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -29730,7 +30876,7 @@
     {
       "id": "ec7c560b9419",
       "title": "Fábrica da Eletricidade para os + PEQUENOS",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -29768,7 +30914,7 @@
     {
       "id": "32184c6b6a6e",
       "title": "Visita Terra Poética - Anna Maria Maiolino",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -29838,7 +30984,7 @@
     {
       "id": "e1bcd76d8c91",
       "title": "Visita Orientada com Audiodescrição",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -29919,8 +31065,8 @@
       ],
       "venue": "ML - Teatro Romano",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.7103669,
       "lng": -9.1324807,
       "start": "2026-06-27T11:00",
@@ -29957,8 +31103,8 @@
       ],
       "venue": "ML- Fabrica de moagem",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Beato",
+      "zone": "city",
       "lat": 38.73105189193,
       "lng": -9.106052832885,
       "start": "2026-06-27T11:00",
@@ -30054,7 +31200,7 @@
     {
       "id": "286e677b5ebb",
       "title": "Vemos as Mesmas Estrelas",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30129,7 +31275,7 @@
     {
       "id": "81f18bef24e7",
       "title": "Carrinhos Solares - Toy Solar Cars",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30167,7 +31313,7 @@
     {
       "id": "8c0538896735",
       "title": "Visita Fábrica da Eletricidade",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30242,7 +31388,7 @@
     {
       "id": "36fc4bcccfd9",
       "title": "Visitas ÚLTIMO SÁBADO - De Armazém a Museu",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30342,6 +31488,44 @@
       "image": null
     },
     {
+      "id": "385a623aed52",
+      "title": "Rock in Rio Lisboa 2026",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Tejo Park",
+      "source_id": "fever",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "lat": 38.7918017,
+      "lng": -9.092789,
+      "start": "2026-06-27T13:00",
+      "end": "2026-06-28",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 89.0,
+        "currency": "EUR",
+        "text": "€89"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/371468/en",
+      "source": "fever",
+      "description": "On June 20, 21, 27, and 28, the festival comes back to Parque Tejo for its 11th edition, offering more space, more comfort, and a fully renewed experience from the moment you arrive to the final chord. If the last edition was already historic, get ready — this one will raise the.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/337ae5ae-4fa8-11f1-9706-6ac0209ae0ab.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "a8ee4667c179",
       "title": "Workshop Água Forte",
       "topic": "workshops",
@@ -30434,7 +31618,7 @@
         "is_free": false,
         "min": 40.0,
         "currency": "EUR",
-        "text": "€40–140"
+        "text": "€40–139,59"
       },
       "language": [
         "pt"
@@ -30582,7 +31766,7 @@
     {
       "id": "bfd3c9c68ec5",
       "title": "Fernando Pessoa no Castelo de São Jorge",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30734,7 +31918,7 @@
     {
       "id": "98033114199a",
       "title": "Visita História da Energia + pequenos",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30772,7 +31956,7 @@
     {
       "id": "451c6b3f9c52",
       "title": "Visita Turn Around",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -30816,8 +32000,8 @@
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-27T15:00",
@@ -30847,14 +32031,14 @@
     {
       "id": "000ae7494b88",
       "title": "Santo António - História e Devoção a Santo António - Visita LGP",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "ML - Santo António",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Baixa",
+      "zone": "city",
       "lat": 38.710078,
       "lng": -9.13388513,
       "start": "2026-06-27T15:00",
@@ -31033,7 +32217,7 @@
     {
       "id": "1679ca69f162",
       "title": "Visitas Guiadas - Junho",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -31305,6 +32489,44 @@
       "prov": null
     },
     {
+      "id": "c528de9ec652",
+      "title": "Mystery in Lisbon",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Praça Dom Pedro IV",
+      "source_id": "fever",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7138036,
+      "lng": -9.1393681,
+      "start": "2026-06-27T17:00",
+      "end": "2026-11-28",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15.0,
+        "currency": "EUR",
+        "text": "€15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/605394/en",
+      "source": "fever",
+      "description": "What to Expect 🕵️‍♂️ Become a detective for a day and solve the crime that changed Portuguese history 🧩 An immersive experience with hidden clues and puzzles through the streets of Baixa de Lisboa 👥 Ideal to do with friends and family General Info 📅 Dates and times: select your d.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/67540f92-249f-11f1-b994-328c289e1db2.jpeg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "e0e71bfa9647",
       "title": "Fado in Chiado",
       "topic": "music",
@@ -31393,7 +32615,7 @@
         "is_free": false,
         "min": 5.0,
         "currency": "EUR",
-        "text": "€5–5,40"
+        "text": "€5–5,37"
       },
       "language": [
         "pt"
@@ -31627,8 +32849,8 @@
       ],
       "venue": "Cais Rocha Conde de Óbidos",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Estrela",
+      "zone": "city",
       "lat": 38.7031518,
       "lng": -9.1623508,
       "start": "2026-06-27T19:00",
@@ -31739,8 +32961,8 @@
       ],
       "venue": "Príncipe do Tejo",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Estrela",
+      "zone": "city",
       "lat": 38.7031518,
       "lng": -9.1623508,
       "start": "2026-06-27T19:00",
@@ -31839,7 +33061,7 @@
     {
       "id": "af37eacb3690",
       "title": "Realizadoras Britânicas – One is One + Together",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -32119,7 +33341,7 @@
         "is_free": false,
         "min": 12.0,
         "currency": "EUR",
-        "text": "€12–12,89"
+        "text": "€12–13"
       },
       "language": [
         "pt"
@@ -32299,7 +33521,7 @@
         "is_free": false,
         "min": 12.0,
         "currency": "EUR",
-        "text": "€12–13"
+        "text": "€12–12,89"
       },
       "language": [
         "pt"
@@ -32384,7 +33606,7 @@
     {
       "id": "e770fd245594",
       "title": "Notting Hill",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -32458,7 +33680,7 @@
     {
       "id": "6cbe2f4cadbd",
       "title": "Realizadoras Britânicas – Out of Chaos + Three Cases of Murder",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -32564,7 +33786,7 @@
     {
       "id": "4c2e1f4420a8",
       "title": "Até ao fim do mundo",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -32749,7 +33971,7 @@
     {
       "id": "da50c956b8c3",
       "title": "Elvin Brandhi & Pedro Alves Sousa + Emiddio Vasquez",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -32830,8 +34052,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-27T22:00",
@@ -33407,7 +34629,7 @@
     {
       "id": "caabecf124a6",
       "title": "Bicholé",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -33735,7 +34957,7 @@
     {
       "id": "7acb820037ac",
       "title": "Manhã Criativa - Robertos",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -33815,8 +35037,8 @@
       ],
       "venue": "CCB",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Belém",
+      "zone": "city",
       "lat": 38.695638371041,
       "lng": -9.209316372871,
       "start": "2026-06-28T11:00",
@@ -33883,7 +35105,7 @@
     {
       "id": "1e2e4b50fac8",
       "title": "Estas obras MAATam-me!",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -34102,14 +35324,14 @@
     {
       "id": "dfff67eb25d0",
       "title": "Palácio Pimenta - o Museu Fora do Armário - Visita Orientada",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
       "venue": "ML - Palácio Pimenta",
       "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": 38.7587209,
       "lng": -9.1557035,
       "start": "2026-06-28T15:00",
@@ -34258,7 +35480,7 @@
     {
       "id": "77a8f98768fb",
       "title": "A Magia do Eletroíman / The Magic of Electromagnets",
-      "topic": "guides",
+      "topic": "music",
       "categories": [
         1
       ],
@@ -34496,7 +35718,7 @@
         "is_free": false,
         "min": 8.0,
         "currency": "EUR",
-        "text": "€8–27"
+        "text": "€8–26,84"
       },
       "language": [
         "pt"
@@ -34518,8 +35740,8 @@
       ],
       "venue": "Dhārā",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Lumiar",
+      "zone": "city",
       "lat": 38.7442658,
       "lng": -9.1794402,
       "start": "2026-06-28T18:00",
@@ -34926,8 +36148,8 @@
       ],
       "venue": "The Lisbon Pub Crawl - Discover Lisbon",
       "source_id": "xceed",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
       "lat": 38.7125568,
       "lng": -9.1449706,
       "start": "2026-06-28T22:00",

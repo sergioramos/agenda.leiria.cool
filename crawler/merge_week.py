@@ -99,6 +99,12 @@ def main():
     shards = core.reframe_window(shard_events, mon, display_sun)
     events = core.dedupe(pooled + shards, dedupe_sources)
     core.drop_shared_images(events)
+    # backfill the neighbourhood from coordinates for events whose venue name
+    # didn't resolve (Fever/BOL/Xceed/Ticketline carry coords but odd venue names)
+    geojson, name_prop = core.load_freguesias()
+    nb = core.fill_neighbourhoods(events, geojson, name_prop)
+    if nb:
+        print(f"[neigh] backfilled {nb} neighbourhoods from coordinates")
 
     # NEVER publish an empty week — a failed crawl (e.g. the AI API down) must not
     # wipe the live site. Keep whatever is already published.

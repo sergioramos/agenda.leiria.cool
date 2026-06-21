@@ -79,6 +79,14 @@ CONNECTORS = [
         "slug_re": r"/event/[\w-]+-\d{1,2}-[a-z]{3}-\d{4}", "detail_base": "https://ma.to",
     },
     {
+        "id": "fever", "type": "jsonld_detail", "name": "Fever",
+        "website": "https://feverup.com", "topic": "guides",
+        "listing": "https://feverup.com/en/lisbon",
+        "slug_re": r"/m/\d+/en", "detail_base": "https://feverup.com",
+        # Candlelight, immersive experiences, branded shows — detail pages carry
+        # clean schema.org Event JSON-LD (date + geo + offers).
+    },
+    {
         "id": "dice", "type": "dice", "name": "DICE",
         "website": "https://dice.fm", "topic": "music",
         "api": "https://api.dice.fm/unified_search",
@@ -131,6 +139,7 @@ def _strip_html(s) -> str:
     if isinstance(s, list):
         s = s[0] if s else ""
     s = re.sub(r"<[^>]+>", " ", _html.unescape(str(s or "")))
+    s = s.replace("﻿", "").replace("​", "")   # BOM / zero-width from JSON-LD
     return re.sub(r"\s+", " ", s).strip()
 
 
@@ -523,7 +532,9 @@ def _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out):
               if isinstance(p, dict) and p.get("name")]
     img = _ld_one(node.get("image"))
     img = img.get("url") if isinstance(img, dict) else img
-    topic = map_topic(title, _strip_html(node.get("description")), default=c.get("topic") or "music")
+    # content default must be a real topic, never the hidden "guides" aggregator bucket
+    default_topic = c.get("topic") if c.get("topic") not in (None, "guides") else "music"
+    topic = map_topic(title, _strip_html(node.get("description")), default=default_topic)
     ev = core.make_event(
         title=title, source=source, topic=topic, mon=mon, window_end=window_end,
         start_d=start_d, end_d=(ed[0] if ed else None), has_time=has_time, start_iso=start_iso,
@@ -812,7 +823,10 @@ def _get_text(session, cfg, url):
     for attempt in range(2):
         try:
             r = session.get(url, timeout=timeout)
-            return r.text if r.status_code == 200 else None
+            if r.status_code != 200:
+                return None
+            r.encoding = "utf-8"   # many sites omit charset; requests then guesses latin-1 -> mojibake
+            return r.text
         except Exception:
             if attempt:
                 return None
