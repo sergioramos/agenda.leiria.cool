@@ -34,8 +34,18 @@ def main():
     args = ap.parse_args()
 
     pdir = Path(args.partials_dir)
-    partials = [json.loads(p.read_text(encoding="utf-8"))
-                for p in sorted(pdir.rglob("*.json"))]
+    partials = []
+    for p in sorted(pdir.rglob("*.json")):
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"[skip] unreadable partial {p.name}: {e}")
+            continue
+        # only real partials (a stray dump in _partials must not crash the merge)
+        if isinstance(d, dict) and (d.get("events") is not None or d.get("kind")):
+            partials.append(d)
+        else:
+            print(f"[skip] {p.name} is not a partial")
     if not partials:
         print("no partials found — nothing to merge")
         return
@@ -83,8 +93,10 @@ def main():
           f"-{removed} expired, {len(pool['events'])} total")
 
     # ---- build the publish set for the displayed week ----
-    pooled = core.reframe_window(core.pool_events(pool), mon, window_end)
-    shards = core.reframe_window(shard_events, mon, window_end)
+    # reframe to the DISPLAYED Mon-Sun (display_sun), not the wide pool horizon —
+    # otherwise an event past Sunday (when lookahead_days > 7) gets a bogus day chip.
+    pooled = core.reframe_window(core.pool_events(pool), mon, display_sun)
+    shards = core.reframe_window(shard_events, mon, display_sun)
     events = core.dedupe(pooled + shards, dedupe_sources)
     core.drop_shared_images(events)
 

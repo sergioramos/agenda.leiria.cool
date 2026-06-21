@@ -517,6 +517,27 @@ html.js .card-rv.in { opacity: 1; transform: none; }
 .limit-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 440px; }
 @media (max-width: 540px) { .limit-row { grid-template-columns: 1fr; } }
 
+/* connector health wall (admin · Estado) */
+.fontes-wall { margin-top: 18px; }
+.fontes-title {
+  font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 24px;
+  color: #1d1813; margin: 0 0 2px;
+}
+.fontes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
+.fonte {
+  display: flex; align-items: center; gap: 10px; background: var(--bg);
+  border-radius: 4px; padding: 10px 12px; border-left: 3px solid #6f6f6f;
+}
+.fonte-name { font-family: var(--mono); font-weight: 700; font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase; color: #1d1813; }
+.fonte-count { font-family: var(--mono); font-size: 12px; color: #6f6f6f; margin-left: auto; }
+.fonte-badge { font-family: var(--mono); font-weight: 700; font-size: 11px; letter-spacing: .5px;
+  text-transform: uppercase; padding: 2px 7px; border-radius: 3px; color: #fff; background: #6f6f6f; }
+.fonte-ok { border-left-color: #1f9d55; } .fonte-ok .fonte-badge { background: #1f9d55; }
+.fonte-partial, .fonte-shrunk { border-left-color: #d98f00; }
+.fonte-partial .fonte-badge, .fonte-shrunk .fonte-badge { background: #d98f00; }
+.fonte-failed { border-left-color: #ff3d1f; } .fonte-failed .fonte-badge { background: #ff3d1f; }
+
 .run-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .note { font-size: 16px; line-height: 24px; font-family: var(--grotesk); color: #6f6f6f; margin: 12px 0 0; }
 .note a { color: var(--accent); }

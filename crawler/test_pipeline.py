@@ -223,5 +223,59 @@ t('reframe drops out-of-window', [e['id'] for e in _rf], ['r1'])
 t('reframe marks ongoing', _rf[0]['ongoing'], True)
 t('reframe fills days', len(_rf[0]['days']), 7)
 
+# ---- Phase 3: cross-source venue_key (coords) + source-priority merge ----
+def evc(src, title, venue=None, lat=None, lng=None, url=None, price=None, lineup=None):
+    e = ev(src, title, venue=venue, url=url, price=price)
+    e['lat'], e['lng'] = lat, lng
+    if lineup:
+        e['lineup'] = lineup
+    return e
+
+t('coord key ~110m', core.event_coord_key({'lat': 38.7152, 'lng': -9.1448}), '38.715|-9.145')
+t('coord key bad', core.event_coord_key({'lat': -37.0, 'lng': -64.0}), None)
+
+# same coords + near title, DIFFERENT venue names/sources -> merge (venue_key win)
+a = evc(HOT, 'Festival de Jazz', venue='Hot Clube de Portugal', lat=38.715, lng=-9.145)
+b = evc(COL, 'Festival de Jazz', venue='Casa do Jazz', lat=38.7151, lng=-9.1452)
+t('coord merge diff names', len(core.dedupe([a, b], SRCS)), 1)
+
+# same title but DIFFERENT coords + names -> two different places, kept apart
+a = evc(HOT, 'Concerto X', venue='Sala A', lat=38.71, lng=-9.14)
+b = evc(COL, 'Concerto X', venue='Sala B', lat=38.72, lng=-9.16)
+t('coord separation', len(core.dedupe([a, b], SRCS)), 2)
+
+# links[] collects the aggregator's URL alongside the venue's own
+a = evc(COL, 'Show', url='https://coliseu.pt/show')
+b = ev(AGG, 'Show', venue='Coliseu dos Recreios', url='https://agendalx.pt/ev/show')
+out = core.dedupe([a, b], SRCS)
+t('merged to one', len(out), 1)
+t('links carries agg url', out[0].get('links'), ['https://agendalx.pt/ev/show'])
+
+# lineup carried from the copy that has it
+a = evc(COL, 'Gig', url='https://coliseu.pt/gig')
+b = ev(AGG, 'Gig', venue='Coliseu dos Recreios')
+b['lineup'] = ['DJ Marfox', 'Nidia']
+t('lineup carried', core.dedupe([a, b], SRCS)[0].get('lineup'), ['DJ Marfox', 'Nidia'])
+
+# alias neighbourhood from address text
+_aidx = core._alias_index(core.load_taxonomy())
+t('alias neigh chiado', core.alias_neighbourhood('Rua Garrett, Chiado', _aidx)[0], 'Chiado')
+t('alias neigh none', core.alias_neighbourhood('Rua Qualquer 5', _aidx)[0], None)
+t('coord bbox ok', core.valid_lisbon_coord(38.72, -9.14), True)
+t('coord bbox reject', core.valid_lisbon_coord(40.2, -8.4), False)
+
+# ---- JSON-LD offer pricing (per-offer, drop 0-fee, plausibility bound) ----
+t('offer single', connectors._offers_price({'price': '20'})['text'], '€20')
+t('offer lo-hi', connectors._offers_price({'lowPrice': '20', 'highPrice': '50'})['text'], '€20–50')
+t('offer drops 0-fee', connectors._offers_price([{'price': '0'}, {'price': '25'}])['text'], '€25')
+t('offer all-zero free', connectors._offers_price([{'price': '0'}, {'price': 0}])['is_free'], True)
+t('offer bounds 9999', connectors._offers_price({'lowPrice': '20', 'highPrice': '9999'})['text'], '€20')
+t('offer none', connectors._offers_price([])['text'], '')
+
+# JSON-LD datetime: UTC 'Z' -> Europe/Lisbon (+1 summer), midnight = all-day
+t('ld utc->lisbon', connectors._lisbon_dt('2026-08-22T14:00:00.000Z')[2], '2026-08-22T15:00')
+t('ld offset kept', connectors._lisbon_dt('2026-06-24T22:00:00+01:00')[2], '2026-06-24T22:00')
+t('ld midnight allday', connectors._lisbon_dt('2026-06-22T00:00:00.000')[1], False)
+
 print(f'\n{ok} passed, {fail} failed')
 sys.exit(1 if fail else 0)

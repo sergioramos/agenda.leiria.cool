@@ -51,6 +51,34 @@ CONNECTORS = [
         "api": "https://www.gulbenkian.pt/wp-json/wp/v2/events",
         "topic": "music", "neighbourhood": "Avenidas Novas", "zone": "city",
     },
+    {
+        "id": "ra", "type": "ra", "name": "Resident Advisor",
+        "website": "https://ra.co", "topic": "nightlife",
+        # the only source for website-less DIY/queer/techno collectives + line-ups
+    },
+    {
+        "id": "bol", "type": "jsonld_listing", "name": "BOL",
+        "website": "https://www.bol.pt", "topic": "guides",
+        "api": "https://www.bol.pt/Comprar/pesquisa/0-0-11-0-0-0/bilhetes_para_espectaculos_em_lisboa",
+        # PT-wide listing (610 events) — filtered to Lisbon by coordinates; best PRICE
+    },
+    {
+        "id": "xceed", "type": "jsonld_detail", "name": "Xceed",
+        "website": "https://xceed.me", "topic": "nightlife",
+        "listing": "https://xceed.me/en/lisboa/events",
+        "slug_re": r"/lisboa/event/[\w-]+/\d+", "detail_base": "https://xceed.me",
+    },
+    {
+        "id": "mato", "type": "jsonld_detail", "name": "Mato",
+        "website": "https://ma.to", "topic": "guides",
+        "listing": "https://ma.to/events/lisbon",
+        "slug_re": r"/event/[\w-]+-\d{1,2}-[a-z]{3}-\d{4}", "detail_base": "https://ma.to",
+    },
+    {
+        "id": "dice", "type": "dice", "name": "DICE",
+        "website": "https://dice.fm", "topic": "music",
+        "api": "https://api.dice.fm/unified_search",
+    },
 ]
 
 
@@ -70,7 +98,7 @@ _TOPIC_KW = [
     ("workshops",   ["workshop", "oficina", "atelier", "curso", "masterclass", "formacao"]),
     ("learning",    ["conferencia", "conversa", "palestra", "ciencia", "literatura", "livro",
                      "debate", "leitura", "visita guiada conferencia", "coloquio"]),
-    ("food",        ["gastronomia", "comida", "vinho", "mercado", "degustacao", "brunch"]),
+    ("food",        ["gastronomia", "comida", "vinho", "mercado", "degustacao", "supper", "jantar"]),
     ("outdoors",    ["festival", "ar livre", "open air", "jardim", "piquenique"]),
     ("tours",       ["visita guiada", "tour", "passeio", "percurso"]),
     ("wellness",    ["bem-estar", "yoga", "meditacao", "mindfulness"]),
@@ -142,13 +170,23 @@ def _src(c: dict, cat_for_topic: dict) -> dict:
     }
 
 
-def _resolve_neigh(venue_name, venues_idx, fallback_neigh, fallback_zone):
-    """Inherit neighbourhood/zone from a matching seed venue when we know it."""
-    if venue_name and venues_idx:
+def _resolve_place(venue_name, venues_geo, venues_idx, fallback_neigh, fallback_zone):
+    """Resolve a venue name to (lat, lng, neighbourhood, zone): the venue
+    directory (coords + derived neighbourhood) first, then the seed list, then
+    the connector's fallback. Coords are None when unknown."""
+    lat = lng = None
+    neigh, zone = fallback_neigh, fallback_zone
+    g = core.venue_geo(venue_name, venues_geo) if venue_name else None
+    if g:
+        lat, lng = g.get("lat"), g.get("lng")
+        neigh = g.get("neighbourhood") or neigh
+        zone = g.get("zone") or zone
+    if not g and venue_name and venues_idx:
         known = core.resolve_venue(venue_name, venues_idx)
         if known is not None:
-            return known.get("neighbourhood") or fallback_neigh, known.get("zone") or fallback_zone
-    return fallback_neigh, fallback_zone
+            neigh = known.get("neighbourhood") or neigh
+            zone = known.get("zone") or zone
+    return lat, lng, neigh, zone
 
 
 # ---------- AgendaLX ----------
@@ -166,7 +204,7 @@ def _agendalx_price(item) -> dict:
     return {"is_free": False, "min": None, "currency": "EUR", "text": ""}
 
 
-def _agendalx(session, cfg, c, source, mon, window_end, venues_idx, delay) -> tuple[list, str]:
+def _agendalx(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay) -> tuple[list, str]:
     pages = cfg.get("connectors", {}).get("agendalx_max_pages", 12)
     raw, status = [], "ok"
     for page in range(1, pages + 1):
@@ -199,7 +237,8 @@ def _agendalx(session, cfg, c, source, mon, window_end, venues_idx, delay) -> tu
         desc = _strip_html(it.get("description"))
         url = it.get("link")
         tstr = _time_from(it.get("string_times") or "")
-        neigh, zone = _resolve_neigh(venue, venues_idx, c.get("neighbourhood"), c.get("zone"))
+        lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx,
+                                               c.get("neighbourhood"), c.get("zone"))
 
         # parse occurrences to dates once, dropping anything malformed (a single
         # bad string must not break the whole connector)
@@ -220,7 +259,7 @@ def _agendalx(session, cfg, c, source, mon, window_end, venues_idx, delay) -> tu
                 start_d=start_d, end_d=end_d, has_time=bool(tstr), start_iso=start_iso,
                 price=price, url=url, description=desc, language=["pt"],
                 categories=source["categories"], venue_name=venue,
-                neighbourhood=neigh, zone=zone)
+                neighbourhood=neigh, zone=zone, lat=lat, lng=lng)
             if ev:
                 if img:
                     ev["image"] = core.resolve_url(img, c["website"])
@@ -244,7 +283,7 @@ _TRIBE_SKIP = {"pre-escolar", "pre escolar", "1o ciclo", "2o e 3o ciclos", "secu
                "visitas guiadas", "visita guiada", "servico educativo"}
 
 
-def _tribe(session, cfg, c, source, mon, window_end, venues_idx, delay) -> tuple[list, str]:
+def _tribe(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay) -> tuple[list, str]:
     pages = cfg.get("connectors", {}).get("ccb_max_pages", 12)
     out, status = [], "ok"
     for page in range(1, pages + 1):
@@ -275,13 +314,16 @@ def _tribe(session, cfg, c, source, mon, window_end, venues_idx, delay) -> tuple
             price = core.scan_price(it.get("cost") or "", allow_free=False) or \
                 {"is_free": False, "min": None, "currency": "EUR", "text": ""}
             img = (it.get("image") or {}).get("url") if isinstance(it.get("image"), dict) else None
-            neigh, zone = _resolve_neigh(venue, venues_idx, c.get("neighbourhood"), c.get("zone"))
+            lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx,
+                                                   c.get("neighbourhood"), c.get("zone"))
+            if lat is None and isinstance(v, dict) and core.valid_lisbon_coord(v.get("geo_lat"), v.get("geo_lng")):
+                lat, lng = float(v["geo_lat"]), float(v["geo_lng"])   # Tribe carries venue coords
             ev = core.make_event(
                 title=title, source=source, topic=topic, mon=mon, window_end=window_end,
                 start_d=start_d, end_d=(ed[0] if ed else None), has_time=has_time, start_iso=start_iso,
                 price=price, url=it.get("url"), description=_strip_html(it.get("description")),
                 language=["pt"], categories=source["categories"],
-                venue_name=venue, neighbourhood=neigh, zone=zone)
+                venue_name=venue, neighbourhood=neigh, zone=zone, lat=lat, lng=lng)
             if ev:
                 if img and core._good_img(img):
                     ev["image"] = core.resolve_url(img, c["website"])
@@ -304,7 +346,7 @@ def _gulbenkian_price(item) -> dict:
     return core.parse_price(raw)
 
 
-def _gulbenkian(session, cfg, c, source, mon, window_end, venues_idx, delay) -> tuple[list, str]:
+def _gulbenkian(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay) -> tuple[list, str]:
     # No event-date filter on the REST endpoint, so paginate by most-recently
     # published (upcoming events are published recently) and filter by session
     # date locally. A page cap bounds the cost.
@@ -337,6 +379,8 @@ def _gulbenkian(session, cfg, c, source, mon, window_end, venues_idx, delay) -> 
             desc = _strip_html((it.get("acf") or {}).get("lead"))
             perf = (it.get("acf") or {}).get("performers")
             lineup = [p.get("name") for p in perf if isinstance(p, dict) and p.get("name")] if isinstance(perf, list) else []
+            lat, lng, neigh, zone = _resolve_place(c["name"], venues_geo, venues_idx,
+                                                   c.get("neighbourhood"), c.get("zone"))
 
             for s in sessions:
                 typ = s.get("type")
@@ -355,20 +399,326 @@ def _gulbenkian(session, cfg, c, source, mon, window_end, venues_idx, delay) -> 
                     start_d=start_d, end_d=end_d, has_time=has_time, start_iso=start_iso,
                     price=price, url=url, description=desc, language=["pt"],
                     categories=source["categories"], venue_name=c["name"],
-                    neighbourhood=c.get("neighbourhood"), zone=c.get("zone"))
+                    neighbourhood=neigh, zone=zone, lat=lat, lng=lng,
+                    lineup=(lineup or None))
                 if ev:
                     if img and core._good_img(img):
                         ev["image"] = core.resolve_url(img, c["website"])
-                    if lineup:
-                        ev["lineup"] = lineup
                     out.append(ev)
-        if len(data) < 100:
+        if len(data) < 50:
             break
         time.sleep(delay)
     return out, status
 
 
-_FETCHERS = {"agendalx": _agendalx, "tribe": _tribe, "gulbenkian": _gulbenkian}
+# ---------- shared schema.org JSON-LD parsing (BOL / Xceed / Mato) ----------
+def _lisbon_dt(s):
+    """Parse an ISO datetime (UTC 'Z', offset, or naive) -> (date, has_time, iso)
+    in Europe/Lisbon wall-clock. has_time is False for a bare date or midnight."""
+    s = str(s or "").strip()
+    if not s:
+        return None, False, None
+    try:
+        from dateutil import parser as dp
+        dt = dp.parse(s)
+    except Exception:
+        return None, False, None
+    if dt.tzinfo is not None:
+        try:
+            from zoneinfo import ZoneInfo
+            dt = dt.astimezone(ZoneInfo("Europe/Lisbon")).replace(tzinfo=None)
+        except Exception:
+            dt = dt.replace(tzinfo=None)
+    has_time = (dt.hour != 0 or dt.minute != 0)
+    iso = dt.strftime("%Y-%m-%dT%H:%M") if has_time else dt.date().isoformat()
+    return dt.date(), has_time, iso
+
+
+def _jsonld_nodes(html: str) -> list:
+    nodes = []
+    for m in re.finditer(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', html or "", re.I | re.S):
+        try:
+            data = json.loads(m.group(1).strip())
+        except Exception:
+            continue
+        for n in (data if isinstance(data, list) else [data]):
+            if isinstance(n, dict) and "Event" in str(n.get("@type", "")):
+                nodes.append(n)
+    return nodes
+
+
+def _num(v):
+    try:
+        n = float(str(v).replace(",", "."))
+    except (TypeError, ValueError):
+        return None
+    return n if 0 <= n <= 500 else None   # plausibility bound (matches core.scan_price)
+
+
+def _offers_price(offers) -> dict:
+    """Min/max ticket price from schema.org offers. Each offer is its own
+    (lo,hi) pair (tiers/fees must not cross-pollute a range); a 0-price offer
+    (booking-fee/placeholder) is ignored unless EVERY offer is 0 (=> free)."""
+    empty = {"is_free": False, "min": None, "currency": "EUR", "text": ""}
+    pairs, saw_zero = [], False
+    for o in (offers if isinstance(offers, list) else [offers]):
+        if not isinstance(o, dict):
+            continue
+        lo = _num(o.get("lowPrice")) if o.get("lowPrice") is not None else _num(o.get("price"))
+        hi = _num(o.get("highPrice")) if o.get("highPrice") is not None else lo
+        if lo is None:
+            continue
+        if hi is None or hi < lo:
+            hi = lo
+        if lo == 0 and hi == 0:
+            saw_zero = True       # booking-fee / placeholder / free offer
+            continue
+        pairs.append((lo, hi))
+    if pairs:
+        lo, hi = min(p[0] for p in pairs), max(p[1] for p in pairs)
+        txt = f"€{core._fmt_amount(lo)}" if lo == hi else f"€{core._fmt_amount(lo)}–{core._fmt_amount(hi)}"
+        return {"is_free": False, "min": lo, "currency": "EUR", "text": txt}
+    if saw_zero:                  # every parseable offer was 0 -> genuinely free
+        return {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+    return empty
+
+
+def _ld_one(v):
+    return v[0] if isinstance(v, list) and v else v
+
+
+def _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out):
+    """Build an event from one schema.org Event node and append it."""
+    title = _strip_html(_ld_one(node.get("name")))
+    if not title:
+        return
+    sd = _lisbon_dt(node.get("startDate"))
+    if not sd or not sd[0]:
+        return
+    start_d, has_time, start_iso = sd
+    ed = _lisbon_dt(node.get("endDate"))
+    loc = _ld_one(node.get("location")) or {}
+    venue = _strip_html(loc.get("name")) if isinstance(loc, dict) else None
+    geo = (loc.get("geo") or {}) if isinstance(loc, dict) else {}
+    lat = lng = None
+    if core.valid_lisbon_coord(geo.get("latitude"), geo.get("longitude")):
+        lat, lng = float(geo["latitude"]), float(geo["longitude"])
+    _, _, neigh, zone = _resolve_place(venue, venues_geo, venues_idx, c.get("neighbourhood"), c.get("zone"))
+    g = core.venue_geo(venue, venues_geo) if (lat is None and venue) else None
+    if g and g.get("lat"):
+        lat, lng = g["lat"], g["lng"]
+    perf = node.get("performer") or node.get("performers")
+    lineup = [p.get("name") for p in (perf if isinstance(perf, list) else [perf])
+              if isinstance(p, dict) and p.get("name")]
+    img = _ld_one(node.get("image"))
+    img = img.get("url") if isinstance(img, dict) else img
+    topic = map_topic(title, _strip_html(node.get("description")), default=c.get("topic") or "music")
+    ev = core.make_event(
+        title=title, source=source, topic=topic, mon=mon, window_end=window_end,
+        start_d=start_d, end_d=(ed[0] if ed else None), has_time=has_time, start_iso=start_iso,
+        price=_offers_price(node.get("offers")), url=_ld_one(node.get("url")),
+        description=_strip_html(node.get("description")), language=["pt"],
+        categories=source["categories"], venue_name=venue,
+        neighbourhood=neigh, zone=zone, lat=lat, lng=lng, lineup=(lineup or None))
+    if ev:
+        if img and core._good_img(img):
+            ev["image"] = core.resolve_url(img, c["website"])
+        out.append(ev)
+
+
+def _jsonld_listing(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay):
+    """One listing page whose JSON-LD already holds every event (BOL). PT-wide,
+    so keep only events with a valid Lisbon coordinate or addressLocality."""
+    data = _get_text(session, cfg, c["api"])
+    if data is None:
+        return [], "failed"
+    out = []
+    for node in _jsonld_nodes(data):
+        loc = _ld_one(node.get("location")) or {}
+        geo = (loc.get("geo") or {}) if isinstance(loc, dict) else {}
+        locality = ""
+        if isinstance(loc, dict):
+            addr = _ld_one(loc.get("address")) or {}
+            locality = _fold(addr.get("addressLocality") if isinstance(addr, dict) else addr)
+        in_lisbon = core.valid_lisbon_coord(geo.get("latitude"), geo.get("longitude")) or "lisboa" in locality
+        if in_lisbon:
+            _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out)
+    return out, "ok"
+
+
+def _jsonld_detail(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay):
+    """A listing page of event links, each detail page carrying Event JSON-LD."""
+    listing = _get_text(session, cfg, c["listing"])
+    if listing is None:
+        return [], "failed"
+    slugs = list(dict.fromkeys(re.findall(c["slug_re"], listing)))
+    out, status = [], ("ok" if slugs else "partial")
+    cap = cfg.get("connectors", {}).get("detail_cap", 80)
+    for slug in slugs[:cap]:
+        html = _get_text(session, cfg, c["detail_base"] + slug)
+        if html is None:
+            status = "partial"
+            continue
+        for node in _jsonld_nodes(html):
+            _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out)
+        time.sleep(delay / 2)
+    return out, status
+
+
+# ---------- Resident Advisor (GraphQL) ----------
+_RA_QUERY = ("query GET_EVENT_LISTINGS($filters: FilterInputDtoInput, $page: Int, $pageSize: Int) "
+             "{ eventListings(filters: $filters, pageSize: $pageSize, page: $page) { data { id event "
+             "{ id title date startTime contentUrl images { filename type } venue { name } "
+             "artists { name } } } totalResults } }")
+
+
+def _ra(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay):
+    """RA's private GraphQL (area 53 = Lisbon). Browser UA required; fragile, so
+    the pool keeps last-good data when it 403s. Dedupe by event id across pages."""
+    headers = {"Content-Type": "application/json", "Referer": "https://ra.co/events/pt/lisbon",
+               "Origin": "https://ra.co"}
+    out, seen, status = [], set(), "ok"
+    page, page_size, total = 1, 50, None
+    while page <= 12:
+        body = {"operationName": "GET_EVENT_LISTINGS",
+                "variables": {"filters": {"areas": {"eq": 53},
+                              "listingDate": {"gte": mon.isoformat(), "lte": window_end.isoformat()}},
+                              "page": page, "pageSize": page_size},
+                "query": _RA_QUERY}
+        try:
+            r = session.post(c["website"] + "/graphql", json=body, headers=headers,
+                             timeout=max(cfg["crawl"].get("per_source_timeout_s", 25), 45))
+            if r.status_code != 200:
+                status = "partial" if out else "failed"
+                break
+            el = ((r.json() or {}).get("data") or {}).get("eventListings") or {}
+        except Exception:
+            status = "partial" if out else "failed"
+            break
+        rows = el.get("data") or []
+        total = el.get("totalResults") if total is None else total
+        if not rows:
+            break
+        for row in rows:
+            ev = _ra_event(row.get("event") or {}, c, source, mon, window_end, venues_geo, venues_idx, seen)
+            if ev:
+                out.append(ev)
+        if page * page_size >= (total or 0) or len(rows) < page_size:
+            break
+        page += 1
+        time.sleep(delay)
+    return out, status
+
+
+def _ra_event(e, c, source, mon, window_end, venues_geo, venues_idx, seen):
+    eid = e.get("id")
+    if not eid or eid in seen:
+        return None
+    seen.add(eid)
+    title = _strip_html(e.get("title"))
+    when = _lisbon_dt(e.get("startTime") or e.get("date"))
+    if not title or not when or not when[0]:
+        return None
+    start_d, has_time, start_iso = when
+    venue = _strip_html((e.get("venue") or {}).get("name"))
+    if venue:                       # RA appends the address to the venue name
+        venue = re.split(r"\s+[-–]\s+|,", venue)[0].strip()[:80]
+    lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx, c.get("neighbourhood"), c.get("zone"))
+    lineup = [a.get("name") for a in (e.get("artists") or []) if isinstance(a, dict) and a.get("name")]
+    img = next((i.get("filename") for i in (e.get("images") or [])
+                if isinstance(i, dict) and i.get("type") == "FLYERFRONT"), None)
+    url = "https://ra.co" + e["contentUrl"] if e.get("contentUrl") else None
+    ev = core.make_event(
+        title=title, source=source, topic="nightlife", mon=mon, window_end=window_end,
+        start_d=start_d, end_d=None, has_time=has_time, start_iso=start_iso,
+        price={"is_free": False, "min": None, "currency": "EUR", "text": ""},
+        url=url, description="", language=["pt", "en"],
+        categories=source["categories"], venue_name=venue,
+        neighbourhood=neigh, zone=zone, lat=lat, lng=lng, lineup=(lineup or None))
+    if ev and img and core._good_img(img):
+        ev["image"] = img
+    return ev
+
+
+# ---------- DICE (unified_search; ~30-event curated cap, supplement) ----------
+def _dice(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay):
+    seen, out = set(), []
+    # vary the centre to widen the curated feed a little, dedupe by perm_name
+    for lat0, lng0 in ((38.7223, -9.1393), (38.71, -9.14), (38.74, -9.10)):
+        try:
+            r = session.post(c["api"], json={"latitude": lat0, "longitude": lng0, "radius": "20km"},
+                             timeout=max(cfg["crawl"].get("per_source_timeout_s", 25), 45))
+            if r.status_code != 200:
+                continue
+            secs = (r.json() or {}).get("sections") or []
+        except Exception:
+            continue
+        for s in secs:
+            for it in (s.get("items") or []):
+                if it.get("type") != "event":
+                    continue
+                e = it.get("event") or it
+                ev = _dice_event(e, c, source, mon, window_end, venues_geo, venues_idx, seen)
+                if ev:
+                    out.append(ev)
+        time.sleep(delay)
+    return out, ("ok" if out else "partial")
+
+
+def _dice_event(e, c, source, mon, window_end, venues_geo, venues_idx, seen):
+    perm = e.get("perm_name")
+    if not perm or perm in seen:
+        return None
+    seen.add(perm)
+    title = _strip_html(e.get("name"))
+    when = _lisbon_dt((e.get("dates") or {}).get("event_start_date"))
+    if not title or not when or not when[0]:
+        return None
+    start_d, has_time, start_iso = when
+    ven = (e.get("venues") or [{}])
+    venue = _strip_html(ven[0].get("name")) if ven and isinstance(ven[0], dict) else None
+    p = e.get("price") or {}
+    amt = p.get("amount")
+    if amt == 0:
+        price = {"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}
+    elif isinstance(amt, (int, float)):
+        price = core.parse_price(str(round(amt / 100)))   # whole euros (drop booking-fee cents)
+    else:
+        price = {"is_free": False, "min": None, "currency": "EUR", "text": ""}
+    lineup = [a.get("name") for a in ((e.get("summary_lineup") or {}).get("top_artists") or [])
+              if isinstance(a, dict) and a.get("name")]
+    img = _ld_one(e.get("images") if isinstance(e.get("images"), list) else (e.get("images") or {}).get("landscape"))
+    if isinstance(img, dict):
+        img = img.get("url")
+    lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx, c.get("neighbourhood"), c.get("zone"))
+    ev = core.make_event(
+        title=title, source=source, topic=map_topic(title, default="music"),
+        mon=mon, window_end=window_end, start_d=start_d, end_d=None, has_time=has_time,
+        start_iso=start_iso, price=price, url=f"https://dice.fm/event/{perm}",
+        description="", language=["pt", "en"], categories=source["categories"],
+        venue_name=venue, neighbourhood=neigh, zone=zone, lat=lat, lng=lng, lineup=(lineup or None))
+    if ev and isinstance(img, str) and core._good_img(img):
+        ev["image"] = img
+    return ev
+
+
+def _get_text(session, cfg, url):
+    """GET -> response text (one retry), or None on failure."""
+    timeout = max(cfg["crawl"].get("per_source_timeout_s", 25), 45)
+    for attempt in range(2):
+        try:
+            r = session.get(url, timeout=timeout)
+            return r.text if r.status_code == 200 else None
+        except Exception:
+            if attempt:
+                return None
+            time.sleep(1.5)
+    return None
+
+
+_FETCHERS = {"agendalx": _agendalx, "tribe": _tribe, "gulbenkian": _gulbenkian,
+             "jsonld_listing": _jsonld_listing, "jsonld_detail": _jsonld_detail,
+             "ra": _ra, "dice": _dice}
 
 
 def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:
@@ -376,6 +726,7 @@ def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:
     called for the pool). Returns (events, status_by_connector)."""
     cat_for_topic = {t["id"]: (t["categories"][0] if t["categories"] else 1) for t in tax["topics"]}
     venues_idx = core.venues_index(sources)
+    venues_geo = core.load_venues()
     delay = cfg["crawl"].get("polite_delay_ms", 800) / 1000.0
     events, statuses = [], {}
     for c in CONNECTORS:
@@ -385,7 +736,7 @@ def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:
             continue
         source = _src(c, cat_for_topic)
         try:
-            evs, st = fetch(session, cfg, c, source, mon, window_end, venues_idx, delay)
+            evs, st = fetch(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay)
         except Exception as e:  # a connector must never break the run
             evs, st = [], "failed"
             print(f"[connector {c['id']}] error: {type(e).__name__}: {e}")

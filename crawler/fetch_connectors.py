@@ -42,6 +42,13 @@ def main():
 
     session = core.make_session(cfg)
     events, statuses = connectors.run_all(session, cfg, tax, sources, pool_start, window_end)
+    # raw per-connector counts (before cross-source dedupe) drive silent-shrink
+    # detection — a connector returning far fewer than its rolling median is flagged
+    from collections import Counter
+    raw_counts = Counter(e.get("source") for e in events)
+    stamp = today.isoformat()
+    statuses = core.update_connector_health(raw_counts, statuses, stamp)
+
     events = core.dedupe(events, sources + connectors.connector_sources())
 
     payload = {
@@ -49,8 +56,9 @@ def main():
         "week_start": mon.isoformat(), "week_end": (mon + timedelta(days=6)).isoformat(),
         "horizon_end": window_end.isoformat(),
         "event_count": len(events),
-        "meta": {"connector_status": statuses, "events_by_connector":
-                 {c: sum(1 for e in events if e.get("source") == c) for c in statuses}},
+        "meta": {"connector_status": statuses,
+                 "raw_counts": dict(raw_counts),
+                 "events_by_connector": {c: sum(1 for e in events if e.get("source") == c) for c in statuses}},
         "events": events,
     }
     out = Path(args.out)

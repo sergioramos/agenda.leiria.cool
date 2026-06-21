@@ -94,6 +94,51 @@ def pool_events(pool: dict) -> list[dict]:
     return [{k: v for k, v in e.items() if not k.startswith("_")}
             for e in pool.get("events", {}).values()]
 
+
+# ---------- connector health (silent-shrink detection) ----------
+# A connector that returns ~half its usual count is the real failure mode the
+# 0-event guard misses (a JSON shape drift, a plugin update). We keep a rolling
+# median of each connector's count and flag a run that falls below 50% of it.
+CONNECTOR_STATE_PATH = ROOT / "docs" / "data" / "connector_state.json"
+
+
+def load_connector_state() -> dict:
+    if CONNECTOR_STATE_PATH.exists():
+        try:
+            d = json.loads(CONNECTOR_STATE_PATH.read_text(encoding="utf-8"))
+            if isinstance(d, dict):
+                return d
+        except Exception:
+            pass
+    return {}
+
+
+def save_connector_state(state: dict) -> None:
+    CONNECTOR_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CONNECTOR_STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def update_connector_health(counts: dict, statuses: dict, stamp: str) -> dict:
+    """Update the rolling per-connector history and downgrade an 'ok' status to
+    'shrunk' when its count drops below 50% of the rolling median (>=3 samples,
+    median>=5). Persists the state and returns the (possibly downgraded) statuses."""
+    import statistics
+    state = load_connector_state()
+    for conn, st in list(statuses.items()):
+        rec = state.setdefault(conn, {"counts": []})
+        hist = rec.get("counts", [])
+        cnt = int(counts.get(conn, 0))
+        med = statistics.median(hist) if hist else 0
+        if st == "ok" and len(hist) >= 3 and med >= 5 and cnt < 0.5 * med:
+            statuses[conn] = "shrunk"
+        # only healthy, non-empty runs feed the median (a failure must not poison it)
+        if st == "ok" and cnt > 0:
+            rec["counts"] = (hist + [cnt])[-8:]
+        rec.update(last_count=cnt, last_status=statuses[conn],
+                   median=med, updated_at=stamp)
+    save_connector_state(state)
+    return statuses
+
 # ---------- spend tracking ----------
 def month_ai_spend(today: date) -> float:
     """Sum of ai_cost_usd across committed week files generated this calendar
@@ -630,6 +675,137 @@ def resolve_venue(name: str, idx: dict) -> dict | None:
     return cands[0][2] if cands[0][0] >= 0.75 else None
 
 
+# ---------- geo: coordinates + neighbourhood ----------
+# Greater-Lisbon bounding box — coords outside it are bad data (AgendaLX has a
+# few venues geocoded to other countries) and get dropped.
+_LIS_BBOX = (38.40, 39.05, -9.60, -8.85)  # lat_lo, lat_hi, lng_lo, lng_hi
+
+
+def valid_lisbon_coord(lat, lng) -> bool:
+    try:
+        lat, lng = float(lat), float(lng)
+    except (TypeError, ValueError):
+        return False
+    lo_la, hi_la, lo_ln, hi_ln = _LIS_BBOX
+    return lo_la <= lat <= hi_la and lo_ln <= lng <= hi_ln
+
+
+# The 24 Lisbon freguesias (2013) → the site's display neighbourhood. A parish can
+# span several display areas (Misericórdia = Bairro Alto/Chiado/Cais), so this is
+# the COARSE fallback; an alias match on the address/venue name runs first and is
+# finer. Keys are accent-folded parish names.
+PARISH_TO_NEIGH = {
+    "ajuda": ("Belém", "city"), "alcantara": ("Alcântara", "city"),
+    "alvalade": ("Alvalade", "city"), "areeiro": ("Alvalade", "city"),
+    "arroios": ("Arroios", "city"), "avenidas novas": ("Avenidas Novas", "city"),
+    "beato": ("Beato", "city"), "belem": ("Belém", "city"),
+    "benfica": ("Lumiar", "city"), "campo de ourique": ("Campo de Ourique", "city"),
+    "campolide": ("Campolide", "city"), "carnide": ("Lumiar", "city"),
+    "estrela": ("Estrela", "city"), "lumiar": ("Lumiar", "city"),
+    "marvila": ("Marvila", "city"), "misericordia": ("Bairro Alto", "city"),
+    "olivais": ("Parque das Nações", "city"), "parque das nacoes": ("Parque das Nações", "city"),
+    "penha de franca": ("Penha de França", "city"), "santa clara": ("Lumiar", "city"),
+    "santa maria maior": ("Baixa", "city"), "santo antonio": ("Avenida da Liberdade", "city"),
+    "sao domingos de benfica": ("Lumiar", "city"), "sao vicente": ("Graça", "city"),
+}
+
+
+def _alias_index(tax: dict):
+    """[(folded_alias, name, zone)] sorted longest-alias-first so a specific
+    alias ('cais do sodré') wins over a short one ('cais')."""
+    out = []
+    for n in tax.get("neighbourhoods", []):
+        for a in n.get("aliases", []):
+            out.append((_fold_spaces(a), n["name"], n.get("zone")))
+    out.sort(key=lambda x: len(x[0]), reverse=True)
+    return out
+
+
+def _fold_spaces(s: str) -> str:
+    """Lowercase + accent-fold but KEEP spaces (for substring alias matching)."""
+    f = unicodedata.normalize("NFKD", str(s or ""))
+    f = "".join(c for c in f if not unicodedata.combining(c)).lower()
+    return re.sub(r"\s+", " ", f).strip()
+
+
+def alias_neighbourhood(text: str, alias_idx) -> tuple:
+    """Match a free-text address/venue name to a display neighbourhood by its
+    taxonomy aliases (word-boundary, longest alias first). Returns (name, zone)
+    or (None, None)."""
+    blob = " " + _fold_spaces(text) + " "
+    for alias, name, zone in alias_idx:
+        if alias and (" " + alias + " ") in blob:
+            return name, zone
+    return None, None
+
+
+def _pip(lng: float, lat: float, ring) -> bool:
+    """Ray-casting point-in-polygon for one ring of [lng,lat] pairs."""
+    inside = False
+    n = len(ring)
+    j = n - 1
+    for i in range(n):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if ((yi > lat) != (yj > lat)) and \
+                (lng < (xj - xi) * (lat - yi) / ((yj - yi) or 1e-12) + xi):
+            inside = not inside
+        j = i
+    return inside
+
+
+def _in_feature(lng, lat, geom) -> bool:
+    t = geom.get("type")
+    coords = geom.get("coordinates") or []
+    polys = coords if t == "MultiPolygon" else ([coords] if t == "Polygon" else [])
+    for poly in polys:
+        if not poly:
+            continue
+        if _pip(lng, lat, poly[0]) and not any(_pip(lng, lat, hole) for hole in poly[1:]):
+            return True
+    return False
+
+
+def parish_neighbourhood(lat, lng, geojson: dict, name_prop: str) -> tuple:
+    """(neighbourhood, zone) for a coordinate, via point-in-polygon against the
+    freguesia GeoJSON then PARISH_TO_NEIGH. (None, None) if no parish contains it."""
+    if not valid_lisbon_coord(lat, lng):
+        return None, None
+    latf, lngf = float(lat), float(lng)
+    for feat in geojson.get("features", []):
+        if _in_feature(lngf, latf, feat.get("geometry") or {}):
+            parish = _fold_spaces((feat.get("properties") or {}).get(name_prop, ""))
+            return PARISH_TO_NEIGH.get(parish, (None, None))
+    return None, None
+
+
+def load_venues() -> dict:
+    """Venue directory (sources/venues.json): _nt(name) -> {name,lat,lng,
+    neighbourhood,zone,address}. Empty dict if not built yet."""
+    p = ROOT / "sources" / "venues.json"
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+        return data.get("venues", {}) if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def venue_geo(name: str, venues: dict) -> dict | None:
+    """Look a venue name up in the directory: exact _nt, then unique containment."""
+    if not name or not venues:
+        return None
+    key = _nt(name)
+    if len(key) < 4:
+        return None
+    hit = venues.get(key)
+    if hit is not None or len(key) < 6:
+        return hit
+    cands = [v for k, v in venues.items() if len(k) >= 6 and (key in k or k in key)]
+    return cands[0] if len(cands) == 1 else None
+
+
 def looks_like_date(name: str) -> bool:
     """True for 'venue' names that are really dates or scheduling notes a model
     misread from an agenda page (e.g. '19–22 Nov 2026', '31 Jul–9 Aug 2026',
@@ -664,7 +840,8 @@ def resolve_url(url: str | None, base: str | None) -> str | None:
 
 def make_event(*, title, source, topic, mon, window_end, start_d, end_d, has_time, start_iso,
                price, url, description, language, categories,
-               venue_name=None, neighbourhood=None, zone=None) -> dict | None:
+               venue_name=None, neighbourhood=None, zone=None,
+               lat=None, lng=None, lineup=None, links=None, prov=None) -> dict | None:
     if not title or not start_d:
         return None
     if not overlaps_window(start_d, end_d, mon, window_end):
@@ -682,12 +859,15 @@ def make_event(*, title, source, topic, mon, window_end, start_d, end_d, has_tim
         "categories": categories, "venue": venue, "source_id": source["id"],
         "neighbourhood": neighbourhood or source.get("neighbourhood"),
         "zone": zone or source.get("zone"),
+        "lat": lat, "lng": lng,
         "start": start_iso, "end": (end_d.isoformat() if end_d else None),
         "all_day": not has_time, "ongoing": ongoing, "days": days,
         "price": price, "language": language or ["pt"],
         "url": resolve_url(url, source.get("website")) or source.get("website"),
         "source": source.get("provider") or "site",
         "description": clean_description(description, title, venue), "image": None,
+        "lineup": lineup or None, "links": links or None,
+        "prov": prov or None,   # per-field provenance (price/image/...): set by the cross-source merge
     }
 
 
@@ -696,6 +876,20 @@ def _has_path(url: str | None) -> bool:
         return bool(urlparse(url or "").path.strip("/"))
     except ValueError:
         return False
+
+
+def event_coord_key(e: dict) -> str | None:
+    """~110m coordinate-grid key (round to 3 decimals) for cross-source venue
+    matching, or None when the event has no valid Lisbon coordinate. Same
+    coordinate = same place even when two sources spell the venue differently."""
+    lat, lng = e.get("lat"), e.get("lng")
+    if valid_lisbon_coord(lat, lng):
+        return f"{round(float(lat), 3)}|{round(float(lng), 3)}"
+    return None
+
+
+# sources whose price is the most authoritative (exact ticket price)
+_TICKETING = {"bol", "dice", "xceed", "shotgun", "ticketline"}
 
 
 def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
@@ -733,13 +927,43 @@ def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
                 + min(len(e.get("description") or ""), 200) / 200
                 - 5 * looks_like_date(e.get("venue") or ""))
 
+    def price_rank(e):
+        # ticketing has the exact price; the venue's own feed beats an aggregator
+        if e.get("source") in _TICKETING:
+            return 3
+        return 1 if e["source_id"] in agg else 2
+
+    def note_prov(keep, field, ev):
+        prov = keep.get("prov") or {}
+        prov[field] = ev.get("source")
+        keep["prov"] = prov
+
     def absorb(keep, other):
         if not _has_path(keep.get("url")) and _has_path(other.get("url")):
             keep["url"] = other["url"]
+        # keep every distinct event/buy link besides the primary url (links[])
+        extra = [u for u in dict.fromkeys(
+                    [other.get("url"), *(keep.get("links") or []), *(other.get("links") or [])])
+                 if _has_path(u) and u != keep.get("url")]
+        if extra:
+            keep["links"] = list(dict.fromkeys((keep.get("links") or []) + extra)) or None
         if len(other.get("description") or "") > len(keep.get("description") or ""):
             keep["description"] = other["description"]
-        if not (keep.get("price") or {}).get("text") and (other.get("price") or {}).get("text"):
+            note_prov(keep, "description", other)
+        # price: fill if missing, OR upgrade when the other source ranks higher
+        op, kp = (other.get("price") or {}).get("text"), (keep.get("price") or {}).get("text")
+        if op and (not kp or price_rank(other) > price_rank(keep)):
             keep["price"] = other["price"]
+            note_prov(keep, "price", other)
+        if not keep.get("image") and other.get("image"):
+            keep["image"] = other["image"]
+            note_prov(keep, "image", other)
+        if not keep.get("lineup") and other.get("lineup"):
+            keep["lineup"] = other["lineup"]
+        if not event_coord_key(keep) and event_coord_key(other):
+            keep["lat"], keep["lng"] = other.get("lat"), other.get("lng")
+        if not keep.get("neighbourhood") and other.get("neighbourhood"):
+            keep["neighbourhood"], keep["zone"] = other.get("neighbourhood"), other.get("zone")
         if keep.get("all_day") and not other.get("all_day") and date_of(keep) == date_of(other):
             keep["start"], keep["all_day"] = other["start"], False
         if len(other.get("days") or []) > len(keep.get("days") or []):  # keep the full run
@@ -777,17 +1001,24 @@ def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
         kept: list[dict] = []
         for e in evs:
             nt = _nt(e["title"])
+            cke = event_coord_key(e)
             dup = None
             for k in kept:
                 knt = _nt(k["title"])
-                near = (difflib.SequenceMatcher(None, nt, knt).ratio() >= 0.9
+                # same coordinate = same place; with that confidence a looser
+                # title match (0.82) is enough, else require 0.9 / a long prefix
+                coord_same = bool(cke) and cke == event_coord_key(k)
+                ratio = difflib.SequenceMatcher(None, nt, knt).ratio()
+                near = (ratio >= 0.9 or (coord_same and ratio >= 0.82)
                         or (min(len(nt), len(knt)) >= 12 and (nt.startswith(knt) or knt.startswith(nt))))
                 if not near:
                     continue
                 venue_same = _nt(e["venue"]) == _nt(k["venue"])
                 same_site = bool(site_of.get(e["source_id"])) and \
                     site_of.get(e["source_id"]) == site_of.get(k["source_id"])
-                same_place = venue_same or (same_site and (generic(e) or generic(k)))
+                # venue_key (coords) is the strongest same-place signal; name and
+                # same-page/generic remain as fallbacks when coords are absent
+                same_place = coord_same or venue_same or (same_site and (generic(e) or generic(k)))
                 # an aggregator copy with no extracted venue is a relist of the near event
                 agg_relist = (e["source_id"] in agg and generic(e)) or \
                              (k["source_id"] in agg and generic(k))

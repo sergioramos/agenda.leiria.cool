@@ -44,6 +44,7 @@ connectors:
   agendalx_max_pages: 12         # per_page=100 each (CM Lisboa official spine)
   ccb_max_pages: 12              # per_page=50, date-filtered (Tribe)
   gulbenkian_max_pages: 14       # per_page=50 (trimmed via _fields), ordered by recent publish
+  detail_cap: 80                 # max event detail pages per jsonld_detail connector (Xceed/Mato)
 
 crawl:
   breadth: max                   # max | broad | lean  (which sources to attempt)

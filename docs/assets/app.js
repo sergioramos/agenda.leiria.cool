@@ -68,7 +68,8 @@ function matches(ev) {
   if (f.days.size && !(ev.days || []).some(d => f.days.has(d))) return false;
   if (f.q) {
     const cats = (ev.categories || []).map(c => state.taxonomy.categories[c] || '').join(' ');
-    const hay = `${ev.title} ${ev.venue} ${ev.neighbourhood || ''} ${ev.description || ''} ${cats}`.toLowerCase();
+    const lineup = (ev.lineup || []).join(' ');
+    const hay = `${ev.title} ${ev.venue} ${ev.neighbourhood || ''} ${ev.description || ''} ${cats} ${lineup}`.toLowerCase();
     if (!hay.includes(f.q)) return false;
   }
   return true;
@@ -156,6 +157,12 @@ const PIN_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" str
 const CAL_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 19h6"/><path d="M16 2v4"/><path d="M19 16v6"/><path d="M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>';
 
 function mapsUrl(ev) {
+  // for a generic/unnamed venue (city-wide events, "TBA", "Secret Location"),
+  // exact coordinates beat a name search; otherwise the name shows the place card
+  const generic = !ev.venue || /^(lisboa|tba|secret|local)/i.test(ev.venue);
+  if (generic && ev.lat && ev.lng) {
+    return 'https://www.google.com/maps/search/?api=1&query=' + ev.lat + ',' + ev.lng;
+  }
   const q = [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', ');
   return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
 }

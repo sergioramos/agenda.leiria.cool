@@ -254,7 +254,33 @@ async function loadStatus() {
     }
     $('#st-last-cost').textContent = lastCost === null ? '—' : fmtUSD(lastCost);
     $('#st-month-cost').textContent = fmtUSD(monthCost);
+    await renderFontes(latest);
   } catch { $('#st-note').textContent = 'Não foi possível ler os dados das recolhas.'; }
+}
+
+const FONTE_PT = { ok: 'ok', partial: 'parcial', failed: 'falhou', shrunk: 'encolheu' };
+async function renderFontes(latestWeek) {
+  const wrap = $('#st-fontes'), grid = $('#st-connectors');
+  if (!wrap || !grid) return;
+  let state = {}, byConn = {};
+  try { state = await (await fetch('/data/connector_state.json', { cache: 'no-cache' })).json(); } catch { /* none yet */ }
+  try {
+    const w = await (await fetch('/data/weeks/' + latestWeek.file, { cache: 'no-cache' })).json();
+    byConn = (w.meta && w.meta.events_by_connector) || {};
+  } catch { /* ignore */ }
+  const names = Object.keys(state);
+  if (!names.length) { wrap.hidden = true; return; }
+  wrap.hidden = false;
+  grid.innerHTML = '';
+  names.sort((a, b) => (state[b].last_count || 0) - (state[a].last_count || 0));
+  for (const id of names) {
+    const r = state[id] || {};
+    const st = r.last_status || 'ok';
+    grid.append(el('div', { className: 'fonte fonte-' + st },
+      el('span', { className: 'fonte-name', textContent: id }),
+      el('span', { className: 'fonte-count', textContent: (r.last_count != null ? r.last_count : '—') + ' ev.' }),
+      el('span', { className: 'fonte-badge', textContent: FONTE_PT[st] || st })));
+  }
 }
 
 /* ---------- 02 ações ---------- */
