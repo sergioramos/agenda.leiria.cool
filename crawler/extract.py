@@ -215,10 +215,6 @@ def extract(prov, client, source: dict, page_text: str, mon, window_end, cfg: di
     # responses parse as nothing, so capacity matters more than cost here
     data = json_call(prov, client, cfg["ai"]["model_cheap"], system, user, schema, EVENT_HINT, 8000, tracker)
     items = (data or {}).get("events")
-    if not items and cfg["ai"].get("escalate_on_low_confidence") and not tracker.exhausted() \
-            and cfg["ai"]["model_strong"] != cfg["ai"]["model_cheap"]:
-        data = json_call(prov, client, cfg["ai"]["model_strong"], system, user, schema, EVENT_HINT, 8000, tracker)
-        items = (data or {}).get("events")
     if not items:
         return []
 

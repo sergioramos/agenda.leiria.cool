@@ -25,6 +25,12 @@ Thumbs.db
 
 # Crawl working files
 crawler/.cache/
+_partials/
 *.log
+
+# Scratch / scraping experiments (never commit)
+_sg*.html
+_sg*.txt
+*_shotgun_*.html
 
 .vercel

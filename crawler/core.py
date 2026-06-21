@@ -1,6 +1,6 @@
 """
 Shared helpers for the Pregoeiro crawler: config + data IO, the week window,
-HTTP fetching, feed discovery/parsing (ICS + RSS/Atom), price detection,
+HTTP fetching, ICS feed discovery/parsing, price detection,
 date→day mapping, and event normalisation/dedup.
 
 Pure-stdlib where possible; third-party deps are imported lazily so the
@@ -222,27 +222,6 @@ def parse_ics(text: str):
                 "end": comp.get("dtend").dt if comp.get("dtend") else None,
                 "url": str(comp.get("url") or "") or None,
                 "desc": str(comp.get("description") or "").strip(),
-            })
-    except Exception:
-        pass
-    return out
-
-def parse_rss(url: str):
-    """Parse an RSS/Atom feed → list of raw events (best-effort; many feeds are
-    blog posts, not dated events — filtered later by the week window)."""
-    out = []
-    try:
-        import feedparser
-        d = feedparser.parse(url)
-        for e in d.entries[:60]:
-            when = e.get("published_parsed") or e.get("updated_parsed") or e.get("start_parsed")
-            start = datetime(*when[:6]) if when else None
-            out.append({
-                "title": (e.get("title") or "").strip(),
-                "start": start,
-                "end": None,
-                "url": e.get("link"),
-                "desc": re.sub(r"<[^>]+>", " ", e.get("summary", ""))[:300].strip(),
             })
     except Exception:
         pass
