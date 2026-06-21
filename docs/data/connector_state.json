@@ -1,0 +1,82 @@
+{
+  "agendalx": {
+    "counts": [
+      449,
+      449
+    ],
+    "last_count": 449,
+    "last_status": "ok",
+    "median": 449,
+    "updated_at": "2026-06-21"
+  },
+  "ccb": {
+    "counts": [
+      438,
+      438
+    ],
+    "last_count": 438,
+    "last_status": "ok",
+    "median": 438,
+    "updated_at": "2026-06-21"
+  },
+  "gulbenkian": {
+    "counts": [
+      117,
+      117
+    ],
+    "last_count": 117,
+    "last_status": "ok",
+    "median": 117,
+    "updated_at": "2026-06-21"
+  },
+  "ra": {
+    "counts": [
+      144,
+      144
+    ],
+    "last_count": 144,
+    "last_status": "ok",
+    "median": 144,
+    "updated_at": "2026-06-21"
+  },
+  "bol": {
+    "counts": [
+      408,
+      408
+    ],
+    "last_count": 408,
+    "last_status": "ok",
+    "median": 408,
+    "updated_at": "2026-06-21"
+  },
+  "xceed": {
+    "counts": [
+      37,
+      37
+    ],
+    "last_count": 37,
+    "last_status": "ok",
+    "median": 37,
+    "updated_at": "2026-06-21"
+  },
+  "mato": {
+    "counts": [
+      17,
+      17
+    ],
+    "last_count": 17,
+    "last_status": "ok",
+    "median": 17,
+    "updated_at": "2026-06-21"
+  },
+  "dice": {
+    "counts": [
+      22,
+      22
+    ],
+    "last_count": 22,
+    "last_status": "ok",
+    "median": 22,
+    "updated_at": "2026-06-21"
+  }
+}
