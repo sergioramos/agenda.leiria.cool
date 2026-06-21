@@ -1,10 +1,10 @@
 {
   "week_start": "2026-06-22",
   "week_end": "2026-06-28",
-  "generated_at": "2026-06-21T21:11:41Z",
+  "generated_at": "2026-06-21T22:04:23Z",
   "is_sample": false,
   "source_count": 540,
-  "event_count": 841,
+  "event_count": 893,
   "meta": {
     "sources_tried": 513,
     "ai_calls": 427,
@@ -17,7 +17,8 @@
       "bol": "ok",
       "xceed": "ok",
       "mato": "ok",
-      "dice": "ok"
+      "dice": "ok",
+      "ticketline": "ok"
     },
     "events_by_connector": {
       "agendalx": 312,
@@ -26,10 +27,11 @@
       "ra": 50,
       "bol": 138,
       "xceed": 22,
-      "mato": 6,
-      "dice": 4
+      "mato": 11,
+      "dice": 5,
+      "ticketline": 46
     },
-    "pool_size": 1584
+    "pool_size": 1667
   },
   "events": [
     {
@@ -13027,7 +13029,9 @@
       "description": "Designing Sustainable Futures é uma exposição que o Pavilhão de Portugal no Parque das Nações vai acolher entre 21 de março e 31 de julho, e que se destina a mostrar a forma como o des...",
       "image": "https://www.agendalx.pt/content/uploads/2026/02/Designing-Sustainable-Future.png",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://www.ticketline.pt/evento/exposicao-designing-sustainable-futures-103038"
+      ],
       "prov": null
     },
     {
@@ -15817,6 +15821,82 @@
       "description": "E se, num dia igual a todos os outros, alguém entrasse pela janela… e mudasse tudo? No coração de um velho orfanato onde as regras da implacável Diretora Crumble falam mais alto do que os sonhos...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/Sem-Titulo.png",
       "lineup": null,
+      "links": [
+        "https://www.ticketline.pt/evento/o-fantastico-sr-wolk-o-musical-102718"
+      ],
+      "prov": null
+    },
+    {
+      "id": "69a95a321433",
+      "title": "Tower Sunset Experience",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "BABYLON 360º",
+      "source_id": "mato",
+      "neighbourhood": "Parque das Nações",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-21T18:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Tower Sunset Experience at the Vasco da Gama Tower rooftop. Sunday afternoon features sets by Raquel Loureiro and Lauder. Signature cocktails and 360-degree views of the city. Entry is subject to capacity. Details on the profile.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/f7b30b37-4d61-4c14-a49c-cd0766dd870e-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "489486fd8751",
+      "title": "Grande Arraial de Benfica",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Benfica",
+      "source_id": "mato",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-21T18:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "The neighborhood's massive summer party returns to Benfica. Expect the usual lineup of grilled sardines and fairground rides, plus free live performances from D.A.M.A., Delfins, and Quim Barreiros throughout the event. More information is available on the profile.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/9c82abf8-dbcc-466c-b6bc-f009b042ef22-original.webp",
+      "lineup": null,
       "links": null,
       "prov": null
     },
@@ -15988,6 +16068,80 @@
       "source": "agendalx",
       "description": "Neste Clube de Leitura, os encontros são dedicados ao teatro: desde sessões sobre autores, à leitura de peças de teatro, adaptações, críticas e, também, encontros especiais com artistas. O o...",
       "image": "https://www.agendalx.pt/content/uploads/2025/12/Teatro-Variedades.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "48c02f117daf",
+      "title": "mappa x Villa Karpatia",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Cosmos",
+      "source_id": "mato",
+      "neighbourhood": "Campolide",
+      "zone": "city",
+      "lat": 38.72769,
+      "lng": -9.161435,
+      "start": "2026-06-21T19:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8.0,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Cosmos hosts a collaboration night with Villa Karpatia and mappa. Richard Hronský presents a set of ambient soundscapes using traditional Eastern European flutes and pipes. Michaela Turcerová follows, transforming the saxophone into a glitchy, percussive instrument. carolf provid.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/217e4acd-5756-417f-a4f2-8cfc7ecbb135-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "887319fa50ad",
+      "title": "Kinky Comedy Open Mic",
+      "topic": "comedy",
+      "categories": [
+        1
+      ],
+      "venue": "Drama Bar",
+      "source_id": "mato",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": 38.720133,
+      "lng": -9.132691,
+      "start": "2026-06-21T19:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Sunday night stand-up. An open mic night dedicated to kinky comedy in a safe queer space. Tickets and sign-up info on the profile.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/f74b936c-d78f-4cd8-924c-f567c6eea6ee-original.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -16245,6 +16399,43 @@
       "prov": null
     },
     {
+      "id": "42fe46df2deb",
+      "title": "Jam Mais Bonita da Cidade",
+      "topic": "comedy",
+      "categories": [
+        1
+      ],
+      "venue": "Menina e Moça",
+      "source_id": "mato",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-21T20:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Close out the weekend at Menina e Moça with their recurring Sunday jam session. Join local musicians for an unscripted night of live improvisation in an intimate setting surrounded by bookshelves in the heart of Cais do Sodré. Music starts at 20:00.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/d0ec66d9-5de1-4b74-ab86-8acf4796bf01-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "99a956506860",
       "title": "Travessia - Onze Encomendações das Almas",
       "topic": "music",
@@ -16456,7 +16647,9 @@
       "description": "Rent acompanha um ano na vida de um grupo de amigos do East Village, em Nova Iorque, no auge dos boémios anos 1990, que lutam por sobreviver, numa celebração de amor e de superação....",
       "image": "https://www.agendalx.pt/content/uploads/2025/02/Rent-1.jpg",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://www.ticketline.pt/evento/rent-97624"
+      ],
       "prov": null
     },
     {
@@ -16622,7 +16815,9 @@
       "description": "Dizem que todos nós temos um sósia, mas podemos passar uma vida inteira sem o conhecer. Esta é a história hilariante de uma personagem que se multiplica em três, cada uma...",
       "image": "https://www.agendalx.pt/content/uploads/2025/12/uma-ideia.jpg",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://www.ticketline.pt/evento/uma-ideia-genial-102269"
+      ],
       "prov": null
     },
     {
@@ -16665,7 +16860,9 @@
       "description": "No início da década de 90 do século passado, um filme do experiente realizador australiano Peter Weir tornava-se um grande fenómeno de popularidade em todo o mundo. Amplamente nomeado para os Ósc...",
       "image": "https://www.agendalx.pt/content/uploads/2026/03/clubepoetas.jpg",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://www.ticketline.pt/evento/clube-dos-poetas-mortos-98307"
+      ],
       "prov": null
     },
     {
@@ -17026,6 +17223,43 @@
       "prov": null
     },
     {
+      "id": "2038d855f0c1",
+      "title": "FADO IN CHIADO - Em palco há 17 anos",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Cine Theatro Gymnasio - Espaço Chiado",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/fado-in-chiado-87707",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/87707/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "04b39e9c9e5f",
       "title": "Dolphin watching with a marine biologist",
       "topic": "outdoors",
@@ -17056,6 +17290,43 @@
       "source": "fever",
       "description": "Saída de barco para observar golfinhos no seu habitat natural, acompanhada por um biólogo marinho.",
       "image": "https://applications-media.feverup.com/image/upload/f_auto,ar_15:8,c_fill/fever2/plan/photo/d119890c-e567-11ef-85c4-62f9f11dc58e"
+    },
+    {
+      "id": "292e877976da",
+      "title": "Lisboa em Fado",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Lisboa Em Fado | Casa De Fado",
+      "source_id": "ticketline",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/lisboa-em-fado-casa-de-fado-100598",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/100598/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "7150a69f3256",
@@ -17131,6 +17402,43 @@
       "source": "generic",
       "description": "Uma incrível viagem imersiva ao passado que recria o Terramoto de 1755, com simuladores e tecnologia interativa para aprender sobre a história de Lisboa e sismos.",
       "image": null
+    },
+    {
+      "id": "0ed7118021b8",
+      "title": "A GORDA",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Teatro Maria Matos | Lisboa",
+      "source_id": "ticketline",
+      "neighbourhood": "Avenida da Liberdade",
+      "zone": "city",
+      "lat": 38.74595,
+      "lng": -9.138745,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/a-gorda-104978",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104978/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "6959bfd3f1b5",
@@ -18474,6 +18782,43 @@
       "source": "generic",
       "description": "Oficina com Henrique Furtado Vieira que explora a integração da palavra na dança, investigando a relação entre movimento e texto.",
       "image": "https://www.orumodofumo.com/assets/uploads/projects//henrique.jpg"
+    },
+    {
+      "id": "d451ecf1a19c",
+      "title": "Fado no Jardim da Casa da Amália Rodrigues",
+      "topic": "outdoors",
+      "categories": [
+        1
+      ],
+      "venue": "Jardim Da Amália - Fundação Amália Rodrigues",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-23",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/fado-no-jardim-da-casa-da-amalia-rodrigues-98141",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/98141/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "2ae5edadb6a1",
@@ -19854,6 +20199,43 @@
       "image": "https://secure-content.meetupstatic.com/images/classic-events/530624031/676x676.jpg"
     },
     {
+      "id": "48d42685576a",
+      "title": "Pai Nosso - os Últimos Dias de Salazar",
+      "topic": "film",
+      "categories": [
+        1
+      ],
+      "venue": "Cinema Fernando Lopes - Universidade Lusófona",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-23T19:15",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 6.0,
+        "currency": "EUR",
+        "text": "€6–6,44"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/pai-nosso-os-ultimos-dias-de-salazar-105239",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105239/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "ab6f190c61af",
       "title": "O Musical – Cover Girl",
       "topic": "performance",
@@ -20351,6 +20733,43 @@
       "prov": null
     },
     {
+      "id": "ab0b1a9bcd65",
+      "title": "BBNO$",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Lav - Lisboa Ao Vivo",
+      "source_id": "ticketline",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "lat": 38.75056,
+      "lng": -9.105413,
+      "start": "2026-06-24",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/bbno-102837",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/102837/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "0f7195a4bdfe",
       "title": "Prólogo",
       "topic": "performance",
@@ -20385,6 +20804,80 @@
       "source": "generic",
       "description": "Espetáculo de abertura que explora o teatro e os espaços circundantes.",
       "image": "https://www.tndm.pt/fotos/programacao/eventos/o_teatro_contado_por_quem_o_vive_1920_1__14143433766a22fb6ecf9ac.png"
+    },
+    {
+      "id": "e3343bb48e2d",
+      "title": "Secret Stuff Comedy Club",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Teatro Sá Da Bandeira | Sala Estudio Latino | Porto, Teatro Da...",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-24",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/secret-stuff-comedy-club-104663",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104663/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "3f55126794b5",
+      "title": "The Lingerie Show – o Cabaret à Nossa Maneira",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "The Lingerie Restaurant",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-24",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/the-lingerie-show-o-cabaret-a-nossa-maneira-100615",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/100615/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "18c37790363a",
@@ -21524,6 +22017,43 @@
       "prov": null
     },
     {
+      "id": "fe81bebf0b83",
+      "title": "Aos Nossos Amigos",
+      "topic": "film",
+      "categories": [
+        1
+      ],
+      "venue": "Cinema Fernando Lopes - Universidade Lusófona",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-24T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 6.0,
+        "currency": "EUR",
+        "text": "€6–6,44"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/aos-nossos-amigos-105655",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105655/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "61aeb58e2117",
       "title": "Mundo Lingo Lisbon",
       "topic": "social",
@@ -21554,6 +22084,43 @@
       "source": "meetup",
       "description": "100s of people from around the 🌎 meet weekly to socialise, have a drink, and meet foreign/local people of all ages. It's chilled, fun and free. 🟢 The Fl.",
       "image": "https://secure-content.meetupstatic.com/images/classic-events/532717835/676x676.jpg"
+    },
+    {
+      "id": "de4d9bf8d667",
+      "title": "Casa da Discórdia Nº 76",
+      "topic": "comedy",
+      "categories": [
+        1
+      ],
+      "venue": "Poolside Hub",
+      "source_id": "ticketline",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "lat": 38.755427,
+      "lng": -9.143167,
+      "start": "2026-06-24T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.0,
+        "currency": "EUR",
+        "text": "€12–12,89"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/casa-da-discordia-n-76-105583",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105583/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "866fbd1272b7",
@@ -22012,6 +22579,80 @@
       "prov": null
     },
     {
+      "id": "7eab47f6bf0a",
+      "title": "Ai Que Nervos!",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Academia De Santo Amaro (Lisboa)",
+      "source_id": "ticketline",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.701488,
+      "lng": -9.183577,
+      "start": "2026-06-25",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/ai-que-nervos-100838",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/100838/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "68d81cef1b72",
+      "title": "Assombrações",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Antigo Convento Da Encarnação",
+      "source_id": "ticketline",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": 38.716119,
+      "lng": -9.138971,
+      "start": "2026-06-25",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/assombracoes-103560",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103560/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "81ca70795cbe",
       "title": "Memories of Murder",
       "topic": "film",
@@ -22074,6 +22715,43 @@
       "source": "generic",
       "description": "Mais uma sessão do stand-up literário de Pedro Miguel Ribeiro, misturando humor e referências literárias.",
       "image": null
+    },
+    {
+      "id": "c6a6145cce6c",
+      "title": "Espanto - Festival Internacional Filosofia",
+      "topic": "outdoors",
+      "categories": [
+        1
+      ],
+      "venue": "Centro Cultural De Cascais, Casa Das Histórias Paula Rego...",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-25",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 13.5,
+        "currency": "EUR",
+        "text": "€13,50–95"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/espanto-festival-internacional-filosofia-103552",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103552/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "1df76fd0c9db",
@@ -22186,6 +22864,43 @@
       "source": "agendalx",
       "description": "Exposição individual de June Crespo (Pamplona, 1982), artista que vive e trabalha em Bilbao, cuja prática escultórica investiga a relação entre corpo, matéria e espaço arquitetónico, tensiona...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/MG_3179-copy-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "b7f5ab2a23e4",
+      "title": "2084 – o Big Brother Está em Todo o Lado",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Quinta Do Cedro | Cruz Quebrada",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-25",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/2084-o-big-brother-estaem-todo-o-lado-103840",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103840/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24484,6 +25199,43 @@
       "image": "https://cdn.viralagenda.com/images/events/ext/1803916-48409a233f1c66f2f7d5e16e36327efb-r.jpg"
     },
     {
+      "id": "a44da1de98f5",
+      "title": "Arturo Cruz & Ashe Okun",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Clube B.Leza",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-25T22:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–11"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/arturo-cruz-ashe-okun-105595",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105595/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "53bcb2966073",
       "title": "Pub Crawl",
       "topic": "nightlife",
@@ -24578,10 +25330,10 @@
         "thu"
       ],
       "price": {
-        "is_free": true,
-        "min": 0,
+        "is_free": false,
+        "min": 7.0,
         "currency": "EUR",
-        "text": "Grátis"
+        "text": "€7–7,52"
       },
       "language": [
         "pt"
@@ -24589,7 +25341,15 @@
       "url": "https://cartazculturallisboa.pt/evento/8-marvila-comedy-sessions-leva-stand-up-ao-coracao-de-marvila/",
       "source": "generic",
       "description": "🎤 8 Marvila Comedy Sessions leva stand-up ao coração de Marvila 8 Marvila Comedy Sessions apresenta uma noite de stand-up comedy num dos espaços culturais mais dinâmicos da zona oriental de Lisboa. A sessão aposta na proximidade entre humoristas e público, num ambiente descontraí.",
-      "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/06/cartaz-2026-06-09T125434.482.jpg"
+      "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/06/cartaz-2026-06-09T125434.482.jpg",
+      "links": [
+        "https://www.ticketline.pt/evento/8-marvila-comedy-sessions-105480"
+      ],
+      "prov": {
+        "price": "ticketline"
+      },
+      "lat": 38.742426,
+      "lng": -9.102397
     },
     {
       "id": "7b2dca7912e3",
@@ -24710,6 +25470,43 @@
         "NOIA",
         "S4DO"
       ],
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "a8e5ce4e97af",
+      "title": "Tudo Isto É Fado",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Auditório Municipal Ruy De Carvalho",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/tudo-isto-e-fado-104727",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104727/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
       "links": null,
       "prov": null
     },
@@ -24852,6 +25649,43 @@
       "image": "https://www.culturgest.pt/media/filer_public_thumbnails/filer_public/8c/3e/8c3ef1af-e5da-4c07-afa4-f77fab05bfed/artboard_3microsite2.png__1200x630_q85_crop_subsampling-2_upscale.png"
     },
     {
+      "id": "215d138ad8da",
+      "title": "MALA VOADORA – Polo Norte",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Culturgest - Auditório Emílio Rui Vilar",
+      "source_id": "ticketline",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "lat": 38.740896,
+      "lng": -9.142813,
+      "start": "2026-06-26",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/mala-voadora-polo-norte-99236",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/99236/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "55e9ce438f30",
       "title": "AirOtic Soirée Summer - Lisbon",
       "topic": "performance",
@@ -24918,6 +25752,43 @@
       "source": "agendalx",
       "description": "Como escrever a palavra liberdade com um só risco? O 6.º Ciclo de espetáculos da Escola Superior de Dança inclui na sua programação um espetáculo destinado...",
       "image": "https://www.agendalx.pt/content/uploads/2026/06/escolasupdanca2.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "1900bf75aaff",
+      "title": "MACAM",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins | Galeria 4,...",
+      "source_id": "ticketline",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.700497,
+      "lng": -9.18314,
+      "start": "2026-06-26",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/macam-93233",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/93233/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -25092,6 +25963,43 @@
       "prov": null
     },
     {
+      "id": "ca68dac4413a",
+      "title": "Tu Não Pariste o Meu Destino 2",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "T.I.O | Teatro Independente De Oeiras",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15.0,
+        "currency": "EUR",
+        "text": "€15–18"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/tu-nao-pariste-o-meu-destino-2-103040",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103040/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "063dc9bc6179",
       "title": "Sonia Sieff",
       "topic": "art",
@@ -25126,6 +26034,43 @@
       "source": "agendalx",
       "description": "Através destas série dedicadas ao corpo masculino, Sonia Sieff propõe um olhar íntimo e contemporâneo sobre a nudez, num diálogo entre fotografia, moda e emoção.",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/Imagem2-2.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "3e45146be95a",
+      "title": "RAY",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Àcapela Live Arts&Bar",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/v2-ray",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104936/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -26762,6 +27707,117 @@
       "image": "http://static1.squarespace.com/static/605a08c97879a54cf42fc65b/60887f424b2979110c9ec255/69f3923bfb681c4544e0798a/1781603468394/54_Miso_Quartet_Quartet_3_Maio_2026.%C2%A9Susana+Paiva.jpg?format=1500w"
     },
     {
+      "id": "79835b65d874",
+      "title": "O Amor Não se Esquece, Afonso",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Sociedade Filarmónica Recreio Alverquense | Alverca",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15.0,
+        "currency": "EUR",
+        "text": "€15–16"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/o-amor-nao-se-esquece-afonso-104706",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104706/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "503ac67be432",
+      "title": "Chiado Comedy Club – Humor Negro",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Teatro Bocage | Lisboa",
+      "source_id": "ticketline",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": 38.71984,
+      "lng": -9.134072,
+      "start": "2026-06-26T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.0,
+        "currency": "EUR",
+        "text": "€12–13"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/chiado-comedy-club-humor-negro-78074",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/78074/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "fe35c6b30db8",
+      "title": "Passa por Mim em Alcântara",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Academia De Santo Amaro (Lisboa)",
+      "source_id": "ticketline",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.701488,
+      "lng": -9.183577,
+      "start": "2026-06-26T21:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–13,42"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/passa-por-mim-em-alcantara-102578",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/102578/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "d2222bcd6b8b",
       "title": "Freakshow Labs – Arruda dos Vinhos",
       "topic": "food",
@@ -26915,6 +27971,43 @@
       "lng": -9.140548
     },
     {
+      "id": "75864cafaf2d",
+      "title": "Walk Like Mary",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Criarte (Carcavelos)",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T21:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15.0,
+        "currency": "EUR",
+        "text": "€15–16,11"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/walk-like-mary-till-the-end-of-the-world-105506",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105506/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "0bd634daf367",
       "title": "Ray",
       "topic": "music",
@@ -27023,6 +28116,43 @@
       "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/c62b6ce8-93c9-11f0-842b-fac75a0567eb"
     },
     {
+      "id": "cd37d01b6d04",
+      "title": "Debatível – o Estado Deve Financiar o Jornalismo?",
+      "topic": "learning",
+      "categories": [
+        1
+      ],
+      "venue": "Time Out Market - Estúdio Time Out",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T21:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20.0,
+        "currency": "EUR",
+        "text": "€20–21,48"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/debativel-o-estado-devefinanciar-o-jornalis-103032",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103032/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "f7c58043f711",
       "title": "Matias Damásio",
       "topic": "nightlife",
@@ -27055,6 +28185,43 @@
       "source": "agendalx",
       "description": "Natural da província de Benguela, romântico por natureza, Matias Damásio transporta nas suas músicas o coração de Angola, expressando o amor sincero e honesto de uma forma tão generosa que fa...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/matias-damasio.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "c360e7eba1d6",
+      "title": "Bliri Patron Misti Kanta",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Lav - Lisboa Ao Vivo | Sala 1",
+      "source_id": "ticketline",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "lat": 38.75056,
+      "lng": -9.105413,
+      "start": "2026-06-26T22:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 30.0,
+        "currency": "EUR",
+        "text": "€30–43"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/bliri-patron-misti-kanta-105170",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105170/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -27209,6 +28376,43 @@
       "source": "generic",
       "description": "Hoficyo é um produtor e DJ de música eletrónica baseado em Lisboa, com influências de EBM e industrial. Co-fundador da label BIND TRAX, a sua música combina atmosferas cinematográficas com energia de pista.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/06/image1-1.png"
+    },
+    {
+      "id": "ec007f4705ee",
+      "title": "Grupo Pilon 40 Anos de Carreira",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Clube B.Leza",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T23:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 15.0,
+        "currency": "EUR",
+        "text": "€15–16,11"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/grupo-pilon-40-anos-de-carreira-104724",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104724/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "40316b86b7bc",
@@ -27570,6 +28774,43 @@
       "image": null
     },
     {
+      "id": "e388b19959f5",
+      "title": "Circuitos Históricos em Oeiras",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Centro Histórico De Oeiras, Palácio Marquês De Pombal - Jardim...",
+      "source_id": "ticketline",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.7013885,
+      "lng": -9.1814544,
+      "start": "2026-06-27",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/circuitos-historicos-em-oeiras-105069",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105069/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "f476ba234fa6",
       "title": "Um Silabário por Reconstruir IV GRAFIAS SONORAS",
       "topic": "music",
@@ -27745,6 +28986,43 @@
       "prov": null
     },
     {
+      "id": "c91a671ac962",
+      "title": "Don't think, just Shoot! – Workshop Fotografia",
+      "topic": "workshops",
+      "categories": [
+        1
+      ],
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
+      "source_id": "ticketline",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.700497,
+      "lng": -9.18314,
+      "start": "2026-06-27",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/v2-dont-think-just-shoot-workshop",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103794/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "93839c68c7ee",
       "title": "Oficina: Como se Conservam Moedas",
       "topic": "workshops",
@@ -27775,6 +29053,43 @@
       "source": "generic",
       "description": "Oficina para famílias onde se aprende a conservar moedas. Atividade gratuita, carece de reserva prévia.",
       "image": "https://mlgczzplk1pi.i.optimole.com/yEYAA9Y.X04L.148bd/w:auto/h:auto/q:mauto/f:avif/https://estrelaseouricos.sapo.pt/carregamentos/2026/01/Museu-do-Dinheiro-atividades-para-criancas-e-familias-As-moedas-tambem-vao-ao-medico-menino-com-lupa-e-camisola-as-riscas.jpg"
+    },
+    {
+      "id": "8a934b4d5f44",
+      "title": "Mistério em Lisboa",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Ponto De Encontro: Praça Do Rossio",
+      "source_id": "ticketline",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.713779,
+      "lng": -9.139527,
+      "start": "2026-06-27",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 14.5,
+        "currency": "EUR",
+        "text": "€14,50–15"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/misterio-em-lisboa-o-enigma-do-regicidio-101780",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/101780/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "d4d99491d1ea",
@@ -29096,6 +30411,43 @@
       "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJOWDsBlZOh8kQoJcdqcQk2Ox_QEaOJU2GeTMFJQRmkRGbFR6FTdFS_43X57DMyeowpMRyOVLpv1w5xMpAWnfn7N5PhXlcYtI2QQmbS5q61743ZM9PU_olaCfluueELYSa6aWqZSC8jzTA5q2i6Ju61QZ4FmPK24wx3dtAQED0WNW6RXUJnl-adjygrZM/w1200-h630-p-k-no-nu/WSP_aguaforte_Latka_face_post.jpg"
     },
     {
+      "id": "ab919bf3b3f1",
+      "title": "Vintage Culture Presents: Affairs BY the Mirror",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Estádio Nacional Do Jamor",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T14:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 40.0,
+        "currency": "EUR",
+        "text": "€40–140"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/vintage-culture-presents-affairs-by-the-mir-103942",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103942/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "e6771644f8af",
       "title": "Vintage Culture PRESENTS AFFAIRS BY The mirror",
       "topic": "nightlife",
@@ -30018,6 +31370,43 @@
       "image": "http://static1.squarespace.com/static/605a08c97879a54cf42fc65b/60887f424b2979110c9ec255/699eda3446f9de0cbf1aeeec/1779275820297/54_Miso_Quartet_Quartet_3_Maio_2026.%C2%A9Susana+Paiva.jpg?format=1500w"
     },
     {
+      "id": "a41168b429cf",
+      "title": "Occo - Recital “cascais Wind Quintet",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Centro Cultural De Barcarena",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T18:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5–5,40"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/occo-recital-cascais-wind-quintet-102724",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/102724/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "3eee204ee0ce",
       "title": "O Musical – On The Town",
       "topic": "performance",
@@ -30262,6 +31651,43 @@
       "source": "xceed",
       "description": "Lisbon Boat Party is an open air event during sunset cruising the Tagus river - the most unique experience in Lisbon! What’s Included: 🥂 1 welcome drink + 1 long drink included 💃🏼 4 hours of live residential DJs 🎟️ Club entry afterparty to one of the top clubs in Lisbon LISBON BO.",
       "image": null,
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "48ed39ece7d5",
+      "title": "40 Anos de Memórias",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Colégio Maristas | Auditório",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T19:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 9.0,
+        "currency": "EUR",
+        "text": "€9–9,66"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/40-anos-de-memorias-105599",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105599/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -30526,6 +31952,43 @@
       }
     },
     {
+      "id": "5a3f09866530",
+      "title": "7ª Edição Festa Coreográfica",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Criarte (Carcavelos)",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T20:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5–5,37"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/7-edicao-festa-coreografica-104945",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104945/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "be3b8141da58",
       "title": "#VaoViver UAI - Sertanejo na Caparica – Piseiro, forró - Costa da caparica",
       "topic": "music",
@@ -30633,6 +32096,43 @@
       "prov": null
     },
     {
+      "id": "b43204d9535c",
+      "title": "Chiado Comedy Club – Humor Negro",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Anexxo - Sintra",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.0,
+        "currency": "EUR",
+        "text": "€12–12,89"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/chiado-comedy-club-humor-negro-99603",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/99603/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "2f964d4bb103",
       "title": "Lisbon Saxophones",
       "topic": "music",
@@ -30700,6 +32200,117 @@
       "source": "generic",
       "description": "Kedi Sultan explora a herança musical do Oud, construindo pontes entre linguagens musicais e oferecendo uma visão contemporânea de sons intemporais.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/05/04-6_11zon-scaled.jpg"
+    },
+    {
+      "id": "9fba56d1db22",
+      "title": "ÓRFÃOS",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Cineteatro Municipal D. João V (Damaia)",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–10,74"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/orfaos-105713",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105713/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "1b8f4390c0c5",
+      "title": "Ghoya",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Lav - Lisboa Ao Vivo | Sala 1",
+      "source_id": "ticketline",
+      "neighbourhood": "Marvila",
+      "zone": "city",
+      "lat": 38.75056,
+      "lng": -9.105413,
+      "start": "2026-06-27T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20.0,
+        "currency": "EUR",
+        "text": "€20–21,48"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/ghoya-103255",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103255/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "36aeac4db7b4",
+      "title": "Tiago Sousa – Sustained Tones",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Sala Estúdio Valentim De Barros - Jardins Do Bombarda",
+      "source_id": "ticketline",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.0,
+        "currency": "EUR",
+        "text": "€12–13"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/tiago-sousa-sustained-tones-103748",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/103748/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "8d2bc123da3d",
@@ -30808,6 +32419,43 @@
       "prov": null
     },
     {
+      "id": "fa28b86ebd54",
+      "title": "O Amor que Perdura",
+      "topic": "film",
+      "categories": [
+        1
+      ],
+      "venue": "Cinema Fernando Lopes - Universidade Lusófona",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T21:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 6.0,
+        "currency": "EUR",
+        "text": "€6–6,44"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/o-amor-que-perdura-105794",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105794/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "6cbe2f4cadbd",
       "title": "Realizadoras Britânicas – Out of Chaos + Three Cases of Murder",
       "topic": "guides",
@@ -30840,6 +32488,43 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153848.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "3b522138dcbb",
+      "title": "Edm Comedy Night",
+      "topic": "comedy",
+      "categories": [
+        1
+      ],
+      "venue": "Edm Café Mem Martins",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T21:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8.0,
+        "currency": "EUR",
+        "text": "€8–8,59"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/edm-comedy-night-105575",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105575/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -30946,6 +32631,44 @@
       "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/06/Life-in-Lisboa-espetaculo-de-stand-up-em-ingles.webp"
     },
     {
+      "id": "b3a82251c119",
+      "title": "Summer of Hate",
+      "topic": "music",
+      "categories": [
+        10
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "dice",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "lat": 38.730887,
+      "lng": -9.10728,
+      "start": "2026-06-27T22:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 9.0,
+        "currency": "EUR",
+        "text": "€9"
+      },
+      "language": [
+        "pt",
+        "en"
+      ],
+      "url": "https://dice.fm/event/k6ynv9-summer-of-hate-27th-jun-casa-capito-lisbon-tickets",
+      "source": "dice",
+      "description": "",
+      "image": "https://dice-media.imgix.net/attachments/2026-05-29/f5e6a018-e2ca-4fc0-9050-ce965a57d105.jpg?rect=0%2C216%2C1080%2C648",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "7a3ffff5e247",
       "title": "Bodydoxy#4",
       "topic": "nightlife",
@@ -30983,6 +32706,43 @@
         "Herlander",
         "ALEXXE"
       ],
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "42c9208f9025",
+      "title": "Daniel Casares – Grande Gala de Flamenco",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Casino Estoril - Salão Preto E Prata",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T22:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 30.0,
+        "currency": "EUR",
+        "text": "€30–43"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/o-poder-do-subtil-daniel-casares-sexteto-102097",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/102097/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
       "links": null,
       "prov": null
     },
@@ -31247,6 +33007,43 @@
       "lineup": [
         "DVAd"
       ],
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "451e88789a0a",
+      "title": "Gérard Mendes – Boy Gê Mendes",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Clube B.Leza",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T23:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.5,
+        "currency": "EUR",
+        "text": "€12,50–13,42"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/gerard-mendes-boy-ge-mendes-105384",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105384/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
       "links": null,
       "prov": null
     },
@@ -32121,6 +33918,43 @@
       "prov": null
     },
     {
+      "id": "8592a33521c2",
+      "title": "Trabalho e Lazer na Quinta do Marquês",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Palácio Marquês De Pombal (Oeiras)",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-28T11:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.1,
+        "currency": "EUR",
+        "text": "€5,10–5,48"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/trabalho-e-lazer-na-quinta-do-marques-104537",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/104537/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "ed59875d2c50",
       "title": "O Bolo de Aniversário de Agrião",
       "topic": "performance",
@@ -32224,6 +34058,45 @@
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155338.jpg?v=2",
       "lineup": null,
       "links": null,
+      "prov": null
+    },
+    {
+      "id": "c113b61733db",
+      "title": "40 Anos de Memórias",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Colégio Maristas | Auditório",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-28T15:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 9.0,
+        "currency": "EUR",
+        "text": "€9–9,66"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/40-anos-de-memorias-105606",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105606/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": [
+        "https://www.ticketline.pt/evento/40-anos-de-memorias-105607"
+      ],
       "prov": null
     },
     {
@@ -32600,6 +34473,43 @@
       "prov": null
     },
     {
+      "id": "e9476088a7ed",
+      "title": "LEGADO",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Casino Estoril - Salão Preto E Prata",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-28T17:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8.0,
+        "currency": "EUR",
+        "text": "€8–27"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/legado-105385",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105385/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "71fb87964768",
       "title": "LILA immersive",
       "topic": "art",
@@ -32743,6 +34653,43 @@
       "source": "agendalx",
       "description": "Para celebrar o mês da diversidade e o interesse pela prática e a história do futebol feminino, As R´Elas, equipa feminina de futsal do ADR “O Relâmpago”, convidam a Spamflix, encabeçada por...",
       "image": "https://www.agendalx.pt/content/uploads/2026/06/Copia-de-still-1_pqn.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "36b7eeb01ae4",
+      "title": "Onda Nova",
+      "topic": "film",
+      "categories": [
+        1
+      ],
+      "venue": "Cinema Fernando Lopes - Universidade Lusófona",
+      "source_id": "ticketline",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-28T19:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 6.0,
+        "currency": "EUR",
+        "text": "€6–6,44"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/onda-nova-105871",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/105871/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null

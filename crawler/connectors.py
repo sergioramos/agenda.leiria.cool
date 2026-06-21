@@ -27,6 +27,10 @@ from datetime import date, timedelta
 
 import core
 
+# a browser User-Agent — some sources (RA GraphQL, Ticketline) refuse the bot UA
+_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+
 
 # ---------- registry ----------
 # `topic` is the source-level fallback/aggregator flag for dedupe; the real
@@ -78,6 +82,13 @@ CONNECTORS = [
         "id": "dice", "type": "dice", "name": "DICE",
         "website": "https://dice.fm", "topic": "music",
         "api": "https://api.dice.fm/unified_search",
+    },
+    {
+        "id": "ticketline", "type": "ticketline", "name": "Ticketline",
+        "website": "https://www.ticketline.pt", "topic": "guides",
+        "api": "https://www.ticketline.pt/agenda",   # ?district=12 (Lisboa) &page=N
+        # the big PT ticketing platform — mainstream concerts (LAV, Campo Pequeno,
+        # Coliseu, Altice Arena) that the culture agendas miss. schema.org microdata.
     },
 ]
 
@@ -702,6 +713,99 @@ def _dice_event(e, c, source, mon, window_end, venues_geo, venues_idx, seen):
     return ev
 
 
+# ---------- Ticketline (schema.org microdata agenda, district 12 = Lisboa) ----------
+# Lisboa DISTRICT includes far towns; drop the ones outside the greater-Lisbon metro.
+_TL_FAR = ("lourinha", "torres vedras", "mafra", "sobral de monte", "alenquer",
+           "arruda dos vinhos", "cadaval", "bombarral", "azambuja", "ericeira")
+
+
+def _tl_blocks(html: str) -> list:
+    """Parse the inline Event microdata blocks from a Ticketline agenda page."""
+    out = []
+    for chunk in re.split(r'itemscope\s+itemtype=["\']https?://schema\.org/(?:Music)?Event["\']', html)[1:]:
+        href = re.search(r'href=["\'](/evento/[^"\']+)["\']', chunk)
+        date = re.search(r'data-date=["\'](\d{4}-\d{2}-\d{2})["\']', chunk)
+        title = re.search(r'class=["\']title["\'][^>]*>([^<]+)<', chunk)
+        venue = re.search(r'class=["\']venues["\'][^>]*>([^<]+)<', chunk)
+        cat = re.search(r'class=["\']metadata categories["\'][^>]*>([^<]+)<', chunk)
+        img = re.search(r'data-src-original=["\']([^"\']+)["\']', chunk)
+        if href and date and title:
+            out.append({"url": "https://www.ticketline.pt" + href.group(1),
+                        "date": date.group(1), "title": _strip_html(title.group(1)),
+                        "venue": _strip_html(venue.group(1)) if venue else None,
+                        "cat": _strip_html(cat.group(1)) if cat else "",
+                        "image": img.group(1) if img else None})
+    return out
+
+
+def _tl_detail(session, cfg, url):
+    """Fetch a Ticketline event page for the start TIME and price (microdata +
+    text scan). Returns (time_str|None, price_dict|None)."""
+    html = _get_text(session, cfg, url)
+    if not html:
+        return None, None
+    t = None
+    # the datetime can have content before or after the itemprop attribute
+    m = (re.search(r'itemprop=["\']startDate["\'][^>]*content=["\'][^"\']*T(\d{2}:\d{2})', html)
+         or re.search(r'content=["\'][^"\']*T(\d{2}:\d{2})[^>]*itemprop=["\']startDate["\']', html)
+         or re.search(r'datetime=["\'][^"\']*T(\d{2}:\d{2})[^>]*itemprop=["\']startDate["\']', html))
+    if m:
+        t = m.group(1)
+    price = core.scan_price(core.html_to_text(html, 12000), allow_free=False)
+    return t, price
+
+
+def _ticketline(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay):
+    pages = cfg.get("connectors", {}).get("ticketline_max_pages", 30)
+    enrich_until = mon + timedelta(days=9)    # detail-fetch (time+price) for the near term
+    enriched, enrich_cap = 0, cfg.get("connectors", {}).get("ticketline_detail_cap", 150)
+    out, status, seen = [], "ok", set()
+    for page in range(1, pages + 1):
+        html = _get_text(session, cfg, f"{c['api']}?district=12&page={page}")
+        if html is None:
+            status = "partial" if out else "failed"
+            break
+        blocks = _tl_blocks(html)
+        if not blocks:
+            break
+        for b in blocks:
+            if b["url"] in seen:
+                continue
+            seen.add(b["url"])
+            venue = b["venue"]
+            if venue and any(f in _fold(venue) for f in _TL_FAR):
+                continue   # outside greater Lisbon
+            sd = core.parse_dt(b["date"])
+            if not sd:
+                continue
+            start_d, has_time, start_iso = sd[0], False, sd[0].isoformat()
+            price = {"is_free": False, "min": None, "currency": "EUR", "text": ""}
+            # near-term events: one detail fetch for the real time + price
+            if start_d <= enrich_until and enriched < enrich_cap:
+                enriched += 1
+                tm, pr = _tl_detail(session, cfg, b["url"])
+                if tm:
+                    has_time, start_iso = True, f"{start_d.isoformat()}T{tm}"
+                if pr:
+                    price = pr
+                time.sleep(delay / 2)
+            topic = map_topic(b["cat"], b["title"], default="music")
+            lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx,
+                                                   c.get("neighbourhood"), c.get("zone"))
+            ev = core.make_event(
+                title=b["title"], source=source, topic=topic, mon=mon, window_end=window_end,
+                start_d=start_d, end_d=None, has_time=has_time, start_iso=start_iso,
+                price=price, url=b["url"], description="", language=["pt"],
+                categories=source["categories"], venue_name=venue,
+                neighbourhood=neigh, zone=zone, lat=lat, lng=lng)
+            if ev:
+                if b["image"] and core._good_img(b["image"]):
+                    ev["image"] = core.resolve_url(b["image"], c["website"])
+                out.append(ev)
+        time.sleep(delay)
+    return out, status
+
+
 def _get_text(session, cfg, url):
     """GET -> response text (one retry), or None on failure."""
     timeout = max(cfg["crawl"].get("per_source_timeout_s", 25), 45)
@@ -718,7 +822,7 @@ def _get_text(session, cfg, url):
 
 _FETCHERS = {"agendalx": _agendalx, "tribe": _tribe, "gulbenkian": _gulbenkian,
              "jsonld_listing": _jsonld_listing, "jsonld_detail": _jsonld_detail,
-             "ra": _ra, "dice": _dice}
+             "ra": _ra, "dice": _dice, "ticketline": _ticketline}
 
 
 def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:
@@ -727,6 +831,9 @@ def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:
     cat_for_topic = {t["id"]: (t["categories"][0] if t["categories"] else 1) for t in tax["topics"]}
     venues_idx = core.venues_index(sources)
     venues_geo = core.load_venues()
+    # several sites (RA, Ticketline) block the bot UA — present a browser one for
+    # the connector session (it only hits public APIs/listings, never the long tail)
+    session.headers["User-Agent"] = _UA
     delay = cfg["crawl"].get("polite_delay_ms", 800) / 1000.0
     events, statuses = [], {}
     for c in CONNECTORS:

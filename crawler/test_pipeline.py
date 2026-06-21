@@ -277,5 +277,21 @@ t('ld utc->lisbon', connectors._lisbon_dt('2026-08-22T14:00:00.000Z')[2], '2026-
 t('ld offset kept', connectors._lisbon_dt('2026-06-24T22:00:00+01:00')[2], '2026-06-24T22:00')
 t('ld midnight allday', connectors._lisbon_dt('2026-06-22T00:00:00.000')[1], False)
 
+# ---- Ticketline microdata listing parser ----
+_TL = ('<li itemscope itemtype="http://schema.org/Event">'
+       '<a href="/evento/bbno-102837" itemprop="url">'
+       '<div class="date" data-date="2026-06-24" itemprop="startDate" content="2026-06-24"></div>'
+       '<img data-src-original="https://info.ticketline.pt/x/cartaz.jpg" itemprop="image"/>'
+       '<div class="details"><p class="metadata categories">Música</p>'
+       '<p class="title" itemprop="name">BBNO$</p>'
+       '<p class="venues" itemprop="location">Lav - Lisboa Ao Vivo</p></div></a></li>')
+_tlb = connectors._tl_blocks(_TL)
+t('tl block parsed', len(_tlb), 1)
+t('tl title', _tlb[0]['title'], 'BBNO$')
+t('tl date', _tlb[0]['date'], '2026-06-24')
+t('tl venue', _tlb[0]['venue'], 'Lav - Lisboa Ao Vivo')
+t('tl url', _tlb[0]['url'], 'https://www.ticketline.pt/evento/bbno-102837')
+t('tl far-town skip key', 'lourinha' in connectors._TL_FAR, True)
+
 print(f'\n{ok} passed, {fail} failed')
 sys.exit(1 if fail else 0)
