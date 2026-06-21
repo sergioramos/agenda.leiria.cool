@@ -67,10 +67,14 @@ function matches(ev) {
   if (f.free && !(ev.price && ev.price.is_free)) return false;
   if (f.days.size && !(ev.days || []).some(d => f.days.has(d))) return false;
   if (f.q) {
-    const cats = (ev.categories || []).map(c => state.taxonomy.categories[c] || '').join(' ');
-    const lineup = (ev.lineup || []).join(' ');
-    const hay = `${ev.title} ${ev.venue} ${ev.neighbourhood || ''} ${ev.description || ''} ${cats} ${lineup}`.toLowerCase();
-    if (!hay.includes(f.q)) return false;
+    // build the search haystack once per event and cache it — rebuilding it for
+    // every event on every keystroke was the cause of the search lag
+    if (ev._hay === undefined) {
+      const cats = (ev.categories || []).map(c => state.taxonomy.categories[c] || '').join(' ');
+      const lineup = (ev.lineup || []).join(' ');
+      ev._hay = `${ev.title} ${ev.venue} ${ev.neighbourhood || ''} ${ev.description || ''} ${cats} ${lineup}`.toLowerCase();
+    }
+    if (!ev._hay.includes(f.q)) return false;
   }
   return true;
 }
@@ -423,7 +427,12 @@ async function init() {
   sel.onchange = () => loadWeek(weeks[+sel.value]);
 
   // wire controls
-  $('#search').addEventListener('input', e => { state.filters.q = e.target.value.trim().toLowerCase(); render(); });
+  let searchT;
+  $('#search').addEventListener('input', e => {
+    state.filters.q = e.target.value.trim().toLowerCase();
+    clearTimeout(searchT);
+    searchT = setTimeout(render, 120);   // debounce: re-render after the user pauses
+  });
   const filtToggle = $('#filters-toggle');
   filtToggle.onclick = () => {
     const collapse = $('#filter-collapse');
