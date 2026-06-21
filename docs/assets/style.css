@@ -258,6 +258,9 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   background: #fefefe; border: 0; border-radius: 4px; padding: 24px;
   display: flex; align-items: center; gap: 24px;
   box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
+  /* skip layout/paint for off-screen cards — keeps big result sets responsive */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 124px;
 }
 /* Square artwork. The side is anchored to the body's natural height (96px:
    title 24 + 8 + venue 16 = 48, +24 gap, +24 tags) rather than to a stretched

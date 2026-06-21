@@ -160,6 +160,12 @@ function revealPage() {
 const PIN_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>';
 const CAL_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 19h6"/><path d="M16 2v4"/><path d="M19 16v6"/><path d="M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>';
 
+// parse each icon's SVG once; cards clone the node (far cheaper than re-parsing
+// the HTML string ~1800 times when rendering hundreds of cards)
+const _svgTmpl = document.createElement('template');
+function _svgNode(html) { _svgTmpl.innerHTML = html; return _svgTmpl.content.firstElementChild; }
+const PIN_NODE = _svgNode(PIN_SVG), CAL_NODE = _svgNode(CAL_SVG);
+
 function mapsUrl(ev) {
   // for a generic/unnamed venue (city-wide events, "TBA", "Secret Location"),
   // exact coordinates beat a name search; otherwise the name shows the place card
@@ -243,7 +249,7 @@ function card(ev) {
     className: 'venue-line', href: mapsUrl(ev), target: '_blank', rel: 'noopener',
     title: 'Abrir no Google Maps',
   });
-  venueLine.insertAdjacentHTML('afterbegin', PIN_SVG);
+  venueLine.append(PIN_NODE.cloneNode(true));
   venueLine.append(el('span', {
     textContent: [ev.venue, ev.neighbourhood].filter(Boolean).join(' · '),
   }));
@@ -252,7 +258,7 @@ function card(ev) {
     className: 'save-date', href: gcalUrl(ev), target: '_blank', rel: 'noopener',
     title: 'Adicionar ao Google Calendar',
   });
-  save.insertAdjacentHTML('afterbegin', CAL_SVG);
+  save.append(CAL_NODE.cloneNode(true));
   save.append(el('span', { textContent: 'Guardar data' }));
 
   const badges = el('div', { className: 'badges' });
@@ -285,7 +291,9 @@ function revealCards() {
     CAP * STEP + 700);
 }
 
+let _renderToken = 0;
 function render(animate = false) {
+  const myToken = ++_renderToken;   // a newer render cancels this one's streaming
   const results = $('#results');
   const visible = state.week.events.filter(matches);
   $('#result-count').textContent = `${visible.length} evento${visible.length === 1 ? '' : 's'}`;
@@ -296,6 +304,7 @@ function render(animate = false) {
   for (const ev of visible) (groups[ev.topic] ||= []).push(ev);
 
   const inner = el('div', { className: 'results-inner' });
+  const queue = [];   // [{cards, ev}] — built in chunks so a big set never blocks
   for (const tid of order) {
     const list = groups[tid];
     if (!list || !list.length) continue;
@@ -312,17 +321,33 @@ function render(animate = false) {
         el('span', { className: 'topic-kicker', textContent: `${list.length} ${list.length === 1 ? 'evento' : 'eventos'}` }),
         h2)));
     const cards = el('div', { className: 'cards' });
-    list.forEach(ev => {
-      const c = card(ev);
-      if (animate) c.classList.add('card-rv'); // hidden until revealed one by one
-      cards.append(c);
-    });
+    list.forEach(ev => queue.push({ cards, ev }));
     sec.append(cards);
     inner.append(sec);
   }
   results.innerHTML = '';
   results.append(inner);
-  if (animate) revealCards(); // cards fade in one by one as they enter view
+
+  let i = 0;
+  const build = n => {
+    for (let k = 0; k < n && i < queue.length; k++, i++) {
+      const c = card(queue[i].ev);
+      if (animate) c.classList.add('card-rv'); // hidden until revealed one by one
+      queue[i].cards.append(c);
+    }
+  };
+  if (animate) {                 // week load (once): build all, then reveal
+    build(queue.length);
+    revealCards();
+  } else {                       // search/filter: first chunk now, stream the rest
+    build(80);                   // enough to fill the viewport instantly
+    const step = () => {
+      if (myToken !== _renderToken || i >= queue.length) return; // superseded/done
+      build(120);
+      requestAnimationFrame(step);
+    };
+    if (i < queue.length) requestAnimationFrame(step);
+  }
   renderActiveFilterNote();
   refreshChipStates();
   syncHash();
