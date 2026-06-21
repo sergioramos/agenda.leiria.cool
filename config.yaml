@@ -35,6 +35,16 @@ ai:
   request_timeout_s: 40
   max_chars_per_page: 18000      # trim fetched HTML text before sending to the model
 
+connectors:
+  # Structured JSON-API sources pulled once per run over a WIDE horizon into the
+  # persistent pool (docs/data/pool.json); the weekly publish just filters it.
+  # No AI, no cost. See crawler/connectors.py for the registry.
+  enabled: true
+  horizon_days: 75               # how far ahead to pull into the pool
+  agendalx_max_pages: 12         # per_page=100 each (CM Lisboa official spine)
+  ccb_max_pages: 12              # per_page=50, date-filtered (Tribe)
+  gulbenkian_max_pages: 14       # per_page=50 (trimmed via _fields), ordered by recent publish
+
 crawl:
   breadth: max                   # max | broad | lean  (which sources to attempt)
   shards: 8                      # parallel GitHub Actions jobs the source list is split across

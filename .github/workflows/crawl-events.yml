@@ -55,13 +55,15 @@ jobs:
           pattern: partial-*
           merge-multiple: true
           path: _partials
-      - name: Merge shards into the week
+      - name: Fetch structured connectors (wide horizon, no AI)
+        run: python crawler/fetch_connectors.py --out _partials/connectors.json
+      - name: Merge shards + connectors into the week
         run: python crawler/merge_week.py --partials-dir _partials --out-dir docs/data --generated-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
       - name: Commit the new week
         run: |
           git config user.name "pregoeiro-bot"
           git config user.email "noreply@users.noreply.github.com"
-          git add docs/data/weeks
+          git add docs/data/weeks docs/data/pool.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

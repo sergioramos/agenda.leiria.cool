@@ -9,6 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
+import connectors
 
 ok = fail = 0
 def t(label, got, want):
@@ -178,6 +179,49 @@ a = ev(HOT, 'Aulas de Swing', venue='24–28 Sep 2026')
 b = ev(HOT, 'Aulas de Swing', venue=None, url='https://hcp.pt/aulas')
 out = core.dedupe([a, b], SRCS)
 t('junk venue loses', out[0]['venue'], 'Hot Clube de Portugal')
+
+# ---- connectors: pure parsing helpers (no network) ----
+t('topic music', connectors.map_topic('Concerto de fado ao vivo'), 'music')
+t('topic art', connectors.map_topic('Exposição de pintura contemporânea'), 'art')
+t('topic performance', connectors.map_topic('Espetáculo de teatro'), 'performance')
+t('topic film', connectors.map_topic('Cinema ao ar livre'), 'film')
+t('topic default', connectors.map_topic('Coisa indefinida', default='art'), 'art')
+
+t('time 24h', connectors._time_from('21:00'), '21:00')
+t('time h', connectors._time_from('às 21h'), '21:00')
+t('time h30', connectors._time_from('21h30'), '21:30')
+t('time none', connectors._time_from('entrada livre'), None)
+
+t('strip html list', connectors._strip_html(['<p>Olá &amp; tal</p>']), 'Olá & tal')
+
+# AgendaLX price: PHP-serialized value, free, unknown
+t('alx price range', connectors._agendalx_price(
+    {'price_cat': ['value'], 'price_val': ['a:1:{i:0;a:2:{s:5:"value";s:8:"8 € a 12";s:11:"description";s:1:"x";}}']})['text'], '€8–12')
+t('alx price free', connectors._agendalx_price({'price_cat': ['free']})['is_free'], True)
+t('alx price unknown', connectors._agendalx_price({'price_cat': ['unknown']})['text'], '')
+
+# ---- persistent pool ----
+_pool = {'events': {}, 'updated_at': None}
+_e1 = {'id': 'aaa', 'title': 'X', 'start': '2026-06-25', 'end': None, 'source': 'agendalx'}
+core.pool_upsert(_pool, [_e1], 'agendalx', '2026-06-21T06:00:00')
+t('pool upsert', _pool['events']['aaa']['_first_seen'], '2026-06-21T06:00:00')
+core.pool_upsert(_pool, [{**_e1, 'title': 'X2'}], 'agendalx', '2026-06-28T06:00:00')
+t('pool refresh keeps first_seen', _pool['events']['aaa']['_first_seen'], '2026-06-21T06:00:00')
+t('pool refresh updates data', _pool['events']['aaa']['title'], 'X2')
+# expire: a past event drops, a future one stays
+core.pool_upsert(_pool, [{'id': 'old', 'title': 'Past', 'start': '2026-06-01', 'end': '2026-06-02'}], 'ccb', 's')
+removed = core.pool_expire(_pool, date(2026, 6, 22))
+t('pool expires past', 'old' not in _pool['events'], True)
+t('pool keeps future', 'aaa' in _pool['events'], True)
+t('pool_events strips meta', all(not k.startswith('_') for e in core.pool_events(_pool) for k in e), True)
+
+# ---- reframe_window: recompute days/ongoing from absolute dates ----
+_span = {'id': 'r1', 'title': 'Expo', 'start': '2026-06-10', 'end': '2026-07-30', 'days': [], 'ongoing': False}
+_after = {'id': 'r2', 'title': 'Future', 'start': '2026-08-01', 'end': None, 'days': [], 'ongoing': False}
+_rf = core.reframe_window([_span, _after], date(2026, 6, 22), date(2026, 6, 28))
+t('reframe drops out-of-window', [e['id'] for e in _rf], ['r1'])
+t('reframe marks ongoing', _rf[0]['ongoing'], True)
+t('reframe fills days', len(_rf[0]['days']), 7)
 
 print(f'\n{ok} passed, {fail} failed')
 sys.exit(1 if fail else 0)

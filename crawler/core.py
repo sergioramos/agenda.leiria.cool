@@ -40,6 +40,60 @@ def save_sources(payload: dict) -> None:
 def topic_ids(tax: dict) -> set[str]:
     return {t["id"] for t in tax["topics"]}
 
+# ---------- persistent pool ----------
+# The structured connectors fetch a WIDE horizon into this pool once per run;
+# the weekly publish just filters it. It survives a failed run (last-good data
+# stays) and lets multi-day/advance events accumulate. Keyed by event id.
+POOL_PATH = ROOT / "docs" / "data" / "pool.json"
+
+
+def load_pool() -> dict:
+    if POOL_PATH.exists():
+        try:
+            d = json.loads(POOL_PATH.read_text(encoding="utf-8"))
+            if isinstance(d, dict) and isinstance(d.get("events"), dict):
+                return d
+        except Exception:
+            pass
+    return {"events": {}, "updated_at": None}
+
+
+def save_pool(pool: dict) -> None:
+    POOL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    POOL_PATH.write_text(json.dumps(pool, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def pool_upsert(pool: dict, events: list[dict], connector: str, stamp: str) -> None:
+    """Insert/refresh this run's connector events. Fresh data wins; first-seen
+    is preserved. A connector that returned nothing this run leaves its earlier
+    entries untouched (they expire by date), so a failed fetch never wipes them."""
+    store = pool.setdefault("events", {})
+    for e in events:
+        pid = e.get("id")
+        if not pid:
+            continue
+        prev = store.get(pid) or {}
+        store[pid] = {**e, "_connector": connector,
+                      "_first_seen": prev.get("_first_seen", stamp), "_last_seen": stamp}
+
+
+def pool_expire(pool: dict, today: date, grace_days: int = 2) -> int:
+    """Drop pooled events whose last date is more than grace_days in the past.
+    Returns how many were removed."""
+    cutoff = (today - timedelta(days=grace_days)).isoformat()
+    store = pool.get("events", {})
+    keep = {pid: e for pid, e in store.items()
+            if ((e.get("end") or e.get("start") or "")[:10] or "9999") >= cutoff}
+    removed = len(store) - len(keep)
+    pool["events"] = keep
+    return removed
+
+
+def pool_events(pool: dict) -> list[dict]:
+    """Pooled events as plain event dicts (internal _-prefixed keys stripped)."""
+    return [{k: v for k, v in e.items() if not k.startswith("_")}
+            for e in pool.get("events", {}).values()]
+
 # ---------- spend tracking ----------
 def month_ai_spend(today: date) -> float:
     """Sum of ai_cost_usd across committed week files generated this calendar
@@ -129,6 +183,27 @@ def days_in_window(start_d: date, end_d: date | None, mon: date, window_end: dat
 def overlaps_window(start_d: date, end_d: date | None, mon: date, window_end: date) -> bool:
     end_d = end_d or start_d
     return start_d <= window_end and end_d >= mon
+
+
+def reframe_window(events: list[dict], mon: date, window_end: date) -> list[dict]:
+    """Recompute days/ongoing for the display window from each event's absolute
+    start/end, dropping any that no longer overlap. Pooled (wide-horizon) events
+    carry day chips computed for a different window, so they are reframed here
+    before publishing a specific week."""
+    out = []
+    for e in events:
+        sd = parse_dt(e.get("start"))
+        if not sd:
+            continue
+        ed = parse_dt(e.get("end")) if e.get("end") else None
+        start_d, end_d = sd[0], (ed[0] if ed else None)
+        if not overlaps_window(start_d, end_d, mon, window_end):
+            continue
+        days, ongoing = days_in_window(start_d, end_d, mon, window_end)
+        if not days:
+            continue
+        out.append({**e, "days": days, "ongoing": ongoing})
+    return out
 
 # ---------- http ----------
 def make_session(cfg: dict) -> requests.Session:
