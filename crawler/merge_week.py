@@ -78,18 +78,23 @@ def main():
             tried += m.get("sources_tried", 0)
             ai_calls += m.get("ai_calls", 0)
 
-    # ---- pool: upsert this run's connector events, expire the past, persist ----
+    # ---- pool: each connector returns its COMPLETE current view, so REPLACE its
+    # slice of the pool every run (no accumulation). A connector absent this run
+    # (failed/empty) keeps its last-good events — that's the failure cushion.
     pool = core.load_pool()
     stamp = (args.generated_at or datetime.now(timezone.utc).isoformat(timespec="seconds"))
     by_conn: dict = {}
     for e in connector_events:
         by_conn.setdefault(e.get("source") or "connectors", []).append(e)
+    present = set(by_conn)
+    pool["events"] = {pid: e for pid, e in pool.get("events", {}).items()
+                      if e.get("_connector") not in present}   # drop the old slices we're refreshing
     for conn, evs in by_conn.items():
         core.pool_upsert(pool, evs, conn, stamp)
     removed = core.pool_expire(pool, today)
     pool["updated_at"] = stamp
     core.save_pool(pool)
-    print(f"[pool] +{len(connector_events)} from {len(by_conn)} connector(s), "
+    print(f"[pool] refreshed {len(present)} connector(s) ({len(connector_events)} events), "
           f"-{removed} expired, {len(pool['events'])} total")
 
     # ---- build the publish set for the displayed week ----

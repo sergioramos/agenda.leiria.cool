@@ -62,7 +62,7 @@ CONNECTORS = [
     },
     {
         "id": "bol", "type": "jsonld_listing", "name": "BOL",
-        "website": "https://www.bol.pt", "topic": "guides",
+        "website": "https://www.bol.pt", "topic": "guides", "default_topic": "art",
         "api": "https://www.bol.pt/Comprar/pesquisa/0-0-11-0-0-0/bilhetes_para_espectaculos_em_lisboa",
         # PT-wide listing (610 events) — filtered to Lisbon by coordinates; best PRICE
     },
@@ -80,7 +80,7 @@ CONNECTORS = [
     },
     {
         "id": "fever", "type": "jsonld_detail", "name": "Fever",
-        "website": "https://feverup.com", "topic": "guides",
+        "website": "https://feverup.com", "topic": "guides", "default_topic": "tours",
         "listing": "https://feverup.com/en/lisbon",
         "slug_re": r"/m/\d+/en", "detail_base": "https://feverup.com",
         # Candlelight, immersive experiences, branded shows — detail pages carry
@@ -130,21 +130,31 @@ def _listing_in_lisbon(lat, lng, locality_folded: str) -> bool:
 
 
 _TOPIC_KW = [
-    ("film",        ["cinema", "filme", "curtas", "documentari"]),
+    ("film",        ["cinema", "filme", "curtas", "documentari", "ante-estreia", "antestreia",
+                     "anteestreia", "longa-metragem"]),
     ("nightlife",   ["festa", "club", "after", "dj set", "noite"]),
     ("comedy",      ["comedia", "stand-up", "stand up", "humor", "improv"]),
-    ("performance", ["teatro", "danca", "opera", "performance", "circo", "bailado", "musical"]),
+    ("performance", ["teatro", "danca", "opera", "performance", "circo", "bailado", "musical", "hamlet"]),
     ("family",      ["familia", "infantil", "crianca", "bebe", "para os mais novos"]),
     ("workshops",   ["workshop", "oficina", "atelier", "curso", "masterclass", "formacao"]),
     ("learning",    ["conferencia", "conversa", "palestra", "ciencia", "literatura", "livro",
-                     "debate", "leitura", "visita guiada conferencia", "coloquio"]),
-    ("food",        ["gastronomia", "comida", "vinho", "mercado", "degustacao", "supper", "jantar"]),
+                     "debate", "leitura", "coloquio"]),
+    ("food",        ["gastronomia", "comida", "vinho", "mercado", "degustacao", "supper", "jantar",
+                     "lunch", "dinner", "menu", "michelin", "tasting", "wine"]),
     ("outdoors",    ["festival", "ar livre", "open air", "jardim", "piquenique"]),
-    ("tours",       ["visita guiada", "tour", "passeio", "percurso"]),
+    # tourist attractions / experiences / guided visits (a big BOL+Fever bucket)
+    ("tours",       ["visita guiada", "visita orientada", "visita livre", "visita", "visit to", "tour",
+                     "passeio", "percurso", "oceanari", "aquari", "hop-on", "hop on", "sightseeing",
+                     "cruzeiro", "cruise", "skip-the-line", "skip the line", "admission", "ticket to",
+                     "pena", "queluz", "national palace", "palacio nacional", "monastery", "mosteiro",
+                     "monument", "tower of", "castle", "tuk", "segway", "zoo"]),
     ("wellness",    ["bem-estar", "yoga", "meditacao", "mindfulness"]),
-    ("music",       ["musica", "concerto", "fado", "jazz", "recital", "sinfonia", "coro", "dj"]),
-    ("art",         ["exposi", "arte", "pintura", "fotografia", "galeria", "escultura",
-                     "design", "ilustracao", "instalacao"]),
+    ("music",       ["musica", "concerto", "fado", "jazz", "recital", "sinfonia", "coro",
+                     "tributo", "tribute", "orquestra", "quarteto", "ensemble", "dj set"]),
+    # museums / galleries / exhibitions (anything not caught above ending here)
+    ("art",         ["exposi", "arte", "pintura", "fotografia", "galeria", "gallery", "escultura",
+                     "design", "ilustracao", "instalacao", "museu", "museum", "fundacao", "foundation",
+                     "colec", "pinacoteca", "casa fernando pessoa", "casa das historias", "maat"]),
 ]
 
 
@@ -553,9 +563,9 @@ def _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out):
               if isinstance(p, dict) and p.get("name")]
     img = _ld_one(node.get("image"))
     img = img.get("url") if isinstance(img, dict) else img
-    # content default must be a real topic, never the hidden "guides" aggregator bucket
-    default_topic = c.get("topic") if c.get("topic") not in (None, "guides") else "music"
-    topic = map_topic(title, _strip_html(node.get("description")), default=default_topic)
+    # content default: per-connector, never the hidden "guides" aggregator bucket
+    default_topic = c.get("default_topic") or (c.get("topic") if c.get("topic") not in (None, "guides") else "art")
+    topic = map_topic(title, venue, _strip_html(node.get("description")), default=default_topic)
     ev = core.make_event(
         title=title, source=source, topic=topic, mon=mon, window_end=window_end,
         start_d=start_d, end_d=(ed[0] if ed else None), has_time=has_time, start_iso=start_iso,
@@ -737,7 +747,7 @@ def _dice_event(e, c, source, mon, window_end, venues_geo, venues_idx, seen):
         img = img.get("url")
     lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx, c.get("neighbourhood"), c.get("zone"))
     ev = core.make_event(
-        title=title, source=source, topic=map_topic(title, default="music"),
+        title=title, source=source, topic=map_topic(title, venue, default="music"),
         mon=mon, window_end=window_end, start_d=start_d, end_d=None, has_time=has_time,
         start_iso=start_iso, price=price, url=f"https://dice.fm/event/{perm}",
         description="", language=["pt", "en"], categories=source["categories"],
@@ -823,7 +833,7 @@ def _ticketline(session, cfg, c, source, mon, window_end, venues_idx, venues_geo
                 if pr:
                     price = pr
                 time.sleep(delay / 2)
-            topic = map_topic(b["cat"], b["title"], default="music")
+            topic = map_topic(b["cat"], b["title"], venue, default="music")
             lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx,
                                                    c.get("neighbourhood"), c.get("zone"))
             ev = core.make_event(
