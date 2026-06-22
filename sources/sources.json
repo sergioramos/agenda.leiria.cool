@@ -29,7 +29,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "agendalx-agenda-cultural-de-lisboa",
@@ -55,7 +55,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-secreta",
@@ -82,7 +82,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "viral-agenda",
@@ -106,7 +106,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cartaz-cultural-lisboa",
@@ -131,7 +131,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "nit-new-in-town",
@@ -157,7 +157,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "comunidade-cultura-e-arte-cca",
@@ -184,7 +184,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "a-mensagem-de-lisboa",
@@ -210,7 +210,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-para-pessoas",
@@ -237,7 +237,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "eventbrite-lisboa",
@@ -260,7 +260,7 @@
       "primary_category": 1,
       "status": "active",
       "flags": [],
-      "dead_signals": 1
+      "dead_signals": 2
     },
     {
       "id": "allevents-allevents-in-lisbon",
@@ -284,7 +284,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fever-feverup-com-lisbon",
@@ -308,7 +308,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "dice",
@@ -332,7 +332,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "resident-advisor-ra",
@@ -400,7 +400,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "bandsintown",
@@ -448,7 +448,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "luma-lu-ma-lisbon",
@@ -474,7 +474,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "xceed",
@@ -498,7 +498,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fatsoma",
@@ -522,7 +522,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "meo-blueticket",
@@ -571,7 +571,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "bol-bilheteira-online",
@@ -595,7 +595,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-pt-informacao-lisboa-agenda",
@@ -643,7 +643,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "visit-lisboa-turismo-de-lisboa",
@@ -670,7 +670,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "aml-area-metropolitana-de-lisboa-agenda",
@@ -769,7 +769,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbonlux",
@@ -819,7 +819,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "designhunger",
@@ -843,7 +843,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "google-things-to-do-google-maps-events",
@@ -911,7 +911,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "reddit",
@@ -1075,7 +1075,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "strava-clubs",
@@ -1121,7 +1121,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "community-radio",
@@ -1149,7 +1149,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "discord",
@@ -1975,7 +1975,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbonbydesign",
@@ -2090,7 +2090,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "eatnowlisbon",
@@ -2183,7 +2183,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "rookierunclub-pt",
@@ -2234,7 +2234,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "b-leza",
@@ -2288,7 +2288,7 @@
       "primary_category": 3,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "jamaica",
@@ -3148,7 +3148,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "icon-bar-and-rooftop",
@@ -3535,7 +3535,7 @@
       "primary_category": 3,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "arroz-estudios",
@@ -3588,7 +3588,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fabrica-moderna",
@@ -3615,7 +3615,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "casa-independente",
@@ -3680,7 +3680,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "desterro",
@@ -3874,7 +3874,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "disgraca",
@@ -3902,7 +3902,7 @@
         "SECURED — community bought building Dec 2025"
       ],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "adao",
@@ -3997,7 +3997,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "principe-principe-discos",
@@ -4047,7 +4047,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "inclassificaveis",
@@ -4372,7 +4372,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "hall-hall-atelier",
@@ -4398,7 +4398,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "studio-marvila",
@@ -4425,7 +4425,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "puraceramica",
@@ -4450,7 +4450,7 @@
       "primary_category": 4,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -4475,7 +4475,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "toca",
@@ -4522,7 +4522,7 @@
       "primary_category": 4,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "ceramica-bairro-alto",
@@ -4570,7 +4570,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "olaria-lisboa",
@@ -4593,7 +4593,7 @@
       "primary_category": 4,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "eva-le-ceramics",
@@ -4617,7 +4617,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "estudio-torto",
@@ -4708,7 +4708,7 @@
       "primary_category": 4,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "ceramica-s-vicente",
@@ -4732,7 +4732,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ceramica-d-alfama",
@@ -4780,7 +4780,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "se-di-men-to-sedimento",
@@ -4825,7 +4825,7 @@
       "primary_category": 4,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "atelier-20-ceramica",
@@ -4849,7 +4849,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ramos-ceramica",
@@ -4943,7 +4943,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fica-oficina-criativa",
@@ -4993,7 +4993,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "artlier",
@@ -5017,7 +5017,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ar-co",
@@ -5113,7 +5113,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "nu-ceramica",
@@ -5137,7 +5137,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-drawing-club",
@@ -5163,7 +5163,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "prisma-estudio-lisboa",
@@ -5187,7 +5187,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "nude-drawing-session-lisbon",
@@ -5257,7 +5257,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cristina-cabrita-art-studio",
@@ -5303,7 +5303,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "artzone-art-studio",
@@ -5327,7 +5327,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "contraprova-atelier-de-gravura",
@@ -5351,7 +5351,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "oficina-do-cego",
@@ -5426,7 +5426,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "atelier-ser",
@@ -5450,7 +5450,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "galeria-diferenca",
@@ -5544,7 +5544,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "opar-perfume-lab",
@@ -5570,7 +5570,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "the-nose-lab",
@@ -5594,7 +5594,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cedro",
@@ -5618,7 +5618,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "next-memory",
@@ -5642,7 +5642,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "pacha-kama",
@@ -5666,7 +5666,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "palmtree-candle-studio",
@@ -5714,7 +5714,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ecolove",
@@ -5738,7 +5738,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "to-from",
@@ -5762,7 +5762,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "centro-de-joalharia-de-lisboa-cjlx",
@@ -5788,7 +5788,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "allis-lab-escola-de-joalharia",
@@ -5812,7 +5812,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "materialmaya",
@@ -5836,7 +5836,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "amare-jewelry",
@@ -5860,7 +5860,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "maria-joao-bahia-via-homo-faber",
@@ -5908,7 +5908,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "hands-on-maos-a-obra",
@@ -5956,7 +5956,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "retrosaria-rosa-pomar",
@@ -5980,7 +5980,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "josefa-searle-art-studio",
@@ -6004,7 +6004,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "embaixada-das-flores",
@@ -6074,7 +6074,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "floret-flowers",
@@ -6098,7 +6098,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fundacao-oriente",
@@ -6122,7 +6122,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cooking-lisbon",
@@ -6146,7 +6146,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "homecooking-lisbon",
@@ -6217,7 +6217,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "time-out-market-cooking-workshops",
@@ -6309,7 +6309,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "academia-do-cafe",
@@ -6355,7 +6355,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "coffee-in-brew",
@@ -6400,7 +6400,7 @@
       "primary_category": 5,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "bloom-coffee-room",
@@ -6469,7 +6469,7 @@
       "primary_category": 5,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "udance",
@@ -6514,7 +6514,7 @@
       "primary_category": 5,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "estudio-sabor-and-danca",
@@ -6744,7 +6744,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-portuguese-english-exchange",
@@ -6835,7 +6835,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "my-language-exchange-lisboa",
@@ -6859,7 +6859,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cine-society",
@@ -6885,7 +6885,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "black-cat-cinema",
@@ -6911,7 +6911,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cinecapitolio-rooftop",
@@ -6935,7 +6935,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cineconchas",
@@ -6959,7 +6959,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cinema-no-verao-jardim-do-torel",
@@ -6983,7 +6983,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cinema-ao-ar-livre-no-parque-mayer-festas-de-lisboa",
@@ -7101,7 +7101,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ccb-maat-belem-riverfront-summer-screenings",
@@ -7127,7 +7127,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "festas-de-lisboa-open-air-cinema-circuit",
@@ -7197,7 +7197,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cinema-sao-jorge",
@@ -7223,7 +7223,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cinema-ideal",
@@ -7343,7 +7343,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "culturgest-auditoriums",
@@ -7370,7 +7370,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "broteria",
@@ -7487,7 +7487,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "doclisboa",
@@ -7539,7 +7539,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "leffest",
@@ -7565,7 +7565,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "queer-lisboa",
@@ -7592,7 +7592,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "monstra",
@@ -7618,7 +7618,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "festa-do-cinema-italiano",
@@ -7666,7 +7666,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "festa-do-cinema-alemao",
@@ -7689,7 +7689,7 @@
       "primary_category": 7,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "olhares-do-mediterraneo-cinema-no-feminino",
@@ -7739,7 +7739,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "caminhos-do-cinema-portugues",
@@ -7787,7 +7787,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "hub-criativo-do-beato-unicorn-factory-lisboa",
@@ -7811,7 +7811,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "hood",
@@ -7835,7 +7835,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "workhub-lx",
@@ -7903,7 +7903,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "underdogs-gallery",
@@ -7931,7 +7931,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "galeria-baginski",
@@ -7955,7 +7955,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "eka",
@@ -8025,7 +8025,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "comoba",
@@ -8049,7 +8049,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "embaixada",
@@ -8220,7 +8220,7 @@
       "primary_category": 9,
       "status": "active",
       "flags": [],
-      "dead_signals": 0,
+      "dead_signals": 1,
       "last_seen": "2026-06-15"
     },
     {
@@ -8317,7 +8317,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "coliseu-dos-recreios",
@@ -8343,7 +8343,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "campo-pequeno",
@@ -8395,7 +8395,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "aula-magna",
@@ -8421,7 +8421,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lav-lisboa-ao-vivo",
@@ -8446,7 +8446,7 @@
       "primary_category": 10,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "pavilhao-carlos-lopes",
@@ -8469,7 +8469,7 @@
       "primary_category": 10,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "musicbox-lisboa",
@@ -8519,7 +8519,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "zdb-galeria-ze-dos-bois",
@@ -8572,7 +8572,7 @@
       "primary_category": 10,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "cabaret-maxime",
@@ -8622,7 +8622,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "paginas-tantas",
@@ -8672,7 +8672,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "casa-cheia",
@@ -8723,7 +8723,7 @@
       "primary_category": 10,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "espaco-lisboa-jazz",
@@ -8869,7 +8869,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "clube-de-fado",
@@ -8941,7 +8941,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "maria-da-mouraria",
@@ -9013,7 +9013,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "casa-de-linhares",
@@ -9135,7 +9135,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "senhor-vinho",
@@ -9231,7 +9231,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-em-fado",
@@ -9255,7 +9255,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "a-tasca-d-el-rei",
@@ -9329,7 +9329,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fundacao-calouste-gulbenkian",
@@ -9380,7 +9380,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cam-centro-de-arte-moderna-gulbenkian",
@@ -9407,7 +9407,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ccb-centro-cultural-de-belem",
@@ -9433,7 +9433,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mac-ccb-museu-de-arte-contemporanea",
@@ -9458,7 +9458,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "garagem-sul-ccb",
@@ -9482,7 +9482,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "maat",
@@ -9534,7 +9534,7 @@
       "primary_category": 11,
       "status": "active",
       "flags": [],
-      "dead_signals": 1,
+      "dead_signals": 2,
       "last_seen": "2026-06-13"
     },
     {
@@ -9562,7 +9562,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "teatro-nacional-de-sao-carlos",
@@ -9588,7 +9588,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "teatro-da-trindade-inatel",
@@ -9612,7 +9612,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "teatro-aberto",
@@ -9662,7 +9662,7 @@
       "primary_category": 11,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "lu-ca-teatro-luis-de-camoes",
@@ -9689,7 +9689,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fundacao-champalimaud-centre-for-the-unknown",
@@ -9716,7 +9716,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "teatro-do-bairro",
@@ -9740,7 +9740,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "teatro-do-bairro-alto-tba",
@@ -9766,7 +9766,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cordoaria-nacional",
@@ -9790,7 +9790,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "dia-internacional-dos-museus-noite-europeia-dos-museus-2026",
@@ -9814,7 +9814,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mnac-museu-nacional-de-arte-contemporanea-museu-do-chiado",
@@ -9840,7 +9840,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "macam-museu-de-arte-contemporanea-armando-martins",
@@ -9866,7 +9866,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-de-lisboa",
@@ -9893,7 +9893,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mnaa-museu-nacional-de-arte-antiga",
@@ -9920,7 +9920,7 @@
       "flags": [
         "reported CLOSED for renovation as of May 2026 — verify"
       ],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "museu-nacional-do-azulejo",
@@ -9948,7 +9948,7 @@
         "CLOSED for renovation since 1 Nov 2025; reopens H2 2026"
       ],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mude-museu-do-design",
@@ -10000,7 +10000,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-do-aljube-resistencia-e-liberdade",
@@ -10024,7 +10024,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-bordalo-pinheiro",
@@ -10048,7 +10048,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "muhnac-ulisboa",
@@ -10072,7 +10072,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-do-dinheiro-banco-de-portugal",
@@ -10117,7 +10117,7 @@
       "primary_category": 12,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "casa-museu-medeiros-e-almeida",
@@ -10191,7 +10191,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fress-museu-de-artes-decorativas-portuguesas",
@@ -10242,7 +10242,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-da-marioneta",
@@ -10268,7 +10268,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-da-carris",
@@ -10292,7 +10292,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-de-marinha",
@@ -10316,7 +10316,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "museu-nacional-dos-coches",
@@ -10339,7 +10339,7 @@
       "primary_category": 12,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "museu-arqueologico-do-carmo-convento-do-carmo",
@@ -10479,7 +10479,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mercado-biologico-agrobio-campo-pequeno",
@@ -10503,7 +10503,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mercado-de-arroios",
@@ -10529,7 +10529,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "feira-do-relogio",
@@ -10553,7 +10553,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "feira-de-antiguidades-velharias-e-artesanato-do-principe-real",
@@ -10576,7 +10576,7 @@
       "primary_category": 13,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -10601,7 +10601,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "feira-do-livro-de-lisboa",
@@ -10626,7 +10626,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "feira-do-livro-de-poesia-jardim-da-parada",
@@ -10650,7 +10650,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "wonderland-lisboa",
@@ -10677,7 +10677,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mercado-de-natal-do-rossio",
@@ -10767,7 +10767,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "carmo-vintage",
@@ -10950,7 +10950,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mercado-da-baixa",
@@ -10997,7 +10997,7 @@
       "primary_category": 14,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "black-sheep",
@@ -11047,7 +11047,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "senhor-manuel",
@@ -11143,7 +11143,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "insaciavel",
@@ -11238,7 +11238,7 @@
       "primary_category": 14,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "bom-bom-bom",
@@ -11502,7 +11502,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "estado-d-alma",
@@ -11548,7 +11548,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "salty",
@@ -11712,7 +11712,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "hennessy-s-irish-pub",
@@ -11780,7 +11780,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "corner-irish-pub",
@@ -11942,7 +11942,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "pow-wow",
@@ -11967,7 +11967,7 @@
       "primary_category": 15,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "tabuleiro",
@@ -11991,7 +11991,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "castelos-bar-and-boardgames",
@@ -12227,7 +12227,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "gargula-gaming",
@@ -12273,7 +12273,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "triplace-games",
@@ -12297,7 +12297,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mulligan-games",
@@ -12412,7 +12412,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-13"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "bdmania",
@@ -12436,7 +12436,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "casa-da-bd",
@@ -12550,7 +12550,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "game-night-in-lisbon-the-whisk-cafe",
@@ -12598,7 +12598,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "jardins-abertos",
@@ -12622,7 +12622,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "estufa-fria-de-lisboa",
@@ -12646,7 +12646,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "casa-do-jardim-da-estrela-um-teatro-em-cada-bairro",
@@ -12670,7 +12670,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "festival-alecrim-jardim-da-estrela",
@@ -12694,7 +12694,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "a-praca-doca-da-marinha-kiosks",
@@ -12719,7 +12719,7 @@
       "primary_category": 16,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -12746,7 +12746,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "beca-beca",
@@ -12936,7 +12936,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "nos-alive",
@@ -12960,7 +12960,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "rock-in-rio-lisboa",
@@ -12984,7 +12984,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "meo-kalorama",
@@ -13008,7 +13008,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "super-bock-super-rock",
@@ -13036,7 +13036,7 @@
         "REFORMATTED 2026"
       ],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "sonar-lisboa",
@@ -13064,7 +13064,7 @@
         "NOT IN 2026 — returns 2027"
       ],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "out-fest",
@@ -13177,7 +13177,7 @@
       "primary_category": 17,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "ageas-cooljazz",
@@ -13227,7 +13227,7 @@
       "primary_category": 17,
       "status": "active",
       "flags": [],
-      "dead_signals": 2
+      "dead_signals": 3
     },
     {
       "id": "santa-casa-jazz-fest",
@@ -13274,7 +13274,7 @@
       "primary_category": 18,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "correr-lisboa",
@@ -13296,7 +13296,8 @@
       ],
       "primary_category": 18,
       "status": "active",
-      "flags": []
+      "flags": [],
+      "dead_signals": 1
     },
     {
       "id": "social-runners-club",
@@ -13527,7 +13528,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "musa",
@@ -13713,7 +13714,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ministry-of-yoga-moy",
@@ -13737,7 +13738,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "xil-yoga",
@@ -13761,7 +13762,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "agora-lisboa",
@@ -13785,7 +13786,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "the-kynd-space",
@@ -13811,7 +13812,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "yoga-room-lisbon",
@@ -13835,7 +13836,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-yoga-loft",
@@ -13858,7 +13859,7 @@
       "primary_category": 18,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -13882,7 +13883,7 @@
       "primary_category": 18,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "rooftop-yoga-lisboa",
@@ -13928,7 +13929,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ler-devagar",
@@ -13954,7 +13955,7 @@
       "primary_category": 19,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "tigre-de-papel",
@@ -14028,7 +14029,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "linha-de-sombra",
@@ -14451,7 +14452,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "well-read",
@@ -14523,7 +14524,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "biblioteca-palacio-galveias",
@@ -14614,7 +14615,7 @@
       "primary_category": 20,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "instituto-cervantes-de-lisboa",
@@ -14640,7 +14641,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "institut-francais-du-portugal-ifp",
@@ -14664,7 +14665,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "alliance-francaise-de-lisbonne",
@@ -14688,7 +14689,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "british-council-portugal",
@@ -14736,7 +14737,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "camoes-instituto-da-cooperacao-e-da-lingua",
@@ -14762,7 +14763,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "instituto-cultural-romeno-icr-lisboa",
@@ -14876,7 +14877,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "centro-ismaili-fundacao-aga-khan-portugal",
@@ -14900,7 +14901,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "iscte-instituto-universitario-de-lisboa",
@@ -14924,7 +14925,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "universidade-de-lisboa-ulisboa",
@@ -14948,7 +14949,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "instituto-de-ciencias-sociais-ics-ulisboa",
@@ -14971,7 +14972,7 @@
       "primary_category": 21,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "universidade-nova-de-lisboa",
@@ -14994,7 +14995,7 @@
       "primary_category": 21,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "universidade-catolica-portuguesa-lisbon",
@@ -15018,7 +15019,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "universidade-lusofona",
@@ -15042,7 +15043,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "academia-das-ciencias-de-lisboa",
@@ -15089,7 +15090,7 @@
       "primary_category": 21,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "planetario-calouste-gulbenkian-centro-ciencia-viva",
@@ -15135,7 +15136,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "pint-of-science-lisboa",
@@ -15159,7 +15160,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "encontro-ciencia",
@@ -15183,7 +15184,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "instituto-gulbenkian-de-ciencia-igc",
@@ -15207,7 +15208,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "web-summit-lisbon",
@@ -15253,7 +15254,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "beta-i",
@@ -15277,7 +15278,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "startup-lisboa",
@@ -15302,7 +15303,7 @@
       "primary_category": 22,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "heden",
@@ -15325,7 +15326,7 @@
       "primary_category": 22,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "avila-spaces",
@@ -15373,7 +15374,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fintech-house-portugal-fintech",
@@ -15397,7 +15398,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "startup-grind-lisbon",
@@ -15423,7 +15424,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-new-tech-meetup",
@@ -15493,7 +15494,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "uxlx-user-experience-lisbon",
@@ -15605,7 +15606,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-design-meetup",
@@ -15805,7 +15806,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mcp-lisbon-meetup",
@@ -16005,7 +16006,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "sinfo",
@@ -16029,7 +16030,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "building-the-future",
@@ -16053,7 +16054,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "global-azure-portugal",
@@ -16149,7 +16150,7 @@
       "primary_category": 23,
       "status": "active",
       "flags": [],
-      "dead_signals": 0,
+      "dead_signals": 1,
       "last_seen": "2026-06-15"
     },
     {
@@ -16196,7 +16197,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "galeria-filomena-soares",
@@ -16243,7 +16244,7 @@
       "primary_category": 23,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "galeria-3-1",
@@ -16290,7 +16291,7 @@
       "primary_category": 23,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "galeria-foco",
@@ -16315,7 +16316,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "galeria-belo-galsterer",
@@ -16338,8 +16339,8 @@
       "primary_category": 23,
       "status": "active",
       "flags": [],
-      "dead_signals": 1,
-      "last_seen": "2026-06-13"
+      "dead_signals": 0,
+      "last_seen": "2026-06-22"
     },
     {
       "id": "kubikgallery-lisbon",
@@ -16363,7 +16364,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mad-gallery-mad-marvila",
@@ -16687,7 +16688,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "igreja-de-sao-vicente-de-fora-ciclo-de-concertos-de-orgao",
@@ -16711,7 +16712,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "se-de-lisboa-cathedral",
@@ -16734,7 +16735,7 @@
       "primary_category": 25,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "basilica-da-estrela",
@@ -16758,7 +16759,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mosteiro-dos-jeronimos-ciclo-de-concertos-de-orgao",
@@ -16781,7 +16782,7 @@
       "primary_category": 25,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "centro-nacional-de-cultura-concertos-de-orgao",
@@ -16805,7 +16806,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-classical-nights-lx-classical-nights",
@@ -16831,7 +16832,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "igreja-de-santa-engracia-panteao-nacional",
@@ -16855,7 +16856,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "igreja-convento-do-carmo",
@@ -16946,7 +16947,7 @@
       "primary_category": 25,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "free-christmas-concerts-in-lisbon-churches",
@@ -16994,7 +16995,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-comedy",
@@ -17020,7 +17021,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-comedy-club",
@@ -17478,7 +17479,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "irreverente-festival-internacional-de-improviso",
@@ -17550,7 +17551,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "trumps",
@@ -17624,7 +17625,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "posh-club",
@@ -17718,7 +17719,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "shelter-bar",
@@ -18044,7 +18045,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "kit-ket",
@@ -18236,7 +18237,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-events",
@@ -18260,7 +18261,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "estrelas-and-ouricos",
@@ -18284,7 +18285,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "happy-kids",
@@ -18308,7 +18309,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "rodinhas",
@@ -18332,7 +18333,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "cartaz-cultural-agenda-infantil",
@@ -18424,7 +18425,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "teatro-politeama-filipe-la-feria",
@@ -18497,7 +18498,7 @@
       "primary_category": 31,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "oceanario-de-lisboa",
@@ -18523,7 +18524,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "quinta-pedagogica-dos-olivais",
@@ -18731,7 +18732,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "a-tarumba-teatro-de-marionetas",
@@ -18781,7 +18782,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "open-hearts-lisboa",
@@ -18805,7 +18806,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "coracao-de-cacau",
@@ -18877,7 +18878,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "breathlife-portugal",
@@ -18901,7 +18902,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "onethousandclub-lisbon",
@@ -18926,7 +18927,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "la-cerimonia",
@@ -19016,7 +19017,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "adonai-and-kaylee",
@@ -19128,7 +19129,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "simplesmente-vinho-lisboa",
@@ -19306,7 +19307,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "garrafeira-de-lisboa",
@@ -19352,7 +19353,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "garrafeira-senra",
@@ -19398,7 +19399,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "queijaria-cheese-shop-and-bar",
@@ -19490,7 +19491,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "pop-up-dinners-lisbon-gastronomic-experience",
@@ -19676,7 +19677,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "kiss-the-cook",
@@ -19699,7 +19700,7 @@
       "primary_category": 30,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "club-cooking-lisbon",
@@ -19811,7 +19812,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "immersivus-gallery-lisboa",
@@ -19834,7 +19835,7 @@
       "primary_category": 31,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "dali-a-experiencia-imersiva",
@@ -19858,7 +19859,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "dali-cybernetics",
@@ -19925,8 +19926,8 @@
       "primary_category": 31,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
-      "last_seen": "2026-06-12"
+      "dead_signals": 0,
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-legends",
@@ -19949,7 +19950,7 @@
       "primary_category": 31,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "quake-lisbon-earthquake-museum",
@@ -19973,7 +19974,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-story-centre",
@@ -19997,7 +19998,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "khufu-s-horizon",
@@ -20064,7 +20065,7 @@
       "primary_category": 31,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "murder-mystery-lisbon",
@@ -20154,7 +20155,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "puzzle-room-lisbon",
@@ -20178,7 +20179,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "the-mindtrap-lisboa",
@@ -20246,7 +20247,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "another-world-vr-arena",
@@ -20271,7 +20272,7 @@
       "primary_category": 31,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -20364,7 +20365,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "sl-benfica",
@@ -20388,7 +20389,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "sporting-cp",
@@ -20412,7 +20413,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "belenenses-os-belenenses",
@@ -20461,7 +20462,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-racket-centre-lrc",
@@ -20508,7 +20509,7 @@
       "primary_category": 32,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -20580,7 +20581,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "edp-lisbon-marathon-half-marathon",
@@ -20604,7 +20605,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "new-year-s-eve-at-praca-do-comercio",
@@ -20628,7 +20629,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "christmas-lights-switch-on-praca-do-comercio",
@@ -20740,7 +20741,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "reino-de-natal",
@@ -20786,7 +20787,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "millennium-estoril-open-atp-250",
@@ -20898,7 +20899,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ponto-final",
@@ -21036,7 +21037,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "topo-chiado",
@@ -21224,7 +21225,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "v-rooftop-bar",
@@ -21270,7 +21271,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "attiko-lisbon",
@@ -21294,7 +21295,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "babylon-360",
@@ -21704,7 +21705,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "goodmorning-solo-traveller-hostel",
@@ -21776,7 +21777,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lost-inn-lisbon-hostel",
@@ -21942,7 +21943,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "carcavelos-surf-camp",
@@ -22012,7 +22013,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-surf-connection",
@@ -22058,7 +22059,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "caparica-surf-academy",
@@ -22148,7 +22149,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lover-skateshop",
@@ -22171,7 +22172,7 @@
       "primary_category": 36,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "grlswirl-lisbon",
@@ -22197,7 +22198,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "drop-in-skatecamp-portugal",
@@ -22221,7 +22222,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "sintra-national-park-hiking-meetup",
@@ -22288,7 +22289,7 @@
       "primary_category": 36,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "walking-tours-portugal",
@@ -22312,7 +22313,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-street-art-tours",
@@ -22336,7 +22337,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "discover-lisbon-street-art-tour",
@@ -22360,7 +22361,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "guruwalk-take-free-tours-living-tours",
@@ -22384,7 +22385,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-desaparecida-lost-lisbon-history-walks",
@@ -22474,7 +22475,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "eating-europe-lisbon",
@@ -22498,7 +22499,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "treasures-of-lisboa",
@@ -22546,7 +22547,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "devour-tours-lisbon",
@@ -22570,7 +22571,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "a-ginjinha-largo-de-sao-domingos",
@@ -22751,7 +22752,7 @@
       "primary_category": 38,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -22776,7 +22777,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "nova-fct-fablab",
@@ -22823,7 +22824,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "1up-gaming-lounge",
@@ -23032,7 +23033,7 @@
         "MAY HAVE CLOSED — verify"
       ],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "esi-lisbon-esports-leaders",
@@ -23056,7 +23057,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "iberanime",
@@ -23200,7 +23201,7 @@
       "primary_category": 40,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -23225,7 +23226,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "vinokilo-lisbon",
@@ -23249,7 +23250,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "kilo-vintage-sales-baixa",
@@ -23385,7 +23386,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "milonga-d-a-barraca",
@@ -23433,7 +23434,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-tango-festival-lusitango",
@@ -23501,7 +23502,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "blues-and-swing-lisboa",
@@ -23526,7 +23527,7 @@
       "primary_category": 42,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "lindy-hop-lisboa",
@@ -23596,7 +23597,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "contacto-improvisacao-lisboa-jam",
@@ -23866,7 +23867,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "armazem-aerio",
@@ -23890,7 +23891,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "jaya-aerial-lab",
@@ -23914,7 +23915,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "perfolie",
@@ -23938,7 +23939,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "companhia-da-chamine",
@@ -24008,7 +24009,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "companhia-performativa-teatro-circo",
@@ -24076,7 +24077,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "erva-daninha",
@@ -24126,7 +24127,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-street-photo-fest",
@@ -24174,7 +24175,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "kgaleria-kameraphoto",
@@ -24222,7 +24223,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "galerias-salgadeiras",
@@ -24246,7 +24247,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "macam",
@@ -24270,7 +24271,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisboa-photo-community-meetup",
@@ -24386,7 +24387,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "a-mula",
@@ -24481,7 +24482,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "slam-lx",
@@ -24533,7 +24534,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "slam-da-guilhermina",
@@ -24602,7 +24603,7 @@
       "primary_category": 45,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -24648,8 +24649,8 @@
       "primary_category": 45,
       "status": "active",
       "flags": [],
-      "dead_signals": 1,
-      "last_seen": "2026-06-13"
+      "dead_signals": 0,
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-revisited-dias-de-poesia",
@@ -24673,7 +24674,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "poetas-do-povo-monday-poetry-nights",
@@ -24721,7 +24722,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "fanzine-pt",
@@ -24790,7 +24791,7 @@
       "primary_category": 45,
       "status": "active",
       "flags": [],
-      "dead_signals": 0,
+      "dead_signals": 1,
       "last_seen": "2026-06-15"
     },
     {
@@ -24817,7 +24818,7 @@
         "MAY HAVE CLOSED / intermittent — verify"
       ],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "calendario-de-feiras-de-publicacoes-independentes-e-fanzines-fb-group",
@@ -24885,7 +24886,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "movimento-alp-ajude-a-limpar-a-praia",
@@ -24932,7 +24933,7 @@
       "primary_category": 46,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "sea-shepherd-portugal",
@@ -24955,7 +24956,7 @@
       "primary_category": 46,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "litter-hero-lisbon",
@@ -25001,7 +25002,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ocean-alive-mariscar-sem-lixo",
@@ -25024,7 +25025,7 @@
       "primary_category": 46,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "lpn-vamos-limpar-as-nossas-praias",
@@ -25048,7 +25049,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "go-green-edp-voluntariado",
@@ -25208,7 +25209,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mercado-de-trocas-portugal",
@@ -25341,7 +25342,7 @@
       "primary_category": 46,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "brigada-do-voluntariado-ambiental-apa-ciencia-cidada",
@@ -25365,7 +25366,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "timeleft",
@@ -25391,7 +25392,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "the-weekend-club",
@@ -25414,7 +25415,7 @@
       "primary_category": 47,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -25439,7 +25440,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mundo-lingo-lisbon",
@@ -25465,7 +25466,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "mylanguageexchange-lisbon",
@@ -25731,7 +25732,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "girls-gone-international-ggi-lisbon",
@@ -25776,8 +25777,8 @@
       "primary_category": 48,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
-      "last_seen": "2026-06-12"
+      "dead_signals": 0,
+      "last_seen": "2026-06-22"
     },
     {
       "id": "procissao-de-santo-antonio",
@@ -25847,7 +25848,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "procissao-das-velas",
@@ -25937,7 +25938,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "eventbrite-free-events-lisboa",
@@ -26197,7 +26198,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "musica-no-coracao",
@@ -26247,7 +26248,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "web-summit",
@@ -26273,7 +26274,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "ux-lisbon-uxlx",
@@ -26299,7 +26300,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "arco-lisboa",
@@ -26325,7 +26326,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-art-weekend",
@@ -26351,7 +26352,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "modalisboa",
@@ -26377,7 +26378,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "peixe-em-lisboa",
@@ -26400,7 +26401,7 @@
       "primary_category": 30,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     },
     {
       "id": "simplesmente-vinho",
@@ -26448,7 +26449,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "little-big-apple-swing-dance",
@@ -26473,7 +26474,7 @@
       "primary_category": 42,
       "status": "active",
       "flags": [],
-      "dead_signals": 2,
+      "dead_signals": 3,
       "last_seen": "2026-06-12"
     },
     {
@@ -26498,7 +26499,7 @@
       "status": "active",
       "flags": [],
       "dead_signals": 0,
-      "last_seen": "2026-06-15"
+      "last_seen": "2026-06-22"
     },
     {
       "id": "lisbon-street-photography-festival",
@@ -26523,7 +26524,7 @@
       "primary_category": 44,
       "status": "active",
       "flags": [],
-      "dead_signals": 3
+      "dead_signals": 4
     }
   ]
 }
