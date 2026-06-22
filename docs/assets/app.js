@@ -328,26 +328,23 @@ function render(animate = false) {
   results.innerHTML = '';
   results.append(inner);
 
+  // Build cards in chunks across animation frames so a large result set never
+  // blocks the main thread — on first load and on every search alike. Cards
+  // appear progressively (the "card a card" feel) instead of one big freeze.
   let i = 0;
   const build = n => {
     for (let k = 0; k < n && i < queue.length; k++, i++) {
-      const c = card(queue[i].ev);
-      if (animate) c.classList.add('card-rv'); // hidden until revealed one by one
-      queue[i].cards.append(c);
+      queue[i].cards.append(card(queue[i].ev));
     }
   };
-  if (animate) {                 // week load (once): build all, then reveal
-    build(queue.length);
-    revealCards();
-  } else {                       // search/filter: first chunk now, stream the rest
-    build(80);                   // enough to fill the viewport instantly
-    const step = () => {
-      if (myToken !== _renderToken || i >= queue.length) return; // superseded/done
-      build(120);
-      requestAnimationFrame(step);
-    };
-    if (i < queue.length) requestAnimationFrame(step);
-  }
+  build(60);                       // first paint: enough to fill the viewport
+  const step = () => {
+    if (myToken !== _renderToken || i >= queue.length) return; // superseded / done
+    build(100);
+    requestAnimationFrame(step);
+  };
+  if (i < queue.length) requestAnimationFrame(step);
+
   renderActiveFilterNote();
   refreshChipStates();
   syncHash();
