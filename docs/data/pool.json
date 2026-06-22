@@ -38050,52 +38050,6 @@
       "_first_seen": "2026-06-21T20:24:48Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "cf7f6fdb401a": {
-      "id": "cf7f6fdb401a",
-      "title": "Bilhete C.I.C. Judaica",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Museu Municipal T. Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-01-10T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "sun",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170014-bilhete_c_i_c_judaica-museu_municipal_t_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz45864.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "45482dc19b27": {
       "id": "45482dc19b27",
       "title": "MAATuridades",
@@ -38181,98 +38135,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz132410.jpg?v=6",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "832e7be3b07e": {
-      "id": "832e7be3b07e",
-      "title": "CAC – Exposição permanente – Exposição temporária",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "CAC",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2027-01-07",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "sun",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170218-cac_exposicao_permanente_exposicao_temporaria-cac/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146063.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "bca1c64aefdf": {
-      "id": "bca1c64aefdf",
-      "title": "CAC – Exposição temporária",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "CAC",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2026-06-30",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "sun",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/163713-cac_exposicao_temporaria-cac/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz140543.jpg?v=1",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -38645,98 +38507,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136250.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "1039fde497d2": {
-      "id": "1039fde497d2",
-      "title": "Bilhete CILT Torres Vedras",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Museu Municipal T. Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "sun",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170017-bilhete_cilt_torres_vedras-museu_municipal_t_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz45850.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "a7b1249ab129": {
-      "id": "a7b1249ab129",
-      "title": "Exposição Temporaria e Permanente Museu Municipal",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Museu Municipal T. Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "sun",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170015-exposicao_temporaria_e_permanente_museu_municipal-museu_municipal_t_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz119017.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -39292,141 +39062,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz114288.jpg?v=4",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "8c91df4e7039": {
-      "id": "8c91df4e7039",
-      "title": "Museu Ciclismo Joaaquim Agostinho (visita guiada p/escolas fora Conc.)",
-      "topic": "tours",
-      "categories": [
-        1
-      ],
-      "venue": "Museu do Ciclismo",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 10.0,
-        "currency": "EUR",
-        "text": "€10"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170359-museu_ciclismo_joaaquim_agostinho_visita_guiada_p_escolas_fora_conc-museu_do_ciclismo/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146103.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "f127be8bbd1f": {
-      "id": "f127be8bbd1f",
-      "title": "Visita Guiada Exposição MCJA até 25 pessoas",
-      "topic": "tours",
-      "categories": [
-        1
-      ],
-      "venue": "Museu do Ciclismo",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T10:00",
-      "end": "2026-12-01",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 30.0,
-        "currency": "EUR",
-        "text": "€30"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170727-visita_guiada_exposicao_mcja_ate_25_pessoas-museu_do_ciclismo/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146499.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "8e008c2b69f4": {
-      "id": "8e008c2b69f4",
-      "title": "Real Fábrica do Gelo",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Real Fábrica do Gelo",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170086-real_fabrica_do_gelo-real_fabrica_do_gelo/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz120964.png?v=3",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -41268,46 +40903,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "13894d04bc6b": {
-      "id": "13894d04bc6b",
-      "title": "SER",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25T14:30",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/177386-ser-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152306.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "21ebaab3de5e": {
       "id": "21ebaab3de5e",
       "title": "Kusudama",
@@ -42484,46 +42079,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "b0313d2d4e7c": {
-      "id": "b0313d2d4e7c",
-      "title": "Montanhas Efémeras de Mário Melo Costa",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26T21:30",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178328-montanhas_efemeras_de_mario_melo_costa-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153134.jpg?v=3",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "bc1bb0de823a": {
       "id": "bc1bb0de823a",
       "title": "Shakra – Covers Rock/Pop",
@@ -43637,46 +43192,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153848.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "4c2e1f4420a8": {
-      "id": "4c2e1f4420a8",
-      "title": "Até ao fim do mundo",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-27T21:30",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178326-ate_ao_fim_do_mundo-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153132.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -45161,46 +44676,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152880.jpg?v=5",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "b82f83eeaa1b": {
-      "id": "b82f83eeaa1b",
-      "title": "6ª Sinfonia de Mahler - Trágica",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-02T21:30",
-      "end": "2026-07-02",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178488-6a_sinfonia_de_mahler_tragica-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153280.jpg?v=5",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -46900,46 +46375,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "573959b183ba": {
-      "id": "573959b183ba",
-      "title": "Curtas de Estudantes-Sessão Especial – Café com Filmes",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-09T21:00",
-      "end": "2026-07-09",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180537-curtas_de_estudantes_sessao_especial_cafe_com_filmes-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155105.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "22596fcd9a2e": {
       "id": "22596fcd9a2e",
       "title": "Eduardo Mãos de Tesoura – Edward Scissorhands - CICLO TIM BURTON",
@@ -48140,46 +47575,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "eb4e821a85e4": {
-      "id": "eb4e821a85e4",
-      "title": "La fille mal gardée",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-14T20:00",
-      "end": "2026-07-14",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 7.0,
-        "currency": "EUR",
-        "text": "€7"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178875-la_fille_mal_gardee-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153616.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "394a1ef40dba": {
       "id": "394a1ef40dba",
       "title": "Viagem ao Japão – Cultura e Quotidiano",
@@ -48213,46 +47608,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154717.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "6a6429edeb33": {
-      "id": "6a6429edeb33",
-      "title": "Ritornello",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-15T20:00",
-      "end": "2026-07-15",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 7.0,
-        "currency": "EUR",
-        "text": "€7"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178877-ritornello-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153619.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -48940,46 +48295,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "8cb5e43118fe": {
-      "id": "8cb5e43118fe",
-      "title": "It\"s a Musical - Camerata Vocal de Torres Vedras",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-17T21:30",
-      "end": "2026-07-18",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 8.0,
-        "currency": "EUR",
-        "text": "€8"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180678-it_s_a_musical_camerata_vocal_de_torres_vedras-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155097.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "0e89a40f631f": {
       "id": "0e89a40f631f",
       "title": "Alain Pérez Y La Orquesta",
@@ -49540,46 +48855,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "18ab25ec1327": {
-      "id": "18ab25ec1327",
-      "title": "Sister Act- Cameratinha – Coro Infantojuvenil de Torres Vedras",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-19T18:00",
-      "end": "2026-07-19",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180535-sister_act_cameratinha_coro_infantojuvenil_de_torres_vedras-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155103.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "04f562db6bb5": {
       "id": "04f562db6bb5",
       "title": "Litá - Concert0",
@@ -50020,46 +49295,6 @@
       "_first_seen": "2026-06-21T21:04:13Z",
       "_last_seen": "2026-06-21T22:21:36Z"
     },
-    "8234d0003a7d": {
-      "id": "8234d0003a7d",
-      "title": "Cesária Évora-Sessão especial ao ar livre",
-      "topic": "outdoors",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-23T21:30",
-      "end": "2026-07-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180539-cesaria_evora_sessao_especial_ao_ar_livre-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155110.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
     "bd6ed10eea7a": {
       "id": "bd6ed10eea7a",
       "title": "To Play or Not to Play - Os Músicos do Tejo",
@@ -50293,46 +49528,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154693.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "243c1ebe3062": {
-      "id": "243c1ebe3062",
-      "title": "Rei UBU de Alfred Jarry- Espetáculo Final do Grupo de Teatro ATV",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-25T16:00",
-      "end": "2026-07-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180676-rei_ubu_de_alfred_jarry_espetaculo_final_do_grupo_de_teatro_atv-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155112.jpg?v=6",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -50733,46 +49928,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154204.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-21T21:04:13Z",
-      "_last_seen": "2026-06-21T22:21:36Z"
-    },
-    "62ce783c0c1d": {
-      "id": "62ce783c0c1d",
-      "title": "AVOZ",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-26T17:30",
-      "end": "2026-07-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180546-avoz-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz155116.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null,

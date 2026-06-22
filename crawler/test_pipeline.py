@@ -264,6 +264,17 @@ t('alias neigh none', core.alias_neighbourhood('Rua Qualquer 5', _aidx)[0], None
 t('coord bbox ok', core.valid_lisbon_coord(38.72, -9.14), True)
 t('coord bbox reject', core.valid_lisbon_coord(40.2, -8.4), False)
 
+# ---- PT-wide JSON-LD listing (BOL): coord wins over the district locality ----
+t('coord present', connectors._coord_present('38.72', '-9.14'), True)
+t('coord absent', connectors._coord_present(None, None), False)
+# in-bbox coord -> keep
+t('listing lisbon coord', connectors._listing_in_lisbon(38.72, -9.14, 'lisboa'), True)
+# out-of-area coord must NOT be rescued by the "Lisboa" district string (Torres Vedras)
+t('listing tvedras drops', connectors._listing_in_lisbon(39.0902, -9.2589, 'lisboa'), False)
+# no coord -> fall back to addressLocality
+t('listing no-coord locality', connectors._listing_in_lisbon(None, None, 'lisboa'), True)
+t('listing no-coord elsewhere', connectors._listing_in_lisbon(None, None, 'porto'), False)
+
 # ---- JSON-LD offer pricing (per-offer, drop 0-fee, plausibility bound) ----
 t('offer single', connectors._offers_price({'price': '20'})['text'], '€20')
 t('offer lo-hi', connectors._offers_price({'lowPrice': '20', 'highPrice': '50'})['text'], '€20–50')

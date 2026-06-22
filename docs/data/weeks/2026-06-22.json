@@ -4,7 +4,7 @@
   "generated_at": "2026-06-21T22:21:36Z",
   "is_sample": false,
   "source_count": 540,
-  "event_count": 922,
+  "event_count": 911,
   "meta": {
     "sources_tried": 513,
     "ai_calls": 427,
@@ -26,14 +26,14 @@
       "ccb": 40,
       "gulbenkian": 57,
       "ra": 50,
-      "bol": 138,
+      "bol": 127,
       "xceed": 22,
       "mato": 11,
       "fever": 42,
       "dice": 5,
       "ticketline": 46
     },
-    "pool_size": 1700
+    "pool_size": 1680
   },
   "events": [
     {
@@ -655,49 +655,6 @@
       "source": "generic",
       "description": "Communication is Natural. Botany in Communications | This exhibition takes visitors on a journey through the history of human communication, exploring its deep and ongoing relationship with the plant world.",
       "image": "https://visit-lisboa.eu-west-1.elasticbeanstalk.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzU3MTIsInB1ciI6ImJsb2JfaWQifX0=--92641902027ec44dee7a83347e032da03e17e1ec/visit-lisboa-comunicar-e-natural-a-botanica-nas-comunicacoes.jpg"
-    },
-    {
-      "id": "cf7f6fdb401a",
-      "title": "Bilhete C.I.C. Judaica",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Museu Municipal T. Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-01-10T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170014-bilhete_c_i_c_judaica-museu_municipal_t_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz45864.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
     },
     {
       "id": "07a7040a140a",
@@ -14229,92 +14186,6 @@
       "prov": null
     },
     {
-      "id": "832e7be3b07e",
-      "title": "CAC – Exposição permanente – Exposição temporária",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "CAC",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2027-01-07",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170218-cac_exposicao_permanente_exposicao_temporaria-cac/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146063.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "bca1c64aefdf",
-      "title": "CAC – Exposição temporária",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "CAC",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2026-06-30",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/163713-cac_exposicao_temporaria-cac/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz140543.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "2711f435c9d8",
       "title": "Casa das Histórias Paula Rego",
       "topic": "music",
@@ -14744,92 +14615,6 @@
       "source": "agendalx",
       "description": "O programa de visitas guiadas sábados realiza-se no 1.º sábado do mês. Através da visita é possível ficar a conhecer a Casa e o a sua coleção nomeadamente a coleção de relógios e a de porc...",
       "image": "https://www.agendalx.pt/content/uploads/2021/10/medeiros-e-almeida.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "1039fde497d2",
-      "title": "Bilhete CILT Torres Vedras",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Museu Municipal T. Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170017-bilhete_cilt_torres_vedras-museu_municipal_t_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz45850.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "a7b1249ab129",
-      "title": "Exposição Temporaria e Permanente Museu Municipal",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Museu Municipal T. Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-21T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170015-exposicao_temporaria_e_permanente_museu_municipal-museu_municipal_t_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz119017.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null
@@ -17733,92 +17518,6 @@
       "prov": null
     },
     {
-      "id": "8c91df4e7039",
-      "title": "Museu Ciclismo Joaaquim Agostinho (visita guiada p/escolas fora Conc.)",
-      "topic": "tours",
-      "categories": [
-        1
-      ],
-      "venue": "Museu do Ciclismo",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 10.0,
-        "currency": "EUR",
-        "text": "€10"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170359-museu_ciclismo_joaaquim_agostinho_visita_guiada_p_escolas_fora_conc-museu_do_ciclismo/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146103.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "f127be8bbd1f",
-      "title": "Visita Guiada Exposição MCJA até 25 pessoas",
-      "topic": "tours",
-      "categories": [
-        1
-      ],
-      "venue": "Museu do Ciclismo",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T10:00",
-      "end": "2026-12-01",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 30.0,
-        "currency": "EUR",
-        "text": "€30"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170727-visita_guiada_exposicao_mcja_ate_25_pessoas-museu_do_ciclismo/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146499.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "a2e21cc99c91",
       "title": "Museum of Illusions - Lisbon",
       "topic": "nightlife",
@@ -17900,49 +17599,6 @@
       "source": "fever",
       "description": "📱 Tickets from your phone ⚡ Instant access to your tickets Dive into a stunning underwater journey at the Lisbon Oceanarium! Get face-to-face with over 8,000 marine creatures and discover curious facts about the ocean in a gigantic 5,000 m³ aquarium. Learn the importance of ocean.",
       "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/91bf2830-11af-11ee-9421-4ae750f1ed7d",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "8e008c2b69f4",
-      "title": "Real Fábrica do Gelo",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Real Fábrica do Gelo",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 2.0,
-        "currency": "EUR",
-        "text": "€2"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170086-real_fabrica_do_gelo-real_fabrica_do_gelo/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz120964.png?v=3",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24589,43 +24245,6 @@
       "lng": -9.195983
     },
     {
-      "id": "13894d04bc6b",
-      "title": "SER",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25T14:30",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/177386-ser-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152306.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "d17d82e6fbf7",
       "title": "Sessão da Classe de Ciências",
       "topic": "learning",
@@ -29191,43 +28810,6 @@
       "prov": null
     },
     {
-      "id": "b0313d2d4e7c",
-      "title": "Montanhas Efémeras de Mário Melo Costa",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26T21:30",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178328-montanhas_efemeras_de_mario_melo_costa-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153134.jpg?v=3",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "c8bd0b1bedb6",
       "title": "Desatino Stand-Up Comedy",
       "topic": "comedy",
@@ -33782,43 +33364,6 @@
       "source": "generic",
       "description": "Concerto do Duo Baldo-Consonni, explorando obras do Romantismo à modernidade, com organização do Istituto Italiano di Cultura.",
       "image": "https://iiclisbona.esteri.it/wp-content/uploads/2026/05/Duo-Baldo-Consonni.jpg"
-    },
-    {
-      "id": "4c2e1f4420a8",
-      "title": "Até ao fim do mundo",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro-Cine Torres Vedras",
-      "source_id": "bol",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-27T21:30",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178326-ate_ao_fim_do_mundo-teatro_cine_torres_vedras/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153132.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null
     },
     {
       "id": "ac4862c27fda",

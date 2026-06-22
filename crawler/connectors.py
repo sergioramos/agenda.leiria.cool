@@ -108,6 +108,27 @@ def _fold(s: str) -> str:
     return "".join(c for c in f if not unicodedata.combining(c)).lower()
 
 
+def _coord_present(lat, lng) -> bool:
+    """True when both lat/lng parse to numbers (a real coordinate to trust),
+    regardless of whether they fall inside Lisbon."""
+    try:
+        float(lat), float(lng)
+        return True
+    except (TypeError, ValueError):
+        return False
+
+
+def _listing_in_lisbon(lat, lng, locality_folded: str) -> bool:
+    """Keep-rule for a PT-wide JSON-LD listing (BOL). A real coordinate is
+    authoritative: trust it against the greater-Lisbon bbox and let a clearly
+    out-of-area point (e.g. Torres Vedras, lat ~39.09) drop even when its
+    addressLocality names the "Lisboa" district. Only when no usable coordinate
+    is present do we fall back to the addressLocality string."""
+    if _coord_present(lat, lng):
+        return core.valid_lisbon_coord(lat, lng)
+    return "lisboa" in (locality_folded or "")
+
+
 _TOPIC_KW = [
     ("film",        ["cinema", "filme", "curtas", "documentari"]),
     ("nightlife",   ["festa", "club", "after", "dj set", "noite"]),
@@ -550,7 +571,10 @@ def _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out):
 
 def _jsonld_listing(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay):
     """One listing page whose JSON-LD already holds every event (BOL). PT-wide,
-    so keep only events with a valid Lisbon coordinate or addressLocality."""
+    so keep only Lisbon events. When a node carries real coordinates, trust the
+    greater-Lisbon bbox alone — a coordinate clearly outside the area (e.g. Torres
+    Vedras) must drop even if its addressLocality names the "Lisboa" district. Only
+    fall back to the addressLocality test when the node has no usable coordinate."""
     data = _get_text(session, cfg, c["api"])
     if data is None:
         return [], "failed"
@@ -562,8 +586,7 @@ def _jsonld_listing(session, cfg, c, source, mon, window_end, venues_idx, venues
         if isinstance(loc, dict):
             addr = _ld_one(loc.get("address")) or {}
             locality = _fold(addr.get("addressLocality") if isinstance(addr, dict) else addr)
-        in_lisbon = core.valid_lisbon_coord(geo.get("latitude"), geo.get("longitude")) or "lisboa" in locality
-        if in_lisbon:
+        if _listing_in_lisbon(geo.get("latitude"), geo.get("longitude"), locality):
             _emit_jsonld(node, c, source, mon, window_end, venues_geo, venues_idx, out)
     return out, "ok"
 
