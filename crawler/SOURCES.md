@@ -78,15 +78,31 @@ Cross-source copies of one event are merged in `merge_week.py`, in this order
    alone.
 4. **`canonicalize_venues`** — exact match to the venue directory only (never
    fuzzy, so "Lisboa" can't become "@esnlisboa").
-5. **`dedupe`** — same place + similar title (ratio, prefix, or containment).
+5. **`dedupe`** — same place + similar title. Pass 1-3 bucket by start date;
+   **pass 4** then merges across date buckets when it's the same place (coordinate
+   or specific venue name) and one title contains the other and the ranges overlap
+   — for an ongoing exhibition listed by several sources with different start
+   dates ("Designing Sustainable Futures" / "Exposição Designing Sustainable
+   Futures"). On any merge, the higher-authority source (ticketing > venue >
+   aggregator) wins the **topic**, so an exhibition an aggregator mis-tagged
+   "learning" isn't split off into the wrong section.
 
 ### What this does NOT catch (residual duplicates are expected)
 
+- **Organizer-as-venue**: a source that lists *itself* as the venue (e.g. ULisboa
+  for an event actually at Pavilhão de Portugal) with no coordinates, where the
+  real venue appears only in page prose, not structured data. It can't be matched
+  to the real-venue copy without fragile free-text venue parsing, so it stays a
+  separate card.
 - Two sources using genuinely different venue strings with no shared coords and
   no alias (e.g. an aggregator's Instagram handle "@esnlisboa"). Add an alias if
   it's a real recurring pair.
 - Word-order title variants of the same event ("a Coleção Interminável" vs "a
   Interminável Coleção") on different start dates.
+
+Note: data hand-patched between crawls can't be retro-merged (the originals are
+already collapsed). A fresh crawl rebuilds the week from the pool + shards and
+applies all of the above cleanly — prefer that over repeated manual reconciles.
 
 `venue_aliases.json` can go **stale** (a venue renamed at the source) — the
 alias silently stops matching and the duplicate reappears. You see this on the
