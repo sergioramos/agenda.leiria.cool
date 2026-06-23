@@ -437,7 +437,7 @@ def scan_price(text: str, allow_free: bool = True) -> dict | None:
 # is matched only as a filename token (default[-_.]) so the very common Drupal
 # media path "/sites/default/files/..." is NOT mistaken for a default image.
 _LOGO_RE = re.compile(
-    r"(?:^|[^a-z0-9])(?:logo|favicon|sprite|placeholder|header|icons?|banner)(?:[^a-z0-9]|$)"
+    r"(?:^|[^a-z0-9])(?:logos?|favicon|sprite|placeholder|header|icons?|banner)(?:[^a-z0-9]|$)"
     r"|(?:^|[^a-z0-9])default[-_.]", re.I)
 _OG_IMG_RE = re.compile(
     r'<meta[^>]+(?:property|name)=["\']og:image(?::secure_url)?["\'][^>]*content=["\']([^"\']+)'
@@ -565,11 +565,38 @@ def _canonical_img(img_url: str | None, page_url: str | None) -> str | None:
     return img_url
 
 
+_IMG_TAG = re.compile(r"<img\b[^>]*>", re.I)
+
+
+def _content_image(html: str, page_url: str, default_img: str = "") -> str | None:
+    """Last-resort poster: the first same-site image under a media/upload path,
+    for pages that expose no og:image or JSON-LD image (e.g. Quinta da Regaleira).
+    Conservative — same host, real image file, skips logos/thumbs/crops and the
+    listing default; drop_shared_images nulls anything that proves to be shared."""
+    host = urlparse(page_url or "").netloc.replace("www.", "")
+    df = (default_img or "").strip()
+    for tag in _IMG_TAG.findall(html or ""):
+        m = re.search(r"(?:data-src|data-lazy-src|src)=[\"']([^\"']+)", tag)
+        full = resolve_url(m.group(1), page_url) if m else None
+        if not full or full.strip() == df or not _good_img(full):
+            continue
+        low = full.lower()
+        if not re.search(r"\.(jpe?g|png|webp)(\?|$)", low):
+            continue
+        if host and host not in urlparse(full).netloc.replace("www.", ""):
+            continue
+        if re.search(r"cropped-|thumb|avatar", low):
+            continue
+        if re.search(r"/(?:uploads|media|files)/", low):
+            return full
+    return None
+
+
 def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
-    """Read an event's own page (no AI): JSON-LD first, then og:image + a text
-    price scan. Returns any of {image, price, start_time, description}.
-    default_img = the source's homepage/listing og:image, rejected here because
-    it's the venue's logo/default, not this event's poster."""
+    """Read an event's own page (no AI): JSON-LD first, then og:image, then a
+    same-site content image, plus a text price scan. Returns any of {image,
+    price, start_time, description, venue}. default_img = the source's
+    homepage/listing og:image, rejected here because it's the venue's default."""
     out: dict = {}
     df = (default_img or "").strip()
     ld = parse_jsonld_event(html or "")
@@ -577,6 +604,10 @@ def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
         if _good_img(cand) and cand.strip() != df:
             out["image"] = _canonical_img(resolve_url(cand, url), url)
             break
+    if "image" not in out:
+        ci = _content_image(html, url, df)
+        if ci:
+            out["image"] = _canonical_img(ci, url)
     if ld.get("price"):
         out["price"] = ld["price"]
     else:

@@ -73,6 +73,13 @@ t('img logo file rejected', core._good_img('https://x.pt/assets/logo.png'), Fals
 t('img favicon rejected', core._good_img('https://x.pt/favicon.ico'), False)
 t('img drupal default-path kept', core._good_img('https://maat.pt/sites/default/files/2026-05/poster.jpg'), True)
 t('img default file rejected', core._good_img('https://x.pt/img/default-cover.jpg'), False)
+t('img logos dir rejected', core._good_img('https://x.pt/img/logos/patrimonio.png'), False)
+t('img catalogos kept', core._good_img('https://x.pt/uploads/catalogos-2026.jpg'), True)
+# content-image fallback: first same-site media/upload image, skipping logos
+t('content-img picks media poster',
+  core._content_image('<img src="/images/logo.png"><img src="https://s.pt/media/9972/poster.jpg?x=1">', 'https://s.pt/agenda/x'),
+  'https://s.pt/media/9972/poster.jpg?x=1')
+t('content-img none when only logo', core._content_image('<img src="/img/logo.png">', 'https://s.pt/x'), None)
 # Elastic Beanstalk origin host (bad TLS) in og:image -> swap to the page's public host
 t('eb host swapped', core._canonical_img(
     'https://visit-lisboa.eu-west-1.elasticbeanstalk.com/rails/active_storage/blobs/redirect/AbC/p.jpg',
