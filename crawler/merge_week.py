@@ -30,7 +30,7 @@ def _ai_review(events, cfg, today, out_dir):
     in budget; auto-merge high-confidence dups and ALWAYS write the proposals to
     <out_dir>/review-latest.json (so the workflow can commit it and /admin can read
     it, even when the pass is skipped). Any failure leaves events unchanged."""
-    proposals, stats = [], {}
+    changes, stats = [], {}
     if cfg.get("ai", {}).get("review_events") and cfg["ai"].get("enabled", True):
         run_cap, _ = core.effective_run_cap(cfg, today)
         cap = min(cfg["ai"].get("review_max_cost_usd", 0.5), run_cap)
@@ -40,10 +40,15 @@ def _ai_review(events, cfg, today, out_dir):
             try:
                 import extract
                 import review_events
+                # signatures of merges you reverted before — never re-apply them
+                overrides = set()
+                ov = Path(out_dir) / "review-overrides.json"
+                if ov.exists():
+                    overrides = set(json.loads(ov.read_text(encoding="utf-8")).get("rejected", []))
                 prov, client = extract.get_client(cfg)
                 tracker = extract.CostTracker(cap)
-                events, proposals, stats = review_events.review(
-                    events, prov, client, cfg, core.load_taxonomy(), tracker)
+                events, changes, stats = review_events.review(
+                    events, prov, client, cfg, core.load_taxonomy(), tracker, overrides)
                 print(f"[review] {stats} (${tracker.spent:.4f})")
             except Exception as e:
                 print(f"[review] skipped ({type(e).__name__}: {e})")
@@ -51,7 +56,7 @@ def _ai_review(events, cfg, today, out_dir):
         p = Path(out_dir) / "review-latest.json"
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                                 "stats": stats, "proposals": proposals}, ensure_ascii=False, indent=2),
+                                 "stats": stats, "changes": changes}, ensure_ascii=False, indent=2),
                      encoding="utf-8")
     except Exception:
         pass

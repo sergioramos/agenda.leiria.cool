@@ -34,9 +34,11 @@ ai:
   max_month_cost_usd: 4        # ceiling per calendar month (sums committed runs); crawler refuses to exceed it
   review_events: true          # final AI sanity/dedupe pass over the assembled week: judges the
                                # ambiguous residue the rules can't (cross-venue same event, mis-tagged
-                               # topic), auto-applies high-confidence merges, proposes the rest to /admin.
-                               # Reads the compact event list only (no page fetching) -> cheap.
-  review_confidence: 0.85      # auto-merge only at/above this confidence; below it becomes a proposal
+                               # topic). Applies EVERY change automatically and records each reversibly;
+                               # the /admin Estado wall shows the overview with a one-click Reverter
+                               # (which also stops that merge recurring). Reads the compact event list
+                               # only (no page fetching) -> cheap. A reverted merge is remembered in
+                               # docs/data/review-overrides.json.
   review_max_cost_usd: 0.5     # ceiling for the review pass (one small call; cents in practice)
   request_timeout_s: 40
   max_chars_per_page: 18000      # trim fetched HTML text before sending to the model

@@ -473,17 +473,17 @@ _evset = [_mk("a", "Designing Sustainable Futures", "ULisboa", "2026-06-22", "20
           _mk("c", "Concerto X", "Y", "2026-06-24", "2026-06-24", "music")]
 t('review clusters the residue', [[e['id'] for e in g] for g in _rv.candidate_clusters(_evset)], [['a', 'b']])
 _orig_jc = extract.json_call
+# apply ALL merges (no confidence gate) and record each reversibly
 extract.json_call = lambda *a, **k: {"clusters": [{"cluster": 0, "merge": [
-    {"members": [0, 1], "canonical": 1, "topic": "art", "confidence": 0.95}], "flags": []}]}
-_kept, _props, _st = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0))
-t('review high-conf merges', sorted(e['id'] for e in _kept), ['b', 'c'])
+    {"members": [0, 1], "canonical": 1, "topic": "art", "confidence": 0.6}], "flags": []}]}
+_kept, _chg, _st = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0))
+t('review applies all merges', sorted(e['id'] for e in _kept), ['b', 'c'])
+t('review records removed for revert', _chg[0]['removed'][0]['id'], 'a')
 t('review canonical keeps art', next(e['topic'] for e in _kept if e['id'] == 'b'), 'art')
-# low confidence -> proposed, not merged
-extract.json_call = lambda *a, **k: {"clusters": [{"cluster": 0, "merge": [
-    {"members": [0, 1], "canonical": 1, "confidence": 0.5}], "flags": []}]}
-_k2, _p2, _s2 = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0))
-t('review low-conf not merged', len(_k2), 3)
-t('review low-conf proposed', len(_p2) >= 1, True)
+# a reverted signature is skipped (never re-merged)
+_sig = _rv._cluster_sig([_evset[0], _evset[1]])
+_k2, _c2, _s2 = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0), {_sig})
+t('review skips overridden sig', len(_k2), 3)
 extract.json_call = _orig_jc
 
 print(f'\n{ok} passed, {fail} failed')

@@ -280,32 +280,68 @@ async function renderFontes(latestWeek) {
     }
   }
   renderSourceQuality((week && week.events) || []);
-  await renderReview();
+  await renderReview(latestWeek && latestWeek.file);
 }
 
-// read-only view of the last AI review pass: what it auto-merged + what it left
-// for a human to look at (low-confidence duplicates, flagged-weird events).
-async function renderReview() {
+// overview of what the AI review pass changed this crawl, each merge with a
+// Reverter button that (1) restores the merged-away events into the current week
+// and (2) records the decision so future crawls never re-apply it.
+async function renderReview(weekFile) {
   const box = $('#st-review'), list = $('#sr-list');
   if (!box || !list) return;
   let data = null;
   try { data = await (await fetch('/data/review-latest.json', { cache: 'no-cache' })).json(); } catch { box.hidden = true; return; }
-  const props = (data && data.proposals) || [];
-  if (!props.length) { box.hidden = true; return; }
+  const changes = (data && data.changes) || [];
+  if (!changes.length) { box.hidden = true; return; }
   const s = data.stats || {};
   $('#sr-summary').textContent =
-    `Última revisão IA: ${s.merged || 0} duplicados juntados automaticamente · ${props.length} para reveres abaixo.`;
+    `Última revisão IA: ${s.merged || 0} duplicados juntados, ${s.topic_fixed || 0} temas corrigidos, ${s.flagged || 0} assinalados. ` +
+    `Tudo aplicado automaticamente — usa «Reverter» se algum estiver errado.`;
   list.innerHTML = '';
-  for (const p of props) {
-    const evs = (p.events || []).map(e => e.title + (e.venue ? ' · ' + e.venue : '')).join('   ↔   ');
-    const tag = p.kind === 'flag'
-      ? '⚠ ' + (p.issue || 'estranho')
-      : 'possível duplicado' + (p.confidence != null ? ` (${Math.round(p.confidence * 100)}%)` : '');
-    list.append(el('div', { className: 'sr-item' + (p.kind === 'flag' ? ' sr-flag' : '') },
+  for (const ch of changes) {
+    if (ch.kind === 'flag') {
+      list.append(el('div', { className: 'sr-item sr-flag' },
+        el('span', { className: 'sr-tag', textContent: '⚠ ' + (ch.issue || 'estranho') }),
+        el('span', { className: 'sr-evs', textContent: (ch.event && ch.event.title) + (ch.event && ch.event.venue ? ' · ' + ch.event.venue : '') })));
+      continue;
+    }
+    const names = [ch.canonical && ch.canonical.title, ...(ch.removed || []).map(e => e.title)].filter(Boolean);
+    const tag = 'juntado' + (ch.confidence != null ? ` (${Math.round(ch.confidence * 100)}%)` : '');
+    const item = el('div', { className: 'sr-item' },
       el('span', { className: 'sr-tag', textContent: tag }),
-      el('span', { className: 'sr-evs', textContent: evs })));
+      el('span', { className: 'sr-evs', textContent: [...new Set(names)].join('   ↔   ') + (ch.topic ? `  ·  tema → ${ch.topic.to}` : '') }));
+    const btn = el('button', { className: 'btn ghost btn-sm', textContent: 'Reverter', type: 'button' });
+    btn.onclick = () => revertChange(ch, weekFile, btn);
+    item.append(btn);
+    list.append(item);
   }
   box.hidden = false;
+}
+
+async function revertChange(ch, weekFile, btn) {
+  if (!hasGh()) { btn.textContent = 'configura o GitHub primeiro'; return; }
+  if (!weekFile) { btn.textContent = 'sem semana publicada'; return; }
+  btn.disabled = true; btn.textContent = 'a reverter…';
+  try {
+    // 1) record the rejection so future crawls never re-apply this merge
+    let ov = { rejected: [] }, ovSha = null;
+    try { const f = await ghGetFile('docs/data/review-overrides.json'); ov = JSON.parse(f.text); ovSha = f.sha; } catch { /* first time */ }
+    ov.rejected = ov.rejected || [];
+    if (ch.sig && !ov.rejected.includes(ch.sig)) ov.rejected.push(ch.sig);
+    await ghPutFile('docs/data/review-overrides.json', JSON.stringify(ov, null, 2), ovSha, 'review: reverter ' + (ch.sig || ''));
+    // 2) put the merged-away events back into the current published week
+    const wf = 'docs/data/weeks/' + weekFile;
+    const f = await ghGetFile(wf);
+    const wk = JSON.parse(f.text);
+    const ids = new Set(wk.events.map(e => e.id));
+    for (const ev of (ch.removed || [])) if (!ids.has(ev.id)) wk.events.push(ev);
+    wk.event_count = wk.events.length;
+    await ghPutFile(wf, JSON.stringify(wk, null, 2), f.sha, 'review: restaurar eventos revertidos');
+    btn.textContent = '✓ revertido';
+  } catch (e) {
+    btn.disabled = false; btn.textContent = 'Reverter';
+    $('#sr-summary').textContent = 'Erro ao reverter: ' + e.message;
+  }
 }
 
 const _sqNorm = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]/g, '');

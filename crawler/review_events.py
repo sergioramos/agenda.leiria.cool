@@ -23,6 +23,8 @@ A model/parse failure degrades to "no changes" — never crashes the merge.
 """
 from __future__ import annotations
 
+import hashlib
+
 import core
 import extract
 
@@ -139,65 +141,75 @@ def _compact(e: dict) -> dict:
             "end": (e.get("end") or "")[:10], "topic": e.get("topic"), "source": e.get("source")}
 
 
-def review(events: list[dict], prov, client, cfg: dict, tax: dict, tracker) -> tuple[list[dict], list[dict], dict]:
-    """Run the AI judge over the ambiguous residue. Auto-applies high-confidence
-    merges/topic-fixes to `events` (returned filtered); returns
-    (events, proposals, stats). Proposals are the low-confidence merges + flags for
-    /admin. Any failure returns the events unchanged with empty proposals."""
-    stats = {"clusters": 0, "merged": 0, "topic_fixed": 0, "proposed": 0, "flagged": 0}
+def _cluster_sig(members: list[dict]) -> str:
+    """Stable id for a merge decision so a revert survives re-crawls (event ids
+    change each crawl, titles/venues don't). Sorted normalized title@venue."""
+    key = "||".join(sorted(f"{core._nt(m.get('title'))}@{core._nt(m.get('venue') or '')}" for m in members))
+    return hashlib.sha1(key.encode()).hexdigest()[:12]
+
+
+def review(events, prov, client, cfg, tax, tracker, overrides=None):
+    """Final AI judge over the ambiguous residue. Auto-applies EVERY merge/topic
+    fix it returns — recording each reversibly — EXCEPT a cluster whose signature
+    is in `overrides` (something you reverted before). Returns (events, changes,
+    stats): `changes` is the reversible log for /admin (each merge carries the full
+    removed events so the button can restore them). Any failure -> events unchanged."""
+    overrides = overrides or set()
+    stats = {"clusters": 0, "merged": 0, "topic_fixed": 0, "flagged": 0, "skipped": 0}
     clusters = candidate_clusters(events)
     stats["clusters"] = len(clusters)
     if not clusters or tracker.exhausted():
         return events, [], stats
-
-    thr = cfg.get("ai", {}).get("review_confidence", 0.85)
     valid_topics = set(core.topic_ids(tax))
     payload = [{"cluster": ci, "events": [_compact(e) for e in cl]} for ci, cl in enumerate(clusters)]
-    user = ("Grupos a verificar (índices locais por grupo):\n"
-            + extract.json.dumps(payload, ensure_ascii=False))
+    user = "Grupos a verificar (índices locais por grupo):\n" + extract.json.dumps(payload, ensure_ascii=False)
     data = extract.json_call(prov, client, cfg["ai"]["model_cheap"],
                              _system([t["id"] for t in tax["topics"] if not t.get("is_aggregator")]),
                              user, _SCHEMA, _HINT, 4000, tracker)
     if not data:
         return events, [], stats
 
-    drop = set()           # event ids merged away
-    proposals = []
+    drop, changes = set(), []
     for verdict in (data.get("clusters") or []):
         ci = verdict.get("cluster")
         if not isinstance(ci, int) or not (0 <= ci < len(clusters)):
             continue
         cl = clusters[ci]
         for grp in (verdict.get("merge") or []):
-            members = [cl[i] for i in (grp.get("members") or []) if isinstance(i, int) and 0 <= i < len(cl)]
+            members = [cl[i] for i in (grp.get("members") or [])
+                       if isinstance(i, int) and 0 <= i < len(cl) and cl[i]["id"] not in drop]
             if len(members) < 2:
                 continue
+            sig = _cluster_sig(members)
+            if sig in overrides:          # you reverted this before — leave it alone
+                stats["skipped"] += 1
+                continue
             ci_idx = grp.get("canonical")
-            canon = cl[ci_idx] if isinstance(ci_idx, int) and 0 <= ci_idx < len(cl) else members[0]
-            conf = grp.get("confidence") or 0
+            canon = (cl[ci_idx] if isinstance(ci_idx, int) and 0 <= ci_idx < len(cl)
+                     and cl[ci_idx]["id"] not in drop else members[0])
+            removed = [dict(m) for m in members if m["id"] != canon["id"]]
+            if not removed:
+                continue
+            conf = round(float(grp.get("confidence") or 0), 2)
             topic = grp.get("topic") if grp.get("topic") in valid_topics else None
-            if conf >= thr:
-                _merge_into(canon, [m for m in members if m["id"] != canon["id"]], topic, drop)
-                stats["merged"] += sum(1 for m in members if m["id"] != canon["id"])
-                if topic and topic != canon.get("topic"):
-                    stats["topic_fixed"] += 1
-            else:
-                proposals.append({"kind": "duplicate", "confidence": round(float(conf), 2),
-                                  "reason": grp.get("reason", ""),
-                                  "events": [{"id": m["id"], "title": m["title"],
-                                              "venue": m.get("venue"), "start": (m.get("start") or "")[:10]}
-                                             for m in members]})
-                stats["proposed"] += 1
+            old_topic = canon.get("topic")
+            _merge_into(canon, [m for m in members if m["id"] != canon["id"]], topic, drop)
+            stats["merged"] += len(removed)
+            if topic and topic != old_topic:
+                stats["topic_fixed"] += 1
+            changes.append({"kind": "merge", "sig": sig, "confidence": conf, "reason": grp.get("reason", ""),
+                            "canonical": {"id": canon["id"], "title": canon["title"], "venue": canon.get("venue")},
+                            "removed": removed,
+                            "topic": {"from": old_topic, "to": topic} if (topic and topic != old_topic) else None})
         for fl in (verdict.get("flags") or []):
             i = fl.get("index")
             if isinstance(i, int) and 0 <= i < len(cl):
-                proposals.append({"kind": "flag", "issue": fl.get("issue", ""),
-                                  "events": [{"id": cl[i]["id"], "title": cl[i]["title"],
-                                              "venue": cl[i].get("venue")}]})
+                changes.append({"kind": "flag", "issue": fl.get("issue", ""),
+                                "event": {"id": cl[i]["id"], "title": cl[i]["title"], "venue": cl[i].get("venue")}})
                 stats["flagged"] += 1
 
     kept = [e for e in events if e["id"] not in drop]
-    return kept, proposals, stats
+    return kept, changes, stats
 
 
 def _merge_into(canon: dict, others: list[dict], topic: str | None, drop: set) -> None:
