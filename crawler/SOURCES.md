@@ -48,12 +48,15 @@ Where it runs every crawl:
 
 | Reason | Examples | Why |
 |---|---|---|
-| Ticket/event page returns **403** | Resident Advisor, Tickettailor (Black Cat Cinema) | The page is blocked even with a browser UA; there is nothing to scrape. RA images come only from its GraphQL `FLYERFRONT`, which some events lack. |
+| **Cloudflare** bot block (403) | Tickettailor — Black Cat Cinema (`app.tickettailor.com` *and* the `tickets.<venue>` white-label) | The image exists and a real browser sees it, but Cloudflare 403s any plain HTTP client regardless of headers. Our crawler is `requests`-based with no JS engine (deliberate: cheap, runs in CI). Reaching these needs a headless browser (Playwright — heavy/slow/flaky) or TLS-fingerprint evasion (an anti-bot arms race that breaks unpredictably). Both are out of scope by choice. |
+| Page returns **403** / no image field | Resident Advisor | RA's HTML 403s; its images come only from the GraphQL `FLYERFRONT`, which some events lack. |
 | **JS-only** listing (Wix/SPA) | Black Cat Cinema's own site | Event data/images are rendered client-side; the static HTML has neither. |
 | API/page carries no image | some AgendaLX/BOL rows | Source never published one. |
+| Page has only a **shared** banner/logo | underdogs, little-big-apple, … | The only image found is reused across the source's events, so `drop_shared_images` nulls it (better than the same wrong banner on every card). |
 
 These are structural ceilings, not bugs. The wall shows them so you are not
-surprised; do not spend time "fixing" them unless the source itself changes.
+surprised; do not spend time "fixing" them unless the source itself changes, or
+unless you decide to add browser-based fetching (a real project, not a patch).
 
 ## Venue names & duplicates
 
