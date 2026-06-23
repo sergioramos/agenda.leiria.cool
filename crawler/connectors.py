@@ -383,7 +383,9 @@ def _tribe(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, del
         if len(events) < 50 or not (data or {}).get("next_rest_url"):
             break
         time.sleep(delay)
-    return out, status
+    # CCB returns an exhibition as one entry per open day -> collapse same-title
+    # multi-day runs into a single ongoing span (a concert keeps its own date).
+    return core.collapse_daily_runs(out), status
 
 
 # ---------- Gulbenkian (WordPress v2 + session/ticket shape) ----------

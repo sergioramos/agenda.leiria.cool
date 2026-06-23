@@ -115,6 +115,27 @@ t('canon var neigh filled', _evs[0].get('neighbourhood'), 'Avenidas Novas')
 t('canon var no fuzzy', _evs[2]['venue'], 'Lisboa')
 t('canon var already-canon untouched', _evs[3]['venue'], 'Culturgest')
 
+# collapse_daily_runs: an exhibition returned one-per-day -> one ongoing span
+_runs = [{'title': 'Expo X', 'venue': 'CCB', 'start': '2026-06-23', 'end': '2026-06-23'},
+         {'title': 'Expo X', 'venue': 'CCB', 'start': '2026-06-24', 'end': '2026-06-24'},
+         {'title': 'Expo X', 'venue': 'CCB', 'start': '2026-06-25', 'end': '2026-06-25'},
+         {'title': 'Concerto Y', 'venue': 'CCB', 'start': '2026-06-23', 'end': '2026-06-23'}]
+_col = core.collapse_daily_runs(_runs)
+t('collapse run count', len(_col), 2)
+_ex = [e for e in _col if e['title'] == 'Expo X'][0]
+t('collapse span dates', (_ex['start'], _ex['end'], _ex['ongoing']), ('2026-06-23', '2026-06-25', True))
+t('collapse keeps short run',
+  len(core.collapse_daily_runs([{'title': 'S', 'venue': 'V', 'start': '2026-06-23', 'end': '2026-06-23'},
+                                {'title': 'S', 'venue': 'V', 'start': '2026-06-24', 'end': '2026-06-24'}])), 2)
+
+# canonicalize_venue_coords: same cell, similar names unify; a different venue stays
+_vc = [{'venue': 'MACAM', 'lat': 38.7005, 'lng': -9.1831, 'title': 'A'},
+       {'venue': 'MACAM - Museu de Arte Contemporânea Armando Martins', 'lat': 38.7005, 'lng': -9.1831, 'title': 'B'},
+       {'venue': 'Museu de São Roque', 'lat': 38.7005, 'lng': -9.1831, 'title': 'C'}]
+core.canonicalize_venue_coords(_vc)
+t('coord-canon unifies macam', _vc[0]['venue'], 'MACAM - Museu de Arte Contemporânea Armando Martins')
+t('coord-canon keeps distinct venue', _vc[2]['venue'], 'Museu de São Roque')
+
 # EventON microdata: per-event name/url/image; a non-image content attr is dropped
 _EVO = ('<div data-event_id="1" itemscope itemtype="http://schema.org/Event">'
         '<div class="evo_event_schema" style="display:none">'

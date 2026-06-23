@@ -711,6 +711,69 @@ def canonicalize_venues(events: list[dict], venues_geo: dict | None, venues_idx:
     return changed
 
 
+def collapse_daily_runs(events: list[dict], min_days: int = 3) -> list[dict]:
+    """Collapse same-title/venue events recurring on many separate days into one
+    ongoing span — for venue APIs that return an exhibition as one entry per open
+    day (CCB/Tribe returns each day's opening hours as a separate event). A run on
+    fewer than min_days distinct days is left as discrete dates (a real short
+    series). The richest copy survives, stretched across the whole run."""
+    groups: dict = {}
+    for e in events:
+        groups.setdefault((_nt(e.get("title")), _nt(e.get("venue") or "")), []).append(e)
+    out = []
+    for grp in groups.values():
+        days = sorted({(e.get("start") or "")[:10] for e in grp if e.get("start")})
+        if len(days) < min_days:
+            out.extend(grp)
+            continue
+        keep = max(grp, key=lambda e: (bool(e.get("image")), len(e.get("description") or "")))
+        keep["start"] = days[0]
+        keep["end"] = max([(e.get("end") or e.get("start") or "")[:10] for e in grp] + [days[-1]])
+        keep["all_day"], keep["ongoing"] = True, True
+        out.append(keep)
+    return out
+
+
+# venue words too generic to prove two names are the same place on their own
+_GENERIC_VENUE = {"museu", "centro", "cultural", "teatro", "sala", "galeria", "casa", "palacio",
+                  "fundacao", "auditorio", "espaco", "arte", "artes", "lisboa", "municipal",
+                  "nacional", "cinema", "jardim", "club", "clube", "the"}
+
+
+def _distinctive_tokens(name: str) -> set:
+    return {w for w in re.findall(r"[a-z0-9]+", _fold_spaces(name))
+            if len(w) >= 4 and w not in _GENERIC_VENUE}
+
+
+def canonicalize_venue_coords(events: list[dict]) -> int:
+    """Within a coordinate cell, make one physical place read with one name: pick
+    the most complete spelling and apply it only to events whose name shares a
+    distinctive token (or is contained), so 'MACAM' / 'MACAM - Museu de Arte...'
+    unify but two different venues that merely round to the same ~110m cell don't.
+    Returns the count of venue names changed."""
+    cells: dict = {}
+    for e in events:
+        k = event_coord_key(e)
+        if k:
+            cells.setdefault(k, []).append(e)
+    changed = 0
+    for grp in cells.values():
+        names = sorted({e.get("venue") for e in grp if e.get("venue")}, key=len, reverse=True)
+        if len(names) < 2:
+            continue
+        canon = names[0]
+        ctoks, ck = _distinctive_tokens(canon), _nt(canon)
+        for e in grp:
+            v = e.get("venue")
+            if not v or v == canon:
+                continue
+            vk = _nt(v)
+            if (_distinctive_tokens(v) & ctoks) or (vk and (vk in ck or ck in vk)):
+                e["venue"] = canon
+                changed += 1
+    return changed
+
+
 # ---------- normalisation ----------
 def _nt(s: str) -> str:
     """letters+digits only, accent-folded and lowercased — the comparison form

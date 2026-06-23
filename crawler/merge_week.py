@@ -98,18 +98,21 @@ def main():
           f"-{removed} expired, {len(pool['events'])} total")
 
     # ---- build the publish set for the displayed week ----
-    # reframe to the DISPLAYED Mon-Sun (display_sun), not the wide pool horizon —
-    # otherwise an event past Sunday (when lookahead_days > 7) gets a bogus day chip.
-    pooled = core.reframe_window(core.pool_events(pool), mon, display_sun)
-    shards = core.reframe_window(shard_events, mon, display_sun)
-    events = core.dedupe(pooled + shards, dedupe_sources)
-    core.drop_shared_images(events)
-    # unify venue-name variants to the directory's canonical spelling (exact match
-    # only — never a fuzzy guess), so the same place reads the same everywhere
+    # collapse same-title/venue runs an API returned one-per-day (exhibitions,
+    # nightly shows) into one span, then reframe to the DISPLAYED Mon-Sun
+    # (display_sun) so an event past Sunday doesn't get a bogus day chip.
+    all_events = core.collapse_daily_runs(core.pool_events(pool) + shard_events)
+    all_events = core.reframe_window(all_events, mon, display_sun)
+    # unify venue names BEFORE dedupe so the same place merges: same-coordinate
+    # variants first (MACAM / MACAM - Museu...), then the directory's spelling
+    # (exact match only — never a fuzzy guess, so 'Lisboa' can't become '@esnlisboa').
     venues_geo = core.load_venues()
-    cv = core.canonicalize_venues(events, venues_geo, core.venues_index(src))
-    if cv:
-        print(f"[venue] canonicalised {cv} venue name(s) to the directory")
+    cc = core.canonicalize_venue_coords(all_events)
+    cv = core.canonicalize_venues(all_events, venues_geo, core.venues_index(src))
+    if cc or cv:
+        print(f"[venue] unified {cc} by coordinate + {cv} to the directory")
+    events = core.dedupe(all_events, dedupe_sources)
+    core.drop_shared_images(events)
     # backfill the neighbourhood from coordinates for events whose venue name
     # didn't resolve (Fever/BOL/Xceed/Ticketline carry coords but odd venue names)
     geojson, name_prop = core.load_freguesias()
