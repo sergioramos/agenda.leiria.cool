@@ -553,6 +553,15 @@ html.js .card-rv.in { opacity: 1; transform: none; }
 .sq-good { color: #1f9d55; } .sq-mid { color: #d98f00; } .sq-bad { color: #ff3d1f; }
 .sq-row-bad { background: rgba(255, 61, 31, .05); }
 
+/* AI review proposals (admin · Estado) */
+.sr-list { display: flex; flex-direction: column; gap: 6px; }
+.sr-item { display: flex; gap: 10px; align-items: baseline; background: var(--bg);
+  border-left: 3px solid #6f6f6f; padding: 7px 10px; border-radius: 3px; }
+.sr-item.sr-flag { border-left-color: #d98f00; }
+.sr-tag { font-family: var(--mono); font-weight: 700; font-size: 11px; letter-spacing: .5px;
+  text-transform: uppercase; color: #6f6f6f; white-space: nowrap; }
+.sr-evs { font-size: 13px; color: #1d1813; }
+
 .run-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .note { font-size: 16px; line-height: 24px; font-family: var(--grotesk); color: #6f6f6f; margin: 12px 0 0; }
 .note a { color: var(--accent); }

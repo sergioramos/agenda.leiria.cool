@@ -459,5 +459,32 @@ t('tl venue', _tlb[0]['venue'], 'Lav - Lisboa Ao Vivo')
 t('tl url', _tlb[0]['url'], 'https://www.ticketline.pt/evento/bbno-102837')
 t('tl far-town skip key', 'lourinha' in connectors._TL_FAR, True)
 
+# ---- final AI review pass (deterministic parts; AI call mocked) ----
+import review_events as _rv
+_rv_tax = {"topics": [{"id": "art", "label": "Arte", "categories": [1]},
+                      {"id": "music", "label": "Musica", "categories": [2]}]}
+_rv_cfg = {"ai": {"model_cheap": "x", "review_confidence": 0.85, "enabled": True}}
+def _mk(i, title, venue, start, end, topic):
+    return {"id": i, "title": title, "venue": venue, "start": start, "end": end,
+            "topic": topic, "days": ["mon"], "ongoing": True, "price": {}}
+# candidate clustering links the two same-event copies, leaves the unrelated one
+_evset = [_mk("a", "Designing Sustainable Futures", "ULisboa", "2026-06-22", "2026-07-31", "music"),
+          _mk("b", "Exposição Designing Sustainable Futures", "Pavilhão", "2026-06-23", "2026-07-31", "art"),
+          _mk("c", "Concerto X", "Y", "2026-06-24", "2026-06-24", "music")]
+t('review clusters the residue', [[e['id'] for e in g] for g in _rv.candidate_clusters(_evset)], [['a', 'b']])
+_orig_jc = extract.json_call
+extract.json_call = lambda *a, **k: {"clusters": [{"cluster": 0, "merge": [
+    {"members": [0, 1], "canonical": 1, "topic": "art", "confidence": 0.95}], "flags": []}]}
+_kept, _props, _st = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0))
+t('review high-conf merges', sorted(e['id'] for e in _kept), ['b', 'c'])
+t('review canonical keeps art', next(e['topic'] for e in _kept if e['id'] == 'b'), 'art')
+# low confidence -> proposed, not merged
+extract.json_call = lambda *a, **k: {"clusters": [{"cluster": 0, "merge": [
+    {"members": [0, 1], "canonical": 1, "confidence": 0.5}], "flags": []}]}
+_k2, _p2, _s2 = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0))
+t('review low-conf not merged', len(_k2), 3)
+t('review low-conf proposed', len(_p2) >= 1, True)
+extract.json_call = _orig_jc
+
 print(f'\n{ok} passed, {fail} failed')
 sys.exit(1 if fail else 0)

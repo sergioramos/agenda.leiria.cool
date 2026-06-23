@@ -25,6 +25,39 @@ import core
 import connectors
 
 
+def _ai_review(events, cfg, today, out_dir):
+    """Run the final AI sanity/dedupe pass (review_events.review) when enabled and
+    in budget; auto-merge high-confidence dups and ALWAYS write the proposals to
+    <out_dir>/review-latest.json (so the workflow can commit it and /admin can read
+    it, even when the pass is skipped). Any failure leaves events unchanged."""
+    proposals, stats = [], {}
+    if cfg.get("ai", {}).get("review_events") and cfg["ai"].get("enabled", True):
+        run_cap, _ = core.effective_run_cap(cfg, today)
+        cap = min(cfg["ai"].get("review_max_cost_usd", 0.5), run_cap)
+        if cap <= 0:
+            print("[review] monthly AI budget exhausted — skipped.")
+        else:
+            try:
+                import extract
+                import review_events
+                prov, client = extract.get_client(cfg)
+                tracker = extract.CostTracker(cap)
+                events, proposals, stats = review_events.review(
+                    events, prov, client, cfg, core.load_taxonomy(), tracker)
+                print(f"[review] {stats} (${tracker.spent:.4f})")
+            except Exception as e:
+                print(f"[review] skipped ({type(e).__name__}: {e})")
+    try:
+        p = Path(out_dir) / "review-latest.json"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                                 "stats": stats, "proposals": proposals}, ensure_ascii=False, indent=2),
+                     encoding="utf-8")
+    except Exception:
+        pass
+    return events
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--partials-dir", required=True)
@@ -121,6 +154,12 @@ def main():
     nb = core.fill_neighbourhoods(events, geojson, name_prop)
     if nb:
         print(f"[neigh] backfilled {nb} neighbourhoods from coordinates")
+
+    # final AI sanity/dedupe pass over the ambiguous residue the rules left
+    # (cross-venue same event, mis-tagged topic). Auto-applies high-confidence
+    # merges; writes the rest to proposed-changes for /admin. Budget-capped;
+    # degrades to no changes on any failure.
+    events = _ai_review(events, cfg, today, Path(args.out_dir))
 
     # NEVER publish an empty week — a failed crawl (e.g. the AI API down) must not
     # wipe the live site. Keep whatever is already published.

@@ -280,6 +280,32 @@ async function renderFontes(latestWeek) {
     }
   }
   renderSourceQuality((week && week.events) || []);
+  await renderReview();
+}
+
+// read-only view of the last AI review pass: what it auto-merged + what it left
+// for a human to look at (low-confidence duplicates, flagged-weird events).
+async function renderReview() {
+  const box = $('#st-review'), list = $('#sr-list');
+  if (!box || !list) return;
+  let data = null;
+  try { data = await (await fetch('/data/review-latest.json', { cache: 'no-cache' })).json(); } catch { box.hidden = true; return; }
+  const props = (data && data.proposals) || [];
+  if (!props.length) { box.hidden = true; return; }
+  const s = data.stats || {};
+  $('#sr-summary').textContent =
+    `Última revisão IA: ${s.merged || 0} duplicados juntados automaticamente · ${props.length} para reveres abaixo.`;
+  list.innerHTML = '';
+  for (const p of props) {
+    const evs = (p.events || []).map(e => e.title + (e.venue ? ' · ' + e.venue : '')).join('   ↔   ');
+    const tag = p.kind === 'flag'
+      ? '⚠ ' + (p.issue || 'estranho')
+      : 'possível duplicado' + (p.confidence != null ? ` (${Math.round(p.confidence * 100)}%)` : '');
+    list.append(el('div', { className: 'sr-item' + (p.kind === 'flag' ? ' sr-flag' : '') },
+      el('span', { className: 'sr-tag', textContent: tag }),
+      el('span', { className: 'sr-evs', textContent: evs })));
+  }
+  box.hidden = false;
 }
 
 const _sqNorm = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]/g, '');
