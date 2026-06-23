@@ -867,6 +867,41 @@ def _get_text(session, cfg, url):
     return None
 
 
+def recover_images(session, cfg, events, delay, near_cutoff: str) -> int:
+    """Fill a missing poster by reading the event's OWN page (HTTP, no AI) —
+    the same structured recovery the HTML track does in crawl_events.enrich_events,
+    but for connector events. Many APIs/listings carry no usable image even though
+    the event's detail page has a clean og:image / JSON-LD image.
+
+    Bounded so it never becomes a second crawl: only events that are ongoing or
+    start on/before near_cutoff (a far-future pool event gets its image recovered
+    in a crawl closer to its date), only those with their own event page (not the
+    connector homepage), each page fetched once, and a hard per-run fetch cap.
+    Mutates events in place; returns how many posters were recovered."""
+    cap = cfg.get("connectors", {}).get("image_recover_cap", 150)
+    site_of = {c["id"]: core.site_key(c["website"]) for c in CONNECTORS}
+    cache, fetched, recovered = {}, 0, 0
+    for e in events:
+        if e.get("image") or (e.get("start") or "")[:10] > near_cutoff:
+            continue
+        u = e.get("url")
+        if not u or core.site_key(u) == site_of.get(e.get("source")):
+            continue   # homepage fallback — no dedicated event page to read
+        if u not in cache:
+            if fetched >= cap:
+                continue
+            fetched += 1
+            got = core.fetch(session, u, cfg)
+            ok = got and got[0] < 400 and "html" in (got[1] or "")
+            cache[u] = core.scrape_event_page(got[2], u) if ok else {}
+            time.sleep(delay / 2)
+        img = cache[u].get("image")   # scrape_event_page already _good_img-filtered + resolved
+        if img:
+            e["image"] = img
+            recovered += 1
+    return recovered
+
+
 _FETCHERS = {"agendalx": _agendalx, "tribe": _tribe, "gulbenkian": _gulbenkian,
              "jsonld_listing": _jsonld_listing, "jsonld_detail": _jsonld_detail,
              "ra": _ra, "dice": _dice, "ticketline": _ticketline}

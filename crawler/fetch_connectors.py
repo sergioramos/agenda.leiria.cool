@@ -42,6 +42,13 @@ def main():
 
     session = core.make_session(cfg)
     events, statuses = connectors.run_all(session, cfg, tax, sources, pool_start, window_end)
+    # fill missing posters from each event's own page (HTTP, no AI), bounded to
+    # near-term/ongoing events so it never turns into a second full crawl
+    delay = cfg["crawl"].get("polite_delay_ms", 800) / 1000.0
+    near_cutoff = (today + timedelta(days=cfg.get("connectors", {}).get("image_recover_days", 21))).isoformat()
+    recovered = connectors.recover_images(session, cfg, events, delay, near_cutoff)
+    if recovered:
+        print(f"[images] recovered {recovered} poster(s) by reading event pages (no AI)")
     # raw per-connector counts (before cross-source dedupe) drive silent-shrink
     # detection — a connector returning far fewer than its rolling median is flagged
     from collections import Counter

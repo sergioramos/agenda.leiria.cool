@@ -429,7 +429,16 @@ def scan_price(text: str, allow_free: bool = True) -> dict | None:
 
 
 # ---------- event-page enrichment (read the event's OWN page, no AI) ----------
-_LOGO_RE = re.compile(r"logo|favicon|sprite|placeholder|default[-_.]|/icons?/|banner|header", re.I)
+# Match each chrome word only as a whole path/filename token (bounded by a non
+# -alphanumeric char or the string ends), not as a coincidental substring — so a
+# real poster like ".../em-dialogo-com-..." (contains "logo"), ".../catalogo-..."
+# or Xceed's "/events/banners/..." (the trailing "s" breaks the boundary) is kept,
+# while "logo.png" / "banner-top.jpg" / "favicon.ico" are still rejected. "default"
+# is matched only as a filename token (default[-_.]) so the very common Drupal
+# media path "/sites/default/files/..." is NOT mistaken for a default image.
+_LOGO_RE = re.compile(
+    r"(?:^|[^a-z0-9])(?:logo|favicon|sprite|placeholder|header|icons?|banner)(?:[^a-z0-9]|$)"
+    r"|(?:^|[^a-z0-9])default[-_.]", re.I)
 _OG_IMG_RE = re.compile(
     r'<meta[^>]+(?:property|name)=["\']og:image(?::secure_url)?["\'][^>]*content=["\']([^"\']+)'
     r'|<meta[^>]+content=["\']([^"\']+)["\'][^>]*(?:property|name)=["\']og:image', re.I)
@@ -526,6 +535,25 @@ def parse_jsonld_event(html: str) -> dict:
     return out
 
 
+def _canonical_img(img_url: str | None, page_url: str | None) -> str | None:
+    """Some Rails/ActiveStorage sites behind AWS Elastic Beanstalk leak their
+    internal *.elasticbeanstalk.com origin into og:image; that host's TLS cert is
+    rejected by browsers, so the poster shows broken (e.g. Visit Lisboa). The same
+    path served from the site's own public host works, so swap the origin host for
+    the page's host."""
+    if not img_url:
+        return img_url
+    try:
+        ip = urlparse(img_url)
+        if ip.netloc.lower().endswith(".elasticbeanstalk.com"):
+            ph = urlparse(page_url or "").netloc
+            if ph and not ph.lower().endswith(".elasticbeanstalk.com"):
+                return ip._replace(netloc=ph).geturl()
+    except ValueError:
+        pass
+    return img_url
+
+
 def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
     """Read an event's own page (no AI): JSON-LD first, then og:image + a text
     price scan. Returns any of {image, price, start_time, description}.
@@ -536,7 +564,7 @@ def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
     ld = parse_jsonld_event(html or "")
     for cand in (ld.get("image"), og_image(html)):
         if _good_img(cand) and cand.strip() != df:
-            out["image"] = resolve_url(cand, url)
+            out["image"] = _canonical_img(resolve_url(cand, url), url)
             break
     if ld.get("price"):
         out["price"] = ld["price"]

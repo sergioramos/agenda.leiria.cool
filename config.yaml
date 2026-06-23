@@ -47,6 +47,8 @@ connectors:
   detail_cap: 80                 # max event detail pages per jsonld_detail connector (Xceed/Mato)
   ticketline_max_pages: 30       # Ticketline agenda pages (district 12 = Lisboa, 20/page)
   ticketline_detail_cap: 150     # near-term Ticketline detail fetches (for time + price)
+  image_recover_days: 21         # only recover posters for events starting within N days (or ongoing)
+  image_recover_cap: 150         # max event pages fetched per run to recover a missing poster (no AI)
 
 crawl:
   breadth: max                   # max | broad | lean  (which sources to attempt)

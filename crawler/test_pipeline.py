@@ -65,6 +65,21 @@ t('scrape logo skipped', core.scrape_event_page('<meta property="og:image" conte
 t('good poster', core._good_img('https://x.pt/wp/poster.jpg'), True)
 t('banner rejected', core._good_img('https://x.pt/img/banner-top.jpg'), False)
 t('svg rejected', core._good_img('https://x.pt/brand.svg'), False)
+# chrome words must match as whole path/filename tokens, not coincidental substrings
+t('img dialogo kept', core._good_img('https://x.pt/up/em-dialogo-com-lourdes.jpg'), True)
+t('img catalogo kept', core._good_img('https://x.pt/up/catalogo-2026.jpg'), True)
+t('img banners dir kept', core._good_img('https://images.xceed.me/events/banners/solomun-square.jpg?w=1920'), True)
+t('img logo file rejected', core._good_img('https://x.pt/assets/logo.png'), False)
+t('img favicon rejected', core._good_img('https://x.pt/favicon.ico'), False)
+t('img drupal default-path kept', core._good_img('https://maat.pt/sites/default/files/2026-05/poster.jpg'), True)
+t('img default file rejected', core._good_img('https://x.pt/img/default-cover.jpg'), False)
+# Elastic Beanstalk origin host (bad TLS) in og:image -> swap to the page's public host
+t('eb host swapped', core._canonical_img(
+    'https://visit-lisboa.eu-west-1.elasticbeanstalk.com/rails/active_storage/blobs/redirect/AbC/p.jpg',
+    'https://visitlisboa.com/en/events/x'),
+  'https://visitlisboa.com/rails/active_storage/blobs/redirect/AbC/p.jpg')
+t('normal host untouched', core._canonical_img('https://images.xceed.me/events/banners/x.jpg', 'https://xceed.me/e'),
+  'https://images.xceed.me/events/banners/x.jpg')
 t('default(listing) img rejected',
   core.scrape_event_page('<meta property="og:image" content="https://x.pt/cover.jpg">', 'https://x.pt/e', 'https://x.pt/cover.jpg').get('image'), None)
 _share = [{'title': 'A', 'image': 'https://x/lg.png'}, {'title': 'B', 'image': 'https://x/lg.png'}, {'title': 'C', 'image': 'https://x/p.jpg'}]
