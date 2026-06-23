@@ -1823,7 +1823,7 @@
       "url": "https://galeriafoco.com/exhibitions/todas-as-coisas-que-nos-fazem/",
       "source": "generic",
       "description": "Galeria Foco apresenta 'Todas as coisas que nos fazem', uma exposição individual de Hugo Cantegrel que explora a memória e a estranheza através de objetos, fotografias, vídeos e instalações de néon.",
-      "image": null
+      "image": "https://galeriafoco.com/wp-content/uploads/01-1.jpg"
     },
     {
       "id": "9906091572ef",
@@ -1861,7 +1861,7 @@
       "url": "https://carpintariasdesaolazaro.pt",
       "source": "generic",
       "description": "Exposição individual do artista, aberta de quinta a domingo, das 12h00 às 18h00.",
-      "image": null
+      "image": "https://static.wixstatic.com/media/392090_2c2efd21b1784c45add1fd121381efa4~mv2.jpg/v1/fill/w_2500,h_1666,al_c/392090_2c2efd21b1784c45add1fd121381efa4~mv2.jpg"
     },
     {
       "id": "cb06c6009d35",
@@ -2321,7 +2321,7 @@
       "url": "https://beato.unicornfactorylisboa.com/eventos/jogos-em-direto-na-browers-beato-2026",
       "source": "generic",
       "description": "Assiste aos jogos de futebol em direto, com cervejas artesanais e boa companhia, num ambiente informal.",
-      "image": null
+      "image": "http://static1.squarespace.com/static/66b0ce541dbf556d920e1c6c/66b115938cfa8901b38ddc0c/69f9bd5680acb6464358c7d5/1779969079696/JogosFutebol_BannerDigital_870x527+1.png?format=1500w"
     },
     {
       "id": "5f4412f0ec40",
@@ -13787,7 +13787,7 @@
       "url": "https://lisbonquake.com",
       "source": "generic",
       "description": "Uma incrível viagem imersiva ao passado que recria o Terramoto de 1755, com simuladores e tecnologia interativa para aprender sobre a história de Lisboa e sismos.",
-      "image": null
+      "image": "https://images.prismic.io/quake/8115d3ef-84d3-428e-bb41-87567f13c13b_meta-image.png"
     },
     {
       "id": "17999e0ccc41",
@@ -15497,7 +15497,7 @@
       "url": "https://museu.carris.pt",
       "source": "generic",
       "description": "No dia 22 de junho, o Núcleo 2 estará encerrado a partir das 13h, mas o Núcleo 1 terá entrada gratuita para visitas.",
-      "image": null
+      "image": "https://museu.carris.pt/wp-content/uploads/2021/03/Video-fundo-100.jpg"
     },
     {
       "id": "66a65029cb78",
@@ -16338,7 +16338,7 @@
       "url": "https://visitlisboa.com/en/events/fado-in-chiado",
       "source": "generic",
       "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": null
+      "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzU1MjUsInB1ciI6ImJsb2JfaWQifX0=--b152ded3a5402e3278612905175d023731633d80/visit-lisboa-fado-in-chiado-1.jpg"
     },
     {
       "id": "d8d2325737e9",
@@ -20959,7 +20959,7 @@
       "url": "https://fadoinchiado.com",
       "source": "generic",
       "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": null
+      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "ad7ee5683a6b",
@@ -22809,7 +22809,7 @@
       "url": "https://fadoinchiado.com",
       "source": "generic",
       "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": null
+      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "e8124c53a5c6",
@@ -23164,7 +23164,7 @@
       "url": "https://www.bol.pt/Comprar/Bilhetes/179674-festival_inart_espectaculo_b_l_alloon-teatro_do_bairro/",
       "source": "bol",
       "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153996.jpg?v=7",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -24068,7 +24068,7 @@
       "url": "https://cartazculturallisboa.pt/stand-up-comedy-em-lisboa",
       "source": "generic",
       "description": "Mais uma sessão do stand-up literário de Pedro Miguel Ribeiro, misturando humor e referências literárias.",
-      "image": null
+      "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/03/cartaz147559_grande-1.jpg"
     },
     {
       "id": "1b13415bc4e3",
@@ -24622,7 +24622,7 @@
       "url": "https://vulisboa.com",
       "source": "generic",
       "description": "Festa do ESN Lisboa, com DJ sets e ambiente internacional.",
-      "image": null
+      "image": "http://static1.squarespace.com/static/65d770165e44f6173a5c3868/t/6674719b0ddb2e5d62458008/1718907291607/Marca+VUL_1+linha_branco%281%29.png?format=1500w"
     },
     {
       "id": "cb4860ce5b64",
@@ -25508,7 +25508,7 @@
       "url": "https://fadoinchiado.com",
       "source": "generic",
       "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": null
+      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "d9ab5442da82",
@@ -26008,7 +26008,7 @@
       "url": "https://www.bol.pt/Comprar/Bilhetes/179667-festival_inart_filmes_e_processo_de_criacao_de_noe-teatro_do_bairro/",
       "source": "bol",
       "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154005.jpg?v=5",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -27525,7 +27525,7 @@
       "url": "https://moyportugal.com",
       "source": "generic",
       "description": "Retiro de yoga de fim de semana no Mandira Yoga Centre, focado em renovação e restauro, com a professora Zoe. Apenas quartos partilhados disponíveis.",
-      "image": null
+      "image": "https://s0.wp.com/_si/?t=eyJpbWciOiJodHRwczpcL1wvaTAud3AuY29tXC9tb3lwb3J0dWdhbC5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMTdcLzExXC9jcm9wcGVkLWxvZ28tMS0xLmpwZz9maXQ9NTEyJTJDNTEyJnNzbD0xIiwidHh0IjoiTWluaXN0cnkgb2YgWW9nYSIsInRlbXBsYXRlIjoiZWRnZSIsImZvbnQiOiIiLCJibG9nX2lkIjoxMDM1NDc0MjJ9.x4fpDvetBbXyXs8dqT3-P9Nvcho9-AUF6pO5-7_zlbIMQ"
     },
     {
       "id": "26e109181952",
@@ -27808,7 +27808,7 @@
       "url": "https://motelx.org",
       "source": "generic",
       "description": "Sessão mensal de cinema de terror à meia-noite no Cinema Nimas, organizada pelo festival MOTELX. Ocorre na última sexta-feira de cada mês.",
-      "image": null
+      "image": "https://www.motelx.org/uploads/config/28e1d8e09173c0daa0059a53896ec015.png"
     },
     {
       "id": "a93082cdb9ef",
@@ -28413,7 +28413,7 @@
       "url": "https://fadoinchiado.com",
       "source": "generic",
       "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": null
+      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "845b45bd6d8c",
@@ -28995,7 +28995,7 @@
       "url": "https://www.bol.pt/Comprar/Bilhetes/179676-festival_inart_filmes_e_laboratorio_coreografico-teatro_do_bairro/",
       "source": "bol",
       "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154006.jpg?v=3",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -32126,7 +32126,7 @@
       "url": "https://feverup.com/m/371468/en",
       "source": "fever",
       "description": "On June 20, 21, 27, and 28, the festival comes back to Parque Tejo for its 11th edition, offering more space, more comfort, and a fully renewed experience from the moment you arrive to the final chord. If the last edition was already historic, get ready â this one will raise th.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/337ae5ae-4fa8-11f1-9706-6ac0209ae0ab.png"
+      "image": null
     },
     {
       "id": "c8e5598ab0dd",
@@ -32193,7 +32193,7 @@
       "url": "https://feverup.com/m/371468/en",
       "source": "fever",
       "description": "On June 20, 21, 27, and 28, the festival comes back to Parque Tejo for its 11th edition, offering more space, more comfort, and a fully renewed experience from the moment you arrive to the final chord. If the last edition was already historic, get ready — this one will raise the.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/337ae5ae-4fa8-11f1-9706-6ac0209ae0ab.png",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -33268,7 +33268,7 @@
       "url": "https://fadoinchiado.com",
       "source": "generic",
       "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": null
+      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "0ba3991d826e",
@@ -33517,7 +33517,7 @@
       "url": "https://tigrepapel.pt",
       "source": "generic",
       "description": "Apresentação do livro que aborda a relação entre militância, investigação, arquitetura e psiquiatria.",
-      "image": null
+      "image": "https://tigrepapel.pt/wp-content/uploads/2023/12/podbean-app-50x50-1.webp"
     },
     {
       "id": "1a8d055bb995",
@@ -33764,7 +33764,7 @@
       "url": "https://www.bol.pt/Comprar/Bilhetes/179339-festival_inart_filme_the_sea_de_douglas_rosenberg-teatro_do_bairro/",
       "source": "bol",
       "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154007.jpg?v=4",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -35238,7 +35238,7 @@
       "url": "https://outjazz.pt",
       "source": "generic",
       "description": "Concerto ao ar livre com Marta Lima e Zef, no âmbito do festival Out Jazz, que traz música jazz e sonoridades urbanas aos jardins de Oeiras.",
-      "image": null
+      "image": "http://static1.squarespace.com/static/69ef557fe6f58c0079ab954f/t/69ef5629a9a23b0a4d8c6020/1777292841922/Outjazz_elementos+solto-01.png?format=1500w"
     },
     {
       "id": "e34411835420",
