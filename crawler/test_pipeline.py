@@ -92,6 +92,21 @@ t('canon venue name', core.canonical_venue('casa fernando pessoa', _VG, {})['ven
 t('canon venue neigh', core.canonical_venue('casa fernando pessoa', _VG, {})['neighbourhood'], 'Campo de Ourique')
 t('canon venue unknown kept', core.canonical_venue('Albuquerque Foundation', _VG, {})['venue'], 'Albuquerque Foundation')
 t('canon venue date none', core.canonical_venue('19–22 Nov 2026', _VG, {}), None)
+
+# canonicalize_venues: exact match only (after stripping a sub-room/paren suffix);
+# a loose substring must NEVER relabel a venue (the 'Lisboa' -> '@esnlisboa' trap)
+_VG2 = {core._nt('Culturgest'): {'name': 'Culturgest', 'neighbourhood': 'Avenidas Novas', 'zone': 'city'},
+        core._nt('@esnlisboa'): {'name': '@esnlisboa', 'neighbourhood': None, 'zone': None}}
+_evs = [{'venue': 'Culturgest (auditoriums)'},      # paren suffix -> exact 'Culturgest'
+        {'venue': '8 Marvila | Armazém 15-16', 'lat': None, 'lng': None},  # not in dir -> unchanged
+        {'venue': 'Lisboa'},                          # must NOT become '@esnlisboa'
+        {'venue': 'Culturgest'}]                      # already canonical -> unchanged
+_n = core.canonicalize_venues(_evs, _VG2, {})
+t('canon var fixed count', _n, 1)
+t('canon var suffix->canon', _evs[0]['venue'], 'Culturgest')
+t('canon var neigh filled', _evs[0].get('neighbourhood'), 'Avenidas Novas')
+t('canon var no fuzzy', _evs[2]['venue'], 'Lisboa')
+t('canon var already-canon untouched', _evs[3]['venue'], 'Culturgest')
 t('default(listing) img rejected',
   core.scrape_event_page('<meta property="og:image" content="https://x.pt/cover.jpg">', 'https://x.pt/e', 'https://x.pt/cover.jpg').get('image'), None)
 _share = [{'title': 'A', 'image': 'https://x/lg.png'}, {'title': 'B', 'image': 'https://x/lg.png'}, {'title': 'C', 'image': 'https://x/p.jpg'}]

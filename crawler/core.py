@@ -615,6 +615,50 @@ def canonical_venue(name: str, venues_geo: dict | None, venues_idx: dict | None)
     return {"venue": name, "neighbourhood": None, "zone": None, "lat": None, "lng": None}
 
 
+def _strip_subroom(name: str) -> str:
+    """Drop a trailing sub-room / annotation a source tacks on: a '| Sala 1'
+    segment or a final '(...)'. Dashes are left alone (real venue names contain
+    them, e.g. 'MAAT - Museu de Arte...')."""
+    s = re.sub(r"\s*\|\s*.*$", "", name or "")
+    s = re.sub(r"\s*\([^)]*\)\s*$", "", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def canonicalize_venues(events: list[dict], venues_geo: dict | None, venues_idx: dict | None) -> int:
+    """Unify venue-name variants to the directory's canonical spelling using an
+    EXACT normalized match only (optionally after dropping a sub-room/parenthetical
+    suffix). No fuzzy/containment matching, so a loose match can never relabel a
+    venue as a different place (e.g. 'Lisboa' must never become '@esnlisboa').
+    Backfills neighbourhood/zone/coords from the matched entry when the event lacks
+    them. Returns how many venue names were changed."""
+    vg, vi = (venues_geo or {}), (venues_idx or {})
+    changed = 0
+    for e in events:
+        name = e.get("venue") or ""
+        nk = _nt(name)
+        if len(nk) < 4:
+            continue
+        cands = [name]
+        stripped = _strip_subroom(name)
+        if stripped and _nt(stripped) != nk:
+            cands.append(stripped)
+        for cand in cands:
+            hit = vg.get(_nt(cand)) or vi.get(_nt(cand))
+            if not hit:
+                continue
+            canon = hit.get("name") or name
+            if _nt(canon) == nk:        # stored name is already the canonical one
+                break
+            e["venue"] = canon
+            if hit.get("neighbourhood") and not e.get("neighbourhood"):
+                e["neighbourhood"], e["zone"] = hit["neighbourhood"], hit.get("zone")
+            if hit.get("lat") is not None and not valid_lisbon_coord(e.get("lat"), e.get("lng")):
+                e["lat"], e["lng"] = hit.get("lat"), hit.get("lng")
+            changed += 1
+            break
+    return changed
+
+
 # ---------- normalisation ----------
 def _nt(s: str) -> str:
     """letters+digits only, accent-folded and lowercased — the comparison form

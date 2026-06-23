@@ -104,6 +104,12 @@ def main():
     shards = core.reframe_window(shard_events, mon, display_sun)
     events = core.dedupe(pooled + shards, dedupe_sources)
     core.drop_shared_images(events)
+    # unify venue-name variants to the directory's canonical spelling (exact match
+    # only — never a fuzzy guess), so the same place reads the same everywhere
+    venues_geo = core.load_venues()
+    cv = core.canonicalize_venues(events, venues_geo, core.venues_index(src))
+    if cv:
+        print(f"[venue] canonicalised {cv} venue name(s) to the directory")
     # backfill the neighbourhood from coordinates for events whose venue name
     # didn't resolve (Fever/BOL/Xceed/Ticketline carry coords but odd venue names)
     geojson, name_prop = core.load_freguesias()
