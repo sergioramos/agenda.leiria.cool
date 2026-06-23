@@ -548,7 +548,7 @@
       "url": "https://happykids.pt/evento/dino-experience/",
       "source": "generic",
       "description": "A maior exposição imersiva de dinossauros em Portugal, com videomapping, realidade virtual e metaverso, na Alfândega do Porto.",
-      "image": null
+      "image": "https://happykids.pt/wp-content/uploads/2026/05/Dino-Experience-3-1024x683.jpg"
     },
     {
       "id": "66c3d29344d4",
@@ -706,7 +706,7 @@
       "url": "https://fasvs.pt/eventos/ecologicas/",
       "source": "generic",
       "description": "Visita ao jardim seguida de oficina na Casa-Atelier Vieira da Silva. Atividade para famílias a partir dos 6 anos, com duração de 120 minutos.",
-      "image": null
+      "image": "https://fasvs.pt/wp-content/uploads/2026/01/ViewImage.jpg"
     },
     {
       "id": "ecc633e4c2ae",
@@ -1018,7 +1018,7 @@
       "url": "https://fasvs.pt/eventos/artistas-sobre-artistas/",
       "source": "generic",
       "description": "Seminário onde artistas falam sobre outros artistas.",
-      "image": null
+      "image": "https://fasvs.pt/wp-content/uploads/2026/03/PHOTO-2026-03-14-11-27-06-1.jpg"
     },
     {
       "id": "8816d79095f8",
@@ -1559,7 +1559,7 @@
       "url": "http://www.regaleira.pt/pt/agenda/2026-expo-camoniana-regaleira/",
       "source": "generic",
       "description": "Mostra bibliográfica e documental que assinala os 500 anos de Camões, a partir da coleção de Carvalho Monteiro.",
-      "image": null
+      "image": "http://www.regaleira.pt/media/9972/camo-es_offset_sq2.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134209338340000000"
     },
     {
       "id": "577dfb59dab5",
@@ -1747,7 +1747,7 @@
       "url": "https://fasvs.pt/eventos/bichos-da-sede-oficina/",
       "source": "generic",
       "description": "Oficinas de artes plásticas com artistas, onde se aprende fazendo, partilhando práticas e ferramentas manuais. Para jovens e adultos (12+).",
-      "image": null
+      "image": "https://fasvs.pt/wp-content/uploads/2026/05/1964-1967__LaBasilique-scaled.jpg"
     },
     {
       "id": "20cceed1afe7",
@@ -1785,7 +1785,7 @@
       "url": "https://fasvs.pt/eventos/arriscar-oficina/",
       "source": "generic",
       "description": "Visitas na companhia de livros. A partir de uma seleção de livros infantojuvenis, fazemos um percurso no museu, usando esta pequena biblioteca para tecer e ampliar a nossa leitura das obras expostas.",
-      "image": null
+      "image": "https://fasvs.pt/wp-content/uploads/2026/05/Le-Couple1932.jpg"
     },
     {
       "id": "a8107458f242",
@@ -1899,7 +1899,7 @@
       "url": "https://3m1arte.com",
       "source": "generic",
       "description": "Exposição de Nuno Sousa Vieira que explora os limites entre o visível e o imaginado através de pintura e instalação.",
-      "image": null
+      "image": "https://3m1arte.com/wp-content/uploads/2026/04/NSV-Still-expo-2026-1024x682-blurred.jpg"
     },
     {
       "id": "8ad27234bbf1",
@@ -2057,7 +2057,7 @@
       "url": "https://fasvs.pt/eventos/segundo-ciclo-expositivo-2/",
       "source": "generic",
       "description": "Segundo Ciclo Expositivo de 2026 na Fundação Arpad Szenes – Vieira da Silva, com núcleos da coleção e obras de vários artistas.",
-      "image": null
+      "image": "https://fasvs.pt/wp-content/uploads/2026/05/Arpad-Szenes_Le-bosquet.jpg"
     },
     {
       "id": "c91a97cc8513",
@@ -20193,7 +20193,7 @@
       "url": "https://museus.ulisboa.pt/seminario-decolonial-epistemologies-museum-archives-circulation-reparation-and-african-heritages",
       "source": "generic",
       "description": "Seminário sobre epistemologias decoloniais, abordando arquivos, circulação, reparação e heranças africanas no contexto museológico.",
-      "image": null
+      "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2026-06/11886-78bec3768675d32055eeb3ea801ada96.jpg?itok=3DVB08Gm"
     },
     {
       "id": "7990ea0bc141",
@@ -22637,7 +22637,7 @@
       "url": "https://museus.ulisboa.pt/visita-ao-observatorio-astronomico-de-lisboa-35",
       "source": "generic",
       "description": "Visita guiada ao Observatório Astronómico de Lisboa, antigo observatório nacional com importância científica e histórica única no país.",
-      "image": null
+      "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2022-12/139-196399ecde1ad9f853daf65af788b266.jpg?itok=dxGB6SXT"
     },
     {
       "id": "97d6c97ff989",
@@ -25101,7 +25101,7 @@
       "url": "https://lucateatroluisdecamoes.pt/event/ciclo-6-3/",
       "source": "generic",
       "description": "Espetáculo de dança para escolas e famílias, inspirado na Constituição Portuguesa, onde as cores e o movimento exploram a liberdade. Criado por Ângelo Cid Neto com alunos da Escola Superior de Dança.",
-      "image": "https://lucateatroluisdecamoes.pt/wp-content/uploads/2025/11/escolasupdanca2.jpg",
+      "image": null,
       "links": [
         "https://www.agendalx.pt/events/event/ciclo-6-o-que-e-o-amarelo-para-o-azul/"
       ],
@@ -25170,7 +25170,7 @@
       "url": "https://museus.ulisboa.pt/visita-reserva-das-colecoes-de-invertebrados-marinhos",
       "source": "generic",
       "description": "Visita orientada à reserva de invertebrados marinhos do Museu, com acesso a espécimes não exibidos ao público.",
-      "image": null
+      "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2026-06/11910-1f9754069a11148ac1db1bd0d9ef1a8a.jpg?itok=CyX89vX-"
     },
     {
       "id": "21ebaab3de5e",
@@ -26679,7 +26679,7 @@
       "url": "http://www.regaleira.pt/pt/agenda/2026-regaleira-a-noite/",
       "source": "generic",
       "description": "Visita noturna guiada à Quinta da Regaleira iluminada, explorando o patrimônio natural e arquitetônico do romantismo em Sintra. Duração aproximada de 90 minutos, recomendado para maiores de 16 anos.",
-      "image": null
+      "image": "http://www.regaleira.pt/media/9951/regaleiranoite2026_470x470px.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134188422660000000"
     },
     {
       "id": "0087c6616a4e",
@@ -26711,7 +26711,7 @@
       "url": "http://www.regaleira.pt/pt/agenda/2026-visita-clenardus-noturna/",
       "source": "generic",
       "description": "Percurso noturno que explora os mitos gregos na Regaleira, guiado pela Associação CLENARDUS.",
-      "image": null
+      "image": "http://www.regaleira.pt/media/9944/clenardus2026_pm_470x470px.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134220540160000000"
     },
     {
       "id": "21bc1624720b",
@@ -28558,7 +28558,7 @@
       "url": "https://museus.ulisboa.pt/filme-performance-tributo-aos-antepassados-africanos",
       "source": "generic",
       "description": "Ntaluma Makonde realiza uma invocação aos seus antepassados africanos utilizando cabaças e água, numa performance junto ao Museu. O escultor partilha o que observou no Museu e pede o regresso de elementos provenientes de Moçambique.",
-      "image": null
+      "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2026-06/11901-ad6350e8d6b5284472660af321982926.jpg?itok=0f8I40zU"
     },
     {
       "id": "5529ac52480c",
@@ -30728,7 +30728,7 @@
       "url": "https://gulbenkian.pt/jardim-de-verao/",
       "source": "generic",
       "description": "Programa de verão com atividades ao ar livre, de entrada gratuita, de 27 de junho a 12 de julho.",
-      "image": null
+      "image": "https://cdn.gulbenkian.pt/wp-content/uploads/2026/04/Bokor_card-576x432.jpg"
     },
     {
       "id": "b7259bac111c",
@@ -36255,7 +36255,7 @@
       "url": "http://www.regaleira.pt/pt/agenda/2026-musica-na-quinta-jun/",
       "source": "generic",
       "description": "Concerto inserido no ciclo Música na Quinta, aos domingos, com cenário do palácio e jardins.",
-      "image": null
+      "image": "http://www.regaleira.pt/media/10007/s02_qtaregaleira_20_09_2022_00202.jpg?crop=0,0,0.33260869565217394,0&amp;cropmode=percentage&amp;width=150&amp;height=150&amp;rnd=134248001630000000"
     },
     {
       "id": "312710f3c69f",
