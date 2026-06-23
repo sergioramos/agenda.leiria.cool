@@ -6,12 +6,13 @@
       449,
       449,
       434,
-      435
+      435,
+      476
     ],
-    "last_count": 435,
+    "last_count": 476,
     "last_status": "ok",
-    "median": 449,
-    "updated_at": "2026-06-22"
+    "median": 449.0,
+    "updated_at": "2026-06-23"
   },
   "ccb": {
     "counts": [
@@ -22,10 +23,10 @@
       430,
       430
     ],
-    "last_count": 430,
-    "last_status": "ok",
-    "median": 438,
-    "updated_at": "2026-06-22"
+    "last_count": 0,
+    "last_status": "failed",
+    "median": 438.0,
+    "updated_at": "2026-06-23"
   },
   "gulbenkian": {
     "counts": [
@@ -34,12 +35,13 @@
       117,
       117,
       112,
-      112
+      112,
+      114
     ],
-    "last_count": 112,
+    "last_count": 114,
     "last_status": "ok",
-    "median": 117,
-    "updated_at": "2026-06-22"
+    "median": 117.0,
+    "updated_at": "2026-06-23"
   },
   "ra": {
     "counts": [
@@ -48,12 +50,13 @@
       144,
       144,
       144,
-      144
+      144,
+      151
     ],
-    "last_count": 144,
+    "last_count": 151,
     "last_status": "ok",
-    "median": 144,
-    "updated_at": "2026-06-22"
+    "median": 144.0,
+    "updated_at": "2026-06-23"
   },
   "bol": {
     "counts": [
@@ -64,10 +67,10 @@
       389,
       389
     ],
-    "last_count": 389,
-    "last_status": "ok",
-    "median": 408,
-    "updated_at": "2026-06-22"
+    "last_count": 0,
+    "last_status": "failed",
+    "median": 408.0,
+    "updated_at": "2026-06-23"
   },
   "xceed": {
     "counts": [
@@ -76,12 +79,13 @@
       37,
       37,
       36,
-      36
+      36,
+      37
     ],
-    "last_count": 36,
+    "last_count": 37,
     "last_status": "ok",
-    "median": 37,
-    "updated_at": "2026-06-22"
+    "median": 37.0,
+    "updated_at": "2026-06-23"
   },
   "mato": {
     "counts": [
@@ -90,12 +94,13 @@
       16,
       16,
       14,
-      14
+      14,
+      15
     ],
-    "last_count": 14,
+    "last_count": 15,
     "last_status": "ok",
-    "median": 16,
-    "updated_at": "2026-06-22"
+    "median": 16.0,
+    "updated_at": "2026-06-23"
   },
   "dice": {
     "counts": [
@@ -106,32 +111,34 @@
       23,
       23
     ],
-    "last_count": 23,
-    "last_status": "ok",
-    "median": 22,
-    "updated_at": "2026-06-22"
+    "last_count": 0,
+    "last_status": "partial",
+    "median": 22.0,
+    "updated_at": "2026-06-23"
   },
   "ticketline": {
     "counts": [
       80,
       80,
       78,
-      78
+      78,
+      76
     ],
-    "last_count": 78,
+    "last_count": 76,
     "last_status": "ok",
-    "median": 80,
-    "updated_at": "2026-06-22"
+    "median": 79.0,
+    "updated_at": "2026-06-23"
   },
   "fever": {
     "counts": [
       33,
       25,
-      34
+      34,
+      26
     ],
-    "last_count": 34,
+    "last_count": 26,
     "last_status": "ok",
-    "median": 29.0,
-    "updated_at": "2026-06-22"
+    "median": 33,
+    "updated_at": "2026-06-23"
   }
 }
