@@ -847,7 +847,9 @@ def apply_venue_aliases(events: list[dict], aliases: dict) -> int:
         if _nt(e.get("venue") or "") != _nt(canon):
             changed += 1
         e["venue"] = canon
-        if lat is not None and not valid_lisbon_coord(e.get("lat"), e.get("lng")):
+        # set the canonical coordinate (it's the same place) so aliased copies share
+        # a coord cell and merge in collapse/dedupe — not just fill when missing.
+        if lat is not None:
             e["lat"], e["lng"] = lat, lng
     return changed
 
@@ -1309,6 +1311,11 @@ def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
         if op and (not kp or price_rank(other) > price_rank(keep)):
             keep["price"] = other["price"]
             note_prov(keep, "price", other)
+        # a higher-authority source (ticketing > venue > aggregator) also wins the
+        # topic — aggregators classify loosely (an exhibition tagged "learning").
+        if other.get("topic") and other["topic"] != keep.get("topic") and price_rank(other) > price_rank(keep):
+            keep["topic"] = other["topic"]
+            note_prov(keep, "topic", other)
         if not keep.get("image") and other.get("image"):
             keep["image"] = other["image"]
             note_prov(keep, "image", other)
@@ -1387,5 +1394,41 @@ def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
             else:
                 absorb(dup, e)
         out.extend(kept)
+
+    # pass 4: an ongoing run listed by several sources lands in different
+    # start-date buckets above and is never compared. Merge across buckets when
+    # it's clearly the same place (same coordinate, or same specific venue name)
+    # AND one title contains the other AND the date ranges overlap — so an
+    # exhibition listed as "X" (start 22) and "Exposição X" (start 23) at the same
+    # venue becomes one card, without fusing two distinct runs of a series.
+    _GEN_V = {"lisboa", "tba", ""}
+
+    def _span(e):
+        s = (e.get("start") or "")[:10]
+        return s, max(s, (e.get("end") or "")[:10])
+
+    def _overlap(a, b):
+        sa, ea = _span(a); sb, eb = _span(b)
+        return sa <= eb and sb <= ea
+
+    out.sort(key=score, reverse=True)
+    merged: list[dict] = []
+    for e in out:
+        nt, cke, vk = _nt(e["title"]), event_coord_key(e), _nt(e["venue"])
+        dup = None
+        for k in merged:
+            knt = _nt(k["title"])
+            if min(len(nt), len(knt)) < 12 or not (nt in knt or knt in nt):
+                continue
+            same_place = (cke and cke == event_coord_key(k)) or \
+                (vk and vk == _nt(k["venue"]) and vk not in _GEN_V)
+            if same_place and _overlap(e, k):
+                dup = k
+                break
+        if dup is None:
+            merged.append(e)
+        else:
+            absorb(dup, e)
+    out = merged
     out.sort(key=lambda x: (x["start"], x["venue"]))
     return out

@@ -262,6 +262,26 @@ _c = ev(AGG, 'Carolina Estrela Trio', venue='MACAM')
 _d = ev(AGG, 'Jovens Talentos - Hot Clube > Carolina Estrela Trio', venue='Hot Clube')
 t('containment keeps diff venue', len(core.dedupe([_c, _d], SRCS)), 2)
 
+# pass 4: an ongoing run listed by 2 sources with different start dates at the
+# same coordinate, contained titles -> one card (Designing Sustainable Futures)
+_p4a = ev(AGG, 'Designing Sustainable Futures', venue='Pavilhao', start='2026-06-12', sd=date(2026, 6, 12), ed=date(2026, 7, 31))
+_p4b = ev(COL, 'Exposicao Designing Sustainable Futures', venue='Pavilhao', start='2026-06-13', sd=date(2026, 6, 13), ed=date(2026, 7, 31))
+_p4a['lat'], _p4a['lng'] = _p4b['lat'], _p4b['lng'] = 38.766, -9.095
+t('pass4 cross-date same-coord merge', len(core.dedupe([_p4a, _p4b], SRCS)), 1)
+# different coordinates (different places) stay separate even with contained titles
+_p4c = ev(AGG, 'Designing Sustainable Futures', venue='A', start='2026-06-12', sd=date(2026, 6, 12), ed=date(2026, 7, 31))
+_p4d = ev(COL, 'Exposicao Designing Sustainable Futures', venue='B', start='2026-06-13', sd=date(2026, 6, 13), ed=date(2026, 7, 31))
+_p4c['lat'], _p4c['lng'] = 38.70, -9.10
+_p4d['lat'], _p4d['lng'] = 38.75, -9.15
+t('pass4 diff coord kept', len(core.dedupe([_p4c, _p4d], SRCS)), 2)
+
+# on merge, a higher-authority source (ticketing) wins the topic over an
+# aggregator's loose tag (exhibition wrongly tagged "learning")
+TKT = {'id': 'ticketline', 'name': 'Ticketline', 'website': 'https://ticketline.pt', 'provider': 'ticketline', 'topic': 'guides', 'categories': []}
+_tk = ev(TKT, 'Big Exhibition Title Here', venue='Pav'); _tk['topic'] = 'art'
+_ag = ev(AGG, 'Big Exhibition Title Here', venue='Pav'); _ag['topic'] = 'learning'
+t('topic from higher-authority source', core.dedupe([_tk, _ag], SRCS + [TKT])[0]['topic'], 'art')
+
 # venue copy + aggregator relist (generic label) -> merge, venue copy survives
 a = ev(COL, 'As Guerreiras do K-Pop – Tributo')
 b = ev(AGG, 'As Guerreiras do K-Pop – Tributo 2026')
