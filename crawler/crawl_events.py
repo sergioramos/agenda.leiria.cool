@@ -38,20 +38,29 @@ def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
     page = core.site_key(source.get("website") or "")
     default_img = core.og_image(listing_html)  # the venue's default/logo — reject it
     src_name = core._nt(source.get("name") or "")
+    # the listing page itself can carry a usable poster (single-show sites whose
+    # events have no dedicated URL, e.g. Fado in Chiado): take its JSON-LD image
+    # (og default already rejected). drop_shared_images later nulls it if it turns
+    # out shared across differently-titled events, i.e. a real default.
+    listing_info = (core.scrape_event_page(listing_html, source.get("website") or "", default_img)
+                    if listing_html else {})
     cache, fetched = {}, 0
     for e in evs:
         u = e.get("url")
-        if not u or core.site_key(u) == page:
-            continue  # homepage fallback — no dedicated event page to read
-        if u not in cache:
-            if fetched >= cap:
-                continue
-            fetched += 1
-            got = core.fetch(session, u, cfg)
-            ok = got and got[0] < 400 and "html" in (got[1] or "")
-            cache[u] = core.scrape_event_page(got[2], u, default_img) if ok else {}
-            time.sleep(delay / 2)
-        info = cache[u]
+        if not u:
+            continue
+        if core.site_key(u) == page:
+            info = {"image": listing_info.get("image")}  # homepage fallback: image only
+        else:
+            if u not in cache:
+                if fetched >= cap:
+                    continue
+                fetched += 1
+                got = core.fetch(session, u, cfg)
+                ok = got and got[0] < 400 and "html" in (got[1] or "")
+                cache[u] = core.scrape_event_page(got[2], u, default_img) if ok else {}
+                time.sleep(delay / 2)
+            info = cache[u]
         if not e.get("image") and info.get("image"):
             e["image"] = info["image"]
         if not (e.get("price") or {}).get("text") and info.get("price"):
