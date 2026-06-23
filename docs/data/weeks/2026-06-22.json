@@ -4,7 +4,7 @@
   "generated_at": "2026-06-22T11:14:02Z",
   "is_sample": false,
   "source_count": 540,
-  "event_count": 943,
+  "event_count": 889,
   "meta": {
     "sources_tried": 513,
     "ai_calls": 427,
@@ -44,7 +44,7 @@
         1,
         2
       ],
-      "venue": "Museu das Comunicações",
+      "venue": "Fundação Portuguesa das Comunicações – Museu das Comunicações",
       "source_id": "visit-lisboa-turismo-de-lisboa",
       "neighbourhood": "Bairro Alto",
       "zone": "city",
@@ -474,6 +474,47 @@
       "lng": -9.162494
     },
     {
+      "id": "66c3d29344d4",
+      "title": "Fairs and Markets of Príncipe Real",
+      "topic": "community",
+      "categories": [
+        1,
+        2
+      ],
+      "venue": "Jardim França Borges (Jardim do Príncipe Real)",
+      "source_id": "visit-lisboa-turismo-de-lisboa",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://visitlisboa.com/en/events/fairs-and-markets-of-principe-real",
+      "source": "generic",
+      "description": "[ weekly ] Take full benefit of this street market in one of the most select neighbourhoods of Lisbon and find unique and vintage objects at knock-down prices.",
+      "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTA4MSwicHVyIjoiYmxvYl9pZCJ9fQ==--b434818ae51b380f8670da65860956c266a62bc8/fairs-and-markets-of-principe-real-cover.jpg",
+      "lat": 38.71667,
+      "lng": -9.148354
+    },
+    {
       "id": "9e7a6889e404",
       "title": "Voltar aonde somos felizes",
       "topic": "performance",
@@ -551,47 +592,6 @@
       "image": "https://happykids.pt/wp-content/uploads/2026/05/Dino-Experience-3-1024x683.jpg"
     },
     {
-      "id": "66c3d29344d4",
-      "title": "Fairs and Markets of Príncipe Real",
-      "topic": "community",
-      "categories": [
-        1,
-        2
-      ],
-      "venue": "Jardim França Borges (Jardim do Príncipe Real)",
-      "source_id": "visit-lisboa-turismo-de-lisboa",
-      "neighbourhood": "Príncipe Real",
-      "zone": "city",
-      "start": "2026-01-01",
-      "end": "2026-12-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com/en/events/fairs-and-markets-of-principe-real",
-      "source": "generic",
-      "description": "[ weekly ] Take full benefit of this street market in one of the most select neighbourhoods of Lisbon and find unique and vintage objects at knock-down prices.",
-      "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTA4MSwicHVyIjoiYmxvYl9pZCJ9fQ==--b434818ae51b380f8670da65860956c266a62bc8/fairs-and-markets-of-principe-real-cover.jpg",
-      "lat": 38.71667,
-      "lng": -9.148354
-    },
-    {
       "id": "4e3378de07bf",
       "title": "Plié Ballet Community – Baby + Mom Classes (ages 1 – 3) 2026",
       "topic": "workshops",
@@ -637,7 +637,7 @@
         1,
         2
       ],
-      "venue": "Museu das Comunicações",
+      "venue": "Fundação Portuguesa das Comunicações – Museu das Comunicações",
       "source_id": "visit-lisboa-turismo-de-lisboa",
       "neighbourhood": "Bairro Alto",
       "zone": "city",
@@ -4391,6 +4391,45 @@
       "prov": null
     },
     {
+      "id": "215720b52e76",
+      "title": "Sofia Martins",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Biblioteca Palácio Galveias",
+      "source_id": "agendalx",
+      "neighbourhood": "Avenidas Novas",
+      "zone": "city",
+      "lat": 38.7427817,
+      "lng": -9.1442041,
+      "start": "2026-06-22",
+      "end": "2026-06-24",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon",
+        "tue",
+        "wed"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/sofia-martins-2/",
+      "source": "agendalx",
+      "description": "A instalação experimental no Palácio Galveias assinala um novo momento no percurso da artista, aprofundando uma relação espacial que ocupa e encarna, com o intuito de tornar visível aquilo que e...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/sof-2do-recorte.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "263d5540af76",
       "title": "O Silêncio que Grita",
       "topic": "art",
@@ -5195,11 +5234,13 @@
       "lat": 38.719716,
       "lng": -9.148634,
       "start": "2026-06-22",
-      "end": "2026-06-22",
+      "end": "2026-06-24",
       "all_day": true,
       "ongoing": false,
       "days": [
-        "mon"
+        "mon",
+        "tue",
+        "wed"
       ],
       "price": {
         "is_free": false,
@@ -7116,6 +7157,44 @@
       "lineup": null,
       "links": null,
       "prov": null
+    },
+    {
+      "id": "68475fba3f78",
+      "title": "Fado in Chiado",
+      "topic": "music",
+      "categories": [
+        10,
+        31
+      ],
+      "venue": "Fado in Chiado",
+      "source_id": "fado-in-chiado",
+      "neighbourhood": "Chiado",
+      "zone": "city",
+      "start": "2026-06-22",
+      "end": "2026-06-27",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 23.0,
+        "currency": "EUR",
+        "text": "€23"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://visitlisboa.com/en/events/fado-in-chiado",
+      "source": "generic",
+      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
+      "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzU1MjUsInB1ciI6ImJsb2JfaWQifX0=--b152ded3a5402e3278612905175d023731633d80/visit-lisboa-fado-in-chiado-1.jpg"
     },
     {
       "id": "72ed6517f39a",
@@ -9786,135 +9865,6 @@
       "prov": null
     },
     {
-      "id": "c1a6828c632b",
-      "title": "Alexandre Estrela",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Galeria Zé dos Bois",
-      "source_id": "agendalx",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7117856,
-      "lng": -9.1445953,
-      "start": "2026-06-22",
-      "end": "2026-11-21",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/alexandre-estrela-4/",
-      "source": "agendalx",
-      "description": "A propósito da sua peça RedSkyFalls, em exibição no Pavilhão de Portugal em Veneza na Biennale 2026, Alexandre Estrela apresenta uma série de Réplicas. Estas Réplicas caracterizam-se por al...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/dddd-4.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "71bd7eee0143",
-      "title": "Musa Paradisíaca",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Galeria Zé dos Bois",
-      "source_id": "agendalx",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7117856,
-      "lng": -9.1445953,
-      "start": "2026-06-22",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 3.0,
-        "currency": "EUR",
-        "text": "€3"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/musa-paradisiaca-5/",
-      "source": "agendalx",
-      "description": "Musa paradisiaca estreia Emporio , uma peça audiovisual duracional de 90 minutos que opera na fenda entre o colapso histórico e o colapso privado. No centro desta arqueologia magnética,...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/EMPORIO_Musa-paradisiaca-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "53ee8b5a5862",
-      "title": "Paulo Bruscky",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Galeria Zé dos Bois",
-      "source_id": "agendalx",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7117856,
-      "lng": -9.1445953,
-      "start": "2026-06-22",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/paulo-bruscky/",
-      "source": "agendalx",
-      "description": "Esta mostra antológica dedicada a Paulo Bruscky (n. 1949, Recife, Brasil) propõe uma leitura abrangente do percurso de um dos pioneiros da arte conceptual no Brasil. Desde os anos 1970, o artista...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/PERFORMANCE-Paulo-Bruscky-1978-Livro-de-artista_edited-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "1de77813287a",
       "title": "Sandra Macieira",
       "topic": "art",
@@ -11064,6 +11014,135 @@
       "prov": null
     },
     {
+      "id": "c1a6828c632b",
+      "title": "Alexandre Estrela",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Livraria Zé dos Bois",
+      "source_id": "agendalx",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.7117856,
+      "lng": -9.1445953,
+      "start": "2026-06-22",
+      "end": "2026-11-21",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/alexandre-estrela-4/",
+      "source": "agendalx",
+      "description": "A propósito da sua peça RedSkyFalls, em exibição no Pavilhão de Portugal em Veneza na Biennale 2026, Alexandre Estrela apresenta uma série de Réplicas. Estas Réplicas caracterizam-se por al...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/dddd-4.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "71bd7eee0143",
+      "title": "Musa Paradisíaca",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Livraria Zé dos Bois",
+      "source_id": "agendalx",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.7117856,
+      "lng": -9.1445953,
+      "start": "2026-06-22",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 3.0,
+        "currency": "EUR",
+        "text": "€3"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/musa-paradisiaca-5/",
+      "source": "agendalx",
+      "description": "Musa paradisiaca estreia Emporio , uma peça audiovisual duracional de 90 minutos que opera na fenda entre o colapso histórico e o colapso privado. No centro desta arqueologia magnética,...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/EMPORIO_Musa-paradisiaca-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "53ee8b5a5862",
+      "title": "Paulo Bruscky",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Livraria Zé dos Bois",
+      "source_id": "agendalx",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.7117856,
+      "lng": -9.1445953,
+      "start": "2026-06-22",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/paulo-bruscky/",
+      "source": "agendalx",
+      "description": "Esta mostra antológica dedicada a Paulo Bruscky (n. 1949, Recife, Brasil) propõe uma leitura abrangente do percurso de um dos pioneiros da arte conceptual no Brasil. Desde os anos 1970, o artista...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/PERFORMANCE-Paulo-Bruscky-1978-Livro-de-artista_edited-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "750fd3c0ea8d",
       "title": "Mário Gomes",
       "topic": "art",
@@ -11752,49 +11831,6 @@
       "prov": null
     },
     {
-      "id": "760c52a85389",
-      "title": "Espaços Outros",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "MACAM - Museu de Arte Contemporânea",
-      "source_id": "agendalx",
-      "neighbourhood": "Alcântara",
-      "zone": "city",
-      "lat": 38.700497,
-      "lng": -9.18314,
-      "start": "2026-06-22",
-      "end": "2026-10-26",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/fotografia-na-colecao-de-americo-marques/",
-      "source": "agendalx",
-      "description": "A fotografia contemporânea ocupa o centro da nova proposta expositiva do MACAM – Museu de Arte Contemporânea Armando Martins. Espaços Outros – Fotografia na Coleção Américo Marques (Part...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/João-Tabarra-A-viagem-2010-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "104fb7e530e7",
       "title": "Bombony",
       "topic": "art",
@@ -12052,6 +12088,49 @@
       "prov": null
     },
     {
+      "id": "760c52a85389",
+      "title": "Espaços Outros",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
+      "source_id": "agendalx",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.700497,
+      "lng": -9.18314,
+      "start": "2026-06-22",
+      "end": "2026-10-26",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/fotografia-na-colecao-de-americo-marques/",
+      "source": "agendalx",
+      "description": "A fotografia contemporânea ocupa o centro da nova proposta expositiva do MACAM – Museu de Arte Contemporânea Armando Martins. Espaços Outros – Fotografia na Coleção Américo Marques (Part...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/04/João-Tabarra-A-viagem-2010-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "5bd69136ddf6",
       "title": "Song Ruijin",
       "topic": "art",
@@ -12176,43 +12255,6 @@
       "source": "agendalx",
       "description": "O Museu Bordalo Pinheiro assinala um marco maior da cultura visual portuguesa com a exposição Toma! 150 anos de Zés Povinhos , comissariada por Jorge Silva e João Alpuim Botelho. Criado...",
       "image": "https://www.agendalx.pt/content/uploads/2026/03/Ze-povinho.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "23785ad6e664",
-      "title": "Museu da Água",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Museu da Água",
-      "source_id": "ticketline",
-      "neighbourhood": "Graça",
-      "zone": "city",
-      "lat": 38.719731,
-      "lng": -9.119912,
-      "start": "2026-06-22",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ticketline.pt/evento/museu-da-agua-de-lisboa-95506",
-      "source": "ticketline",
-      "description": "",
-      "image": "https://info.ticketline.pt/images/Espectaculos/95506/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -12648,6 +12690,43 @@
       "prov": null
     },
     {
+      "id": "23785ad6e664",
+      "title": "Museu da Água",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu da Água",
+      "source_id": "ticketline",
+      "neighbourhood": "Graça",
+      "zone": "city",
+      "lat": 38.719731,
+      "lng": -9.119912,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ticketline.pt/evento/museu-da-agua-de-lisboa-95506",
+      "source": "ticketline",
+      "description": "",
+      "image": "https://info.ticketline.pt/images/Espectaculos/95506/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "a5025c2d4949",
       "title": "Por Amor à Cidade - 90 Anos do Grupo de Amigos de Lisboa",
       "topic": "learning",
@@ -12996,7 +13075,7 @@
       "categories": [
         1
       ],
-      "venue": "Museu do Oriente",
+      "venue": "Museu do Oriente.",
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -13284,45 +13363,6 @@
       "source": "agendalx",
       "description": "Mais do que um monumento, o Padrão dos Descobrimentos é uma imagem profundamente enraizada no imaginário coletivo português. A exposição Padrão. Casa-Obsessão propõe uma reflexão s...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/padraocasaobsessao.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "215720b52e76",
-      "title": "Sofia Martins",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Palácio Galveias",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "lat": 38.7427817,
-      "lng": -9.1442041,
-      "start": "2026-06-22",
-      "end": "2026-06-24",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon",
-        "tue",
-        "wed"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/sofia-martins-2/",
-      "source": "agendalx",
-      "description": "A instalação experimental no Palácio Galveias assinala um novo momento no percurso da artista, aprofundando uma relação espacial que ocupa e encarna, com o intuito de tornar visível aquilo que e...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/sof-2do-recorte.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -14209,6 +14249,50 @@
       "prov": null
     },
     {
+      "id": "c6393fee684d",
+      "title": "Pub Crawl",
+      "topic": "nightlife",
+      "categories": [
+        3
+      ],
+      "venue": "TBA",
+      "source_id": "ra",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt",
+        "en"
+      ],
+      "url": "https://ra.co/events/2454505",
+      "source": "ra",
+      "description": "",
+      "image": "https://images.ra.co/c20c00004541331376e4a03f6ed191671794a282.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "28ff1492046c",
       "title": "Tasting Fado",
       "topic": "food",
@@ -14258,7 +14342,7 @@
       "categories": [
         1
       ],
-      "venue": "Teatro do Bairro",
+      "venue": "Teatro do Bairro .",
       "source_id": "agendalx",
       "neighbourhood": "Bairro Alto",
       "zone": "city",
@@ -14289,6 +14373,49 @@
       "source": "agendalx",
       "description": "O InArt – Community Arts Festival regressa em 2026 para afirmar o seu papel enquanto plataforma de apresentação e encontro, reunindo artistas naci...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/InArt-2026-©-Ines-Chaubert-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "4b94056567cf",
+      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
+      "topic": "nightlife",
+      "categories": [
+        3
+      ],
+      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
+      "source_id": "xceed",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.7125568,
+      "lng": -9.1449706,
+      "start": "2026-06-22",
+      "end": "2026-06-29",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20.0,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-540/225328",
+      "source": "xceed",
+      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
+      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
@@ -15953,7 +16080,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -15990,7 +16117,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca Portuguesa",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "mato",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -16308,39 +16435,6 @@
       "prov": null
     },
     {
-      "id": "68475fba3f78",
-      "title": "Fado in Chiado",
-      "topic": "music",
-      "categories": [
-        10,
-        31
-      ],
-      "venue": "Fado in Chiado",
-      "source_id": "fado-in-chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "start": "2026-06-22T17:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 23.0,
-        "currency": "EUR",
-        "text": "€23"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://visitlisboa.com/en/events/fado-in-chiado",
-      "source": "generic",
-      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzU1MjUsInB1ciI6ImJsb2JfaWQifX0=--b152ded3a5402e3278612905175d023731633d80/visit-lisboa-fado-in-chiado-1.jpg"
-    },
-    {
       "id": "d8d2325737e9",
       "title": "Sound Bath Journey",
       "topic": "art",
@@ -16501,6 +16595,43 @@
       "prov": null
     },
     {
+      "id": "29837675b16b",
+      "title": "Football Screening: Largo da Graça",
+      "topic": "outdoors",
+      "categories": [
+        1
+      ],
+      "venue": "Igreja da Graça",
+      "source_id": "mato",
+      "neighbourhood": "Graça",
+      "zone": "city",
+      "lat": 38.717167,
+      "lng": -9.130208,
+      "start": "2026-06-22T18:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Largo da Graça is hosting public football screenings with an upgraded, bigger screen for the national team's run. The outdoor setup is active daily until June 23rd. Catch the games and support Portugal in the open air at one of Lisbon's most iconic squares.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/2216686f-525e-444d-ae88-8ad3b974cb2d-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "7d6dd1dca7e8",
       "title": "Presentazione del volume \"Escritos Políticos\" di Niccolò Machiavelli",
       "topic": "learning",
@@ -16570,50 +16701,13 @@
       "prov": null
     },
     {
-      "id": "29837675b16b",
-      "title": "Football Screening: Largo da Graça",
-      "topic": "outdoors",
-      "categories": [
-        1
-      ],
-      "venue": "Largo da Graça",
-      "source_id": "mato",
-      "neighbourhood": "Graça",
-      "zone": "city",
-      "lat": 38.717167,
-      "lng": -9.130208,
-      "start": "2026-06-22T18:00",
-      "end": "2026-06-22",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://ma.to",
-      "source": "mato",
-      "description": "Largo da Graça is hosting public football screenings with an upgraded, bigger screen for the national team's run. The outdoor setup is active daily until June 23rd. Catch the games and support Portugal in the open air at one of Lisbon's most iconic squares.",
-      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/2216686f-525e-444d-ae88-8ad3b974cb2d-original.webp",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "1357d9f9a514",
       "title": "Presença Portuguesa na Ásia",
       "topic": "tours",
       "categories": [
         1
       ],
-      "venue": "Museu do Oriente",
+      "venue": "Museu do Oriente.",
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -16693,43 +16787,6 @@
       "prov": null
     },
     {
-      "id": "5b941762708e",
-      "title": "What We Hold - Mayank Sahni",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Cossoul",
-      "source_id": "mato",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.714125,
-      "lng": -9.153229,
-      "start": "2026-06-22T18:30",
-      "end": "2026-06-22",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://ma.to",
-      "source": "mato",
-      "description": "Cossoul presents 'What We Hold' by Mayank Sahni, an exhibition curated by Ângela Fonseca and Luzia Alves. The work marks the culmination of a material investigation where ceramics and glass expand into installation. Using the metaphor of tree rings, Sahni explores family as a str.",
-      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/a1b78cb8-2e1a-4689-becf-a5e9566b63c4-original.webp",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "b482234e53d3",
       "title": "10 Anos Hora de Baco",
       "topic": "performance",
@@ -16762,6 +16819,43 @@
       "source": "mato",
       "description": "Museu de Lisboa celebrates a decade of the 'Hora de Baco' initiative. The event features the opening of 'Olhares sobre a Hora de Baco,' showcasing photographs by José Alex Gandum, followed by a special concert titled 'Venham mais cinco!'.",
       "image": "https://mato.s3.us-east-1.amazonaws.com/prod/2c60ca38-9028-4e53-b6c4-8fab0ab571dd-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "5b941762708e",
+      "title": "What We Hold - Mayank Sahni",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Sociedade de Instrução Guilherme Cossoul",
+      "source_id": "mato",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.714125,
+      "lng": -9.153229,
+      "start": "2026-06-22T18:30",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Cossoul presents 'What We Hold' by Mayank Sahni, an exhibition curated by Ângela Fonseca and Luzia Alves. The work marks the culmination of a material investigation where ceramics and glass expand into installation. Using the metaphor of tree rings, Sahni explores family as a str.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/a1b78cb8-2e1a-4689-becf-a5e9566b63c4-original.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -16816,7 +16910,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema São Jorge",
+      "venue": "Cinema São Jorge .",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -16853,7 +16947,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -16890,7 +16984,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca Portuguesa",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "mato",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -17081,6 +17175,43 @@
       "prov": null
     },
     {
+      "id": "97f33cb79a9e",
+      "title": "En mon for intérieur",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "TBA - Teatro Bairro Alto",
+      "source_id": "mato",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.718,
+      "lng": -9.154061,
+      "start": "2026-06-22T19:00",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Dancer and choreographer Mellina Boubetra interprets the first portrait of the cycle 'En mon for intérieur', a project conceived by Alvise Sinivia.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/3716a7a3-ad0a-4fb7-b14c-4544ea2c7f46-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "b2152b15582d",
       "title": "Caravana",
       "topic": "performance",
@@ -17119,43 +17250,6 @@
       "source": "agendalx",
       "description": "Conhecido essencialmente pela sua profícua e aclamada obra poética, João Luís Barreto Guimarães (Porto, 1967) venceu, em 2025, o agora denominado Prémio de Teatro Carlos Avilez - SPA/ Teatro Abe...",
       "image": "https://www.agendalx.pt/content/uploads/2026/06/Caravana_Filipe_Figueiredo-1.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "97f33cb79a9e",
-      "title": "En mon for intérieur",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro do Bairro Alto",
-      "source_id": "mato",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.718,
-      "lng": -9.154061,
-      "start": "2026-06-22T19:00",
-      "end": "2026-06-22",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://ma.to",
-      "source": "mato",
-      "description": "Dancer and choreographer Mellina Boubetra interprets the first portrait of the cycle 'En mon for intérieur', a project conceived by Alvise Sinivia.",
-      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/3716a7a3-ad0a-4fb7-b14c-4544ea2c7f46-original.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -17290,7 +17384,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -17578,49 +17672,6 @@
       "prov": null
     },
     {
-      "id": "986559ed3d65",
-      "title": "Evita",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Capitólio",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.718971,
-      "lng": -9.146289,
-      "start": "2026-06-22T21:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 25.0,
-        "currency": "EUR",
-        "text": "€25–35"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/evita/",
-      "source": "agendalx",
-      "description": "A peça narra, em formato de ópera-rock, a ascensão e queda de Eva Perón, a carismática e controversa primeira-dama da Argentina. Passado nas décadas de 1930 e 1940, o musical acompanha a trajet?...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/Evita_EstelleValente.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "3dda898ef639",
       "title": "Melancolias Revolucionárias",
       "topic": "film",
@@ -17670,7 +17721,7 @@
       "categories": [
         1
       ],
-      "venue": "Casino Lisboa",
+      "venue": "Casino Lisboa - Auditório Dos Oceanos, Coliseu Porto Ageas",
       "source_id": "agendalx",
       "neighbourhood": "Arroios",
       "zone": "city",
@@ -17827,6 +17878,49 @@
       "prov": null
     },
     {
+      "id": "743e51cdd235",
+      "title": "Clube dos Poetas Mortos",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Teatro Da Trindade Inatel - Sala Carmen Dolores, Teatro Sá Da...",
+      "source_id": "agendalx",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.711847,
+      "lng": -9.142364,
+      "start": "2026-06-22T21:00",
+      "end": "2026-12-20",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–22"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/clube-dos-poetas-mortos/",
+      "source": "agendalx",
+      "description": "No início da década de 90 do século passado, um filme do experiente realizador australiano Peter Weir tornava-se um grande fenómeno de popularidade em todo o mundo. Amplamente nomeado para os Ósc...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/03/clubepoetas.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "03898ee248e4",
       "title": "A Gorda",
       "topic": "performance",
@@ -17915,49 +18009,6 @@
       "prov": null
     },
     {
-      "id": "743e51cdd235",
-      "title": "Clube dos Poetas Mortos",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro da Trindade INATEL",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.711847,
-      "lng": -9.142364,
-      "start": "2026-06-22T21:00",
-      "end": "2026-12-20",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 10.0,
-        "currency": "EUR",
-        "text": "€10–22"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/clube-dos-poetas-mortos/",
-      "source": "agendalx",
-      "description": "No início da década de 90 do século passado, um filme do experiente realizador australiano Peter Weir tornava-se um grande fenómeno de popularidade em todo o mundo. Amplamente nomeado para os Ósc...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/03/clubepoetas.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "cbf3718baed2",
       "title": "Upon Angels - cinema ao ar livre",
       "topic": "film",
@@ -18007,7 +18058,7 @@
       "categories": [
         1
       ],
-      "venue": "Convento da Encarnação",
+      "venue": "Antigo Convento Da Encarnação",
       "source_id": "agendalx",
       "neighbourhood": "Arroios",
       "zone": "city",
@@ -18090,7 +18141,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -18232,82 +18283,6 @@
       "source": "fever",
       "description": "Pub crawl sem álcool por Lisboa, com início às 22h na Praça Luís de Camões, passando pelo Bairro Alto e terminando com acesso VIP a uma discoteca.",
       "image": "https://applications-media.feverup.com/image/upload/f_auto,ar_15:8,c_fill/fever2/plan/photo/cf55bcfa-b225-11ef-84f7-aa839d11f17e.jpg"
-    },
-    {
-      "id": "c6393fee684d",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-22T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2454505",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/c20c00004541331376e4a03f6ed191671794a282.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "4b94056567cf",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-22T22:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon",
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-540/225328",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
-      "lineup": null,
-      "links": null,
-      "prov": null
     },
     {
       "id": "ffe874247ef2",
@@ -18530,43 +18505,6 @@
       "prov": null
     },
     {
-      "id": "06e34cb8f064",
-      "title": "CABE: Circuito de Arte de Belém",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "MACAM",
-      "source_id": "bol",
-      "neighbourhood": "Alcântara",
-      "zone": "city",
-      "lat": 38.700449,
-      "lng": -9.1833449,
-      "start": "2026-06-22T23:59",
-      "end": "2026-06-22",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/177821-cabe_circuito_de_arte_de_belem_macam-macam/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152437.png?v=3",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "82f3c699b72e",
       "title": "Museu de Lisboa - Teatro Romano",
       "topic": "performance",
@@ -18599,6 +18537,43 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136555.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "06e34cb8f064",
+      "title": "CABE: Circuito de Arte de Belém",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
+      "source_id": "bol",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.700449,
+      "lng": -9.1833449,
+      "start": "2026-06-22T23:59",
+      "end": "2026-06-22",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/177821-cabe_circuito_de_arte_de_belem_macam-macam/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152437.png?v=3",
       "lineup": null,
       "links": null,
       "prov": null
@@ -18742,24 +18717,29 @@
       "image": null
     },
     {
-      "id": "bcff17aa9d30",
-      "title": "Cíntia Ferreira",
+      "id": "ed2eba5ace56",
+      "title": "Terra Crua",
       "topic": "art",
       "categories": [
-        1
+        12
       ],
-      "venue": "Casa da Dona Laura",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.719716,
-      "lng": -9.148634,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-28",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "tue"
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
       ],
       "price": {
         "is_free": false,
@@ -18770,10 +18750,178 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/cintia-ferreira/",
-      "source": "agendalx",
-      "description": "Evidências reúne fotografias produzidas desde 2022 que habitam o espaço entre o documento e o sonho, o vestígio e a memória. Fragmentos, restos e sinais de existência são retirados do...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/Imagem1-2.jpg",
+      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-23/",
+      "source": "ccb",
+      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "72b6fe48b114",
+      "title": "Frida Orupabo",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-23",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-23/",
+      "source": "ccb",
+      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "fc2967baacd7",
+      "title": "Olhos Múltiplos",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-23",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-23/",
+      "source": "ccb",
+      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "5ddc0085f871",
+      "title": "José Pedro Croft",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-23",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-23/",
+      "source": "ccb",
+      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "5dc130509221",
+      "title": "May I Help You? Posso Ajudar?",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-23",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-23/",
+      "source": "ccb",
+      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -19473,191 +19621,6 @@
       "prov": null
     },
     {
-      "id": "ed2eba5ace56",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23T10:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-23/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "72b6fe48b114",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23T10:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-23/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "fc2967baacd7",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23T10:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-23/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "5ddc0085f871",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23T10:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-23/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "5dc130509221",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23T10:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-23/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "0c31a134245d",
       "title": "Atendimento Geral 2026",
       "topic": "art",
@@ -19737,218 +19700,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz144878.png?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "fefa0045f909",
-      "title": "Bilhete Museu + Exposição Temporária – Pavilhão Preto",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "ML - Palácio Pimenta",
-      "source_id": "bol",
-      "neighbourhood": "Alvalade",
-      "zone": "city",
-      "lat": 38.7587209,
-      "lng": -9.1557035,
-      "start": "2026-06-23T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 7.0,
-        "currency": "EUR",
-        "text": "€7"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170268-bilhete_museu_exposicao_temporaria_pavilhao_preto-ml_palacio_pimenta/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146098.jpg?v=2",
-      "lineup": null,
-      "links": [
-        "https://www.bol.pt/Comprar/Bilhetes/170264-exposicao_temporaria_pavilhao_preto-ml_palacio_pimenta/"
-      ],
-      "prov": null
-    },
-    {
-      "id": "23f8c76aaa33",
-      "title": "Palácio Pimenta - Museu de Lisboa",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "ML - Palácio Pimenta",
-      "source_id": "bol",
-      "neighbourhood": "Alvalade",
-      "zone": "city",
-      "lat": 38.7587209,
-      "lng": -9.1557035,
-      "start": "2026-06-23T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/170039-palacio_pimenta_museu_de_lisboa-ml_palacio_pimenta/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136509.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "826ff1388fa3",
-      "title": "Palácio Pimenta - por Amor à Cidade - 90 Anos do Gal",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "ML - Palácio Pimenta",
-      "source_id": "bol",
-      "neighbourhood": "Alvalade",
-      "zone": "city",
-      "lat": 38.7587209,
-      "lng": -9.1557035,
-      "start": "2026-06-23T10:00",
-      "end": "2026-09-27",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/177292-palacio_pimenta_por_amor_a_cidade_90_anos_do_gal-ml_palacio_pimenta/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152225.jpg?v=4",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "996d43ebc5a1",
-      "title": "Museu de Lisboa - Santo António",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "ML - Santo António",
-      "source_id": "bol",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.710078,
-      "lng": -9.13388513,
-      "start": "2026-06-23T10:00",
-      "end": "2026-12-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 4.0,
-        "currency": "EUR",
-        "text": "€4"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/169608-museu_de_lisboa_santo_antonio-ml_santo_antonio/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136558.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "c57e42def925",
-      "title": "Meu Querido Santo António.imagens Coleções Particulares-Exp Temporária",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "ML - Santo António",
-      "source_id": "bol",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.710078,
-      "lng": -9.13388513,
-      "start": "2026-06-23T10:00",
-      "end": "2026-09-20",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 4.0,
-        "currency": "EUR",
-        "text": "€4"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178970-meu_querido_santo_antonio_imagens_colecoes_particulares_exp_temporaria-ml_santo_antonio/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153689.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null
@@ -20275,6 +20026,218 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136926.png?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "fefa0045f909",
+      "title": "Bilhete Museu + Exposição Temporária – Pavilhão Preto",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Palácio Pimenta",
+      "source_id": "bol",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "lat": 38.7587209,
+      "lng": -9.1557035,
+      "start": "2026-06-23T10:00",
+      "end": "2026-12-31",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 7.0,
+        "currency": "EUR",
+        "text": "€7"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/170268-bilhete_museu_exposicao_temporaria_pavilhao_preto-ml_palacio_pimenta/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz146098.jpg?v=2",
+      "lineup": null,
+      "links": [
+        "https://www.bol.pt/Comprar/Bilhetes/170264-exposicao_temporaria_pavilhao_preto-ml_palacio_pimenta/"
+      ],
+      "prov": null
+    },
+    {
+      "id": "23f8c76aaa33",
+      "title": "Palácio Pimenta - Museu de Lisboa",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Palácio Pimenta",
+      "source_id": "bol",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "lat": 38.7587209,
+      "lng": -9.1557035,
+      "start": "2026-06-23T10:00",
+      "end": "2026-12-31",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/170039-palacio_pimenta_museu_de_lisboa-ml_palacio_pimenta/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136509.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "826ff1388fa3",
+      "title": "Palácio Pimenta - por Amor à Cidade - 90 Anos do Gal",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Palácio Pimenta",
+      "source_id": "bol",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "lat": 38.7587209,
+      "lng": -9.1557035,
+      "start": "2026-06-23T10:00",
+      "end": "2026-09-27",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/177292-palacio_pimenta_por_amor_a_cidade_90_anos_do_gal-ml_palacio_pimenta/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152225.jpg?v=4",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "996d43ebc5a1",
+      "title": "Museu de Lisboa - Santo António",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Santo António",
+      "source_id": "bol",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.710078,
+      "lng": -9.13388513,
+      "start": "2026-06-23T10:00",
+      "end": "2026-12-31",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 4.0,
+        "currency": "EUR",
+        "text": "€4"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/169608-museu_de_lisboa_santo_antonio-ml_santo_antonio/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136558.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "c57e42def925",
+      "title": "Meu Querido Santo António.imagens Coleções Particulares-Exp Temporária",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Santo António",
+      "source_id": "bol",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.710078,
+      "lng": -9.13388513,
+      "start": "2026-06-23T10:00",
+      "end": "2026-09-20",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 4.0,
+        "currency": "EUR",
+        "text": "€4"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/178970-meu_querido_santo_antonio_imagens_colecoes_particulares_exp_temporaria-ml_santo_antonio/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153689.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null
@@ -20780,7 +20743,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -20927,39 +20890,6 @@
       "lineup": null,
       "links": null,
       "prov": null
-    },
-    {
-      "id": "f8640762eef7",
-      "title": "Fado in Chiado",
-      "topic": "music",
-      "categories": [
-        10,
-        31
-      ],
-      "venue": "Fado in Chiado",
-      "source_id": "fado-in-chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "start": "2026-06-23T17:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 23.0,
-        "currency": "EUR",
-        "text": "€23"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://fadoinchiado.com",
-      "source": "generic",
-      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "ad7ee5683a6b",
@@ -21181,7 +21111,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -21319,7 +21249,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -21598,7 +21528,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -21624,82 +21554,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153852.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "ae71c70d5c7f",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-23T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2454512",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/3b9d8b86a2d1afe111030d4f12eb9187087b5252.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "d4df025f4a4f",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-23T22:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue",
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-541/225329",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
@@ -21814,43 +21668,6 @@
       "source": "generic",
       "description": "Sessão de cinema ao ar livre com comida, bebidas e música antes da projeção.",
       "image": null
-    },
-    {
-      "id": "4900c461d7f6",
-      "title": "Cíntia Ferreira",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Casa da Dona Laura",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.719716,
-      "lng": -9.148634,
-      "start": "2026-06-24",
-      "end": "2026-06-24",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/cintia-ferreira/",
-      "source": "agendalx",
-      "description": "Evidências reúne fotografias produzidas desde 2022 que habitam o espaço entre o documento e o sonho, o vestígio e a memória. Fragmentos, restos e sinais de existência são retirados do...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/Imagem1-2.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
     },
     {
       "id": "b7f649b849fe",
@@ -22047,7 +21864,7 @@
       "categories": [
         1
       ],
-      "venue": "Teatro Tivoli Bbva",
+      "venue": "Teatro Tivoli BBVA",
       "source_id": "ticketline",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -22110,191 +21927,6 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/100615/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "18c37790363a",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-24T10:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-24/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "5f11e2808cce",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-24T10:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-24/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "26b0985b716f",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-24T10:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-24/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "b25399d523a7",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-24T10:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-24/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "59cd26abf359",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-24T10:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-24/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -22646,7 +22278,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -22777,39 +22409,6 @@
       "lineup": null,
       "links": null,
       "prov": null
-    },
-    {
-      "id": "5fb7786a1c3d",
-      "title": "Fado in Chiado",
-      "topic": "music",
-      "categories": [
-        10,
-        31
-      ],
-      "venue": "Fado in Chiado",
-      "source_id": "fado-in-chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "start": "2026-06-24T17:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 23.0,
-        "currency": "EUR",
-        "text": "€23"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://fadoinchiado.com",
-      "source": "generic",
-      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
     },
     {
       "id": "e8124c53a5c6",
@@ -22997,7 +22596,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -23213,7 +22812,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -23288,47 +22887,6 @@
       },
       "lat": 38.7089341,
       "lng": -9.1424961
-    },
-    {
-      "id": "b05e6b1d100f",
-      "title": "EVITA",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Capitólio.",
-      "source_id": "bol",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.7188762,
-      "lng": -9.146637,
-      "start": "2026-06-24T21:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 25.0,
-        "currency": "EUR",
-        "text": "€25"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/166815-evita-capitolio/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz143318.jpg?v=13",
-      "lineup": null,
-      "links": null,
-      "prov": null
     },
     {
       "id": "51ddee751649",
@@ -23561,7 +23119,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -23705,44 +23263,6 @@
       "prov": null
     },
     {
-      "id": "d35bf96948ff",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-24T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2461481",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/ddfb88c22268688b319b161f507517bae6170188.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "6b257c56ba4d",
       "title": "Porto Pub Crawl",
       "topic": "nightlife",
@@ -23776,44 +23296,6 @@
       "source": "ra",
       "description": "",
       "image": "https://images.ra.co/13fec40cce7b612c4fd4a4ec7458235bc7855c6a.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "bb5d5393e18f",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-24T22:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed",
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-542/225330",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24071,6 +23553,45 @@
       "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/03/cartaz147559_grande-1.jpg"
     },
     {
+      "id": "dc4314b45c06",
+      "title": "Lisbon’s #1 Sunset Boat Party with Live DJ and Night Club Entry",
+      "topic": "nightlife",
+      "categories": [
+        3
+      ],
+      "venue": "Cais Rocha Conde de Óbidos",
+      "source_id": "xceed",
+      "neighbourhood": "Estrela",
+      "zone": "city",
+      "lat": 38.7031518,
+      "lng": -9.1623508,
+      "start": "2026-06-25",
+      "end": "2026-06-27",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu",
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 39.99,
+        "currency": "EUR",
+        "text": "€39,99"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://xceed.me/lisboa/event/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-42/207138",
+      "source": "xceed",
+      "description": "Lisbon Boat Party is an open air event during sunset cruising the Tagus river - the most unique experience in Lisbon! What’s Included: 🥂 1 welcome drink + 1 long drink included 💃🏼 4 hours of live residential DJs 🎟️ Club entry afterparty to one of the top clubs in Lisbon LISBON BO.",
+      "image": "https://images.xceed.me/events/banners/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-42-lisboa-xceed-7e4b.png?w=1920&h=1080&ar=16:9&fm=auto",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "1b13415bc4e3",
       "title": "RENT",
       "topic": "performance",
@@ -24255,6 +23776,85 @@
       "source": "agendalx",
       "description": "Exposição individual de June Crespo (Pamplona, 1982), artista que vive e trabalha em Bilbao, cuja prática escultórica investiga a relação entre corpo, matéria e espaço arquitetónico, tensiona...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/MG_3179-copy-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "90a222e3955b",
+      "title": "Ciclo 6 – O que é o amarelo para o azul?",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "LU.CA - Teatro Luís de Camões",
+      "source_id": "agendalx",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.707771,
+      "lng": -9.195983,
+      "start": "2026-06-25",
+      "end": "2026-06-27",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu",
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/ciclo-6-o-que-e-o-amarelo-para-o-azul/",
+      "source": "agendalx",
+      "description": "Como escrever a palavra liberdade com um só risco? O 6.º Ciclo de espetáculos da Escola Superior de Dança inclui na sua programação um espetáculo destinado...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/escolasupdanca2.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "d9ab5442da82",
+      "title": "Lisbon Boat Party",
+      "topic": "nightlife",
+      "categories": [
+        3
+      ],
+      "venue": "Lisbon Boat Party",
+      "source_id": "ra",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-25",
+      "end": "2026-06-27",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu",
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt",
+        "en"
+      ],
+      "url": "https://ra.co/events/2287287",
+      "source": "ra",
+      "description": "",
+      "image": "https://images.ra.co/77a8e9bacb8c6228d68fc9695e21e20c0546aa96.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24660,191 +24260,6 @@
       "image": "https://ml3n4h8jrdie.i.optimole.com/w:640/h:800/q:mauto/f:best/ig:avif/https://lisboa.events/app/uploads/CineConchas2026.webp"
     },
     {
-      "id": "8956b7753bca",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-25T10:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-25/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "2b68ef0d8822",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-25T10:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-25/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "b3461fef208b",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-25T10:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-25/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "faa0d77920f7",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-25T10:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-25/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "96bdc18cab6a",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-25T10:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-25/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "95d701df8502",
       "title": "Imaginar Outros Futuros II",
       "topic": "workshops",
@@ -25069,46 +24484,6 @@
       "prov": null
     },
     {
-      "id": "2a43b762d1f8",
-      "title": "Ciclo 6 – O que é o amarelo para o azul?",
-      "topic": "performance",
-      "categories": [
-        11,
-        28
-      ],
-      "venue": "LU.CA – Teatro Luís de Camões",
-      "source_id": "lu-ca-teatro-luis-de-camoes",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "start": "2026-06-25T14:30",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://lucateatroluisdecamoes.pt/event/ciclo-6-3/",
-      "source": "generic",
-      "description": "Espetáculo de dança para escolas e famílias, inspirado na Constituição Portuguesa, onde as cores e o movimento exploram a liberdade. Criado por Ângelo Cid Neto com alunos da Escola Superior de Dança.",
-      "image": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/ciclo-6-o-que-e-o-amarelo-para-o-azul/"
-      ],
-      "lat": 38.707771,
-      "lng": -9.195983
-    },
-    {
       "id": "d17d82e6fbf7",
       "title": "Sessão da Classe de Ciências",
       "topic": "learning",
@@ -25248,7 +24623,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -25478,77 +24853,6 @@
       "prov": null
     },
     {
-      "id": "1d6874f75bae",
-      "title": "Fado in Chiado",
-      "topic": "music",
-      "categories": [
-        10,
-        31
-      ],
-      "venue": "Fado in Chiado",
-      "source_id": "fado-in-chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "start": "2026-06-25T17:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 23.0,
-        "currency": "EUR",
-        "text": "€23"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://fadoinchiado.com",
-      "source": "generic",
-      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
-    },
-    {
-      "id": "d9ab5442da82",
-      "title": "Lisbon Boat Party",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "Lisbon Boat Party",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25T18:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2287287",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/77a8e9bacb8c6228d68fc9695e21e20c0546aa96.png",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "a6dfa8f7b37e",
       "title": "Lançamento do jornal LPP #7 e conversa Como regenerar o tecido social de uma cidade?",
       "topic": "community",
@@ -25618,24 +24922,27 @@
       "prov": null
     },
     {
-      "id": "dc4314b45c06",
-      "title": "Lisbon’s #1 Sunset Boat Party with Live DJ and Night Club Entry",
+      "id": "b72ad1b267a4",
+      "title": "The Lisbon Boat Party: Tagus tour with DJ",
       "topic": "nightlife",
       "categories": [
-        3
+        1
       ],
       "venue": "Cais Rocha Conde de Óbidos",
-      "source_id": "xceed",
+      "source_id": "fever",
       "neighbourhood": "Estrela",
       "zone": "city",
-      "lat": 38.7031518,
-      "lng": -9.1623508,
+      "lat": 38.7029004,
+      "lng": -9.1619316,
       "start": "2026-06-25T19:00",
-      "end": "2026-06-25",
+      "end": "2026-10-31",
       "all_day": false,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "thu"
+        "thu",
+        "fri",
+        "sat",
+        "sun"
       ],
       "price": {
         "is_free": false,
@@ -25646,10 +24953,10 @@
       "language": [
         "pt"
       ],
-      "url": "https://xceed.me/lisboa/event/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-42/207138",
-      "source": "xceed",
-      "description": "Lisbon Boat Party is an open air event during sunset cruising the Tagus river - the most unique experience in Lisbon! What’s Included: 🥂 1 welcome drink + 1 long drink included 💃🏼 4 hours of live residential DJs 🎟️ Club entry afterparty to one of the top clubs in Lisbon LISBON BO.",
-      "image": "https://images.xceed.me/events/banners/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-42-lisboa-xceed-7e4b.png?w=1920&h=1080&ar=16:9&fm=auto",
+      "url": "https://feverup.com/m/157936/en",
+      "source": "fever",
+      "description": "The Lisbon Boat Party: Tagus Tour with DJ 🎫 General admission Highlights ⛵ Incredible views of both banks from the river 🎵 The best music with a live DJ ☀️ A magical sunset followed by a great night out Includes: welcome drink, long drink, entry to one of Lisbon's best nightclubs.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/3968e700-d1a0-11ee-ad3a-82d0b7802909",
       "lineup": null,
       "links": null,
       "prov": null
@@ -25702,7 +25009,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -25866,46 +25173,6 @@
       "image": "https://secure-content.meetupstatic.com/images/classic-events/532266945/676x676.jpg"
     },
     {
-      "id": "b72ad1b267a4",
-      "title": "The Lisbon Boat Party: Tagus tour with DJ",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Rocha do Conde de Óbidos",
-      "source_id": "fever",
-      "neighbourhood": "Estrela",
-      "zone": "city",
-      "lat": 38.7029004,
-      "lng": -9.1619316,
-      "start": "2026-06-25T19:00",
-      "end": "2026-10-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 39.99,
-        "currency": "EUR",
-        "text": "€39,99"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/157936/en",
-      "source": "fever",
-      "description": "The Lisbon Boat Party: Tagus Tour with DJ 🎫 General admission Highlights ⛵ Incredible views of both banks from the river 🎵 The best music with a live DJ ☀️ A magical sunset followed by a great night out Includes: welcome drink, long drink, entry to one of Lisbon's best nightclubs.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/3968e700-d1a0-11ee-ad3a-82d0b7802909",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "7eb248bce1c5",
       "title": "Continuamos, que Mais Havemos de Fazer! - Act (TM Acolhimento)",
       "topic": "performance",
@@ -26057,7 +25324,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -26165,43 +25432,6 @@
       "prov": null
     },
     {
-      "id": "dc383bb35e67",
-      "title": "Carolina Estrela Trio",
-      "topic": "music",
-      "categories": [
-        1
-      ],
-      "venue": "MACAM - Museu de Arte Contemporânea",
-      "source_id": "agendalx",
-      "neighbourhood": "Alcântara",
-      "zone": "city",
-      "lat": 38.700497,
-      "lng": -9.18314,
-      "start": "2026-06-25T20:00",
-      "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 3.0,
-        "currency": "EUR",
-        "text": "€3"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/carolina-estrela-trio/",
-      "source": "agendalx",
-      "description": "Neste concerto intimista, o trio liderado por Carolina Estrela na voz apresenta repertório no âmbito do ja...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/carolina-estrela.png",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "a35da0674a6f",
       "title": "Jovens Talentos - Hot Clube > Carolina Estrela Trio",
       "topic": "music",
@@ -26232,6 +25462,43 @@
       "source": "generic",
       "description": "Apresentação do trio de jazz contemporâneo liderado por Carolina Estrela, com Luan Maziero no piano e José Pedro Borges no contrabaixo, explorando uma abordagem wordless.",
       "image": "https://hcp.pt/wp-content/uploads/2026/06/carol-foto.jpeg"
+    },
+    {
+      "id": "dc383bb35e67",
+      "title": "Carolina Estrela Trio",
+      "topic": "music",
+      "categories": [
+        1
+      ],
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
+      "source_id": "agendalx",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": 38.700497,
+      "lng": -9.18314,
+      "start": "2026-06-25T20:00",
+      "end": "2026-06-25",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 3.0,
+        "currency": "EUR",
+        "text": "€3"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/carolina-estrela-trio/",
+      "source": "agendalx",
+      "description": "Neste concerto intimista, o trio liderado por Carolina Estrela na voz apresenta repertório no âmbito do ja...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/carolina-estrela.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
     },
     {
       "id": "a4ea6cf86cc8",
@@ -26619,7 +25886,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -26858,82 +26125,6 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/105595/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "53bcb2966073",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2461517",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/71a338272098d2385e633fa105617a5c1606e589.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "6cb26b0502d7",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-25T22:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu",
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-544/225332",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
@@ -27386,50 +26577,13 @@
       "image": "https://applications-media.feverup.com/image/upload/f_auto,ar_15:8,c_fill/fever2/plan/photo/f9ea92be-3f74-11f1-8362-0e75e10067de.jpeg"
     },
     {
-      "id": "90a222e3955b",
-      "title": "Ciclo 6 – O que é o amarelo para o azul?",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "LU.CA - Teatro Luís de Camões",
-      "source_id": "agendalx",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.707771,
-      "lng": -9.195983,
-      "start": "2026-06-26",
-      "end": "2026-06-26",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/ciclo-6-o-que-e-o-amarelo-para-o-azul/",
-      "source": "agendalx",
-      "description": "Como escrever a palavra liberdade com um só risco? O 6.º Ciclo de espetáculos da Escola Superior de Dança inclui na sua programação um espetáculo destinado...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/escolasupdanca2.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "1900bf75aaff",
       "title": "MACAM",
       "topic": "art",
       "categories": [
         1
       ],
-      "venue": "MACAM – Museu de Arte Contemporânea Armando Martins",
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
       "source_id": "ticketline",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -27627,6 +26781,49 @@
       "lineup": null,
       "links": null,
       "prov": null
+    },
+    {
+      "id": "40cc3427bae5",
+      "title": "Es Tr3s Irms",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "São Luiz Teatro Municipal",
+      "source_id": "agendalx",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.7089341,
+      "lng": -9.1424961,
+      "start": "2026-06-26",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 12.0,
+        "currency": "EUR",
+        "text": "€12"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/es-tr3s-irms/",
+      "source": "agendalx",
+      "description": "Uma leitura pós-contemporânea e multidisciplinar do clássico de Tchekhov” é como a artista muldisciplinar Tita Maravilha apresenta Es Tr3s Irms , projeto vencedor da quinta edição d...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/04/es-tr3s-irms-filipe-ferreira.jpg",
+      "lineup": null,
+      "links": [
+        "https://www.bol.pt/Comprar/Bilhetes/178263-es_tr3s_irms-sao_luiz_teatro_municipal/"
+      ],
+      "prov": {
+        "price": "bol"
+      }
     },
     {
       "id": "ca68dac4413a",
@@ -27844,191 +27041,6 @@
       "image": "https://teatrodobairroalto.pt/storage/2870/7c9a51c6518f03274807a99a5c8b03b6.jpeg"
     },
     {
-      "id": "cfe5534d3191",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-26T10:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-26/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "2df4baa1756e",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-26T10:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-26/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "70fcb8e34355",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-26T10:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-26/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "f680309a3a4e",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-26T10:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-26/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "f5f6ea6f7b5d",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-26T10:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-26/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "e14c5e058d84",
       "title": "The Ongoing Seminar: Filmes e debates",
       "topic": "workshops",
@@ -28067,7 +27079,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -28383,39 +27395,6 @@
       "image": "http://static1.squarespace.com/static/65d770165e44f6173a5c3868/662faee562de8c5dc364cd19/6a16ddf22815f0785c0ba187/1779884278969/03_story_1080x1920+%281%29.jpg?format=1500w"
     },
     {
-      "id": "9522a900fb10",
-      "title": "Fado in Chiado",
-      "topic": "music",
-      "categories": [
-        10,
-        31
-      ],
-      "venue": "Fado in Chiado",
-      "source_id": "fado-in-chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "start": "2026-06-26T17:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 23.0,
-        "currency": "EUR",
-        "text": "€23"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://fadoinchiado.com",
-      "source": "generic",
-      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
-    },
-    {
       "id": "845b45bd6d8c",
       "title": "The Saints Must Be Crazy!!",
       "topic": "community",
@@ -28710,43 +27689,6 @@
       "image": "https://www.ifp-lisboa.com//content/uploads/2026/06/Foot-site-1.jpg"
     },
     {
-      "id": "ff923a3365d9",
-      "title": "Lisbon’s #1 Sunset Boat Party with Live DJ and Night Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "Cais Rocha Conde de Óbidos",
-      "source_id": "xceed",
-      "neighbourhood": "Estrela",
-      "zone": "city",
-      "lat": 38.7031518,
-      "lng": -9.1623508,
-      "start": "2026-06-26T19:00",
-      "end": "2026-06-26",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 45.0,
-        "currency": "EUR",
-        "text": "€45"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-43/207181",
-      "source": "xceed",
-      "description": "Lisbon Boat Party is an open air event during sunset cruising the Tagus river - the most unique experience in Lisbon! What’s Included: 🥂 1 welcome drink + 1 long drink included 💃🏼 4 hours of live residential DJs 🎟️ Club entry afterparty to one of the top clubs in Lisbon LISBON BO.",
-      "image": "https://images.xceed.me/events/banners/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-43-lisboa-xceed-1c1f.png?w=1920&h=1080&ar=16:9&fm=auto",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "752662556a59",
       "title": "Carmen Di Novic",
       "topic": "music",
@@ -28785,7 +27727,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -28811,44 +27753,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153864.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "b6eba285c294",
-      "title": "Lisbon Boat Party",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "Lisbon Boat Party",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26T19:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2288238",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/3b74175a2caeb0ed83b8fc39761d9053eb841a10.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -29046,7 +27950,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -29223,49 +28127,6 @@
       }
     },
     {
-      "id": "40cc3427bae5",
-      "title": "Es Tr3s Irms",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "São Luiz Teatro Municipal",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.7089341,
-      "lng": -9.1424961,
-      "start": "2026-06-26T20:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 12.0,
-        "currency": "EUR",
-        "text": "€12"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/es-tr3s-irms/",
-      "source": "agendalx",
-      "description": "Uma leitura pós-contemporânea e multidisciplinar do clássico de Tchekhov” é como a artista muldisciplinar Tita Maravilha apresenta Es Tr3s Irms , projeto vencedor da quinta edição d...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/es-tr3s-irms-filipe-ferreira.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.bol.pt/Comprar/Bilhetes/178263-es_tr3s_irms-sao_luiz_teatro_municipal/"
-      ],
-      "prov": {
-        "price": "bol"
-      }
-    },
-    {
       "id": "35bf8f892e77",
       "title": "Morcegos no Castelo",
       "topic": "art",
@@ -29349,7 +28210,7 @@
       "categories": [
         1
       ],
-      "venue": "Culturgest",
+      "venue": "Culturgest - Auditório Emílio Rui Vilar",
       "source_id": "agendalx",
       "neighbourhood": "Alvalade",
       "zone": "city",
@@ -29642,7 +28503,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -29758,7 +28619,7 @@
       "categories": [
         1
       ],
-      "venue": "MACAM - Museu de Arte Contemporânea",
+      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -29903,7 +28764,7 @@
       "categories": [
         1
       ],
-      "venue": "LAV – Lisboa ao Vivo",
+      "venue": "Lav - Lisboa Ao Vivo",
       "source_id": "ticketline",
       "neighbourhood": "Marvila",
       "zone": "city",
@@ -29929,82 +28790,6 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/105170/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "5027254e7879",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2461519",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/ad4b7d83c3b8ffb46723669b5287903213bd1bcb.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "3cdc9399856a",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-26T22:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-545/225333",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
@@ -30731,43 +29516,6 @@
       "image": "https://cdn.gulbenkian.pt/wp-content/uploads/2026/04/Bokor_card-576x432.jpg"
     },
     {
-      "id": "b7259bac111c",
-      "title": "Ciclo 6 – O que é o amarelo para o azul?",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "LU.CA - Teatro Luís de Camões",
-      "source_id": "agendalx",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.707771,
-      "lng": -9.195983,
-      "start": "2026-06-27",
-      "end": "2026-06-27",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/ciclo-6-o-que-e-o-amarelo-para-o-azul/",
-      "source": "agendalx",
-      "description": "Como escrever a palavra liberdade com um só risco? O 6.º Ciclo de espetáculos da Escola Superior de Dança inclui na sua programação um espetáculo destinado...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/escolasupdanca2.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "c91a671ac962",
       "title": "Don't think, just Shoot! – Workshop Fotografia",
       "topic": "workshops",
@@ -31285,191 +30033,6 @@
       "source": "generic",
       "description": "Workshop prático de restauro e reciclagem de móveis, utilizando técnicas clássicas e contemporâneas. Cada participante traz uma peça para restaurar ou reciclar, aprendendo desde o diagnóstico até à execução.",
       "image": "http://static1.squarespace.com/static/649b082373f2bc1f7b951044/64a0721446dfe2022d87429a/64a072369862b62fab1618ce/1779191892046/R%26R4.jpg?format=1500w"
-    },
-    {
-      "id": "611a500310dd",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-27T10:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-27/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "bb68431f3854",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-27T10:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-27/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "0892d7e58e0a",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-27T10:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-27/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "42e930d4d75b",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-27T10:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-27/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "8160bd0c0f47",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-27T10:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-27/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
     },
     {
       "id": "11bf73b0905b",
@@ -32519,7 +31082,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -32671,7 +31234,7 @@
       "categories": [
         1
       ],
-      "venue": "ML - Palácio Pimenta",
+      "venue": "Museu de Lisboa - Palácio Pimenta",
       "source_id": "bol",
       "neighbourhood": "Alvalade",
       "zone": "city",
@@ -32697,43 +31260,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz144738.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "000ae7494b88",
-      "title": "Santo António - História e Devoção a Santo António - Visita LGP",
-      "topic": "tours",
-      "categories": [
-        1
-      ],
-      "venue": "ML - Santo António",
-      "source_id": "bol",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.710078,
-      "lng": -9.13388513,
-      "start": "2026-06-27T15:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/162571-santo_antonio_historia_e_devocao_a_santo_antonio_visita_lgp-ml_santo_antonio/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz139515.jpg?v=1",
       "lineup": null,
       "links": null,
       "prov": null
@@ -32771,6 +31297,43 @@
       "source": "agendalx",
       "description": "Localizado no coração da cidade, junto à Igreja de Santo António, este núcleo do Museu de Lisboa convida à descoberta do santo mais popular de Lisboa e de um dos mais venerados no mundo.",
       "image": "https://www.agendalx.pt/content/uploads/2026/04/IMG_2933.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "000ae7494b88",
+      "title": "Santo António - História e Devoção a Santo António - Visita LGP",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Santo António",
+      "source_id": "bol",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.710078,
+      "lng": -9.13388513,
+      "start": "2026-06-27T15:00",
+      "end": "2026-06-27",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/162571-santo_antonio_historia_e_devocao_a_santo_antonio_visita_lgp-ml_santo_antonio/",
+      "source": "bol",
+      "description": "",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz139515.jpg?v=1",
       "lineup": null,
       "links": null,
       "prov": null
@@ -33001,7 +31564,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -33238,39 +31801,6 @@
       "prov": null
     },
     {
-      "id": "e0e71bfa9647",
-      "title": "Fado in Chiado",
-      "topic": "music",
-      "categories": [
-        10,
-        31
-      ],
-      "venue": "Fado in Chiado",
-      "source_id": "fado-in-chiado",
-      "neighbourhood": "Chiado",
-      "zone": "city",
-      "start": "2026-06-27T17:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 23.0,
-        "currency": "EUR",
-        "text": "€23"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://fadoinchiado.com",
-      "source": "generic",
-      "description": "Intimate live Fado show with a singer and two guitarists, blending traditional and upbeat songs, accompanied by images of Lisbon.",
-      "image": "https://images.rr.pt/palco_0919071a207178f17f.png"
-    },
-    {
       "id": "0ba3991d826e",
       "title": "Ciclo Música Através do Tempo • Miso String Quartet",
       "topic": "music",
@@ -33346,7 +31876,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -33552,43 +32082,6 @@
       "image": "https://www.acad-ciencias.pt/wp-content/uploads/2026/06/6aa120dd-aa48-c8eb-e780-4978d0259945.png"
     },
     {
-      "id": "e50f10795501",
-      "title": "Lisbon’s #1 Sunset Boat Party with Live DJ and Night Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "Cais Rocha Conde de Óbidos",
-      "source_id": "xceed",
-      "neighbourhood": "Estrela",
-      "zone": "city",
-      "lat": 38.7031518,
-      "lng": -9.1623508,
-      "start": "2026-06-27T19:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 45.0,
-        "currency": "EUR",
-        "text": "€45"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-44/206601",
-      "source": "xceed",
-      "description": "Lisbon Boat Party is an open air event during sunset cruising the Tagus river - the most unique experience in Lisbon! What’s Included: 🥂 1 welcome drink + 1 long drink included 💃🏼 4 hours of live residential DJs 🎟️ Club entry afterparty to one of the top clubs in Lisbon LISBON BO.",
-      "image": "https://images.xceed.me/events/banners/lisbons-1-sunset-boat-party-with-live-dj-and-night-club-entry-44-lisboa-xceed-9ae1.png?w=1920&h=1080&ar=16:9&fm=auto",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "48ed39ece7d5",
       "title": "40 Anos de Memórias",
       "topic": "performance",
@@ -33621,44 +32114,6 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/105599/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "e1a85fcb7b4c",
-      "title": "Lisbon Boat Party",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "Lisbon Boat Party",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-27T19:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2282123",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/e288979c496b63ff9bba2e1e71575d22fa172b09.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -33776,7 +32231,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -33992,43 +32447,6 @@
       "image": "https://static.xx.fbcdn.net/images/emoji.php/v9/t2d/1/16/1f4cd.png"
     },
     {
-      "id": "cac4cd245d75",
-      "title": "Es Tr3s Irms",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "São Luiz Teatro Municipal",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.7089341,
-      "lng": -9.1424961,
-      "start": "2026-06-27T20:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 12.0,
-        "currency": "EUR",
-        "text": "€12–15"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/es-tr3s-irms/",
-      "source": "agendalx",
-      "description": "Uma leitura pós-contemporânea e multidisciplinar do clássico de Tchekhov” é como a artista muldisciplinar Tita Maravilha apresenta Es Tr3s Irms , projeto vencedor da quinta edição d...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/es-tr3s-irms-filipe-ferreira.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "b43204d9535c",
       "title": "Chiado Comedy Club – Humor Negro",
       "topic": "nightlife",
@@ -34178,7 +32596,7 @@
       "categories": [
         1
       ],
-      "venue": "LAV – Lisboa ao Vivo",
+      "venue": "Lav - Lisboa Ao Vivo",
       "source_id": "ticketline",
       "neighbourhood": "Marvila",
       "zone": "city",
@@ -34395,7 +32813,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinemateca",
+      "venue": "Cinemateca Portuguesa - Museu do Cinema",
       "source_id": "bol",
       "neighbourhood": "Príncipe Real",
       "zone": "city",
@@ -34649,7 +33067,7 @@
       "categories": [
         1
       ],
-      "venue": "Galeria Zé dos Bois",
+      "venue": "Livraria Zé dos Bois",
       "source_id": "bol",
       "neighbourhood": "Bairro Alto",
       "zone": "city",
@@ -34675,82 +33093,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154224.png?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "ea1dad2668b1",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-27T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2461527",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/1f2945921412b434d4a44a292cbbbbc8fb309b74.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "acbfc8624527",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-27T22:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-546/225334",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
@@ -35449,191 +33791,6 @@
       "prov": null
     },
     {
-      "id": "438d2e46b68b",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-28T10:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-28/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "98b5bc432fea",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-28T10:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-28/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "23095128ae8e",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-28T10:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-28/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "ca90f8d27865",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-28T10:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-28/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "5cf987f012b1",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-28T10:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-28/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "1962ba4c7dbb",
       "title": "Facilitator Foundations Workshop",
       "topic": "workshops",
@@ -36039,7 +34196,7 @@
       "categories": [
         1
       ],
-      "venue": "ML - Palácio Pimenta",
+      "venue": "Museu de Lisboa - Palácio Pimenta",
       "source_id": "bol",
       "neighbourhood": "Alvalade",
       "zone": "city",
@@ -36665,43 +34822,6 @@
       "prov": null
     },
     {
-      "id": "3d5574cf5c2b",
-      "title": "Es Tr3s Irms",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "São Luiz Teatro Municipal",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.7089341,
-      "lng": -9.1424961,
-      "start": "2026-06-28T20:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 12.0,
-        "currency": "EUR",
-        "text": "€12–15"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/es-tr3s-irms/",
-      "source": "agendalx",
-      "description": "Uma leitura pós-contemporânea e multidisciplinar do clássico de Tchekhov” é como a artista muldisciplinar Tita Maravilha apresenta Es Tr3s Irms , projeto vencedor da quinta edição d...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/es-tr3s-irms-filipe-ferreira.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "d8ec12a79b66",
       "title": "Oliveira",
       "topic": "music",
@@ -36808,81 +34928,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154483.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "fc4a9dd396d5",
-      "title": "Pub Crawl",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "TBA",
-      "source_id": "ra",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-28T22:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt",
-        "en"
-      ],
-      "url": "https://ra.co/events/2461533",
-      "source": "ra",
-      "description": "",
-      "image": "https://images.ra.co/bb4246e074c4b44ad4b5616a75fbbbcb55c1a3c7.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "db30dfcaf451",
-      "title": "Lisbon: Pub Crawl with Open Bar, Shots, & VIP Club Entry",
-      "topic": "nightlife",
-      "categories": [
-        3
-      ],
-      "venue": "The Lisbon Pub Crawl - Discover Lisbon",
-      "source_id": "xceed",
-      "neighbourhood": "Bairro Alto",
-      "zone": "city",
-      "lat": 38.7125568,
-      "lng": -9.1449706,
-      "start": "2026-06-28T22:00",
-      "end": "2026-06-29",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-547/225335",
-      "source": "xceed",
-      "description": "Discover Lisbon after the sun sets and watch the city transforming into a field of music and lively parties through this pub crawl.Save time researching and get the inside scoop on Lisbon’s nightlife during a pub crawl that provides a fun way for solo travelers to meet others.Wha.",
-      "image": "https://images.xceed.me/events/banners/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-lisboa-xceed-aeb0.jpg?w=1920&h=1080&ar=16:9&fm=auto",
       "lineup": null,
       "links": null,
       "prov": null
