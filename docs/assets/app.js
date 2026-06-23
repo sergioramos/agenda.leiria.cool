@@ -11,7 +11,7 @@ const state = {
   topicById: {},
   week: null,
   ticker: { text: '', accent: false },
-  filters: { q: '', topics: new Set(), days: new Set(), free: false },
+  filters: { q: '', topics: new Set(), days: new Set(), free: false, hideOngoing: false },
 };
 
 /* ---------- announcement-bar ticker (Figma 19:2073 — 1:1) ---------- */
@@ -65,6 +65,7 @@ function matches(ev) {
   const f = state.filters;
   if (f.topics.size && !f.topics.has(ev.topic)) return false;
   if (f.free && !(ev.price && ev.price.is_free)) return false;
+  if (f.hideOngoing && ev.ongoing) return false;
   if (f.days.size && !(ev.days || []).some(d => f.days.has(d))) return false;
   if (f.q) {
     // build the search haystack once per event and cache it — rebuilding it for
@@ -356,6 +357,7 @@ function renderActiveFilterNote() {
   if (f.topics.size) bits.push(`${f.topics.size} tema${f.topics.size > 1 ? 's' : ''}`);
   if (f.days.size) bits.push(`${f.days.size} dia${f.days.size > 1 ? 's' : ''}`);
   if (f.free) bits.push('só grátis');
+  if (f.hideOngoing) bits.push('sem em curso');
   if (f.q) bits.push(`“${f.q}”`);
   $('#active-filters').textContent = bits.length ? `· filtrado por ${bits.join(', ')}` : '';
 }
@@ -370,6 +372,7 @@ function refreshChipStates() {
   });
   $$('#day-chips .chip').forEach((c, i) => c.setAttribute('aria-pressed', state.filters.days.has(DAYS[i])));
   $$('#price-chips .chip').forEach(b => b.setAttribute('aria-pressed', (b.dataset.price === 'free') === state.filters.free));
+  $$('#ongoing-chips .chip').forEach(b => b.setAttribute('aria-pressed', (b.dataset.ongoing === 'hide') === state.filters.hideOngoing));
 }
 
 function toggleSet(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
@@ -384,6 +387,7 @@ function syncHash() {
   if (f.topics.size) p.set('t', [...f.topics].join(','));
   if (f.days.size) p.set('d', [...f.days].join(','));
   if (f.free) p.set('free', '1');
+  if (f.hideOngoing) p.set('nc', '1');
   const s = p.toString();
   history.replaceState(null, '', s ? '#' + s : location.pathname);
 }
@@ -394,6 +398,7 @@ function loadHash() {
   f.topics = new Set((p.get('t') || '').split(',').filter(Boolean));
   f.days = new Set((p.get('d') || '').split(',').filter(Boolean));
   f.free = p.get('free') === '1';
+  f.hideOngoing = p.get('nc') === '1';
   if (f.q) $('#search').value = f.q;
 }
 
@@ -464,8 +469,9 @@ async function init() {
     const sign = $('#filt-sign'); if (sign) sign.textContent = open ? '−' : '+';
   };
   $$('#price-chips .chip').forEach(b => b.onclick = () => { state.filters.free = b.dataset.price === 'free'; render(); });
+  $$('#ongoing-chips .chip').forEach(b => b.onclick = () => { state.filters.hideOngoing = b.dataset.ongoing === 'hide'; render(); });
   $('#empty-clear').onclick = () => {
-    state.filters = { q: '', topics: new Set(), days: new Set(), free: false };
+    state.filters = { q: '', topics: new Set(), days: new Set(), free: false, hideOngoing: false };
     $('#search').value = '';
     renderTopicChips(); render();
   };
