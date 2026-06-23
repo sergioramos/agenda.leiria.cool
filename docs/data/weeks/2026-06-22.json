@@ -4,7 +4,7 @@
   "generated_at": "2026-06-22T11:14:02Z",
   "is_sample": false,
   "source_count": 540,
-  "event_count": 840,
+  "event_count": 827,
   "meta": {
     "sources_tried": 513,
     "ai_calls": 427,
@@ -713,46 +713,6 @@
       "image": "https://fasvs.pt/wp-content/uploads/2026/01/ViewImage.jpg"
     },
     {
-      "id": "ecc633e4c2ae",
-      "title": "Clube de Leitura do Teatro Variedades",
-      "topic": "learning",
-      "categories": [
-        6
-      ],
-      "venue": "Capitólio",
-      "source_id": "cinecapitolio-rooftop",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "start": "2026-01-19",
-      "end": "2026-12-14",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://teatrovariedades-capitolio.pt/evento/clube-de-leitura-do-teatro-variedades/",
-      "source": "generic",
-      "description": "Encontros para discutir livros selecionados, promovendo o gosto pela leitura.",
-      "image": "https://teatrovariedades-capitolio.pt/wp-content/uploads/2025/12/EstelleValente-6708-scaled.jpg",
-      "lat": 38.718971,
-      "lng": -9.146289
-    },
-    {
       "id": "bcfec6e4b0b7",
       "title": "Turn around. A look at the EDP Foundation Art Collection",
       "topic": "art",
@@ -790,8 +750,8 @@
       "source": "generic",
       "description": "The exhibition represents the largest presentation of the Fundação EDP Art Collection to date, bringing together around 90 works by 58 Portuguese artists, spanning from the 1960s to the present. On view until January 2027 at MAAT Central.",
       "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzkxODIsInB1ciI6ImJsb2JfaWQifX0=--98d05a911b39c185c0f299a112b76c3f722691d9/visit-lisboa-TURN%20AROUND_VL.jpg",
-      "lat": 38.695911,
-      "lng": -9.195691
+      "lat": 38.69591,
+      "lng": -9.19569
     },
     {
       "id": "fcbbef6c6d99",
@@ -912,45 +872,6 @@
       "source": "generic",
       "description": "Gravações de leituras para crianças e jovens com baixa visão ou cegas.",
       "image": "https://blx.cm-lisboa.pt/wp-content/uploads/2026/02/palavras_que_abracam_site.jpg"
-    },
-    {
-      "id": "8db84043f7e7",
-      "title": "Um Silabário por Reconstruir IV",
-      "topic": "art",
-      "categories": [
-        7,
-        11
-      ],
-      "venue": "Culturgest (auditoriums)",
-      "source_id": "culturgest-auditoriums",
-      "neighbourhood": "Avenidas Novas",
-      "zone": "city",
-      "start": "2026-03-07",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://culturgest.pt/pt/programacao/um-silabario-por-reconstruir-iv/",
-      "source": "generic",
-      "description": "Exposição que explora a relação entre imagem e texto, parte de um projeto contínuo.",
-      "image": "https://www.culturgest.pt/media/filer_public_thumbnails/filer_public/8f/87/8f872547-c6c7-4e87-9f5a-9e578a3d4f64/cred_renato-cruz-santos_culturgest-silabario-iv-3293.jpg__1200x630_q85_crop_subsampling-2_upscale.jpg"
     },
     {
       "id": "51fa603d545c",
@@ -1189,8 +1110,12 @@
       "source": "generic",
       "description": "The Italian-Brazilian artist Anna Maria Maiolino presents, at the MAAT Gallery, a selection of drawings and photographs from the 1970s and 1980s, alongside a dozen clay sculptures, modelled on site—the largest she has ever produced-which will occupy the spacious oval room.",
       "image": "https://visitlisboa.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzkxODEsInB1ciI6ImJsb2JfaWQifX0=--3a9d7c548a61ba57ee494014b524f569055d0369/visit-lisboa-TERRA%20PO%C3%89TICA%20-%20MAIOLINO_VL.jpg",
-      "lat": 38.695911,
-      "lng": -9.195691
+      "lat": 38.69591,
+      "lng": -9.19569,
+      "links": [
+        "https://www.agendalx.pt/events/event/anna-maria-maiolino/",
+        "https://www.agendalx.pt/events/event/anna-maria-maiolino-2/"
+      ]
     },
     {
       "id": "b28bdc5442e2",
@@ -1805,44 +1730,6 @@
       "source": "generic",
       "description": "Galeria Foco apresenta 'Todas as coisas que nos fazem', uma exposição individual de Hugo Cantegrel que explora a memória e a estranheza através de objetos, fotografias, vídeos e instalações de néon.",
       "image": "https://galeriafoco.com/wp-content/uploads/01-1.jpg"
-    },
-    {
-      "id": "9906091572ef",
-      "title": "João Bragança Gil: To Whom it May Concern",
-      "topic": "art",
-      "categories": [
-        8
-      ],
-      "venue": "Carpintarias de São Lázaro",
-      "source_id": "carpintarias-de-sao-lazaro",
-      "neighbourhood": "Intendente",
-      "zone": "city",
-      "start": "2026-05-15",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://carpintariasdesaolazaro.pt",
-      "source": "generic",
-      "description": "Exposição individual do artista, aberta de quinta a domingo, das 12h00 às 18h00.",
-      "image": "https://static.wixstatic.com/media/392090_2c2efd21b1784c45add1fd121381efa4~mv2.jpg/v1/fill/w_2500,h_1666,al_c/392090_2c2efd21b1784c45add1fd121381efa4~mv2.jpg"
     },
     {
       "id": "cb06c6009d35",
@@ -2769,8 +2656,17 @@
       ],
       "url": "https://medeiafilmes.com/ciclos/ciclo-cinema-novo-brasileiro-trajectorias",
       "source": "generic",
-      "description": "Ciclo dedicado ao Cinema Novo Brasileiro, com obras representativas do movimento.",
-      "image": null
+      "description": "No Brasil, no decurso dos anos 1960, nasce o movimento mais brilhante, voluntarista e discutido da América latina: o “Cinema Novo”. Uma geração de cinéfilos urbanos herdava subitamente um c...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/deus.jpg",
+      "links": [
+        "https://www.agendalx.pt/events/event/cinema-novo-brasileiro-trajectorias/"
+      ],
+      "prov": {
+        "description": "agendalx",
+        "image": "agendalx"
+      },
+      "lat": 38.735721,
+      "lng": -9.147266
     },
     {
       "id": "e045c39217d1",
@@ -3122,8 +3018,17 @@
       ],
       "url": "https://medeiafilmes.com/ciclos/ciclo-lembra-se-de-sidney-lumet",
       "source": "generic",
-      "description": "Ciclo de cinema dedicado a Sidney Lumet, com exibição de quatro dos seus maiores filmes: 'Doze Homens em Fúria', 'O Veredicto', 'Um Dia de Cão' e 'O Dossier Anderson'.",
-      "image": null
+      "description": "Truffaut escreveu sobre o primeiro filme de Lumet, 12 Angry Men, e, por entre os variados elogios, dizia que “se deveria prestar atenção a este cineasta”. A sua obra soube ler com...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/al-pacino-and-sidney-lumet-on-dog-day-afternoon-retro-movie-posters.jpg",
+      "links": [
+        "https://www.agendalx.pt/events/event/lembra-se-de-sidney-lumet/"
+      ],
+      "prov": {
+        "description": "agendalx",
+        "image": "agendalx"
+      },
+      "lat": 38.735721,
+      "lng": -9.147266
     },
     {
       "id": "8f7635923118",
@@ -4843,8 +4748,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
+      "lat": 38.75771,
+      "lng": -9.18533,
       "start": "2026-06-22",
       "end": "2026-06-28",
       "all_day": true,
@@ -4886,8 +4791,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
+      "lat": 38.75771,
+      "lng": -9.18533,
       "start": "2026-06-22",
       "end": "2026-06-28",
       "all_day": true,
@@ -5228,8 +5133,8 @@
       ],
       "venue": "Carpintarias de São Lázaro",
       "source_id": "agendalx",
-      "neighbourhood": null,
-      "zone": null,
+      "neighbourhood": "Intendente",
+      "zone": "city",
       "lat": null,
       "lng": null,
       "start": "2026-06-22",
@@ -6370,89 +6275,6 @@
       "prov": null
     },
     {
-      "id": "191245aad09f",
-      "title": "Cinema Novo Brasileiro: Trajectórias",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Cinema Medeia Nimas",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.735721,
-      "lng": -9.147266,
-      "start": "2026-06-22",
-      "end": "2026-06-27",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/cinema-novo-brasileiro-trajectorias/",
-      "source": "agendalx",
-      "description": "No Brasil, no decurso dos anos 1960, nasce o movimento mais brilhante, voluntarista e discutido da América latina: o “Cinema Novo”. Uma geração de cinéfilos urbanos herdava subitamente um c...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/deus.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "954d3517c9d1",
-      "title": "Lembra-se de… ? Sidney Lumet",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Cinema Medeia Nimas",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.735721,
-      "lng": -9.147266,
-      "start": "2026-06-22",
-      "end": "2026-06-26",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/lembra-se-de-sidney-lumet/",
-      "source": "agendalx",
-      "description": "Truffaut escreveu sobre o primeiro filme de Lumet, 12 Angry Men, e, por entre os variados elogios, dizia que “se deveria prestar atenção a este cineasta”. A sua obra soube ler com...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/al-pacino-and-sidney-lumet-on-dog-day-afternoon-retro-movie-posters.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "58d1da9e23bb",
       "title": "Revisitar os grandes géneros: O Musical [1]",
       "topic": "film",
@@ -6534,47 +6356,6 @@
       "source": "agendalx",
       "description": "A década de 1940 e, em particular, os anos da Segunda Guerra Mundial, correspondem ao período de maior afluxo às salas de cinema na história do Reino Unido. Talvez tenha sido uma forma de esca...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/simon-and-laura.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "29abc123830b",
-      "title": "Viagem ao fim do mudo",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Cinemateca Portuguesa - Museu do Cinema",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.720877,
-      "lng": -9.148759,
-      "start": "2026-06-22",
-      "end": "2026-06-26",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/viagem-ao-fim-do-mudo-9/",
-      "source": "agendalx",
-      "description": "Este mês voltamos dois centros cruciais da produção muda de cinema. A Alemanha, representada por um dos filmes mais acrobáticos (não é metáfora, é a maneira fiel de descrever o trabalho da...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/kentucky.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -9153,8 +8934,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
-      "lat": 38.735405,
-      "lng": -9.154091,
+      "lat": 38.7380413,
+      "lng": -9.1550827,
       "start": "2026-06-22",
       "end": "2026-07-27",
       "all_day": true,
@@ -9196,8 +8977,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
-      "lat": 38.735405,
-      "lng": -9.154091,
+      "lat": 38.7380413,
+      "lng": -9.1550827,
       "start": "2026-06-22",
       "end": "2027-09-20",
       "all_day": true,
@@ -9239,8 +9020,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
-      "lat": 38.735405,
-      "lng": -9.154091,
+      "lat": 38.7380413,
+      "lng": -9.1550827,
       "start": "2026-06-22",
       "end": "2026-09-28",
       "all_day": true,
@@ -11287,8 +11068,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2026-12-19",
       "all_day": true,
@@ -11373,8 +11154,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2026-12-31",
       "all_day": true,
@@ -11416,8 +11197,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2026-10-05",
       "all_day": true,
@@ -11449,51 +11230,6 @@
       "prov": null
     },
     {
-      "id": "e595ada6ae9e",
-      "title": "Anna Maria Maiolino",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
-      "start": "2026-06-22",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/anna-maria-maiolino/",
-      "source": "agendalx",
-      "description": "Anna Maria Maiolino, nascida em Itália, em 1942, é uma artista brasileira, país em que reside desde a década de 1960, após ter vivido e estudado na Venezuela. O seu trabalho integra a reação à...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/02/Imagem1-20.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/anna-maria-maiolino-2/"
-      ],
-      "prov": null
-    },
-    {
       "id": "c9bd1c2c3f93",
       "title": "Manuel João Vieira",
       "topic": "art",
@@ -11504,8 +11240,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2026-09-07",
       "all_day": true,
@@ -11547,8 +11283,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2027-01-25",
       "all_day": true,
@@ -11590,8 +11326,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2026-09-21",
       "all_day": true,
@@ -11674,7 +11410,7 @@
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
-      "lat": 38.700497,
+      "lat": 38.7005,
       "lng": -9.18314,
       "start": "2026-06-22",
       "end": "2026-10-26",
@@ -12646,49 +12382,6 @@
       "prov": null
     },
     {
-      "id": "b4ddd97a7df4",
-      "title": "Meu Querido Santo António",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Museu de Lisboa - Santo António",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.710197,
-      "lng": -9.134029,
-      "start": "2026-06-22",
-      "end": "2026-09-20",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 4.0,
-        "currency": "EUR",
-        "text": "€4"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/meu-querido-santo-antonio/",
-      "source": "agendalx",
-      "description": "Dedicada a coleções privadas de Santo António, esta exposição propõe um olhar sobre a presença e a multiplicidade da imagem do Santo, a partir das escolhas feitas por cole...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/02-JUN_Meu-Querido-Santo-Antonio-2048x1365-1.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "7ed162db7dbf",
       "title": "Uma cidade com 2000 anos",
       "topic": "tours",
@@ -13168,8 +12861,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Parque das Nações",
       "zone": "city",
-      "lat": 38.789449,
-      "lng": -9.093976,
+      "lat": 38.7918,
+      "lng": -9.09279,
       "start": "2026-06-22",
       "end": "2026-06-28",
       "all_day": true,
@@ -13369,7 +13062,9 @@
       "description": "Designing Sustainable Futures é uma exposição que o Pavilhão de Portugal no Parque das Nações vai acolher entre 21 de março e 31 de julho, e que se destina a mostrar a forma como o des...",
       "image": "https://www.agendalx.pt/content/uploads/2026/02/Designing-Sustainable-Future.png",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://www.ticketline.pt/evento/exposicao-designing-sustainable-futures-103038"
+      ],
       "prov": null
     },
     {
@@ -16034,8 +15729,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22T16:00",
       "end": "2026-12-06",
       "all_day": false,
@@ -16344,7 +16039,9 @@
       "description": "E se, num dia igual a todos os outros, alguém entrasse pela janela… e mudasse tudo? No coração de um velho orfanato onde as regras da implacável Diretora Crumble falam mais alto do que os sonhos...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/Sem-Titulo.png",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://www.ticketline.pt/evento/o-fantastico-sr-wolk-o-musical-102718"
+      ],
       "prov": null
     },
     {
@@ -16707,7 +16404,7 @@
       "lat": 38.718905,
       "lng": -9.146481,
       "start": "2026-06-22T18:30",
-      "end": "2026-08-17",
+      "end": "2026-12-14",
       "all_day": false,
       "ongoing": true,
       "days": [
@@ -16733,7 +16430,9 @@
       "description": "Neste Clube de Leitura, os encontros são dedicados ao teatro: desde sessões sobre autores, à leitura de peças de teatro, adaptações, críticas e, também, encontros especiais com artistas. O o...",
       "image": "https://www.agendalx.pt/content/uploads/2025/12/Teatro-Variedades.jpg",
       "lineup": null,
-      "links": null,
+      "links": [
+        "https://teatrovariedades-capitolio.pt/evento/clube-de-leitura-do-teatro-variedades/"
+      ],
       "prov": null
     },
     {
@@ -17166,8 +16865,12 @@
       "description": "Depois de ter feito \"à volta de 250 mil shows \", Bianca é despedida do peep show do bairro de Pigalle, em Paris, onde trabalha há 32 anos. A partir do seu camarim, a stripp...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/alovesupreme2026-e1779458010978.jpg",
       "lineup": null,
-      "links": null,
-      "prov": null
+      "links": [
+        "https://www.bol.pt/Comprar/Bilhetes/178876-a_love_supreme_de_xavier_durringer-teatro_paulo_claro/"
+      ],
+      "prov": {
+        "price": "bol"
+      }
     },
     {
       "id": "29e481035bb5",
@@ -17252,8 +16955,12 @@
       "description": "Pode um filme em progresso ser uma performance? Joana Craveiro parte de um conjunto de imagens que captou na Palestina para ensaiar uma resposta a esta pergunta. O registo de duas via...",
       "image": "https://www.agendalx.pt/content/uploads/2026/03/exercicio-de-montagem.jpg",
       "lineup": null,
-      "links": null,
-      "prov": null
+      "links": [
+        "https://www.bol.pt/Comprar/Bilhetes/164864-exercicio_de_montagem_teatro_do_vestido-ccb/"
+      ],
+      "prov": {
+        "price": "bol"
+      }
     },
     {
       "id": "f4db8bfb6da7",
@@ -17351,8 +17058,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
+      "lat": 38.75771,
+      "lng": -9.18533,
       "start": "2026-06-22T21:00",
       "end": "2026-06-28",
       "all_day": false,
@@ -18015,8 +17722,8 @@
       "source_id": "bol",
       "neighbourhood": "Alcântara",
       "zone": "city",
-      "lat": 38.700449,
-      "lng": -9.1833449,
+      "lat": 38.7005,
+      "lng": -9.18314,
       "start": "2026-06-22T23:59",
       "end": "2026-06-22",
       "all_day": false,
@@ -18385,43 +18092,6 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/102965/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "71948da50b4c",
-      "title": "Exposição Designing Sustainable Futures",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Pavilhão de Portugal",
-      "source_id": "ticketline",
-      "neighbourhood": "Parque das Nações",
-      "zone": "city",
-      "lat": 38.766186,
-      "lng": -9.095035,
-      "start": "2026-06-23",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ticketline.pt/evento/exposicao-designing-sustainable-futures-103038",
-      "source": "ticketline",
-      "description": "",
-      "image": "https://info.ticketline.pt/images/Espectaculos/103038/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
       "prov": null
@@ -18879,8 +18549,8 @@
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695638371041,
-      "lng": -9.209316372871,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-23T10:00",
       "end": "2026-12-31",
       "all_day": false,
@@ -19449,6 +19119,52 @@
       "prov": null
     },
     {
+      "id": "c57e42def925",
+      "title": "Meu Querido Santo António.imagens Coleções Particulares-Exp Temporária",
+      "topic": "art",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Lisboa - Santo António",
+      "source_id": "bol",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.710078,
+      "lng": -9.13388513,
+      "start": "2026-06-23T10:00",
+      "end": "2026-09-20",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 4.0,
+        "currency": "EUR",
+        "text": "€4"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.bol.pt/Comprar/Bilhetes/178970-meu_querido_santo_antonio_imagens_colecoes_particulares_exp_temporaria-ml_santo_antonio/",
+      "source": "bol",
+      "description": "Dedicada a coleções privadas de Santo António, esta exposição propõe um olhar sobre a presença e a multiplicidade da imagem do Santo, a partir das escolhas feitas por cole...",
+      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153689.jpg?v=2",
+      "lineup": null,
+      "links": [
+        "https://www.agendalx.pt/events/event/meu-querido-santo-antonio/"
+      ],
+      "prov": {
+        "description": "agendalx"
+      }
+    },
+    {
       "id": "996d43ebc5a1",
       "title": "Museu de Lisboa - Santo António",
       "topic": "art",
@@ -19486,48 +19202,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz136558.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "c57e42def925",
-      "title": "Meu Querido Santo António.imagens Coleções Particulares-Exp Temporária",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Museu de Lisboa - Santo António",
-      "source_id": "bol",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.710078,
-      "lng": -9.13388513,
-      "start": "2026-06-23T10:00",
-      "end": "2026-09-20",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 4.0,
-        "currency": "EUR",
-        "text": "€4"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178970-meu_querido_santo_antonio_imagens_colecoes_particulares_exp_temporaria-ml_santo_antonio/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153689.jpg?v=2",
       "lineup": null,
       "links": null,
       "prov": null
@@ -20192,8 +19866,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
+      "lat": 38.75771,
+      "lng": -9.18533,
       "start": "2026-06-23T18:30",
       "end": "2026-06-23",
       "all_day": false,
@@ -20505,48 +20179,6 @@
       "prov": null
     },
     {
-      "id": "86676de3f55b",
-      "title": "A LOVE SUPREME de Xavier Durringer",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro Paulo Claro",
-      "source_id": "bol",
-      "neighbourhood": "Marvila",
-      "zone": "city",
-      "lat": 38.741916949514,
-      "lng": -9.101931452751,
-      "start": "2026-06-23T19:30",
-      "end": "2026-07-11",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 12.0,
-        "currency": "EUR",
-        "text": "€12"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178876-a_love_supreme_de_xavier_durringer-teatro_paulo_claro/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153618.jpg?v=2",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "9bf774f9422c",
       "title": "A Taste of Lisbon: Wine Tasting Experience",
       "topic": "food",
@@ -20673,7 +20305,7 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
+      "lat": 38.75771,
       "lng": -9.18533,
       "start": "2026-06-23T21:00",
       "end": "2026-06-30",
@@ -22233,8 +21865,8 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.7188762,
-      "lng": -9.146637,
+      "lat": 38.718971,
+      "lng": -9.146289,
       "start": "2026-06-24T21:30",
       "end": "2026-06-24",
       "all_day": false,
@@ -24261,46 +23893,6 @@
       "prov": null
     },
     {
-      "id": "8f2f0639da69",
-      "title": "Exercício de Montagem – Teatro do Vestido",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "bol",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.695638371041,
-      "lng": -9.209316372871,
-      "start": "2026-06-25T20:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 12.0,
-        "currency": "EUR",
-        "text": "€12"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/164864-exercicio_de_montagem_teatro_do_vestido-ccb/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz139034.jpg?v=5",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "a35da0674a6f",
       "title": "Jovens Talentos - Hot Clube > Carolina Estrela Trio",
       "topic": "music",
@@ -24383,8 +23975,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
+      "lat": 38.75771,
+      "lng": -9.18533,
       "start": "2026-06-25T21:00",
       "end": "2026-07-04",
       "all_day": false,
@@ -24427,7 +24019,7 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
+      "lat": 38.75771,
       "lng": -9.18533,
       "start": "2026-06-25T21:00",
       "end": "2026-06-27",
@@ -24616,8 +24208,8 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.7188762,
-      "lng": -9.146637,
+      "lat": 38.718971,
+      "lng": -9.146289,
       "start": "2026-06-25T21:30",
       "end": "2026-06-25",
       "all_day": false,
@@ -25434,7 +25026,7 @@
       "source_id": "ticketline",
       "neighbourhood": "Alcântara",
       "zone": "city",
-      "lat": 38.700497,
+      "lat": 38.7005,
       "lng": -9.18314,
       "start": "2026-06-26",
       "end": null,
@@ -26600,11 +26192,15 @@
       ],
       "url": "https://www.bol.pt/Comprar/Bilhetes/179179-viagem_ao_fim_do_mudo_a_woman_of_paris-cinemateca/",
       "source": "bol",
-      "description": "",
+      "description": "Este mês voltamos dois centros cruciais da produção muda de cinema. A Alemanha, representada por um dos filmes mais acrobáticos (não é metáfora, é a maneira fiel de descrever o trabalho da...",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153864.jpg?v=1",
       "lineup": null,
-      "links": null,
-      "prov": null
+      "links": [
+        "https://www.agendalx.pt/events/event/viagem-ao-fim-do-mudo-9/"
+      ],
+      "prov": {
+        "description": "agendalx"
+      }
     },
     {
       "id": "65414a99e074",
@@ -27215,8 +26811,8 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.7188762,
-      "lng": -9.146637,
+      "lat": 38.718971,
+      "lng": -9.146289,
       "start": "2026-06-26T21:30",
       "end": "2026-06-26",
       "all_day": false,
@@ -27368,7 +26964,7 @@
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
-      "lat": 38.700497,
+      "lat": 38.7005,
       "lng": -9.18314,
       "start": "2026-06-26T21:30",
       "end": "2026-06-26",
@@ -27979,43 +27575,6 @@
       "prov": null
     },
     {
-      "id": "1c786463b458",
-      "title": "O Fantástico Sr. Wolk – O Musical",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Academia de Santo Amaro",
-      "source_id": "ticketline",
-      "neighbourhood": "Alcântara",
-      "zone": "city",
-      "lat": 38.701488,
-      "lng": -9.183577,
-      "start": "2026-06-27",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ticketline.pt/evento/o-fantastico-sr-wolk-o-musical-102718",
-      "source": "ticketline",
-      "description": "",
-      "image": "https://info.ticketline.pt/images/Espectaculos/102718/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "08d839aecaec",
       "title": "Mamma Mia",
       "topic": "film",
@@ -28135,11 +27694,12 @@
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
       "start": "2026-06-27",
-      "end": null,
+      "end": "2026-06-28",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "sat"
+        "sat",
+        "sun"
       ],
       "price": {
         "is_free": false,
@@ -28153,7 +27713,10 @@
       "url": "https://culturgest.pt/pt/programacao/um-silabario-por-reconstruir-iv-grafias-sonoras-composicoes-contemporaneos/",
       "source": "generic",
       "description": "Sessão de composições contemporâneas integrada na exposição 'Um Silabário por Reconstruir IV'.",
-      "image": "https://www.culturgest.pt/media/filer_public_thumbnails/filer_public/8f/39/8f390587-0cc0-4eb1-9d41-ffecaf707caa/cred_renato-cruz-santos_culturgest-silabario-iv-2988.jpg__1200x630_q85_crop_subsampling-2_upscale.jpg"
+      "image": "https://www.culturgest.pt/media/filer_public_thumbnails/filer_public/8f/39/8f390587-0cc0-4eb1-9d41-ffecaf707caa/cred_renato-cruz-santos_culturgest-silabario-iv-2988.jpg__1200x630_q85_crop_subsampling-2_upscale.jpg",
+      "links": [
+        "https://culturgest.pt/pt/programacao/um-silabario-por-reconstruir-iv/"
+      ]
     },
     {
       "id": "a39d68992e35",
@@ -28309,7 +27872,7 @@
       "source_id": "ticketline",
       "neighbourhood": "Alcântara",
       "zone": "city",
-      "lat": 38.700497,
+      "lat": 38.7005,
       "lng": -9.18314,
       "start": "2026-06-27",
       "end": null,
@@ -28469,43 +28032,6 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/98084/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "7e5497692908",
-      "title": "Nos bastidores da renovação",
-      "topic": "tours",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro Nacional D. Maria II",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.713719,
-      "lng": -9.139681,
-      "start": "2026-06-27",
-      "end": "2026-06-27",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/nos-bastidores-da-renovacao/",
-      "source": "agendalx",
-      "description": "Uma visita guiada ao Teatro Nacional D. Maria II, a partir do olhar de decisores no projeto de requalificação do edifício, proporcionando uma imersão no processo de transformação do espaço. F...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/nos_bastidores_da_renova.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -31178,8 +30704,8 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.7188762,
-      "lng": -9.146637,
+      "lat": 38.718971,
+      "lng": -9.146289,
       "start": "2026-06-27T21:30",
       "end": "2026-06-27",
       "all_day": false,
@@ -32093,8 +31619,8 @@
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
+      "lat": 38.75771,
+      "lng": -9.18533,
       "start": "2026-06-28T10:00",
       "end": "2026-06-28",
       "all_day": false,
@@ -32273,8 +31799,8 @@
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695638371041,
-      "lng": -9.209316372871,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-28T11:00",
       "end": "2026-06-28",
       "all_day": false,
@@ -33093,7 +32619,7 @@
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
+      "lat": 38.75771,
       "lng": -9.18533,
       "start": "2026-06-28T21:00",
       "end": "2026-06-28",
