@@ -25,6 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
+import browser_fetch
 
 def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
                   venues_idx=None, venues_geo=None):
@@ -69,7 +70,12 @@ def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
                 fetched += 1
                 got = core.fetch(session, u, cfg)
                 ok = got and got[0] < 400 and "html" in (got[1] or "")
-                cache[u] = core.scrape_event_page(got[2], u, default_img) if ok else {}
+                html = got[2] if ok else None
+                # Cloudflare/JS hosts (Tickettailor) 403 the bot — render in a real
+                # browser so their poster (og:image) is still recoverable.
+                if not html and browser_fetch.needs_browser(u, cfg):
+                    html = browser_fetch.fetch_html(u, cfg)
+                cache[u] = core.scrape_event_page(html, u, default_img) if html else {}
                 time.sleep(delay / 2)
             info = cache[u]
         if not e.get("image") and info.get("image"):

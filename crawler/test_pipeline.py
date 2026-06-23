@@ -486,5 +486,11 @@ _k2, _c2, _s2 = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg,
 t('review skips overridden sig', len(_k2), 3)
 extract.json_call = _orig_jc
 
+# headless-browser fallback host matching (the fetch itself needs Chromium)
+import browser_fetch as _bf
+_bfcfg = {"crawl": {"browser_hosts": ["tickettailor.com"]}}
+t('needs_browser matches host', _bf.needs_browser('https://app.tickettailor.com/events/x/1', _bfcfg), True)
+t('needs_browser ignores others', _bf.needs_browser('https://www.agendalx.pt/e', _bfcfg), False)
+
 print(f'\n{ok} passed, {fail} failed')
 sys.exit(1 if fail else 0)

@@ -44,12 +44,21 @@ Where it runs every crawl:
 - HTML track → `crawl_events.enrich_events` (reads each event page + the listing
   for homepage-only URLs).
 
+**Cloudflare/JS hosts** (Tickettailor — Black Cat Cinema): the requests fetch 403s,
+so `enrich_events` falls back to a real headless browser (`browser_fetch.py`,
+Playwright) for hosts in `crawl.browser_hosts`, bounded by `browser_fetch_cap`.
+This is the one deliberate exception to requests-only — a browser is the only
+thing that clears Cloudflare's JS challenge without fragile TLS-impersonation. It
+needs Chromium in the crawl job (installed in crawl-events.yml) and degrades to
+"no image" if absent. Keep `browser_hosts` tight (it's slow). Not guaranteed
+forever — if Cloudflare escalates to an interactive challenge it would stop
+working, and the wall would show it drop back to 0%.
+
 ### Images that CANNOT be recovered (expected 0% on the wall)
 
 | Reason | Examples | Why |
 |---|---|---|
-| **Cloudflare** bot block (403) | Tickettailor — Black Cat Cinema (`app.tickettailor.com` *and* the `tickets.<venue>` white-label) | The image exists and a real browser sees it, but Cloudflare 403s any plain HTTP client regardless of headers. Our crawler is `requests`-based with no JS engine (deliberate: cheap, runs in CI). Reaching these needs a headless browser (Playwright — heavy/slow/flaky) or TLS-fingerprint evasion (an anti-bot arms race that breaks unpredictably). Both are out of scope by choice. |
-| Page returns **403** / no image field | Resident Advisor | RA's HTML 403s; its images come only from the GraphQL `FLYERFRONT`, which some events lack. |
+| Page returns **403** / no image field | Resident Advisor | RA's HTML 403s; its images come only from the GraphQL `FLYERFRONT`, which some events lack. RA isn't in `browser_hosts` (the images aren't on the HTML page anyway). |
 | **JS-only** listing (Wix/SPA) | Black Cat Cinema's own site | Event data/images are rendered client-side; the static HTML has neither. |
 | API/page carries no image | some AgendaLX/BOL rows | Source never published one. |
 | Page has only a **shared** banner/logo | underdogs, little-big-apple, … | The only image found is reused across the source's events, so `drop_shared_images` nulls it (better than the same wrong banner on every card). |
