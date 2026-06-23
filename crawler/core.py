@@ -532,6 +532,17 @@ def parse_jsonld_event(html: str) -> dict:
                 out["start"] = node["startDate"]
             if "description" not in out and isinstance(node.get("description"), str):
                 out["description"] = node["description"]
+            if "venue" not in out:
+                loc = node.get("location")
+                if isinstance(loc, list):
+                    loc = loc[0] if loc else None
+                vn = loc.get("name") if isinstance(loc, dict) else None
+                if isinstance(vn, list):
+                    vn = vn[0] if vn else None
+                if isinstance(vn, str):
+                    vn = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", vn)).strip()
+                    if vn:
+                        out["venue"] = vn
     return out
 
 
@@ -580,7 +591,28 @@ def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
             out["start_time"] = mt.group(1)
     if ld.get("description"):
         out["description"] = clean_description(ld["description"], "", "")
+    if ld.get("venue"):
+        out["venue"] = ld["venue"]
     return {k: v for k, v in out.items() if v}
+
+
+def canonical_venue(name: str, venues_geo: dict | None, venues_idx: dict | None) -> dict | None:
+    """Resolve a venue name to its canonical form via the venue directory (coords +
+    neighbourhood), then the seed list. Returns {venue, neighbourhood, zone, lat,
+    lng} — falling back to the given name when it matches nothing known, so a real
+    venue read off an event page still replaces a source-name placeholder. None for
+    an empty/junk name."""
+    if not name or looks_like_date(name):
+        return None
+    g = venue_geo(name, venues_geo or {})
+    if g:
+        return {"venue": g.get("name") or name, "neighbourhood": g.get("neighbourhood"),
+                "zone": g.get("zone"), "lat": g.get("lat"), "lng": g.get("lng")}
+    k = resolve_venue(name, venues_idx or {})
+    if k:
+        return {"venue": k.get("name") or name, "neighbourhood": k.get("neighbourhood"),
+                "zone": k.get("zone"), "lat": None, "lng": None}
+    return {"venue": name, "neighbourhood": None, "zone": None, "lat": None, "lng": None}
 
 
 # ---------- normalisation ----------

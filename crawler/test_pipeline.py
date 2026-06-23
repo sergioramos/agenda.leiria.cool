@@ -80,6 +80,18 @@ t('eb host swapped', core._canonical_img(
   'https://visitlisboa.com/rails/active_storage/blobs/redirect/AbC/p.jpg')
 t('normal host untouched', core._canonical_img('https://images.xceed.me/events/banners/x.jpg', 'https://xceed.me/e'),
   'https://images.xceed.me/events/banners/x.jpg')
+
+# venue recovery: read the real place from an event page's JSON-LD location, then
+# canonicalise it against the venue directory (Visit Lisboa et al. need this)
+_LDV = ('<script type="application/ld+json">{"@type":"Event","name":"X",'
+        '"startDate":"2026-06-12T21:00","location":{"@type":"Place","name":"Casa Fernando Pessoa"}}</script>')
+t('scrape ld venue', core.scrape_event_page(_LDV, 'https://x.pt/e').get('venue'), 'Casa Fernando Pessoa')
+_VG = {core._nt('Casa Fernando Pessoa'): {'name': 'Casa Fernando Pessoa',
+       'neighbourhood': 'Campo de Ourique', 'zone': 'city', 'lat': 38.71, 'lng': -9.16}}
+t('canon venue name', core.canonical_venue('casa fernando pessoa', _VG, {})['venue'], 'Casa Fernando Pessoa')
+t('canon venue neigh', core.canonical_venue('casa fernando pessoa', _VG, {})['neighbourhood'], 'Campo de Ourique')
+t('canon venue unknown kept', core.canonical_venue('Albuquerque Foundation', _VG, {})['venue'], 'Albuquerque Foundation')
+t('canon venue date none', core.canonical_venue('19–22 Nov 2026', _VG, {}), None)
 t('default(listing) img rejected',
   core.scrape_event_page('<meta property="og:image" content="https://x.pt/cover.jpg">', 'https://x.pt/e', 'https://x.pt/cover.jpg').get('image'), None)
 _share = [{'title': 'A', 'image': 'https://x/lg.png'}, {'title': 'B', 'image': 'https://x/lg.png'}, {'title': 'C', 'image': 'https://x/p.jpg'}]

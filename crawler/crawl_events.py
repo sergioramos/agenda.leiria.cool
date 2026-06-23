@@ -26,14 +26,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core
 import extract
 
-def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50):
+def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
+                  venues_idx=None, venues_geo=None):
     """Read each event's OWN page (HTTP, no AI) and fill what the listing didn't
     have: real poster image (JSON-LD/og:image, skipping logos), ticket price
-    (JSON-LD offers or a €-scan), start time and a better description.
+    (JSON-LD offers or a €-scan), start time, a better description, and the real
+    venue when the listing only gave the source name (aggregators like Visit
+    Lisboa carry the venue in each event page's JSON-LD location).
     Structured data only — the AI never reads an event page (see enrich_pages
     in config.yaml). Bounded per source; failures are silent."""
     page = core.site_key(source.get("website") or "")
     default_img = core.og_image(listing_html)  # the venue's default/logo — reject it
+    src_name = core._nt(source.get("name") or "")
     cache, fetched = {}, 0
     for e in evs:
         u = e.get("url")
@@ -57,6 +61,16 @@ def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50):
             e["all_day"] = False
         if len(info.get("description") or "") > len(e.get("description") or ""):
             e["description"] = info["description"]
+        # the stored venue is just the source name (nothing was extracted) but the
+        # page names the real place -> adopt it, canonicalised + with its neighbourhood
+        if info.get("venue") and core._nt(e.get("venue") or "") == src_name:
+            cv = core.canonical_venue(info["venue"], venues_geo, venues_idx)
+            if cv and core._nt(cv["venue"]) != src_name:
+                e["venue"] = cv["venue"]
+                if cv.get("neighbourhood"):
+                    e["neighbourhood"], e["zone"] = cv["neighbourhood"], cv.get("zone")
+                if cv.get("lat") is not None and not core.valid_lisbon_coord(e.get("lat"), e.get("lng")):
+                    e["lat"], e["lng"] = cv["lat"], cv["lng"]
 
 
 def pick_representative(group: list[dict]) -> dict:
@@ -135,6 +149,7 @@ def main():
     if args.limit:
         shard = shard[:args.limit]
     venues_idx = core.venues_index(sources)
+    venues_geo = core.load_venues()
 
     ai_enabled = cfg["ai"].get("enabled", True) and not args.no_ai
     # run cap respects the monthly ceiling, then splits across parallel shards
@@ -177,7 +192,8 @@ def main():
                                   venues_idx, page_links)
             ai_calls += 1
         if evs:
-            enrich_events(session, cfg, s, evs, delay, listing_html=html)
+            enrich_events(session, cfg, s, evs, delay, listing_html=html,
+                          venues_idx=venues_idx, venues_geo=venues_geo)
         events.extend(evs)
         time.sleep(delay)
 
