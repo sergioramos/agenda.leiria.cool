@@ -98,19 +98,21 @@ def main():
           f"-{removed} expired, {len(pool['events'])} total")
 
     # ---- build the publish set for the displayed week ----
-    # collapse same-title/venue runs an API returned one-per-day (exhibitions,
-    # nightly shows) into one span, then reframe to the DISPLAYED Mon-Sun
-    # (display_sun) so an event past Sunday doesn't get a bogus day chip.
-    all_events = core.collapse_daily_runs(core.pool_events(pool) + shard_events)
+    # 1) rewrite curated venue-name variants to one canonical name (+ coords), so
+    #    cross-source copies of one event line up; 2) collapse same-title/venue
+    #    runs an API returned one-per-day (exhibitions, nightly shows) into one
+    #    span; 3) reframe to the DISPLAYED Mon-Sun so nothing gets a bogus day chip.
+    all_events = core.pool_events(pool) + shard_events
+    al = core.apply_venue_aliases(all_events, core.load_venue_aliases())
+    all_events = core.collapse_daily_runs(all_events)
     all_events = core.reframe_window(all_events, mon, display_sun)
-    # unify venue names BEFORE dedupe so the same place merges: same-coordinate
-    # variants first (MACAM / MACAM - Museu...), then the directory's spelling
-    # (exact match only — never a fuzzy guess, so 'Lisboa' can't become '@esnlisboa').
+    # then unify same-coordinate spelling variants (MACAM / MACAM - Museu...) and
+    # the directory's spelling (exact match only — never a fuzzy guess).
     venues_geo = core.load_venues()
     cc = core.canonicalize_venue_coords(all_events)
     cv = core.canonicalize_venues(all_events, venues_geo, core.venues_index(src))
-    if cc or cv:
-        print(f"[venue] unified {cc} by coordinate + {cv} to the directory")
+    if al or cc or cv:
+        print(f"[venue] {al} aliased + {cc} by coordinate + {cv} to the directory")
     events = core.dedupe(all_events, dedupe_sources)
     core.drop_shared_images(events)
     # backfill the neighbourhood from coordinates for events whose venue name

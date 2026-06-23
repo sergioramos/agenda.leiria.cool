@@ -1,0 +1,32 @@
+{
+  "_comment": "Hand-curated venue-name variants that are the SAME physical place. Different sources spell a venue differently (or use the festival name / an old name / an Instagram handle), which leaves the same event showing as several cards. `aliases` maps any spelling (case/accent-insensitive) to the canonical name; `coords` gives each canonical name a coordinate so even a source that sent no location can be matched and merged. Applied before dedupe. Keep this conservative: only add a pair when it is unambiguously the same place.",
+  "aliases": {
+    "MAC/CCB": "Centro Cultural de Belém",
+    "CCB": "Centro Cultural de Belém",
+    "MAC / CCB": "Centro Cultural de Belém",
+    "Cinecapitólio Rooftop": "Capitólio",
+    "Capitólio.": "Capitólio",
+    "Tejo Park": "Parque Tejo",
+    "Parque Papa Francisco": "Parque Tejo",
+    "Rock in Rio Lisboa": "Parque Tejo",
+    "MACAM": "MACAM – Museu de Arte Contemporânea Armando Martins",
+    "MACAM - Museu de Arte Contemporânea": "MACAM – Museu de Arte Contemporânea Armando Martins",
+    "Macam - Museu De Arte Contemporânea Armando Martins": "MACAM – Museu de Arte Contemporânea Armando Martins",
+    "MAAT": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
+    "Boutique da Cultura - Um Teatro em Cada Bairro": "Boutique da Cultura",
+    "CAM": "Fundação Calouste Gulbenkian",
+    "CAM (Centro de Arte Moderna Gulbenkian)": "Fundação Calouste Gulbenkian",
+    "Fundação Calouste Gulbenkian - Centro de Arte Moderna": "Fundação Calouste Gulbenkian",
+    "Cinema Nimas": "Cinema Medeia Nimas",
+    "Cinema Medeia Nimas (Espaço Nimas)": "Cinema Medeia Nimas"
+  },
+  "coords": {
+    "Centro Cultural de Belém": [38.696435, -9.208603],
+    "Capitólio": [38.718971, -9.146289],
+    "Parque Tejo": [38.7918, -9.09279],
+    "MACAM – Museu de Arte Contemporânea Armando Martins": [38.7005, -9.18314],
+    "MAAT - Museu de Arte, Arquitetura e Tecnologia": [38.69591, -9.19569],
+    "Boutique da Cultura": [38.75771, -9.18533],
+    "Fundação Calouste Gulbenkian": [38.7380413, -9.1550827]
+  }
+}

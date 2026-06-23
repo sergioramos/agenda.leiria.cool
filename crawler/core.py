@@ -711,26 +711,51 @@ def canonicalize_venues(events: list[dict], venues_geo: dict | None, venues_idx:
     return changed
 
 
-def collapse_daily_runs(events: list[dict], min_days: int = 3) -> list[dict]:
-    """Collapse same-title/venue events recurring on many separate days into one
-    ongoing span — for venue APIs that return an exhibition as one entry per open
-    day (CCB/Tribe returns each day's opening hours as a separate event). A run on
-    fewer than min_days distinct days is left as discrete dates (a real short
-    series). The richest copy survives, stretched across the whole run."""
+def collapse_daily_runs(events: list[dict], max_gap_days: int = 1) -> list[dict]:
+    """Merge same-title/venue events whose date ranges overlap or are adjacent
+    (gap <= max_gap_days) into one ongoing span. This folds an exhibition a venue
+    API returned one-entry-per-open-day (CCB/Tribe), a nightly run, and two
+    sources' overlapping spans of one exhibition into a single card — while a
+    series with real gaps between dates (e.g. every Friday) stays separate. The
+    richest copy survives, stretched across the whole run."""
+    def s_of(e):
+        return (e.get("start") or "")[:10]
+
+    def e_of(e):
+        return (e.get("end") or e.get("start") or "")[:10]
+
     groups: dict = {}
     for e in events:
-        groups.setdefault((_nt(e.get("title")), _nt(e.get("venue") or "")), []).append(e)
+        groups.setdefault((title_core(e.get("title")), _nt(e.get("venue") or "")), []).append(e)
     out = []
     for grp in groups.values():
-        days = sorted({(e.get("start") or "")[:10] for e in grp if e.get("start")})
-        if len(days) < min_days:
-            out.extend(grp)
+        if len(grp) == 1:
+            out.append(grp[0])
             continue
-        keep = max(grp, key=lambda e: (bool(e.get("image")), len(e.get("description") or "")))
-        keep["start"] = days[0]
-        keep["end"] = max([(e.get("end") or e.get("start") or "")[:10] for e in grp] + [days[-1]])
-        keep["all_day"], keep["ongoing"] = True, True
-        out.append(keep)
+        grp.sort(key=s_of)
+        cluster, cluster_end = [grp[0]], e_of(grp[0])
+        clusters = []
+        for e in grp[1:]:
+            try:
+                gap = (date.fromisoformat(s_of(e)) - date.fromisoformat(cluster_end)).days
+            except ValueError:
+                gap = 0   # unparseable date -> keep merging rather than split oddly
+            if gap <= max_gap_days:
+                cluster.append(e)
+                cluster_end = max(cluster_end, e_of(e))
+            else:
+                clusters.append(cluster)
+                cluster, cluster_end = [e], e_of(e)
+        clusters.append(cluster)
+        for cl in clusters:
+            if len(cl) == 1:
+                out.append(cl[0])
+                continue
+            keep = max(cl, key=lambda e: (bool(e.get("image")), len(e.get("description") or "")))
+            keep["start"] = min(s_of(x) for x in cl)
+            keep["end"] = max(e_of(x) for x in cl)
+            keep["all_day"], keep["ongoing"] = True, True
+            out.append(keep)
     return out
 
 
@@ -772,6 +797,66 @@ def canonicalize_venue_coords(events: list[dict]) -> int:
                 e["venue"] = canon
                 changed += 1
     return changed
+
+
+_VENUE_ALIASES_PATH = ROOT / "sources" / "venue_aliases.json"
+
+
+def load_venue_aliases() -> dict:
+    """{_nt(variant): (canonical_name, lat|None, lng|None)} from the curated map.
+    Empty if the file is missing/unreadable."""
+    if not _VENUE_ALIASES_PATH.exists():
+        return {}
+    try:
+        data = json.loads(_VENUE_ALIASES_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    coords = data.get("coords", {})
+    out = {}
+    for variant, canon in (data.get("aliases") or {}).items():
+        latlng = coords.get(canon) or [None, None]
+        out[_nt(variant)] = (canon, latlng[0], latlng[1])
+    # the canonical names themselves resolve to their own coords (fills a source
+    # that already used the canonical name but sent no location, e.g. Parque Tejo)
+    for canon, latlng in coords.items():
+        out.setdefault(_nt(canon), (canon, latlng[0], latlng[1]))
+    return out
+
+
+def apply_venue_aliases(events: list[dict], aliases: dict) -> int:
+    """Rewrite known venue-name variants to their canonical spelling and fill the
+    canonical coordinate when the event has none — so cross-source copies of one
+    event (different venue strings, missing coords) can merge. Returns the count
+    of venue names changed."""
+    changed = 0
+    for e in events:
+        hit = aliases.get(_nt(e.get("venue") or ""))
+        if not hit:
+            continue
+        canon, lat, lng = hit
+        if _nt(e.get("venue") or "") != _nt(canon):
+            changed += 1
+        e["venue"] = canon
+        if lat is not None and not valid_lisbon_coord(e.get("lat"), e.get("lng")):
+            e["lat"], e["lng"] = lat, lng
+    return changed
+
+
+_TITLE_MONTHS = ("janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|"
+                 "outubro|novembro|dezembro")
+
+
+def title_core(title: str) -> str:
+    """Normalized title with a trailing year or date stripped, so the same event
+    listed as '... 2026' / '... – 27 de Junho' groups together (Rock in Rio)."""
+    t = _nt(title)
+    for _ in range(3):
+        t2 = re.sub(rf"\d{{1,2}}de(?:{_TITLE_MONTHS})$", "", t)
+        t2 = re.sub(r"20\d\d$", "", t2)
+        if t2 == t:
+            break
+        t = t2
+    return t
 
 
 # ---------- normalisation ----------
@@ -1268,8 +1353,11 @@ def dedupe(events: list[dict], sources: list[dict] | None = None) -> list[dict]:
                 # title match (0.82) is enough, else require 0.9 / a long prefix
                 coord_same = bool(cke) and cke == event_coord_key(k)
                 ratio = difflib.SequenceMatcher(None, nt, knt).ratio()
-                near = (ratio >= 0.9 or (coord_same and ratio >= 0.82)
-                        or (min(len(nt), len(knt)) >= 12 and (nt.startswith(knt) or knt.startswith(nt))))
+                # one title contained in the other (>=12 chars) is a strong signal
+                # they're the same event with a series prefix/suffix, e.g.
+                # "Carolina Estrela Trio" vs "Jovens Talentos > Carolina Estrela Trio"
+                contained = min(len(nt), len(knt)) >= 12 and (nt in knt or knt in nt)
+                near = ratio >= 0.9 or (coord_same and ratio >= 0.82) or contained
                 if not near:
                     continue
                 venue_same = _nt(e["venue"]) == _nt(k["venue"])

@@ -124,9 +124,14 @@ _col = core.collapse_daily_runs(_runs)
 t('collapse run count', len(_col), 2)
 _ex = [e for e in _col if e['title'] == 'Expo X'][0]
 t('collapse span dates', (_ex['start'], _ex['end'], _ex['ongoing']), ('2026-06-23', '2026-06-25', True))
-t('collapse keeps short run',
+# overlapping spans of the same exhibition (two sources) -> one
+t('collapse overlapping spans',
+  len(core.collapse_daily_runs([{'title': 'E', 'venue': 'V', 'start': '2026-05-24', 'end': '2026-12-13'},
+                                {'title': 'E', 'venue': 'V', 'start': '2026-06-28', 'end': '2026-12-13'}])), 1)
+# a series with real gaps between dates stays separate
+t('collapse keeps gapped series',
   len(core.collapse_daily_runs([{'title': 'S', 'venue': 'V', 'start': '2026-06-23', 'end': '2026-06-23'},
-                                {'title': 'S', 'venue': 'V', 'start': '2026-06-24', 'end': '2026-06-24'}])), 2)
+                                {'title': 'S', 'venue': 'V', 'start': '2026-06-27', 'end': '2026-06-27'}])), 2)
 
 # canonicalize_venue_coords: same cell, similar names unify; a different venue stays
 _vc = [{'venue': 'MACAM', 'lat': 38.7005, 'lng': -9.1831, 'title': 'A'},
@@ -135,6 +140,18 @@ _vc = [{'venue': 'MACAM', 'lat': 38.7005, 'lng': -9.1831, 'title': 'A'},
 core.canonicalize_venue_coords(_vc)
 t('coord-canon unifies macam', _vc[0]['venue'], 'MACAM - Museu de Arte Contemporânea Armando Martins')
 t('coord-canon keeps distinct venue', _vc[2]['venue'], 'Museu de São Roque')
+
+# title_core: strip trailing year/date so a festival's per-day titles group
+t('title_core year', core.title_core("Rock in Rio Lisboa 2026"), core.title_core("Rock in Rio Lisboa"))
+t('title_core date', core.title_core("Rock in Rio Lisboa – 27 de Junho"), core.title_core("Rock in Rio Lisboa"))
+t('title_core keeps name', core.title_core("Carolina Estrela Trio"), 'carolinaestrelatrio')
+
+# apply_venue_aliases: variant -> canonical + fills coords
+_al = {core._nt('MAC/CCB'): ('Centro Cultural de Belém', 38.696, -9.208)}
+_ae = [{'venue': 'MAC/CCB', 'lat': None, 'lng': None}]
+core.apply_venue_aliases(_ae, _al)
+t('alias rewrites venue', _ae[0]['venue'], 'Centro Cultural de Belém')
+t('alias fills coords', round(_ae[0]['lat'], 3), 38.696)
 
 # EventON microdata: per-event name/url/image; a non-image content attr is dropped
 _EVO = ('<div data-event_id="1" itemscope itemtype="http://schema.org/Event">'
@@ -235,6 +252,15 @@ t('agenda generic merges', len(core.dedupe([a, b], SRCS)), 1)
 a = ev(HOT, 'Jam Session')
 b = ev(AGG, 'Jam Session', venue='B.Leza', start='2026-06-12', has_time=False)
 t('jam sessions both kept', len(core.dedupe([a, b], SRCS)), 2)
+
+# a title contained in another at the SAME venue/date is one event (series prefix)
+_a = ev(AGG, 'Carolina Estrela Trio', venue='MACAM')
+_b = ev(AGG, 'Jovens Talentos - Hot Clube > Carolina Estrela Trio', venue='MACAM')
+t('containment merge same venue', len(core.dedupe([_a, _b], SRCS)), 1)
+# ... but contained titles at DIFFERENT venues stay separate
+_c = ev(AGG, 'Carolina Estrela Trio', venue='MACAM')
+_d = ev(AGG, 'Jovens Talentos - Hot Clube > Carolina Estrela Trio', venue='Hot Clube')
+t('containment keeps diff venue', len(core.dedupe([_c, _d], SRCS)), 2)
 
 # venue copy + aggregator relist (generic label) -> merge, venue copy survives
 a = ev(COL, 'As Guerreiras do K-Pop – Tributo')
