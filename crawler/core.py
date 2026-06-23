@@ -268,6 +268,11 @@ def fetch(session: requests.Session, url: str, cfg: dict):
         try:
             r = session.get(url, timeout=timeout, allow_redirects=True)
             ct = r.headers.get("content-type", "")
+            # many PT sites omit charset; requests then assumes latin-1 and mojibakes
+            # the accents the AI/enrich path reads. Modern sites are UTF-8 (the
+            # connectors' _get_text already does this).
+            if "html" in ct.lower() and "charset=" not in ct.lower():
+                r.encoding = "utf-8"
             return r.status_code, ct, r.text
         except requests.RequestException:
             if attempt == retries:
@@ -317,7 +322,6 @@ def discover_feeds(html: str, base_url: str) -> list[str]:
     feeds = []
     try:
         from bs4 import BeautifulSoup
-        from urllib.parse import urljoin
         soup = BeautifulSoup(html, "lxml")
         for link in soup.find_all("link", rel=lambda v: v and "alternate" in v):
             t = (link.get("type") or "").lower()

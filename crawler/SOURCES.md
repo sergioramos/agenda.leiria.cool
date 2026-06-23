@@ -106,6 +106,23 @@ Three layers — the answer to "I don't want things breaking without telling me"
    Layers 1–2 cover the ~10 connectors automatically; the quality wall is the
    manual check for the ~500 HTML sources.
 
+## The pool is upsert-only (a known trade-off)
+
+`pool_upsert` only adds/refreshes events by id and `pool_expire` only drops
+events whose **end date** has passed. This is deliberate — a connector that
+fails or shrinks for one run never wipes its events. The cost: if a source
+**stops listing** an event or **relabels** it (new id) while its end date is
+still in the future, the old copy lingers in the pool until that date passes.
+
+This is why the out-of-area BOL events (Torres Vedras, end 2026-12-31) had to be
+**purged by hand** after the connector was fixed — the fix stopped emitting them,
+but the pool kept the old copies. There is no safe automatic cure: expiring
+events "not seen in N runs" would also drop legitimate advance events that a
+source only lists seasonally. So when you change a connector's filtering or a
+venue alias and old copies persist, a one-off reconcile of `pool.json` is the
+remedy (collapse/dedupe at publish hides most of it, but the pool still carries
+the stale rows). Watch for it on the quality wall (a cluster that won't shrink).
+
 ## Dates
 
 `make_event` flags an event `ongoing` ("em curso") when it started before the
