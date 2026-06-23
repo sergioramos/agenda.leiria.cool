@@ -247,7 +247,10 @@ def reframe_window(events: list[dict], mon: date, window_end: date) -> list[dict
         days, ongoing = days_in_window(start_d, end_d, mon, window_end)
         if not days:
             continue
-        out.append({**e, "days": days, "ongoing": ongoing})
+        # keep an explicit ongoing=True: a connector clamps a long run's start to
+        # the window for sorting, so recomputing from the clamped start would
+        # wrongly drop "em curso". A run flagged ongoing stays ongoing.
+        out.append({**e, "days": days, "ongoing": ongoing or bool(e.get("ongoing"))})
     return out
 
 # ---------- http ----------
@@ -766,6 +769,9 @@ _GENERIC_VENUE = {"museu", "centro", "cultural", "teatro", "sala", "galeria", "c
 
 
 def _distinctive_tokens(name: str) -> set:
+    """Words (>=4 chars, not generic venue terms) that identify a place — used to
+    decide two names are the same venue. 'MACAM'/'Gulbenkian' are distinctive;
+    'Museu'/'Teatro'/'de' are not."""
     return {w for w in re.findall(r"[a-z0-9]+", _fold_spaces(name))
             if len(w) >= 4 and w not in _GENERIC_VENUE}
 

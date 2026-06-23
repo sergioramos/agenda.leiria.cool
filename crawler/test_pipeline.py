@@ -342,6 +342,12 @@ _rf = core.reframe_window([_span, _after], date(2026, 6, 22), date(2026, 6, 28))
 t('reframe drops out-of-window', [e['id'] for e in _rf], ['r1'])
 t('reframe marks ongoing', _rf[0]['ongoing'], True)
 t('reframe fills days', len(_rf[0]['days']), 7)
+# a clamped long run (start==mon, short tail) keeps an explicit ongoing=True...
+_clamp = {'id': 'c1', 'title': 'Expo', 'start': '2026-06-22', 'end': '2026-06-26', 'days': [], 'ongoing': True}
+t('reframe keeps explicit ongoing', core.reframe_window([_clamp], date(2026, 6, 22), date(2026, 6, 28))[0]['ongoing'], True)
+# ...but a genuine single-day event is not marked ongoing
+_short = {'id': 'c2', 'title': 'Show', 'start': '2026-06-25', 'end': '2026-06-25', 'days': [], 'ongoing': False}
+t('reframe single-day not ongoing', core.reframe_window([_short], date(2026, 6, 22), date(2026, 6, 28))[0]['ongoing'], False)
 
 # make_event ongoing override: a short run clamped to the window keeps em-curso
 _oS = {'id': 's', 'name': 'S', 'website': 'https://s.pt', 'topic': 'art', 'categories': [1]}
