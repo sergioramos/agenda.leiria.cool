@@ -7,12 +7,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-05-18T10:30",
       "end": "2026-10-12",
       "all_day": false,
@@ -53,12 +53,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22",
       "end": "2026-12-31",
       "all_day": true,
@@ -572,7 +572,7 @@
       "categories": [
         1
       ],
-      "venue": "MACAM",
+      "venue": "MACAM – Museu de Arte Contemporânea Armando Martins",
       "source_id": "bol",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -732,12 +732,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-22T23:59",
       "end": "2026-06-22",
       "all_day": false,
@@ -942,7 +942,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -2012,23 +2012,23 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "099847720cf4": {
-      "id": "099847720cf4",
-      "title": "Basta",
-      "topic": "art",
+    "589c7b8580df": {
+      "id": "589c7b8580df",
+      "title": "Basta!",
+      "topic": "performance",
       "categories": [
         1
       ],
       "venue": "Boutique da Cultura",
-      "source_id": "bol",
+      "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
-      "lng": -9.18533,
-      "start": "2026-06-23T18:30",
+      "lat": 38.756483,
+      "lng": -9.185602,
+      "start": "2026-06-23",
       "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "tue"
       ],
@@ -2041,14 +2041,14 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/175833-basta-boutique_da_cultura/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz150912.png?v=2",
+      "url": "https://www.agendalx.pt/events/event/basta/",
+      "source": "agendalx",
+      "description": "Trabalho! Trabalho! Trabalho! O trabalho impõe-se, ocupa a maior parte do tempo das nossas vidas. Será isso saudável? Conseguiremos viver bem num ambiente competitivo em que a necessidade de pr...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/basta.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "bol",
+      "_connector": "agendalx",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -2550,50 +2550,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "2770fd5e2a59": {
-      "id": "2770fd5e2a59",
-      "title": "Caravana",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro Aberto",
-      "source_id": "bol",
-      "neighbourhood": "Campolide",
-      "zone": "city",
-      "lat": 38.736225,
-      "lng": -9.158792,
-      "start": "2026-06-24T19:00",
-      "end": "2026-07-26",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 17.0,
-        "currency": "EUR",
-        "text": "€17"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/180049-caravana-teatro_aberto/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154658.jpg?v=5",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "b2152b15582d": {
       "id": "b2152b15582d",
       "title": "Caravana",
@@ -2607,9 +2563,9 @@
       "zone": "city",
       "lat": 38.736412,
       "lng": -9.158494,
-      "start": "2026-06-22T19:00",
+      "start": "2026-06-22",
       "end": "2026-07-26",
-      "all_day": false,
+      "all_day": true,
       "ongoing": true,
       "days": [
         "mon",
@@ -2720,50 +2676,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "b05e6b1d100f": {
-      "id": "b05e6b1d100f",
-      "title": "EVITA",
-      "topic": "art",
-      "categories": [
-        1
-      ],
-      "venue": "Capitólio.",
-      "source_id": "bol",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.7188762,
-      "lng": -9.146637,
-      "start": "2026-06-24T21:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 25.0,
-        "currency": "EUR",
-        "text": "€25"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/166815-evita-capitolio/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz143318.jpg?v=13",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "986559ed3d65": {
       "id": "986559ed3d65",
       "title": "Evita",
@@ -2777,9 +2689,9 @@
       "zone": "city",
       "lat": 38.718971,
       "lng": -9.146289,
-      "start": "2026-06-22T21:00",
+      "start": "2026-06-22",
       "end": "2026-06-28",
-      "all_day": false,
+      "all_day": true,
       "ongoing": true,
       "days": [
         "mon",
@@ -2861,7 +2773,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -3263,7 +3175,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -3299,22 +3211,22 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "f4a22393db43": {
-      "id": "f4a22393db43",
+    "289b7682ac3a": {
+      "id": "289b7682ac3a",
       "title": "António e Cleópatra",
-      "topic": "art",
+      "topic": "comedy",
       "categories": [
         1
       ],
       "venue": "Boutique da Cultura",
-      "source_id": "bol",
+      "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
-      "lng": -9.18533,
-      "start": "2026-06-25T21:00",
+      "lat": 38.756483,
+      "lng": -9.185602,
+      "start": "2026-06-25",
       "end": "2026-07-04",
-      "all_day": false,
+      "all_day": true,
       "ongoing": true,
       "days": [
         "thu",
@@ -3331,14 +3243,14 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/175724-antonio_e_cleopatra-boutique_da_cultura/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz150819.png?v=3",
+      "url": "https://www.agendalx.pt/events/event/antonio-e-cleopatra/",
+      "source": "agendalx",
+      "description": "Na república dividida de Roma, a tensão entre Octávio e Marco António cresce. Mas o experiente general está mais interessado em viver a sua paixão com Cleópatra do que no futuro político do im...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/ANTONIO-E-CLEOP.png",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "bol",
+      "_connector": "agendalx",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -3431,7 +3343,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -4127,7 +4039,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -4328,12 +4240,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T10:30",
       "end": "2026-12-27",
       "all_day": false,
@@ -4369,12 +4281,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T10:30",
       "end": "2026-08-30",
       "all_day": false,
@@ -4526,44 +4438,49 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "286e677b5ebb": {
-      "id": "286e677b5ebb",
-      "title": "Vemos as Mesmas Estrelas",
-      "topic": "art",
+    "807c45fd7208": {
+      "id": "807c45fd7208",
+      "title": "Vemos as mesmas estrelas",
+      "topic": "performance",
       "categories": [
         1
       ],
       "venue": "Boutique da Cultura",
-      "source_id": "bol",
+      "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
-      "lng": -9.18533,
-      "start": "2026-06-27T11:30",
+      "lat": 38.756483,
+      "lng": -9.185602,
+      "start": "2026-06-22",
       "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
+      "all_day": true,
+      "ongoing": true,
       "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
         "sat",
         "sun"
       ],
       "price": {
         "is_free": false,
-        "min": 12.0,
+        "min": null,
         "currency": "EUR",
-        "text": "€12"
+        "text": ""
       },
       "language": [
         "pt"
       ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/177956-vemos_as_mesmas_estrelas-boutique_da_cultura/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152799.png?v=3",
+      "url": "https://www.agendalx.pt/events/event/vemos-as-mesmas-estrelas/",
+      "source": "agendalx",
+      "description": "Vemos as Mesmas Estrelas é um musical para toda a família! O espetáculo segue o crescimento de duas crianças, Matilde e Mafalda, que sonham com o universo e com as estrelas. Desde o i...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/05/estrelas-27-126.jpg-scaled-e1780308784551.jpeg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "bol",
+      "_connector": "agendalx",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -4574,12 +4491,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T11:30",
       "end": "2026-12-26",
       "all_day": false,
@@ -4615,12 +4532,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T11:30",
       "end": "2026-12-27",
       "all_day": false,
@@ -4858,12 +4775,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T15:00",
       "end": "2026-12-27",
       "all_day": false,
@@ -4899,12 +4816,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T15:00",
       "end": "2027-01-24",
       "all_day": false,
@@ -4940,12 +4857,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-27T15:00",
       "end": "2026-06-27",
       "all_day": false,
@@ -5301,7 +5218,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -5374,43 +5291,49 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "caabecf124a6": {
-      "id": "caabecf124a6",
+    "e97d4a80d5c8": {
+      "id": "e97d4a80d5c8",
       "title": "Bicholé",
-      "topic": "art",
+      "topic": "performance",
       "categories": [
         1
       ],
       "venue": "Boutique da Cultura",
-      "source_id": "bol",
+      "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": 38.757706,
-      "lng": -9.18533,
-      "start": "2026-06-28T09:30",
+      "lat": 38.756483,
+      "lng": -9.185602,
+      "start": "2026-06-22",
       "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
+      "all_day": true,
+      "ongoing": true,
       "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
         "sun"
       ],
       "price": {
         "is_free": false,
-        "min": 10.0,
+        "min": null,
         "currency": "EUR",
-        "text": "€10"
+        "text": ""
       },
       "language": [
         "pt"
       ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/176912-bichole-boutique_da_cultura/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz151903.jpg?v=5",
+      "url": "https://www.agendalx.pt/events/event/bichole/",
+      "source": "agendalx",
+      "description": "Inspirado no “Carnaval dos Animais de Camille Saint-Saëns”, todos os bichos foram convidados para uma festa muito especial. Os sons nascem ao ritmo do corpo: há passos gravíssimos de Bicholás,...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/04/Sem-Titulo-4.png",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "bol",
+      "_connector": "agendalx",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -5461,7 +5384,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -5494,43 +5417,43 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "1e2e4b50fac8": {
-      "id": "1e2e4b50fac8",
+    "9d5fc159ccf7": {
+      "id": "9d5fc159ccf7",
       "title": "Estas obras MAATam-me!",
-      "topic": "art",
+      "topic": "performance",
       "categories": [
         1
       ],
-      "venue": "MAAT",
-      "source_id": "bol",
-      "neighbourhood": "Belém",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
+      "source_id": "agendalx",
+      "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-28T11:00",
+      "lat": 38.695911,
+      "lng": -9.195691,
+      "start": "2026-06-28",
       "end": "2026-12-13",
-      "all_day": false,
+      "all_day": true,
       "ongoing": true,
       "days": [
         "sun"
       ],
       "price": {
         "is_free": false,
-        "min": 8.0,
+        "min": null,
         "currency": "EUR",
-        "text": "€8"
+        "text": ""
       },
       "language": [
         "pt"
       ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/176601-estas_obras_maatam_me-maat/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz151628.jpg?v=4",
+      "url": "https://www.agendalx.pt/events/event/estas-obras-maatam-me/",
+      "source": "agendalx",
+      "description": "O Teatro Praga vem ao MAAT para desafiar a formar ideias com o corpo e através do movimento numa oficina criativa, na qual as obras de arte são o ponto de inspiração para deixar fluir a expressivi...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/PAD2125©Alipio-Padilha-scaled.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "bol",
+      "_connector": "agendalx",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -5661,12 +5584,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-28T16:00",
       "end": "2026-12-27",
       "all_day": false,
@@ -5701,12 +5624,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-28T17:00",
       "end": "2026-10-25",
       "all_day": false,
@@ -5821,12 +5744,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-06-29T09:30",
       "end": "2026-08-24",
       "all_day": false,
@@ -6421,7 +6344,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -6547,10 +6470,10 @@
       "zone": "city",
       "lat": 38.7203029,
       "lng": -9.1462944,
-      "start": "2026-07-02T21:00",
-      "end": "2026-07-02",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-02",
+      "end": "2026-07-03",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "thu"
       ],
@@ -6564,46 +6487,6 @@
         "pt"
       ],
       "url": "https://www.bol.pt/Comprar/Bilhetes/178802-creditos_finais_bulakna-cinema_sao_jorge/",
-      "source": "bol",
-      "description": "",
-      "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153546.jpg?v=3",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "bol",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "9c4f9603fb2f": {
-      "id": "9c4f9603fb2f",
-      "title": "CRÉDITOS FINAIS- Bulakna",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Cinema São Jorge .",
-      "source_id": "bol",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.7203029,
-      "lng": -9.1462944,
-      "start": "2026-07-03T21:00",
-      "end": "2026-07-03",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 4.5,
-        "currency": "EUR",
-        "text": "€4,50"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.bol.pt/Comprar/Bilhetes/178803-creditos_finais_bulakna-cinema_sao_jorge/",
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153546.jpg?v=3",
@@ -6665,7 +6548,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -6867,7 +6750,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -6947,7 +6830,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -7832,7 +7715,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -8077,12 +7960,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-05T16:00",
       "end": "2026-12-06",
       "all_day": false,
@@ -8157,7 +8040,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -8197,7 +8080,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -8397,7 +8280,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -8637,7 +8520,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -8997,7 +8880,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -9117,7 +9000,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -9237,12 +9120,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-12T11:30",
       "end": "2026-12-20",
       "all_day": false,
@@ -9357,7 +9240,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -9397,12 +9280,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-13T09:30",
       "end": "2026-07-13",
       "all_day": false,
@@ -9557,7 +9440,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -9917,7 +9800,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -10237,7 +10120,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -10637,7 +10520,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -10917,7 +10800,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -11197,12 +11080,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-23T18:00",
       "end": "2026-07-23",
       "all_day": false,
@@ -11277,7 +11160,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -11317,12 +11200,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-24T19:30",
       "end": "2026-09-18",
       "all_day": false,
@@ -11437,7 +11320,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -11677,7 +11560,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -11837,12 +11720,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-26T11:00",
       "end": "2026-11-29",
       "all_day": false,
@@ -11877,12 +11760,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-26T11:00",
       "end": "2026-08-30",
       "all_day": false,
@@ -11917,12 +11800,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-26T15:00",
       "end": "2026-07-26",
       "all_day": false,
@@ -11997,7 +11880,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -12037,12 +11920,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-07-27T09:30",
       "end": "2026-07-27",
       "all_day": false,
@@ -12157,7 +12040,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12277,7 +12160,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12437,7 +12320,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12477,7 +12360,7 @@
       "categories": [
         1
       ],
-      "venue": "Parque Papa Francisco",
+      "venue": "Parque Tejo",
       "source_id": "bol",
       "neighbourhood": "Parque das Nações",
       "zone": "city",
@@ -12517,7 +12400,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -12597,7 +12480,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12717,7 +12600,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12757,7 +12640,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12797,7 +12680,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12877,7 +12760,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -12917,7 +12800,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -12997,7 +12880,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13117,7 +13000,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13197,7 +13080,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13237,7 +13120,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -13277,7 +13160,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13357,7 +13240,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13397,7 +13280,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13437,7 +13320,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13517,7 +13400,7 @@
       "categories": [
         1
       ],
-      "venue": "CCB",
+      "venue": "Centro Cultural de Belém",
       "source_id": "bol",
       "neighbourhood": null,
       "zone": null,
@@ -13597,7 +13480,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13677,7 +13560,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13841,7 +13724,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -14085,7 +13968,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -14329,12 +14212,12 @@
       "categories": [
         1
       ],
-      "venue": "MAAT",
+      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
       "source_id": "bol",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.69591,
+      "lng": -9.19569,
       "start": "2026-08-31T09:30",
       "end": "2026-08-31",
       "all_day": false,
@@ -14449,7 +14332,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -14529,7 +14412,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -14569,7 +14452,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -14849,7 +14732,7 @@
       "categories": [
         1
       ],
-      "venue": "Capitólio.",
+      "venue": "Capitólio",
       "source_id": "bol",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -17439,8 +17322,8 @@
       "source_id": "ccb",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-07-07T10:00",
       "end": "2026-07-07",
       "all_day": false,
@@ -17468,49 +17351,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "7961d50ab74b": {
-      "id": "7961d50ab74b",
-      "title": "Sobre a verdade da mentira",
-      "topic": "learning",
-      "categories": [
-        1
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "agendalx",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-22",
-      "end": "2026-06-25",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 63.0,
-        "currency": "EUR",
-        "text": "€63"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/sobre-a-verdade-da-mentira/",
-      "source": "agendalx",
-      "description": "António Castro Caeiro volta a programar no CCB um ciclo de conversas, desta vez com o tema Sobre a Verdade da Mentira . Ao todo são 10 conversas espalhadas entre outubro de 2025 e junho de 2...",
-      "image": "https://www.agendalx.pt/content/uploads/2025/09/Antonio-de-Castro-Caeiro_20231027_32-@Matilde-Fieschi.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "fd8df7a2a3ab": {
       "id": "fd8df7a2a3ab",
       "title": "Sobre a verdade da mentira",
@@ -17524,10 +17364,10 @@
       "zone": "city",
       "lat": 38.696435,
       "lng": -9.208603,
-      "start": "2026-06-25T19:00",
+      "start": "2026-06-22",
       "end": "2026-06-25",
-      "all_day": false,
-      "ongoing": false,
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "thu"
       ],
@@ -17791,7 +17631,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema Nimas",
+      "venue": "Cinema Medeia Nimas",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -17837,7 +17677,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema Nimas",
+      "venue": "Cinema Medeia Nimas",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -17882,7 +17722,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema Nimas",
+      "venue": "Cinema Medeia Nimas",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -17926,7 +17766,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema Nimas",
+      "venue": "Cinema Medeia Nimas",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -19065,7 +18905,7 @@
       "categories": [
         1
       ],
-      "venue": "Fundação Calouste Gulbenkian - Centro de Arte Moderna",
+      "venue": "Fundação Calouste Gulbenkian",
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
@@ -19111,7 +18951,7 @@
       "categories": [
         1
       ],
-      "venue": "Fundação Calouste Gulbenkian - Centro de Arte Moderna",
+      "venue": "Fundação Calouste Gulbenkian",
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
@@ -19157,7 +18997,7 @@
       "categories": [
         1
       ],
-      "venue": "Fundação Calouste Gulbenkian - Centro de Arte Moderna",
+      "venue": "Fundação Calouste Gulbenkian",
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
@@ -19203,7 +19043,7 @@
       "categories": [
         1
       ],
-      "venue": "Fundação Calouste Gulbenkian - Centro de Arte Moderna",
+      "venue": "Fundação Calouste Gulbenkian",
       "source_id": "agendalx",
       "neighbourhood": "Avenidas Novas",
       "zone": "city",
@@ -21762,77 +21602,65 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "43db28c38e92": {
-      "id": "43db28c38e92",
-      "title": "May I help you? Posso Ajudar?",
+    "5dc130509221": {
+      "id": "5dc130509221",
+      "title": "May I Help You? Posso Ajudar?",
       "topic": "art",
       "categories": [
-        1
+        12
       ],
-      "venue": "MAC/CCB",
-      "source_id": "agendalx",
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695503,
-      "lng": -9.208354,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-22",
       "end": "2026-12-30",
       "all_day": true,
       "ongoing": true,
       "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
+        "tue"
       ],
       "price": {
         "is_free": false,
-        "min": 15.0,
+        "min": null,
         "currency": "EUR",
-        "text": "€15"
+        "text": ""
       },
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/may-i-help-you-posso-ajudar/",
-      "source": "agendalx",
-      "description": "Artes e artistas da década de 1970 em diante é a nova exposição permanente do MAC/CCB. A questão quotidiana «Posso ajudar?»...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/02/jeff.jpg",
+      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-23/",
+      "source": "ccb",
+      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "ccb",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "333de4de0818": {
-      "id": "333de4de0818",
+    "ed2eba5ace56": {
+      "id": "ed2eba5ace56",
       "title": "Terra Crua",
       "topic": "art",
       "categories": [
-        1
+        12
       ],
-      "venue": "MAC/CCB",
-      "source_id": "agendalx",
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695503,
-      "lng": -9.208354,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-22",
       "end": "2026-10-11",
       "all_day": true,
       "ongoing": true,
       "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
+        "tue"
       ],
       "price": {
         "is_free": false,
@@ -21843,42 +21671,36 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/terra-crua/",
-      "source": "agendalx",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o territ...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/Imagem1-20.jpg",
+      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-23/",
+      "source": "ccb",
+      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "ccb",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "84feeeb34b6b": {
-      "id": "84feeeb34b6b",
+    "5ddc0085f871": {
+      "id": "5ddc0085f871",
       "title": "José Pedro Croft",
       "topic": "art",
       "categories": [
-        1
+        12
       ],
-      "venue": "MAC/CCB",
-      "source_id": "agendalx",
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695503,
-      "lng": -9.208354,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-22",
       "end": "2026-09-13",
       "all_day": true,
       "ongoing": true,
       "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
+        "tue"
       ],
       "price": {
         "is_free": false,
@@ -21889,42 +21711,36 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/jose-pedro-croft-3/",
-      "source": "agendalx",
-      "description": "A mais recente mostra de José Pedro Croft reúne um conjunto de gravuras, desenhos, relevos e esculturas que dialogam entre si ao longo do espaço expositivo. Com curadoria de Luiz Camillo Osório...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/03/Imagem1-30.jpg",
+      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-23/",
+      "source": "ccb",
+      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "ccb",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "f51394d99a37": {
-      "id": "f51394d99a37",
+    "fc2967baacd7": {
+      "id": "fc2967baacd7",
       "title": "Olhos Múltiplos",
       "topic": "art",
       "categories": [
-        1
+        12
       ],
-      "venue": "MAC/CCB",
-      "source_id": "agendalx",
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695503,
-      "lng": -9.208354,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-22",
       "end": "2026-10-25",
       "all_day": true,
       "ongoing": true,
       "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
+        "tue"
       ],
       "price": {
         "is_free": false,
@@ -21935,42 +21751,36 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/olhos-multiplos/",
-      "source": "agendalx",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o esp...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/Imagem1-25.jpg",
+      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-23/",
+      "source": "ccb",
+      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "ccb",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "ceeaecdc2f38": {
-      "id": "ceeaecdc2f38",
+    "72b6fe48b114": {
+      "id": "72b6fe48b114",
       "title": "Frida Orupabo",
       "topic": "art",
       "categories": [
-        1
+        12
       ],
-      "venue": "MAC/CCB",
-      "source_id": "agendalx",
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
       "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.695503,
-      "lng": -9.208354,
+      "lat": 38.696435,
+      "lng": -9.208603,
       "start": "2026-06-22",
       "end": "2026-11-01",
       "all_day": true,
       "ongoing": true,
       "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
+        "tue"
       ],
       "price": {
         "is_free": false,
@@ -21981,14 +21791,14 @@
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/frida-orupabo/",
-      "source": "agendalx",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo apresenta Cloud of Confusion , uma reflexão poderosa sobre a circulação, o arquivo e o significado das imagens na era digit...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
+      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-23/",
+      "source": "ccb",
+      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "ccb",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -21999,7 +21809,7 @@
       "categories": [
         1
       ],
-      "venue": "MACAM - Museu de Arte Contemporânea",
+      "venue": "MACAM – Museu de Arte Contemporânea Armando Martins",
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -23685,49 +23495,44 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "d2545a85703c": {
-      "id": "d2545a85703c",
-      "title": "Rock in Rio Lisboa",
-      "topic": "outdoors",
+    "385a623aed52": {
+      "id": "385a623aed52",
+      "title": "Rock in Rio Lisboa 2026",
+      "topic": "nightlife",
       "categories": [
         1
       ],
-      "venue": "Parque Papa Francisco",
-      "source_id": "agendalx",
-      "neighbourhood": "Parque das Nações",
-      "zone": "city",
-      "lat": 38.789449,
-      "lng": -9.093976,
+      "venue": "Parque Tejo",
+      "source_id": "fever",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": 38.7918017,
+      "lng": -9.092789,
       "start": "2026-06-22",
       "end": "2026-06-28",
       "all_day": true,
       "ongoing": true,
       "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
         "sat",
         "sun"
       ],
       "price": {
         "is_free": false,
-        "min": null,
+        "min": 89.0,
         "currency": "EUR",
-        "text": ""
+        "text": "€89"
       },
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/rock-in-rio-lisboa-3/",
-      "source": "agendalx",
-      "description": "O Rock in Rio Lisboa está de regresso para a sua 11.ª edição e traz à capital várias estrelas internacionais. Entre as muitas caras conhecidas, há concertos de Katy Perry, Linkin Park,...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/02/katy-pery.png",
+      "url": "https://feverup.com/m/371468/en",
+      "source": "fever",
+      "description": "On June 20, 21, 27, and 28, the festival comes back to Parque Tejo for its 11th edition, offering more space, more comfort, and a fully renewed experience from the moment you arrive to the final chord. If the last edition was already historic, get ready — this one will raise the.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/337ae5ae-4fa8-11f1-9706-6ac0209ae0ab.png",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "fever",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -24874,52 +24679,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "e97d4a80d5c8": {
-      "id": "e97d4a80d5c8",
-      "title": "Bicholé",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
-      "start": "2026-06-22T09:30",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/bichole/",
-      "source": "agendalx",
-      "description": "Inspirado no “Carnaval dos Animais de Camille Saint-Saëns”, todos os bichos foram convidados para uma festa muito especial. Os sons nascem ao ritmo do corpo: há passos gravíssimos de Bicholás,...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/04/Sem-Titulo-4.png",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "8bbc84e7c32f": {
       "id": "8bbc84e7c32f",
       "title": "À descoberta da Biblioteca Palácio Galveias",
@@ -25234,52 +24993,6 @@
       "source": "agendalx",
       "description": "O edifício dos Paços do Concelho, para além do seu valor arquitetónico e artístico, reflete a imagem de Lisboa e de Portugal Liberal, Regenerador e Republicano. Importantes acontecimentos da noss...",
       "image": "https://www.agendalx.pt/content/uploads/2018/07/pacos_concelho.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "807c45fd7208": {
-      "id": "807c45fd7208",
-      "title": "Vemos as mesmas estrelas",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
-      "start": "2026-06-22T11:30",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/vemos-as-mesmas-estrelas/",
-      "source": "agendalx",
-      "description": "Vemos as Mesmas Estrelas é um musical para toda a família! O espetáculo segue o crescimento de duas crianças, Matilde e Mafalda, que sonham com o universo e com as estrelas. Desde o i...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/estrelas-27-126.jpg-scaled-e1780308784551.jpeg",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -26198,7 +25911,7 @@
       "categories": [
         1
       ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
+      "venue": "Boutique da Cultura",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -26734,46 +26447,6 @@
       "source": "agendalx",
       "description": "A água nunca guarda uma imagem. Recebe-a, transforma-a e devolve-a diferente. Nesta série de fotografias, Paulo...",
       "image": "https://www.agendalx.pt/content/uploads/2026/06/Imagem1-3.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "589c7b8580df": {
-      "id": "589c7b8580df",
-      "title": "Basta!",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
-      "start": "2026-06-23T18:30",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 3.0,
-        "currency": "EUR",
-        "text": "€3"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/basta/",
-      "source": "agendalx",
-      "description": "Trabalho! Trabalho! Trabalho! O trabalho impõe-se, ocupa a maior parte do tempo das nossas vidas. Será isso saudável? Conseguiremos viver bem num ambiente competitivo em que a necessidade de pr...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/basta.jpg",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -27537,7 +27210,7 @@
       "categories": [
         1
       ],
-      "venue": "MACAM - Museu de Arte Contemporânea",
+      "venue": "MACAM – Museu de Arte Contemporânea Armando Martins",
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -27563,49 +27236,6 @@
       "source": "agendalx",
       "description": "Neste concerto intimista, o trio liderado por Carolina Estrela na voz apresenta repertório no âmbito do ja...",
       "image": "https://www.agendalx.pt/content/uploads/2026/05/carolina-estrela.png",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "289b7682ac3a": {
-      "id": "289b7682ac3a",
-      "title": "António e Cleópatra",
-      "topic": "comedy",
-      "categories": [
-        1
-      ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.756483,
-      "lng": -9.185602,
-      "start": "2026-06-25T21:00",
-      "end": "2026-07-04",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 10.0,
-        "currency": "EUR",
-        "text": "€10"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/antonio-e-cleopatra/",
-      "source": "agendalx",
-      "description": "Na república dividida de Roma, a tensão entre Octávio e Marco António cresce. Mas o experiente general está mais interessado em viver a sua paixão com Cleópatra do que no futuro político do im...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/ANTONIO-E-CLEOP.png",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -27842,51 +27472,11 @@
       "lat": 38.732537,
       "lng": -9.135956,
       "start": "2026-06-26",
-      "end": "2026-06-26",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/turistificacao-gentrificacao/",
-      "source": "agendalx",
-      "description": "A Prosa exibe dois filmes que têm como tema central a turistificação e gentrificação: Provocação , de Mark Jenkin e The Last Black Man in San Francisco , Joe Talbot. programa...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/original.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "3e6692a3cb97": {
-      "id": "3e6692a3cb97",
-      "title": "Turistificação – Gentrificação",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Prosa - Plataforma Cultural",
-      "source_id": "agendalx",
-      "neighbourhood": "Arroios",
-      "zone": "city",
-      "lat": 38.732537,
-      "lng": -9.135956,
-      "start": "2026-06-27",
       "end": "2026-06-27",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "sat"
+        "fri"
       ],
       "price": {
         "is_free": false,
@@ -27957,7 +27547,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema Nimas",
+      "venue": "Cinema Medeia Nimas",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -28169,7 +27759,7 @@
       "categories": [
         1
       ],
-      "venue": "MACAM - Museu de Arte Contemporânea",
+      "venue": "MACAM – Museu de Arte Contemporânea Armando Martins",
       "source_id": "agendalx",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -28684,46 +28274,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "9d5fc159ccf7": {
-      "id": "9d5fc159ccf7",
-      "title": "Estas obras MAATam-me!",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "MAAT - Museu de Arte, Arquitetura e Tecnologia",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.695911,
-      "lng": -9.195691,
-      "start": "2026-06-28",
-      "end": "2026-12-13",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/estas-obras-maatam-me/",
-      "source": "agendalx",
-      "description": "O Teatro Praga vem ao MAAT para desafiar a formar ideias com o corpo e através do movimento numa oficina criativa, na qual as obras de arte são o ponto de inspiração para deixar fluir a expressivi...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/PAD2125©Alipio-Padilha-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "77eab79f1ebb": {
       "id": "77eab79f1ebb",
       "title": "Filigrana Portuguesa",
@@ -28731,7 +28281,7 @@
       "categories": [
         1
       ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
+      "venue": "Boutique da Cultura",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -28978,51 +28528,11 @@
       "lat": 38.720877,
       "lng": -9.148759,
       "start": "2026-06-29",
-      "end": "2026-06-29",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "mon"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/a-cinemateca-com-porto-summer-school-on-art-cinema/",
-      "source": "agendalx",
-      "description": "O Porto Summer School on Art & Cinema, organizado pela Escola das Artes e pelo Centro de Investigação em Ciência e Tecnologia das Artes da Universidade Católica Portuguesa, é um curso ava...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/05/KIKI_web.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "1302eac4f0a5": {
-      "id": "1302eac4f0a5",
-      "title": "A Cinemateca com Porto Summer School on Art & Cinema",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Cinemateca Portuguesa - Museu do Cinema",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.720877,
-      "lng": -9.148759,
-      "start": "2026-06-30",
       "end": "2026-06-30",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "tue"
+        "mon"
       ],
       "price": {
         "is_free": false,
@@ -29333,7 +28843,7 @@
       "categories": [
         1
       ],
-      "venue": "Cinema Nimas",
+      "venue": "Cinema Medeia Nimas",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -29493,7 +29003,7 @@
       "categories": [
         1
       ],
-      "venue": "Boutique da Cultura - Um Teatro em Cada Bairro",
+      "venue": "Boutique da Cultura",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -29620,51 +29130,11 @@
       "lat": 38.732537,
       "lng": -9.135956,
       "start": "2026-07-03",
-      "end": "2026-07-03",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/laurie-anderson-voz-intuicao-e-palavra/",
-      "source": "agendalx",
-      "description": "A Prosa exibe dois filmes que dão a conhecer Laurie Anderson, artista experimental, compositora e realizadora americana que utiliza recorrentemente a tecnologia na sua obra. 3 julho: 10h30 <stron...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/homeofthebrave_still2-new-press.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "0b93a8e2aa4c": {
-      "id": "0b93a8e2aa4c",
-      "title": "Laurie Anderson: voz, intuição e palavra",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Prosa - Plataforma Cultural",
-      "source_id": "agendalx",
-      "neighbourhood": "Arroios",
-      "zone": "city",
-      "lat": 38.732537,
-      "lng": -9.135956,
-      "start": "2026-07-04",
       "end": "2026-07-04",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "sat"
+        "fri"
       ],
       "price": {
         "is_free": false,
@@ -29699,52 +29169,12 @@
       "zone": null,
       "lat": null,
       "lng": null,
-      "start": "2026-07-03T16:00",
-      "end": "2026-07-03",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-03",
+      "end": "2026-07-04",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/mercado-quinhentista-feira-das-sopas/",
-      "source": "agendalx",
-      "description": "Inspirado na atmosfera do século XVI, este mercado recria o ambiente vivido na época dos Descobrimentos, período em que Machico desempenhou um papel central na história da Ilha da Madeira. A ve...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/AdobePhotoshopExpress_15a7c75acbdb4209b5a029c01d7d85b5-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "f2b097977fd3": {
-      "id": "f2b097977fd3",
-      "title": "Mercado Quinhentista & Feira das Sopas",
-      "topic": "food",
-      "categories": [
-        1
-      ],
-      "venue": "Posto de Informação e Promoção Turística da Madeira",
-      "source_id": "agendalx",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-04T16:00",
-      "end": "2026-07-04",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
       ],
       "price": {
         "is_free": false,
@@ -30344,51 +29774,11 @@
       "lat": 38.732537,
       "lng": -9.135956,
       "start": "2026-07-10",
-      "end": "2026-07-10",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/quem-somos-quem-fomos-quando-contamos-historias/",
-      "source": "agendalx",
-      "description": "A Prosa exibe dois filmes que exploram temas como liberdade e memória. 10 julho: 19h30 Homem no Arame De James Marsh Em 1974, o funambulis...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/man.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "dd98d6783404": {
-      "id": "dd98d6783404",
-      "title": "Quem somos? Quem fomos? (quando contamos histórias)",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "Prosa - Plataforma Cultural",
-      "source_id": "agendalx",
-      "neighbourhood": "Arroios",
-      "zone": "city",
-      "lat": 38.732537,
-      "lng": -9.135956,
-      "start": "2026-07-11",
       "end": "2026-07-11",
       "all_day": true,
-      "ongoing": false,
+      "ongoing": true,
       "days": [
-        "sat"
+        "fri"
       ],
       "price": {
         "is_free": false,
@@ -30463,52 +29853,12 @@
       "zone": "city",
       "lat": 38.707771,
       "lng": -9.195983,
-      "start": "2026-07-11T11:30",
-      "end": "2026-07-11",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-11",
+      "end": "2026-07-12",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 3.0,
-        "currency": "EUR",
-        "text": "€3"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/amizades-de-verao/",
-      "source": "agendalx",
-      "description": "Finalmente o descanso merecido… mas antes de ocupar um lugar ao sol há muita coisa para resolver, em família e com os amigos.",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/playjulho3.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "1c1b5f16ab87": {
-      "id": "1c1b5f16ab87",
-      "title": "Amizades de verão",
-      "topic": "film",
-      "categories": [
-        1
-      ],
-      "venue": "LU.CA - Teatro Luís de Camões",
-      "source_id": "agendalx",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.707771,
-      "lng": -9.195983,
-      "start": "2026-07-12T11:30",
-      "end": "2026-07-12",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
       ],
       "price": {
         "is_free": false,
@@ -30703,52 +30053,12 @@
       "zone": "city",
       "lat": 38.718905,
       "lng": -9.146481,
-      "start": "2026-07-15T21:00",
-      "end": "2026-07-15",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-15",
+      "end": "2026-07-16",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/gongada-drag/",
-      "source": "agendalx",
-      "description": "O espetáculo cruza comédia e arte drag, num formato marcado pelo humor e pelas suas alfinetadas. Em cada edição, o Gongada Drag reúne diferentes d rag queens e comediantes qu...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/03/gongada-1.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "b4383250ce88": {
-      "id": "b4383250ce88",
-      "title": "Gongada Drag",
-      "topic": "comedy",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro Variedades",
-      "source_id": "agendalx",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.718905,
-      "lng": -9.146481,
-      "start": "2026-07-16T21:00",
-      "end": "2026-07-16",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
       ],
       "price": {
         "is_free": false,
@@ -30867,52 +30177,12 @@
       "zone": null,
       "lat": null,
       "lng": null,
-      "start": "2026-07-17T16:00",
-      "end": "2026-07-17",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-17",
+      "end": "2026-07-18",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/fim-de-semana-gastronomico-madeirense/",
-      "source": "agendalx",
-      "description": "Nos dias 17 e 18 de julho, o Posto de Informação e Promoção Turística da Madeira convida a descobrir — ou a revisitar — os verdadeiros sabores da ilha, num fim de semana inteiramente dedicado...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/TMADEIRA-60_edited-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "177866cb4c96": {
-      "id": "177866cb4c96",
-      "title": "Fim de Semana Gastronómico Madeirense",
-      "topic": "food",
-      "categories": [
-        1
-      ],
-      "venue": "Posto de Informação e Promoção Turística da Madeira",
-      "source_id": "agendalx",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-07-18T16:00",
-      "end": "2026-07-18",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
       ],
       "price": {
         "is_free": false,
@@ -31111,52 +30381,12 @@
       "zone": "city",
       "lat": 38.707771,
       "lng": -9.195983,
-      "start": "2026-07-18T11:30",
-      "end": "2026-07-18",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-18",
+      "end": "2026-07-19",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 1.0,
-        "currency": "EUR",
-        "text": "€1"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/palavras-para-mergulhar/",
-      "source": "agendalx",
-      "description": "No Verão as palavras estalam, aquecem a pele e secam as bocas. Procuramos rios, sombras, mar, campo para mergulharmos em lugares que nos refresquem o corpo e saibam construir memórias felizes na inf...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/leiturasadivinhas-35-250208.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "5c504c917bba": {
-      "id": "5c504c917bba",
-      "title": "Palavras para Mergulhar",
-      "topic": "family",
-      "categories": [
-        1
-      ],
-      "venue": "LU.CA - Teatro Luís de Camões",
-      "source_id": "agendalx",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.707771,
-      "lng": -9.195983,
-      "start": "2026-07-19T11:30",
-      "end": "2026-07-19",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
       ],
       "price": {
         "is_free": false,
@@ -31519,52 +30749,12 @@
       "zone": "city",
       "lat": 38.70707,
       "lng": -9.155332,
-      "start": "2026-07-24T21:00",
-      "end": "2026-07-24",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-24",
+      "end": "2026-07-25",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/aguenta-princesa-que-o-mar-esta-bravo/",
-      "source": "agendalx",
-      "description": "Um olhar sobre a personagem Dom Quixote, a partir do clássico do mestre espanhol Miguel de Cervantes.",
-      "image": "https://www.agendalx.pt/content/uploads/2026/06/Aguenta-princesa-e1781535263755.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "agendalx",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "8dc6a36462d1": {
-      "id": "8dc6a36462d1",
-      "title": "Aguenta Princesa que o mar está bravo",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro Cinearte",
-      "source_id": "agendalx",
-      "neighbourhood": "Estrela",
-      "zone": "city",
-      "lat": 38.70707,
-      "lng": -9.155332,
-      "start": "2026-07-25T21:00",
-      "end": "2026-07-25",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
       ],
       "price": {
         "is_free": false,
@@ -31666,19 +30856,19 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "7cae5fd405f7": {
-      "id": "7cae5fd405f7",
-      "title": "MEO Kalorama",
+    "bea891d15f61": {
+      "id": "bea891d15f61",
+      "title": "Meo Kalorama 2026",
       "topic": "outdoors",
       "categories": [
         1
       ],
-      "venue": "Parque da Belavista",
-      "source_id": "agendalx",
+      "venue": "Parque da Bela Vista",
+      "source_id": "fever",
       "neighbourhood": "Marvila",
       "zone": "city",
-      "lat": 38.749999,
-      "lng": -9.125644,
+      "lat": 38.750764,
+      "lng": -9.124337,
       "start": "2026-08-28",
       "end": "2026-08-30",
       "all_day": true,
@@ -31688,21 +30878,21 @@
       ],
       "price": {
         "is_free": false,
-        "min": 100.0,
+        "min": 65.0,
         "currency": "EUR",
-        "text": "€100–120"
+        "text": "€65"
       },
       "language": [
         "pt"
       ],
-      "url": "https://www.agendalx.pt/events/event/meo-kalorama-5/",
-      "source": "agendalx",
-      "description": "Em agosto, o Parque da Bela Vista volta a receber o MEO Kalorama. Desde 2022, o festival tem vindo a estabelecer-se como o maior festival de verão da cidade de Lisboa, ocupando todos os anos um dos m...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/02/Robbie-Williams.png",
+      "url": "https://feverup.com/m/521187/en",
+      "source": "fever",
+      "description": "⭐ Already planning next summer? From August 28 – 30 , MEO KALORAMA 2026 returns to Parque da Bela Vista in Lisbon. Don't miss the best festival of the summer! Highlights 🌟 One of the hottest music festivals of the season: three unforgettable days with national and international a.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/a82c63da-d53e-11f0-bca1-c231b51512f1.png",
       "lineup": null,
       "links": null,
       "prov": null,
-      "_connector": "agendalx",
+      "_connector": "fever",
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
@@ -33793,7 +32983,7 @@
       "categories": [
         1
       ],
-      "venue": "Macam - Museu De Arte Contemporânea Armando Martins",
+      "venue": "MACAM – Museu de Arte Contemporânea Armando Martins",
       "source_id": "ticketline",
       "neighbourhood": "Alcântara",
       "zone": "city",
@@ -33999,10 +33189,10 @@
       "zone": null,
       "lat": null,
       "lng": null,
-      "start": "2026-06-27T19:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-06-27",
+      "end": "2026-06-28",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "sat"
       ],
@@ -34021,48 +33211,6 @@
       "image": "https://info.ticketline.pt/images/Espectaculos/105599/cartaz.jpg?rev=20260612144931",
       "lineup": null,
       "links": null,
-      "prov": null,
-      "_connector": "ticketline",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "c113b61733db": {
-      "id": "c113b61733db",
-      "title": "40 Anos de Memórias",
-      "topic": "performance",
-      "categories": [
-        1
-      ],
-      "venue": "Colégio Maristas | Auditório",
-      "source_id": "ticketline",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-28T15:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 9.0,
-        "currency": "EUR",
-        "text": "€9–9,66"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ticketline.pt/evento/40-anos-de-memorias-105606",
-      "source": "ticketline",
-      "description": "",
-      "image": "https://info.ticketline.pt/images/Espectaculos/105606/cartaz.jpg?rev=20260612144931",
-      "lineup": null,
-      "links": [
-        "https://www.ticketline.pt/evento/40-anos-de-memorias-105607"
-      ],
       "prov": null,
       "_connector": "ticketline",
       "_first_seen": "2026-06-22T11:14:02Z",
@@ -37663,52 +36811,12 @@
       "zone": "city",
       "lat": 38.7380413,
       "lng": -9.1550827,
-      "start": "2026-07-04T15:30",
-      "end": "2026-07-04",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-04",
+      "end": "2026-07-05",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 11.5,
-        "currency": "EUR",
-        "text": "€11,50–15,50"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/agenda/vieira-da-silva-a-poesia-saiu-a-rua/",
-      "source": "gulbenkian",
-      "description": "Nesta estória, a partir do novo livro escrito e ilustrado por Catarina Sobral para a coleção infantil do CAM Heroínas das Artes, vamos conhecer a vida da artista Maria Helena Vieira da Silva, navegando pelas suas muitas voltas e reviravoltas.",
-      "image": "https://gulbenkian.pt/wp-content/uploads/2026/03/Vieira-da-Silva-a-poesia-saiu-a-rua.-Ciclo-Muito-me-Contas-12-x-9.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "gulbenkian",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "64589cdee819": {
-      "id": "64589cdee819",
-      "title": "Vieira da Silva, a poesia saiu à rua",
-      "topic": "family",
-      "categories": [
-        10
-      ],
-      "venue": "Fundação Calouste Gulbenkian",
-      "source_id": "gulbenkian",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.7380413,
-      "lng": -9.1550827,
-      "start": "2026-07-05T10:30",
-      "end": "2026-07-05",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
       ],
       "price": {
         "is_free": false,
@@ -40628,47 +39736,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "385a623aed52": {
-      "id": "385a623aed52",
-      "title": "Rock in Rio Lisboa 2026",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Tejo Park",
-      "source_id": "fever",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": 38.7918017,
-      "lng": -9.092789,
-      "start": "2026-06-27T13:00",
-      "end": "2026-06-28",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 89.0,
-        "currency": "EUR",
-        "text": "€89"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/371468/en",
-      "source": "fever",
-      "description": "On June 20, 21, 27, and 28, the festival comes back to Parque Tejo for its 11th edition, offering more space, more comfort, and a fully renewed experience from the moment you arrive to the final chord. If the last edition was already historic, get ready — this one will raise the.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/337ae5ae-4fa8-11f1-9706-6ac0209ae0ab.png",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "fever",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "c528de9ec652": {
       "id": "c528de9ec652",
       "title": "Mystery in Lisbon",
@@ -40823,46 +39890,6 @@
       "source": "fever",
       "description": "⭐ Candlelight: Disney Love Songs is the ultimate concert experience for Disney fans! Immerse yourself in the world of Disney through live renditions of your favorite love songs, all performed classically by the light of a thousand candles. Highlights 🎵 Live music performances of.",
       "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/597f8688-6010-11f1-9b0c-6e13b0f648a3.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "fever",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "bea891d15f61": {
-      "id": "bea891d15f61",
-      "title": "Meo Kalorama 2026",
-      "topic": "outdoors",
-      "categories": [
-        1
-      ],
-      "venue": "Parque da Bela Vista",
-      "source_id": "fever",
-      "neighbourhood": "Marvila",
-      "zone": "city",
-      "lat": 38.750764,
-      "lng": -9.124337,
-      "start": "2026-08-28T14:00",
-      "end": "2026-08-30",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 65.0,
-        "currency": "EUR",
-        "text": "€65"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/521187/en",
-      "source": "fever",
-      "description": "⭐ Already planning next summer? From August 28 – 30 , MEO KALORAMA 2026 returns to Parque da Bela Vista in Lisbon. Don't miss the best festival of the summer! Highlights 🌟 One of the hottest music festivals of the season: three unforgettable days with national and international a.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/a82c63da-d53e-11f0-bca1-c231b51512f1.png",
       "lineup": null,
       "links": null,
       "prov": null,
@@ -46643,206 +45670,6 @@
       "_first_seen": "2026-06-22T11:14:02Z",
       "_last_seen": "2026-06-22T11:14:02Z"
     },
-    "ed2eba5ace56": {
-      "id": "ed2eba5ace56",
-      "title": "Terra Crua",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23",
-      "end": "2026-09-05",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-terra-crua/2026-06-23/",
-      "source": "ccb",
-      "description": "Num momento de pressão sobre os limites do planeta, olhamos para a terra crua não como retorno nostálgico, mas como recurso natural, local e disponível. Construir com terra é compreender o território e reativar um arquivo de conhecimento que liga recursos locais e cultura constru.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/TerraCrua2_MACCCBB_creditoTiagoCasanova.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "72b6fe48b114": {
-      "id": "72b6fe48b114",
-      "title": "Frida Orupabo",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23",
-      "end": "2026-09-05",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-frida-orupabo/2026-06-23/",
-      "source": "ccb",
-      "description": "Na sua primeira exposição individual em Portugal, Frida Orupabo revisita o vasto arquivo de imagens que tem vindo a reunir na sua conta de Instagram, material composto por tensões entre intimidade e violência, e instaura um espaço crítico e emocional. A exposição inspira-se no fl.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/FridaOrupabo_CloudOfConfusion_MACCCB1creditoAntonioJorgeSilva.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "fc2967baacd7": {
-      "id": "fc2967baacd7",
-      "title": "Olhos Múltiplos",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23",
-      "end": "2026-09-05",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-olhos-multiplos/2026-06-23/",
-      "source": "ccb",
-      "description": "Numa era em que os ecrãs moldam a nossa perceção da realidade e os algoritmos ditam as nossas preferências, os trabalhos destas artistas — fundindo o sensível, o simbólico, o ancestral e o espiritual com o popular, o carnavalesco, o mágico e o abjeto — propõem uma alternativa: a.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/OlhosMultiplos7_PatriciaDominguez_LuainaHimid©AntonioJorgeSilva-1-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "5ddc0085f871": {
-      "id": "5ddc0085f871",
-      "title": "José Pedro Croft",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23",
-      "end": "2026-09-05",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-jose-pedro-croft/2026-06-23/",
-      "source": "ccb",
-      "description": "Gravuras, desenhos e relevos dialogam em torno de um conjunto de esculturas que ocupa o eixo longitudinal do espaço expositivo. São os reflexos, enclaves e desvios de José Pedro Croft, um dos mais reconhecidos artistas portugueses, no piso 0 do MAC/CCB. A seleção de obras para es.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/credito-2026-Daniel-Malhaao.-Croft-2026.-CCB.-9648.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "5dc130509221": {
-      "id": "5dc130509221",
-      "title": "May I Help You? Posso Ajudar?",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-23",
-      "end": "2026-09-05",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/exposicao-may-i-help-you-posso-ajudar/2026-06-23/",
-      "source": "ccb",
-      "description": "A questão quotidiana «Posso ajudar?» foi usada pela artista Andrea Fraser numa performance que abordava as complexas relações institucionais no mundo da arte. A pergunta dirige também um questionamento ao próprio museu: que tipo de ajuda é realmente oferecida e que tipo de conexã.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/May-I-Help-You_MAC_CCB2-creditoAntonioJorgeSilva-scaled.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
     "47e304b22f21": {
       "id": "47e304b22f21",
       "title": "Do Museu ao Jardim: Ciclo de Leitura Queer",
@@ -47060,10 +45887,10 @@
       "zone": "city",
       "lat": 38.696435,
       "lng": -9.208603,
-      "start": "2026-06-26T20:00",
+      "start": "2026-06-26",
       "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "fri",
         "sat"
@@ -47088,50 +45915,6 @@
       ],
       "prov": {
         "price": "bol"
-      },
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "485ac7c93352": {
-      "id": "485ac7c93352",
-      "title": "Da Desordem das Paixões",
-      "topic": "music",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-27T20:00",
-      "end": "2026-06-27",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/da-desordem-das-paixoes/2026-06-27/",
-      "source": "ccb",
-      "description": "Os Músicos do Tejo e Sofia Dias & Vítor Roriz, unidos pelo seu amor ao barroco, ao século XVII e XVIII, à dança, à música de dança, aos pássaros, aos textos sobre dança, aos textos que falam de danças maravilhosas, aos professores de dança que tocam violino e que compõem melodias.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/09/2000x940__SofiaDiasVtorRuizcomMusicosdoTejo_brunosimao-1.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/da-desordem-das-paixoes/"
-      ],
-      "prov": {
-        "price": "agendalx"
       },
       "_connector": "ccb",
       "_first_seen": "2026-06-22T11:14:02Z",
@@ -47645,10 +46428,10 @@
       "zone": "city",
       "lat": 38.696435,
       "lng": -9.208603,
-      "start": "2026-07-11T19:00",
-      "end": "2026-07-11",
-      "all_day": false,
-      "ongoing": false,
+      "start": "2026-07-11",
+      "end": "2026-07-12",
+      "all_day": true,
+      "ongoing": true,
       "days": [
         "sat"
       ],
@@ -47662,46 +46445,6 @@
         "pt"
       ],
       "url": "https://www.ccb.pt/evento/brel/2026-07-11/",
-      "source": "ccb",
-      "description": "A partir de temas (e imagens) de Jacques Brel (Bélgica, 1929-1978) — cantor, compositor, e autor de várias músicas incontornáveis do século XX —, a bailarina e coreógrafa Anne Teresa De Keersmaeker (Bélica, 1960) — referência da Dança Contemporânea nos últimos 45 anos —, juntou-s.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2026/06/destaqueBRELrehearsalbyAnneVanAerschot.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null,
-      "_connector": "ccb",
-      "_first_seen": "2026-06-22T11:14:02Z",
-      "_last_seen": "2026-06-22T11:14:02Z"
-    },
-    "3cdb2137415d": {
-      "id": "3cdb2137415d",
-      "title": "Brel",
-      "topic": "outdoors",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-07-12T17:00",
-      "end": "2026-07-12",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/brel/2026-07-12/",
       "source": "ccb",
       "description": "A partir de temas (e imagens) de Jacques Brel (Bélgica, 1929-1978) — cantor, compositor, e autor de várias músicas incontornáveis do século XX —, a bailarina e coreógrafa Anne Teresa De Keersmaeker (Bélica, 1960) — referência da Dança Contemporânea nos últimos 45 anos —, juntou-s.",
       "image": "https://www.ccb.pt/wp-content/uploads/2026/06/destaqueBRELrehearsalbyAnneVanAerschot.jpg",
