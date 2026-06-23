@@ -262,25 +262,68 @@ const FONTE_PT = { ok: 'ok', partial: 'parcial', failed: 'falhou', shrunk: 'enco
 async function renderFontes(latestWeek) {
   const wrap = $('#st-fontes'), grid = $('#st-connectors');
   if (!wrap || !grid) return;
-  let state = {}, byConn = {};
+  let state = {}, week = null;
   try { state = await (await fetch('/data/connector_state.json', { cache: 'no-cache' })).json(); } catch { /* none yet */ }
-  try {
-    const w = await (await fetch('/data/weeks/' + latestWeek.file, { cache: 'no-cache' })).json();
-    byConn = (w.meta && w.meta.events_by_connector) || {};
-  } catch { /* ignore */ }
+  try { week = await (await fetch('/data/weeks/' + latestWeek.file, { cache: 'no-cache' })).json(); } catch { /* ignore */ }
   const names = Object.keys(state);
-  if (!names.length) { wrap.hidden = true; return; }
-  wrap.hidden = false;
-  grid.innerHTML = '';
-  names.sort((a, b) => (state[b].last_count || 0) - (state[a].last_count || 0));
-  for (const id of names) {
-    const r = state[id] || {};
-    const st = r.last_status || 'ok';
-    grid.append(el('div', { className: 'fonte fonte-' + st },
-      el('span', { className: 'fonte-name', textContent: id }),
-      el('span', { className: 'fonte-count', textContent: (r.last_count != null ? r.last_count : '—') + ' ev.' }),
-      el('span', { className: 'fonte-badge', textContent: FONTE_PT[st] || st })));
+  wrap.hidden = !names.length;
+  if (names.length) {
+    grid.innerHTML = '';
+    names.sort((a, b) => (state[b].last_count || 0) - (state[a].last_count || 0));
+    for (const id of names) {
+      const r = state[id] || {};
+      const st = r.last_status || 'ok';
+      grid.append(el('div', { className: 'fonte fonte-' + st },
+        el('span', { className: 'fonte-name', textContent: id }),
+        el('span', { className: 'fonte-count', textContent: (r.last_count != null ? r.last_count : '—') + ' ev.' }),
+        el('span', { className: 'fonte-badge', textContent: FONTE_PT[st] || st })));
+    }
   }
+  renderSourceQuality((week && week.events) || []);
+}
+
+const _sqNorm = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]/g, '');
+
+// per-source coverage of the published week: how many events each source brings
+// and how many have an image / coordinates / price, plus a cross-source dup flag.
+function renderSourceQuality(events) {
+  const box = $('#st-source-quality'), tb = $('#sq-rows');
+  if (!box || !tb) return;
+  if (!events.length) { box.hidden = true; return; }
+  // a title that shows up under more than one source is a likely duplicate
+  const titleSources = {};
+  for (const e of events) (titleSources[_sqNorm(e.title)] ||= new Set()).add(e.source_id || e.source);
+  const by = {};
+  for (const e of events) {
+    const k = e.source_id || e.source || '?';
+    const r = by[k] || (by[k] = { n: 0, img: 0, coord: 0, price: 0, dup: 0 });
+    r.n++;
+    if (e.image) r.img++;
+    if (e.lat != null && e.lng != null) r.coord++;
+    if (e.price && (e.price.text || e.price.is_free)) r.price++;
+    if ((titleSources[_sqNorm(e.title)] || new Set()).size > 1) r.dup++;
+  }
+  const rows = Object.entries(by).sort((a, b) => b[1].n - a[1].n);
+  const noImg = rows.filter(([, r]) => r.img === 0).length;
+  $('#sq-summary').textContent =
+    `${rows.length} fontes na semana publicada · ${noImg} sem qualquer imagem · imagem/coord/preço = % dos eventos da fonte que os têm.`;
+  tb.innerHTML = '';
+  const pctCell = (have, n) => {
+    const p = n ? Math.round(100 * have / n) : 0;
+    const c = el('td', { textContent: p + '%' });
+    c.className = 'sq-pct ' + (p === 0 ? 'sq-bad' : p < 50 ? 'sq-mid' : 'sq-good');
+    return c;
+  };
+  for (const [id, r] of rows) {
+    const tr = el('tr', {},
+      el('td', { className: 'sq-name', textContent: id }),
+      el('td', { className: 'sq-num', textContent: String(r.n) }),
+      pctCell(r.img, r.n), pctCell(r.coord, r.n), pctCell(r.price, r.n),
+      el('td', { className: 'sq-num', textContent: r.dup ? String(r.dup) : '' }));
+    if (r.img === 0) tr.classList.add('sq-row-bad');
+    tb.append(tr);
+  }
+  box.hidden = false;
 }
 
 /* ---------- 02 ações ---------- */

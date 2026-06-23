@@ -541,6 +541,18 @@ html.js .card-rv.in { opacity: 1; transform: none; }
 .fonte-partial .fonte-badge, .fonte-shrunk .fonte-badge { background: #d98f00; }
 .fonte-failed { border-left-color: #ff3d1f; } .fonte-failed .fonte-badge { background: #ff3d1f; }
 
+/* per-source quality table (admin · Estado) */
+.sq-table-wrap { max-height: 440px; overflow: auto; border: 1px solid #e6ddcf; border-radius: 4px; }
+.sq-table { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 12px; }
+.sq-table th, .sq-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #efe7d9; white-space: nowrap; }
+.sq-table th { position: sticky; top: 0; background: var(--bg); color: #6f6f6f;
+  text-transform: uppercase; letter-spacing: .5px; font-size: 11px; }
+.sq-name { color: #1d1813; max-width: 320px; overflow: hidden; text-overflow: ellipsis; }
+.sq-num { text-align: right; color: #6f6f6f; }
+.sq-pct { text-align: right; font-weight: 700; }
+.sq-good { color: #1f9d55; } .sq-mid { color: #d98f00; } .sq-bad { color: #ff3d1f; }
+.sq-row-bad { background: rgba(255, 61, 31, .05); }
+
 .run-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .note { font-size: 16px; line-height: 24px; font-family: var(--grotesk); color: #6f6f6f; margin: 12px 0 0; }
 .note a { color: var(--accent); }

@@ -49,6 +49,17 @@
         <div id="st-connectors" class="fontes-grid"></div>
       </div>
 
+      <div id="st-source-quality" class="fontes-wall" hidden>
+        <h2 class="fontes-title">Qualidade por fonte</h2>
+        <p class="note" id="sq-summary" style="margin:.2rem 0 .6rem">O que cada fonte está a trazer na semana publicada: nº de eventos e quantos têm imagem, coordenadas e preço. «Dup?» = eventos cujo título também aparece noutra fonte (possível duplicado).</p>
+        <div class="sq-table-wrap">
+          <table class="sq-table">
+            <thead><tr><th>Fonte</th><th>Ev.</th><th>Imagem</th><th>Coord.</th><th>Preço</th><th>Dup?</th></tr></thead>
+            <tbody id="sq-rows"></tbody>
+          </table>
+        </div>
+      </div>
+
       <nav class="tabs" role="tablist" aria-label="Secções do painel">
         <button class="tab" role="tab" data-tab="setup" id="tab-btn-setup"><span class="tnum">01</span> Setup</button>
         <button class="tab" role="tab" data-tab="acoes" id="tab-btn-acoes"><span class="tnum">02</span> Ações</button>
