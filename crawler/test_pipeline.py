@@ -289,6 +289,15 @@ t('reframe drops out-of-window', [e['id'] for e in _rf], ['r1'])
 t('reframe marks ongoing', _rf[0]['ongoing'], True)
 t('reframe fills days', len(_rf[0]['days']), 7)
 
+# make_event ongoing override: a short run clamped to the window keeps em-curso
+_oS = {'id': 's', 'name': 'S', 'website': 'https://s.pt', 'topic': 'art', 'categories': [1]}
+_kw = dict(title='Expo', source=_oS, topic='art', mon=date(2026, 6, 22), window_end=date(2026, 9, 5),
+           start_d=date(2026, 6, 22), end_d=date(2026, 6, 25), has_time=False, start_iso='2026-06-22',
+           price={'is_free': False, 'min': None, 'currency': 'EUR', 'text': ''}, url=None,
+           description='', language=['pt'], categories=[1])
+t('make_event ongoing auto false', core.make_event(**_kw)['ongoing'], False)
+t('make_event ongoing override', core.make_event(**_kw, ongoing=True)['ongoing'], True)
+
 # ---- Phase 3: cross-source venue_key (coords) + source-priority merge ----
 def evc(src, title, venue=None, lat=None, lng=None, url=None, price=None, lineup=None):
     e = ev(src, title, venue=venue, url=url, price=price)

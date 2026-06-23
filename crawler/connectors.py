@@ -303,14 +303,14 @@ def _agendalx(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, 
             continue
         span = (last - first).days if last else 0
 
-        def emit(start_d, end_d):
+        def emit(start_d, end_d, ongoing=None):
             start_iso = f"{start_d.isoformat()}T{tstr}" if tstr else start_d.isoformat()
             ev = core.make_event(
                 title=title, source=source, topic=topic, mon=mon, window_end=window_end,
                 start_d=start_d, end_d=end_d, has_time=bool(tstr), start_iso=start_iso,
                 price=price, url=url, description=desc, language=["pt"],
                 categories=source["categories"], venue_name=venue,
-                neighbourhood=neigh, zone=zone, lat=lat, lng=lng)
+                neighbourhood=neigh, zone=zone, lat=lat, lng=lng, ongoing=ongoing)
             if ev:
                 if img:
                     ev["image"] = core.resolve_url(img, c["website"])
@@ -318,8 +318,9 @@ def _agendalx(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, 
 
         if span >= 5:  # exhibition / long run -> one ongoing span
             # clamp the stored start to the window so a years-old first occurrence
-            # doesn't mis-sort the card; the far end keeps it flagged ongoing
-            emit(max(first, mon), last)
+            # doesn't mis-sort the card, but force ongoing: the clamp would otherwise
+            # hide that the run started earlier (= "em curso").
+            emit(max(first, mon), last, ongoing=True)
         else:           # discrete date(s) -> one card per in-window occurrence
             for d in {dd for dd in (occ or [first]) if mon <= dd <= window_end}:
                 emit(d, d)
@@ -441,17 +442,18 @@ def _gulbenkian(session, cfg, c, source, mon, window_end, venues_idx, venues_geo
                 start_d, has_time, start_iso = sd
                 ed = core.parse_dt(s.get("end"))
                 end_d = ed[0] if ed else None
-                if typ == "weekly":   # exhibition with opening hours -> one ongoing span, all-day
+                weekly = typ == "weekly"
+                if weekly:   # exhibition with opening hours -> one ongoing span, all-day
                     start_d = max(start_d, mon)   # clamp so an old opening date sorts right
                     has_time, start_iso = False, start_d.isoformat()
-                topic = map_topic(title, desc, default=("art" if typ == "weekly" else "music"))
+                topic = map_topic(title, desc, default=("art" if weekly else "music"))
                 ev = core.make_event(
                     title=title, source=source, topic=topic, mon=mon, window_end=window_end,
                     start_d=start_d, end_d=end_d, has_time=has_time, start_iso=start_iso,
                     price=price, url=url, description=desc, language=["pt"],
                     categories=source["categories"], venue_name=c["name"],
                     neighbourhood=neigh, zone=zone, lat=lat, lng=lng,
-                    lineup=(lineup or None))
+                    lineup=(lineup or None), ongoing=(True if weekly else None))
                 if ev:
                     if img and core._good_img(img):
                         ev["image"] = core.resolve_url(img, c["website"])

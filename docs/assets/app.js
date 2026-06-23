@@ -206,10 +206,14 @@ function card(ev) {
   const topic = state.topicById[ev.topic];
 
   const when = el('div', { className: 'when' });
-  if (ev.ongoing) {
-    // a run/exhibition: point at its closing day ("até 12 · em curso"). Show the
-    // month when the end falls outside the week being viewed, so "até 12" can't
-    // be misread as this month when it's really 12 Jul.
+  // a run that spans more than one day: show its closing day ("até 26"), even when
+  // it isn't flagged "em curso" (a short multi-day run starting this week). The
+  // "em curso" label stays tied to ev.ongoing so it matches the filter.
+  const endISO = (ev.end || '').slice(0, 10);
+  const multiDay = endISO && endISO > (ev.start || '').slice(0, 10);
+  if (ev.ongoing || multiDay) {
+    // point at the closing day; show the month when the end falls outside the week
+    // being viewed, so "até 12" can't be misread as this month when it's 12 Jul.
     const endD = ev.end ? new Date(ev.end.slice(0, 10) + 'T00:00:00') : null;
     const ref = new Date(state.week.week_start + 'T00:00:00');
     const dateSpan = el('span', { className: 'date', textContent: (endD || d).getDate() || '' });
@@ -219,7 +223,7 @@ function card(ev) {
     when.append(
       el('span', { className: 'day', textContent: endD ? 'até' : (DAY_LABEL[ev.days?.[0]] || 'sem') }),
       dateSpan,
-      el('span', { className: 'ongoing', textContent: 'em curso' }));
+      el('span', { className: 'ongoing', textContent: ev.ongoing ? 'em curso' : '' }));
   } else {
     // always show the time line; an em-dash marks "no time captured"
     const time = (ev.start || '').slice(11, 16);

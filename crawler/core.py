@@ -1002,14 +1002,18 @@ def resolve_url(url: str | None, base: str | None) -> str | None:
 def make_event(*, title, source, topic, mon, window_end, start_d, end_d, has_time, start_iso,
                price, url, description, language, categories,
                venue_name=None, neighbourhood=None, zone=None,
-               lat=None, lng=None, lineup=None, links=None, prov=None) -> dict | None:
+               lat=None, lng=None, lineup=None, links=None, prov=None, ongoing=None) -> dict | None:
     if not title or not start_d:
         return None
     if not overlaps_window(start_d, end_d, mon, window_end):
         return None
-    days, ongoing = days_in_window(start_d, end_d, mon, window_end)
+    days, ongoing_auto = days_in_window(start_d, end_d, mon, window_end)
     if not days:
         return None
+    # connectors that clamp a run's start to the window (so the card sorts right)
+    # would otherwise lose the "started earlier" signal — let them force it.
+    if ongoing is None:
+        ongoing = ongoing_auto
     venue = re.sub(r"\s+", " ", str(venue_name or source["name"])).strip()[:120]
     title = clean_title(title, venue)
     if not title:
