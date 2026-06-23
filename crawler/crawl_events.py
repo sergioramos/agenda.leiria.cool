@@ -44,13 +44,24 @@ def enrich_events(session, cfg, source, evs, delay, listing_html="", cap=50,
     # out shared across differently-titled events, i.e. a real default.
     listing_info = (core.scrape_event_page(listing_html, source.get("website") or "", default_img)
                     if listing_html else {})
+    # EventON listings (e.g. Hot Clube) carry a correct per-event image + permalink
+    # in microdata, where the per-page JSON-LD does not — index it by title.
+    md = core.eventon_events(listing_html) if listing_html else []
+    md_by = {core._nt(m["name"]): m for m in md}
     cache, fetched = {}, 0
     for e in evs:
         u = e.get("url")
         if not u:
             continue
         if core.site_key(u) == page:
-            info = {"image": listing_info.get("image")}  # homepage fallback: image only
+            # homepage fallback: prefer a title-matched per-event microdata image
+            # (reliable on multi-event listings), else the listing's own JSON-LD image
+            et = core._nt(e.get('title') or '')
+            hit = md_by.get(et) or next((m for m in md if len(core._nt(m['name'])) >= 10
+                                         and (core._nt(m['name']) in et or et in core._nt(m['name']))), None)
+            info = {"image": (hit and hit.get('image')) or listing_info.get("image")}
+            if hit and hit.get('url') and core.site_key(hit['url']) != page:
+                e['url'] = hit['url']   # upgrade homepage -> the event's own permalink
         else:
             if u not in cache:
                 if fetched >= cap:

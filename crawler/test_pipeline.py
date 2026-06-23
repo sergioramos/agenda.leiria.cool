@@ -107,6 +107,22 @@ t('canon var suffix->canon', _evs[0]['venue'], 'Culturgest')
 t('canon var neigh filled', _evs[0].get('neighbourhood'), 'Avenidas Novas')
 t('canon var no fuzzy', _evs[2]['venue'], 'Lisboa')
 t('canon var already-canon untouched', _evs[3]['venue'], 'Culturgest')
+
+# EventON microdata: per-event name/url/image; a non-image content attr is dropped
+_EVO = ('<div data-event_id="1" itemscope itemtype="http://schema.org/Event">'
+        '<div class="evo_event_schema" style="display:none">'
+        '<a itemprop="url" href="https://hcp.pt/events/quinteto/"></a>'
+        '<span itemprop="name">Quinteto Maria Joao Leite</span>'
+        '<meta itemprop="image" content="https://hcp.pt/wp-content/uploads/2026/06/q.jpg"></div></div>'
+        '<div class="evo_event_schema" style="display:none">'
+        '<a itemprop="url" href="https://hcp.pt/events/escola/"></a>'
+        '<span itemprop="name">Escola de Jazz</span>'
+        '<meta itemprop="image" content="https://hcp.pt/events/escola/"></div></div>')
+_md = core.eventon_events(_EVO)
+t('eventon count', len(_md), 2)
+t('eventon image kept', _md[0]['image'], 'https://hcp.pt/wp-content/uploads/2026/06/q.jpg')
+t('eventon url', _md[0]['url'], 'https://hcp.pt/events/quinteto/')
+t('eventon non-image dropped', _md[1]['image'], None)
 t('default(listing) img rejected',
   core.scrape_event_page('<meta property="og:image" content="https://x.pt/cover.jpg">', 'https://x.pt/e', 'https://x.pt/cover.jpg').get('image'), None)
 _share = [{'title': 'A', 'image': 'https://x/lg.png'}, {'title': 'B', 'image': 'https://x/lg.png'}, {'title': 'C', 'image': 'https://x/p.jpg'}]

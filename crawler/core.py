@@ -596,6 +596,27 @@ def scrape_event_page(html: str, url: str, default_img: str = "") -> dict:
     return {k: v for k, v in out.items() if v}
 
 
+def eventon_events(html: str) -> list[dict]:
+    """Per-event {name, url, image} from EventON's hidden schema.org microdata
+    blocks. EventON's per-page JSON-LD is unreliable (every page repeats all
+    events, with malformed dates), but each event carries clean itemprop
+    name/url/image on its listing block — the only trustworthy per-event image
+    on these sites (e.g. Hot Clube de Portugal)."""
+    out, seen = [], set()
+    for blk in re.findall(r'<div class=["\']evo_event_schema["\'].*?</div>', html or "", re.S):
+        nm = re.search(r"itemprop=['\"]name['\"][^>]*>([^<]+)<", blk)
+        ur = re.search(r"itemprop=['\"]url['\"][^>]*href=['\"]([^'\"]+)", blk)
+        im = re.search(r"itemprop=['\"]image['\"][^>]*content=['\"]([^'\"]+)", blk)
+        if not (nm and ur) or ur.group(1) in seen:
+            continue
+        seen.add(ur.group(1))
+        img = im.group(1) if im else None
+        if img and not (re.search(r"\.(jpe?g|png|webp)(\?|$)", img, re.I) and _good_img(img)):
+            img = None   # guard against a non-image content attr
+        out.append({"name": re.sub(r"\s+", " ", nm.group(1)).strip(), "url": ur.group(1), "image": img})
+    return out
+
+
 def canonical_venue(name: str, venues_geo: dict | None, venues_idx: dict | None) -> dict | None:
     """Resolve a venue name to its canonical form via the venue directory (coords +
     neighbourhood), then the seed list. Returns {venue, neighbourhood, zone, lat,
