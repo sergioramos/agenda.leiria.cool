@@ -1,17 +1,17 @@
 {
   "week_start": "2026-06-22",
   "week_end": "2026-06-28",
-  "generated_at": "2026-06-23T23:36:13Z",
+  "generated_at": "2026-06-24T00:51:34Z",
   "is_sample": false,
   "source_count": 540,
-  "event_count": 805,
+  "event_count": 825,
   "meta": {
     "sources_tried": 513,
-    "ai_calls": 410,
-    "ai_cost_usd": 0.8181,
+    "ai_calls": 418,
+    "ai_cost_usd": 0.8575,
     "connector_status": {
       "agendalx": "ok",
-      "ccb": "failed",
+      "ccb": "shrunk",
       "gulbenkian": "ok",
       "ra": "ok",
       "bol": "failed",
@@ -22,18 +22,18 @@
       "ticketline": "ok"
     },
     "events_by_connector": {
-      "agendalx": 301,
+      "agendalx": 304,
       "ccb": 14,
-      "gulbenkian": 57,
-      "ra": 42,
+      "gulbenkian": 56,
+      "ra": 43,
       "bol": 119,
       "xceed": 12,
       "mato": 15,
-      "fever": 23,
+      "fever": 25,
       "dice": 2,
       "ticketline": 60
     },
-    "pool_size": 1274
+    "pool_size": 1333
   },
   "events": [
     {
@@ -73,7 +73,7 @@
       ],
       "url": "https://museuartecontemporanea.gov.pt/pt/programacao/2111",
       "source": "generic",
-      "description": "Exposição permanente da coleção do MNAC com obras de 1850 à atualidade, incluindo vários tesouros nacionais.",
+      "description": "Exposição permanente com obras fundadoras da arte portuguesa contemporânea, de 1850 à atualidade, incluindo vários tesouros nacionais.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -161,7 +161,7 @@
       ],
       "url": "https://www.teatrosaoluiz.pt/espetaculo/visitas-guiadas-2025-2026/",
       "source": "generic",
-      "description": "Visita guiada ao Teatro São Luiz conduzida pela equipa do teatro.",
+      "description": "Visita guiada ao São Luiz pela sua equipa, uma viagem pela história e arquitetura deste teatro centenário.",
       "image": "https://www.teatrosaoluiz.pt/wp-content/uploads/2025/06/dscf3144-estelle-valente-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -205,7 +205,7 @@
       ],
       "url": "https://lucateatroluisdecamoes.pt/ciclo/voltar-aonde-somos-felizes/",
       "source": "generic",
-      "description": "Temporada de um ano que revisita espetáculos memoráveis de teatro, dança, música e ilustração dos últimos oito anos do LU.CA.",
+      "description": "Durante um ano, o LU.CA revisita espetáculos marcantes dos últimos oito anos, nas áreas de teatro, dança e música.",
       "image": "https://lucateatroluisdecamoes.pt/wp-content/uploads/2025/11/voltaraondesomos.jpg",
       "lineup": null,
       "links": null,
@@ -248,27 +248,27 @@
       ],
       "url": "https://lisboa.events/cursos/plie-ballet-community-baby-mom-classes-ages-1-3-1f142eb1/",
       "source": "generic",
-      "description": "Aulas de ballet para bebés e mães (1-3 anos), com abordagem suave e alegre ao movimento.",
+      "description": "Aulas de ballet para bebés e mães, com movimento suave e alegre, num estúdio no centro de Lisboa.",
       "image": "https://ml3n4h8jrdie.i.optimole.com/w:269/h:297/q:mauto/f:best/ig:avif/https://lisboa.events/app/uploads/PliBalletCommunityBabyMomClassesages13def.png",
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "c7a43706e10a",
-      "title": "Dino Experience",
-      "topic": "family",
+      "id": "07a7040a140a",
+      "title": "ECOlógicas – Visita ao jardim e oficina",
+      "topic": "workshops",
       "categories": [
-        28
+        12
       ],
-      "venue": "Porto",
-      "source_id": "happy-kids",
-      "neighbourhood": null,
-      "zone": null,
+      "venue": "Fundação Arpad Szenes – Vieira da Silva",
+      "source_id": "fundacao-arpad-szenes-vieira-da-silva",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
       "lat": null,
       "lng": null,
-      "start": "2026-01-01",
-      "end": "2026-10-31",
+      "start": "2026-01-17",
+      "end": "2027-02-28",
       "all_day": true,
       "ongoing": true,
       "days": [
@@ -282,17 +282,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": 10.0,
+        "min": 7.0,
         "currency": "EUR",
-        "text": "€10"
+        "text": "€7–60"
       },
       "language": [
         "pt"
       ],
-      "url": "https://happykids.pt/evento/dino-experience/",
+      "url": "https://fasvs.pt/eventos/ecologicas/",
       "source": "generic",
-      "description": "Exposição imersiva com dinossauros animatrónicos em tamanho real, para toda a família.",
-      "image": "https://happykids.pt/wp-content/uploads/2026/05/Dino-Experience-3-1024x683.jpg",
+      "description": "Visita guiada ao jardim do museu seguida de oficina ecológica, parte do projeto TEAR TEOR.",
+      "image": "https://fasvs.pt/wp-content/uploads/2026/01/ViewImage.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -344,7 +344,7 @@
     {
       "id": "c3774272979d",
       "title": "Palavras que abraçam - leituras para crianças e jovens com baixa visão ou cegas",
-      "topic": "community",
+      "topic": "family",
       "categories": [
         19
       ],
@@ -378,7 +378,7 @@
       ],
       "url": "https://blx.cm-lisboa.pt/evento/palavras-que-abracam/",
       "source": "generic",
-      "description": "Gravações de leituras destinadas a crianças e jovens com baixa visão ou cegas.",
+      "description": "Gravações de leituras para crianças e jovens com deficiência visual.",
       "image": "https://blx.cm-lisboa.pt/wp-content/uploads/2026/02/palavras_que_abracam_site.jpg",
       "lineup": null,
       "links": null,
@@ -428,6 +428,49 @@
       "prov": null
     },
     {
+      "id": "a24f140b88ad",
+      "title": "Artistas sobre Artistas",
+      "topic": "learning",
+      "categories": [
+        12
+      ],
+      "venue": "Fundação Arpad Szenes – Vieira da Silva",
+      "source_id": "fundacao-arpad-szenes-vieira-da-silva",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-03-14",
+      "end": "2027-12-12",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–60"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fasvs.pt/eventos/artistas-sobre-artistas/",
+      "source": "generic",
+      "description": "Seminário onde artistas contemporâneos discutem as suas influências e referências.",
+      "image": "https://fasvs.pt/wp-content/uploads/2026/03/PHOTO-2026-03-14-11-27-06-1.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "097a5dc2fda0",
       "title": "Designing Sustainable Futures",
       "topic": "art",
@@ -464,7 +507,7 @@
       ],
       "url": "https://ulisboa.pt/en/event/designing-sustainable-futures",
       "source": "generic",
-      "description": "Exposição que explora designs e inovações com vista a futuros sustentáveis, patente no Centro de Exposições do Pavilhão de Portugal.",
+      "description": "Exposição que explora conceitos de design para um futuro sustentável.",
       "image": "https://www.ulisboa.pt/sites/default/files/styles/image_base/public/images/base_image/2026-02/15559-bb8d8927fd6a8d2908a184a5bb1bec50.png.jpg?itok=ypRDlB1h",
       "lineup": null,
       "links": null,
@@ -591,7 +634,7 @@
       ],
       "url": "https://www.teatrosaoluiz.pt/espetaculo/a-luz-que-ficou/",
       "source": "generic",
-      "description": "Exposição de fotografia de Estelle Valente que retrata o Teatro São Luiz.",
+      "description": "Exposição fotográfica de Estelle Valente, um retrato íntimo do Teatro São Luiz, que capta a sua alma e memórias.",
       "image": "https://www.teatrosaoluiz.pt/wp-content/uploads/2025/07/unassono-victor-hugo-pontes-2017-1-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -634,7 +677,7 @@
       ],
       "url": "https://fasciniodafotografia.com/2026/05/03/fernando-lemos-luz-do-olhar/",
       "source": "generic",
-      "description": "Exposição comemorativa do centenário do nascimento de Fernando Lemos, com obras do artista no Centro de Arte e Cultura da Fundação Eugénio de Almeida.",
+      "description": "Exposição comemorativa do centenário do nascimento de Fernando Lemos, apresentando a sua obra fotográfica.",
       "image": "https://fasciniodafotografia.com/wp-content/uploads/2026/05/fernando-lemos-1.jpg",
       "lineup": null,
       "links": null,
@@ -721,26 +764,25 @@
       ],
       "url": "https://scml.pt/evento/o-menino-jesus-dos-atribulados-uma-devocao-feminina-na-lisboa-de-d-joao-vi-exposicao/",
       "source": "generic",
-      "description": "Exposição sobre a devoção ao Menino Jesus dos Atribulados no contexto feminino da Lisboa joanina.",
+      "description": "Mostra de arte sacra dedicada à figura do Menino Jesus dos Atribulados, contextualizada no Portugal setecentista.",
       "image": "https://scml.pt/wp-content/uploads/2026/03/Menino-jesus-dos-atribulados.jpg",
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "1ab4cc6b5c9b",
+      "id": "2aec209f5913",
       "title": "O Portugal de Todd Webb",
       "topic": "art",
       "categories": [
-        11,
-        49
+        10
       ],
-      "venue": "Galeria do Piso Inferior",
-      "source_id": "jardim-de-verao",
-      "neighbourhood": "Avenidas Novas",
+      "venue": "Fundação Calouste Gulbenkian",
+      "source_id": "gulbenkian",
+      "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
-      "lat": null,
-      "lng": null,
+      "lat": 38.7380413,
+      "lng": -9.1550827,
       "start": "2026-04-10",
       "end": "2026-07-27",
       "all_day": true,
@@ -764,12 +806,16 @@
         "pt"
       ],
       "url": "https://gulbenkian.pt/agenda/o-portugal-de-todd-webb/",
-      "source": "generic",
-      "description": "A primeira exposição dedicada a Todd Webb, um dos grandes fotógrafos americanos da 2.ª metade do século XX, reúne fotografias de Portugal dos anos 1970 e 1980.",
-      "image": "https://gulbenkian.pt/ImageObject/322286",
+      "source": "gulbenkian",
+      "description": "A primeira exposição dedicada a Todd Webb, um dos grandes fotógrafos americanos da 2.ª metade do século XX, reúne fotografias de Portugal dos anos 1970 e 1980. Recentemente,...",
+      "image": "https://gulbenkian.pt/wp-content/uploads/2026/01/CFT270.27_completa_16x9.jpg",
       "lineup": null,
-      "links": null,
-      "prov": null
+      "links": [
+        "https://www.agendalx.pt/events/event/o-portugal-de-todd-webb/"
+      ],
+      "prov": {
+        "description": "agendalx"
+      }
     },
     {
       "id": "3e5eed72d432",
@@ -851,7 +897,7 @@
       ],
       "url": "http://www.regaleira.pt/pt/agenda/2026-expo-camoniana-regaleira/",
       "source": "generic",
-      "description": "Exposição comemorativa do quinto centenário de Camões, com a coleção camoniana de Carvalho Monteiro.",
+      "description": "Exposição da coleção camoniana de Carvalho Monteiro no âmbito do 5º centenário de Camões.",
       "image": "http://www.regaleira.pt/media/9972/camo-es_offset_sq2.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134209338340000000",
       "lineup": null,
       "links": null,
@@ -894,55 +940,10 @@
       ],
       "url": "https://scml.pt/evento/as-armas-de-papel-imprensa-e-publicacoes-clandestinas-1926-1974-o-acervo-do-arquivo-ephemera/",
       "source": "generic",
-      "description": "Mostra de imprensa e publicações clandestinas do período 1926-1974 a partir do acervo do Arquivo Ephemera.",
+      "description": "Revela o papel da imprensa clandestina durante a ditadura, com materiais do acervo do Arquivo Ephemera.",
       "image": "https://scml.pt/wp-content/uploads/2026/04/cartaz-armas-de-papel.jpg",
       "lineup": null,
       "links": null,
-      "prov": null
-    },
-    {
-      "id": "743e51cdd235",
-      "title": "Clube dos Poetas Mortos",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Teatro da Trindade INATEL",
-      "source_id": "agendalx",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.711847,
-      "lng": -9.142364,
-      "start": "2026-04-30",
-      "end": "2026-12-20",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 10.0,
-        "currency": "EUR",
-        "text": "€10–22"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.agendalx.pt/events/event/clube-dos-poetas-mortos/",
-      "source": "agendalx",
-      "description": "No início da década de 90 do século passado, um filme do experiente realizador australiano Peter Weir tornava-se um grande fenómeno de popularidade em todo o mundo. Amplamente nomeado para os Ósc...",
-      "image": "https://www.agendalx.pt/content/uploads/2026/03/clubepoetas.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.ticketline.pt/evento/clube-dos-poetas-mortos-98307"
-      ],
       "prov": null
     },
     {
@@ -982,7 +983,7 @@
       ],
       "url": "https://scml.pt/evento/casa-asia-colecao-francisco-capelo-visitas-guiadas-2/",
       "source": "generic",
-      "description": "Visitas guiadas à coleção de arte asiática de Francisco Capelo na Casa Ásia.",
+      "description": "Visitas orientadas à coleção de arte asiática Francisco Capelo, explorando peças de várias culturas do Oriente.",
       "image": "https://scml.pt/wp-content/uploads/2024/06/Casa-Asia-Colecao-Francisco-Capelo-1.jpg",
       "lineup": null,
       "links": null,
@@ -991,7 +992,7 @@
     {
       "id": "cbea43689234",
       "title": "Sessões de esclarecimento do Acolhimento Familiar",
-      "topic": "social",
+      "topic": "workshops",
       "categories": [
         48
       ],
@@ -1023,8 +1024,94 @@
       ],
       "url": "https://scml.pt/evento/sessoes-de-esclarecimento-do-acolhimento-familiar/",
       "source": "generic",
-      "description": "Sessões informativas sobre o programa de acolhimento familiar promovido pela Santa Casa.",
+      "description": "Sessões informativas sobre o programa de acolhimento familiar, explicando como tornar-se família de acolhimento.",
       "image": "https://scml.pt/wp-content/uploads/2024/01/Imagem-Campanha-Acolhimento-Familiar-1024x576.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "a794f47fd2bf",
+      "title": "Bichos da Sede – Oficina",
+      "topic": "workshops",
+      "categories": [
+        12
+      ],
+      "venue": "Fundação Arpad Szenes – Vieira da Silva",
+      "source_id": "fundacao-arpad-szenes-vieira-da-silva",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-09",
+      "end": "2027-10-11",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–60"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fasvs.pt/eventos/bichos-da-sede-oficina/",
+      "source": "generic",
+      "description": "Oficina criativa sobre bichos e criaturas imaginárias, integrada no projeto TEAR TEOR.",
+      "image": "https://fasvs.pt/wp-content/uploads/2026/05/1964-1967__LaBasilique-scaled.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "20cceed1afe7",
+      "title": "A(R)RISCAR – Oficina",
+      "topic": "workshops",
+      "categories": [
+        12
+      ],
+      "venue": "Fundação Arpad Szenes – Vieira da Silva",
+      "source_id": "fundacao-arpad-szenes-vieira-da-silva",
+      "neighbourhood": "Príncipe Real",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-10",
+      "end": "2027-12-20",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 4.0,
+        "currency": "EUR",
+        "text": "€4–60"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fasvs.pt/eventos/arriscar-oficina/",
+      "source": "generic",
+      "description": "Oficina de mediação para explorar processos criativos, parte do projeto TEAR TEOR.",
+      "image": "https://fasvs.pt/wp-content/uploads/2026/05/Le-Couple1932.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -1066,27 +1153,28 @@
       ],
       "url": "https://galeriafoco.com/exhibitions/todas-as-coisas-que-nos-fazem/",
       "source": "generic",
-      "description": "Exposição individual de Hugo Cantegrel, explorando a materialidade e as memórias associadas aos objetos.",
+      "description": "Exposição de arte contemporânea com trabalhos do artista Hugo Cantegrel.",
       "image": "https://galeriafoco.com/wp-content/uploads/hugo_cantegrel_galeria_foco01-200x133.jpg",
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "3e986ff5d8d1",
-      "title": "Nuno Sousa Vieira: Desisto – o que não vejo imagino",
+      "id": "1641d1f6738f",
+      "title": "Rosa Barba. Desenhar Vocabulários",
       "topic": "art",
       "categories": [
-        23
+        11,
+        49
       ],
-      "venue": "Galeria 3+1",
-      "source_id": "galeria-3-1",
-      "neighbourhood": "Belém",
+      "venue": "Fundação Calouste Gulbenkian",
+      "source_id": "jardim-de-verao",
+      "neighbourhood": "Avenidas Novas",
       "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-05-15",
-      "end": "2026-09-12",
+      "lat": 38.7380413,
+      "lng": -9.1550827,
+      "start": "2026-05-16",
+      "end": "2026-09-28",
       "all_day": true,
       "ongoing": true,
       "days": [
@@ -1100,60 +1188,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": null,
+        "min": 8.0,
         "currency": "EUR",
-        "text": ""
+        "text": "€8–12"
       },
       "language": [
         "pt"
       ],
-      "url": "https://3m1arte.com",
+      "url": "https://gulbenkian.pt/agenda/rosa-barba-desenhar-vocabularios/",
       "source": "generic",
-      "description": "Exposição que explora o conceito de imaginar o que não se vê, com obras de Nuno Sousa Vieira.",
-      "image": "https://3m1arte.com/wp-content/uploads/2026/04/NSV-Still-expo-2026-1024x682-blurred.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "8ad27234bbf1",
-      "title": "Arena Shopping sugere programa que junta famílias à mesa e no cinema",
-      "topic": "film",
-      "categories": [
-        28
-      ],
-      "venue": "Arena Shopping",
-      "source_id": "happy-kids",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-05-15T12:00",
-      "end": "2026-12-23",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 11.0,
-        "currency": "EUR",
-        "text": "€11"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://happykids.pt/evento/arena-shopping-sugere-programa-que-junta-familias-a-mesa-e-no-cinema/",
-      "source": "generic",
-      "description": "Experiência que combina almoço ou jantar em família com uma ida ao cinema, com programação especial para crianças.",
-      "image": "https://happykids.pt/wp-content/uploads/2026/05/Arena-Shopping-Menu-Jantar-e-Cinema-1.jpg",
+      "description": "Para a sua primeira grande exposição em Portugal, Rosa Barba «redesenha» os seus vocabulários através de instalações «site-specific», performance, filme e som.",
+      "image": "https://gulbenkian.pt/ImageObject/334271",
       "lineup": null,
       "links": null,
       "prov": null
@@ -1282,8 +1327,228 @@
       ],
       "url": "https://fasvs.pt/eventos/segundo-ciclo-expositivo-2/",
       "source": "generic",
-      "description": "Nova rotação de obras da coleção permanente do museu, com peças recentemente integradas.",
+      "description": "Apresentação do segundo ciclo expositivo de 2026 com obras da coleção do museu.",
       "image": "https://fasvs.pt/wp-content/uploads/2026/05/Arpad-Szenes_Le-bosquet.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "bf78a1ad7657",
+      "title": "RedSkyFalls (Réplica) – Uma rede de transmissão sísmica – de Alexandre Estrela",
+      "topic": "art",
+      "categories": [
+        10,
+        9
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-23",
+      "end": "2026-11-22",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 30.0,
+        "currency": "EUR",
+        "text": "€30"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org/programa/redskyfalls-replica/",
+      "source": "generic",
+      "description": "Instalação que explora uma rede de transmissão sísmica através de sinais e réplicas.",
+      "image": "https://zedosbois.org/wp-content/uploads/2026/06/Capas-website-ZDB-II-43-3-500x349.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "e27e62950b5b",
+      "title": "Visita-oficina à exposição ‘RedSkyFalls (Réplica)’ com o Serviço Educativo",
+      "topic": "workshops",
+      "categories": [
+        10,
+        9
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-23",
+      "end": "2026-11-22",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org/programa/visita-oficina-a-exposicao-redskyfalls-replica-com-o-servico-educativo/",
+      "source": "generic",
+      "description": "Visita guiada e oficina criativa para escolas, explorando a instalação RedSkyFalls.",
+      "image": "https://zedosbois.org/wp-content/uploads/2026/06/Capas-website-ZDB-II-43-3.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "45065a681795",
+      "title": "Bruscky em Brusque – de Paulo Bruscky",
+      "topic": "art",
+      "categories": [
+        10,
+        9
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-23",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 3.0,
+        "currency": "EUR",
+        "text": "€3–30"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org/programa/bruscky-em-brusque/",
+      "source": "generic",
+      "description": "Exposição de obras de Paulo Bruscky, pioneiro da arte postal e conceptual.",
+      "image": "https://zedosbois.org/wp-content/uploads/2026/04/Capas-website-ZDB-II-15-8.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "be06b33e618b",
+      "title": "EMPORIO – de Musa paradisiaca",
+      "topic": "art",
+      "categories": [
+        10,
+        9
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-23",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 3.0,
+        "currency": "EUR",
+        "text": "€3–30"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org/programa/emporio/",
+      "source": "generic",
+      "description": "Exposição de arte contemporânea de Musa paradisiaca.",
+      "image": "https://zedosbois.org/wp-content/uploads/2026/04/site-emporio.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "575986d8a2b9",
+      "title": "Livraria Mike Tyson’s Worst Nightmare – de Francisco Corrêa",
+      "topic": "art",
+      "categories": [
+        10,
+        9
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-05-23",
+      "end": "2026-08-31",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 30.0,
+        "currency": "EUR",
+        "text": "€30"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org/programa/mike-tysons-worst-nightmare/",
+      "source": "generic",
+      "description": "Exposição de Francisco Corrêa na livraria da ZDB.",
+      "image": "https://zedosbois.org/wp-content/uploads/2026/05/Site-768x536.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -1332,53 +1597,9 @@
       "prov": null
     },
     {
-      "id": "367897c6a32a",
-      "title": "Exported Reality",
-      "topic": "art",
-      "categories": [
-        8,
-        23
-      ],
-      "venue": "Underdogs Gallery",
-      "source_id": "underdogs-gallery",
-      "neighbourhood": "Marvila",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-05-28",
-      "end": "2026-07-16",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.under-dogs.net/pages/exhibition/exported-reality",
-      "source": "generic",
-      "description": "Exposição coletiva que reúne artistas internacionais em torno da ideia de realidade exportada e intercâmbio cultural.",
-      "image": null,
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "1af97cf425f5",
-      "title": "Arraial da Misericórdia 2026: O Arraial é de todos. A Festa é sua.",
-      "topic": "outdoors",
+      "id": "5521264a8965",
+      "title": "Arraial da Misericórdia 2026",
+      "topic": "nightlife",
       "categories": [
         13
       ],
@@ -1412,7 +1633,7 @@
       ],
       "url": "https://jf-misericordia.pt/viver/cultura/noticias/noticia/arraial-da-misericordia-2026-o-arraial-e-de-todos-a-festa-e-sua",
       "source": "generic",
-      "description": "Arraial popular com concertos, animação e comidas típicas, celebrando os Santos Populares no Miradouro de São Pedro de Alcântara.",
+      "description": "Arraial popular com concertos e animação, celebrando os Santos Populares, de 29 de maio a 28 de junho.",
       "image": "https://www.jf-misericordia.pt/jfmisericordia/uploads/news/image/743/redes_base_cartaz_arraial_2026.jpg",
       "lineup": null,
       "links": null,
@@ -1455,8 +1676,8 @@
       ],
       "url": "https://www.under-dogs.net/pages/exhibition/something-to-believe-in",
       "source": "generic",
-      "description": "Mostra de novas obras do coletivo artístico FAILE, explorando temas de fé e convicção.",
-      "image": null,
+      "description": "Exposição individual do artista FAILE com novas obras e instalações.",
+      "image": "https://www.under-dogs.net/cdn/shop/files/1_1e934e4f-cef9-47be-ab9b-35ddce858525.jpg?v=1740487487",
       "lineup": null,
       "links": null,
       "prov": null
@@ -1464,7 +1685,7 @@
     {
       "id": "310947f944c6",
       "title": "Lisbon Festivities",
-      "topic": "outdoors",
+      "topic": "community",
       "categories": [
         13,
         33
@@ -1506,129 +1727,6 @@
       "prov": null
     },
     {
-      "id": "046f1388222f",
-      "title": "A pele do furo",
-      "topic": "art",
-      "categories": [
-        23
-      ],
-      "venue": "Kubikgallery (Lisbon)",
-      "source_id": "kubikgallery-lisbon",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-05-30",
-      "end": "2026-06-27",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://kubikgallery.com",
-      "source": "generic",
-      "description": "Exposição individual do artista Alexandre Canonico.",
-      "image": null,
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "b6ab5e334212",
-      "title": "Jogos em direto na Browers Beato",
-      "topic": "social",
-      "categories": [
-        8
-      ],
-      "venue": "Hub Criativo do Beato / Unicorn Factory Lisboa",
-      "source_id": "hub-criativo-do-beato-unicorn-factory-lisboa",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-05-30T11:00",
-      "end": "2026-06-23",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://beato.unicornfactorylisboa.com/eventos/jogos-em-direto-na-browers-beato-2026",
-      "source": "generic",
-      "description": "Transmissões de jogos de futebol ao vivo com cervejas artesanais e ambiente descontraído.",
-      "image": "http://static1.squarespace.com/static/66b0ce541dbf556d920e1c6c/66b115938cfa8901b38ddc0c/69f9bd5680acb6464358c7d5/1779969079696/JogosFutebol_BannerDigital_870x527+1.png?format=1500w",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "90d274c38425",
-      "title": "Rooftop Bar Mundial Summer Edition",
-      "topic": "food",
-      "categories": [
-        34
-      ],
-      "venue": "Rooftop Bar Mundial",
-      "source_id": "rooftop-bar-mundial",
-      "neighbourhood": "Mouraria",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-01",
-      "end": "2026-08-31",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://rooftopmundial.com/menu-snack-verao.pdf",
-      "source": "generic",
-      "description": "Edição de verão com seleção especial de pratos e cocktails de autor, incluindo bruschettas de sardinha e o cocktail exclusivo Match Made in Lisbon. Disponível diariamente durante junho, julho e agosto de 2026.",
-      "image": null,
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "0a7be61cc834",
       "title": "Biblioteca Itinerante – junho – 2026 - itinerário e atividades",
       "topic": "community",
@@ -1665,7 +1763,7 @@
       ],
       "url": "https://blx.cm-lisboa.pt/evento/biblioteca-itinerante-junho-2026/",
       "source": "generic",
-      "description": "Itinerário e atividades previstas para junho 2026 da Biblioteca Itinerante.",
+      "description": "Itinerário e atividades previstas para a biblioteca móvel durante junho de 2026.",
       "image": "https://blx.cm-lisboa.pt/wp-content/uploads/2026/04/Itinerante_Site-Interior-ItinerarioMensal_02.jpg",
       "lineup": null,
       "links": null,
@@ -1708,7 +1806,7 @@
       ],
       "url": "https://teatrovariedades-capitolio.pt/evento/radojka/",
       "source": "generic",
-      "description": "Espetáculo de teatro.",
+      "description": "A comédia 'Radojka', com Marina Mota, em cena no Teatro Variedades.",
       "image": "https://teatrovariedades-capitolio.pt/wp-content/uploads/2026/03/BOL-1920-X-1080-22.jpg",
       "lineup": null,
       "links": null,
@@ -1764,7 +1862,7 @@
     {
       "id": "31d6024b237a",
       "title": "Vemos as Mesmas Estrelas",
-      "topic": "performance",
+      "topic": "family",
       "categories": [
         28
       ],
@@ -1798,94 +1896,8 @@
       ],
       "url": "https://happykids.pt/evento/vemos-as-mesmas-estrelas/",
       "source": "generic",
-      "description": "Espetáculo de teatro para famílias sobre sonhos, estrelas e a imaginação infantil.",
+      "description": "Atividade lúdica para famílias que celebra a observação das estrelas e a imaginação infantil.",
       "image": "https://happykids.pt/wp-content/uploads/2026/05/VAME-26-Post-para-Instagram-45-1.png",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "198f8e85701a",
-      "title": "Rosebud",
-      "topic": "art",
-      "categories": [
-        23
-      ],
-      "venue": "Kubikgallery (Lisbon)",
-      "source_id": "kubikgallery-lisbon",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-09",
-      "end": "2026-07-30",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://kubikgallery.com",
-      "source": "generic",
-      "description": "Exposição individual do artista Vasco Futscher.",
-      "image": null,
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "35ea1ac18e1d",
-      "title": "Through the Looking Glass (Bare, Burned, Multiplied)",
-      "topic": "art",
-      "categories": [
-        23
-      ],
-      "venue": "Kubikgallery (Lisbon)",
-      "source_id": "kubikgallery-lisbon",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-09",
-      "end": "2026-07-30",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://kubikgallery.com",
-      "source": "generic",
-      "description": "Exposição individual da artista Lara Dâmaso.",
-      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -1937,7 +1949,7 @@
     {
       "id": "77121dd9443d",
       "title": "Goalfest 2026 – Desporto em Parque do Vale do Silêncio",
-      "topic": "outdoors",
+      "topic": "family",
       "categories": [
         28
       ],
@@ -1978,21 +1990,21 @@
       "prov": null
     },
     {
-      "id": "43a3ec8640fb",
-      "title": "Espanto - Festival Internacional de Filosofia",
-      "topic": "learning",
+      "id": "d7c0ed4bb711",
+      "title": "ESPECIALIZAÇÃO em Filigrana Portuguesa",
+      "topic": "workshops",
       "categories": [
-        28
+        5
       ],
-      "venue": "Happy Kids",
-      "source_id": "happy-kids",
-      "neighbourhood": null,
-      "zone": null,
+      "venue": "Centro de Joalharia de Lisboa (CJLX)",
+      "source_id": "centro-de-joalharia-de-lisboa-cjlx",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
       "lat": null,
       "lng": null,
-      "start": "2026-06-13",
-      "end": "2026-06-28",
-      "all_day": true,
+      "start": "2026-06-13T09:30",
+      "end": "2026-07-12",
+      "all_day": false,
       "ongoing": true,
       "days": [
         "mon",
@@ -2005,37 +2017,37 @@
       ],
       "price": {
         "is_free": false,
-        "min": null,
+        "min": 300.0,
         "currency": "EUR",
-        "text": ""
+        "text": "€300,00"
       },
       "language": [
         "pt"
       ],
-      "url": "https://happykids.pt/evento/espanto-festival-internacional-de-filosofia/",
+      "url": "https://cjlx.pt/store-cjlx-loja/p/especializao-em-cravao-4nle7",
       "source": "generic",
-      "description": "Festival que promove a filosofia através de debates, oficinas e atividades para crianças e adultos.",
-      "image": "https://happykids.pt/wp-content/uploads/2026/05/FESTIVAL-ESPANTO_13-a-28-junho.png",
+      "description": "Curso de especialização em filigrana artesanal portuguesa, com certificação, abrangendo técnicas tradicionais e criação de peças bidimensionais e tridimensionais.",
+      "image": "http://static1.squarespace.com/static/63e3aa22d5ed983e977440e2/63e3ad4e67a22560470fd983/6457bc413021717621dff84f/1779816085442/WhatsApp+Image+2022-10-12+at+22.29.31.jpg?format=1500w",
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "4b7e3fd99ba5",
-      "title": "Candidaturas para o Concurso de Jovens Designers da ModaLisboa",
-      "topic": "art",
+      "id": "7f863f662cb2",
+      "title": "ATL de Verão 2026",
+      "topic": "family",
       "categories": [
-        24
+        5
       ],
-      "venue": "ModaLisboa",
-      "source_id": "modalisboa",
-      "neighbourhood": "Alfama",
-      "zone": "city",
+      "venue": "Portal da Dança",
+      "source_id": "portal-da-danca",
+      "neighbourhood": null,
+      "zone": null,
       "lat": null,
       "lng": null,
-      "start": "2026-06-15",
-      "end": "2026-07-19",
-      "all_day": true,
+      "start": "2026-06-15T08:30",
+      "end": "2026-08-21",
+      "all_day": false,
       "ongoing": true,
       "days": [
         "mon",
@@ -2048,17 +2060,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": null,
+        "min": 10.0,
         "currency": "EUR",
-        "text": ""
+        "text": "€10–230"
       },
       "language": [
         "pt"
       ],
-      "url": "https://modalisboa.pt",
+      "url": "https://portaldadanca.pt/agenda/2026-06-15a08-21-atl-de-verao-2026/",
       "source": "generic",
-      "description": "A Associação ModaLisboa está a receber candidaturas para o concurso que descobre novos talentos do design de moda, com possibilidade de participar na Lisboa Fashion Week.",
-      "image": "https://modalisboa.pt/wp-content/uploads/2026/06/sangue_novo_pt_01.jpg",
+      "description": "Programa de verão com dança e atividades lúdicas para crianças.",
+      "image": "https://www.portaldadanca.pt/boffice/imagens/img/121014190969efe53e437434.77524662.2026-04-27223750.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -2100,7 +2112,7 @@
       ],
       "url": "http://www.regaleira.pt/pt/agenda/2026-dia-do-municipio/",
       "source": "generic",
-      "description": "Festas do Município de Sintra com programação descentralizada entre 17 e 29 de junho.",
+      "description": "Festas do Município de Sintra com programação descentralizada de 17 a 29 de junho.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -2190,7 +2202,7 @@
       ],
       "url": "https://fasvs.pt/eventos/45400/",
       "source": "generic",
-      "description": "Exposição que propõe encontros improváveis entre obras de arte, desafiando as perceções habituais.",
+      "description": "Exposição que explora pares contrastantes de obras, em colaboração com o Município de Coimbra.",
       "image": "https://fasvs.pt/wp-content/uploads/2026/06/01-Insta-CACCoimbra-1-scaled-e1782123791928.jpg",
       "lineup": null,
       "links": null,
@@ -2235,6 +2247,49 @@
       "source": "generic",
       "description": "Pela primeira vez em Portugal, acontece o Festival Art Explora, que terá lugar de 18 a 28 de junho de 2026, na Marina de Cascais com entrada gratuita. &nbsp; No [&hellip;]",
       "image": "https://www.ifp-lisboa.com//content/uploads/2026/05/ArtExploraFestival_CAS_POR_WEB_1920x1080.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "6905f5c59601",
+      "title": "Vamos separar o lixo antes que o futuro se lixe - Roadshow da campanha",
+      "topic": "community",
+      "categories": [
+        46
+      ],
+      "venue": "Brigada do voluntariado ambiental (APA / ciência cidadã)",
+      "source_id": "brigada-do-voluntariado-ambiental-apa-ciencia-cidada",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-19",
+      "end": "2026-07-26",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://apambiente.pt/destaque2/vamos-separar-o-lixo-antes-que-o-futuro-se-lixe",
+      "source": "generic",
+      "description": "Roadshow de sensibilização ambiental sobre a correta separação de resíduos, integrado na campanha nacional.",
+      "image": "https://apambiente.pt/sites/default/files/_A_APA/Comunicacao/Destaques/2025/VamosLixarOLixo/vll_vs_prin_cores_rgb.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -2319,7 +2374,7 @@
       ],
       "url": "https://fasciniodafotografia.com/2026/06/17/o-silencio-da-fotografia-antonio-bracons/",
       "source": "generic",
-      "description": "Exposição de fotografia de António Bracons que explora o conceito de silêncio visual, patente no m|i|mo em Leiria.",
+      "description": "Exposição de fotografia de António Bracons que explora o silêncio, patente no m|i|mo em Leiria.",
       "image": "https://fasciniodafotografia.com/wp-content/uploads/2026/04/cartaz_exposicao-bracons_mimo-260620.jpg",
       "lineup": null,
       "links": null,
@@ -2362,7 +2417,7 @@
       ],
       "url": "https://beato.unicornfactorylisboa.com/eventos/beato-riverside-rooftop",
       "source": "generic",
-      "description": "Cinema ao ar livre com clássicos da sétima arte, vista para o Tejo e experiências únicas.",
+      "description": "Ciclo de cinema ao ar livre com clássicos da sétima arte, em espaço com vista para o Tejo.",
       "image": "http://static1.squarespace.com/static/66b0ce541dbf556d920e1c6c/66b115938cfa8901b38ddc0c/6a2c04e58188256e74937129/1781270746867/16_9+beatowebsite.webp?format=1500w",
       "lineup": null,
       "links": null,
@@ -2756,6 +2811,50 @@
       "source": "agendalx",
       "description": "No âmbito da 8.ª edição do Festival RHI – Revolution Hope Imagination, a exposição Arte Box oferece um primeiro contacto com a diversidade artística do festival a quem chega à capit...",
       "image": "https://www.agendalx.pt/content/uploads/2026/04/Imagem1-30.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "a08ac8cc4d37",
+      "title": "Ateliers de Verão para Jovens (dos 9 aos 14 anos)",
+      "topic": "workshops",
+      "categories": [
+        4,
+        23
+      ],
+      "venue": "Ar.Co",
+      "source_id": "ar-co",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": "2026-07-17",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 0.75,
+        "currency": "EUR",
+        "text": "€0,75–290"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://arco.pt/site/news/444/2026-05-21",
+      "source": "generic",
+      "description": "Atividades criativas de verão para incentivar a expressão artística e o contacto com diferentes técnicas, destinadas a jovens dos 9 aos 14 anos.",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -4669,7 +4768,7 @@
       ],
       "url": "https://www.centralcomics.com/terror-na-auto-estrada-celebra-40-anos-nos-cinemas/",
       "source": "generic",
-      "description": "Exibição especial do clássico de terror para celebrar o seu 40.º aniversário.",
+      "description": "Sessão comemorativa do clássico de terror que chega às salas de cinema.",
       "image": "https://www.centralcomics.com/wp-content/uploads/2026/06/Hitcher.jpg",
       "lineup": null,
       "links": null,
@@ -4760,50 +4859,6 @@
       "lineup": null,
       "links": null,
       "prov": null
-    },
-    {
-      "id": "fd8df7a2a3ab",
-      "title": "Sobre a verdade da mentira",
-      "topic": "learning",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-22",
-      "end": "2026-06-25",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 7.0,
-        "currency": "EUR",
-        "text": "€7"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/sobre-a-verdade-da-mentira/2026-06-25/",
-      "source": "ccb",
-      "description": "Não querer ser enganado com mentiras e descobrir a verdade é a situação em que cada ser humano se encontra. Há uma pressão contínua — 24 horas por dia, 7 dias na semana — para escapar à mentira e saber da verdade. Por norma, achamos que estamos na verdade e somos verdadeiros, mas.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/07/2000x940_AntoniodeCastroCaeiro_MatildeFieschi.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.bol.pt/Comprar/Bilhetes/160257-sobre_a_verdade_da_mentira_antonio_de_castro_caeiro-ccb/"
-      ],
-      "prov": {
-        "price": "bol"
-      }
     },
     {
       "id": "5dc130509221",
@@ -6250,9 +6305,9 @@
       "language": [
         "pt"
       ],
-      "url": "https://fadoinchiado.com",
+      "url": "https://fadoinchiado.com/home",
       "source": "generic",
-      "description": "Espectáculo de Fado ao vivo com cantor e dois músicos, acompanhado por imagens de locais emblemáticos de Lisboa. Duração de 50 minutos.",
+      "description": "Fado show in Lisbon, from Monday to Saturday, with sessions at 5:30 PM and 7:00 PM, lasting 50 minutes. A live fado performance featuring voices singing Fado to the sound of the Portuguese guitar and classical guitar.",
       "image": "https://images.rr.pt/palco_0919071a207178f17f.png",
       "lineup": null,
       "links": null,
@@ -6865,53 +6920,6 @@
       "prov": null
     },
     {
-      "id": "2aec209f5913",
-      "title": "O Portugal de Todd Webb",
-      "topic": "art",
-      "categories": [
-        10
-      ],
-      "venue": "Fundação Calouste Gulbenkian",
-      "source_id": "gulbenkian",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.7380413,
-      "lng": -9.1550827,
-      "start": "2026-06-22",
-      "end": "2026-07-27",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 6.0,
-        "currency": "EUR",
-        "text": "€6"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/agenda/o-portugal-de-todd-webb/",
-      "source": "gulbenkian",
-      "description": "A primeira exposição dedicada a Todd Webb, um dos grandes fotógrafos americanos da 2.ª metade do século XX, reúne fotografias de Portugal dos anos 1970 e 1980. Recentemente,...",
-      "image": "https://gulbenkian.pt/wp-content/uploads/2026/01/CFT270.27_completa_16x9.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/o-portugal-de-todd-webb/"
-      ],
-      "prov": {
-        "description": "agendalx"
-      }
-    },
-    {
       "id": "f8a198c7147c",
       "title": "O verão de Xerazade",
       "topic": "nightlife",
@@ -7036,49 +7044,6 @@
       "source": "gulbenkian",
       "description": "Esta visita é uma adaptação, em contexto expositivo, de um jogo homónimo que relaciona perguntas de interpretação e propostas de exploração sensorial e criativa.",
       "image": "https://gulbenkian.pt/wp-content/uploads/2025/07/1200x900-Gira-Girou-1.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "ae1fad3c0a78",
-      "title": "Rosa Barba. Desenhar Vocabulários",
-      "topic": "film",
-      "categories": [
-        10
-      ],
-      "venue": "Fundação Calouste Gulbenkian",
-      "source_id": "gulbenkian",
-      "neighbourhood": "Avenida da Liberdade",
-      "zone": "city",
-      "lat": 38.7380413,
-      "lng": -9.1550827,
-      "start": "2026-06-22",
-      "end": "2026-09-28",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 8.0,
-        "currency": "EUR",
-        "text": "€8,00–12,00"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://gulbenkian.pt/agenda/rosa-barba-desenhar-vocabularios/",
-      "source": "gulbenkian",
-      "description": "Para a sua primeira grande exposição em Portugal, Rosa Barba «redesenha» os seus vocabulários através de instalações «site-specific», performance, filme e som.",
-      "image": "https://gulbenkian.pt/wp-content/uploads/2026/01/Rosa-Barba_Roma-CARD.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -9445,6 +9410,43 @@
       "prov": null
     },
     {
+      "id": "ace695c1dabd",
+      "title": "The one with the orange red dimension",
+      "topic": "performance",
+      "categories": [
+        26
+      ],
+      "venue": "Improv Lisboa",
+      "source_id": "improv-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://improvlisboa.pt/2026/06/22/the-one-with-the-orange-red-dimension/",
+      "source": "generic",
+      "description": "Sessão aberta de teatro de improviso. Todos os níveis são bem-vindos.",
+      "image": "https://improvlisboa.pt/wp-content/uploads/2026/06/20260622-Instagram-improv.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "4e756da51991",
       "title": "Beatriz Ruibal",
       "topic": "art",
@@ -10084,6 +10086,43 @@
       "prov": null
     },
     {
+      "id": "2e1acdda2ce4",
+      "title": "The Language of the Body",
+      "topic": "workshops",
+      "categories": [
+        18
+      ],
+      "venue": "Little Yoga Space Lisboa",
+      "source_id": "little-yoga-space-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://katrinheuser.com/language-of-the-body/",
+      "source": "generic",
+      "description": "Formação contínua em Yoga terapêutico e trauma-informado, iniciada a 13 de Março de 2026.",
+      "image": "https://katrinheuser.com/wp-content/uploads/2025/04/alank.yoga_.11.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "2655d1adacc9",
       "title": "Francisco Corrêa",
       "topic": "art",
@@ -10379,7 +10418,7 @@
       ],
       "url": "https://maat.pt/pt/event/turn-around-um-olhar-sobre-colecao-de-arte-fundacao-edp",
       "source": "generic",
-      "description": "Maior apresentação da Coleção de Arte Fundação EDP, reunindo cerca de 90 obras de 58 artistas nacionais desde os anos 60.",
+      "description": "Apresenta cerca de 90 obras de 58 artistas portugueses da Coleção de Arte Fundação EDP, dos anos 60 até à atualidade.",
       "image": "https://maat.pt/sites/default/files/2026-05/Turn%20Around_1.jpg",
       "lineup": null,
       "links": null,
@@ -11843,6 +11882,43 @@
       "prov": null
     },
     {
+      "id": "d646e2025786",
+      "title": "Exposição de longa duração",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Museu do Aljube – Resistência e Liberdade",
+      "source_id": "museu-do-aljube-resistencia-e-liberdade",
+      "neighbourhood": "Alfama",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.museudoaljube.pt/exposicao-permanente/",
+      "source": "generic",
+      "description": "Exposição que apresenta a história do edifício, a ditadura, os meios de repressão, a resistência e o 25 de Abril.",
+      "image": "https://www.museudoaljube.pt/wp-content/uploads/2022/10/Foto_Democracia_Divulgacao.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "7361fd05db65",
       "title": "Da Matriz à Impressão",
       "topic": "art",
@@ -13010,7 +13086,7 @@
       "categories": [
         1
       ],
-      "venue": "Teatro Tivoli Bbva",
+      "venue": "Teatro Tivoli BBVA",
       "source_id": "agendalx",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -13606,7 +13682,7 @@
     {
       "id": "6fcb494a00ac",
       "title": "Quake - Museu do Terramoto de Lisboa",
-      "topic": "art",
+      "topic": "tours",
       "categories": [
         31
       ],
@@ -13634,7 +13710,7 @@
       ],
       "url": "https://lisbonquake.com",
       "source": "generic",
-      "description": "Viagem imersiva no tempo até 1755 para reviver o terramoto que transformou Lisboa, com 10 salas interativas, simuladores e video-mapping.",
+      "description": "Viagem imersiva a 1755 para reviver o Terramoto de Lisboa em 10 salas interativas com simuladores e video-mapping. Experiência educativa para todas as idades.",
       "image": "https://lisbonquake.com/_next/static/media/flag-pt.d520013b.png",
       "lineup": null,
       "links": null,
@@ -13936,6 +14012,43 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz148913.jpg?v=8",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "c745bf926063",
+      "title": "Entrada gratuita no Núcleo 1 do Museu da Carris",
+      "topic": "tours",
+      "categories": [
+        12
+      ],
+      "venue": "Museu da Carris",
+      "source_id": "museu-da-carris",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-22T13:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "mon"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://museu.carris.pt",
+      "source": "generic",
+      "description": "No dia 22 de junho, o Núcleo 2 encerra a partir das 13h, sendo possível visitar gratuitamente o Núcleo 1 do museu.",
+      "image": "https://museu.carris.pt/wp-content/uploads/2026/05/oficinas_ferias_verao_2026-740x474.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -14304,10 +14417,10 @@
       "language": [
         "pt"
       ],
-      "url": "https://medeiafilmes.com/noticias/cinema-medeia-nimas-dedica-ciclo-a-sidney-lumet-um-dos-grandes-realizadores-do-cinema-americano",
+      "url": "https://medeiafilmes.com/ciclos/ciclo-lembra-se-de-sidney-lumet",
       "source": "generic",
-      "description": "Primeira sessão do ciclo Sidney Lumet, com a exibição do filme que marcou a estreia na realização, considerado uma obra-prima.",
-      "image": "https://medeiafilmes.com/library/media/7696/200/200",
+      "description": "Exibição do clássico 'Doze Homens em Fúria', a primeira obra-prima de Sidney Lumet, que abre o ciclo dedicado ao realizador.",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -15382,6 +15495,51 @@
       }
     },
     {
+      "id": "743e51cdd235",
+      "title": "Clube dos Poetas Mortos",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Teatro da Trindade INATEL",
+      "source_id": "agendalx",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.711847,
+      "lng": -9.142364,
+      "start": "2026-06-22T21:00",
+      "end": "2026-12-20",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–22"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/clube-dos-poetas-mortos/",
+      "source": "agendalx",
+      "description": "No início da década de 90 do século passado, um filme do experiente realizador australiano Peter Weir tornava-se um grande fenómeno de popularidade em todo o mundo. Amplamente nomeado para os Ósc...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/03/clubepoetas.jpg",
+      "lineup": null,
+      "links": [
+        "https://www.ticketline.pt/evento/clube-dos-poetas-mortos-98307"
+      ],
+      "prov": null
+    },
+    {
       "id": "cbf3718baed2",
       "title": "Upon Angels - cinema ao ar livre",
       "topic": "film",
@@ -15891,6 +16049,43 @@
       "prov": null
     },
     {
+      "id": "087d874c2699",
+      "title": "Junta de Freguesia de Arroios promove Arraial no Largo do Intendente",
+      "topic": "community",
+      "categories": [
+        13
+      ],
+      "venue": "Cinema no Largo do Intendente",
+      "source_id": "mercado-de-arroios",
+      "neighbourhood": "Intendente",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-23",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://jfarroios.pt/eventos/40515/",
+      "source": "generic",
+      "description": "Festa popular com música e gastronomia, promovida pela autarquia para celebrar o verão em comunidade.",
+      "image": "https://jfarroios.pt/wp-content/uploads/2026/06/Post-Arraial-no-Intendente.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "b5ab3a089d85",
       "title": "+50 bpm",
       "topic": "music",
@@ -15921,7 +16116,7 @@
       ],
       "url": "https://radioquantica.com",
       "source": "generic",
-      "description": "Transmissão de música com batidas aceleradas.",
+      "description": "Programa de música com batidas aceleradas transmitido na Rádio Quântica.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -15958,22 +16153,63 @@
       ],
       "url": "https://radioquantica.com",
       "source": "generic",
-      "description": "Atuação musical do artista Oseias.",
+      "description": "Programa de rádio com sets de Oseias.",
       "image": null,
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "15bf7a86c210",
-      "title": "15.º Ciclo de Conferenze Relazioni Luso-Italiane – 23 giugno",
-      "topic": "learning",
+      "id": "a02bfb5f9628",
+      "title": "Lisbon Classical Nights",
+      "topic": "music",
       "categories": [
-        20
+        25
       ],
-      "venue": "Istituto Italiano di Cultura di Lisbona",
-      "source_id": "istituto-italiano-di-cultura-di-lisbona",
-      "neighbourhood": "Estrela",
+      "venue": "Lisbon Classical Nights (LX Classical Nights)",
+      "source_id": "lisbon-classical-nights-lx-classical-nights",
+      "neighbourhood": "Cais do Sodré",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-23",
+      "end": "2026-06-27",
+      "all_day": true,
+      "ongoing": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://lisbonclassicalnights.com",
+      "source": "generic",
+      "description": "Concerto de guitarra clássica por talentosos guitarristas portugueses, na sacristia da Igreja de São Paulo, numa noite típica de Lisboa.",
+      "image": null,
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "e0e7e0ce6bdc",
+      "title": "ASA leva à cena “Assim é, se lhe parece” no Auditório do Liceu Camões",
+      "topic": "performance",
+      "categories": [
+        13
+      ],
+      "venue": "Mercado de Arroios",
+      "source_id": "mercado-de-arroios",
+      "neighbourhood": "Intendente",
       "zone": "city",
       "lat": null,
       "lng": null,
@@ -15993,10 +16229,10 @@
       "language": [
         "pt"
       ],
-      "url": "https://iiclisbona.esteri.it/it/gli_eventi/calendario/15-o-ciclo-di-conferenze-relazioni-luso-italiane-23-giugno/",
+      "url": "https://jfarroios.pt/eventos/40502/",
       "source": "generic",
-      "description": "Conferência 'Do Claustro para o Mundo: São Francisco e as Artes' por Clara Germana Gonçalves, integrada no 15.º Ciclo de Conferências Relações Luso-Italianas.",
-      "image": "https://iiclisbona.esteri.it/wp-content/uploads/2026/03/15-ciclo-Francesco-800.png",
+      "description": "Peça de teatro encenada pela Academia Sénior de Arroios, baseada na obra de Luigi Pirandello.",
+      "image": "https://jfarroios.pt/wp-content/uploads/2026/06/Assim_e_teatro_ASA.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -16044,9 +16280,9 @@
       "prov": null
     },
     {
-      "id": "0c05d5c47a6c",
-      "title": "A nova exposição imersiva sobre o Império Inca já abriu na estação de metro do Terreiro do Paço: permite explorar Machu Picchu ao milímetro",
-      "topic": "art",
+      "id": "449e57d6af55",
+      "title": "Aula de ioga a 140 metros de altura com entrada grátis",
+      "topic": "wellness",
       "categories": [
         16
       ],
@@ -16064,18 +16300,18 @@
         "tue"
       ],
       "price": {
-        "is_free": false,
-        "min": 15.0,
+        "is_free": true,
+        "min": 0,
         "currency": "EUR",
-        "text": "€15"
+        "text": "Grátis"
       },
       "language": [
         "pt"
       ],
-      "url": "https://lisboasecreta.co/experiencia-imersiva-machu-picchu-viagem-cidade-perdida-lisboa/",
+      "url": "https://lisboasecreta.co/yoga-amoreiras-360-panoramic-view/",
       "source": "generic",
-      "description": "Exposição imersiva que recria a cidade perdida de Machu Picchu, permitindo explorar o Império Inca ao pormenor.",
-      "image": "https://offloadmedia.feverup.com/lisboasecreta.co/wp-content/uploads/2026/05/26150841/Machu-Picchu-Viagem-a-Cidade-Perdida-experiencia-de-realidade-virtual-em-lisboa-%C2%A9-DR-_6.jpg",
+      "description": "Aula de ioga gratuita com vista panorâmica de Lisboa a 140 metros de altura.",
+      "image": "https://offloadmedia.feverup.com/lisboasecreta.co/wp-content/uploads/2026/06/23185421/amoreiras-yoga.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -16118,38 +16354,41 @@
       "prov": null
     },
     {
-      "id": "1b025faa43b8",
-      "title": "ATL de Verão 2026",
+      "id": "be75b59f22a7",
+      "title": "A presença da palavra na dança",
       "topic": "workshops",
       "categories": [
-        5
+        9
       ],
-      "venue": "Portal da Dança",
-      "source_id": "portal-da-danca",
-      "neighbourhood": null,
-      "zone": null,
+      "venue": "Espaço da Penha",
+      "source_id": "espaco-da-penha",
+      "neighbourhood": "Penha de França",
+      "zone": "city",
       "lat": null,
       "lng": null,
-      "start": "2026-06-23T08:30",
-      "end": null,
+      "start": "2026-06-23T09:30",
+      "end": "2026-06-26",
       "all_day": false,
       "ongoing": false,
       "days": [
-        "tue"
+        "tue",
+        "wed",
+        "thu",
+        "fri"
       ],
       "price": {
-        "is_free": false,
-        "min": 10.0,
+        "is_free": true,
+        "min": 0,
         "currency": "EUR",
-        "text": "€10–230"
+        "text": "Grátis"
       },
       "language": [
         "pt"
       ],
-      "url": "https://portaldadanca.pt/agenda/2026-06-15a08-21-atl-de-verao-2026/",
+      "url": "https://teatrocinegouveia.pt/evento/a-presenca-da-palavra-na-danca/",
       "source": "generic",
-      "description": "Programa de férias de verão com aulas de dança e atividades lúdicas para crianças e jovens.",
-      "image": "https://www.portaldadanca.pt/boffice/imagens/img/121014190969efe53e437434.77524662.2026-04-27223750.webp",
+      "description": "&lt;p&gt;/// Mediação: A presença da palavra na dança Oficina de teatro e dança – Henrique Furtado Duração: entre 3 a 6 horas | gratuito 23 de junho - 14h00 - [&hellip;]&lt;/p&gt;\\n.",
+      "image": "https://teatrocinegouveia.pt/wp-content/uploads/2026/05/03-POST-TCG-2.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -16731,7 +16970,7 @@
       ],
       "url": "https://museus.ulisboa.pt/seminario-decolonial-epistemologies-museum-archives-circulation-reparation-and-african-heritages",
       "source": "generic",
-      "description": "Seminário sobre epistemologias decoloniais nos museus, abordando arquivos, circulação, reparação e heranças africanas.",
+      "description": "Seminário sobre epistemologias decoloniais em museus, abordando arquivos, circulação, reparação e heranças africanas.",
       "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2026-06/11886-78bec3768675d32055eeb3ea801ada96.jpg?itok=3DVB08Gm",
       "lineup": null,
       "links": null,
@@ -17362,39 +17601,38 @@
       "prov": null
     },
     {
-      "id": "cfd3a2033a28",
-      "title": "Tasco Mundial: Portugal vs Uzbekistan",
-      "topic": "food",
+      "id": "ad7ee5683a6b",
+      "title": "Oficina de Cerâmica - Iniciação",
+      "topic": "workshops",
       "categories": [
-        1
+        4
       ],
-      "venue": "Musa de Marvila",
-      "source_id": "mato",
-      "neighbourhood": null,
-      "zone": null,
+      "venue": "ARTlier",
+      "source_id": "artlier",
+      "neighbourhood": "Campo de Ourique",
+      "zone": "city",
       "lat": null,
       "lng": null,
-      "start": "2026-06-23T18:00",
-      "end": "2026-06-24",
+      "start": "2026-06-23T18:30",
+      "end": null,
       "all_day": false,
       "ongoing": false,
       "days": [
-        "tue",
-        "wed"
+        "tue"
       ],
       "price": {
-        "is_free": true,
-        "min": 0,
+        "is_free": false,
+        "min": 161.5,
         "currency": "EUR",
-        "text": "Grátis"
+        "text": "€161,50"
       },
       "language": [
         "pt"
       ],
-      "url": "https://ma.to",
-      "source": "mato",
-      "description": "Portugal returns to the big screen against Uzbekistan, followed by England vs Ghana. Enjoy the national team game with our special 'Comida de Tasco' menu (pregos, bifanas, and more). First round free for reservations of 5+ people.",
-      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/d15aa854-70f4-46e2-b9a9-ea1b52ec3cc1-original.webp",
+      "url": "https://artlier.pt/workshops/p/oficina-ceramica",
+      "source": "generic",
+      "description": "Sessão de iniciação à cerâmica com Carolina Andrade, explorando técnicas e materiais.",
+      "image": "http://static1.squarespace.com/static/649b082373f2bc1f7b951044/64a0721446dfe2022d87429a/64a073d69d2f370d31a4ca3a/1782214048700/12.jpg?format=1500w",
       "lineup": null,
       "links": null,
       "prov": null
@@ -17541,7 +17779,7 @@
       ],
       "url": "https://littlebigapple.pt/aula/solo-jazz-pop-up/",
       "source": "generic",
-      "description": "Aula de danças solo de swing jazz para iniciados, explorando passos e movimentos com música ao vivo.",
+      "description": "Aula avulsa de danças a solo, explorando Jazz e outros estilos de swing.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -17580,6 +17818,43 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153804.jpg?v=1",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "df3b26623f4d",
+      "title": "Iniciados Charleston a pares",
+      "topic": "workshops",
+      "categories": [
+        42
+      ],
+      "venue": "Little Big Apple",
+      "source_id": "little-big-apple-swing-dance",
+      "neighbourhood": "Alvalade",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-23T20:10",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "tue"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 35.0,
+        "currency": "EUR",
+        "text": "€35"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://littlebigapple.pt/aula/charleston-pares/",
+      "source": "generic",
+      "description": "Aula do curso de 4 semanas de Charleston a pares para iniciados.",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -17744,8 +18019,8 @@
       "prov": null
     },
     {
-      "id": "b4034c4bc21c",
-      "title": "⚠️ SOLD OUT ⚠️ Milkshake, Ministry of Sound – The End of A Levels Rave 🔥 June 23rd 2026 ⚠️ SOLD OUT ⚠️",
+      "id": "9a6b68009f20",
+      "title": "⚠️ SOLD OUT ⚠️ Milkshake, Ministry of Sound – The End of A Levels Rave 🔥 June 23rd 2026",
       "topic": "nightlife",
       "categories": [
         1
@@ -17770,50 +18045,12 @@
         "text": ""
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://fatsoma.com/e/mfrgzw12/sold-out-milkshake-ministry-of-sound-the-end-of-a-levels-rave-june-23rd-2026-sold-out",
       "source": "generic",
       "description": "Milkshake, London's Biggest Student Night 🌍Running 22 (now) F*cking Years Strong, Since 2002Tuesday June 23rd 🔥Ministry of Sound Club, 10:30pm-Late ⚠️⚠️⚠️ THE MILKSHAKE EVENTS APP &amp;gt;&amp;gt;&amp;gt; GET CHEAPER TICKETS FOR THIS EVENT AND ALL UPCOMING PARTIES VIA OUR BRAND N.",
       "image": "https://cdn2.fatsoma.com/media/W1siZiIsInB1YmxpYy8yMDI2LzUvMS8xMS80NS81LzcwL1JhY2tNdWx0aXBhcnQyMDI2MDUwMS02NS1zOXo1NDEucG5nIl1d",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "0f8e94a36b54",
-      "title": "Romeu Tristão Trio",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Távola Jazz Club",
-      "source_id": "mato",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-23T22:00",
-      "end": "2026-06-24",
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "tue",
-        "wed"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 12.5,
-        "currency": "EUR",
-        "text": "€12,50"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://ma.to",
-      "source": "mato",
-      "description": "The week kicks off at Távola Jazz Club with the Romeu Tristão Trio. Featuring Hugo Lobo on piano, Romeu Tristão on contrabass, and João Pereira on drums. Doors open at 21:00 for drinks, with the live sets starting at 22:00. Limited capacity and no reservations.",
-      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/bd9b3671-45dc-4c59-8615-d72167f3e60a-original.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -18041,7 +18278,7 @@
       ],
       "url": "https://app.tickettailor.com/events/blackcatcinema/2163066",
       "source": "generic",
-      "description": "Exibição ao ar livre do clássico filme francês sobre uma jovem que decide alegrar a vida dos outros.",
+      "description": "Exibição ao ar livre do filme 'Amélie' no cenário único da Igreja da Graça.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -18079,7 +18316,7 @@
       ],
       "url": "https://casa-capitao.com/evento/tom-ribeira/",
       "source": "generic",
-      "description": "Concerto de Tom Ribeira no Rés do Chão.",
+      "description": "Concerto intimista do músico Tom Ribeira.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/05/Tom-Ribeira.jpg",
       "lineup": null,
       "links": null,
@@ -18117,49 +18354,8 @@
       ],
       "url": "https://casa-capitao.com/evento/lalalar/",
       "source": "generic",
-      "description": "Atuação musical no Sótão.",
+      "description": "Concerto da banda LALALAR.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/03/LALALAR-scaled-e1773412870933.png",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "e23fad21c9f9",
-      "title": "Ministério do Sensível",
-      "topic": "art",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-24",
-      "end": "2026-08-24",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/ministerio-do-sensivel/2026-06-24/",
-      "source": "ccb",
-      "description": "Talvez tenhamos que começar a pensar em proteger, organizar e a reivindicar o que faz de nós Humanos. Talvez possamos utilizar formas de organização da sociedade, colocando-as ao serviço de outras dimensões humanas que não se definem por critérios funcionais, operativos, lucrativ.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/Misterio-do-sensivel.jpeg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -18391,6 +18587,43 @@
       "prov": null
     },
     {
+      "id": "2c7272a2d493",
+      "title": "Memmo Talks: Madalena Sá Fernandes e Jacqueline de Montaigne",
+      "topic": "learning",
+      "categories": [
+        1
+      ],
+      "venue": "NiT (New in Town)",
+      "source_id": "nit-new-in-town",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-24",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 2.0,
+        "currency": "EUR",
+        "text": "€2"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.nit.pt/fora-de-casa/na-cidade/memmo-talks-by-nitfm-recebem-madalena-sa-fernandes-e-jacqueline-de-montaigne-esta-quarta-feira",
+      "source": "generic",
+      "description": "Conversa com Madalena Sá Fernandes e Jacqueline de Montaigne no âmbito das Memmo Talks organizadas pela NiTfm.",
+      "image": "https://www.nit.pt/wp-content/plugins/madmen-opengraph-image-v2/madmen-opengraph-image.php?post_id=1649847&ts=20260623090658",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "9d97d79de477",
       "title": "Graça Morais Uma Antologia",
       "topic": "art",
@@ -18580,47 +18813,6 @@
       "prov": null
     },
     {
-      "id": "0f7195a4bdfe",
-      "title": "Prólogo",
-      "topic": "performance",
-      "categories": [
-        11
-      ],
-      "venue": "Teatro Nacional D. Maria II",
-      "source_id": "teatro-nacional-d-maria-ii",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-24",
-      "end": "2026-07-19",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://tndm.pt/pt/programacao/espetaculos/prologo/",
-      "source": "generic",
-      "description": "Evento inaugural que celebra a reabertura do teatro com espetáculos e atividades dentro e fora do edifício.",
-      "image": "https://www.tndm.pt/fotos/programacao/eventos/o_teatro_contado_por_quem_o_vive_1920_1__14143433766a22fb6ecf9ac.png",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "e3343bb48e2d",
       "title": "Secret Stuff Comedy Club",
       "topic": "nightlife",
@@ -18664,7 +18856,7 @@
       "categories": [
         1
       ],
-      "venue": "Teatro Tivoli Bbva",
+      "venue": "Teatro Tivoli BBVA",
       "source_id": "ticketline",
       "neighbourhood": "Avenida da Liberdade",
       "zone": "city",
@@ -18771,26 +18963,25 @@
       "lineup": null,
       "links": [
         "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-541/225329",
-        "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-544/225332",
-        "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-545/225333"
+        "https://xceed.me/lisboa/event/lisbon-pub-crawl-with-open-bar-shots-vip-club-entry-544/225332"
       ],
       "prov": null
     },
     {
-      "id": "543ec1e59514",
-      "title": "Lisbon: Guided tour of Belém + Entrance to the Jerónimos Monastery",
-      "topic": "food",
+      "id": "ca0f9a877dee",
+      "title": "National Palace and Queluz Gardens: Skip-the-Line Ticket",
+      "topic": "tours",
       "categories": [
         1
       ],
-      "venue": "Jerónimos Monastery",
+      "venue": "Queluz National Palace",
       "source_id": "fever",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.697891,
-      "lng": -9.206704,
+      "neighbourhood": null,
+      "zone": null,
+      "lat": 38.7507229,
+      "lng": -9.259082399999999,
       "start": "2026-06-24T09:00",
-      "end": "2026-09-20",
+      "end": "2026-09-09",
       "all_day": false,
       "ongoing": true,
       "days": [
@@ -18802,17 +18993,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": 56.0,
+        "min": 13.0,
         "currency": "EUR",
-        "text": "€56"
+        "text": "€13"
       },
       "language": [
         "pt"
       ],
-      "url": "https://feverup.com/m/494797/en",
+      "url": "https://feverup.com/m/156665/en",
       "source": "fever",
-      "description": "📱 Smartphone tickets ⚡ Instant access to your tickets Embark on an epic walking tour through Lisbon and dive into the wonders of Portugal's Age of Exploration! Wander through Belém, soaking in iconic sights like the Belém Tower, the irresistible Pasteis de Belém, and the breathta.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/367b1af8-b002-11f0-90e5-d216288d991e",
+      "description": "⭐ National Palace and Queluz Gardens: Skip-the-Line Ticket. Discover the royal elegance of Queluz. Tickets 🎫 Child (0-5) - Infant 🎫 Adult (6+) Highlights 💥 Discover the best flavors in town! 🎉 Have fun with friends and incredible food! 🍔 Live an unforgettable gastronomic experien.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/809bb21a-cf0c-11ee-80a4-4e0e9ae47c33",
       "lineup": null,
       "links": null,
       "prov": null
@@ -18970,6 +19161,47 @@
       "prov": null
     },
     {
+      "id": "0ea0905b7302",
+      "title": "Entrance to the Marine Museum",
+      "topic": "nightlife",
+      "categories": [
+        1
+      ],
+      "venue": "Museu de Marinha",
+      "source_id": "fever",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.697681,
+      "lng": -9.206949,
+      "start": "2026-06-24T10:00",
+      "end": "2026-09-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 8.0,
+        "currency": "EUR",
+        "text": "€8"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/125945/en",
+      "source": "fever",
+      "description": "Tickets for the Marine Museum, Lisbon 🎫 Adult 🎫 Child (4-12) 🎫 Senior (+65) Highlights ⛵ Discover the impressive Cockatoo Pavilion 🤏 United examples of boat models 🧭 The world's largest collection of astrolabes on display General Info ⚠️ This experience takes place in Portuguese.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5430f104-ae3d-11ed-bb49-4e3304662ce3.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "4c7e6b46f472",
       "title": "Lisbon Oceanarium",
       "topic": "tours",
@@ -19052,6 +19284,84 @@
       "prov": null
     },
     {
+      "id": "e23fad21c9f9",
+      "title": "Ministério do Sensível",
+      "topic": "art",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-24T10:30",
+      "end": "2026-06-24",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/ministerio-do-sensivel/2026-06-24/",
+      "source": "ccb",
+      "description": "Talvez tenhamos que começar a pensar em proteger, organizar e a reivindicar o que faz de nós Humanos. Talvez possamos utilizar formas de organização da sociedade, colocando-as ao serviço de outras dimensões humanas que não se definem por critérios funcionais, operativos, lucrativ.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/11/Misterio-do-sensivel.jpeg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "eca0a350d184",
+      "title": "Visit to the Pharmacy Museum",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Pharmacy Museum",
+      "source_id": "fever",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": 38.710151,
+      "lng": -9.147139,
+      "start": "2026-06-24T11:00",
+      "end": "2026-12-30",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/114041/en",
+      "source": "fever",
+      "description": "Tickets 🎫 Adult ticket (+18) 🎫 Senior ticket (+65) 🎫 Student ticket 🎫 Family ticket (2 adults + 2 children) Free entry for children under 5 Highlights 🥼 An engaging and unique journey through 5000 years of health history 🔬 A vast collection of objects of rare artistic, anthropolo.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/ddb0ff66-c6e2-11ec-80b1-92e43911f87c.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "391c648b40e0",
       "title": "Tête-à-Tête",
       "topic": "performance",
@@ -19089,20 +19399,20 @@
       "prov": null
     },
     {
-      "id": "904c5924c728",
-      "title": "Michelin-starred lunch menu at Eleven",
-      "topic": "food",
+      "id": "fa7a798b3949",
+      "title": "Visit to the Jerónimos Monastery",
+      "topic": "tours",
       "categories": [
         1
       ],
-      "venue": "Eleven",
+      "venue": "Jerónimos Monastery",
       "source_id": "fever",
-      "neighbourhood": "Avenidas Novas",
+      "neighbourhood": "Belém",
       "zone": "city",
-      "lat": 38.730762,
-      "lng": -9.155804,
-      "start": "2026-06-24T12:30",
-      "end": "2026-12-19",
+      "lat": 38.697891,
+      "lng": -9.206704,
+      "start": "2026-06-24T11:30",
+      "end": "2026-09-17",
       "all_day": false,
       "ongoing": true,
       "days": [
@@ -19114,17 +19424,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": 49.0,
+        "min": 18.0,
         "currency": "EUR",
-        "text": "€49"
+        "text": "€18"
       },
       "language": [
         "pt"
       ],
-      "url": "https://feverup.com/m/110297/en",
+      "url": "https://feverup.com/m/113633/en",
       "source": "fever",
-      "description": "Tickets 🎫 Lunch menu for 1 person, consisting of: artisanal breads and butters, olive oil, amuse bouche, starter, main course and dessert Highlights ⭐ Michelin-starred restaurant 😍 Stunning views over Lisbon and the Tagus River 🆕 A menu renewed every two weeks 🍽️ Includes dishes.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/c892e8ce-8f24-11ec-9e56-de86ab14545a",
+      "description": "📱 Tickets on your phone ⚡ Instant access to your tickets Classified as a UNESCO World Heritage Site in 1983, the Jerónimos Monastery is a must-see for both Lisbon residents and visitors to the Portuguese capital! An unprecedented tribute to Portuguese identity and culture that wi.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/671f6fee-c4a9-11ec-8b83-3e5312b0f4d0",
       "lineup": null,
       "links": null,
       "prov": null
@@ -19281,6 +19591,47 @@
       "source": "gulbenkian",
       "description": "Este programa inclui uma visita e duas conversas, cruzando diferentes projetos de artistas em destaque no CAM. Convida à exploração das intersecções entre a imaginação, a especulação e a prática artística na construção de futuros alternativos.",
       "image": "https://gulbenkian.pt/wp-content/uploads/2026/06/Walkthrough.00_15_40_01.Still017-1-CARD.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "2d5060d203ef",
+      "title": "Park and National Palace of Pena: Admission Ticket",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Palácio Nacional da Pena",
+      "source_id": "fever",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": 38.7875851,
+      "lng": -9.3906089,
+      "start": "2026-06-24T14:00",
+      "end": "2026-09-19",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 18.0,
+        "currency": "EUR",
+        "text": "€18"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/117180/en",
+      "source": "fever",
+      "description": "📱 Smartphone tickets ⚡ Show your digital ticket at the entrance to the Park and National Palace of Pena The Pena National Palace, popularly known as Pena Castle, was a monastery before being transformed into a private palace by King Fernando II. The park that surrounds it is as i.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/137e0152-0e4b-11ed-8caf-727d2d56e939",
       "lineup": null,
       "links": null,
       "prov": null
@@ -19470,7 +19821,7 @@
       ],
       "url": "https://museus.ulisboa.pt/visita-ao-observatorio-astronomico-de-lisboa-35",
       "source": "generic",
-      "description": "Visita guiada ao Observatório Astronómico de Lisboa, na Tapada da Ajuda.",
+      "description": "Visita guiada ao Observatório Astronómico de Lisboa, uma atividade educativa para explorar o espaço e a história da astronomia.",
       "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2022-12/139-196399ecde1ad9f853daf65af788b266.jpg?itok=dxGB6SXT",
       "lineup": null,
       "links": null,
@@ -19588,6 +19939,47 @@
       "prov": null
     },
     {
+      "id": "0d53956f0474",
+      "title": "Two-hour cruise: a different way to see Lisbon",
+      "topic": "tours",
+      "categories": [
+        11
+      ],
+      "venue": "Clube de Padel (Doca de Santo Amaro)",
+      "source_id": "cordoaria-nacional",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-24T16:30",
+      "end": "2026-09-06",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 44.95,
+        "currency": "EUR",
+        "text": "€44.95"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/92156/en",
+      "source": "fever",
+      "description": "📱 Tickets on your phone ⚡ Instant access to your tickets 🌐 Experience available in Portuguese, English, Spanish, French and German ⌛ Boat trip duration: 2h Visit Lisbon in a different way and be surprised by its colors and the way they spread across the mountain and touch the riv.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/fb60be44-03e9-11eb-bf03-06551cb39bc6.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "b49c2a6a77e9",
       "title": "COLLECT w/ GAMUT by BENN",
       "topic": "nightlife",
@@ -19621,6 +20013,47 @@
       "source": "ra",
       "description": "",
       "image": null,
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "6c981fa0f1e3",
+      "title": "Gin O’Clock at Hyatt Regency Lisbon",
+      "topic": "food",
+      "categories": [
+        11
+      ],
+      "venue": "Hyatt Regency Lisbon",
+      "source_id": "cordoaria-nacional",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-24T17:00",
+      "end": "2026-11-17",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 45.0,
+        "currency": "EUR",
+        "text": "€45.00"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/503796/en",
+      "source": "fever",
+      "description": "Highlights 🍸 Discover the charm of late afternoons with Gin O’Clock 🎶 Let yourself be carried away by live music as you enjoy unique combinations 🥂 A gin that evolves in aroma throughout the experience 🌮 3 snacks crafted to perfectly complement the aromas of the gin: shrimp and l.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/8be3ebc4-245a-11f1-80fe-6e92b826af92.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -19842,8 +20275,45 @@
       ],
       "url": "https://casa-capitao.com/evento/celebrando-100-anos-de-jose-afonso-1929-2029-apresentacao-do-manifesto/",
       "source": "generic",
-      "description": "Apresentação do manifesto em homenagem ao centenário do músico, com palavra e música.",
+      "description": "Sessão comemorativa com apresentação de um manifesto e momentos musicais, celebrando o centenário do cantor José Afonso.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/06/joseafonso.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "b6315dba70f2",
+      "title": "Centenário de José Afonso",
+      "topic": "performance",
+      "categories": [
+        1
+      ],
+      "venue": "Casa Capitão",
+      "source_id": "mato",
+      "neighbourhood": "Beato",
+      "zone": "city",
+      "lat": 38.730887,
+      "lng": -9.10728,
+      "start": "2026-06-24T18:00",
+      "end": "2026-06-24",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "Associação José Afonso presents the Manifesto for the centenary of José Afonso (1929-2029) at Casa Capitão. The event celebrates the legacy of the poet and singer with musical performances by Ana Lua Caiano and Couple Coffee Duo. A gathering for those looking to engage with the c.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/2cf6ba79-e9b0-4715-9f35-81c96dd3f54d-original.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -19879,7 +20349,7 @@
       ],
       "url": "https://www.casadocomum.org/seminario-de-dramaturgia-com-ruben-sabbadini-3/",
       "source": "generic",
-      "description": "Oficina de escrita dramática para descobrir as palavras certas quando se tem algo a dizer.",
+      "description": "Seminário de dramaturgia focado no treino da escrita para quem tem algo a dizer mas ainda não encontrou as palavras.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/05/Afiche-5_11zon.png",
       "lineup": null,
       "links": null,
@@ -19923,6 +20393,43 @@
       "prov": null
     },
     {
+      "id": "ca6f068fbe1a",
+      "title": "Arqueologia nos Territórios",
+      "topic": "learning",
+      "categories": [
+        1
+      ],
+      "venue": "Ruínas e Museu Arqueológico do Carmo",
+      "source_id": "mato",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.711855,
+      "lng": -9.141009,
+      "start": "2026-06-24T18:00",
+      "end": "2026-06-24",
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "wed"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://ma.to",
+      "source": "mato",
+      "description": "The Associação dos Arqueólogos Portugueses and publisher Lápis present the launch of “Arqueologia nos Territórios da Literatura”. The session includes a presentation by Professor Jorge Oliveira, exploring the connections between archaeological science and literary works within th.",
+      "image": "https://mato.s3.us-east-1.amazonaws.com/prod/de9074c6-2215-4a54-9396-7a8b882a157c-original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
       "id": "8e656fecee52",
       "title": "Queeremos Aprender Português!",
       "topic": "learning",
@@ -19953,7 +20460,7 @@
       ],
       "url": "https://www.meetup.com/queer-lisbon/events/314298489/?eventOrigin=group_upcoming_events",
       "source": "meetup",
-      "description": "\\*\\*Encontrar-nos-emos todas as quartas-feiras, das 18:30h às 20:30h, no Aconchego House, para praticar português por imersão! \\*\\* Se só fala um pouco de.",
+      "description": "Encontro semanal para praticar português por imersão, aberto a todos os níveis. O foco é o português europeu, mas todos os falantes de português são bem-vindos.",
       "image": "https://secure-content.meetupstatic.com/images/classic-events/533971030/676x676.jpg",
       "lineup": null,
       "links": null,
@@ -20075,47 +20582,6 @@
       "prov": null
     },
     {
-      "id": "89ee1dcbf41a",
-      "title": "Walking tour of Alfama with fado and dinner included",
-      "topic": "food",
-      "categories": [
-        1
-      ],
-      "venue": "Lisbon Destination Hostel",
-      "source_id": "fever",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.7143845,
-      "lng": -9.1407397,
-      "start": "2026-06-24T19:00",
-      "end": "2026-09-06",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 57.95,
-        "currency": "EUR",
-        "text": "€57,95"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/113624/en",
-      "source": "fever",
-      "description": "📱 Tickets from your cell phone Instant access to your tickets Are you one of those people who thinks you need to know Portuguese to understand Fado? Then you're very wrong! Fado is life, it's feeling and it's passion, it crosses any language barrier and conquers anyone! Venture o.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/6726edce-c4ad-11ec-9c60-8640a1c4a3f8.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "7fd54165e9b2",
       "title": "MAAT Friends After Hours",
       "topic": "tours",
@@ -20147,7 +20613,7 @@
       ],
       "url": "https://maat.pt/pt/event/maat-friends-after-hours",
       "source": "generic",
-      "description": "Visita noturna exclusiva para membros do programa MAAT Friend, com acesso a exposições fora do horário regular.",
+      "description": "Visita exclusiva para membros MAAT Friends ao museu, com acesso após o horário normal de funcionamento.",
       "image": "https://maat.pt/sites/default/files/2025-07/MAAT_Friends_After_Hours_PercursoSecreto_W01L2014_0.jpg",
       "lineup": null,
       "links": null,
@@ -20180,11 +20646,11 @@
         "text": ""
       },
       "language": [
-        "pt"
+        "en"
       ],
       "url": "https://mill.pt/events/micro-factories-the-future-of-fashion/",
       "source": "generic",
-      "description": "Uma conversa sobre micro-fábricas e o futuro da moda, explorando como a produção local e sustentável pode transformar a indústria têxtil.",
+      "description": "Discussão informal sobre micro-fábricas e o futuro da moda, explorando alternativas sustentáveis.",
       "image": "https://mill.pt/wp-content/uploads/2026/05/cartaz_microfactories.png",
       "lineup": null,
       "links": null,
@@ -20370,7 +20836,7 @@
       ],
       "url": "https://casa-capitao.com/evento/xarpi-nayzera-ofa-dj-set-convidado-especial/",
       "source": "generic",
-      "description": "Set de DJ com Nayzera e OFÁ, mais um convidado especial, no Terraço.",
+      "description": "Atuação de Nayzera e set de OFÁ, com a participação de um convidado especial.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/06/TERRACO.jpg",
       "lineup": null,
       "links": null,
@@ -20552,7 +21018,7 @@
         "is_free": false,
         "min": 12.0,
         "currency": "EUR",
-        "text": "€12–13"
+        "text": "€12–12,89"
       },
       "language": [
         "pt"
@@ -20869,8 +21335,45 @@
       ],
       "url": "https://app.tickettailor.com/events/blackcatcinema/2163068",
       "source": "generic",
-      "description": "Projeção do thriller sul-coreano baseado em factos reais sobre a busca de um assassino em série na Coreia dos anos 80.",
+      "description": "Exibição ao ar livre do filme 'Memories of Murder' na Igreja da Graça.",
       "image": null,
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "34d61af59311",
+      "title": "Gato de Biblioteca: Stand-Up Literário de Pedro Miguel Ribeiro",
+      "topic": "comedy",
+      "categories": [
+        26
+      ],
+      "venue": "CLAP CLAP – Improvisation and Deconstruction",
+      "source_id": "clap-clap-improvisation-and-deconstruction",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-25",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://cartazculturallisboa.pt/stand-up-comedy-em-lisboa",
+      "source": "generic",
+      "description": "Stand-up literário de Pedro Miguel Ribeiro, combinando comédia e referências de livros.",
+      "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/03/cartaz147559_grande-1.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -20954,7 +21457,7 @@
     {
       "id": "876a1ffbcba9",
       "title": "The Ongoing Seminar: Filmes e debates",
-      "topic": "film",
+      "topic": "workshops",
       "categories": [
         9
       ],
@@ -20983,7 +21486,7 @@
       ],
       "url": "https://www.casadocomum.org/the-ongoing-seminar/",
       "source": "generic",
-      "description": "Programa de filmes e debates que assinala os 50 anos da Mostra Internacional de Cinema de Intervenção, com obras politicamente engajadas.",
+      "description": "Workshop de filmes e debates que assinala o 50.º aniversário da Mostra Internacional de Cinema de Intervenção, com sessões de filmes politicamente engajados.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/05/do-comum.jpg",
       "lineup": null,
       "links": null,
@@ -21131,57 +21634,16 @@
       ],
       "url": "https://medeiafilmes.com/filmes/o-amor-que-perdura-2025",
       "source": "generic",
-      "description": "Estreia do novo filme do realizador islandês Hlynur Pálmason.",
+      "description": "Estreia do filme de Hlynur Pálmason, um drama sobre a complexidade dos relacionamentos amorosos.",
       "image": null,
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "913de3180bc7",
-      "title": "Festival Espanto leva filósofos ao encontro do público para conversas informais",
-      "topic": "learning",
-      "categories": [
-        1,
-        2
-      ],
-      "venue": "Comunidade Cultura e Arte (CCA)",
-      "source_id": "comunidade-cultura-e-arte-cca",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25",
-      "end": "2026-06-28",
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "thu",
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 1.0,
-        "currency": "EUR",
-        "text": "€1"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://comunidadeculturaearte.com/festival-espanto-leva-filosofos-ao-encontro-do-publico-para-conversas-informais/",
-      "source": "generic",
-      "description": "Festival internacional de filosofia com conversas informais entre filósofos e o público.",
-      "image": "https://comunidadeculturaearte.com/wp-content/uploads/2026/06/Gilles-Lipovetsky-VII-600x315.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "4d931debb1c3",
-      "title": "HIPPOtrip Lisbon: Amphibious Bus and Boat Tour",
-      "topic": "tours",
+      "id": "ac552ab5a38d",
+      "title": "Thermal Oasis at the Hyatt Regency Lisbon",
+      "topic": "wellness",
       "categories": [
         11
       ],
@@ -21192,7 +21654,7 @@
       "lat": null,
       "lng": null,
       "start": "2026-06-25",
-      "end": "2026-07-20",
+      "end": "2026-12-31",
       "all_day": true,
       "ongoing": true,
       "days": [
@@ -21203,17 +21665,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": 30.0,
+        "min": 50.0,
         "currency": "EUR",
-        "text": "€30.00"
+        "text": "€50.00"
       },
       "language": [
         "pt"
       ],
-      "url": "https://feverup.com/m/632431/en",
+      "url": "https://feverup.com/m/289539/en",
       "source": "fever",
-      "description": "Passeio turístico em autocarro anfíbio que combina estrada e rio Tejo, com partida da Doca de Santo.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,ar_15:8,c_fill/fever2/plan/photo/c2b77bde-3f26-11f1-af41-da947234ee0d.jpg",
+      "description": "Circuito de bem-estar com sauna, banho turco e piscina aquecida.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,ar_15:8,c_fill/fever2/plan/photo/b20f991a-d1b3-11ef-9eaf-2675f6cd65de",
       "lineup": null,
       "links": null,
       "prov": null
@@ -21252,7 +21714,7 @@
       ],
       "url": "https://salgadeiras.com/exposicoes/a-montanha/",
       "source": "generic",
-      "description": "Exposição individual de Marta Ubach, apresentando obras que exploram o tema da montanha.",
+      "description": "Exposição individual da artista Marta Ubach.",
       "image": "https://salgadeiras.com/wp-content/uploads/2026/05/MU_vi-a-montanha-19-scaled.jpeg",
       "lineup": null,
       "links": null,
@@ -21640,7 +22102,7 @@
       ],
       "url": "https://www.teatrosaoluiz.pt/espetaculo/oficina-de-fotografia-de-cena/",
       "source": "generic",
-      "description": "Oficina prática de fotografia de cena orientada por Estelle Valente.",
+      "description": "Oficina prática de fotografia de cena, orientada por Estelle Valente, para explorar o olhar fotográfico no contexto teatral.",
       "image": "https://www.teatrosaoluiz.pt/wp-content/uploads/2026/05/estellevalente-cadernoinverno2026-pedrorosarionunes-scaled-e1778778666610.jpg",
       "lineup": null,
       "links": null,
@@ -21684,26 +22146,24 @@
       "prov": null
     },
     {
-      "id": "d3169d93e3a4",
-      "title": "Visita orientada - Nos bastidores da renovação",
+      "id": "a7a06c03c985",
+      "title": "Nos bastidores da renovação",
       "topic": "tours",
       "categories": [
-        11
+        1
       ],
       "venue": "Teatro Nacional D. Maria II",
-      "source_id": "teatro-nacional-d-maria-ii",
+      "source_id": "agendalx",
       "neighbourhood": "Baixa",
       "zone": "city",
       "lat": 38.713719,
       "lng": -9.139681,
       "start": "2026-06-25",
-      "end": "2026-06-27",
+      "end": "2026-06-25",
       "all_day": true,
       "ongoing": false,
       "days": [
-        "thu",
-        "fri",
-        "sat"
+        "thu"
       ],
       "price": {
         "is_free": true,
@@ -21714,18 +22174,13 @@
       "language": [
         "pt"
       ],
-      "url": "https://tndm.pt/pt/programacao/livros-e-pensamento/visita-orientada-nos-bastidores-da-renovacao/",
-      "source": "generic",
+      "url": "https://www.agendalx.pt/events/event/nos-bastidores-da-renovacao/",
+      "source": "agendalx",
       "description": "Uma visita guiada ao Teatro Nacional D. Maria II, a partir do olhar de decisores no projeto de requalificação do edifício, proporcionando uma imersão no processo de transformação do espaço. F...",
-      "image": "https://www.tndm.pt/fotos/programacao/eventos/nos_bastidores_da_renovacyayo_1920_18205417376a22f84d4f5ad.png",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/nos_bastidores_da_renova.png",
       "lineup": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/nos-bastidores-da-renovacao/"
-      ],
-      "prov": {
-        "description": "agendalx",
-        "price": "agendalx"
-      }
+      "links": null,
+      "prov": null
     },
     {
       "id": "cb4860ce5b64",
@@ -21763,6 +22218,46 @@
       "source": "generic",
       "description": "O CineConchas regressa à Quinta das Conchas para mais uma edição de noites de cinema ao ar livre, celebrando o verão em Lisboa com uma programação pensada pa...",
       "image": "https://ml3n4h8jrdie.i.optimole.com/w:640/h:800/q:mauto/f:best/ig:avif/https://lisboa.events/app/uploads/CineConchas2026.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "6b7f9d868393",
+      "title": "Lisbon: Guided tour of Belém + Entrance to the Jerónimos Monastery",
+      "topic": "food",
+      "categories": [
+        1
+      ],
+      "venue": "Jerónimos Monastery",
+      "source_id": "fever",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.697891,
+      "lng": -9.206704,
+      "start": "2026-06-25T09:00",
+      "end": "2026-09-20",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 56.0,
+        "currency": "EUR",
+        "text": "€56"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://feverup.com/m/494797/en",
+      "source": "fever",
+      "description": "📱 Smartphone tickets ⚡ Instant access to your tickets Embark on an epic walking tour through Lisbon and dive into the wonders of Portugal's Age of Exploration! Wander through Belém, soaking in iconic sights like the Belém Tower, the irresistible Pasteis de Belém, and the breathta.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/367b1af8-b002-11f0-90e5-d216288d991e",
       "lineup": null,
       "links": null,
       "prov": null
@@ -21915,7 +22410,7 @@
       ],
       "url": "https://littlebigapple.pt/aula/swing_babies/",
       "source": "generic",
-      "description": "Aula de swing dance para pais e bebés, ideal para iniciados, dançando juntos ao ritmo do jazz.",
+      "description": "Aula de swing dance para pais e bebés, com movimentos adaptados.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -22069,7 +22564,7 @@
       ],
       "url": "https://museus.ulisboa.pt/visita-reserva-das-colecoes-de-invertebrados-marinhos",
       "source": "generic",
-      "description": "Visita orientada à reserva de coleções de invertebrados marinhos do Museu.",
+      "description": "Visita orientada à reserva das coleções de invertebrados marinhos do Museu, conhecendo espécies e métodos de conservação.",
       "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2026-06/11910-1f9754069a11148ac1db1bd0d9ef1a8a.jpg?itok=CyX89vX-",
       "lineup": null,
       "links": null,
@@ -22380,7 +22875,7 @@
       ],
       "url": "https://vulisboa.com/eventos/afterglow-music-session",
       "source": "generic",
-      "description": "Sessão de música ao vivo com DJs num ambiente descontraído no Village Underground.",
+      "description": "Sessão de música ao vivo com DJs e ambiente intimista.",
       "image": "http://static1.squarespace.com/static/65d770165e44f6173a5c3868/662faee562de8c5dc364cd19/6a16ddf22815f0785c0ba187/1782140807567/AfterGlow+25.06.png?format=1500w",
       "lineup": [
         "kazarov"
@@ -22388,43 +22883,6 @@
       "links": [
         "https://ra.co/events/2462803"
       ],
-      "prov": null
-    },
-    {
-      "id": "a6dfa8f7b37e",
-      "title": "Lançamento do jornal LPP #7 e conversa Como regenerar o tecido social de uma cidade?",
-      "topic": "learning",
-      "categories": [
-        19
-      ],
-      "venue": "Tigre de Papel",
-      "source_id": "tigre-de-papel",
-      "neighbourhood": "Anjos",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25T18:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://tigrepapel.pt/evento/lancamento-do-jornal-lpp-7-e-conversa-como-regenerar-o-tecido-social-de-uma-cidade/",
-      "source": "generic",
-      "description": "Lançamento do sétimo número do jornal LPP, seguido de uma conversa sobre regeneração do tecido social urbano.",
-      "image": "https://tigrepapel.pt/wp-content/uploads/2026/06/lpp.jpg",
-      "lineup": null,
-      "links": null,
       "prov": null
     },
     {
@@ -22491,15 +22949,56 @@
         "text": "Grátis"
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://www.meetup.com/queer-lisbon/events/315121639/?eventOrigin=group_upcoming_events",
       "source": "meetup",
-      "description": "At Aconchego House, we believe in the power of community care. Our counselor-led Trans meetup provides a welcoming space where individuals can connect, sha.",
+      "description": "Grupo de apoio gratuito para a comunidade trans, facilitado por um psicólogo trans não-binário. Espaço seguro para partilhar experiências e criar comunidade, em inglês.",
       "image": "https://secure-content.meetupstatic.com/images/classic-events/532266945/676x676.jpg",
       "lineup": null,
       "links": null,
       "prov": null
+    },
+    {
+      "id": "fd8df7a2a3ab",
+      "title": "Sobre a verdade da mentira",
+      "topic": "learning",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-25T19:00",
+      "end": "2026-06-25",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 63.0,
+        "currency": "EUR",
+        "text": "€63"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/sobre-a-verdade-da-mentira/2026-06-25/",
+      "source": "ccb",
+      "description": "Não querer ser enganado com mentiras e descobrir a verdade é a situação em que cada ser humano se encontra. Há uma pressão contínua — 24 horas por dia, 7 dias na semana — para escapar à mentira e saber da verdade. Por norma, achamos que estamos na verdade e somos verdadeiros, mas.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/07/2000x940_AntoniodeCastroCaeiro_MatildeFieschi.jpg",
+      "lineup": null,
+      "links": [
+        "https://www.agendalx.pt/events/event/sobre-a-verdade-da-mentira/"
+      ],
+      "prov": {
+        "price": "agendalx"
+      }
     },
     {
       "id": "bf2fd46aa9b5",
@@ -22569,7 +23068,7 @@
       ],
       "url": "https://jf-misericordia.pt/viver/cultura/noticias/noticia/coro-literario-com-sessao-aberta-a-comunidade-98",
       "source": "generic",
-      "description": "Sessão aberta do Coro Literário da Misericórdia, unindo música e poesia no Palácio Cabral.",
+      "description": "Sessão aberta à comunidade do Coro Literário da Misericórdia, com apresentação musical.",
       "image": "https://www.jf-misericordia.pt/jfmisericordia/uploads/news/image/763/base_coro_literario_25jun.jpg",
       "lineup": null,
       "links": null,
@@ -22685,7 +23184,7 @@
       ],
       "url": "https://mill.pt/events/the-cyborg-library/",
       "source": "generic",
-      "description": "Uma sessão interativa de leitura e brincadeira que explora a interseção entre tecnologia e arte.",
+      "description": "Evento que combina leitura, brincadeira, tecnologia e arte na The Cyborg Library.",
       "image": "https://mill.pt/wp-content/uploads/2026/02/cyborg_library.png",
       "lineup": null,
       "links": null,
@@ -22761,7 +23260,7 @@
       ],
       "url": "https://teatrodobairro.bol.pt/Comprar/Bilhetes/179667-festival_inart_filmes_e_processo_de_criacao_de_noe-teatro_do_bairro/",
       "source": "generic",
-      "description": "Sessão de filmes e de apresentação do processo de criação 'My Body? My Sex!', com os filmes 'She’s Ready' e 'The Occurrence of Colours by Night'.",
+      "description": "Exibição dos filmes 'She's Ready' e 'The Occurrence of Colours by Night', seguida de uma conversa sobre o processo criativo de 'My Body? My Sex!'.",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154005.jpg?v=5",
       "lineup": null,
       "links": [
@@ -22909,7 +23408,7 @@
         "text": ""
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://www.meetup.com/queer-lisbon/events/315365860/?eventOrigin=group_upcoming_events",
       "source": "meetup",
@@ -22950,7 +23449,7 @@
       ],
       "url": "https://hcp.pt/events/jovens-talentos-hot-clube-carolina-estrela-trio/",
       "source": "generic",
-      "description": "Trio de Carolina Estrela apresenta jazz contemporâneo wordless, com melodias complexas e improvisação conjunta, num concerto intimista no MACAM.",
+      "description": "Trio liderado por Carolina Estrela apresenta repertório de jazz contemporâneo com abordagem wordless, num concerto intimista.",
       "image": "https://hcp.pt/wp-content/uploads/2026/06/carol-foto.jpeg",
       "lineup": null,
       "links": [
@@ -22991,7 +23490,7 @@
       ],
       "url": "https://littlebigapple.pt/aula/explorers-partnered-swing-dances/",
       "source": "generic",
-      "description": "Aula de danças de par em swing jazz para iniciados, experimentando diferentes estilos com parceiros.",
+      "description": "Aula avulsa de danças a pares para explorar diferentes estilos de swing.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -23108,7 +23607,7 @@
       ],
       "url": "https://casa-capitao.com/evento/silentide-1a-parte-toni-rebelo/",
       "source": "generic",
-      "description": "Concerto com a primeira parte de Toni Rebelo.",
+      "description": "Concerto de Silentide, com abertura de Toni Rebelo.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/05/Silentide-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -23222,7 +23721,7 @@
       ],
       "url": "https://hcp.pt/events/quinteto-maria-joao-leite-mateus-oliveira/",
       "source": "generic",
-      "description": "Quinteto explora jazz moderno com influências do rock e pop, combinando composições originais e improvisação coletiva, num concerto dinâmico no Muzeu.",
+      "description": "Quinteto de Maria João Leite e Mateus Oliveira apresenta repertório que cruza jazz moderno com rock, pop e música improvisada, explorando a experimentação e interação coletiva.",
       "image": "https://hcp.pt/wp-content/uploads/2026/06/Quinteto-Maria-Joao-Leite-e-Mateus-Oliveira-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -23340,43 +23839,6 @@
       "prov": null
     },
     {
-      "id": "f6c6d2d91d03",
-      "title": "Regaleira à Noite 2026",
-      "topic": "tours",
-      "categories": [
-        33
-      ],
-      "venue": "Quinta da Regaleira",
-      "source_id": "quinta-da-regaleira",
-      "neighbourhood": "Sintra",
-      "zone": "greater",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-25T21:30",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "thu"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 30.0,
-        "currency": "EUR",
-        "text": "€30"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "http://www.regaleira.pt/pt/agenda/2026-regaleira-a-noite/",
-      "source": "generic",
-      "description": "Visita guiada noturna pela Quinta da Regaleira, explorando o misticismo de Sintra.",
-      "image": "http://www.regaleira.pt/media/9951/regaleiranoite2026_470x470px.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134188422660000000",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "0087c6616a4e",
       "title": "Viagem aos Infernos - Mitos Gregos na Regaleira",
       "topic": "tours",
@@ -23407,8 +23869,45 @@
       ],
       "url": "http://www.regaleira.pt/pt/agenda/2026-visita-clenardus-noturna/",
       "source": "generic",
-      "description": "Visita guiada noturna aos mitos gregos na Quinta da Regaleira. Evento esgotado.",
+      "description": "Visita guiada noturna inspirada nos mitos gregos na Quinta da Regaleira.",
       "image": "http://www.regaleira.pt/media/9944/clenardus2026_pm_470x470px.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134220540160000000",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "f6c6d2d91d03",
+      "title": "Regaleira à Noite 2026",
+      "topic": "tours",
+      "categories": [
+        33
+      ],
+      "venue": "Quinta da Regaleira",
+      "source_id": "quinta-da-regaleira",
+      "neighbourhood": "Sintra",
+      "zone": "greater",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-25T21:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "thu"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 30.0,
+        "currency": "EUR",
+        "text": "€30"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "http://www.regaleira.pt/pt/agenda/2026-regaleira-a-noite/",
+      "source": "generic",
+      "description": "Visita guiada noturna pela Quinta da Regaleira.",
+      "image": "http://www.regaleira.pt/media/9951/regaleiranoite2026_470x470px.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=150&amp;rnd=134188422660000000",
       "lineup": null,
       "links": null,
       "prov": null
@@ -23514,7 +24013,7 @@
         "is_free": false,
         "min": 10.0,
         "currency": "EUR",
-        "text": "€10–10,74"
+        "text": "€10–11"
       },
       "language": [
         "pt"
@@ -23551,7 +24050,7 @@
         "is_free": false,
         "min": 7.0,
         "currency": "EUR",
-        "text": "€7–7,52"
+        "text": "€7–7,50"
       },
       "language": [
         "pt"
@@ -23680,7 +24179,7 @@
       ],
       "url": "https://casa-capitao.com/evento/baile-fomo-3/",
       "source": "generic",
-      "description": "Festa noturna com DJ sets em vários espaços.",
+      "description": "Festa noturna com curadoria da FOMO, animada com música e ambiente de clubbing.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/04/FOMO-scaled-e1777040710461.png",
       "lineup": null,
       "links": null,
@@ -23912,7 +24411,7 @@
       ],
       "url": "https://tickets.theblackcatcinema.com/events/blackcatcinema/2277157",
       "source": "generic",
-      "description": "Musical com canções dos ABBA que serve de prequela e sequela ao primeiro filme, passado numa ilha grega paradisíaca.",
+      "description": "Exibição ao ar livre do filme 'Mamma Mia! Here We Go Again' na Igreja da Graça.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -23958,88 +24457,6 @@
       "prov": null
     },
     {
-      "id": "1b6c445d2da5",
-      "title": "Da Desordem das Paixões",
-      "topic": "music",
-      "categories": [
-        12
-      ],
-      "venue": "Centro Cultural de Belém",
-      "source_id": "ccb",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": 38.696435,
-      "lng": -9.208603,
-      "start": "2026-06-26",
-      "end": "2026-06-27",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "fri",
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 20.0,
-        "currency": "EUR",
-        "text": "€20"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://www.ccb.pt/evento/da-desordem-das-paixoes/2026-06-26/",
-      "source": "ccb",
-      "description": "Os Músicos do Tejo e Sofia Dias & Vítor Roriz, unidos pelo seu amor ao barroco, ao século XVII e XVIII, à dança, à música de dança, aos pássaros, aos textos sobre dança, aos textos que falam de danças maravilhosas, aos professores de dança que tocam violino e que compõem melodias.",
-      "image": "https://www.ccb.pt/wp-content/uploads/2025/09/2000x940__SofiaDiasVtorRuizcomMusicosdoTejo_brunosimao-1.jpg",
-      "lineup": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/da-desordem-das-paixoes/",
-        "https://www.bol.pt/Comprar/Bilhetes/164254-da_desordem_das_paixoes_musicos_do_tejo_sexta_maior-ccb/"
-      ],
-      "prov": {
-        "price": "bol"
-      }
-    },
-    {
-      "id": "98b1501f3300",
-      "title": "VV Brunch at the Hyatt Regency Lisboa",
-      "topic": "food",
-      "categories": [
-        11
-      ],
-      "venue": "Cordoaria Nacional",
-      "source_id": "cordoaria-nacional",
-      "neighbourhood": "Belém",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26",
-      "end": "2026-12-23",
-      "all_day": true,
-      "ongoing": true,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 49.0,
-        "currency": "EUR",
-        "text": "€49.00"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/261697/en",
-      "source": "fever",
-      "description": "Brunch de estilo VV servido no elegante Hyatt Regency Lisboa, com seleção de pratos doces e salgados.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,ar_15:8,c_fill/fever2/plan/photo/e3f8ff20-9dc4-11ef-a88c-dab55cb24d40",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "215d138ad8da",
       "title": "MALA VOADORA – Polo Norte",
       "topic": "performance",
@@ -24072,6 +24489,43 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/99236/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "c2ad74f6bfc7",
+      "title": "Inner Peace Soundbath",
+      "topic": "wellness",
+      "categories": [
+        18
+      ],
+      "venue": "Little Yoga Space Lisboa",
+      "source_id": "little-yoga-space-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://littleyogaspacelisboa.com",
+      "source": "generic",
+      "description": "Sessão de soundbath para relaxamento e paz interior, realizada na 4.ª sexta-feira do mês.",
+      "image": "https://littleyogaspacelisboa.com/uploads/8/1/5/3/8153154/log-web-cropped.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24142,11 +24596,11 @@
         "text": ""
       },
       "language": [
-        "pt"
+        "en"
       ],
       "url": "https://www.moyportugal.com/retreats",
       "source": "generic",
-      "description": "Retiro de yoga de verão para renovar e restaurar energias, com práticas de yoga e meditação na natureza.",
+      "description": "Retiro de verão para renovar e restaurar o corpo e a mente, com práticas de yoga e meditação, orientado por Zoe.",
       "image": "https://i0.wp.com/moyportugal.com/wp-content/uploads/2023/08/Mandira-Mats.jpg?fit=1200%2C900&#038;ssl=1",
       "lineup": null,
       "links": null,
@@ -24183,7 +24637,7 @@
       ],
       "url": "https://jardinsdomarques.com/",
       "source": "generic",
-      "description": "Evento musical ao ar livre.",
+      "description": "Série de concertos ao ar livre num ambiente natural.",
       "image": "https://framerusercontent.com/images/GMyj4ro9mkJjHNRz7RmcCocEkSU.png",
       "lineup": null,
       "links": null,
@@ -24220,7 +24674,7 @@
       ],
       "url": "https://scml.pt/evento/visitas-guiadas-a-igreja-e-museu-de-sao-roque-3/",
       "source": "generic",
-      "description": "Visita guiada à Igreja e Museu de São Roque, explorando o património histórico e artístico.",
+      "description": "Visita guiada à igreja e ao museu, descobrindo a história e o património artístico do conjunto.",
       "image": "https://scml.pt/wp-content/uploads/2025/11/visita-guiada-ao-museu-e-igreja-de-sao-roque.jpg",
       "lineup": null,
       "links": null,
@@ -24454,8 +24908,8 @@
       "prov": null
     },
     {
-      "id": "c8d9f1161489",
-      "title": "Terror à meia-noite no Nimas",
+      "id": "61bcee6b870e",
+      "title": "Sessões Nimas Fora de Horas: The Hitcher (1986)",
       "topic": "film",
       "categories": [
         7
@@ -24482,10 +24936,10 @@
       "language": [
         "pt"
       ],
-      "url": "https://motelx.org",
+      "url": "https://www.motelx.org/noticias/sessoes-nimas-fora-de-horas-trazem-o-terror-de-volta-a-meia-noite",
       "source": "generic",
-      "description": "Sessão de cinema de terror programada pelo MOTELX, exibida à meia-noite na última sexta-feira de cada mês.",
-      "image": "https://www.motelx.org/uploads/config/e31ed65275fa5250f231550fed1098ea.png",
+      "description": "Exibição do clássico de terror de 1986, como parte das sessões à meia-noite na última sexta-feira do mês.",
+      "image": "https://www.motelx.org/uploads/news/9d1a97c8e30f186fa6c961e0b210ac2f_seo.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24555,7 +25009,7 @@
         "text": "€9.90–16.90"
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://fatsoma.com/e/v23ivvf9/nottingham-cocktail-week-2026",
       "source": "generic",
@@ -24566,20 +25020,20 @@
       "prov": null
     },
     {
-      "id": "8551fe72112d",
-      "title": "Spa & Lunch at the Hyatt Regency Lisboa",
-      "topic": "wellness",
+      "id": "7880979dea77",
+      "title": "Guided tour of the Amália Rodrigues House-Museum",
+      "topic": "nightlife",
       "categories": [
-        11
+        1
       ],
-      "venue": "Hyatt Regency Lisbon",
-      "source_id": "cordoaria-nacional",
-      "neighbourhood": "Belém",
+      "venue": "Foundation Amália Rodrigues",
+      "source_id": "fever",
+      "neighbourhood": "Campo de Ourique",
       "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26T12:30",
-      "end": "2026-12-31",
+      "lat": 38.715474,
+      "lng": -9.1546,
+      "start": "2026-06-26T14:00",
+      "end": "2026-10-30",
       "all_day": false,
       "ongoing": true,
       "days": [
@@ -24589,17 +25043,17 @@
       ],
       "price": {
         "is_free": false,
-        "min": 90.0,
+        "min": 9.0,
         "currency": "EUR",
-        "text": "€90.00"
+        "text": "€9"
       },
       "language": [
         "pt"
       ],
-      "url": "https://feverup.com/m/199127/en",
+      "url": "https://feverup.com/m/101650/en",
       "source": "fever",
-      "description": "Highlights 💆‍♀️ Enjoy unique moments at Serenity Spa, where well-being reaches a new level 🍽️ Savor incredible dishes at Viseversa Restaurant Bar, a true feast for the senses 🌟 In the heart of Lisbon, combine the tranquility of the spa with gastronomic excellence in a dreamy sett.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/ca3c4c3e-6aa9-11ef-92bf-6632f02b6ae1",
+      "description": "Tickets 🎫 Guided tour of the House-Museum for students* (up to 25 years old) 🎫 Guided tour of the House-Museum for adults (aged 13 and over) 🎫 Guided tour of the House-Museum for seniors (over 65) 🎫 Guided tour of the House-Museum for families (2 adults + 1 to 3 children) Free en.",
+      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5d78e410-fe99-11eb-a534-c6618a4ef84f.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24637,45 +25091,6 @@
       "source": "bol",
       "description": "",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz153809.jpg?v=1",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "fbb6ad747210",
-      "title": "Explore Lisbon Like a Local: Experience Bairro Alto and Baixa",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Fado Museum",
-      "source_id": "fever",
-      "neighbourhood": "Baixa",
-      "zone": "city",
-      "lat": 38.7111258,
-      "lng": -9.127616000000002,
-      "start": "2026-06-26T16:00",
-      "end": "2026-10-31",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "fri",
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 1.0,
-        "currency": "EUR",
-        "text": "€1"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/329381/en",
-      "source": "fever",
-      "description": "Highlights ✨ Explore historic streets full of charm, culture, and tradition 🍽️ Enjoy fresh seafood, traditional sweets, and the city's authentic cuisine 🎶 Discover iconic bars, live music, and the unique energy of Bairro Alto What Is Included? ✔️ Walking tour of Bairro Alto ✔️ Gu.",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/9b6cadda-1ad1-11f0-b700-1add1a6d774b",
       "lineup": null,
       "links": null,
       "prov": null
@@ -24766,6 +25181,44 @@
         "K-SLICE",
         "Pxmp"
       ],
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "a8fe1613a72c",
+      "title": "Pov Presents RHYTHM Dancers",
+      "topic": "music",
+      "categories": [
+        3,
+        8
+      ],
+      "venue": "Av. da Índia 52, 1300-299 Lisboa",
+      "source_id": "village-underground-lisboa",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T17:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://3cket.com/event/pov-presents-rhythm-dancers-free-event",
+      "source": "generic",
+      "description": "FREE COMMUNITY EVENT&nbsp;Rhythm isn't just something we follow — it's something we become.&nbsp;On June 26th, POV returns to Village Underground for a 13-hour sunset-to-sunrise gathering celebrating the many identities, perspectives, and communities that shape Lisbon's dancefloo.",
+      "image": "https://assets.3cket.com/event/event-description/90d4c1e788ab4fdead679fdb5b395c33/922759d65ca7406987172f368fecfddb.webp",
+      "lineup": null,
       "links": null,
       "prov": null
     },
@@ -24890,53 +25343,8 @@
       "prov": null
     },
     {
-      "id": "a8fe1613a72c",
-      "title": "Pov Presents RHYTHM Dancers",
-      "topic": "music",
-      "categories": [
-        3,
-        8
-      ],
-      "venue": "Village Underground Lisboa",
-      "source_id": "village-underground-lisboa",
-      "neighbourhood": "Alcântara",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-26T17:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "fri"
-      ],
-      "price": {
-        "is_free": true,
-        "min": 0,
-        "currency": "EUR",
-        "text": "Grátis"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://vulisboa.com/eventos/pov-presents-rhythm-dancers",
-      "source": "generic",
-      "description": "Evento de dança e música com entrada gratuita, promovido pela POV.",
-      "image": "http://static1.squarespace.com/static/65d770165e44f6173a5c3868/662faee562de8c5dc364cd19/6a2ffc3130c7e356cb0b98ef/1781529981645/POV.jpeg?format=1500w",
-      "lineup": [
-        "kennino",
-        "Nicolle Velcro",
-        "DJ Yok",
-        "ViRiD!S"
-      ],
-      "links": [
-        "https://ra.co/events/2468361"
-      ],
-      "prov": null
-    },
-    {
-      "id": "845b45bd6d8c",
-      "title": "The Saints Must Be Crazy!!",
+      "id": "7f46035b7116",
+      "title": "The saints Must Be Crazy!!",
       "topic": "community",
       "categories": [
         22
@@ -25083,7 +25491,7 @@
       ],
       "url": "https://museus.ulisboa.pt/filme-performance-tributo-aos-antepassados-africanos",
       "source": "generic",
-      "description": "Filme-performance de homenagem aos antepassados africanos.",
+      "description": "Filme-performance de tributo aos antepassados africanos, misturando cinema e performance ao vivo no Museu.",
       "image": "https://museus.ulisboa.pt/sites/default/files/styles/gallery/public/images/gallery_image/2026-06/11901-ad6350e8d6b5284472660af321982926.jpg?itok=0f8I40zU",
       "lineup": null,
       "links": null,
@@ -25150,9 +25558,9 @@
       ],
       "price": {
         "is_free": false,
-        "min": 7.0,
+        "min": null,
         "currency": "EUR",
-        "text": "€7"
+        "text": ""
       },
       "language": [
         "pt"
@@ -25162,12 +25570,8 @@
       "description": "O ciclo de conferências Notas de Música foi pensado como uma extensão do ciclo de concertos Sexta Maior , propondo-se como um espaço privilegiado para o pensamento e a partilha em torno da música. Os concertos programados oferecem ao público uma experiência direta da escuta e as.",
       "image": "https://www.ccb.pt/wp-content/uploads/2025/07/2000x940ciclonotasdemusicaI.jpg",
       "lineup": null,
-      "links": [
-        "https://www.bol.pt/Comprar/Bilhetes/160293-notas_de_musica_ciclo_de_conferencias-ccb/"
-      ],
-      "prov": {
-        "price": "bol"
-      }
+      "links": null,
+      "prov": null
     },
     {
       "id": "241c6cb63c63",
@@ -25274,7 +25678,7 @@
       ],
       "url": "https://www.casadocomum.org/carmen-di-novic/",
       "source": "generic",
-      "description": "Concerto que celebra a música, as histórias e as emoções que nos conectam.",
+      "description": "Concerto de Carmen Di Novic que celebra a música, as histórias e as emoções que nos conectam.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/05/concerto-casa-do-comum-lisboa.jpeg",
       "lineup": null,
       "links": null,
@@ -25471,14 +25875,15 @@
       ],
       "url": "https://teatrodobairro.bol.pt/Comprar/Bilhetes/179676-festival_inart_filmes_e_laboratorio_coreografico-teatro_do_bairro/",
       "source": "generic",
-      "description": "Exibição dos filmes 'Há Mar e Mar' e 'Entangled Waters', e apresentação do laboratório coreográfico 'The Crossing'.",
+      "description": "Apresentação dos filmes 'Há Mar e Mar' e 'Entagled Waters' e do laboratório coreográfico 'The Crossing', resultado de um trabalho comunitário sobre dança e poluição dos oceanos.",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154006.jpg?v=3",
       "lineup": null,
       "links": [
         "https://www.bol.pt/Comprar/Bilhetes/179676-festival_inart_filmes_e_laboratorio_coreografico-teatro_do_bairro/"
       ],
       "prov": {
-        "price": "bol"
+        "price": "bol",
+        "topic": "bol"
       }
     },
     {
@@ -25626,7 +26031,7 @@
       ],
       "url": "https://misomusic.me/concertslist/20260626",
       "source": "generic",
-      "description": "Apresentação dos vencedores do Concurso Folefest, num concerto dedicado à nova música.",
+      "description": "Atuação dos vencedores do concurso Folefest.",
       "image": "http://static1.squarespace.com/static/605a08c97879a54cf42fc65b/605a08db7879a54cf42fc846/69fb4388d554ca790edb60d1/1782116240924/VitorPastor.jpg?format=1500w",
       "lineup": null,
       "links": null,
@@ -25671,6 +26076,48 @@
       "prov": null
     },
     {
+      "id": "1b6c445d2da5",
+      "title": "Da Desordem das Paixões",
+      "topic": "music",
+      "categories": [
+        12
+      ],
+      "venue": "Centro Cultural de Belém",
+      "source_id": "ccb",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": 38.696435,
+      "lng": -9.208603,
+      "start": "2026-06-26T20:00",
+      "end": "2026-06-27",
+      "all_day": false,
+      "ongoing": true,
+      "days": [
+        "fri",
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 20.0,
+        "currency": "EUR",
+        "text": "€20"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.ccb.pt/evento/da-desordem-das-paixoes/2026-06-26/",
+      "source": "ccb",
+      "description": "Os Músicos do Tejo e Sofia Dias & Vítor Roriz, unidos pelo seu amor ao barroco, ao século XVII e XVIII, à dança, à música de dança, aos pássaros, aos textos sobre dança, aos textos que falam de danças maravilhosas, aos professores de dança que tocam violino e que compõem melodias.",
+      "image": "https://www.ccb.pt/wp-content/uploads/2025/09/2000x940__SofiaDiasVtorRuizcomMusicosdoTejo_brunosimao-1.jpg",
+      "lineup": null,
+      "links": [
+        "https://www.agendalx.pt/events/event/da-desordem-das-paixoes/"
+      ],
+      "prov": {
+        "price": "agendalx"
+      }
+    },
+    {
       "id": "0ba798ce05b2",
       "title": "Marchas Populares: Vamos homenagear os nossos!",
       "topic": "music",
@@ -25701,7 +26148,7 @@
       ],
       "url": "https://jf-misericordia.pt/viver/cultura/noticias/noticia/marchas-populares-vamos-homenagear-os-nossos",
       "source": "generic",
-      "description": "Apresentação das marchas populares da freguesia da Misericórdia, com música e animação ao vivo.",
+      "description": "Atuação das Marchas Populares da Misericórdia, integrada nas festas dos Santos Populares.",
       "image": "https://www.jf-misericordia.pt/jfmisericordia/uploads/news/image/767/1_base_marchas_camoes_2026.jpg",
       "lineup": null,
       "links": null,
@@ -25778,7 +26225,7 @@
       ],
       "url": "https://casa-capitao.com/evento/rock-bottom-claymen-os-tanger-sir-dinha-blues-band/",
       "source": "generic",
-      "description": "Noite de blues e rock com Os Tânger, Claymen e Sir Dinha Blues Band.",
+      "description": "Noite de blues e rock com as bandas Os Tânger, Claymen e Sir Dinha Blues Band.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/06/tanger2.jpeg",
       "lineup": null,
       "links": null,
@@ -25857,6 +26304,43 @@
       "source": "agendalx",
       "description": "Em Polo Norte , a mala voadora demonstra que o Paraíso existiu na Terra e que se encontra hoje soterrado no gelo. O Paraíso não deixou de existir depois da expulsão de Adão e Eva, tornou-...",
       "image": "https://www.agendalx.pt/content/uploads/2026/06/polo_norte.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "bfbee421ecb5",
+      "title": "Miso String Quartet",
+      "topic": "music",
+      "categories": [
+        10
+      ],
+      "venue": "Igreja da Misericórdia - Odemira",
+      "source_id": "o-culto-da-ajuda",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T21:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5–45"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://misomusic.me/circulacao/20260626",
+      "source": "generic",
+      "description": "Concerto pelo Miso String Quartet, integrado no Ciclo Música Através do Tempo.",
+      "image": "http://static1.squarespace.com/static/605a08c97879a54cf42fc65b/60887f424b2979110c9ec255/69f3923bfb681c4544e0798a/1782214795087/54_Miso_Quartet_Quartet_3_Maio_2026.%C2%A9Susana+Paiva.jpg?format=1500w",
       "lineup": null,
       "links": null,
       "prov": null
@@ -26115,7 +26599,7 @@
       ],
       "url": "https://casa-capitao.com/evento/saint-ronnie-1a-parte-cassete-bipolar/",
       "source": "generic",
-      "description": "Concerto no Sótão.",
+      "description": "Concerto duplo com as bandas Saint Ronnie e Cariño Muerto.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/05/saint-ronn-e1777900479216.jpg",
       "lineup": null,
       "links": null,
@@ -26498,7 +26982,7 @@
       ],
       "url": "https://www.casadocomum.org/hoficyo/",
       "source": "generic",
-      "description": "DJ set de música eletrónica com influências de EBM e industrial, criando atmosferas imersivas e dançantes.",
+      "description": "DJ set de Hoficyo, produtor de música eletrónica de Lisboa com influências de EBM e industrial, explorando atmosferas imersivas e energia club.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/06/image1-1.png",
       "lineup": null,
       "links": null,
@@ -26578,6 +27062,49 @@
       "lineup": [
         "Tolouse Low Trax",
         "Switchdance"
+      ],
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "a64a79edf78c",
+      "title": "POV presents: RHYTHM DANCERS [FREE EVENT]",
+      "topic": "nightlife",
+      "categories": [
+        3
+      ],
+      "venue": "Village Underground Lisboa",
+      "source_id": "ra",
+      "neighbourhood": "Alcântara",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-26T23:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "fri"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt",
+        "en"
+      ],
+      "url": "https://ra.co/events/2468361",
+      "source": "ra",
+      "description": "",
+      "image": "https://images.ra.co/9ed8707dde7fad516af01e22159c45f2244add21.jpg",
+      "lineup": [
+        "kennino",
+        "Nicolle Velcro",
+        "DJ Yok",
+        "ViRiD!S"
       ],
       "links": null,
       "prov": null
@@ -26691,7 +27218,7 @@
       ],
       "url": "https://casa-capitao.com/evento/baile-apupu-sequin-fight-club-full-plate/",
       "source": "generic",
-      "description": "Festa noturna com Apupu, Sequin Fight Club e Full Plate! em vários pisos.",
+      "description": "Festa com os colectivos Apupu, Sequin Fight Club e Full Plate, em vários espaços da casa.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/05/baile-generico2.png",
       "lineup": null,
       "links": null,
@@ -26895,7 +27422,7 @@
       ],
       "url": "https://happykids.pt/evento/rock-in-rio-lisboa-4/",
       "source": "generic",
-      "description": "Edição do famoso festival de música com concertos de artistas nacionais e internacionais.",
+      "description": "Edição do festival de música Rock in Rio com concertos de artistas nacionais e internacionais.",
       "image": "https://happykids.pt/wp-content/uploads/2026/05/RR.jpg",
       "lineup": null,
       "links": null,
@@ -26932,7 +27459,7 @@
       ],
       "url": "https://app.tickettailor.com/events/blackcatcinema/2163073",
       "source": "generic",
-      "description": "Comédia musical ao som dos ABBA, sobre uma jovem que convida três antigos namorados da mãe para o seu casamento na Grécia.",
+      "description": "Exibição ao ar livre do filme 'Mamma Mia' na Igreja da Graça.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -26941,7 +27468,7 @@
     {
       "id": "54dd4b0eb400",
       "title": "AMBIENTE DE JOGA com Fernão Biu",
-      "topic": "social",
+      "topic": "community",
       "categories": [
         3,
         8
@@ -26970,7 +27497,7 @@
       ],
       "url": "https://casa-capitao.com/evento/ambiente-de-joga-com-fernao-biu/",
       "source": "generic",
-      "description": "Tertúlia e conversa com Fernão Biu.",
+      "description": "Tertúlia descontraída para conversas e jogos, conduzida por Fernão Biu.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/06/AMBIENTE-DE-JOGA_ARTISTA-e1782142608713.jpg",
       "lineup": null,
       "links": null,
@@ -27205,7 +27732,7 @@
     {
       "id": "a39d68992e35",
       "title": "Fia Lisboa",
-      "topic": "community",
+      "topic": "outdoors",
       "categories": [
         13
       ],
@@ -27234,7 +27761,7 @@
       ],
       "url": "https://fialisboa.fil.pt/",
       "source": "generic",
-      "description": "Feira internacional multissetorial que promove negócios e networking, reunindo expositores e visitantes no Parque das Nações.",
+      "description": "Feira internacional de artesanato, gastronomia e animação, com expositores e atividades para todos os públicos.",
       "image": "https://fialisboa.fil.pt/wp-content/uploads/2025/04/fav_72lettering_eng.png",
       "lineup": null,
       "links": null,
@@ -27310,7 +27837,7 @@
       ],
       "url": "https://fasvs.pt/eventos/vieira-da-silva-e-arpad-szenes-6/",
       "source": "generic",
-      "description": "Exposição que reúne retratos e outras obras dos artistas, em parceria com a FLAD.",
+      "description": "Exposição de sete retratos e outras obras de Vieira da Silva e Arpad Szenes, em parceria com a FLAD.",
       "image": "https://fasvs.pt/wp-content/uploads/2026/06/VIEIRA-DA-SILVA_Les-troglodytes-1957-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -27387,8 +27914,45 @@
       ],
       "url": "https://gulbenkian.pt/jardim-de-verao/",
       "source": "generic",
-      "description": "Programação cultural ao ar livre com concertos, conversas e filmes, com entrada livre.",
+      "description": "Atividades ao ar livre no jardim da Fundação Gulbenkian com entrada livre.",
       "image": "https://cdn.gulbenkian.pt/wp-content/uploads/2026/04/Bokor_card-576x432.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "5f7a3c7444aa",
+      "title": "Female Comedy Lab",
+      "topic": "comedy",
+      "categories": [
+        26
+      ],
+      "venue": "Lisbon Comedy",
+      "source_id": "lisbon-comedy",
+      "neighbourhood": "Santos",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://lisboncomedy.com",
+      "source": "generic",
+      "description": "Espectáculo de comédia com alinhamento exclusivamente feminino, oferecendo um olhar humorístico diferente. Decorre no último sábado do mês.",
+      "image": null,
       "lineup": null,
       "links": null,
       "prov": null
@@ -27425,7 +27989,7 @@
       ],
       "url": "https://maat.pt/pt/event/workshop-modos-de-ver-modos-de-contar",
       "source": "generic",
-      "description": "Oficina que explora diferentes perspectivas e técnicas de narrativa visual.",
+      "description": "Oficina que explora diferentes modos de perceção e narrativa visual, com atividades práticas.",
       "image": "https://maat.pt/sites/default/files/2026-05/Workshop%20MC%20e%20Maria%20Jos%C3%A9%20Lobo%20Antunes_2400x1600.jpg",
       "lineup": null,
       "links": null,
@@ -27500,7 +28064,7 @@
       ],
       "url": "https://museudofado.pt/evento/pelas-asas-da-saudade-4",
       "source": "generic",
-      "description": "Concerto de fado ao vivo, celebrando a música tradicional portuguesa e o sentimento da saudade.",
+      "description": "Um espetáculo de fado que celebra a saudade e a tradição musical portuguesa.",
       "image": "https://museudofado.pt/media/2025/9/jose-frade-17-07-25-06401-res.jpeg",
       "lineup": null,
       "links": null,
@@ -27583,43 +28147,6 @@
       "prov": null
     },
     {
-      "id": "d4d99491d1ea",
-      "title": "Audição AZA Dance Program 2026/27",
-      "topic": "workshops",
-      "categories": [
-        5
-      ],
-      "venue": "Portal da Dança",
-      "source_id": "portal-da-danca",
-      "neighbourhood": null,
-      "zone": null,
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-27",
-      "end": null,
-      "all_day": true,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://portaldadanca.pt/agenda/2026-07-11-audicao-aza-dance-program-2026-27/",
-      "source": "generic",
-      "description": "Audição para ingresso no programa de dança AZA para a temporada 2026/27, destinada a bailarinos com formação.",
-      "image": "https://www.portaldadanca.pt/boffice/imagens/img/17935064269ef308de6a460.46964655.2026-04-27094653.webp",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "5099b492dd9b",
       "title": "IMMERSIVE SHOWS: Monet, Klimt, Da Vinci & Egypt",
       "topic": "art",
@@ -27652,6 +28179,191 @@
       "source": "ticketline",
       "description": "",
       "image": "https://info.ticketline.pt/images/Espectaculos/98084/cartaz.jpg?rev=20260612144931",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "7e5497692908",
+      "title": "Nos bastidores da renovação",
+      "topic": "tours",
+      "categories": [
+        1
+      ],
+      "venue": "Teatro Nacional D. Maria II",
+      "source_id": "agendalx",
+      "neighbourhood": "Baixa",
+      "zone": "city",
+      "lat": 38.713719,
+      "lng": -9.139681,
+      "start": "2026-06-27",
+      "end": "2026-06-27",
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": true,
+        "min": 0,
+        "currency": "EUR",
+        "text": "Grátis"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://www.agendalx.pt/events/event/nos-bastidores-da-renovacao/",
+      "source": "agendalx",
+      "description": "Uma visita guiada ao Teatro Nacional D. Maria II, a partir do olhar de decisores no projeto de requalificação do edifício, proporcionando uma imersão no processo de transformação do espaço. F...",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/nos_bastidores_da_renova.png",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "f463963f9480",
+      "title": "Impressão Botânica",
+      "topic": "workshops",
+      "categories": [
+        4
+      ],
+      "venue": "FICA Oficina Criativa",
+      "source_id": "fica-oficina-criativa",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 60.0,
+        "currency": "EUR",
+        "text": "€60"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fica-oc.pt/events/workshop-impressao-botanica-junho-2026/",
+      "source": "generic",
+      "description": "No workshop impressão botânica adapta os fundamentos do tingimento natural, para extrair o pigmento da planta para o tecido ou papel.",
+      "image": "https://fica-oc.pt/wp-content/uploads/2026/02/FICA-Workshop-impressao-botanica-tinctorium-1.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "606c48add1b0",
+      "title": "pintura de azulejo",
+      "topic": "workshops",
+      "categories": [
+        4
+      ],
+      "venue": "FICA Oficina Criativa",
+      "source_id": "fica-oficina-criativa",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 55.0,
+        "currency": "EUR",
+        "text": "€55"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fica-oc.pt/events/workshop-pintura-de-azulejo-junho-2026-02/",
+      "source": "generic",
+      "description": "No Workshop Pintura de Azulejo irás criar azulejos individuais, utilizando a técnica majólica: estampilha e transferência de imagem.",
+      "image": "https://fica-oc.pt/wp-content/uploads/2025/02/FICA-Workshop-Pintura-de-Azulejo.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "2e84d2f0bfe3",
+      "title": "Flash Cerâmica",
+      "topic": "workshops",
+      "categories": [
+        4
+      ],
+      "venue": "FICA Oficina Criativa",
+      "source_id": "fica-oficina-criativa",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 60.0,
+        "currency": "EUR",
+        "text": "€60"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fica-oc.pt/events/flash-workshop-ceramica-junho-2026-04/",
+      "source": "generic",
+      "description": "O Flash Workshop Cerâmica é uma formação de introdução e é ideal como primeiro contacto com a cerâmica, onde aprendem duas técnicas.",
+      "image": "https://fica-oc.pt/wp-content/uploads/2023/09/FICA-Flash-Ceramica-Original.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "02c16a5237cc",
+      "title": "Animais em Cerâmica",
+      "topic": "workshops",
+      "categories": [
+        4
+      ],
+      "venue": "FICA Oficina Criativa",
+      "source_id": "fica-oficina-criativa",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T00:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 55.0,
+        "currency": "EUR",
+        "text": "€55"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://fica-oc.pt/events/workshop-animais-em-ceramica-junho-2026-01/",
+      "source": "generic",
+      "description": "No workshop animais em cerâmica, iremos abordar a temática do mundo animal de modo a criar uma pequena figura.",
+      "image": "https://fica-oc.pt/wp-content/uploads/2024/11/FICA-Workshop-animais-de-ceramica-01.webp",
       "lineup": null,
       "links": null,
       "prov": null
@@ -27698,19 +28410,19 @@
       "prov": null
     },
     {
-      "id": "7747b8e42f2e",
-      "title": "ESPECIALIZAÇÃO em Filigrana Portuguesa",
+      "id": "27f1d7e51f4d",
+      "title": "Oficina Cerâmica Ws Restauro e Reciclagem",
       "topic": "workshops",
       "categories": [
-        5
+        4
       ],
-      "venue": "Centro de Joalharia de Lisboa (CJLX)",
-      "source_id": "centro-de-joalharia-de-lisboa-cjlx",
-      "neighbourhood": "Alvalade",
+      "venue": "ARTlier",
+      "source_id": "artlier",
+      "neighbourhood": "Campo de Ourique",
       "zone": "city",
       "lat": null,
       "lng": null,
-      "start": "2026-06-27T09:30",
+      "start": "2026-06-27T10:00",
       "end": "2026-06-28",
       "all_day": false,
       "ongoing": false,
@@ -27720,24 +28432,24 @@
       ],
       "price": {
         "is_free": false,
-        "min": 550.0,
+        "min": 151.5,
         "currency": "EUR",
-        "text": "€550"
+        "text": "€151,50"
       },
       "language": [
         "pt"
       ],
-      "url": "https://cjlx.pt/store-cjlx-loja/p/especializao-em-cravao-4nle7",
+      "url": "https://artlier.pt/workshops/p/restauro-reciclagem",
       "source": "generic",
-      "description": "Curso de especialização em filigrana artesanal portuguesa, decorre sábado e domingo das 9:30 às 18:30. Inclui materiais e peças-modelo.",
-      "image": "http://static1.squarespace.com/static/63e3aa22d5ed983e977440e2/63e3ad4e67a22560470fd983/6457bc413021717621dff84f/1779816085442/WhatsApp+Image+2022-10-12+at+22.29.31.jpg?format=1500w",
+      "description": "Workshop de dois dias focado em restauro e reciclagem de peças cerâmicas, com Margarida Aires Mateus.",
+      "image": "http://static1.squarespace.com/static/649b082373f2bc1f7b951044/64a0721446dfe2022d87429a/64a072369862b62fab1618ce/1782141134150/R%26R4.jpg?format=1500w",
       "lineup": null,
       "links": null,
       "prov": null
     },
     {
-      "id": "b765d56666cb",
-      "title": "44.ª Gimnáguia",
+      "id": "da53a8498cb4",
+      "title": "Gimnáguia: 44.ª edição",
       "topic": "performance",
       "categories": [
         32
@@ -27766,46 +28478,8 @@
       ],
       "url": "https://slbenfica.pt",
       "source": "generic",
-      "description": "Espetáculo de ginástica que marca o culminar da época, reunindo atletas de várias classes do clube num evento com 44 anos de tradição.",
+      "description": "A 44.ª edição da tradicional exibição de ginástica do Benfica, reunindo atletas de várias classes para um espetáculo no Pavilhão Fidelidade.",
       "image": "https://media.slbenfica.pt/-/media/benficadp/images/departamento-de-comunicacao/2025/genericas/aguias/maio-2026/aguia-4-new.jpg?h=725&amp;w=1208&amp;v=639153935670000000&amp;hash=A498778D559D5126A4FDC0C1B7A26DD5",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "e8c67656adf9",
-      "title": "Tile workshop: paint them and take them home with you",
-      "topic": "nightlife",
-      "categories": [
-        1
-      ],
-      "venue": "Art of Azulejo",
-      "source_id": "fever",
-      "neighbourhood": "Beato",
-      "zone": "city",
-      "lat": 38.72978,
-      "lng": -9.111052,
-      "start": "2026-06-27T10:30",
-      "end": "2027-04-28",
-      "all_day": false,
-      "ongoing": true,
-      "days": [
-        "sat",
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 40.0,
-        "currency": "EUR",
-        "text": "€40"
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://feverup.com/m/99402/en",
-      "source": "fever",
-      "description": "Tickets 🎫 Tile workshop for 1 person Highlights 🎨 The chance to paint your own tile 🖌️ Necessary material and snacks included 👏 Take home a unique souvenir made by you (2 tiles) 👩 Enlist the help of a professional Performers who will help you throughout the process General Info 📅",
-      "image": "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/c8e98826-c3b6-11eb-9522-06551cb39bc6.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -27964,7 +28638,7 @@
       ],
       "url": "https://www.museudoaljube.pt/evento/itinerario-adeus-patria-e-familia-6/",
       "source": "generic",
-      "description": "Percurso orientado sobre a história e memória LGBTQIA+ em Lisboa, abordando repressões e resistências de diversidade sexual e de género desde a ditadura até hoje.",
+      "description": "Percurso orientado que explora a história e memória LGBTQIA+ em Lisboa, abordando repressões e resistências da ditadura até à atualidade.",
       "image": "https://www.museudoaljube.pt/wp-content/uploads/2026/05/2026_06_27_APF_Site-G.jpg",
       "lineup": null,
       "links": null,
@@ -28159,8 +28833,8 @@
       "prov": null
     },
     {
-      "id": "62a40d5fd3a0",
-      "title": "Meditation, Mindfulness and Buddhism",
+      "id": "f63f888b4aca",
+      "title": "Meditation, Mindfulness and Buddhism Course",
       "topic": "workshops",
       "categories": [
         18
@@ -28189,7 +28863,7 @@
       ],
       "url": "https://agora-lisboa.com/wp-content/uploads/2026/05/Material-Meditation-course.pdf",
       "source": "generic",
-      "description": "Curso introdutório de meditação, mindfulness e budismo para desenvolver uma prática mental integrada e progressiva, com ferramentas para o dia-a-dia.",
+      "description": "Segunda sessão do módulo introdutório de meditação e mindfulness, com ferramentas para treino mental progressivo.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -28446,11 +29120,11 @@
         "text": "€4"
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://www.meetup.com/queer-lisbon/events/314230650/?eventOrigin=group_upcoming_events",
       "source": "meetup",
-      "description": "Sessão autónoma de D&D de 3 horas, amigável para todos os níveis. Dados e fichas fornecidos; é necessário trazer smartphone/tablet. Consumo mínimo de €4 no bar.",
+      "description": "Come play a self-contained 3-hour Dungeons & Dragons session (called a one-shot). New and experienced player-friendly. Character sheets and dice provided.",
       "image": "https://secure-content.meetupstatic.com/images/classic-events/530623492/676x676.jpg",
       "lineup": null,
       "links": null,
@@ -28489,6 +29163,43 @@
       "source": "agendalx",
       "description": "Este workshop, orientado por Joanna Latka, tem como objetivo o estabelecimento de um primeiro contacto com estas técnica de gravura ou simplesmente relembrar os materiais e instrumentos necessários...",
       "image": "https://www.agendalx.pt/content/uploads/2026/06/Imagem1-4.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "573ce0a50edb",
+      "title": "Workshop Água Forte",
+      "topic": "workshops",
+      "categories": [
+        5
+      ],
+      "venue": "Contraprova — Atelier de Gravura",
+      "source_id": "contraprova-atelier-de-gravura",
+      "neighbourhood": "Arroios",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T13:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 95.0,
+        "currency": "EUR",
+        "text": "€95"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://contraprova-gravura.blogspot.com/2026/05/workshop-agua-forte.html",
+      "source": "generic",
+      "description": "Workshop de gravura em metal na técnica de água forte, orientado por Joanna Latka. Sessão experimental para iniciantes ou para quem deseja relembrar técnicas de gravação e impressão.",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJOWDsBlZOh8kQoJcdqcQk2Ox_QEaOJU2GeTMFJQRmkRGbFR6FTdFS_43X57DMyeowpMRyOVLpv1w5xMpAWnfn7N5PhXlcYtI2QQmbS5q61743ZM9PU_olaCfluueELYSa6aWqZSC8jzTA5q2i6Ju61QZ4FmPK24wx3dtAQED0WNW6RXUJnl-adjygrZM/w1200-h630-p-k-no-nu/WSP_aguaforte_Latka_face_post.jpg",
       "lineup": null,
       "links": null,
       "prov": null
@@ -28764,7 +29475,7 @@
         "text": "€27.50–60.50"
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://fatsoma.com/e/7y4oshiu/a-coldplay-candlelight-experience-in-leeuwarden-saturday-27th-june",
       "source": "generic",
@@ -29183,7 +29894,7 @@
       ],
       "url": "https://www.casadocomum.org/pianissimo-3/",
       "source": "generic",
-      "description": "Audição de piano com antigos alunos do Conservatório Nacional e novos amantes do instrumento, orientados por Anne Kaasa.",
+      "description": "Audição de piano com antigos alunos do Conservatório Nacional e novos amantes do instrumento, orientados por Anne Kaasa, apresentando peças de vários níveis.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/05/William_Chase_2C_The_keynote.jpg",
       "lineup": null,
       "links": null,
@@ -29460,8 +30171,45 @@
       ],
       "url": "https://vulisboa.com/eventos/synk-1st-anniversary",
       "source": "generic",
-      "description": "Festa de primeiro aniversário da SYNK com DJ sets e ambiente festivo.",
+      "description": "Festa com música eletrónica e DJs.",
       "image": "http://static1.squarespace.com/static/65d770165e44f6173a5c3868/662faee562de8c5dc364cd19/6a16f6c00bac62657ce63786/1781199239206/SYNK.png?format=1500w",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "13f8fb7bb57c",
+      "title": "Miso String Quartet",
+      "topic": "music",
+      "categories": [
+        10
+      ],
+      "venue": "Estação das Artes - Santa Clara-a-Velha/Sabóia",
+      "source_id": "o-culto-da-ajuda",
+      "neighbourhood": "Belém",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T17:30",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 5.0,
+        "currency": "EUR",
+        "text": "€5–45"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://misomusic.me/circulacao/20260627",
+      "source": "generic",
+      "description": "Atuação do Miso String Quartet no âmbito do Ciclo Música Através do Tempo.",
+      "image": "http://static1.squarespace.com/static/605a08c97879a54cf42fc65b/60887f424b2979110c9ec255/699eda3446f9de0cbf1aeeec/1782214807124/54_Miso_Quartet_Quartet_3_Maio_2026.%C2%A9Susana+Paiva.jpg?format=1500w",
       "lineup": null,
       "links": null,
       "prov": null
@@ -29726,43 +30474,6 @@
       "prov": null
     },
     {
-      "id": "6ccf9b1c1d0f",
-      "title": "Apresentação do livro CERFI – Analysis Everywhere. Militancy, Research, Architecture and Psychiatry, de Susana Caló e Godofredo Enes Pereira",
-      "topic": "learning",
-      "categories": [
-        19
-      ],
-      "venue": "Tigre de Papel",
-      "source_id": "tigre-de-papel",
-      "neighbourhood": "Anjos",
-      "zone": "city",
-      "lat": null,
-      "lng": null,
-      "start": "2026-06-27T18:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sat"
-      ],
-      "price": {
-        "is_free": false,
-        "min": null,
-        "currency": "EUR",
-        "text": ""
-      },
-      "language": [
-        "pt"
-      ],
-      "url": "https://tigrepapel.pt",
-      "source": "generic",
-      "description": "Apresentação do livro que explora o coletivo CERFI, abordando militância, investigação, arquitetura e psiquiatria.",
-      "image": "https://tigrepapel.pt/wp-content/uploads/2024/07/livros-escolares-tigre-de-papel-1024x1024.webp",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
       "id": "1a8d055bb995",
       "title": "Conferência/Recital por Moreno Andreatta",
       "topic": "music",
@@ -29867,7 +30578,7 @@
       ],
       "url": "https://teatrodobairro.bol.pt/Comprar/Bilhetes/179339-festival_inart_filme_the_sea_de_douglas_rosenberg-teatro_do_bairro/",
       "source": "generic",
-      "description": "Longa-metragem sobre envelhecimento, solidão e comunidade, interpretado maioritariamente por intérpretes não profissionais da ilha de Fårö.",
+      "description": "Longa-metragem sobre envelhecimento, solidão e comunidade, interpretado maioritariamente por intérpretes não profissionais das regiões circundantes da ilha de Fårö.",
       "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz154007.jpg?v=4",
       "lineup": null,
       "links": [
@@ -30095,7 +30806,7 @@
       ],
       "url": "https://mosteirodesaovicentedefora.com/o-luar-na-torre/",
       "source": "generic",
-      "description": "Contemplação da cidade iluminada a partir de um dos pontos mais emblemáticos de Lisboa, num ambiente tranquilo e mágico.",
+      "description": "Experiência noturna para contemplar Lisboa iluminada a partir da torre, com vista deslumbrante e ambiente tranquilo.",
       "image": "https://static.xx.fbcdn.net/images/emoji.php/v9/t2d/1/16/1f4cd.png",
       "lineup": null,
       "links": null,
@@ -30169,7 +30880,7 @@
       ],
       "url": "https://www.casadocomum.org/kedi-sultan/",
       "source": "generic",
-      "description": "Concerto que explora a herança musical do oud, instrumento emblemático das culturas mediterrânicas, asiáticas e africanas.",
+      "description": "Concerto de Kedi Sultan que explora o património musical do Oud, instrumento emblemático das culturas mediterrânica, asiática e africana.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/05/04-6_11zon-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -30273,7 +30984,7 @@
         "is_free": false,
         "min": 12.0,
         "currency": "EUR",
-        "text": "€12–12,89"
+        "text": "€12–13"
       },
       "language": [
         "pt"
@@ -30317,7 +31028,7 @@
       ],
       "url": "https://saocarlos.pt/program/suor-angelica-e-gianni-schicchi_26/",
       "source": "generic",
-      "description": "Dupla ópera de Puccini com Suor Angelica e Gianni Schicchi, apresentada no Coliseu Porto Ageas no âmbito da temporada do São Carlos.",
+      "description": "Duas óperas de Puccini em programa duplo, apresentadas pelo Teatro Nacional de São Carlos.",
       "image": "https://cdn.bndlyr.com/s5dyvlsauld0nknf/_assets/1776092296839-untitled-design.jpg?fit=pad&w=1200&h=630&bg=ffffff",
       "lineup": null,
       "links": null,
@@ -30534,7 +31245,7 @@
         "is_free": false,
         "min": 8.0,
         "currency": "EUR",
-        "text": "€8–8,60"
+        "text": "€8–8,59"
       },
       "language": [
         "pt"
@@ -30578,7 +31289,7 @@
       ],
       "url": "https://iiclisbona.esteri.it/it/gli_eventi/calendario/concerto-dal-romanticismo-al-cuore-della-modernita-essenze-e-rotture-del-duo-baldo-consonni/",
       "source": "generic",
-      "description": "Concerto do Duo Baldo-Consonni com um programa que explora desde o romantismo até às essências e ruturas da modernidade.",
+      "description": "Concerto organizado pelo Istituto Italiano di Cultura de Lisbona, com um programa que atravessa o romantismo e a modernidade.",
       "image": "https://iiclisbona.esteri.it/wp-content/uploads/2026/05/Duo-Baldo-Consonni.jpg",
       "lineup": null,
       "links": null,
@@ -30764,12 +31475,50 @@
         "text": "Grátis"
       },
       "language": [
-        "en"
+        "pt"
       ],
       "url": "https://cartazculturallisboa.pt/evento/life-in-lisboa-english-stand-up-comedy-show-about-living-and-surviving-in-lisbon/",
       "source": "generic",
       "description": "Powered by GetYourGuide Life in Lisboa: English stand-up comedy show about living and surviving in Lisbon 🎤Life in Lisboa is an English-language stand-up comedy show offering two hours of laughs about real life in the Portuguese capital.Presented at Selva Comedy Cafe, in Alcântar.",
       "image": "https://cartazculturallisboa.pt/wp-content/uploads/2026/06/Life-in-Lisboa-espetaculo-de-stand-up-em-ingles.webp",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "ae56cbe9592a",
+      "title": "Elvin Brandhi & Pedro Alves Sousa ⟡ Emiddio Vasquez",
+      "topic": "music",
+      "categories": [
+        10,
+        9
+      ],
+      "venue": "ZDB – Galeria Zé dos Bois",
+      "source_id": "zdb-galeria-ze-dos-bois",
+      "neighbourhood": "Bairro Alto",
+      "zone": "city",
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-27T22:00",
+      "end": null,
+      "all_day": false,
+      "ongoing": false,
+      "days": [
+        "sat"
+      ],
+      "price": {
+        "is_free": false,
+        "min": 10.0,
+        "currency": "EUR",
+        "text": "€10–30"
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://zedosbois.org/programa/elvin-brandhi-pedro-alves-sousa/",
+      "source": "generic",
+      "description": "Concertos de música experimental e improvisada com Elvin Brandhi, Pedro Alves Sousa e Emiddio Vasquez.",
+      "image": "https://zedosbois.org/wp-content/uploads/2026/05/Capas-website-ZDB-II-28.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -30805,7 +31554,7 @@
       ],
       "url": "https://www.casadocomum.org/big-ladam-7/",
       "source": "generic",
-      "description": "DJ set de Big Ladam, explorando a pista de dança com seleções que unem arte e diversão.",
+      "description": "DJ set de Big Ladam, amante da pista de dança, que explora o DJing desde 2016, trazendo energia para a pista.",
       "image": "https://www.casadocomum.org/wp-content/uploads/2026/06/image_67160321-1-scaled.jpg",
       "lineup": null,
       "links": null,
@@ -31006,7 +31755,7 @@
       ],
       "url": "https://casa-capitao.com/evento/embrasa-convida-nandatsunami/",
       "source": "generic",
-      "description": "Evento de clubbing com Nandatsunami.",
+      "description": "Sessão de clubbing com NANDATSUNAMI, promovida pela EMBRASA.",
       "image": "https://casa-capitao.com/wp-content/uploads/2026/04/Nanda-Tsunami-scaled.jpeg",
       "lineup": null,
       "links": [
@@ -31127,7 +31876,7 @@
       ],
       "url": "https://app.tickettailor.com/events/blackcatcinema/2163076",
       "source": "generic",
-      "description": "Intenso drama sobre um jovem baterista de jazz e a sua obsessão pela perfeição sob a orientação de um exigente professor.",
+      "description": "Exibição ao ar livre do filme 'Whiplash' na Igreja da Graça.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -31173,7 +31922,7 @@
     {
       "id": "a2efb9513d0c",
       "title": "Namaste Índia' no Príncipe Real",
-      "topic": "outdoors",
+      "topic": "community",
       "categories": [
         13
       ],
@@ -31201,8 +31950,45 @@
       ],
       "url": "https://jf-misericordia.pt/viver/cultura/noticias/noticia/namaste-india-no-principe-real",
       "source": "generic",
-      "description": "Festival que celebra a cultura indiana com música, dança e gastronomia no Jardim do Príncipe Real.",
+      "description": "Festival que celebra a cultura indiana com música, dança e gastronomia.",
       "image": "https://www.jf-misericordia.pt/jfmisericordia/uploads/news/image/766/festivalnamaste_28junho.jpg",
+      "lineup": null,
+      "links": null,
+      "prov": null
+    },
+    {
+      "id": "cc33424dd5e3",
+      "title": "Open Session",
+      "topic": "performance",
+      "categories": [
+        26
+      ],
+      "venue": "Improv Lisboa",
+      "source_id": "improv-lisboa",
+      "neighbourhood": null,
+      "zone": null,
+      "lat": null,
+      "lng": null,
+      "start": "2026-06-28",
+      "end": null,
+      "all_day": true,
+      "ongoing": false,
+      "days": [
+        "sun"
+      ],
+      "price": {
+        "is_free": false,
+        "min": null,
+        "currency": "EUR",
+        "text": ""
+      },
+      "language": [
+        "pt"
+      ],
+      "url": "https://improvlisboa.pt",
+      "source": "generic",
+      "description": "Sessão de teatro de improviso ao ar livre no Jardim da Estrela. Aberta a todos.",
+      "image": "https://improvlisboa.pt/wp-content/uploads/2025/05/Captura-de-ecra-2025-05-30-102958.png",
       "lineup": null,
       "links": null,
       "prov": null
@@ -31276,7 +32062,7 @@
       ],
       "url": "https://outjazz.pt",
       "source": "generic",
-      "description": "Sessão ao ar livre do Out Jazz, festival que integra jazz, soul, funk e hip hop, com concertos ao final da tarde.",
+      "description": "Atuação musical ao ar livre integrada no ciclo Out Jazz, com sonoridades que vão do jazz ao soul e funk.",
       "image": null,
       "lineup": null,
       "links": null,
@@ -31313,7 +32099,7 @@
       ],
       "url": "https://ritualbreathwork.myflodesk.com/foundationsworkshop",
       "source": "generic",
-      "description": "Workshop introdutório para facilitadores de breathwork somático, com foco na segurança do sistema nervoso e facilitação responsável.",
+      "description": "Workshop introdutório para facilitadores de breathwork somático, com foco na segurança do sistema nervoso e na facilitação responsável.",
       "image": "https://usercontent.flodesk.com/9b0a3058-88be-435f-9459-60a960d0c838/upload/c18z5o3p1e/acuity_offerings_%2821%29.png?width=1080&amp;height=1080&amp;source=computer",
       "lineup": null,
       "links": null,
@@ -31370,7 +32156,7 @@
       "lat": null,
       "lng": null,
       "start": "2026-06-28T00:00",
-      "end": null,
+      "end": "2026-06-28",
       "all_day": false,
       "ongoing": false,
       "days": [
@@ -31616,14 +32402,14 @@
       "prov": null
     },
     {
-      "id": "fbb5663e1383",
-      "title": "Visita encenada - O Bolo de Aniversário de Agrião",
-      "topic": "tours",
+      "id": "ed59875d2c50",
+      "title": "O Bolo de Aniversário de Agrião",
+      "topic": "performance",
       "categories": [
-        11
+        1
       ],
       "venue": "Teatro Nacional D. Maria II",
-      "source_id": "teatro-nacional-d-maria-ii",
+      "source_id": "agendalx",
       "neighbourhood": "Baixa",
       "zone": "city",
       "lat": 38.713719,
@@ -31644,17 +32430,13 @@
       "language": [
         "pt"
       ],
-      "url": "https://tndm.pt/pt/programacao/espetaculos/visita-encenada-o-bolo-de-aniversario-de-agriao/",
-      "source": "generic",
+      "url": "https://www.agendalx.pt/events/event/o-bolo-de-aniversario-de-agriao-2/",
+      "source": "agendalx",
       "description": "É o 27.º aniversário de Maria da Glória Joana Carlota Leopoldina da Cruz Francisca Xavier de Paula Isidora Micaela Gabriela Rafaela Gonzaga a.k.a. D. Maria II. Para celebrar este dia espe...",
-      "image": "https://www.tndm.pt/fotos/programacao/eventos/bolo_de_aniversayrio_de_agriayo_1920_2411796306a22f8adea130.png",
+      "image": "https://www.agendalx.pt/content/uploads/2026/06/visita_2813_visita_med_filipe_ferreira_157118668966fd2e93de251-scaled.jpg",
       "lineup": null,
-      "links": [
-        "https://www.agendalx.pt/events/event/o-bolo-de-aniversario-de-agriao-2/"
-      ],
-      "prov": {
-        "description": "agendalx"
-      }
+      "links": null,
+      "prov": null
     },
     {
       "id": "d598d8eb3991",
@@ -31954,7 +32736,7 @@
       ],
       "url": "http://www.regaleira.pt/pt/agenda/2026-musica-na-quinta-jun/",
       "source": "generic",
-      "description": "Concerto aos domingos na Quinta da Regaleira, integrado na programação de junho.",
+      "description": "Concerto do ciclo Música na Quinta, com apresentações todos os domingos de junho.",
       "image": "http://www.regaleira.pt/media/10007/s02_qtaregaleira_20_09_2022_00202.jpg?crop=0,0,0.33260869565217394,0&amp;cropmode=percentage&amp;width=150&amp;height=150&amp;rnd=134248001630000000",
       "lineup": null,
       "links": null,
@@ -32030,43 +32812,6 @@
       "source": "gulbenkian",
       "description": "Nesta oficina, no Jardim Gulbenkian, vamos também criar jardins. De forma coletiva e imaginária, daremos vida a teares de plantas, prados de flores, pequenos bosques e até um lago habitado por rãs e barcos de cortiça.",
       "image": "https://gulbenkian.pt/wp-content/uploads/2026/06/12x9-microcosmos.jpg",
-      "lineup": null,
-      "links": null,
-      "prov": null
-    },
-    {
-      "id": "cc33424dd5e3",
-      "title": "Open Session",
-      "topic": "workshops",
-      "categories": [
-        26
-      ],
-      "venue": "Basílica da Estrela",
-      "source_id": "improv-lisboa",
-      "neighbourhood": "Estrela",
-      "zone": "city",
-      "lat": 38.71327,
-      "lng": -9.160216,
-      "start": "2026-06-28T17:00",
-      "end": null,
-      "all_day": false,
-      "ongoing": false,
-      "days": [
-        "sun"
-      ],
-      "price": {
-        "is_free": false,
-        "min": 5.0,
-        "currency": "EUR",
-        "text": "€5"
-      },
-      "language": [
-        "en"
-      ],
-      "url": "https://improvlisboa.pt/join-the-stage/improv-open-session/",
-      "source": "generic",
-      "description": "Improv Lisboa — Sun, 28 Jun · 17:00–18:30 · Jardim da Estrela.",
-      "image": "https://improvlisboa.pt/wp-content/uploads/2026/04/Gemini_Generated_Image_u53mdou53mdou53m-scaled.png",
       "lineup": null,
       "links": null,
       "prov": null

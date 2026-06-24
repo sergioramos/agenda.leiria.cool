@@ -7,12 +7,13 @@
       449,
       434,
       435,
+      476,
       476
     ],
     "last_count": 476,
     "last_status": "ok",
-    "median": 449.0,
-    "updated_at": "2026-06-23"
+    "median": 449,
+    "updated_at": "2026-06-24"
   },
   "ccb": {
     "counts": [
@@ -21,12 +22,13 @@
       438,
       438,
       430,
-      430
+      430,
+      98
     ],
-    "last_count": 0,
-    "last_status": "failed",
+    "last_count": 98,
+    "last_status": "shrunk",
     "median": 438.0,
-    "updated_at": "2026-06-23"
+    "updated_at": "2026-06-24"
   },
   "gulbenkian": {
     "counts": [
@@ -36,12 +38,13 @@
       117,
       112,
       112,
+      114,
       114
     ],
     "last_count": 114,
     "last_status": "ok",
-    "median": 117.0,
-    "updated_at": "2026-06-23"
+    "median": 117,
+    "updated_at": "2026-06-24"
   },
   "ra": {
     "counts": [
@@ -51,12 +54,13 @@
       144,
       144,
       144,
+      151,
       151
     ],
     "last_count": 151,
     "last_status": "ok",
-    "median": 144.0,
-    "updated_at": "2026-06-23"
+    "median": 144,
+    "updated_at": "2026-06-24"
   },
   "bol": {
     "counts": [
@@ -70,7 +74,7 @@
     "last_count": 0,
     "last_status": "failed",
     "median": 408.0,
-    "updated_at": "2026-06-23"
+    "updated_at": "2026-06-24"
   },
   "xceed": {
     "counts": [
@@ -80,12 +84,13 @@
       37,
       36,
       36,
+      37,
       37
     ],
     "last_count": 37,
     "last_status": "ok",
-    "median": 37.0,
-    "updated_at": "2026-06-23"
+    "median": 37,
+    "updated_at": "2026-06-24"
   },
   "mato": {
     "counts": [
@@ -95,12 +100,13 @@
       16,
       14,
       14,
+      15,
       15
     ],
     "last_count": 15,
     "last_status": "ok",
-    "median": 16.0,
-    "updated_at": "2026-06-23"
+    "median": 16,
+    "updated_at": "2026-06-24"
   },
   "dice": {
     "counts": [
@@ -114,7 +120,7 @@
     "last_count": 0,
     "last_status": "partial",
     "median": 22.0,
-    "updated_at": "2026-06-23"
+    "updated_at": "2026-06-24"
   },
   "ticketline": {
     "counts": [
@@ -122,23 +128,25 @@
       80,
       78,
       78,
+      76,
       76
     ],
     "last_count": 76,
     "last_status": "ok",
-    "median": 79.0,
-    "updated_at": "2026-06-23"
+    "median": 78,
+    "updated_at": "2026-06-24"
   },
   "fever": {
     "counts": [
       33,
       25,
       34,
-      26
+      26,
+      29
     ],
-    "last_count": 26,
+    "last_count": 29,
     "last_status": "ok",
-    "median": 33,
-    "updated_at": "2026-06-23"
+    "median": 29.5,
+    "updated_at": "2026-06-24"
   }
 }
