@@ -30,7 +30,7 @@ ai:
   enrich_pages: false                  # AI NEVER reads individual event pages. Structured connectors already carry
                                        # price/time/image/description; per-page AI was pure cost and caused the empty-week
                                        # incident. AI is confined to long-tail HTML listings + Telegram free-text.
-  max_run_cost_usd: 2          # ceiling per crawl run; stops calling the AI once hit
+  max_run_cost_usd: 3          # ceiling per crawl run; stops calling the AI once hit
   max_month_cost_usd: 5        # ceiling per calendar month (sums committed runs); crawler refuses to exceed it
   review_events: true          # final AI sanity/dedupe pass over the assembled week: judges the
                                # ambiguous residue the rules can't (cross-venue same event, mis-tagged
