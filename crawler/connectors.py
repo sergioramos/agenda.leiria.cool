@@ -1002,11 +1002,24 @@ def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:
             statuses[c["id"]] = "failed"
             continue
         source = _src(c, cat_for_topic)
-        try:
-            evs, st = fetch(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay)
-        except Exception as e:  # a connector must never break the run
-            evs, st = [], "failed"
-            print(f"[connector {c['id']}] error: {type(e).__name__}: {e}")
+
+        def _run():
+            try:
+                return fetch(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay)
+            except Exception as e:  # a connector must never break the run
+                print(f"[connector {c['id']}] error: {type(e).__name__}: {e}")
+                return [], "failed"
+
+        evs, st = _run()
+        # one retry after a pause for a transient empty result (a momentary block /
+        # rate-limit from the datacenter IP — these connectors normally succeed, so a
+        # second attempt usually recovers them). Connectors are free; the cost is a wait.
+        if not evs and st != "ok":
+            time.sleep(8)
+            evs2, st2 = _run()
+            if evs2:
+                evs, st = evs2, st2
+                print(f"[connector {c['id']}] recovered on retry")
         statuses[c["id"]] = st
         events.extend(evs)
         print(f"[connector {c['id']}] {st}: {len(evs)} events")

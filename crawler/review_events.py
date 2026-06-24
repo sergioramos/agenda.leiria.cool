@@ -33,6 +33,9 @@ _MIN_CONTAIN = 12          # title-containment length floor (chars, normalized)
 _MIN_SHARED_TOKENS = 2     # distinctive title tokens in common
 MAX_CLUSTERS = 40          # cap what the model sees (cost + focus)
 MAX_CLUSTER_SIZE = 8       # a bigger "cluster" is a generic title, not a dup set
+_BATCH = 10                # clusters per model call — small enough that the JSON reply
+                           # never truncates past max_tokens (one big call returned
+                           # unparseable JSON -> the whole review failed)
 
 
 def _span(e: dict):
@@ -161,55 +164,61 @@ def review(events, prov, client, cfg, tax, tracker, overrides=None):
     if not clusters or tracker.exhausted():
         return events, [], stats
     valid_topics = set(core.topic_ids(tax))
-    payload = [{"cluster": ci, "events": [_compact(e) for e in cl]} for ci, cl in enumerate(clusters)]
-    user = "Grupos a verificar (índices locais por grupo):\n" + extract.json.dumps(payload, ensure_ascii=False)
-    data = extract.json_call(prov, client, cfg["ai"]["model_cheap"],
-                             _system([t["id"] for t in tax["topics"] if not t.get("is_aggregator")]),
-                             user, _SCHEMA, _HINT, 4000, tracker)
-    if not data:
-        stats["ai_ok"] = False   # the judge call itself failed (vs. ran and found nothing)
-        return events, [], stats
-    stats["ai_ok"] = True
-
+    sys_text = _system([t["id"] for t in tax["topics"] if not t.get("is_aggregator")])
     drop, changes = set(), []
-    for verdict in (data.get("clusters") or []):
-        ci = verdict.get("cluster")
-        if not isinstance(ci, int) or not (0 <= ci < len(clusters)):
-            continue
-        cl = clusters[ci]
-        for grp in (verdict.get("merge") or []):
-            members = [cl[i] for i in (grp.get("members") or [])
-                       if isinstance(i, int) and 0 <= i < len(cl) and cl[i]["id"] not in drop]
-            if len(members) < 2:
+    ok_calls = 0
+    # send the clusters in small batches: one big call would truncate the model's
+    # JSON past max_tokens and the whole review would come back unparseable (the
+    # ai_ok:false we saw). A failed batch is skipped, not fatal.
+    for start in range(0, len(clusters), _BATCH):
+        if tracker.exhausted():
+            break
+        batch = clusters[start:start + _BATCH]
+        payload = [{"cluster": i, "events": [_compact(e) for e in cl]} for i, cl in enumerate(batch)]
+        user = "Grupos a verificar (índices locais por grupo):\n" + extract.json.dumps(payload, ensure_ascii=False)
+        data = extract.json_call(prov, client, cfg["ai"]["model_cheap"], sys_text, user, _SCHEMA, _HINT, 4000, tracker)
+        if not data:
+            continue   # this batch's clusters just go un-reviewed this run
+        ok_calls += 1
+        for verdict in (data.get("clusters") or []):
+            ci = verdict.get("cluster")
+            if not isinstance(ci, int) or not (0 <= ci < len(batch)):
                 continue
-            sig = _cluster_sig(members)
-            if sig in overrides:          # you reverted this before — leave it alone
-                stats["skipped"] += 1
-                continue
-            ci_idx = grp.get("canonical")
-            canon = (cl[ci_idx] if isinstance(ci_idx, int) and 0 <= ci_idx < len(cl)
-                     and cl[ci_idx]["id"] not in drop else members[0])
-            removed = [dict(m) for m in members if m["id"] != canon["id"]]
-            if not removed:
-                continue
-            conf = round(float(grp.get("confidence") or 0), 2)
-            topic = grp.get("topic") if grp.get("topic") in valid_topics else None
-            old_topic = canon.get("topic")
-            _merge_into(canon, [m for m in members if m["id"] != canon["id"]], topic, drop)
-            stats["merged"] += len(removed)
-            if topic and topic != old_topic:
-                stats["topic_fixed"] += 1
-            changes.append({"kind": "merge", "sig": sig, "confidence": conf, "reason": grp.get("reason", ""),
-                            "canonical": {"id": canon["id"], "title": canon["title"], "venue": canon.get("venue")},
-                            "removed": removed,
-                            "topic": {"from": old_topic, "to": topic} if (topic and topic != old_topic) else None})
-        for fl in (verdict.get("flags") or []):
-            i = fl.get("index")
-            if isinstance(i, int) and 0 <= i < len(cl):
-                changes.append({"kind": "flag", "issue": fl.get("issue", ""),
-                                "event": {"id": cl[i]["id"], "title": cl[i]["title"], "venue": cl[i].get("venue")}})
-                stats["flagged"] += 1
+            cl = batch[ci]
+            for grp in (verdict.get("merge") or []):
+                members = [cl[i] for i in (grp.get("members") or [])
+                           if isinstance(i, int) and 0 <= i < len(cl) and cl[i]["id"] not in drop]
+                if len(members) < 2:
+                    continue
+                sig = _cluster_sig(members)
+                if sig in overrides:          # you reverted this before — leave it alone
+                    stats["skipped"] += 1
+                    continue
+                ci_idx = grp.get("canonical")
+                canon = (cl[ci_idx] if isinstance(ci_idx, int) and 0 <= ci_idx < len(cl)
+                         and cl[ci_idx]["id"] not in drop else members[0])
+                removed = [dict(m) for m in members if m["id"] != canon["id"]]
+                if not removed:
+                    continue
+                conf = round(float(grp.get("confidence") or 0), 2)
+                topic = grp.get("topic") if grp.get("topic") in valid_topics else None
+                old_topic = canon.get("topic")
+                _merge_into(canon, [m for m in members if m["id"] != canon["id"]], topic, drop)
+                stats["merged"] += len(removed)
+                if topic and topic != old_topic:
+                    stats["topic_fixed"] += 1
+                changes.append({"kind": "merge", "sig": sig, "confidence": conf, "reason": grp.get("reason", ""),
+                                "canonical": {"id": canon["id"], "title": canon["title"], "venue": canon.get("venue")},
+                                "removed": removed,
+                                "topic": {"from": old_topic, "to": topic} if (topic and topic != old_topic) else None})
+            for fl in (verdict.get("flags") or []):
+                i = fl.get("index")
+                if isinstance(i, int) and 0 <= i < len(cl):
+                    changes.append({"kind": "flag", "issue": fl.get("issue", ""),
+                                    "event": {"id": cl[i]["id"], "title": cl[i]["title"], "venue": cl[i].get("venue")}})
+                    stats["flagged"] += 1
 
+    stats["ai_ok"] = ok_calls > 0   # True if at least one batch came back parseable
     kept = [e for e in events if e["id"] not in drop]
     return kept, changes, stats
 

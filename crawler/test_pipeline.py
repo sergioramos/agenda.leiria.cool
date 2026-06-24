@@ -480,6 +480,13 @@ _kept, _chg, _st = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_c
 t('review applies all merges', sorted(e['id'] for e in _kept), ['b', 'c'])
 t('review records removed for revert', _chg[0]['removed'][0]['id'], 'a')
 t('review canonical keeps art', next(e['topic'] for e in _kept if e['id'] == 'b'), 'art')
+t('review ai_ok true on success', _st['ai_ok'], True)
+# a failed model call surfaces as ai_ok=False, not a silent "0 changes"
+extract.json_call = lambda *a, **k: None
+t('review ai_ok false on call failure',
+  _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0))[2]['ai_ok'], False)
+extract.json_call = lambda *a, **k: {"clusters": [{"cluster": 0, "merge": [
+    {"members": [0, 1], "canonical": 1, "topic": "art", "confidence": 0.6}], "flags": []}]}
 # a reverted signature is skipped (never re-merged)
 _sig = _rv._cluster_sig([_evset[0], _evset[1]])
 _k2, _c2, _s2 = _rv.review([dict(e) for e in _evset], "deepseek", None, _rv_cfg, _rv_tax, extract.CostTracker(1.0), {_sig})
