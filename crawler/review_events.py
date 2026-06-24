@@ -155,7 +155,7 @@ def review(events, prov, client, cfg, tax, tracker, overrides=None):
     stats): `changes` is the reversible log for /admin (each merge carries the full
     removed events so the button can restore them). Any failure -> events unchanged."""
     overrides = overrides or set()
-    stats = {"clusters": 0, "merged": 0, "topic_fixed": 0, "flagged": 0, "skipped": 0}
+    stats = {"clusters": 0, "merged": 0, "topic_fixed": 0, "flagged": 0, "skipped": 0, "ai_ok": None}
     clusters = candidate_clusters(events)
     stats["clusters"] = len(clusters)
     if not clusters or tracker.exhausted():
@@ -167,7 +167,9 @@ def review(events, prov, client, cfg, tax, tracker, overrides=None):
                              _system([t["id"] for t in tax["topics"] if not t.get("is_aggregator")]),
                              user, _SCHEMA, _HINT, 4000, tracker)
     if not data:
+        stats["ai_ok"] = False   # the judge call itself failed (vs. ran and found nothing)
         return events, [], stats
+    stats["ai_ok"] = True
 
     drop, changes = set(), []
     for verdict in (data.get("clusters") or []):

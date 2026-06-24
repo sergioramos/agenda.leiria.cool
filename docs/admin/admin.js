@@ -291,12 +291,20 @@ async function renderReview(weekFile) {
   if (!box || !list) return;
   let data = null;
   try { data = await (await fetch('/data/review-latest.json', { cache: 'no-cache' })).json(); } catch { box.hidden = true; return; }
-  const changes = (data && data.changes) || [];
-  if (!changes.length) { box.hidden = true; return; }
+  if (!data) { box.hidden = true; return; }
+  const changes = data.changes || [];
   const s = data.stats || {};
-  $('#sr-summary').textContent =
-    `Última revisão IA: ${s.merged || 0} duplicados juntados, ${s.topic_fixed || 0} temas corrigidos, ${s.flagged || 0} assinalados. ` +
-    `Tudo aplicado automaticamente — usa «Reverter» se algum estiver errado.`;
+  const when = (data.generated_at || '').slice(0, 10);
+  // show the panel whenever the review ran — even with 0 changes — so "ran and
+  // found nothing" is visible rather than an empty/missing panel.
+  if (s.ai_ok === false) {
+    $('#sr-summary').textContent = `Última revisão IA (${when}): a chamada ao modelo falhou — 0 alterações. Verifica o log do «merge».`;
+  } else {
+    $('#sr-summary').textContent =
+      `Última revisão IA (${when}): ${s.clusters || 0} grupos analisados · ${s.merged || 0} juntados, ` +
+      `${s.topic_fixed || 0} temas corrigidos, ${s.flagged || 0} assinalados.` +
+      (changes.length ? ' Tudo aplicado automaticamente — usa «Reverter» se algum estiver errado.' : '');
+  }
   list.innerHTML = '';
   for (const ch of changes) {
     if (ch.kind === 'flag') {
