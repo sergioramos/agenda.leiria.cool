@@ -10,10 +10,16 @@ line-by-line mirror. If you change behaviour, update the relevant section.
 
 ## Two tracks
 
-- **Structured connectors** (`connectors.py`, run by `fetch_connectors.py`): ~10
-  sites with clean JSON/HTML APIs, pulled over a 75-day horizon into the pool
-  (`docs/data/pool.json`). No AI, no cost. Each returns `(events, status)` and
-  never raises.
+- **Structured connectors** (`connectors.py`, run by `fetch_connectors.py`):
+  AgendaLX, CCB, Gulbenkian, RA, BOL, Xceed, Mato, Fever, DICE, Meetup,
+  Ticketline — pulled over a 75-day horizon into the pool (`docs/data/pool.json`).
+  No AI, no cost. Each returns `(events, status)` and never raises. Most read a
+  JSON/HTML API; **Meetup** has no usable public API (the official one is
+  paid/OAuth) so it parses the ~50 events Meetup server-renders into its find-page
+  `__NEXT_DATA__` blob — the community/tech/social category the culture agendas
+  miss. A seed entry that duplicates a connector (e.g. `meetup-lisbon`,
+  `resident-advisor-ra`) is set `crawlable: false` so the HTML/AI track doesn't
+  re-scrape it for nothing.
 - **Long-tail HTML + AI** (`crawl_events.py`): the ~500 venue sites. Feeds (ICS)
   first; AI extraction only when there's no feed. Cost-capped.
 

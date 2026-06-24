@@ -92,6 +92,13 @@ CONNECTORS = [
         "api": "https://api.dice.fm/unified_search",
     },
     {
+        "id": "meetup", "type": "meetup", "name": "Meetup",
+        "website": "https://www.meetup.com", "topic": "learning",
+        "api": "https://www.meetup.com/find/pt--lisbon/",
+        # community / tech / social / language-exchange — events embedded in the
+        # page's Next.js data (no public API). The category culture agendas miss.
+    },
+    {
         "id": "ticketline", "type": "ticketline", "name": "Ticketline",
         "website": "https://www.ticketline.pt", "topic": "guides",
         "api": "https://www.ticketline.pt/agenda",   # ?district=12 (Lisboa) &page=N
@@ -761,6 +768,73 @@ def _dice_event(e, c, source, mon, window_end, venues_geo, venues_idx, seen):
     return ev
 
 
+# ---------- Meetup (community / tech / social) ----------
+# No usable public API (the official one is paid/OAuth), but the city find-page
+# server-renders ~50 upcoming events into its Next.js __NEXT_DATA__ blob.
+def _meetup(session, cfg, c, source, mon, window_end, venues_idx, venues_geo, delay) -> tuple[list, str]:
+    """Parse Meetup's Lisbon find-page __NEXT_DATA__ for in-person events — the
+    community/tech/social/language-exchange category the culture connectors miss.
+    No auth, no browser. Returns [] + 'failed' if the markup changes (flagged by
+    the shrink/health check, never silent)."""
+    html = _get_text(session, cfg, c["api"])
+    if not html:
+        return [], "failed"
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        return [], "failed"
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return [], "failed"
+
+    raw = []
+    def walk(o):
+        if isinstance(o, dict):
+            if o.get("__typename") == "Event" and o.get("title") and o.get("dateTime"):
+                raw.append(o)
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(data)
+
+    out, seen = [], set()
+    for e in raw:
+        eid = e.get("id")
+        if eid in seen:
+            continue
+        seen.add(eid)
+        if e.get("isOnline") or (e.get("eventType") or "PHYSICAL") != "PHYSICAL":
+            continue   # in-person only — online meetups aren't "what's on in Lisbon"
+        title = _strip_html(e.get("title"))
+        start_d, has_time, start_iso = _lisbon_dt(e.get("dateTime"))
+        if not title or not start_d:
+            continue
+        ven = e.get("venue") if isinstance(e.get("venue"), dict) else {}
+        if (ven.get("country") or "PT").upper() != "PT":
+            continue   # the find page can bleed in nearby-country events
+        venue = _strip_html(ven.get("name")) or None
+        grp = e.get("group") if isinstance(e.get("group"), dict) else {}
+        photo = e.get("featuredEventPhoto") if isinstance(e.get("featuredEventPhoto"), dict) else {}
+        img = photo.get("highResUrl")
+        lat, lng, neigh, zone = _resolve_place(venue, venues_geo, venues_idx,
+                                               c.get("neighbourhood"), c.get("zone"))
+        ev = core.make_event(
+            title=title, source=source,
+            topic=map_topic(title, grp.get("name"), venue, default="learning"),
+            mon=mon, window_end=window_end, start_d=start_d, end_d=None, has_time=has_time,
+            start_iso=start_iso, price={"is_free": False, "min": None, "currency": "EUR", "text": ""},
+            url=e.get("eventUrl"), description="", language=["pt", "en"],
+            categories=source["categories"], venue_name=venue, neighbourhood=neigh, zone=zone,
+            lat=lat, lng=lng)
+        if ev:
+            if isinstance(img, str) and core._good_img(img):
+                ev["image"] = img
+            out.append(ev)
+    return out, ("ok" if out else "partial")
+
+
 # ---------- Ticketline (schema.org microdata agenda, district 12 = Lisboa) ----------
 # Lisboa DISTRICT includes far towns; drop the ones outside the greater-Lisbon metro.
 _TL_FAR = ("lourinha", "torres vedras", "mafra", "sobral de monte", "alenquer",
@@ -908,7 +982,7 @@ def recover_images(session, cfg, events, delay, near_cutoff: str) -> int:
 
 _FETCHERS = {"agendalx": _agendalx, "tribe": _tribe, "gulbenkian": _gulbenkian,
              "jsonld_listing": _jsonld_listing, "jsonld_detail": _jsonld_detail,
-             "ra": _ra, "dice": _dice, "ticketline": _ticketline}
+             "ra": _ra, "dice": _dice, "ticketline": _ticketline, "meetup": _meetup}
 
 
 def run_all(session, cfg, tax, sources, mon, window_end) -> tuple[list, dict]:

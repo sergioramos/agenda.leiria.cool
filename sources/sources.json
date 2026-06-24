@@ -439,7 +439,7 @@
       "facebook": null,
       "handles": [],
       "provider": "meetup",
-      "crawlable": true,
+      "crawlable": false,
       "topic": "guides",
       "categories": [
         1

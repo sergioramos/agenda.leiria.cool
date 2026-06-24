@@ -492,5 +492,27 @@ _bfcfg = {"crawl": {"browser_hosts": ["tickettailor.com"]}}
 t('needs_browser matches host', _bf.needs_browser('https://app.tickettailor.com/events/x/1', _bfcfg), True)
 t('needs_browser ignores others', _bf.needs_browser('https://www.agendalx.pt/e', _bfcfg), False)
 
+# Meetup connector: parse events from the embedded __NEXT_DATA__ (online ones dropped)
+_MU_HTML = ('<script id="__NEXT_DATA__" type="application/json">{"p":{"events":['
+            '{"__typename":"Event","id":"1","title":"Open Coffee Lisbon","dateTime":"2026-06-25T19:00:00+01:00",'
+            '"eventUrl":"https://www.meetup.com/g/events/1/","eventType":"PHYSICAL","isOnline":false,'
+            '"venue":{"name":"Defuse","city":"Lisbon","country":"PT"},'
+            '"featuredEventPhoto":{"highResUrl":"https://secure.meetupstatic.com/photos/event/highres_1.jpeg"},'
+            '"group":{"name":"Tech Lisbon"}},'
+            '{"__typename":"Event","id":"2","title":"Online Webinar","dateTime":"2026-06-26T19:00:00+01:00",'
+            '"eventUrl":"https://www.meetup.com/g/events/2/","eventType":"ONLINE","isOnline":true,'
+            '"venue":{},"group":{"name":"X"}}]}}</script>')
+_mu_orig = connectors._get_text
+connectors._get_text = lambda *a, **k: _MU_HTML
+_mu_c = next(c for c in connectors.CONNECTORS if c["id"] == "meetup")
+_mu_evs, _mu_st = connectors._meetup(None, {"crawl": {}}, _mu_c,
+                                     connectors._src(_mu_c, {"learning": 2, "guides": 1}),
+                                     date(2026, 6, 22), date(2026, 9, 1), {}, {}, 0)
+connectors._get_text = _mu_orig
+t('meetup parses in-person only', len(_mu_evs), 1)
+t('meetup event title', _mu_evs[0]['title'], 'Open Coffee Lisbon')
+t('meetup keeps poster', bool(_mu_evs[0].get('image')), True)
+t('meetup registered in fetchers', 'meetup' in connectors._FETCHERS, True)
+
 print(f'\n{ok} passed, {fail} failed')
 sys.exit(1 if fail else 0)
