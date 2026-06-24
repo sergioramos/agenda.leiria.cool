@@ -1,0 +1,51 @@
+name: retry-crawl
+
+# Safety net for the once-a-week cadence: a few hours after the Sunday crawl, if
+# any connector came back with ZERO events (failed / partial), re-run the whole
+# crawl once so a flaky external server gets a second shot the same day instead of
+# staying stale until next Sunday. On a clean week this does nothing and costs
+# nothing. The AI spend stays under the monthly cap either way (and refreshing the
+# connectors is free), so a re-run can't blow the budget.
+on:
+  schedule:
+    - cron: "0 11 * * 0"   # Sunday 11:00 UTC — ~5h after the 06:00 crawl finishes
+  workflow_dispatch:
+
+concurrency:
+  group: crawl-events      # shared with crawl-events so the two never overlap
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      retry: ${{ steps.decide.outputs.retry }}
+    steps:
+      - uses: actions/checkout@v5
+      - id: decide
+        run: |
+          python - <<'PY'
+          import json, os
+          try:
+              cs = json.load(open("docs/data/connector_state.json", encoding="utf-8"))
+              st = cs.get("connectors") or cs
+              # a connector that returned literally nothing on the last run
+              bad = [k for k, v in st.items() if isinstance(v, dict)
+                     and v.get("last_status") in ("failed", "partial")
+                     and (v.get("last_count") or 0) == 0]
+          except Exception as e:
+              print("could not read connector_state:", e)
+              bad = []
+          print("connectors that returned 0 last run:", bad)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"retry={'true' if bad else 'false'}\n")
+          PY
+
+  recrawl:
+    needs: check
+    if: needs.check.outputs.retry == 'true'
+    uses: ./.github/workflows/crawl-events.yml
+    secrets: inherit
