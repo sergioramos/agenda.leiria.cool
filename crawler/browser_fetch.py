@@ -50,14 +50,23 @@ def fetch_html(url: str, cfg: dict) -> str | None:
         _unavailable = True   # not installed in this environment — stop trying
         return None
     page = None
+    host = urlparse(url).netloc
     try:
         _fetched += 1
         page = _browser.new_page(user_agent=_CHROME_UA)
         page.goto(url, wait_until="domcontentloaded",
                   timeout=max(crawl.get("per_source_timeout_s", 25), 30) * 1000)
         page.wait_for_timeout(crawl.get("browser_wait_ms", 4000))  # let the JS/CF challenge resolve
-        return page.content()
-    except Exception:
+        html = page.content()
+        # surface whether CI actually clears Cloudflare — a challenge/"Just a moment"
+        # page means the datacenter IP is blocked (it passes from a residential IP).
+        low = html.lower()
+        blocked = len(html) < 8000 and ("just a moment" in low or "challenge-platform" in low
+                                        or "attention required" in low or "cf-" in low)
+        print(f"[browser] {host} -> {'BLOCKED (Cloudflare challenge)' if blocked else f'ok ({len(html)} bytes)'}")
+        return None if blocked else html
+    except Exception as e:
+        print(f"[browser] {host} -> failed ({type(e).__name__})")
         return None
     finally:
         if page is not None:

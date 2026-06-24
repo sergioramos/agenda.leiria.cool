@@ -73,7 +73,7 @@ crawl:
   # real headless browser (Playwright) so the poster is recoverable. Used ONLY as
   # a fallback for these hosts, bounded per run. Needs Chromium in the crawl job;
   # degrades to "no image" if absent. Keep this list tight.
-  browser_hosts: ["tickettailor.com"]
+  browser_hosts: ["tickettailor.com", "theblackcatcinema.com"]
   browser_fetch_cap: 40          # max headless-browser fetches per crawl run
   browser_wait_ms: 4000          # wait after load for the Cloudflare/JS challenge to clear
 
