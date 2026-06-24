@@ -513,7 +513,7 @@
       "facebook": null,
       "handles": [],
       "provider": "generic",
-      "crawlable": true,
+      "crawlable": false,
       "topic": "guides",
       "categories": [
         1

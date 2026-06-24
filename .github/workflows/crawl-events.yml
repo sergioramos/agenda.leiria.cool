@@ -25,8 +25,10 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r crawler/requirements.txt
-      - name: Install headless Chromium (Cloudflare/JS hosts only)
-        run: python -m playwright install --with-deps chromium
+      # NB: no Chromium install — Cloudflare blocks headless browsers from GitHub's
+      # datacenter IPs (confirmed), so the browser_fetch fallback can't recover
+      # Tickettailor/Black Cat posters here. It degrades to "no image" (logs
+      # "chromium unavailable") and still works if the crawl is run locally.
       - name: Crawl shard ${{ matrix.shard }}
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}

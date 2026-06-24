@@ -21,7 +21,11 @@ line-by-line mirror. If you change behaviour, update the relevant section.
   `resident-advisor-ra`) is set `crawlable: false` so the HTML/AI track doesn't
   re-scrape it for nothing.
 - **Long-tail HTML + AI** (`crawl_events.py`): the ~500 venue sites. Feeds (ICS)
-  first; AI extraction only when there's no feed. Cost-capped.
+  first; AI extraction only when there's no feed. Cost-capped. AI-extracted events
+  are geo-filtered to greater Lisbon (`extract._out_of_area` drops a touring act's
+  Porto/Odemira dates or a foreign listing that names another city). A source whose
+  page is mostly out-of-area (e.g. `fatsoma`, a UK platform) is set
+  `crawlable: false` rather than filtered event-by-event.
 
 `merge_week.py` joins both into the published week.
 
@@ -50,15 +54,16 @@ Where it runs every crawl:
 - HTML track → `crawl_events.enrich_events` (reads each event page + the listing
   for homepage-only URLs).
 
-**Cloudflare/JS hosts** (Tickettailor — Black Cat Cinema): the requests fetch 403s,
-so `enrich_events` falls back to a real headless browser (`browser_fetch.py`,
-Playwright) for hosts in `crawl.browser_hosts`, bounded by `browser_fetch_cap`.
-This is the one deliberate exception to requests-only — a browser is the only
-thing that clears Cloudflare's JS challenge without fragile TLS-impersonation. It
-needs Chromium in the crawl job (installed in crawl-events.yml) and degrades to
-"no image" if absent. Keep `browser_hosts` tight (it's slow). Not guaranteed
-forever — if Cloudflare escalates to an interactive challenge it would stop
-working, and the wall would show it drop back to 0%.
+**Cloudflare/JS hosts** (Tickettailor — Black Cat Cinema): `enrich_events` can fall
+back to a real headless browser (`browser_fetch.py`, Playwright) for hosts in
+`crawl.browser_hosts`. It works from a residential connection but **NOT from GitHub
+Actions** — Cloudflare blocks headless browsers from datacenter IPs (confirmed on a
+real crawl: code present, Chromium installed, posters still 0). So the Chromium
+install was removed from crawl-events.yml; in CI `browser_fetch` logs "chromium
+unavailable" and degrades to no image. **Black Cat posters are therefore a known
+ceiling** (topic icon shown). The code stays for local runs; getting these in CI
+would need a residential proxy or a scraping API (cost + a fragile dependency),
+deliberately not done.
 
 ### Images that CANNOT be recovered (expected 0% on the wall)
 

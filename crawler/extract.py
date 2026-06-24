@@ -17,8 +17,29 @@ from __future__ import annotations
 import json
 import os
 import re
+import unicodedata
 
 import core
+
+# Places clearly OUTSIDE the greater-Lisbon metro (AML). The AI sometimes returns a
+# touring act's other-city dates (a Lisbon venue's page listing its national tour)
+# or a foreign listing slips through a source. Drop any extracted event whose venue
+# or title names one of these — matched as whole words on the accent-folded text,
+# so it never trips on a substring. AML towns (Cascais, Sintra, Oeiras, Almada,
+# Setúbal, …) are deliberately NOT here.
+_OUT_OF_AREA = {
+    "porto", "coimbra", "braga", "faro", "evora", "beja", "leiria", "aveiro",
+    "viseu", "funchal", "guarda", "portalegre", "santarem", "guimaraes", "covilha",
+    "tomar", "obidos", "odemira", "saboia", "nazare", "fatima", "albufeira", "lagos",
+    "london", "nottingham", "leeuwarden", "leeds", "manchester", "birmingham",
+    "madrid", "barcelona", "paris", "amsterdam", "berlin", "dublin",
+}
+
+
+def _out_of_area(*texts) -> bool:
+    blob = " ".join(t for t in texts if t)
+    folded = "".join(c for c in unicodedata.normalize("NFKD", blob) if not unicodedata.combining(c)).lower()
+    return bool(set(re.findall(r"[a-z]{3,}", folded)) & _OUT_OF_AREA)
 
 # USD per 1M tokens. in=input(miss), out=output, cr=cache-read/hit, cw=cache-write premium.
 PRICES = {
@@ -126,6 +147,9 @@ def _system_prompt(mon, window_end, tax) -> str:
         "És um extractor de eventos de Lisboa. A partir do texto de uma página, devolve APENAS os "
         f"eventos com data entre {mon.isoformat()} e {window_end.isoformat()} (inclusive), mais "
         "exposições/temporadas já a decorrer que ainda estejam abertas nesse período. "
+        "Devolve APENAS eventos que decorrem em Lisboa ou na Área Metropolitana de Lisboa "
+        "(inclui Cascais, Sintra, Oeiras, Almada, Setúbal). IGNORA eventos noutras cidades ou "
+        "países (ex.: Porto, Coimbra, Odemira, Londres) — mesmo que a página os liste. "
         "Ignora itens sem data concreta, menus, publicidade e navegação. Datas em ISO. "
         "Preenche SEMPRE o campo time (HH:MM, 24h) quando a página indicar a hora de início do evento "
         "(ex.: «21h», «21:00», «às 9 da noite» → 21:00); só o deixas vazio se não houver mesmo hora. "
@@ -228,6 +252,10 @@ def extract(prov, client, source: dict, page_text: str, mon, window_end, cfg: di
         if not parsed:
             continue
         start_d, has_time, start_iso = parsed
+        # drop events the page lists that happen outside greater Lisbon (touring
+        # dates, a foreign listing) — keeps London/Porto/Odemira off a Lisbon agenda
+        if _out_of_area(it.get("venue"), it.get("title")):
+            continue
         end_parsed = core.parse_dt(it.get("end_date"))
         topic = it.get("topic") if it.get("topic") in valid else (source.get("topic") or "guides")
         price = ({"is_free": True, "min": 0, "currency": "EUR", "text": "Grátis"}

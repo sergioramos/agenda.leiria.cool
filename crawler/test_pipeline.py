@@ -499,6 +499,14 @@ _bfcfg = {"crawl": {"browser_hosts": ["tickettailor.com"]}}
 t('needs_browser matches host', _bf.needs_browser('https://app.tickettailor.com/events/x/1', _bfcfg), True)
 t('needs_browser ignores others', _bf.needs_browser('https://www.agendalx.pt/e', _bfcfg), False)
 
+# geo-filter: drop out-of-area events (foreign / far-PT), keep greater-Lisbon ones
+t('out-of-area: foreign venue', extract._out_of_area('De Kosterij, Leeuwarden', 'A Coldplay Candlelight'), True)
+t('out-of-area: far-PT venue', extract._out_of_area('Igreja da Misericordia - Odemira', 'Miso String Quartet'), True)
+t('out-of-area: title city', extract._out_of_area('Various Venues', 'Nottingham Cocktail Week 2026'), True)
+t('out-of-area: keeps Lisbon', extract._out_of_area('Hot Clube de Portugal', 'Carolina Estrela Trio'), False)
+t('out-of-area: keeps AML town', extract._out_of_area('Casino Estoril', 'Legado 2026'), False)
+t('out-of-area: no substring trip', extract._out_of_area('Galeria Foco', 'Concerto'), False)
+
 # Meetup connector: parse events from the embedded __NEXT_DATA__ (online ones dropped)
 _MU_HTML = ('<script id="__NEXT_DATA__" type="application/json">{"p":{"events":['
             '{"__typename":"Event","id":"1","title":"Open Coffee Lisbon","dateTime":"2026-06-25T19:00:00+01:00",'
