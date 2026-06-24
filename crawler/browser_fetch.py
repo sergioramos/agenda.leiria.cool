@@ -36,21 +36,23 @@ def fetch_html(url: str, cfg: dict) -> str | None:
     """Render url in headless Chromium and return its HTML, or None (Playwright/
     Chromium missing, cap reached, or a page error). Reuses one browser."""
     global _pw, _browser, _fetched, _unavailable
+    host = urlparse(url or "").netloc
     if _unavailable:
         return None
     crawl = cfg.get("crawl", {}) or {}
     if _fetched >= crawl.get("browser_fetch_cap", 40):
+        print(f"[browser] {host} -> skipped (per-run cap reached)")
         return None
     try:
         if _browser is None:
             from playwright.sync_api import sync_playwright
             _pw = sync_playwright().start()
             _browser = _pw.chromium.launch(headless=True)
-    except Exception:
-        _unavailable = True   # not installed in this environment — stop trying
+    except Exception as e:
+        _unavailable = True   # chromium not installed / can't launch in this env
+        print(f"[browser] chromium unavailable ({type(e).__name__}: {e}) — image recovery off this run")
         return None
     page = None
-    host = urlparse(url).netloc
     try:
         _fetched += 1
         page = _browser.new_page(user_agent=_CHROME_UA)
