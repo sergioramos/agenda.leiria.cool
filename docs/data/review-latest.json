@@ -1,12 +1,235 @@
 {
-  "generated_at": "2026-06-24T00:52:18+00:00",
+  "generated_at": "2026-06-24T11:22:14+00:00",
   "stats": {
     "clusters": 40,
-    "merged": 0,
+    "merged": 4,
     "topic_fixed": 0,
     "flagged": 0,
     "skipped": 0,
-    "ai_ok": false
+    "ai_ok": true
   },
-  "changes": []
+  "changes": [
+    {
+      "kind": "merge",
+      "sig": "480f30b65a37",
+      "confidence": 0.95,
+      "reason": "same exhibition, slight title/venue variation",
+      "canonical": {
+        "id": "be06b33e618b",
+        "title": "EMPORIO – de Musa paradisiaca",
+        "venue": "ZDB – Galeria Zé dos Bois"
+      },
+      "removed": [
+        {
+          "id": "71bd7eee0143",
+          "title": "Musa Paradisíaca",
+          "topic": "art",
+          "categories": [
+            1
+          ],
+          "venue": "Livraria Zé dos Bois",
+          "source_id": "agendalx",
+          "neighbourhood": "Bairro Alto",
+          "zone": "city",
+          "lat": 38.7117856,
+          "lng": -9.1445953,
+          "start": "2026-06-22",
+          "end": "2026-08-31",
+          "all_day": true,
+          "ongoing": true,
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "price": {
+            "is_free": false,
+            "min": 3.0,
+            "currency": "EUR",
+            "text": "€3"
+          },
+          "language": [
+            "pt"
+          ],
+          "url": "https://www.agendalx.pt/events/event/musa-paradisiaca-5/",
+          "source": "agendalx",
+          "description": "Musa paradisiaca estreia Emporio , uma peça audiovisual duracional de 90 minutos que opera na fenda entre o colapso histórico e o colapso privado. No centro desta arqueologia magnética,...",
+          "image": "https://www.agendalx.pt/content/uploads/2026/05/EMPORIO_Musa-paradisiaca-scaled.jpg",
+          "lineup": null,
+          "links": null,
+          "prov": null
+        }
+      ],
+      "topic": null
+    },
+    {
+      "kind": "merge",
+      "sig": "05a9a48b7f6c",
+      "confidence": 0.95,
+      "reason": "same fado show, generic vs specific venue",
+      "canonical": {
+        "id": "ce8c5e0a7e7d",
+        "title": "FADO IN CHIADO - Em palco há 17 anos",
+        "venue": "Cine Theatro Gymnasio - Espaço Chiado"
+      },
+      "removed": [
+        {
+          "id": "68475fba3f78",
+          "title": "Fado in Chiado",
+          "topic": "music",
+          "categories": [
+            10,
+            31
+          ],
+          "venue": "Fado in Chiado",
+          "source_id": "fado-in-chiado",
+          "neighbourhood": "Chiado",
+          "zone": "city",
+          "lat": null,
+          "lng": null,
+          "start": "2026-06-22",
+          "end": "2026-06-27",
+          "all_day": true,
+          "ongoing": true,
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "price": {
+            "is_free": false,
+            "min": 23.0,
+            "currency": "EUR",
+            "text": "€23"
+          },
+          "language": [
+            "pt"
+          ],
+          "url": "https://fadoinchiado.com",
+          "source": "generic",
+          "description": "Espetáculo de fado ao vivo com um cantor e dois músicos, acompanhado de imagens de locais emblemáticos de Lisboa. Duração de 50 minutos.",
+          "image": "https://images.rr.pt/palco_0919071a207178f17f.png",
+          "lineup": null,
+          "links": null,
+          "prov": null
+        }
+      ],
+      "topic": null
+    },
+    {
+      "kind": "merge",
+      "sig": "c49beb15d3f3",
+      "confidence": 0.95,
+      "reason": "same exhibition, MUDE same as Museu do Design",
+      "canonical": {
+        "id": "94a15502228d",
+        "title": "Para que servem as coisas?",
+        "venue": "MUDE - Museu do Design"
+      },
+      "removed": [
+        {
+          "id": "20fc6ba3b3a1",
+          "title": "Para que Servem as Coisas?",
+          "topic": "art",
+          "categories": [
+            1
+          ],
+          "venue": "MUDE",
+          "source_id": "bol",
+          "neighbourhood": "Baixa",
+          "zone": "city",
+          "lat": 38.709173047805,
+          "lng": -9.136494398117,
+          "start": "2026-06-25T10:00",
+          "end": "2026-12-31",
+          "all_day": false,
+          "ongoing": true,
+          "days": [
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "price": {
+            "is_free": false,
+            "min": 13.0,
+            "currency": "EUR",
+            "text": "€13"
+          },
+          "language": [
+            "pt"
+          ],
+          "url": "https://www.bol.pt/Comprar/Bilhetes/146938-para_que_servem_as_coisas-mude/",
+          "source": "bol",
+          "description": "",
+          "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz126055.jpg?v=3",
+          "lineup": null,
+          "links": null,
+          "prov": null
+        }
+      ],
+      "topic": null
+    },
+    {
+      "kind": "merge",
+      "sig": "5c8982c94348",
+      "confidence": 0.95,
+      "reason": "same exhibition, slight title variation",
+      "canonical": {
+        "id": "c67ac1de4c06",
+        "title": "Paulo de Cantos",
+        "venue": "MUDE - Museu do Design"
+      },
+      "removed": [
+        {
+          "id": "a3865e8bf1ab",
+          "title": "Ver e Ler Paulo de Cantos",
+          "topic": "art",
+          "categories": [
+            1
+          ],
+          "venue": "MUDE",
+          "source_id": "bol",
+          "neighbourhood": "Baixa",
+          "zone": "city",
+          "lat": 38.709173047805,
+          "lng": -9.136494398117,
+          "start": "2026-06-25T10:00",
+          "end": "2026-09-06",
+          "all_day": false,
+          "ongoing": true,
+          "days": [
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "price": {
+            "is_free": false,
+            "min": 11.0,
+            "currency": "EUR",
+            "text": "€11"
+          },
+          "language": [
+            "pt"
+          ],
+          "url": "https://www.bol.pt/Comprar/Bilhetes/177928-ver_e_ler_paulo_de_cantos-mude/",
+          "source": "bol",
+          "description": "",
+          "image": "https://bolimg.blob.core.windows.net/producao/imagens/espectaculos/cartaz152772.jpg?v=2",
+          "lineup": null,
+          "links": null,
+          "prov": null
+        }
+      ],
+      "topic": null
+    }
+  ]
 }

@@ -4,15 +4,15 @@
       449,
       449,
       449,
-      449,
       434,
       435,
       476,
-      476
+      476,
+      485
     ],
-    "last_count": 476,
+    "last_count": 485,
     "last_status": "ok",
-    "median": 449,
+    "median": 449.0,
     "updated_at": "2026-06-24"
   },
   "ccb": {
@@ -25,9 +25,9 @@
       430,
       98
     ],
-    "last_count": 98,
-    "last_status": "shrunk",
-    "median": 438.0,
+    "last_count": 0,
+    "last_status": "failed",
+    "median": 438,
     "updated_at": "2026-06-24"
   },
   "gulbenkian": {
@@ -35,15 +35,15 @@
       117,
       117,
       117,
-      117,
       112,
       112,
+      114,
       114,
       114
     ],
     "last_count": 114,
     "last_status": "ok",
-    "median": 117,
+    "median": 115.5,
     "updated_at": "2026-06-24"
   },
   "ra": {
@@ -53,13 +53,13 @@
       144,
       144,
       144,
-      144,
       151,
-      151
+      151,
+      155
     ],
-    "last_count": 151,
+    "last_count": 155,
     "last_status": "ok",
-    "median": 144,
+    "median": 144.0,
     "updated_at": "2026-06-24"
   },
   "bol": {
@@ -69,10 +69,11 @@
       409,
       409,
       389,
-      389
+      389,
+      394
     ],
-    "last_count": 0,
-    "last_status": "failed",
+    "last_count": 394,
+    "last_status": "ok",
     "median": 408.0,
     "updated_at": "2026-06-24"
   },
@@ -81,31 +82,31 @@
       37,
       37,
       37,
-      37,
       36,
       36,
       37,
-      37
+      37,
+      36
     ],
-    "last_count": 37,
+    "last_count": 36,
     "last_status": "ok",
-    "median": 37,
+    "median": 37.0,
     "updated_at": "2026-06-24"
   },
   "mato": {
     "counts": [
-      17,
       17,
       16,
       16,
       14,
       14,
       15,
-      15
+      15,
+      17
     ],
-    "last_count": 15,
+    "last_count": 17,
     "last_status": "ok",
-    "median": 16,
+    "median": 15.5,
     "updated_at": "2026-06-24"
   },
   "dice": {
@@ -129,11 +130,12 @@
       78,
       78,
       76,
+      76,
       76
     ],
     "last_count": 76,
     "last_status": "ok",
-    "median": 78,
+    "median": 78.0,
     "updated_at": "2026-06-24"
   },
   "fever": {
@@ -142,11 +144,21 @@
       25,
       34,
       26,
+      29,
       29
     ],
     "last_count": 29,
     "last_status": "ok",
-    "median": 29.5,
+    "median": 29,
+    "updated_at": "2026-06-24"
+  },
+  "meetup": {
+    "counts": [
+      52
+    ],
+    "last_count": 52,
+    "last_status": "ok",
+    "median": 0,
     "updated_at": "2026-06-24"
   }
 }
