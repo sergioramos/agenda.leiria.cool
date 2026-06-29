@@ -390,6 +390,10 @@ html.js .card-rv.in { opacity: 1; transform: none; }
   letter-spacing: .896px; text-transform: uppercase; color: #6f6f6f; white-space: nowrap;
 }
 .footer-credit span { color: #1d1813; }
+/* the stats line is long ("N eventos · N fontes · atualizado a …"); nowrap forced
+   it past a phone's width and made the whole page horizontally scrollable. Let it
+   wrap on narrow screens (stays one line on desktop, where there's room). */
+#footer-stats { white-space: normal; }
 
 /* small screens (Figma 42:1202 — 1:1): card becomes a column — full-width
    banner image on top, then button, title, venue, tags; horizontal dashed
@@ -422,6 +426,12 @@ html.js .card-rv.in { opacity: 1; transform: none; }
   .card .when .date-mon { font-size: 12px; }
   .card .when .day { grid-area: day; align-self: end; text-align: left; }
   .card .when .time, .card .when .ongoing { grid-area: time; align-self: start; text-align: left; }
+
+  /* footer: stack credit and stats so each spans the full width and wraps to a
+     second line if too long, instead of sitting side by side and forcing the
+     page wider than the screen */
+  .footer-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .footer-credit, #footer-stats { width: 100%; }
 }
 @media (max-width: 540px) {
   .masthead { flex-wrap: wrap; gap: 12px; }
