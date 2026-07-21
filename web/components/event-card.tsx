@@ -1,8 +1,44 @@
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
+import { addDays, addHours, format, isAfter, isSameMonth, isValid, parseISO } from 'date-fns';
+import { pt } from 'date-fns/locale';
 import type { EventItem, Topic } from '../types';
-import { DAY_LABEL, MONTHS, eventDate, gcalUrl, mapsUrl } from '../lib/dates';
 import { CalendarIcon, PinIcon } from './icons';
+
+// for a generic/unnamed venue (city-wide events, "TBA", "Secret Location"),
+// exact coordinates beat a name search; otherwise the name shows the place card
+function mapsUrl(ev: EventItem): string {
+  const generic = !ev.venue || /^(lisboa|tba|secret|local)/i.test(ev.venue);
+  if (generic && ev.lat != null && ev.lng != null) {
+    return 'https://www.google.com/maps/search/?api=1&query=' + ev.lat + ',' + ev.lng;
+  }
+  const q = [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', ');
+  return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+}
+
+function gcalUrl(ev: EventItem): string {
+  let dates: string;
+  if (!ev.all_day && (ev.start || '').length > 10) {
+    const s = parseISO(ev.start);
+    const e = addHours(s, 2); // no published end time — assume 2h
+    const fmt = (d: Date) => format(d, "yyyyMMdd'T'HHmmss");
+    dates = `${fmt(s)}/${fmt(e)}`;
+  } else {
+    // all-day (Google wants an EXCLUSIVE end date)
+    const start = parseISO(ev.start.slice(0, 10));
+    const end = addDays(parseISO((ev.end || ev.start).slice(0, 10)), 1);
+    dates = `${format(start, 'yyyyMMdd')}/${format(end, 'yyyyMMdd')}`;
+  }
+  const p = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: ev.title,
+    dates,
+    details: ev.url || '',
+    location: [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', '),
+    ctz: 'Europe/Lisbon',
+  });
+  return 'https://calendar.google.com/calendar/render?' + p.toString();
+}
 
 // Ported 1:1 from card() in docs/assets/app.js. `weekStart` is the viewed
 // week's Monday (for the multi-day "até 12 jul" month disambiguation); `index`
@@ -22,9 +58,10 @@ export default function EventCard({
   const [showImage, setShowImage] = useState(Boolean(ev.image));
   const emoji = topic?.emoji || '📌';
 
-  const d = eventDate(ev);
-  const endISO = (ev.end || '').slice(0, 10);
-  const multiDay = Boolean(endISO && endISO > (ev.start || '').slice(0, 10));
+  const d = parseISO((ev.start || '').slice(0, 10));
+  const multiDay = Boolean(
+    ev.end && isAfter(parseISO(ev.end.slice(0, 10)), parseISO((ev.start || '').slice(0, 10))),
+  );
 
   const style: CSSProperties = { ['--d' as string]: `${Math.min(index, 10) * 110}ms` };
 
@@ -118,25 +155,26 @@ function When({
   // a run spanning more than one day shows its closing day ("até 26"), even when
   // it isn't flagged "em curso"; the "em curso" label stays tied to ev.ongoing.
   if (ev.ongoing || multiDay) {
-    const endD = ev.end ? new Date(ev.end.slice(0, 10) + 'T00:00:00') : null;
-    const ref = new Date(weekStart + 'T00:00:00');
-    const showMonth = endD && (endD.getMonth() !== ref.getMonth() || endD.getFullYear() !== ref.getFullYear());
+    const endD = ev.end ? parseISO(ev.end.slice(0, 10)) : null;
+    const ref = parseISO(weekStart);
+    const showMonth = endD && !isSameMonth(endD, ref);
     return (
       <div className="when">
-        <span className="day">{endD ? 'até' : ev.days[0] ? DAY_LABEL[ev.days[0]] : 'sem'}</span>
+        <span className="day">{endD ? 'até' : isValid(d) ? format(d, 'EEE', { locale: pt }) : 'sem'}</span>
         <span className="date">
-          {(endD || d).getDate() || ''}
-          {showMonth && <span className="date-mon"> {MONTHS[endD!.getMonth()] ?? ''}</span>}
+          {isValid(endD || d) ? format(endD || d, 'd') : ''}
+          {showMonth && <span className="date-mon"> {format(endD!, 'MMM', { locale: pt })}</span>}
         </span>
         <span className="ongoing">{ev.ongoing ? 'em curso' : ''}</span>
       </div>
     );
   }
-  const time = (ev.start || '').slice(11, 16);
+  // date-only starts (all-day) carry no time — keep the "—" fallback
+  const time = (ev.start || '').length > 10 ? format(parseISO(ev.start), 'HH:mm') : '';
   return (
     <div className="when">
-      <span className="day">{ev.days[0] ? DAY_LABEL[ev.days[0]] : ''}</span>
-      <span className="date">{d.getDate() || ''}</span>
+      <span className="day">{isValid(d) ? format(d, 'EEE', { locale: pt }) : ''}</span>
+      <span className="date">{isValid(d) ? format(d, 'd') : ''}</span>
       <span className="time">{time || '—'}</span>
     </div>
   );

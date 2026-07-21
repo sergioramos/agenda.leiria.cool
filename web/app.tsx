@@ -1,6 +1,8 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import type { EventItem, Filters, Mock, Taxonomy, Topic, Week } from './types';
-import { DAYS, DAY_LABEL, fmtRange } from './lib/dates';
+import type { DayCode, EventItem, Filters, Mock, Taxonomy, Topic, Week } from './types';
+import type { Day } from 'date-fns';
+import { addDays, format, isSameMonth, parseISO } from 'date-fns';
+import { enUS, pt } from 'date-fns/locale';
 import { getJSON } from './lib/json';
 import { useHashFilters } from './hooks/use-hash-filters';
 import Ticker from './components/ticker';
@@ -9,6 +11,15 @@ import Chip from './components/chip';
 import TopicSection from './components/topic-section';
 import { ResultsSkeleton, ChipSkeleton } from './components/skeletons';
 import { SearchIcon } from './components/icons';
+
+// Monday-first day-filter keys (enUS abbreviations, lowercased) and their pt
+// labels — both from date-fns (day index is Sunday=0, so shift Monday-first by one).
+const DAYS = Array.from(
+  { length: 7 },
+  (_, i) => enUS.localize.day(((i + 1) % 7) as Day, { width: 'abbreviated' }).toLowerCase() as DayCode,
+);
+
+const DAY_LABELS = DAYS.map((_, i) => pt.localize.day(((i + 1) % 7) as Day, { width: 'abbreviated' }));
 
 // An image reused by events with different titles is a venue logo / default
 // banner, not a poster — drop it so the topic emoji shows instead.
@@ -81,11 +92,10 @@ export default function App() {
         setTaxonomy(tax);
         dropSharedImages(w.events);
         setHaystacks(buildHaystacks(w.events, tax));
-        const gen = new Date(w.generated_at);
         setTicker(
           w.is_sample
             ? { text: '⚠ Dados de exemplo', accent: true }
-            : { text: 'Atualizado ' + gen.toLocaleDateString('pt-PT'), accent: false },
+            : { text: 'Atualizado ' + format(parseISO(w.generated_at), 'dd/MM/yyyy'), accent: false },
         );
         setWeek(w);
       })
@@ -134,6 +144,15 @@ export default function App() {
     [week, deferredFilters, haystacks],
   );
 
+  let weekLabel: string | null = null;
+  if (week) {
+    const s = parseISO(week.week_start);
+    const e = parseISO(week.week_end);
+    weekLabel = isSameMonth(s, e)
+      ? `${format(s, 'd')}–${format(e, 'd MMM yyyy', { locale: pt })}`
+      : `${format(s, 'd MMM', { locale: pt })} – ${format(e, 'd MMM yyyy', { locale: pt })}`;
+  }
+
   if (error) {
     return (
       <>
@@ -159,7 +178,7 @@ export default function App() {
               <span className="week-control-label">Semana</span>
               <span className="week-control-value">
                 {week ? (
-                  fmtRange(week.week_start, week.week_end)
+                  weekLabel
                 ) : (
                   <span className="sk-bar" style={{ display: 'inline-block', width: 108, height: 12, verticalAlign: 'middle' }} />
                 )}
@@ -300,10 +319,10 @@ function SearchAndFilters({
               <legend>Dia</legend>
               <div className="chips small">
                 {DAYS.map((d, i) => {
-                  const date = weekStart ? dayDate(weekStart, i) : null;
+                  const date = weekStart ? addDays(parseISO(weekStart), i) : null;
                   return (
                     <Chip key={d} pressed={filters.days.has(d)} onClick={() => onToggleDay(d)}>
-                      <span>{DAY_LABEL[d]}{date ? ` ${date.getDate()}` : ''}</span>
+                      <span>{DAY_LABELS[i]}{date ? ` ${format(date, 'd')}` : ''}</span>
                     </Chip>
                   );
                 })}
@@ -338,13 +357,6 @@ function SearchAndFilters({
       </div>
     </>
   );
-}
-
-function dayDate(weekStart: string, offset: number): Date {
-  const ws = new Date(weekStart + 'T00:00:00');
-  const d = new Date(ws);
-  d.setDate(ws.getDate() + offset);
-  return d;
 }
 
 function TopicChips({
@@ -418,9 +430,10 @@ function Results({
 
 function Footer({ week }: { week: Week | null }) {
   const stats = week
-    ? `${week.event_count} eventos · ${week.source_count} fontes · atualizado a ${new Date(
-        week.generated_at,
-      ).toLocaleDateString('pt-PT')}`
+    ? `${week.event_count} eventos · ${week.source_count} fontes · atualizado a ${format(
+        parseISO(week.generated_at),
+        'dd/MM/yyyy',
+      )}`
     : '';
   return (
     <footer className="site-footer">
