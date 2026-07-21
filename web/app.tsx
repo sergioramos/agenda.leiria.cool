@@ -5,7 +5,6 @@ import { addDays, format, isSameMonth, parseISO } from 'date-fns';
 import { enUS, pt } from 'date-fns/locale';
 import { getJSON } from './lib/json';
 import { useHashFilters } from './hooks/use-hash-filters';
-import Ticker from './components/ticker';
 import Masthead from './components/masthead';
 import Chip from './components/chip';
 import TopicSection from './components/topic-section';
@@ -73,7 +72,6 @@ export default function App() {
   const [taxonomy, setTaxonomy] = useState<Taxonomy | null>(null);
   const [week, setWeek] = useState<Week | null>(null);
   const [haystacks, setHaystacks] = useState<Map<string, string>>(new Map());
-  const [ticker, setTicker] = useState<{ text: string; accent: boolean }>({ text: '', accent: false });
   const [error, setError] = useState<string | null>(null);
 
   const { filters, setFilters } = useHashFilters();
@@ -156,7 +154,6 @@ export default function App() {
   if (error) {
     return (
       <>
-        <Ticker text={ticker.text} accent={ticker.accent} />
         <main className="wrap" id="main">
           <p className="empty">
             Não foi possível carregar os eventos ({error}). Se abriu este ficheiro diretamente, use antes o
@@ -169,8 +166,6 @@ export default function App() {
 
   return (
     <>
-      <Ticker text={ticker.text} accent={ticker.accent} />
-
       <header className="site-header">
         <div className="wrap">
           <Masthead rv>
