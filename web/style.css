@@ -1,0 +1,446 @@
+/* Lisbon Events — "file dossier / editorial print" system
+   Modelled on 3 Hole Punch Media / Nuvio: warm paper, serif display (Fraunces),
+   serif body (Newsreader), monospace labels (Space Mono), vermilion accent,
+   dashed rules and rubber-stamp motifs. Light only. */
+
+:root {
+  --bg: #f0e8dc;            /* warm paper */
+  --surface: #ffffff;       /* white cards */
+  --surface-soft: #faf6ee;  /* checklist-row fill */
+  --ink: #1d1813;           /* warm near-black */
+  --ink-soft: #6f6555;
+  --line: #ddd3c2;          /* warm hairline */
+  --line-strong: #c8bca6;
+  --accent: #ff3d1f;        /* vermilion (Figma) */
+  --accent-deep: #e02f12;
+  --accent-ink: #ffffff;
+  --r: 0; --r-sm: 0;        /* squared corners everywhere */
+  --maxw: 1000px;           /* content cap (Figma Main Container) */
+  /* system font stacks — no self-hosted webfonts (privacy + web-performance) */
+  --display: Georgia, "Times New Roman", serif;
+  --body: Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --grotesk: -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+html[data-theme="dark"] {
+  --bg: #181410; --surface: #221d17; --surface-soft: #1f1a14; --ink: #f1e8da;
+  --ink-soft: #a99c86; --line: #3a3225; --line-strong: #4a4030; --accent: #f0664b;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+img, video { max-inline-size: 100%; block-size: auto; }
+fieldset { margin: 0; padding: 0; border: 0; min-inline-size: 0; }
+html { color-scheme: light; }
+
+/* skip link (accessibility skill): first tab stop, jumps to <main> */
+.skip-link {
+  position: absolute; inset-inline-start: 8px; inset-block-start: -48px; z-index: 9999;
+  background: #1d1813; color: #f4e9da; padding: 10px 14px; border-radius: 4px;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase; text-decoration: none;
+}
+.skip-link:focus { inset-block-start: 8px; }
+body {
+  margin: 0; background-color: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+/* faint paper grain */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 9000; pointer-events: none; opacity: .05; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap { max-inline-size: calc(var(--maxw) + 64px); margin-inline: auto; padding-inline: 32px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.muted { color: var(--ink-soft); }
+em, i { font-style: italic; }
+a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line-strong); }
+a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* ---------- type helpers ---------- */
+.kicker, .mono {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.kicker { color: var(--accent); font-weight: 700; }
+.mono { color: var(--ink-soft); }
+/* divider (Figma stroke: 1px dashed #CCC7BB, dash 4 / gap 4) */
+.rule-dashed {
+  border: 0; margin: 0; height: 1px;
+  background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
+}
+/* solid divider (hero→events, above footer): 1px #ccc7bb */
+.rule-solid { border: 0; margin: 0; height: 1px; background: #ccc7bb; }
+
+/* ---------- top announcement bar (Figma 19:2073/19:2604/19:2606 — 1:1) ----------
+   Bar #1d1813 · Space Mono Bold 12px/16px · letter-spacing 1px · uppercase ·
+   white · padding 16px vertical · continuous marquee · 4px #ff3d1f rule below. */
+.topbar { background: #1d1813; overflow: hidden; padding: 16px 0; }
+.ticker-track {
+  display: flex; width: max-content; min-height: 16px; will-change: transform;
+  animation: ticker-scroll var(--ticker-duration, 40s) linear infinite;
+}
+.ticker-half { display: flex; flex: none; }
+.ticker-item {
+  flex: none; white-space: nowrap;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #ffffff;
+  padding-right: 48px; /* gap between repeats */
+}
+.ticker-item .ticker-status.accent { color: #ff3d1f; }
+.topbar-rule { height: 4px; background: #ff3d1f; }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+
+/* ---------- header (Figma 4:33 — 1:1) ----------
+   72px tall: 16px vertical padding · logo 153×40 left · week control right.
+   Week control: "SEMANA" chip on #1d1813 with #f4e9da text + value box with
+   1px #1d1813 border; both Space Mono Bold 12px/12px, ls 1px, 12px padding;
+   4px radius on the outer corners only (per design). */
+.site-header { background: var(--bg); }
+.masthead { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 16px 0; }
+.brand-logo { display: block; width: 153px; height: 40px; }
+
+.week-control { display: flex; align-items: stretch; }
+.week-control-label, .week-control-value {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; padding: 12px; white-space: nowrap;
+}
+.week-control-label {
+  display: flex; align-items: center; justify-content: center;
+  background: #1d1813; color: #f4e9da; border-radius: 4px 0 0 4px;
+}
+.week-control-value {
+  display: flex; align-items: center; justify-content: center;
+  color: #1d1813; border: 1.5px solid #1d1813; border-radius: 0 4px 4px 0;
+  padding: 10.5px; /* 10.5px + 1.5px border = the design's 12px inset; total height 36px like the label */
+}
+
+/* ---------- hero (Figma 1:246 — 1:1) ----------
+   48px vertical padding · 48px gap between text and controls · text column
+   max 700px with 16px gap · Fraunces Light 80/88 −3px (WONK 1) title with
+   italic #ff3d1f emphasis · Familjen Grotesk 18/24 #3a3a3a description. */
+.hero { display: flex; flex-direction: column; gap: 48px; padding: 48px 0; }
+.hero-text { display: flex; flex-direction: column; gap: 16px; max-width: 700px; }
+.hero-eyebrow {
+  margin: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 2px; text-transform: uppercase; color: #ff3d1f;
+}
+.hero-title {
+  margin: 0; font-family: var(--display); font-weight: 300; font-optical-sizing: auto;
+  font-size: 80px; line-height: 88px; letter-spacing: -3px; color: #1d1813;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+}
+.hero-title em { font-style: italic; font-weight: 400; color: #ff3d1f; }
+.hero-sub { margin: 0; font-family: var(--grotesk); font-weight: 400; font-size: 18px; line-height: 24px; color: #3a3a3a; }
+/* no flex gap here — spacing lives on the chips + the panel (inside the
+   collapsible track) so the filter panel can animate its height without a
+   stray gap lingering when it's closed */
+.hero-controls { display: flex; flex-direction: column; }
+.hero-controls #topic-chips { margin-top: 24px; }
+@media (max-width: 640px) {
+  .hero-title { font-size: 48px; line-height: 54px; letter-spacing: -2px; }
+}
+
+/* ---------- buttons (one system, all 36px tall like the week control) ----------
+   .btn outline · .btn.primary ink fill · .btn.accent red fill · .btn.ghost
+   subtle outline · .btn-sm 28px row actions. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; cursor: pointer; text-decoration: none;
+  color: #1d1813; background: transparent; border: 1.5px solid #1d1813; border-radius: 4px;
+  padding: 10.5px 16px; /* +1.5px border = 36px tall */
+  transition: background .12s, color .12s, border-color .12s;
+}
+.btn:hover { background: #1d1813; color: #f4e9da; }
+.btn.primary { background: #1d1813; border-color: #1d1813; color: #f4e9da; }
+.btn.primary:hover { background: #000; border-color: #000; }
+.btn.accent { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+.btn.ghost { border-color: #ccc7bb; }
+.btn.ghost:hover { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn.btn-sm { padding: 7px 10px; border-width: 1px; } /* 28px, for list rows */
+.btn:disabled { opacity: .4; cursor: default; pointer-events: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- controls ---------- */
+.controls { padding: 0; }
+/* search row (Figma 1:1810): 8px gap; bar #fefefe r4 with layered drop shadow,
+   18px left / 24px right / 16px vertical padding, 12px gap, 20px tabler icon;
+   Filtros button 56px tall, 1.5px #1d1813 border, Space Mono Bold 12/16 ls 2px. */
+.searchbar { display: flex; gap: 8px; align-items: flex-start; }
+.search-box {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px;
+  background: #fefefe; border-radius: 4px; padding: 16px 24px 16px 18px; cursor: text;
+  box-shadow: 0 22px 50px -28px rgba(22, 22, 22, .25), 0 4px 12px -6px rgba(22, 22, 22, .08);
+}
+.search-box:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.search-icon { width: 20px; height: 20px; flex: none; }
+.search-box input {
+  flex: 1; min-width: 0; border: 0; background: transparent; padding: 0;
+  font-family: var(--grotesk); font-size: 18px; line-height: 24px; color: var(--ink);
+}
+.search-box input::placeholder { color: #6f6f6f; font-style: italic; }
+.search-box input:focus { outline: none; }
+.filters-btn {
+  display: flex; align-items: center; gap: 8px; height: 56px; flex: none;
+  padding: 0 14.5px; /* +1.5px border = the design's 16px insets */
+  background: transparent; border: 1.5px solid #1d1813; border-radius: 4px; cursor: pointer;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; color: #1d1813;
+  transition: background .14s ease, color .14s ease, transform .1s ease;
+}
+.filters-btn:hover { background: rgba(29, 24, 19, .05); }
+.filters-btn:active { transform: scale(.98); }
+.filters-btn .filt-sign { font-size: 12px; line-height: 12px; display: inline-block; }
+
+/* category chips (Figma 2:1848): #fdfdfd, r4, 8px padding + 8px gaps,
+   Space Mono Bold 12px/12px ls 1px uppercase #1d1813, count at 60%. */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; user-select: none;
+  background: #fdfdfd; color: #1d1813; border: 0; border-radius: 4px; padding: 8px;
+  transition: background .14s ease, color .14s ease, transform .1s ease;
+}
+.chip:hover { background: #ffffff; }
+.chip:active { transform: scale(.96); }
+.chip .emoji { font-size: 12px; line-height: 12px; }
+.chip .count { opacity: .6; }
+.chip[aria-pressed="true"] { background: #1d1813; color: #f4e9da; }
+.chip[aria-pressed="true"] .count { opacity: .6; }
+
+/* expanded filter panel (Figma 44:1422): bordered box, 24px padding; Dia
+   (natural width) + Preço (fills the rest) side by side, 24px gap; each group
+   = red label + chip row. Wraps to stacked groups on narrow screens. */
+.filter-panel {
+  padding: 24px; background: transparent;
+  border: 1px solid #ccc7bb; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 24px;
+}
+.filter-day { flex: none; }
+.filter-price { flex: 1 0 0; min-width: 0; }
+.filter-group { display: flex; flex-direction: column; gap: 12px; }
+/* groups are <fieldset><legend> now (forms skill); legend styled like the old h3 */
+.filter-group h3, .filter-group legend {
+  margin: 0; padding: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--accent);
+}
+
+/* count line (Figma 19:264): Space Mono Bold 12/12 ls 1px uppercase #6f6f6f,
+   16px below the divider, 64px before the first section. */
+.result-meta { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 16px 0 64px; }
+#result-count, #active-filters {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+}
+#active-filters { font-weight: 400; }
+
+/* ---------- topic sections (Figma 19:292 — 1:1) ----------
+   Header: 42px emoji · 16px gap · red count kicker SM Bold 12/12 ls 1px ·
+   title Fraunces SemiBold 24/32 (WONK 1). 16px gap to body; body = dashed
+   divider + 24px gap + 2-col grid (24px gaps). 64px between sections. */
+.topic-section { display: flex; flex-direction: column; gap: 24px; margin: 0 0 64px; }
+.topic-head { display: flex; align-items: center; }
+.topic-head-text { display: flex; flex-direction: column; gap: 4px; }
+.topic-kicker {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
+  letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f;
+}
+.topic-head h2 {
+  margin: 0; font-family: var(--mono); font-weight: 700; font-size: 18px; line-height: 24px;
+  letter-spacing: 1px; text-transform: uppercase; color: #1d1813;
+}
+.topic-head h2 .amp { font-size: 15px; }
+
+/* event card (Figma 19:2074 v2 — 1:1): one column, 16px between cards.
+   #fefefe r4, 24px padding, 24px gaps, shadow 0 22px 25px -8px rgba(22,22,22,.04).
+   Square artwork (r2) · body (title row + desc + badges) · dashed divider ·
+   date column on the RIGHT. Title Familjen SemiBold 18/24 underlined; venue
+   pin + SM Bold Italic 12/16 underlined; desc Familjen 16/24 one-line; topic
+   badge filled #6f6f6f, others outlined, all r4. */
+.cards { display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  background: #fefefe; border: 0; border-radius: 4px; padding: 24px;
+  display: flex; align-items: center; gap: 24px;
+  box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
+  /* skip layout/paint for off-screen cards — keeps big result sets responsive */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 124px;
+}
+/* Square artwork. The side is anchored to the body's natural height (96px:
+   title 24 + 8 + venue 16 = 48, +24 gap, +24 tags) rather than to a stretched
+   parent — aspect-ratio off a stretched flex height resolves the WIDTH too late,
+   so the square overflowed its wrapper and slid under the title. */
+.card-media { flex: none; display: flex; align-items: center; }
+.card-img {
+  height: 96px; width: 96px; flex: none;
+  border-radius: 2px; overflow: hidden; background: #f0e8dc;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-img.ph { font-size: 40px; line-height: 1; }
+/* fixed 72px so the date column never resizes between "SEG 8" and "EM CURSO" */
+.card .when { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 72px; flex: none; text-align: center; }
+.when .day { font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f; }
+.when .date { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 1px; color: #1d1813; font-variation-settings: "SOFT" 0, "WONK" 1; }
+.when .date-mon { font-family: var(--mono); font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; vertical-align: middle; }
+.when .time, .when .ongoing { font-family: var(--mono); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
+.card-divider { width: 1px; align-self: stretch; flex: none; background-image: repeating-linear-gradient(to bottom, #ccc7bb 0 4px, transparent 4px 8px); }
+.card .body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.card-toprow { display: flex; gap: 8px; align-items: flex-start; width: 100%; }
+.card .card-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.card .body h3 {
+  margin: 0; font-family: var(--grotesk); font-weight: 600; font-size: 18px; line-height: 24px;
+  letter-spacing: 1px; color: #1d1813; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card .body h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color .14s ease; }
+.card .body h3 .no-link { color: inherit; text-decoration: none; }
+.card .body h3 a:hover { color: var(--accent); }
+/* venue is one link (pin + text); both tint together on hover via currentColor */
+.venue-line {
+  display: inline-flex; gap: 4px; align-items: center; min-width: 0; max-width: 100%;
+  color: #6f6f6f; text-decoration: none;
+  font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; transition: color .14s ease;
+}
+.venue-line svg { flex: none; }
+.venue-line span {
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.venue-line:hover { color: var(--accent); }
+.save-date {
+  flex: none; display: inline-flex; gap: 8px; align-items: center;
+  padding: 8px 12px 8px 8px; border: 1px solid #6f6f6f; border-radius: 4px;
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; text-decoration: none;
+  transition: color .14s ease, border-color .14s ease, transform .1s ease;
+}
+.save-date:hover { color: #1d1813; border-color: #1d1813; }
+.save-date:active { transform: scale(.98); }
+.meta-line { margin: 0; font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+/* tags (Figma v2): neutral = faint grey fill + faint border; GRÁTIS stays orange outline */
+.badge {
+  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+  background: rgba(111, 111, 111, .08); border: 1px solid rgba(111, 111, 111, .16);
+  border-radius: 4px; padding: 3px 7px; /* +1px border = the design's 4/8 insets; tag 24px tall */
+}
+.badge.free { color: #ff3d1f; border-color: #ff3d1f; background: transparent; } /* user call: keep Grátis highlighted */
+
+/* stamp box (READ ME / NOTE style) */
+.stamp { display: inline-block; font-family: var(--mono); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border: 1.5px dashed var(--accent); padding: 6px 9px; }
+
+.empty { text-align: center; padding: 70px 16px; color: var(--ink-soft); font-style: italic; font-size: 1.1rem; }
+.empty .btn { margin-top: 16px; }
+
+/* ---------- motion: one coordinated top-to-bottom reveal ----------
+   Nothing animates on its own trigger. Every block carries .rv (hidden), and a
+   single pass (revealPage in app.js) walks them in document order — top to
+   bottom — assigning a growing delay, then flips body.revealed so they rise in
+   together as one wave. The skeleton holds the layout so the wave looks complete;
+   real content then fades in inside the already-placed, height-stable blocks.
+   Disabled under prefers-reduced-motion (the global rule ends each at opacity 1). */
+/* Transition-based (not animation): the revealed state is a real cascade value
+   (opacity 1), so even if the browser pauses animations — background tab, etc. —
+   the content is still shown. The transition only enhances the entrance. */
+/* fade only (no slide) — concise, and nothing shifts (the topbar can't expose
+   the page edge). Staggered top-to-bottom via --d. */
+html.js .rv { opacity: 0; transition: opacity .7s ease; transition-delay: var(--d, 0ms); }
+html.js body.revealed .rv { opacity: 1; }
+
+/* event cards enter one by one (JS staggers them) — fade + a small rise so each
+   card's arrival is clearly visible, not a subtle crossfade */
+@keyframes card-in { from { opacity: 0; transform: translateY(12px); } }
+html.js .card-rv { animation: card-in .45s cubic-bezier(.2, .7, .3, 1) both; animation-delay: var(--d, 0ms); }
+
+/* skeleton — built from the REAL .card structure (see skeletonCard in app.js),
+   so the placeholder matches the layout exactly. Fades in, then fades into the
+   real cards. */
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.skeleton { display: flex; flex-direction: column; gap: 24px; transition: opacity .4s ease; }
+.sk-head { display: flex; flex-direction: column; gap: 8px; }
+.sk-bar { display: block; border-radius: 4px; background: linear-gradient(90deg, #eae3d6 25%, #f4efe6 50%, #eae3d6 75%); background-size: 200% 100%; animation: shimmer 1.6s ease-in-out infinite; }
+.sk-chip { display: inline-block; height: 28px; flex: none; border-radius: 4px; }
+.card.is-skeleton .card-img { background: none; } /* the sk-bar gradient shows through */
+.card.is-skeleton .card-text { gap: 12px; }
+
+/* filter panel: collapse animates HEIGHT (0fr↔1fr) so the chips + page below
+   slide instead of jumping. The 24px gap above the panel sits inside the
+   clipped track, so nothing lingers when closed. */
+.filter-collapse {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .32s cubic-bezier(.2, .7, .3, 1), opacity .28s ease;
+  opacity: 0;
+}
+.filter-collapse.open { grid-template-rows: 1fr; opacity: 1; }
+.filter-collapse-inner { overflow: hidden; min-height: 0; }
+.filter-collapse .filter-panel { margin-top: 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-delay: 0ms !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+/* ---------- footer (Figma 19:253 — 1:1) ----------
+   Solid divider above; 24px vertical padding; Space Mono Bold 12/16,
+   ls .896px, uppercase, #6f6f6f; "Nucabé" in ink. */
+.site-footer { margin: 0; padding: 0; border: 0; }
+.footer-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 24px 0; }
+.footer-credit, #footer-stats {
+  margin: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
+  letter-spacing: .896px; text-transform: uppercase; color: #6f6f6f; white-space: nowrap;
+}
+.footer-credit span { color: #1d1813; }
+/* the stats line is long ("N eventos · N fontes · atualizado a …"); nowrap forced
+   it past a phone's width and made the whole page horizontally scrollable. Let it
+   wrap on narrow screens (stays one line on desktop, where there's room). */
+#footer-stats { white-space: normal; }
+
+/* small screens (Figma 42:1202 — 1:1): card becomes a column — full-width
+   banner image on top, then button, title, venue, tags; horizontal dashed
+   divider; date row (qua · 10 · hora) centered at the bottom. */
+@media (max-width: 640px) {
+  .wrap { padding-inline: 24px; } /* tighter side padding on small screens */
+  /* filter groups stack full-width so the day chips wrap instead of overflowing */
+  .filter-day, .filter-price { flex: 1 0 100%; }
+  .card { flex-direction: column; align-items: stretch; gap: 24px; padding: 24px; }
+  .card-media { width: 100%; }
+  .card-img { width: 100%; height: 150px; max-height: 200px; }
+  .card .body { gap: 24px; min-width: 0; }
+  /* stretch (not flex-start) so the text column gets the card width and the
+     title/venue truncate with an ellipsis instead of overflowing the card */
+  .card-toprow { flex-direction: column-reverse; gap: 16px; align-items: stretch; min-width: 0; }
+  .save-date { align-self: flex-start; }
+  .card .card-text { gap: 16px; width: 100%; min-width: 0; }
+  .card-divider {
+    width: 100%; height: 1px; align-self: stretch;
+    background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
+  }
+  /* small card date (Figma 42:1198): big number left (40px), day over time
+     stacked to its right */
+  .card .when {
+    display: grid; width: 100%;
+    grid-template-columns: auto auto; grid-template-areas: "date day" "date time";
+    column-gap: 12px; row-gap: 4px; align-items: center; justify-content: center;
+  }
+  .card .when .date { grid-area: date; font-size: 40px; line-height: 48px; align-self: center; }
+  .card .when .date-mon { font-size: 12px; }
+  .card .when .day { grid-area: day; align-self: end; text-align: left; }
+  .card .when .time, .card .when .ongoing { grid-area: time; align-self: start; text-align: left; }
+
+  /* footer: stack credit and stats so each spans the full width and wraps to a
+     second line if too long, instead of sitting side by side and forcing the
+     page wider than the screen */
+  .footer-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .footer-credit, #footer-stats { width: 100%; }
+}
+@media (max-width: 540px) {
+  .masthead { flex-wrap: wrap; gap: 12px; }
+}
