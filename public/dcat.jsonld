@@ -5,9 +5,8 @@
     "foaf": "http://xmlns.com/foaf/0.1/"
   },
   "@type": "dcat:Dataset",
-  "@id": "https://sergioramos.github.io/pregoeiro/dcat.jsonld#dataset",
-  "dct:title": "Pregoeiro — Esta Semana em Leiria",
-  "dct:description": "Weekly open dataset of cultural events in Leiria (schema.org/Event, JSON-LD).",
+  "@id": "https://agenda.leiria.cool/dcat.jsonld#dataset",
+  "dct:description": "Open dataset of cultural events in Leiria (schema.org/Event, JSON-LD).",
   "dct:license": {
     "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
   },
@@ -18,18 +17,18 @@
     "foaf:name": "Sérgio Ramos"
   },
   "dcat:landingPage": {
-    "@id": "https://sergioramos.github.io/pregoeiro/"
+    "@id": "https://agenda.leiria.cool/"
   },
   "dcat:distribution": [
     {
       "@type": "dcat:Distribution",
-      "@id": "https://sergioramos.github.io/pregoeiro/data.jsonld",
+      "@id": "https://agenda.leiria.cool/data.jsonld",
       "dct:title": "JSON-LD (schema.org/Event)",
       "dcat:accessURL": {
-        "@id": "https://sergioramos.github.io/pregoeiro/data.jsonld"
+        "@id": "https://agenda.leiria.cool/data.jsonld"
       },
       "dcat:downloadURL": {
-        "@id": "https://sergioramos.github.io/pregoeiro/data.jsonld"
+        "@id": "https://agenda.leiria.cool/data.jsonld"
       },
       "dcat:mediaType": "application/ld+json",
       "dct:format": "JSON-LD",

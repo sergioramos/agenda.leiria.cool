@@ -21,7 +21,7 @@ import { dirname, resolve } from 'node:path';
 import assert from 'node:assert/strict';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const BASE = (process.env.BASE_URL || 'https://sergioramos.github.io/pregoeiro/').replace(/\/*$/, '/');
+const BASE = (process.env.BASE_URL || 'https://agenda.leiria.cool/').replace(/\/*$/, '/');
 const LICENSE = 'https://opendatacommons.org/licenses/odbl/1-0/';
 
 const src = JSON.parse(readFileSync(resolve(ROOT, 'data/mock.json'), 'utf8'));
@@ -101,9 +101,8 @@ const dataset = {
   '@context': { '@vocab': 'https://schema.org/', plx: `${BASE}ns#` },
   '@type': 'Dataset',
   '@id': `${BASE}data.jsonld`,
-  name: 'Pregoeiro — eventos desta semana em Leiria',
-  description:
-    'Dataset semanal aberto dos eventos culturais de Leiria, como schema.org/Event em JSON-LD. Campos de domínio (tema, categorias, dias, em curso) no namespace plx:.',
+  // name: '',
+  description: 'Dataset aberto dos eventos culturais de Leiria, como schema.org/Event em JSON-LD. Campos de domínio (tema, categorias, dias, em curso) no namespace plx:.',
   url: BASE,
   license: LICENSE,
   creator: { '@type': 'Organization', name: 'Sérgio Ramos' },
@@ -116,9 +115,9 @@ const dataset = {
 };
 
 const datapackage = {
-  name: 'pregoeiro',
-  title: 'Pregoeiro — Esta Semana em Leiria',
-  description: 'Weekly open dataset of cultural events in Leiria, published as schema.org/Event in JSON-LD.',
+  name: 'agenda.leiria.cool',
+  // title: 'Esta Semana em Leiria',
+  description: 'Open dataset of cultural events in Leiria, published as schema.org/Event in JSON-LD.',
   homepage: BASE,
   version: weekMeta.generated_at,
   licenses: [{ name: 'ODbL-1.0', title: 'Open Database License v1.0', path: LICENSE }],
@@ -142,8 +141,8 @@ const dcat = {
   },
   '@type': 'dcat:Dataset',
   '@id': `${BASE}dcat.jsonld#dataset`,
-  'dct:title': 'Pregoeiro — Esta Semana em Leiria',
-  'dct:description': 'Weekly open dataset of cultural events in Leiria (schema.org/Event, JSON-LD).',
+  // 'dct:title': 'Esta Semana em Leiria',
+  'dct:description': 'Open dataset of cultural events in Leiria (schema.org/Event, JSON-LD).',
   'dct:license': { '@id': LICENSE },
   'dct:modified': weekMeta.generated_at,
   'dct:temporal': `${weekMeta.week_start}/${weekMeta.week_end}`,
