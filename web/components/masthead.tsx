@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 export default function Masthead({ rv = false, children }: { rv?: boolean; children?: ReactNode }) {
   return (
     <div className={rv ? 'masthead rv' : 'masthead'}>
-      <img className="brand-logo" src="/assets/logo.svg" alt="Pregoeiro" width={153} height={40} />
+      <span className="brand-logo" />
       {children}
     </div>
   );
