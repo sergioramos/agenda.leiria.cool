@@ -5,7 +5,7 @@
   "scripts": {
     "data": "node scripts/build-open-data.mjs",
     "dev": "vite",
-    "build": "rm -rf docs/assets docs/index.html && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
