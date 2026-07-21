@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/"
+  },
+  "@type": "dcat:Dataset",
+  "@id": "https://sergioramos.github.io/pregoeiro/dcat.jsonld#dataset",
+  "dct:title": "Pregoeiro — Esta Semana em Leiria",
+  "dct:description": "Weekly open dataset of cultural events in Leiria (schema.org/Event, JSON-LD).",
+  "dct:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+  },
+  "dct:modified": "2026-07-21T12:29:55Z",
+  "dct:temporal": "2020-10-23/2026-08-02",
+  "dct:publisher": {
+    "@type": "foaf:Agent",
+    "foaf:name": "Sérgio Ramos"
+  },
+  "dcat:landingPage": {
+    "@id": "https://sergioramos.github.io/pregoeiro/"
+  },
+  "dcat:distribution": [
+    {
+      "@type": "dcat:Distribution",
+      "@id": "https://sergioramos.github.io/pregoeiro/data.jsonld",
+      "dct:title": "JSON-LD (schema.org/Event)",
+      "dcat:accessURL": {
+        "@id": "https://sergioramos.github.io/pregoeiro/data.jsonld"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://sergioramos.github.io/pregoeiro/data.jsonld"
+      },
+      "dcat:mediaType": "application/ld+json",
+      "dct:format": "JSON-LD",
+      "dct:license": {
+        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+      }
+    }
+  ]
+}

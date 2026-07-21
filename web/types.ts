@@ -1,6 +1,7 @@
 // Shared data shapes for the UI. Interfaces/type aliases only — inherently
 // erasable, so they satisfy Node's type stripping (erasableSyntaxOnly). The UI
-// reads a single static fixture, web/public/mock.json (the `Mock` shape).
+// fetches public/data.jsonld (JSON-LD) and adapts it to the `Mock` shape — see
+// web/lib/jsonld.ts.
 
 export type DayCode = 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun';
 
@@ -58,13 +59,12 @@ export interface Week {
   week_start: string;
   week_end: string;
   generated_at: string;
-  is_sample?: boolean;
   source_count: number;
   event_count: number;
   events: EventItem[];
 }
 
-// The single static fixture the UI fetches (web/public/mock.json).
+// The internal shape the UI works with, produced by adapting public/data.jsonld.
 export interface Mock {
   taxonomy: Taxonomy;
   week: Week;

@@ -8,11 +8,11 @@ import { CalendarIcon, PinIcon } from './icons';
 // for a generic/unnamed venue (city-wide events, "TBA", "Secret Location"),
 // exact coordinates beat a name search; otherwise the name shows the place card
 function mapsUrl(ev: EventItem): string {
-  const generic = !ev.venue || /^(lisboa|tba|secret|local)/i.test(ev.venue);
+  const generic = !ev.venue || /^(Leiria|tba|secret|local)/i.test(ev.venue);
   if (generic && ev.lat != null && ev.lng != null) {
     return 'https://www.google.com/maps/search/?api=1&query=' + ev.lat + ',' + ev.lng;
   }
-  const q = [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', ');
+  const q = [ev.venue, ev.neighbourhood, 'Leiria'].filter(Boolean).join(', ');
   return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
 }
 
@@ -34,7 +34,7 @@ function gcalUrl(ev: EventItem): string {
     text: ev.title,
     dates,
     details: ev.url || '',
-    location: [ev.venue, ev.neighbourhood, 'Lisboa'].filter(Boolean).join(', '),
+    location: [ev.venue, ev.neighbourhood, 'Leiria'].filter(Boolean).join(', '),
     ctz: 'Europe/Lisbon',
   });
   return 'https://calendar.google.com/calendar/render?' + p.toString();

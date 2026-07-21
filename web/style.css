@@ -1,18 +1,19 @@
-/* Lisbon Events — "file dossier / editorial print" system
-   Modelled on 3 Hole Punch Media / Nuvio: warm paper, serif display (Fraunces),
-   serif body (Newsreader), monospace labels (Space Mono), vermilion accent,
-   dashed rules and rubber-stamp motifs. Light only. */
+/* Leiria Events — "file dossier / editorial print" system on the Câmara
+   Municipal de Leiria brand palette: white cards on brand light-grey (#E6E6E6),
+   neutral near-black ink, single Leiria red (#EA1C23) accent, monospace labels,
+   dashed rules and rubber-stamp motifs. Light only. All colour via tokens. */
 
 :root {
-  --bg: #f0e8dc;            /* warm paper */
+  --bg: #e6e6e6;            /* brand light grey — page */
   --surface: #ffffff;       /* white cards */
-  --surface-soft: #faf6ee;  /* checklist-row fill */
-  --ink: #1d1813;           /* warm near-black */
-  --ink-soft: #6f6555;
-  --line: #ddd3c2;          /* warm hairline */
-  --line-strong: #c8bca6;
-  --accent: #ff3d1f;        /* vermilion (Figma) */
-  --accent-deep: #e02f12;
+  --surface-soft: #f4f4f4;  /* soft neutral fill (rows, chips) */
+  --ink: #1a1a1a;           /* soft neutral near-black */
+  --ink-soft: #656565;      /* muted grey — AA (4.5:1) on both the grey page and white cards */
+  --ink-inverse: #ffffff;   /* text on ink/dark fills */
+  --line: #d6d6d6;          /* hairline */
+  --line-strong: #c2c2c2;   /* dashed rules / stronger hairline */
+  --accent: #ea1c23;        /* Leiria red */
+  --accent-deep: #c8161c;   /* darker red — hover / small red text */
   --accent-ink: #ffffff;
   --r: 0; --r-sm: 0;        /* squared corners everywhere */
   --maxw: 1000px;           /* content cap (Figma Main Container) */
@@ -22,9 +23,11 @@
   --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --grotesk: -apple-system, "Segoe UI", Roboto, sans-serif;
 }
+
 html[data-theme="dark"] {
-  --bg: #181410; --surface: #221d17; --surface-soft: #1f1a14; --ink: #f1e8da;
-  --ink-soft: #a99c86; --line: #3a3225; --line-strong: #4a4030; --accent: #f0664b;
+  --bg: #141414; --surface: #1e1e1e; --surface-soft: #191919;
+  --ink: #ededed; --ink-soft: #a0a0a0; --ink-inverse: #141414;
+  --line: #333; --line-strong: #444; --accent: #f04a50; --accent-deep: #d0272e;
 }
 
 * { box-sizing: border-box; }
@@ -36,7 +39,7 @@ html { color-scheme: light; }
 /* skip link (accessibility skill): first tab stop, jumps to <main> */
 .skip-link {
   position: absolute; inset-inline-start: 8px; inset-block-start: -48px; z-index: 9999;
-  background: #1d1813; color: #f4e9da; padding: 10px 14px; border-radius: 4px;
+  background: var(--ink); color: var(--ink-inverse); padding: 10px 14px; border-radius: 4px;
   font-family: var(--mono); font-weight: 700; font-size: 12px; letter-spacing: 1px;
   text-transform: uppercase; text-decoration: none;
 }
@@ -56,46 +59,26 @@ body::after {
 .muted { color: var(--ink-soft); }
 em, i { font-style: italic; }
 a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--line-strong); }
-a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+a:hover { color: var(--accent-deep); text-decoration-color: var(--accent); }
 
 /* ---------- type helpers ---------- */
 .kicker, .mono {
   font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
 }
-.kicker { color: var(--accent); font-weight: 700; }
+.kicker { color: var(--accent-deep); font-weight: 700; }
 .mono { color: var(--ink-soft); }
 /* divider (Figma stroke: 1px dashed #CCC7BB, dash 4 / gap 4) */
 .rule-dashed {
   border: 0; margin: 0; height: 1px;
-  background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
+  background-image: repeating-linear-gradient(to right, var(--line-strong) 0 4px, transparent 4px 8px);
 }
-/* solid divider (hero→events, above footer): 1px #ccc7bb */
-.rule-solid { border: 0; margin: 0; height: 1px; background: #ccc7bb; }
-
-/* ---------- top announcement bar (Figma 19:2073/19:2604/19:2606 — 1:1) ----------
-   Bar #1d1813 · Space Mono Bold 12px/16px · letter-spacing 1px · uppercase ·
-   white · padding 16px vertical · continuous marquee · 4px #ff3d1f rule below. */
-.topbar { background: #1d1813; overflow: hidden; padding: 16px 0; }
-.ticker-track {
-  display: flex; width: max-content; min-height: 16px; will-change: transform;
-  animation: ticker-scroll var(--ticker-duration, 40s) linear infinite;
-}
-.ticker-half { display: flex; flex: none; }
-.ticker-item {
-  flex: none; white-space: nowrap;
-  font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
-  letter-spacing: 1px; text-transform: uppercase; color: #ffffff;
-  padding-right: 48px; /* gap between repeats */
-}
-.ticker-item .ticker-status.accent { color: #ff3d1f; }
-.topbar-rule { height: 4px; background: #ff3d1f; }
-@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+/* solid divider (hero→events, above footer): 1px var(--line-strong) */
+.rule-solid { border: 0; margin: 0; height: 1px; background: var(--line-strong); }
 
 /* ---------- header (Figma 4:33 — 1:1) ----------
    72px tall: 16px vertical padding · logo 153×40 left · week control right.
-   Week control: "SEMANA" chip on #1d1813 with #f4e9da text + value box with
-   1px #1d1813 border; both Space Mono Bold 12px/12px, ls 1px, 12px padding;
+   Week control: "SEMANA" chip on var(--ink) with var(--ink-inverse) text + value box with
+   1px var(--ink) border; both Space Mono Bold 12px/12px, ls 1px, 12px padding;
    4px radius on the outer corners only (per design). */
 .site-header { background: var(--bg); }
 .masthead { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 16px 0; }
@@ -108,31 +91,39 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 }
 .week-control-label {
   display: flex; align-items: center; justify-content: center;
-  background: #1d1813; color: #f4e9da; border-radius: 4px 0 0 4px;
+  background: var(--ink); color: var(--ink-inverse); border-radius: 4px 0 0 4px;
 }
 .week-control-value {
   display: flex; align-items: center; justify-content: center;
-  color: #1d1813; border: 1.5px solid #1d1813; border-radius: 0 4px 4px 0;
+  color: var(--ink); border: 1.5px solid var(--ink); border-left: none; border-right: none;
   padding: 10.5px; /* 10.5px + 1.5px border = the design's 12px inset; total height 36px like the label */
 }
+.week-nav {
+  font-family: var(--mono); font-weight: 700; font-size: 15px; line-height: 12px;
+  padding: 0 11px; border: 1.5px solid var(--ink); background: var(--ink-inverse); color: var(--ink);
+  cursor: pointer;
+}
+.week-nav:last-child { border-radius: 0 4px 4px 0; }
+.week-nav:hover:not(:disabled) { background: var(--ink); color: var(--ink-inverse); }
+.week-nav:disabled { opacity: 0.4; cursor: default; }
 
 /* ---------- hero (Figma 1:246 — 1:1) ----------
    48px vertical padding · 48px gap between text and controls · text column
    max 700px with 16px gap · Fraunces Light 80/88 −3px (WONK 1) title with
-   italic #ff3d1f emphasis · Familjen Grotesk 18/24 #3a3a3a description. */
+   italic var(--accent) emphasis · Familjen Grotesk 18/24 var(--ink) description. */
 .hero { display: flex; flex-direction: column; gap: 48px; padding: 48px 0; }
 .hero-text { display: flex; flex-direction: column; gap: 16px; max-width: 700px; }
 .hero-eyebrow {
   margin: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
-  letter-spacing: 2px; text-transform: uppercase; color: #ff3d1f;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--accent-deep);
 }
 .hero-title {
   margin: 0; font-family: var(--display); font-weight: 300; font-optical-sizing: auto;
-  font-size: 80px; line-height: 88px; letter-spacing: -3px; color: #1d1813;
+  font-size: 80px; line-height: 88px; letter-spacing: -3px; color: var(--ink);
   font-variation-settings: "SOFT" 0, "WONK" 1;
 }
-.hero-title em { font-style: italic; font-weight: 400; color: #ff3d1f; }
-.hero-sub { margin: 0; font-family: var(--grotesk); font-weight: 400; font-size: 18px; line-height: 24px; color: #3a3a3a; }
+.hero-title em { font-style: italic; font-weight: 400; color: var(--accent); } /* 80px large text — brand red, meets 3:1 */
+.hero-sub { margin: 0; font-family: var(--grotesk); font-weight: 400; font-size: 18px; line-height: 24px; color: var(--ink); }
 /* no flex gap here — spacing lives on the chips + the panel (inside the
    collapsible track) so the filter panel can animate its height without a
    stray gap lingering when it's closed */
@@ -149,30 +140,30 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
   letter-spacing: 1px; text-transform: uppercase; cursor: pointer; text-decoration: none;
-  color: #1d1813; background: transparent; border: 1.5px solid #1d1813; border-radius: 4px;
+  color: var(--ink); background: transparent; border: 1.5px solid var(--ink); border-radius: 4px;
   padding: 10.5px 16px; /* +1.5px border = 36px tall */
   transition: background .12s, color .12s, border-color .12s;
 }
-.btn:hover { background: #1d1813; color: #f4e9da; }
-.btn.primary { background: #1d1813; border-color: #1d1813; color: #f4e9da; }
+.btn:hover { background: var(--ink); color: var(--ink-inverse); }
+.btn.primary { background: var(--ink); border-color: var(--ink); color: var(--ink-inverse); }
 .btn.primary:hover { background: #000; border-color: #000; }
-.btn.accent { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .btn.accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
-.btn.ghost { border-color: #ccc7bb; }
-.btn.ghost:hover { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn.ghost { border-color: var(--line-strong); }
+.btn.ghost:hover { background: transparent; color: var(--accent-deep); border-color: var(--accent); }
 .btn.btn-sm { padding: 7px 10px; border-width: 1px; } /* 28px, for list rows */
 .btn:disabled { opacity: .4; cursor: default; pointer-events: none; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ---------- controls ---------- */
 .controls { padding: 0; }
-/* search row (Figma 1:1810): 8px gap; bar #fefefe r4 with layered drop shadow,
+/* search row (Figma 1:1810): 8px gap; bar var(--surface) r4 with layered drop shadow,
    18px left / 24px right / 16px vertical padding, 12px gap, 20px tabler icon;
-   Filtros button 56px tall, 1.5px #1d1813 border, Space Mono Bold 12/16 ls 2px. */
+   Filtros button 56px tall, 1.5px var(--ink) border, Space Mono Bold 12/16 ls 2px. */
 .searchbar { display: flex; gap: 8px; align-items: flex-start; }
 .search-box {
   flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px;
-  background: #fefefe; border-radius: 4px; padding: 16px 24px 16px 18px; cursor: text;
+  background: var(--surface); border-radius: 4px; padding: 16px 24px 16px 18px; cursor: text;
   box-shadow: 0 22px 50px -28px rgba(22, 22, 22, .25), 0 4px 12px -6px rgba(22, 22, 22, .08);
 }
 .search-box:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -181,35 +172,35 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   flex: 1; min-width: 0; border: 0; background: transparent; padding: 0;
   font-family: var(--grotesk); font-size: 18px; line-height: 24px; color: var(--ink);
 }
-.search-box input::placeholder { color: #6f6f6f; font-style: italic; }
+.search-box input::placeholder { color: var(--ink-soft); font-style: italic; }
 .search-box input:focus { outline: none; }
 .filters-btn {
   display: flex; align-items: center; gap: 8px; height: 56px; flex: none;
   padding: 0 14.5px; /* +1.5px border = the design's 16px insets */
-  background: transparent; border: 1.5px solid #1d1813; border-radius: 4px; cursor: pointer;
+  background: transparent; border: 1.5px solid var(--ink); border-radius: 4px; cursor: pointer;
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
-  letter-spacing: 1px; text-transform: uppercase; color: #1d1813;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--ink);
   transition: background .14s ease, color .14s ease, transform .1s ease;
 }
 .filters-btn:hover { background: rgba(29, 24, 19, .05); }
 .filters-btn:active { transform: scale(.98); }
 .filters-btn .filt-sign { font-size: 12px; line-height: 12px; display: inline-block; }
 
-/* category chips (Figma 2:1848): #fdfdfd, r4, 8px padding + 8px gaps,
-   Space Mono Bold 12px/12px ls 1px uppercase #1d1813, count at 60%. */
+/* category chips (Figma 2:1848): var(--surface-soft), r4, 8px padding + 8px gaps,
+   Space Mono Bold 12px/12px ls 1px uppercase var(--ink), count at 60%. */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
   letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
   display: inline-flex; align-items: center; gap: 8px; user-select: none;
-  background: #fdfdfd; color: #1d1813; border: 0; border-radius: 4px; padding: 8px;
+  background: var(--surface-soft); color: var(--ink); border: 0; border-radius: 4px; padding: 8px;
   transition: background .14s ease, color .14s ease, transform .1s ease;
 }
-.chip:hover { background: #ffffff; }
+.chip:hover { background: var(--surface); }
 .chip:active { transform: scale(.96); }
 .chip .emoji { font-size: 12px; line-height: 12px; }
 .chip .count { opacity: .6; }
-.chip[aria-pressed="true"] { background: #1d1813; color: #f4e9da; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--ink-inverse); }
 .chip[aria-pressed="true"] .count { opacity: .6; }
 
 /* expanded filter panel (Figma 44:1422): bordered box, 24px padding; Dia
@@ -217,7 +208,7 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
    = red label + chip row. Wraps to stacked groups on narrow screens. */
 .filter-panel {
   padding: 24px; background: transparent;
-  border: 1px solid #ccc7bb; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 24px;
+  border: 1px solid var(--line-strong); border-radius: 4px; display: flex; flex-wrap: wrap; gap: 24px;
 }
 .filter-day { flex: none; }
 .filter-price { flex: 1 0 0; min-width: 0; }
@@ -225,15 +216,15 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 /* groups are <fieldset><legend> now (forms skill); legend styled like the old h3 */
 .filter-group h3, .filter-group legend {
   margin: 0; padding: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
-  letter-spacing: 1px; text-transform: uppercase; color: var(--accent);
+  letter-spacing: 1px; text-transform: uppercase; color: var(--accent-deep);
 }
 
-/* count line (Figma 19:264): Space Mono Bold 12/12 ls 1px uppercase #6f6f6f,
+/* count line (Figma 19:264): Space Mono Bold 12/12 ls 1px uppercase var(--ink-soft),
    16px below the divider, 64px before the first section. */
 .result-meta { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 16px 0 64px; }
 #result-count, #active-filters {
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
-  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft);
 }
 #active-filters { font-weight: 400; }
 
@@ -246,24 +237,24 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .topic-head-text { display: flex; flex-direction: column; gap: 4px; }
 .topic-kicker {
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px;
-  letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--accent-deep);
 }
 .topic-head h2 {
   margin: 0; font-family: var(--mono); font-weight: 700; font-size: 18px; line-height: 24px;
-  letter-spacing: 1px; text-transform: uppercase; color: #1d1813;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--ink);
 }
 .topic-head h2 .amp { font-size: 15px; }
 
 /* event card (Figma 19:2074 v2 — 1:1): one column, 16px between cards.
-   #fefefe r4, 24px padding, 24px gaps, shadow 0 22px 25px -8px rgba(22,22,22,.04).
+   var(--surface) r4, 24px padding, 24px gaps, shadow 0 22px 25px -8px rgba(22,22,22,.04).
    Square artwork (r2) · body (title row + desc + badges) · dashed divider ·
    date column on the RIGHT. Title Familjen SemiBold 18/24 underlined; venue
    pin + SM Bold Italic 12/16 underlined; desc Familjen 16/24 one-line; topic
-   badge filled #6f6f6f, others outlined, all r4. */
+   badge filled var(--ink-soft), others outlined, all r4. */
 .cards { display: flex; flex-direction: column; gap: 16px; }
 
 .card {
-  background: #fefefe; border: 0; border-radius: 4px; padding: 24px;
+  background: var(--surface); border: 0; border-radius: 4px; padding: 24px;
   display: flex; align-items: center; gap: 24px;
   box-shadow: 0 22px 25px -8px rgba(22, 22, 22, .04);
   /* skip layout/paint for off-screen cards — keeps big result sets responsive */
@@ -277,32 +268,32 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .card-media { flex: none; display: flex; align-items: center; }
 .card-img {
   height: 96px; width: 96px; flex: none;
-  border-radius: 2px; overflow: hidden; background: #f0e8dc;
+  border-radius: 2px; overflow: hidden; background: var(--bg);
   display: flex; align-items: center; justify-content: center;
 }
 .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card-img.ph { font-size: 40px; line-height: 1; }
 /* fixed 72px so the date column never resizes between "SEG 8" and "EM CURSO" */
 .card .when { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 72px; flex: none; text-align: center; }
-.when .day { font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-transform: uppercase; color: #ff3d1f; }
-.when .date { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 1px; color: #1d1813; font-variation-settings: "SOFT" 0, "WONK" 1; }
+.when .day { font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-deep); }
+.when .date { font-family: var(--display); font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 1px; color: var(--ink); font-variation-settings: "SOFT" 0, "WONK" 1; }
 .when .date-mon { font-family: var(--mono); font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; vertical-align: middle; }
-.when .time, .when .ongoing { font-family: var(--mono); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
-.card-divider { width: 1px; align-self: stretch; flex: none; background-image: repeating-linear-gradient(to bottom, #ccc7bb 0 4px, transparent 4px 8px); }
+.when .time, .when .ongoing { font-family: var(--mono); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); }
+.card-divider { width: 1px; align-self: stretch; flex: none; background-image: repeating-linear-gradient(to bottom, var(--line-strong) 0 4px, transparent 4px 8px); }
 .card .body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 .card-toprow { display: flex; gap: 8px; align-items: flex-start; width: 100%; }
 .card .card-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
 .card .body h3 {
   margin: 0; font-family: var(--grotesk); font-weight: 600; font-size: 18px; line-height: 24px;
-  letter-spacing: 1px; color: #1d1813; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  letter-spacing: 1px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .card .body h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color .14s ease; }
 .card .body h3 .no-link { color: inherit; text-decoration: none; }
-.card .body h3 a:hover { color: var(--accent); }
+.card .body h3 a:hover { color: var(--accent-deep); }
 /* venue is one link (pin + text); both tint together on hover via currentColor */
 .venue-line {
   display: inline-flex; gap: 4px; align-items: center; min-width: 0; max-width: 100%;
-  color: #6f6f6f; text-decoration: none;
+  color: var(--ink-soft); text-decoration: none;
   font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px;
   letter-spacing: 1px; text-transform: uppercase; transition: color .14s ease;
 }
@@ -311,29 +302,29 @@ a:hover { color: var(--accent); text-decoration-color: var(--accent); }
   text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.venue-line:hover { color: var(--accent); }
+.venue-line:hover { color: var(--accent-deep); }
 .save-date {
   flex: none; display: inline-flex; gap: 8px; align-items: center;
-  padding: 8px 12px 8px 8px; border: 1px solid #6f6f6f; border-radius: 4px;
+  padding: 8px 12px 8px 8px; border: 1px solid var(--ink-soft); border-radius: 4px;
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
-  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; text-decoration: none;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); text-decoration: none;
   transition: color .14s ease, border-color .14s ease, transform .1s ease;
 }
-.save-date:hover { color: #1d1813; border-color: #1d1813; }
+.save-date:hover { color: var(--ink); border-color: var(--ink); }
 .save-date:active { transform: scale(.98); }
-.meta-line { margin: 0; font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f; }
+.meta-line { margin: 0; font-family: var(--mono); font-weight: 700; font-style: italic; font-size: 12px; line-height: 16px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 /* tags (Figma v2): neutral = faint grey fill + faint border; GRÁTIS stays orange outline */
 .badge {
   font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
-  letter-spacing: 1px; text-transform: uppercase; color: #6f6f6f;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft);
   background: rgba(111, 111, 111, .08); border: 1px solid rgba(111, 111, 111, .16);
   border-radius: 4px; padding: 3px 7px; /* +1px border = the design's 4/8 insets; tag 24px tall */
 }
-.badge.free { color: #ff3d1f; border-color: #ff3d1f; background: transparent; } /* user call: keep Grátis highlighted */
+.badge.free { color: var(--accent-deep); border-color: var(--accent); background: transparent; } /* user call: keep Grátis highlighted */
 
 /* stamp box (READ ME / NOTE style) */
-.stamp { display: inline-block; font-family: var(--mono); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border: 1.5px dashed var(--accent); padding: 6px 9px; }
+.stamp { display: inline-block; font-family: var(--mono); font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); border: 1.5px dashed var(--accent); padding: 6px 9px; }
 
 .empty { text-align: center; padding: 70px 16px; color: var(--ink-soft); font-style: italic; font-size: 1.1rem; }
 .empty .btn { margin-top: 16px; }
@@ -364,7 +355,7 @@ html.js .card-rv { animation: card-in .45s cubic-bezier(.2, .7, .3, 1) both; ani
 @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
 .skeleton { display: flex; flex-direction: column; gap: 24px; transition: opacity .4s ease; }
 .sk-head { display: flex; flex-direction: column; gap: 8px; }
-.sk-bar { display: block; border-radius: 4px; background: linear-gradient(90deg, #eae3d6 25%, #f4efe6 50%, #eae3d6 75%); background-size: 200% 100%; animation: shimmer 1.6s ease-in-out infinite; }
+.sk-bar { display: block; border-radius: 4px; background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%); background-size: 200% 100%; animation: shimmer 1.6s ease-in-out infinite; }
 .sk-chip { display: inline-block; height: 28px; flex: none; border-radius: 4px; }
 .card.is-skeleton .card-img { background: none; } /* the sk-bar gradient shows through */
 .card.is-skeleton .card-text { gap: 12px; }
@@ -390,14 +381,14 @@ html.js .card-rv { animation: card-in .45s cubic-bezier(.2, .7, .3, 1) both; ani
 
 /* ---------- footer (Figma 19:253 — 1:1) ----------
    Solid divider above; 24px vertical padding; Space Mono Bold 12/16,
-   ls .896px, uppercase, #6f6f6f; "Nucabé" in ink. */
+   ls .896px, uppercase, var(--ink-soft); "Sérgio Ramos" in ink. */
 .site-footer { margin: 0; padding: 0; border: 0; }
 .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 24px 0; }
 .footer-credit, #footer-stats {
   margin: 0; font-family: var(--mono); font-weight: 700; font-size: 12px; line-height: 16px;
-  letter-spacing: .896px; text-transform: uppercase; color: #6f6f6f; white-space: nowrap;
+  letter-spacing: .896px; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap;
 }
-.footer-credit span { color: #1d1813; }
+.footer-credit span { color: var(--ink); }
 /* the stats line is long ("N eventos · N fontes · atualizado a …"); nowrap forced
    it past a phone's width and made the whole page horizontally scrollable. Let it
    wrap on narrow screens (stays one line on desktop, where there's room). */
@@ -421,7 +412,7 @@ html.js .card-rv { animation: card-in .45s cubic-bezier(.2, .7, .3, 1) both; ani
   .card .card-text { gap: 16px; width: 100%; min-width: 0; }
   .card-divider {
     width: 100%; height: 1px; align-self: stretch;
-    background-image: repeating-linear-gradient(to right, #ccc7bb 0 4px, transparent 4px 8px);
+    background-image: repeating-linear-gradient(to right, var(--line-strong) 0 4px, transparent 4px 8px);
   }
   /* small card date (Figma 42:1198): big number left (40px), day over time
      stacked to its right */

@@ -1,9 +1,10 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import type { DayCode, EventItem, Filters, Mock, Taxonomy, Topic, Week } from './types';
+import type { DayCode, EventItem, Filters, Taxonomy, Topic, Week } from './types';
 import type { Day } from 'date-fns';
-import { addDays, format, isSameMonth, parseISO } from 'date-fns';
+import { addDays, format, isSameMonth, parseISO, startOfWeek } from 'date-fns';
 import { enUS, pt } from 'date-fns/locale';
 import { getJSON } from './lib/json';
+import { adaptDataset, type LdDataset } from './lib/jsonld';
 import { useHashFilters } from './hooks/use-hash-filters';
 import Masthead from './components/masthead';
 import Chip from './components/chip';
@@ -71,6 +72,9 @@ const EMPTY_FILTERS = (): Filters => ({
 export default function App() {
   const [taxonomy, setTaxonomy] = useState<Taxonomy | null>(null);
   const [week, setWeek] = useState<Week | null>(null);
+  // Monday of the week currently being viewed; the dataset spans years, so we
+  // window it one week at a time (‹ › nav in the masthead).
+  const [weekStart, setWeekStart] = useState<Date | null>(null);
   const [haystacks, setHaystacks] = useState<Map<string, string>>(new Map());
   const [error, setError] = useState<string | null>(null);
 
@@ -83,18 +87,40 @@ export default function App() {
     [taxonomy],
   );
 
-  // initial load: one static mock file (taxonomy + a single week of events)
+  // initial load: the open-data document (schema.org/Event JSON-LD), adapted
+  // back to the internal taxonomy + week shape the UI works with.
   useEffect(() => {
-    getJSON<Mock>('./mock.json')
+    getJSON<LdDataset>('./data.jsonld')
+      .then(adaptDataset)
       .then(({ taxonomy: tax, week: w }) => {
         setTaxonomy(tax);
         dropSharedImages(w.events);
         setHaystacks(buildHaystacks(w.events, tax));
-        setTicker(
-          w.is_sample
-            ? { text: '⚠ Dados de exemplo', accent: true }
-            : { text: 'Atualizado ' + format(parseISO(w.generated_at), 'dd/MM/yyyy'), accent: false },
-        );
+        // default to the real current week; if it has no events (stale crawl),
+        // snap to the week of the event nearest to today so the view isn't empty.
+        const today = startOfWeek(new Date(), { weekStartsOn: 1 });
+        const s = format(today, 'yyyy-MM-dd');
+        const e = format(addDays(today, 6), 'yyyy-MM-dd');
+        const hasThisWeek = w.events.some((ev) => {
+          const d = ev.start.slice(0, 10);
+          return d >= s && d <= e;
+        });
+        if (hasThisWeek) {
+          setWeekStart(today);
+        } else {
+          const now = Date.now();
+          let best = '';
+          let gap = Infinity;
+          for (const ev of w.events) {
+            const d = ev.start.slice(0, 10);
+            const g = Math.abs(parseISO(d).getTime() - now);
+            if (g < gap) {
+              gap = g;
+              best = d;
+            }
+          }
+          setWeekStart(startOfWeek(best ? parseISO(best) : new Date(), { weekStartsOn: 1 }));
+        }
         setWeek(w);
       })
       .catch((err: unknown) => setError(err instanceof Error ? err.message : String(err)));
@@ -137,15 +163,32 @@ export default function App() {
     setFilters(EMPTY_FILTERS());
   }
 
+  const weekStartISO = weekStart ? format(weekStart, 'yyyy-MM-dd') : null;
+
+  // events falling in the viewed week (before search/topic filters) — drives the
+  // topic-chip counts; `visible` then applies the active filters.
+  const weekEvents = useMemo(() => {
+    if (!week || !weekStartISO) return [];
+    const end = format(addDays(parseISO(weekStartISO), 6), 'yyyy-MM-dd');
+    return week.events.filter((ev) => {
+      const d = (ev.start || '').slice(0, 10);
+      return d >= weekStartISO && d <= end;
+    });
+  }, [week, weekStartISO]);
+
   const visible = useMemo(
-    () => (week ? week.events.filter((ev) => matches(ev, deferredFilters, haystacks)) : []),
-    [week, deferredFilters, haystacks],
+    () => weekEvents.filter((ev) => matches(ev, deferredFilters, haystacks)),
+    [weekEvents, deferredFilters, haystacks],
   );
 
+  function shiftWeek(delta: number) {
+    setWeekStart((ws) => (ws ? addDays(ws, delta * 7) : ws));
+  }
+
   let weekLabel: string | null = null;
-  if (week) {
-    const s = parseISO(week.week_start);
-    const e = parseISO(week.week_end);
+  if (weekStart) {
+    const s = weekStart;
+    const e = addDays(weekStart, 6);
     weekLabel = isSameMonth(s, e)
       ? `${format(s, 'd')}–${format(e, 'd MMM yyyy', { locale: pt })}`
       : `${format(s, 'd MMM', { locale: pt })} – ${format(e, 'd MMM yyyy', { locale: pt })}`;
@@ -171,13 +214,31 @@ export default function App() {
           <Masthead rv>
             <div className="week-control">
               <span className="week-control-label">Semana</span>
+              <button
+                type="button"
+                className="week-nav"
+                aria-label="Semana anterior"
+                onClick={() => shiftWeek(-1)}
+                disabled={!weekStart}
+              >
+                ‹
+              </button>
               <span className="week-control-value">
-                {week ? (
+                {weekStart ? (
                   weekLabel
                 ) : (
                   <span className="sk-bar" style={{ display: 'inline-block', width: 108, height: 12, verticalAlign: 'middle' }} />
                 )}
               </span>
+              <button
+                type="button"
+                className="week-nav"
+                aria-label="Semana seguinte"
+                onClick={() => shiftWeek(1)}
+                disabled={!weekStart}
+              >
+                ›
+              </button>
             </div>
           </Masthead>
           <hr className="rule-dashed" />
@@ -189,7 +250,7 @@ export default function App() {
           <div className="hero-text">
             <p className="hero-eyebrow rv">eventos · festas · atividades</p>
             <h1 className="hero-title rv">
-              Esta <em>semana</em> em Lisboa.
+              Esta <em>semana</em> em Leiria.
             </h1>
             <p className="hero-sub rv">
               Tudo o que acontece nos próximos sete dias. Organizado por tema, com filtros por dia &amp; preço.
@@ -203,12 +264,12 @@ export default function App() {
                 setFilters((f) => ({ ...f, q: v.trim().toLowerCase() }));
               }}
               filters={filters}
-              week={week}
+              weekStartISO={weekStartISO}
               onToggleDay={toggleDay}
               onSetFree={(free) => setFilters((f) => ({ ...f, free }))}
               onSetHideOngoing={(hideOngoing) => setFilters((f) => ({ ...f, hideOngoing }))}
             />
-            <TopicChips week={week} taxonomy={taxonomy} filters={filters} onToggle={toggleTopic} />
+            <TopicChips events={weekEvents} taxonomy={taxonomy} filters={filters} onToggle={toggleTopic} />
           </div>
         </section>
 
@@ -229,7 +290,7 @@ export default function App() {
           {!week ? (
             <ResultsSkeleton />
           ) : (
-            <Results visible={visible} taxonomy={taxonomy!} topicById={topicById} weekStart={week.week_start} />
+            <Results visible={visible} taxonomy={taxonomy!} topicById={topicById} weekStart={weekStartISO!} />
           )}
         </section>
 
@@ -262,7 +323,7 @@ function SearchAndFilters({
   query,
   setQuery,
   filters,
-  week,
+  weekStartISO,
   onToggleDay,
   onSetFree,
   onSetHideOngoing,
@@ -270,13 +331,13 @@ function SearchAndFilters({
   query: string;
   setQuery: (v: string) => void;
   filters: Filters;
-  week: Week | null;
+  weekStartISO: string | null;
   onToggleDay: (d: (typeof DAYS)[number]) => void;
   onSetFree: (free: boolean) => void;
   onSetHideOngoing: (hide: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
-  const weekStart = week?.week_start;
+  const weekStart = weekStartISO;
 
   return (
     <>
@@ -355,17 +416,17 @@ function SearchAndFilters({
 }
 
 function TopicChips({
-  week,
+  events,
   taxonomy,
   filters,
   onToggle,
 }: {
-  week: Week | null;
+  events: EventItem[];
   taxonomy: Taxonomy | null;
   filters: Filters;
   onToggle: (id: string) => void;
 }) {
-  if (!week || !taxonomy) {
+  if (!taxonomy) {
     return (
       <div className="chips rv" id="topic-chips" role="group" aria-label="Temas">
         <ChipSkeleton />
@@ -373,7 +434,7 @@ function TopicChips({
     );
   }
   const counts: Record<string, number> = {};
-  for (const ev of week.events) counts[ev.topic] = (counts[ev.topic] || 0) + 1;
+  for (const ev of events) counts[ev.topic] = (counts[ev.topic] || 0) + 1;
   return (
     <div className="chips rv" id="topic-chips" role="group" aria-label="Temas">
       {taxonomy.topics.map((t) => {
@@ -436,7 +497,8 @@ function Footer({ week }: { week: Week | null }) {
         <hr className="rule-solid rv" />
         <div className="footer-row rv">
           <p className="footer-credit">
-            Criado com ❤️ por <span>Nucabé</span>
+            <a href="https://pregoeiro.nucabe.com/">Projeto original</a> de{' '}
+            <span>Manuel Ornelas</span>, fork por <span>Sérgio Ramos</span>
           </p>
           <p id="footer-stats">{stats}</p>
         </div>

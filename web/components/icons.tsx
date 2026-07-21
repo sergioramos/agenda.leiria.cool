@@ -33,7 +33,7 @@ export function CalendarIcon() {
 export function SearchIcon() {
   return (
     <svg
-      className="search-icon" viewBox="0 0 24 24" fill="none" stroke="#1d1813"
+      className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
     >
       <circle cx="10" cy="10" r="7" />
